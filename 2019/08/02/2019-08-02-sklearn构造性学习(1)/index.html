@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="构造性学习中，以理论为主，并结合一定的例子 本篇是机器学习的入门篇，主体的脉络差不多近似于 《数据挖掘导论》 一书">
@@ -313,7 +313,7 @@
 
 <h1 id="K-近邻算法"><a href="#K-近邻算法" class="headerlink" title="K 近邻算法"></a>K 近邻算法</h1><p><a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier">主要函数说明</a><br>k 近邻算法是非常特殊的,可以认为是没有模型,或者说训练集本身就是模型<br>寻找 k 个近邻,来判断 x 点<br>主要解决分类问题</p>
 <h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><h3 id="欧拉距离"><a href="#欧拉距离" class="headerlink" title="欧拉距离"></a>欧拉距离</h3><p>$$<br>\sqrt{\sum_{i=1}^{n}\left(X_{i}^{(a)}-X_{i}^{(b)}\right)^{2}}<br>$$</p>
-<h3 id="曼哈顿距离"><a href="#曼哈顿距离" class="headerlink" title="曼哈顿距离"></a>曼哈顿距离</h3><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4253159243.png?Expires=1602314295" alt="p1"><br>绿线:欧拉距离</p>
+<h3 id="曼哈顿距离"><a href="#曼哈顿距离" class="headerlink" title="曼哈顿距离"></a>曼哈顿距离</h3><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4253159243.png?Expires=1602314295" alt="p1"><br>绿线:欧拉距离</p>
 <h3 id="总结-闵可夫斯基距离"><a href="#总结-闵可夫斯基距离" class="headerlink" title="总结:闵可夫斯基距离"></a>总结:闵可夫斯基距离</h3><p>$$<br>\left(\sum_{i=1}^{n}\left|X_{i}^{(a)}-X_{i}^{(b)}\right|^{p}\right)^{\frac{1}{p}}<br>$$</p>
 <h2 id="准确度"><a href="#准确度" class="headerlink" title="准确度"></a>准确度</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score</span><br><span class="line"></span><br><span class="line">accuracy_score(y_test,y_predict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者直接从训练结果中导出准确度</span></span><br><span class="line">knn_clf.score(X_test)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -341,7 +341,7 @@
 <li>真实环境很可能无法得到测试数据的均值和方差(如只给你一个数据)</li>
 <li>对数据的归一化也是算法的一部分</li>
 </ul>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2299684497.png?Expires=1602314397" alt="p2"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2299684497.png?Expires=1602314397" alt="p2"></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br></pre></td></tr></table></figure>
 
 <h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
@@ -638,6 +638,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

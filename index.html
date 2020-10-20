@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="find the key of soul">
@@ -240,7 +240,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-20 08:55:19" itemprop="dateModified" datetime="2020-10-20T08:55:19+00:00">2020-10-20</time>
+                <time title="修改时间：2020-10-20 09:23:49" itemprop="dateModified" datetime="2020-10-20T09:23:49+00:00">2020-10-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -300,48 +300,14 @@
       
           <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>极客大赛是我司举办的一个内部的挑战比赛，大致的内容就是拟定一道比赛题目，然后根据最后的完成度进行得分排名。比赛的时间为一天，大抵就是上班到下班这么长的时间。</p>
 <p>今年的题目是完成一个票据识别的 app。核心的模块是票据的扫描、识别和后端的存储、统计功能。衍生的加分项就很多了，测试覆盖率、界面设计等等，差不多就是软件的综合完成度、用户体验这些。</p>
-<ol>
-<li><p>时间的利用</p>
-<p>比赛只有 12 个小时，但是在一些无所谓的事情上面浪费了很多的时间。</p>
-<p>首先就是 leader 的推选。从传统的角度来看，不礼让一下确实会显得太傲慢，进而给别人以不好的印象，但是在有限时间的比赛中这是相当不智的，这直接导致了团队在接近 1/6 的时间里处于无领导无组织的状态，大家各干各的，效率很低。</p>
-</li>
-<li><p>任务安排</p>
-<p>最终后端以双核驱动，我负责后端的整体规划设计以及任务安排。</p>
-<p>首先，在选人上就出现了问题。开发伊始，让一人负责 api 设计。当时选人的角度是谁还闲着就让谁干，而不是谁更专业就让谁干。这导致的后果就是，api 文档不够全面、小漏洞频出。同时，在最后做演示的时候，无法根据那种一拍脑门想出来的 error_code 来判断具体是哪一块除了问题。（这里最后使用了经验判断，然后错了）</p>
-<p>其次是项目进度的管理上。在 api 文档开发完成之后，后端、前端就可以开始开发了，但是这里忽视了重要的一点，就是测试。文档成形之后，理论上已经可以让测试来准备边界样例了，但是思维定势，认为在软件工程进程中， 测试必须等到全端开发结束才能进行。很要命。这直接导致了负责测试的人员一直闲置到比赛结束。</p>
-<p>最后是任务分派。在不熟悉每个人具体的擅长的情况下（仅仅是问过了前后端这些浅层的东西），就直接进行任务的分派，现在想来过于冒失了。</p>
-</li>
-<li><p>异常处理</p>
-<ol>
-<li><p>登录异常</p>
-<p>这次是使用的公司的登录接口，但是出现了一个很要命的问题，token 的预期生命周期与实际严重不符。比如设置生命周期为一天，而实际使用时可能一分钟就失效了。这个时候我们的解决方案是，使用公司内部的账号来实现永久性 token。</p>
-<p>这里忽略了很重要的一点，这是一个面向大众的 app，并不是每一个测试样例（实际可能是极少、甚至是没有）都是有永久性 token 的，这种解决方案无疑是饮鸩止渴。这在最后的测试时，大家意识到这个问题的时候，已经病入膏肓、为时晚矣。</p>
-<p>在面临这种问题，首先要做的应该是查阅接口文档，找出出现这种异常的原因，以及对应的解决方案。如果自己找不到，应该及时询问接口的提供方，不要浪费太多的时间。</p>
-</li>
-<li><p>部署异常</p>
-<p>这与时间分配也有一定的联系。项目最后，我需要将后端部署到服务器上。由于时间紧迫，以开发环境部署到服务器上之后就直接开始对接测试了，后来也是直接以开发环境部署到服务器上的。</p>
-<p>这是非常致命的，因为在面临高并发的请求时，很容易造成服务崩溃，并且无法再起。之所以这么草率地以开发环境部署，是因为前端一直在调用接口测试，事态不容许停下服务进行生产环境的调整。</p>
-<p>但是这并非没有解决方案，我有不止一台的服务器，完全可以在另外一台上做好对应的调整，然后直接应用到比赛服务器上。</p>
-<p>这算是一个教训吧。</p>
-</li>
-</ol>
-</li>
-<li><p>技术层面</p>
-<p>这次主要使用的技术是 flask，主要的问题有两个。</p>
-<ol>
-<li><p>性能优化/代码质量</p>
-<p>这两者本来关系不大，但是在本次的开发中耦合度很高。</p>
-<p>处于时间的考虑，所有的交互都是使用 POST，所有的存在复用的代码都是直接复制粘贴，没有使用蓝图来做规划，简化了框架的结构(这可能不算是缺点，但是这种尝试太冒险了)。</p>
-<p>总的来说，写了一个仅仅是能够跑起来的，自己都看不下去的代码。</p>
-</li>
-<li><p>单元测试</p>
-<p>“程序员写代码不需要测试，只要能运行就行了。”这本是一句调侃的话，但是我却下意识地忽视了测试的重要性。这次的单元测试没能跑通，很大原因可以归咎于平时的疏懒。</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>这次比赛给我的启发同样巨大。这算是第一次，与一群各有一技之长的伙伴们开发(以往是 python*n，这次的队伍中，实到 8 个人，有 JavaScript、python、node、C++、运维、nginx 等各方面的开发者)一个独立完整的项目。前后端分离、多语言服务中请求的流转、运维要点等等这些以往一知半解的东西，在这次的比赛中都有了实际的应用案例。这也与就是进入企业进行开发的魅力所在吧。仅仅 12 个小时，虽然不足以实现技术上的突飞猛进，但是让我发现了职业生涯中更多的前进的方向，也不失为一笔宝贵的财富。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/05/geek-contest/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -679,7 +645,7 @@
 
       
           <h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#x63;&#111;&#109;">&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -941,7 +907,7 @@
           <p>感觉已经一万年没有更新博客了。。。这次是制作一个简单的爬虫。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期有一门纯文科的课程，名唤“医疗仪器原理”。谓之纯文科，自然是要背诵的题目太多了，多到了梦回高中历史的地步= =。</p>
 <p>授课老师喜欢使用雨课堂发布习题，但是雨课堂没有办法导出题目和答案，想要整理就只能一条一条地复制粘贴，更骚的是，这个网站的题目默认被转成了图片格式(？？？)。好嘛，复制粘贴都做不到了。</p>
-<p><img src="https://i.loli.net/2020/04/29/WhZH5pTk1MvJULc.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/04/29/WhZH5pTk1MvJULc.png" alt="图片.png"></p>
 <p>这种复习的效率实在是太低了，于是准备重操旧业，开始爬虫工程（面向监狱编程）</p>
           <!--noindex-->
             <div class="post-button">
@@ -1064,7 +1030,7 @@
 <p>难得遇到一道困难的打卡题，就在这里写一下过程吧（虽然并不是很困难。。。）</p>
 </blockquote>
 <p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1"></p>
 <p>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）</p>
           <!--noindex-->
             <div class="post-button">
@@ -1372,6 +1338,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

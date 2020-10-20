@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="关于 python 的内置函数以及一些高阶的技巧的学习">
@@ -440,7 +440,7 @@
 <p>只有以双下划线开头的”__job”不能直接被外部访问。</p>
 <p>但是，如果一个属性以”__xxx__“的形式定义，那它又可以被外部访问了，以”__xxx__“定义的属性在 Python 的类中被称为特殊属性，有很多预定义的特殊属性可以使用，通常我们不要把普通属性用”__xxx__“定义。</p>
 <p>以单下划线开头的属性”_xxx”虽然也可以被外部访问，但是，按照习惯，他们不应该被外部访问。</p>
-<h2 id="init-内外定义区别"><a href="#init-内外定义区别" class="headerlink" title="__init__ 内外定义区别"></a>__init__ 内外定义区别</h2><p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135" alt="e48d9f5d14a056cc9f6c8ab0112dda2d.png"></p>
+<h2 id="init-内外定义区别"><a href="#init-内外定义区别" class="headerlink" title="__init__ 内外定义区别"></a>__init__ 内外定义区别</h2><p><img data-src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135" alt="e48d9f5d14a056cc9f6c8ab0112dda2d.png"></p>
 <h2 id="类属性和实例属性名字冲突怎么办"><a href="#类属性和实例属性名字冲突怎么办" class="headerlink" title="类属性和实例属性名字冲突怎么办"></a>类属性和实例属性名字冲突怎么办</h2><p>当实例属性和类属性重名时，实例属性优先级高，它将屏蔽掉对类属性的访问。</p>
 <h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><p>和属性类似，方法也分实例方法和类方法。</p>
 <p>在 class 中定义的全部是实例方法，实例方法第一个参数 self 是实例本身。</p>
@@ -685,6 +685,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

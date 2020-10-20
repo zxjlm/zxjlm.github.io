@@ -513,7 +513,7 @@ Q 1 2</code></pre>
     <url>/2019/06/11/2019-06-11-N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/n-queens/">No.51 N 皇后问题</a></p>
 <p>n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png" alt="question"></p>
+<p><img data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png" alt="question"></p>
 <p>上图为 8 皇后问题的一种解法。</p>
 <p>给定一个整数 n，返回所有不同的  n  皇后问题的解决方案。</p>
 <p>每一种解法包含一个明确的  n 皇后问题的棋子放置方案，该方案中 ‘Q’ 和 ‘.’ 分别代表了皇后和空位。</p>
@@ -1174,7 +1174,7 @@ millisec:间隔时间（ms）</code></pre>
 
 <h1 id="K-近邻算法"><a href="#K-近邻算法" class="headerlink" title="K 近邻算法"></a>K 近邻算法</h1><p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier">主要函数说明</a><br>k 近邻算法是非常特殊的,可以认为是没有模型,或者说训练集本身就是模型<br>寻找 k 个近邻,来判断 x 点<br>主要解决分类问题</p>
 <h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><h3 id="欧拉距离"><a href="#欧拉距离" class="headerlink" title="欧拉距离"></a>欧拉距离</h3><p>$$<br>\sqrt{\sum_{i=1}^{n}\left(X_{i}^{(a)}-X_{i}^{(b)}\right)^{2}}<br>$$</p>
-<h3 id="曼哈顿距离"><a href="#曼哈顿距离" class="headerlink" title="曼哈顿距离"></a>曼哈顿距离</h3><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4253159243.png?Expires=1602314295" alt="p1"><br>绿线:欧拉距离</p>
+<h3 id="曼哈顿距离"><a href="#曼哈顿距离" class="headerlink" title="曼哈顿距离"></a>曼哈顿距离</h3><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4253159243.png?Expires=1602314295" alt="p1"><br>绿线:欧拉距离</p>
 <h3 id="总结-闵可夫斯基距离"><a href="#总结-闵可夫斯基距离" class="headerlink" title="总结:闵可夫斯基距离"></a>总结:闵可夫斯基距离</h3><p>$$<br>\left(\sum_{i=1}^{n}\left|X_{i}^{(a)}-X_{i}^{(b)}\right|^{p}\right)^{\frac{1}{p}}<br>$$</p>
 <h2 id="准确度"><a href="#准确度" class="headerlink" title="准确度"></a>准确度</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score</span><br><span class="line"></span><br><span class="line">accuracy_score(y_test,y_predict)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者直接从训练结果中导出准确度</span></span><br><span class="line">knn_clf.score(X_test)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -1202,7 +1202,7 @@ millisec:间隔时间（ms）</code></pre>
 <li>真实环境很可能无法得到测试数据的均值和方差(如只给你一个数据)</li>
 <li>对数据的归一化也是算法的一部分</li>
 </ul>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2299684497.png?Expires=1602314397" alt="p2"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2299684497.png?Expires=1602314397" alt="p2"></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br></pre></td></tr></table></figure>
 
 <h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><ul>
@@ -1524,19 +1524,19 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 <p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
 <p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
 <h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
-<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg"></a></p>
+<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg"></a></p>
 </li>
-<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg"></a></p>
+<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg"></a></p>
 </li>
-<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg"></a></p>
+<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg"></a></p>
 </li>
-<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg"></a></p>
+<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg"></a></p>
 </li>
-<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg"></a></p>
+<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg"></a></p>
 </li>
-<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg"></a></p>
+<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg"></a></p>
 </li>
-<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg"></a></p>
+<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg"></a></p>
 </li>
 </ul>
 <div align=life> 
@@ -1641,7 +1641,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 <p>可惜由于一些原因没能够记录下来，可惜。</p>
 <h2 id="安师大"><a href="#安师大" class="headerlink" title="安师大"></a>安师大</h2><p>安师大也算是历史悠久了（百年如中：╭(╯^╰)╮，比历史都是弟弟，没一个能打的）。</p>
 <p>嵌进去一个住宅小区，比较羡慕啊。毕竟不是每个人都喜欢舍友的吵吵闹闹，也不是每个人都能习惯简朴艰苦的宿舍生活，多一个选择，挺好的。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/from_hotel.jpg?Expires=1602301252" alt="IMG_2493.th.jpg"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/from_hotel.jpg?Expires=1602301252" alt="IMG_2493.th.jpg"></p>
 <!-- 宿舍可以看到徽派建筑的一点影子呢，看看能不能走访一下徽州的古建筑群，这是最能体现人文景观的意象，我也想写一篇徽州古建筑考。
 [![IMG_2495.th.jpg](http://www.harumonia.top/images/2019/08/09/IMG_2495.th.jpg)](http://www.harumonia.top/image/D08)
 
@@ -1986,11 +1986,11 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 <li><strong>Relationship</strong> - There are many different chart types that you can use to understand relationships between variables in your data.<br><em>sns.barplot</em> - Bar charts are useful for comparing quantities corresponding to different groups.<br><em>sns.heatmap</em> - Heatmaps can be used to find color-coded patterns in tables of numbers.<br><em>sns.scatterplot</em> - Scatter plots show the relationship between two continuous variables; if color-coded, we can also show the relationship with a third categorical variable.<br><em>sns.regplot</em> - Including a regression line in the scatter plot makes it easier to see any linear relationship between two variables.<br><em>sns.lmplot</em> - This command is useful for drawing multiple regression lines, if the scatter plot contains multiple, color-coded groups.<br><em>sns.swarmplot</em> - Categorical scatter plots show the relationship between a continuous variable and a categorical variable.</li>
 <li><strong>Distribution</strong> - We visualize distributions to show the possible values that we can expect to see in a variable, along with how likely they are.<br><em>sns.distplot</em> - Histograms show the distribution of a single numerical variable.<br><em>sns.kdeplot</em> - KDE plots (or 2D KDE plots) show an estimated, smooth distribution of a single numerical variable (or two numerical variables).<br><em>sns.jointplot</em> - This command is useful for simultaneously displaying a 2D KDE plot with the corresponding KDE plots for each individual variable.</li>
 </ul>
-<h2 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h2><h3 id="X-轴日期合并"><a href="#X-轴日期合并" class="headerlink" title="X 轴日期合并"></a>X 轴日期合并</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>由于 x 轴上的日期太过密集(年-月),所以显示很不好看<br><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p255" alt="a54db97987cc85a6a735eaf5772e969d.png"></p>
+<h2 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h2><h3 id="X-轴日期合并"><a href="#X-轴日期合并" class="headerlink" title="X 轴日期合并"></a>X 轴日期合并</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>由于 x 轴上的日期太过密集(年-月),所以显示很不好看<br><img data-src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p255" alt="a54db97987cc85a6a735eaf5772e969d.png"></p>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>将日期再分类,以年为单位</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>,<span class="number">6</span>))</span><br><span class="line">date_ticks = museum_data.index <span class="comment">#x轴坐标列表</span></span><br><span class="line"></span><br><span class="line">g = sns.lineplot(data=museum_data)</span><br><span class="line">g.set_xticks(date_ticks[::<span class="number">12</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 核心代码</span></span><br><span class="line"><span class="comment"># g.set_xticklabels(labels = [foo.year for foo in [datetime.strptime(text, &#x27;%Y-%m-%d&#x27;) for text in date_ticks[::12]]])   # 对于不标准的时间格式，先进行格式化</span></span><br><span class="line">g.set_xticklabels(labels = [foo.split(<span class="string">&#x27;-&#x27;</span>)[<span class="number">0</span>] <span class="keyword">for</span> foo <span class="keyword">in</span> date_ticks[::<span class="number">12</span>]])    <span class="comment"># 对于标准的时间格式，直接使用分割</span></span><br><span class="line"><span class="comment"># 注：直接分割的效率远远高于格式化</span></span><br><span class="line"></span><br><span class="line">g.set_xlabel(<span class="string">&#x27;Date&#x27;</span>)</span><br><span class="line"><span class="comment"># Add title</span></span><br><span class="line">plt.title(<span class="string">&quot;Monthly Visitors to Los Angeles City Museums&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p256" alt="d87feeba601ddcacb482cb2c62f206b6.png"></p>
+<p><img data-src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p256" alt="d87feeba601ddcacb482cb2c62f206b6.png"></p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -2209,7 +2209,7 @@ dtype: float64</code></pre>
 </tr>
 </tbody></table>
 <p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
-<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png"></a></p>
+<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img data-src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png"></a></p>
 <p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
 <pre><code>Cabin
 G     14.205000
@@ -2328,7 +2328,7 @@ Name: Fare, dtype: float64</code></pre>
 <p>如果数组中不存在目标值，返回  [-1, -1]。</p>
 <a id="more"></a>
 
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/663092629.png?Expires=1602302080" alt="result.jpg"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/663092629.png?Expires=1602302080" alt="result.jpg"></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>No.34 是一个典型的二分法问题，不过在二分法的基础上做出了一个延伸。</p>
 <p>这里有两种选择。</p>
 <p>第一种是使用二段二分法，分别求出两点，这样的算法复杂度是常数*log(N)</p>
@@ -2351,10 +2351,10 @@ Name: Fare, dtype: float64</code></pre>
     <content><![CDATA[<p>待补充</p>
 <a id="more"></a>
 
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/831551212.png?Expires=1602302116&" alt="p1"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/892166055.png?Expires=1602302131&" alt="p2"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/752151732.png?Expires=1602302141&" alt="p3"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1726500526.png?Expires=1602302152&" alt="p4"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/831551212.png?Expires=1602302116&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/892166055.png?Expires=1602302131&" alt="p2"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/752151732.png?Expires=1602302141&" alt="p3"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1726500526.png?Expires=1602302152&" alt="p4"></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>待补充，先睡会儿</p>
 ]]></content>
       <categories>
@@ -2379,8 +2379,8 @@ Name: Fare, dtype: float64</code></pre>
 <p>输出:<br> [<br> [“ate”,”eat”,”tea”],<br> [“nat”,”tan”],<br> [“bat”]<br> ]</p>
 <p>说明：</p>
 <p>所有输入均为小写字母。<br>不考虑答案输出的顺序。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1697465325.png?Expires=1602302176&" alt="p1-res"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1451376165.png?Expires=1602302195&" alt="p1"><br><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2143093241.png?Expires=1602302202&" alt="p2"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1697465325.png?Expires=1602302176&" alt="p1-res"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1451376165.png?Expires=1602302195&" alt="p1"><br><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2143093241.png?Expires=1602302202&" alt="p2"></p>
 <p>时间复杂度为 O(n)</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; <span class="title">groupAnagrams</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; strs)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; &gt; ma;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> str:strs)&#123;</span><br><span class="line">            <span class="built_in">string</span> tmp = str;</span><br><span class="line">            sort(tmp.begin(),tmp.end());</span><br><span class="line">            ma[tmp].push_back(str);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; m:ma)</span><br><span class="line">            res.push_back(m.second);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
@@ -2417,7 +2417,7 @@ Name: Fare, dtype: float64</code></pre>
 输出: [[1,5]]
 解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。</code></pre>
 <h2 id="国庆快乐"><a href="#国庆快乐" class="headerlink" title="国庆快乐~"></a>国庆快乐~</h2><p>我有什么办法，国庆节又没人一起出去玩，只能做做题目杀杀时间这个样子。(碎碎念)</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为实在是闲的，所以就有了这个效率奇低的代码（能这么慢也是一种本事好不好）。</p>
 <p>那么问题来了，凭什么他的效率能这么低呢？</p>
 <p>答案是 <strong>使用了 erase()</strong></p>
@@ -2481,7 +2481,7 @@ Name: Fare, dtype: float64</code></pre>
     [12, 6, 8, 9],
     [16, 7,10,11]
 ]</code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4061840715.png?Expires=1602302278&" alt="res"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/4061840715.png?Expires=1602302278&" alt="res"></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这一题只要找对了思路，就非常的简单。</p>
 <p>一开始，我是想使用洋葱循环法来实现的，不过，C++这个语言不像 python，思路越是复杂往往就意味着代码量会呈几何倍增加。</p>
 <p>所以，毫无疑问，洋葱循环是可以实现的，但是我比较懒。</p>
@@ -2491,8 +2491,8 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = matrix.size();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len ; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++)&#123;</span><br><span class="line">			swap(matrix[i][j],matrix[j][i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; len ; i++)&#123;</span><br><span class="line">		reverse(matrix[i].begin(),matrix[i].end());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>附上 5 月份以来的提交记录。<br>一天提交 12 次是真的疯狂啊。。。不知道这一次的刷题能够坚持多久呢？</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3392892346.png?Expires=1602302292&" alt="p1"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1441194081.png?Expires=1602302327&" alt="p2"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3392892346.png?Expires=1602302292&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1441194081.png?Expires=1602302327&" alt="p2"></p>
 ]]></content>
       <categories>
         <category>leetcodeの解题日志</category>
@@ -2506,7 +2506,7 @@ Name: Fare, dtype: float64</code></pre>
   <entry>
     <title>周赛157</title>
     <url>/2019/10/06/2019-10-06-%E5%91%A8%E8%B5%9B157/</url>
-    <content><![CDATA[<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1437205549.png?Expires=1602302340&" alt="res"></p>
+    <content><![CDATA[<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1437205549.png?Expires=1602302340&" alt="res"></p>
 <p>只做了三题。。。<br>前两题使用哈希表解，不过第一题应该有更简单的数学解法，不过当时时间紧迫，就没有多去考虑。<br>第三题是深搜。。。好久没写深搜了，卡了好久，不过还好最后做出来了= =</p>
 <h2 id="玩筹码"><a href="#玩筹码" class="headerlink" title="玩筹码"></a>玩筹码</h2><blockquote>
 <p>数轴上放置了一些筹码，每个筹码的位置存在数组 chips 当中。</p>
@@ -2549,7 +2549,7 @@ Name: Fare, dtype: float64</code></pre>
 </li>
 </ul>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>于是周赛打掉了我好不容易攒出来的一页绿%&gt;_&lt;%</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2855058512.png?Expires=1602302380&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2855058512.png?Expires=1602302380&" alt="p1"></p>
 ]]></content>
       <categories>
         <category>leetcodeの解题日志</category>
@@ -2578,13 +2578,13 @@ Name: Fare, dtype: float64</code></pre>
 <p>输出: 7</p>
 <p>解释: 因为路径 1→3→1→1→1 的总和最小。</p>
 <p><strong>偶然做到这一篇，发现这题极适合动态规划的入门。</strong></p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2"></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = grid.size();</span><br><span class="line">        <span class="keyword">int</span> m = grid[<span class="number">0</span>].size();</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span> || m == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">            grid[i][<span class="number">0</span>] += grid[i<span class="number">-1</span>][<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i++)</span><br><span class="line">            grid[<span class="number">0</span>][i] += grid[<span class="number">0</span>][i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n; i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; m; j++)</span><br><span class="line">                grid[i][j] += min(grid[i<span class="number">-1</span>][j] , grid[i][j<span class="number">-1</span>]);</span><br><span class="line">        <span class="keyword">return</span> grid[n<span class="number">-1</span>][m<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3"></p>
 ]]></content>
       <categories>
         <category>leetcodeの解题日志</category>
@@ -2620,7 +2620,7 @@ Name: Fare, dtype: float64</code></pre>
 &quot;95a54e53&quot; =&gt; false</code></pre>
 <p>说明:  我们有意将问题陈述地比较模糊。在实现代码之前，你应当事先思考所有可能的情况。这里给出一份可能存在于有效十进制数字中的字符列表：</p>
 <p>数字 0-9<br>指数 - “e”<br>正/负号 - “+”/“-“<br>小数点 - “.”<br>当然，在输入中，这些字符的上下文也很重要。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/387135797.png?Expires=1602310817&" alt="res"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/387135797.png?Expires=1602310817&" alt="res"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>如 tag 所标注的那样，这是一道很烦人的题目，因为有各种各样的情况需要考虑。</p>
 <p>同样，这是一道适合心情不好的时候做的题目。他需要冷静而清晰的思路去梳理种种的情况，所以，当这道题目做完，心情也就平复了。</p>
 <p>主要是集几种特殊情况的考虑。比如”.-“,”-.”,”+e”等等。通过条件判断语句的约束，就可以解决这道问题。在官方没有给出具体的需要考虑的情况的前提下，主要还是看做题人的数学素养如何。</p>
@@ -2672,7 +2672,7 @@ Name: Fare, dtype: float64</code></pre>
   &quot;everything  else  we&quot;,
   &quot;do                  &quot;
 ]</code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/220978777.png?Expires=1602310896&" alt="res"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/220978777.png?Expires=1602310896&" alt="res"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>到现在做了很多的字符串处理的题目了。这是现有的标记为困难的字符串题，所以拿出来作为对字符串题目的一个小结。</p>
 <p>大多数的字符串处理都是数学题，最重要的是找到对应的处理流程。</p>
 <p>No.65 中的处理方式是 <strong>有限状态机（DFA）</strong> ，这一题的处理方式是 <strong>逻辑分析</strong> 。这些被标记为 <em>“困难”</em> 的字符串题目，只要找到对应的处理方式，解起来就丝滑无比。</p>
@@ -2755,7 +2755,7 @@ Name: Fare, dtype: float64</code></pre>
 <p>输入：”/a//b////c/d//././/..”<br>输出：”/a/b/c”</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>放在诸多的字符串题目中，这一题可以说平平无奇。<br>不过在优化答案的过程中，有了一些很有意思的感想，所以就把它单独列为一篇 blog 吧。</p>
 <p>** 我们应该俯视问题，而不是仰视问题。同样推广到人生之中也是在这样，眼界决定境界，布局决定结局。 by. 日常犯二的 zxj **</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经典的栈使用法。<br>关键是思路要正确。<br>如果选择每次校验是”.” 还是”..”还是”///“,那么恭喜你，掉进坑里了。<br>所以，我选择每次去找两个”/“之间的字符串，注意，是所有字符串，然后对比已知的特殊情况”..”和”.”。<br>实际上这是非常巧妙的一种方法，这里建议自己先做一遍在看下面的代码。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">simplifyPath</span><span class="params">(<span class="built_in">string</span> path)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="built_in">string</span>&gt; st;</span><br><span class="line">        <span class="built_in">string</span> res = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> n = path.size();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(path[--n] == <span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        path = path.substr(<span class="number">0</span>,n+<span class="number">1</span>) +<span class="string">&quot;/&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(path[i] == <span class="string">&#x27;/&#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">while</span>(i &lt;= n &amp;&amp; path[i] == <span class="string">&#x27;/&#x27;</span>) i++;</span><br><span class="line">                <span class="keyword">int</span> left = i;</span><br><span class="line">                <span class="keyword">while</span>(i &lt;= n &amp;&amp; path[i] != <span class="string">&#x27;/&#x27;</span>) i++;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">string</span> tmp = path.substr(left,i-left);</span><br><span class="line">                <span class="keyword">if</span>(tmp == <span class="string">&quot;..&quot;</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(!st.empty())</span><br><span class="line">                        st.pop();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(tmp == <span class="string">&quot;.&quot;</span>) tmp = <span class="string">&quot;wakaka,woshicaidan&quot;</span>;</span><br><span class="line">                <span class="keyword">else</span> st.push(tmp);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!st.empty())&#123;</span><br><span class="line">            res = <span class="string">&quot;/&quot;</span> + st.top() + res;</span><br><span class="line">            st.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(res == <span class="string">&quot;&quot;</span>) <span class="keyword">return</span> <span class="string">&quot;/&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -2794,8 +2794,8 @@ inention -&gt; enention (将 &#39;i&#39; 替换为 &#39;e&#39;)
 enention -&gt; exention (将 &#39;n&#39; 替换为 &#39;x&#39;)
 exention -&gt; exection (将 &#39;n&#39; 替换为 &#39;c&#39;)
 exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1349495973.png?Expires=1602312517&" alt="p1"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1028368401.png?Expires=1602312573&" alt="72.md.png"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1349495973.png?Expires=1602312517&" alt="p1"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1028368401.png?Expires=1602312573&" alt="72.md.png"></p>
 ]]></content>
       <categories>
         <category>leetcodeの解题日志</category>
@@ -2824,8 +2824,8 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <pre><code>for (int i = 0; i &lt; len; i++) &#123;
     print(nums[i]);
 &#125;</code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3423227357.png?Expires=1602312599&" alt="截屏2019-10-23上午9.35.58.png"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1180591066.png?Expires=1602312613&" alt="截屏2019-10-23上午9.35.25.png"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3423227357.png?Expires=1602312599&" alt="截屏2019-10-23上午9.35.58.png"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1180591066.png?Expires=1602312613&" alt="截屏2019-10-23上午9.35.25.png"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>如结果所示，本题我使用了两种解法。<br>解法一的重点在于对 INT_MAX 的使用，这是一个很实用的 C++内置变量。<br>解法二的重点在于算法思路的梳理。新的解法可以省略一次 sort 排序的时间，减少了时间消耗和内存消耗。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>解一：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.size() &lt;= <span class="number">2</span>) <span class="keyword">return</span> nums.size();</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">0</span>,r = nums.size()<span class="number">-1</span>,nowl = nums[<span class="number">0</span>],count = <span class="number">1</span>,res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= r; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] != nowl)&#123;</span><br><span class="line">                count = <span class="number">1</span>;</span><br><span class="line">                nowl = nums[i];</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] == nowl &amp;&amp; count &lt; <span class="number">2</span>)&#123;</span><br><span class="line">                count++;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                nums[i] = INT_MAX;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -2846,17 +2846,17 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p><strong>难度：困难</strong></p>
 <p>给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
 <p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram.png" alt="p1"></p>
+<p><img data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram.png" alt="p1"></p>
 <p>以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为  [2,1,5,6,2,3]。</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram_area.png" alt="p2"></p>
+<p><img data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram_area.png" alt="p2"></p>
 <p>图中阴影部分为所能勾勒出的最大矩形面积，其面积为  10  个单位。</p>
 <a id="more"></a>
 
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>法一:</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1045205236.png?Expires=1602312740&" alt="截屏2019-10-24下午8.23.47.png"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1045205236.png?Expires=1602312740&" alt="截屏2019-10-24下午8.23.47.png"></p>
 <p>法二:</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/230613868.png?Expires=1602312752&" alt="截屏2019-10-24下午8.29.24.png"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2144508509.png?Expires=1602312838&" alt="84.png"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/230613868.png?Expires=1602312752&" alt="截屏2019-10-24下午8.29.24.png"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2144508509.png?Expires=1602312838&" alt="84.png"></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>解法一：</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; heights)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = heights.size(),res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)&#123;</span><br><span class="line">            <span class="keyword">int</span> left = i,right = i;</span><br><span class="line">            <span class="keyword">while</span>(left &gt;= <span class="number">0</span> &amp;&amp; heights[left] &gt;= heights[i]) left--;</span><br><span class="line">            <span class="keyword">while</span>(right &lt; n &amp;&amp; heights[right] &gt;= heights[i]) right++;</span><br><span class="line">            res = (right - left - <span class="number">1</span>) * heights[i] &gt; res ? (right - left - <span class="number">1</span>) * heights[i] : res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -2919,7 +2919,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>执行用时 :636 ms, 在所有 cpp 提交中击败了 15.29%的用户<br>内存消耗 :167.7 MB, 在所有 cpp 提交中击败了 8.43%的用户</p>
 </blockquote>
 <p>时间消耗和空间消耗有点高，不过在使用回溯法的前提下，这是最优解吧。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="http://harumonia.top/usr/uploads/2019/10/892638645.png" alt="77.png"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="http://harumonia.top/usr/uploads/2019/10/892638645.png" alt="77.png"></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; ret;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">combine</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        backtracking(<span class="number">1</span>,n,k,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="keyword">int</span> start,<span class="keyword">int</span> n,<span class="keyword">int</span> k,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(tmp.size() == k)&#123;</span><br><span class="line">            ret.push_back(tmp);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (; start&lt;=n ;start++)&#123;</span><br><span class="line">            tmp.push_back(start);</span><br><span class="line">            backtracking(start+<span class="number">1</span>,n,k,tmp);</span><br><span class="line">            tmp.pop_back();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>呼儿将出换美酒，与尔同销万古愁。</p>
@@ -2945,7 +2945,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>执行用时 :<br>28 ms, 在所有 cpp 提交中击败了 18.55%的用户<br>内存消耗 :<br>66.8 MB, 在所有 cpp 提交中击败了 18.94%的用户</p>
 </blockquote>
 <h3 id="法二-stringstream"><a href="#法二-stringstream" class="headerlink" title="法二:stringstream"></a>法二:stringstream</h3><p>stringstream 法可以用于分割被空格、制表符等符号分割的字符串。<br>但是由于 stringstream 的构造函数会特别消耗内存，所以最终的结果（无论是时间还是空间）十分难看。</p>
-<p><img src="http://www.harumonia.top/usr/uploads/2019/11/1846534912.jpeg" alt="IMG_8CC94A1E421C-1.jpeg"></p>
+<p><img data-src="http://www.harumonia.top/usr/uploads/2019/11/1846534912.jpeg" alt="IMG_8CC94A1E421C-1.jpeg"></p>
 <h3 id="法三-Python-一行解法"><a href="#法三-Python-一行解法" class="headerlink" title="法三:Python 一行解法"></a>法三:Python 一行解法</h3><p>很鲨雕的解法。。。python 果然还是简单啊</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverseWords</span>(<span class="params">self, s: str</span>) -&gt; str:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span>.join(re.split(<span class="string">&#x27; *&#x27;</span>,s.strip())[::<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
 
@@ -2967,9 +2967,9 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。</p>
 <a id="more"></a>
 
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3372957076.png?Expires=1602313168&" alt="p1"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/576730388.png?Expires=1602313184&" alt="p2"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/259591578.png?Expires=1602313198&" alt="p3"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3372957076.png?Expires=1602313168&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/576730388.png?Expires=1602313184&" alt="p2"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/259591578.png?Expires=1602313198&" alt="p3"></p>
 <h2 id="代码和结果"><a href="#代码和结果" class="headerlink" title="代码和结果"></a>代码和结果</h2><h3 id="136-方法-2"><a href="#136-方法-2" class="headerlink" title="136 方法 2"></a>136 方法 2</h3><blockquote>
 <p>执行用时 :<br>12 ms, 在所有 cpp 提交中击败了 95.53%的用户<br>内存消耗 :<br>9.7 MB, 在所有 cpp 提交中击败了 49.44%的用户</p>
 </blockquote>
@@ -3157,7 +3157,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>多说无益,上代码</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">button.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">new</span> labelControl1(matrixLoder).start();</span><br><span class="line">				<span class="keyword">new</span> labelControl2(contentLoder).start();</span><br><span class="line">				<span class="keyword">new</span> labelControl3(probilityLoder).start();</span><br><span class="line">				resultOf01Button.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				resultOfcontentButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				resultOfprobilityButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				chartsOfcontentButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				chartsOfProbilityButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				visable_init(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">				<span class="keyword">new</span> PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();</span><br><span class="line">			&#125;</span><br><span class="line">            <span class="comment">//将post命令放在新的线程中并发执行</span></span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
 
-<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif"></p>
+<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img data-src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif"></p>
 <h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
 <h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
 <ul>
@@ -3186,7 +3186,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>处于性能考虑,一般选择只使用 insert</p>
 <p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
 <p>处于性能考虑,我选择再上传时统一进行正则化.</p>
-<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif"></p>
+<p><img data-src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
 <p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
 </blockquote>
@@ -3265,8 +3265,8 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   <entry>
     <title>图像处理课堂习题整理</title>
     <url>/2019/11/25/2019-11-25-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg"></p>
+    <content><![CDATA[<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg"></p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -3316,29 +3316,29 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <li>接受管道输出的接收进程则从管道中接收数据</li>
 </ul>
 <h3 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h3><p>在 OS 中引入 <strong>进程</strong> 的目的是为了使多个程序能并发执行，以提高资源利 用率和系统吞吐量<br>在操作系统中引入 <strong>线程</strong> ，则是为了减少程序在并发执行时多付出的时空 开销，是 OS 具有更好的并发性</p>
-<p><img src="https://i.loli.net/2019/12/02/I2ErsULi18MSyTD.png" alt="5E29FE42-A2E2-4C79-9CA4-AC84AD93B906.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/I2ErsULi18MSyTD.png" alt="5E29FE42-A2E2-4C79-9CA4-AC84AD93B906.png"></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="处理机调度"><a href="#处理机调度" class="headerlink" title="处理机调度"></a>处理机调度</h3><h4 id="高级-作业-调度"><a href="#高级-作业-调度" class="headerlink" title="高级(作业)调度"></a>高级(作业)调度</h4><p>每个用户创建进程的初始状态是“创建”，处于新建状态的进程一般首先被放到外存的进程池中，当内存中 进程的数量没有达到最多进程数时，操作系统的调度程序才从创建状态选择一个进入内存并转换为就绪状态</p>
 <p>这种从“创建”状 态转换到“就绪” 状态的操作就是高 级调度，也称为作 业调度或长程调度</p>
 <h4 id="中级-内存-调度"><a href="#中级-内存-调度" class="headerlink" title="中级(内存)调度"></a>中级(内存)调度</h4><p>提高内存利用率和系统吞吐量</p>
 <h4 id="低级-进程-调度"><a href="#低级-进程-调度" class="headerlink" title="低级(进程)调度"></a>低级(进程)调度</h4><p>决定就绪队列中的哪个进程应获得 处理机，并由分派程序将处理机分 配给被选中的进程。</p>
-<h3 id="高响应比优先-HRRN"><a href="#高响应比优先-HRRN" class="headerlink" title="高响应比优先(HRRN)"></a>高响应比优先(HRRN)</h3><p><img src="https://i.loli.net/2019/12/02/aEUP3QoWtHFL2lp.png" alt="36FD49E7-E58E-4B30-A1FA-1C64B39DD238.png"></p>
+<h3 id="高响应比优先-HRRN"><a href="#高响应比优先-HRRN" class="headerlink" title="高响应比优先(HRRN)"></a>高响应比优先(HRRN)</h3><p><img data-src="https://i.loli.net/2019/12/02/aEUP3QoWtHFL2lp.png" alt="36FD49E7-E58E-4B30-A1FA-1C64B39DD238.png"></p>
 <h3 id="非抢占式"><a href="#非抢占式" class="headerlink" title="非抢占式"></a>非抢占式</h3><p>优点:实现简单，系统开销小 适用于大多数批处理系统<br>缺点:不能用于分时系统和大多数实时系统</p>
-<h3 id="各调度算法比较"><a href="#各调度算法比较" class="headerlink" title="各调度算法比较"></a>各调度算法比较</h3><p><img src="https://i.loli.net/2019/12/02/IMgEjKOBJvL8DXP.png" alt="B2B35730-43CC-4F14-901D-B111F0ABDB43.png"></p>
+<h3 id="各调度算法比较"><a href="#各调度算法比较" class="headerlink" title="各调度算法比较"></a>各调度算法比较</h3><p><img data-src="https://i.loli.net/2019/12/02/IMgEjKOBJvL8DXP.png" alt="B2B35730-43CC-4F14-901D-B111F0ABDB43.png"></p>
 <h3 id="临界资源"><a href="#临界资源" class="headerlink" title="临界资源"></a>临界资源</h3><p>临界资源是不可剥夺性资源，它可能是硬件，也可能是软件</p>
-<h3 id="信号量的应用"><a href="#信号量的应用" class="headerlink" title="信号量的应用"></a>信号量的应用</h3><p><img src="https://i.loli.net/2019/12/02/UsirmtAM2OpjCgE.png" alt="截屏2019-11-27下午9.31.34.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/D4bGlPvXRhI3F5O.png" alt="截屏2019-11-27下午9.32.33.png"></p>
-<h3 id="管程-1"><a href="#管程-1" class="headerlink" title="管程"></a>管程</h3><h4 id="信号量机制和管程的比较"><a href="#信号量机制和管程的比较" class="headerlink" title="信号量机制和管程的比较"></a>信号量机制和管程的比较</h4><p><img src="https://i.loli.net/2019/12/02/X8d9GZ6EA1ziSbh.png" alt="截屏2019-11-27下午9.34.33.png"></p>
-<h4 id="管程和进程比较"><a href="#管程和进程比较" class="headerlink" title="管程和进程比较"></a>管程和进程比较</h4><p><img src="https://i.loli.net/2019/12/02/sOIoyvWRUEalTf3.png" alt="0A3D146A-68A6-44F4-86BF-6C9D39708E93.png"></p>
+<h3 id="信号量的应用"><a href="#信号量的应用" class="headerlink" title="信号量的应用"></a>信号量的应用</h3><p><img data-src="https://i.loli.net/2019/12/02/UsirmtAM2OpjCgE.png" alt="截屏2019-11-27下午9.31.34.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/D4bGlPvXRhI3F5O.png" alt="截屏2019-11-27下午9.32.33.png"></p>
+<h3 id="管程-1"><a href="#管程-1" class="headerlink" title="管程"></a>管程</h3><h4 id="信号量机制和管程的比较"><a href="#信号量机制和管程的比较" class="headerlink" title="信号量机制和管程的比较"></a>信号量机制和管程的比较</h4><p><img data-src="https://i.loli.net/2019/12/02/X8d9GZ6EA1ziSbh.png" alt="截屏2019-11-27下午9.34.33.png"></p>
+<h4 id="管程和进程比较"><a href="#管程和进程比较" class="headerlink" title="管程和进程比较"></a>管程和进程比较</h4><p><img data-src="https://i.loli.net/2019/12/02/sOIoyvWRUEalTf3.png" alt="0A3D146A-68A6-44F4-86BF-6C9D39708E93.png"></p>
 <h3 id="SRT"><a href="#SRT" class="headerlink" title="SRT"></a>SRT</h3><p>软实时操作系统能让绝大多数任务在确定时间内完成<br>软实时操作系统对时间的限制不是十分苛刻，响应的时间可以相对延迟，即未超过最后规定时间太多的范围内，其结果都是可以接受的，不会产生严重的后果。</p>
 <h3 id="HRT"><a href="#HRT" class="headerlink" title="HRT"></a>HRT</h3><p>硬实时操作系统必须使任务在确定的时间内完成。<br>对于硬实时操作系统而言，不仅要求各个任务能够运行得到正确的结果，同时还必须在限定的时间内完成，这个时间是由系统本身确定的，这比软实时操作系统的时间约束条件严格了许多。例如，在航天领域的嵌入式实时操作系统中，如果在规定的时间内未能得出所希望的运算结果，其产生的后果将是十分严重的。</p>
 <h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>如果一组进程中的每一个进程都在等待仅由该组进程中的 其他进程才能引发的事件，那么该组进程是死锁的。</p>
 <h3 id="避免死锁和预防死锁的区别"><a href="#避免死锁和预防死锁的区别" class="headerlink" title="避免死锁和预防死锁的区别"></a>避免死锁和预防死锁的区别</h3><p>死锁的避免与死锁防止策略不同，它不 对进程申请资源加任何限制，而是对进 程提出的每一次资源请求进行动态检查， 并根据检查结果决定是否分配资源以满 足进程的请求。由于采用了动态的资源 分配策略，所以资源利用率比死锁的防 止办法高。</p>
 <h2 id="第四-五章"><a href="#第四-五章" class="headerlink" title="第四\五章"></a>第四\五章</h2><h3 id="高速缓存-amp-amp-磁盘缓存"><a href="#高速缓存-amp-amp-磁盘缓存" class="headerlink" title="高速缓存 &amp;&amp; 磁盘缓存"></a>高速缓存 &amp;&amp; 磁盘缓存</h3><p>磁盘缓存与高速缓存不同，它本身并不 是一种实际存在的存储器，而是利用主 存中的部分存储空间暂时存放从磁盘中 读出(或写入)的信息。</p>
 <p><em>主存也可以看做是辅存的高速缓存。</em></p>
-<h3 id="静态地址映射与动态地址映射的区别"><a href="#静态地址映射与动态地址映射的区别" class="headerlink" title="静态地址映射与动态地址映射的区别"></a>静态地址映射与动态地址映射的区别</h3><p><img src="https://i.loli.net/2019/12/02/BJpTsg41v5z9lPd.png" alt="7B96EAA9-61B8-4F36-A3B9-D634B5516FAE.png"></p>
-<h3 id="动态分区与固定分区"><a href="#动态分区与固定分区" class="headerlink" title="动态分区与固定分区"></a>动态分区与固定分区</h3><p><img src="https://i.loli.net/2019/12/02/JXi23S5rjgmIbd1.png" alt="DB6F67FF-70B7-402A-91C2-FA4F457E5A63.png"></p>
-<h3 id="基于顺序搜索的动态分区分配算法比较"><a href="#基于顺序搜索的动态分区分配算法比较" class="headerlink" title="基于顺序搜索的动态分区分配算法比较"></a>基于顺序搜索的动态分区分配算法比较</h3><p><img src="https://i.loli.net/2019/12/02/QqcHfhgAV1pwaM8.png" alt="04C6CED2-080F-4A4A-9F49-E30E1ACD663D.png"></p>
-<h3 id="分页和分段"><a href="#分页和分段" class="headerlink" title="分页和分段"></a>分页和分段</h3><p><img src="https://i.loli.net/2019/12/02/LB1ntRzSCmdGHwN.png" alt="3AEADEF6-8C87-4072-A9E6-4629A10EB119.png"></p>
+<h3 id="静态地址映射与动态地址映射的区别"><a href="#静态地址映射与动态地址映射的区别" class="headerlink" title="静态地址映射与动态地址映射的区别"></a>静态地址映射与动态地址映射的区别</h3><p><img data-src="https://i.loli.net/2019/12/02/BJpTsg41v5z9lPd.png" alt="7B96EAA9-61B8-4F36-A3B9-D634B5516FAE.png"></p>
+<h3 id="动态分区与固定分区"><a href="#动态分区与固定分区" class="headerlink" title="动态分区与固定分区"></a>动态分区与固定分区</h3><p><img data-src="https://i.loli.net/2019/12/02/JXi23S5rjgmIbd1.png" alt="DB6F67FF-70B7-402A-91C2-FA4F457E5A63.png"></p>
+<h3 id="基于顺序搜索的动态分区分配算法比较"><a href="#基于顺序搜索的动态分区分配算法比较" class="headerlink" title="基于顺序搜索的动态分区分配算法比较"></a>基于顺序搜索的动态分区分配算法比较</h3><p><img data-src="https://i.loli.net/2019/12/02/QqcHfhgAV1pwaM8.png" alt="04C6CED2-080F-4A4A-9F49-E30E1ACD663D.png"></p>
+<h3 id="分页和分段"><a href="#分页和分段" class="headerlink" title="分页和分段"></a>分页和分段</h3><p><img data-src="https://i.loli.net/2019/12/02/LB1ntRzSCmdGHwN.png" alt="3AEADEF6-8C87-4072-A9E6-4629A10EB119.png"></p>
 <h1 id="错题集"><a href="#错题集" class="headerlink" title="错题集"></a>错题集</h1><h2 id="第二章-1"><a href="#第二章-1" class="headerlink" title="第二章"></a>第二章</h2><p><strong>系统调用</strong> 是专门供应程序使用的一种界面.</p>
 <p><strong>分时</strong> 操作系统允许在一台主机上同时连接多台终端.</p>
 <p>错误叙述:管程只能用于实现进程的互斥.</p>
@@ -3360,8 +3360,8 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <p>多级页表优点 : <strong>减少页表所占的连续内存空间</strong></p>
 <p>在段页式分配中,CPU 每次从内存中取一次数据需要 <strong>3 次</strong> 访问内存.</p>
 <h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>虚拟存储器 <strong>只能基于非连续分配技术</strong></p>
-<p><img src="https://i.loli.net/2019/12/02/R9XyI3jnFUkEabZ.png" alt="7A2843C8-34A3-463E-91A5-D9127E2E2E04.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/bUE19k724LXcRnr.png" alt="6F0017F3-DBED-4B71-AA9C-DF77809EA4D6.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/R9XyI3jnFUkEabZ.png" alt="7A2843C8-34A3-463E-91A5-D9127E2E2E04.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/bUE19k724LXcRnr.png" alt="6F0017F3-DBED-4B71-AA9C-DF77809EA4D6.png"></p>
 <h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>在缓冲池方式下,为了有效地管理,需形成 <strong>空闲\输入\输出</strong> 等缓冲区队列.</p>
 <h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><p>文件系统的主要组成部分是 <strong>文件及管理文件的软件</strong></p>
 <p>文件管理实际上是管理 <strong>辅助存储空间</strong></p>
@@ -3378,19 +3378,19 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 </blockquote>
 <p>在引入线程的操作系统中,吧 <strong>线程</strong> 作为调度和分配的基本单位,而吧 <strong>进程</strong> 作为资源拥有的基本单位.</p>
 <h2 id="第三章-2"><a href="#第三章-2" class="headerlink" title="第三章"></a>第三章</h2><p>决定一个程序是否能占用处理机执行,是由 <strong>进程调度</strong> 机构决定.</p>
-<h2 id="第四章-1"><a href="#第四章-1" class="headerlink" title="第四章"></a>第四章</h2><p><img src="https://i.loli.net/2019/12/02/oKj5XTE3YhkcAJw.png" alt="954E0751-0736-4973-97B3-F45425F23428.png"></p>
+<h2 id="第四章-1"><a href="#第四章-1" class="headerlink" title="第四章"></a>第四章</h2><p><img data-src="https://i.loli.net/2019/12/02/oKj5XTE3YhkcAJw.png" alt="954E0751-0736-4973-97B3-F45425F23428.png"></p>
 <p>页表是存放在内存中的，CPU 要存取一个数据，需访问主存 <strong>两次</strong></p>
 <p>为了提高存取速度，在地址变换机构中增设一组寄存器，用来存放当前访问 的那些页表，把存放在高速缓冲寄存器中的页表叫 <strong>快表</strong> ，这个高速缓冲寄存 器又叫 <strong>联想存贮器</strong></p>
-<p><img src="https://i.loli.net/2019/12/02/bp7tucBEDoNIXnP.png" alt="A82A7ED9-3959-40A8-BBE4-4C7BB06CDB54.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/WyxjYL9MagQ1eVA.png" alt="A43E33A0-62B1-49A8-AF95-A4E12F2A198C.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/sISvETeXb1gfzV7.png" alt="D13117D7-5C62-4065-AC78-81FC9EEBECC7.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/bp7tucBEDoNIXnP.png" alt="A82A7ED9-3959-40A8-BBE4-4C7BB06CDB54.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/WyxjYL9MagQ1eVA.png" alt="A43E33A0-62B1-49A8-AF95-A4E12F2A198C.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/sISvETeXb1gfzV7.png" alt="D13117D7-5C62-4065-AC78-81FC9EEBECC7.png"></p>
 <h2 id="第六章-1"><a href="#第六章-1" class="headerlink" title="第六章"></a>第六章</h2><p><strong>系统调用</strong> 是应用程序取得 OS 所有服务的唯一途径</p>
 <p>启动磁盘后.对此盘读/写信息的最小单位是 <strong>物理块</strong></p>
 <p>虚拟设备技术实现的是 <strong>独占设备模拟共享设备</strong></p>
 <p>在多进程的并发系统中,肯定不会因为竞争下列资源而产生死锁的是 <strong>磁盘</strong></p>
 <h1 id="概念重点"><a href="#概念重点" class="headerlink" title="概念重点"></a>概念重点</h1><h2 id="第二章-3"><a href="#第二章-3" class="headerlink" title="第二章"></a>第二章</h2><p>进程状态</p>
 <p>生产者-消费者</p>
-<p><img src="https://i.loli.net/2019/12/02/pjQFTia87hEOGWn.png" alt="3DA28E45-DCD3-4142-A950-8D7FAFA712FD.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/pjQFTia87hEOGWn.png" alt="3DA28E45-DCD3-4142-A950-8D7FAFA712FD.png"></p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -3457,13 +3457,13 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <li><p>在计算机术语中，将 <strong>运算器</strong> 和 <strong>控制器</strong> 合在一起称为 CPU，而将 CPU 和 <strong>存储器</strong> 合在一起称为主机</p>
 </li>
 </ol>
-<h3 id="大题"><a href="#大题" class="headerlink" title="大题"></a>大题</h3><h3 id="操作码"><a href="#操作码" class="headerlink" title="操作码"></a>操作码</h3><p><img src="https://i.loli.net/2019/12/06/Ga7gdQ1hAoMlWJm.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2019/12/06/rJ648EDn1s9ic53.png" alt="image.png"></p>
-<p><img src="https://i.loli.net/2019/12/06/ardZeYuIJEqk5V6.png" alt="image.png"></p>
-<h3 id="寻址方式-1"><a href="#寻址方式-1" class="headerlink" title="寻址方式(1)"></a>寻址方式(1)</h3><p><img src="https://i.loli.net/2019/12/06/w6FOGXtxLunkKQ8.png" alt="截屏2019-12-06下午9.58.51.png"></p>
-<p><img src="https://i.loli.net/2019/12/06/MtzyqEUGBbso8J3.png" alt="截屏2019-12-06下午9.58.56.png"></p>
-<p><img src="https://i.loli.net/2019/12/06/jzmTuxYL138WKqi.png" alt="截屏2019-12-06下午9.59.00.png"></p>
-<h3 id="寻址方式-2"><a href="#寻址方式-2" class="headerlink" title="寻址方式(2)"></a>寻址方式(2)</h3><p><img src="https://i.loli.net/2019/12/06/4G5fsaxOc7LXPAe.png" alt="截屏2019-12-06下午9.59.05.png"></p>
+<h3 id="大题"><a href="#大题" class="headerlink" title="大题"></a>大题</h3><h3 id="操作码"><a href="#操作码" class="headerlink" title="操作码"></a>操作码</h3><p><img data-src="https://i.loli.net/2019/12/06/Ga7gdQ1hAoMlWJm.png" alt="image.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/06/rJ648EDn1s9ic53.png" alt="image.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/06/ardZeYuIJEqk5V6.png" alt="image.png"></p>
+<h3 id="寻址方式-1"><a href="#寻址方式-1" class="headerlink" title="寻址方式(1)"></a>寻址方式(1)</h3><p><img data-src="https://i.loli.net/2019/12/06/w6FOGXtxLunkKQ8.png" alt="截屏2019-12-06下午9.58.51.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/06/MtzyqEUGBbso8J3.png" alt="截屏2019-12-06下午9.58.56.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/06/jzmTuxYL138WKqi.png" alt="截屏2019-12-06下午9.59.00.png"></p>
+<h3 id="寻址方式-2"><a href="#寻址方式-2" class="headerlink" title="寻址方式(2)"></a>寻址方式(2)</h3><p><img data-src="https://i.loli.net/2019/12/06/4G5fsaxOc7LXPAe.png" alt="截屏2019-12-06下午9.59.05.png"></p>
 <h1 id="二轮"><a href="#二轮" class="headerlink" title="二轮"></a>二轮</h1><h2 id="选择-1"><a href="#选择-1" class="headerlink" title="选择"></a>选择</h2><ol>
 <li><p>计算机主存储器读写的时间数量级为( <strong>ns</strong> )</p>
 </li>
@@ -3707,7 +3707,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
     <title>浅谈Linux的使用与应用</title>
     <url>/2019/12/24/2019-12-24-%E6%B5%85%E8%B0%88Linux%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8/</url>
     <content><![CDATA[<p>这是 Linux 课程的大作业…</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/410079949.jpg?Expires=1602316585&" alt="head"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/410079949.jpg?Expires=1602316585&" alt="head"></p>
 <a id="more"></a>
 
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>自大一开始接触 Linux，从最早的 centOS 到现在常用的 Ubuntu，如今对 Linux 的使用与应用，也算是有一点自己的小小的体会，所以本篇主要就是讲述我个人对于 Linux 使用与应用的一些心得和看法。</p>
@@ -3754,7 +3754,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 
 <p>以上是一个测试案例,最终,点击了节点之后,会形成相应的点击反馈</p>
 <h2 id="将-JS-图表固化"><a href="#将-JS-图表固化" class="headerlink" title="将 JS 图表固化"></a>将 JS 图表固化</h2><p>JS 是动态渲染的,虽然因此对出很多花哨的特效,但是不像传统的 python 分析图一样,可以导出成为图像文件.<br>我一度很纠结,这之中如何做出取舍,难道每次都要手动地去截图吗,如果遇到没办法截图的情况岂不是麻瓜了?<br>等等,截图…<br>这个时候我忽然想到了写爬虫的时候,使用 selenium 去模拟浏览器的经历,于是自然而然想到了解决方案,既然只能截图,那就截图呗~~<br>使用 selenium 模拟后台浏览器,然后使用 snapshot 模拟截图动作,就得到了一张需要的图像文件咯.</p>
-<p>附上螺旋丸一张<br><img src="https://i.loli.net/2020/01/03/pOxWMTjgdCfroqY.png" alt="截屏2020-01-03下午8.50.38.png"></p>
+<p>附上螺旋丸一张<br><img data-src="https://i.loli.net/2020/01/03/pOxWMTjgdCfroqY.png" alt="截屏2020-01-03下午8.50.38.png"></p>
 <h2 id="沟通与交流"><a href="#沟通与交流" class="headerlink" title="沟通与交流"></a>沟通与交流</h2><p>在 David Scott 的 &lt;修改软件的艺术&gt; 一书中读到过这一方面的内容,但是没有想到这么快就得到了实践的验证.<br>不同人的思维回路是不同的,分歧无时无刻不在产生,如果不及时地进行有效的沟通,最终的结果就是,开发的产品与设计的思路大相径庭.</p>
 <h2 id="删除注释"><a href="#删除注释" class="headerlink" title="删除注释"></a>删除注释</h2><p>源码之中的注释可以极大地提高代码的维护效率,但是有些时候我们并不想注释流出,给其他人看见.<br>结合很多代码编辑器的正则查找替换功能,这里给出一个一键剔除注释的方案.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">//[\s\S]* 运用正则快速删除注释</span><br></pre></td></tr></table></figure>
@@ -4263,7 +4263,7 @@ hello alice</code></pre>
 <li><p>使用 ifconfig 查找本机的 ip 地址</p>
 </li>
 <li><p>找到 inet，如下图所示，IP 地址为 192.168.3.6</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1510c350j30d502z0sx.jpg" alt="image-20200118233542424"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1510c350j30d502z0sx.jpg" alt="image-20200118233542424"></p>
 </li>
 </ol>
 </li>
@@ -4275,11 +4275,11 @@ hello alice</code></pre>
 <li><p>在命令行中输入 <strong>mitmproxy</strong> ， 进入 mitmproxy 的数据流界面。</p>
 </li>
 <li><p>打开任意的 app，然后发现数据流界面开始跳出很多的响应字段，ok，配置正确。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15d0e0ksj30fq09oab0.jpg" alt="image-20200118234716015"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15d0e0ksj30fq09oab0.jpg" alt="image-20200118234716015"></p>
 </li>
 </ol>
 <p>上图为结果展示，可以点击字段进入查看详细的信息</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15hp8sohj30fs0bvgmv.jpg" alt="image-20200118235147625"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15hp8sohj30fs0bvgmv.jpg" alt="image-20200118235147625"></p>
 <p>ps. 这里列一下流界面的快捷键</p>
 <blockquote>
 <p>?:帮助<br>q:返回 或退出<br>z:清屏<br>j:上一个或向上滑动<br>k:下一个或向下滑动<br>回车键：查看选中的请求<br>h:查看 请求内容 下一个<br>l:查看请求内容 上一个<br>tab：查看请求内容 下一个</p>
@@ -4293,15 +4293,15 @@ hello alice</code></pre>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mitmdump -s mitmuse1.py</span><br></pre></td></tr></table></figure>
 
 <p>这里我先把所有的 json 数据写入到一个文件里面，然后再对数据进行统一的分析，这样的好处是占用内存小。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mame47mj30s10dfwf8.jpg" alt="image-20200119093308992"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1n9p1ksqj30nj0hodm7.jpg" alt="截屏2020-01-19上午10.05.45"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mame47mj30s10dfwf8.jpg" alt="image-20200119093308992"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1n9p1ksqj30nj0hodm7.jpg" alt="截屏2020-01-19上午10.05.45"></p>
 <p>排名第一的竟然是 <strong>《活着》</strong> ！？因为读过这本书，所以我觉得这个结果过于魔幻现实了。</p>
 <p>余华的这本书绝对不是《水浒传》那种老少咸宜的读物，甚至于高中时期我们将他的书戏称为“黑暗圣经”，两倍于第二名《红楼梦》的结果让我有点无法接受(老实说红楼梦排第二也挺魔幻的，但是考虑到院里女生居多就不讨论了…)</p>
 <p>排名第三的中规中矩，<strong>《平凡的世界》</strong> 我也读过，这是如中当年的入学推荐读物(满满的回忆)</p>
 <p>第四名。。。？？？？？？？？？？？？？？？</p>
 <p>于是我开始打发假期的无聊时光。</p>
 <p>进行文本进行对比筛查，经过一系列的折腾之后，得到如下的结果。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mkm5wb8j30rg0i3win.jpg" alt="image-20200119094246243"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mkm5wb8j30rg0i3win.jpg" alt="image-20200119094246243"></p>
 <p>这里只打印出了差异值 <strong>&lt;=5</strong> 的文本，可以看到，差异值越低，文本的相似度越高。</p>
 <p>最终可以得出结论，仅仅是在我院的内部的关于活着的 237 篇笔记，就出现了很多的雷同。所以，这次活动的出发点无疑是好的，但是可笑的地方在于， <strong>主体不明，执行不力</strong> ，到头来只是平白增加了很多同学的负担罢了。</p>
 <p>要么本着自愿的原则，鼓励报名，宽松监管，自觉养成。</p>
@@ -4346,7 +4346,7 @@ hello alice</code></pre>
 <p>最终的结果如下所示</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">[&#123;</span><br><span class="line">	<span class="attr">&quot;provinceName&quot;</span>: <span class="string">&quot;湖北省&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;provinceShortName&quot;</span>: <span class="string">&quot;湖北&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;confirmedCount&quot;</span>: <span class="number">729</span>,</span><br><span class="line">	<span class="attr">&quot;suspectedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">	<span class="attr">&quot;curedCount&quot;</span>: <span class="number">32</span>,</span><br><span class="line">	<span class="attr">&quot;deadCount&quot;</span>: <span class="number">39</span>,</span><br><span class="line">	<span class="attr">&quot;comment&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">	<span class="attr">&quot;cities&quot;</span>: [&#123;</span><br><span class="line">		<span class="attr">&quot;cityName&quot;</span>: <span class="string">&quot;武汉&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;confirmedCount&quot;</span>: <span class="number">572</span>,</span><br><span class="line">		<span class="attr">&quot;suspectedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">		<span class="attr">&quot;curedCount&quot;</span>: <span class="number">32</span>,</span><br><span class="line">		<span class="attr">&quot;deadCount&quot;</span>: <span class="number">38</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">&quot;cityName&quot;</span>: <span class="string">&quot;黄冈&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;confirmedCount&quot;</span>: <span class="number">64</span>,</span><br><span class="line">		<span class="attr">&quot;suspectedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">		<span class="attr">&quot;curedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">		<span class="attr">&quot;deadCount&quot;</span>: <span class="number">0</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">		<span class="attr">&quot;cityName&quot;</span>: <span class="string">&quot;孝感&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;confirmedCount&quot;</span>: <span class="number">26</span>,</span><br><span class="line">		<span class="attr">&quot;suspectedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">		<span class="attr">&quot;curedCount&quot;</span>: <span class="number">0</span>,</span><br><span class="line">		<span class="attr">&quot;deadCount&quot;</span>: <span class="number">0</span></span><br><span class="line">	&#125;, &#123;</span><br><span class="line">        .............</span><br></pre></td></tr></table></figure>
 
-<p>然后将数据进行可视化，形成中国省级单位的疫情地图 <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb8tmiweq7j30v90m0juu.jpg" alt="image-20200125150547598"></p>
+<p>然后将数据进行可视化，形成中国省级单位的疫情地图 <img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb8tmiweq7j30v90m0juu.jpg" alt="image-20200125150547598"></p>
 <h3 id="持续获取"><a href="#持续获取" class="headerlink" title="持续获取"></a>持续获取</h3><p>以上只是实现了单次的地图绘制，这显然和要求还有很大的差距。如何进行持续地数据爬取与更新呢？</p>
 <h4 id="方法一：服务器层面"><a href="#方法一：服务器层面" class="headerlink" title="方法一：服务器层面"></a>方法一：服务器层面</h4><p>对于 <strong>Linux</strong> 熟悉的，可以在 Linux 上设置一个定时启动的任务，按照固定的间隔时间进行数据的爬取与存储</p>
 <h4 id="方法二：爬虫层面"><a href="#方法二：爬虫层面" class="headerlink" title="方法二：爬虫层面"></a>方法二：爬虫层面</h4><p>(这是一个替代方案)设置爬虫的睡眠时间 <em>time.sleep</em> ，这无疑是最简单的实现方法，缺点也很明显，程序的健壮性差，很容易出现程序崩溃、停摆的情况</p>
@@ -4376,7 +4376,7 @@ hello alice</code></pre>
   <entry>
     <title>己亥年正月十二:生日快乐</title>
     <url>/2020/02/05/2020-02-05-%E5%B7%B1%E4%BA%A5%E5%B9%B4%E6%AD%A3%E6%9C%88%E5%8D%81%E4%BA%8C_%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90/</url>
-    <content><![CDATA[<p><img src="https://ask-fd.zol-img.com.cn/g5/M00/08/08/ChMkJ1nrTbuILjb1AAQeG5kptTkAAhc7ANm2dIABB4z837.jpg" alt="aisi"></p>
+    <content><![CDATA[<p><img data-src="https://ask-fd.zol-img.com.cn/g5/M00/08/08/ChMkJ1nrTbuILjb1AAQeG5kptTkAAhc7ANm2dIABB4z837.jpg" alt="aisi"></p>
 <a id="more"></a>
 
 <p>人生的第二纪在今天正式结束了。</p>
@@ -4605,7 +4605,7 @@ hello alice</code></pre>
 <li><p>字符串长度：strlen key</p>
 </li>
 </ul>
-<h4 id="命令演示"><a href="#命令演示" class="headerlink" title="命令演示"></a>命令演示</h4><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170529-877062.png" alt="image-20200202201918881"></p>
+<h4 id="命令演示"><a href="#命令演示" class="headerlink" title="命令演示"></a>命令演示</h4><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170529-877062.png" alt="image-20200202201918881"></p>
 <h3 id="2-1-2-哈希"><a href="#2-1-2-哈希" class="headerlink" title="2.1.2 哈希"></a>2.1.2 哈希</h3><p>Hash 类型是 String 类型的 field 和 value 的映射表，或者说是一个 <em>String 集合</em> 。</p>
 <p>它特别适合 <strong>存储对象</strong> ，相比较而言，将一个对象类型存储在 Hash 类型要存储在 String 类型里占用更少的内存空间，并方整个对象的存取。</p>
 <h4 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h4><ul>
@@ -4622,7 +4622,7 @@ hello alice</code></pre>
 <li>hvals key：返回 hash 的所有 field 对应的 value</li>
 <li>hgetall key：返回 hash 里所有的 field 和 value</li>
 </ul>
-<h4 id="命令演示-1"><a href="#命令演示-1" class="headerlink" title="命令演示"></a>命令演示</h4><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170533-752821.png" alt="image-20200202204233903"></p>
+<h4 id="命令演示-1"><a href="#命令演示-1" class="headerlink" title="命令演示"></a>命令演示</h4><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170533-752821.png" alt="image-20200202204233903"></p>
 <h3 id="2-1-3-列表"><a href="#2-1-3-列表" class="headerlink" title="2.1.3 列表"></a>2.1.3 列表</h3><p>List 类型是一个链表结构的集合，其主要功能有 push、pop、获取元素等。</p>
 <p>更详细的说，List 类型是一个双端链表的节后，我们可以通过相关的操作进行集合的头部或者尾部添加和删除元素，List 的设计非常简单精巧，即可以作为栈，又可以作为队列，满足绝大多数的需求。</p>
 <h4 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h4><ul>
@@ -4652,7 +4652,7 @@ hello alice</code></pre>
 <li><p>lindex key index：返回名称为 key 的 list 中 index 位置的元素</p>
 </li>
 </ul>
-<h4 id="命令演示-2"><a href="#命令演示-2" class="headerlink" title="命令演示"></a>命令演示</h4><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170632-878532.png" alt="image-20200202212137182"></p>
+<h4 id="命令演示-2"><a href="#命令演示-2" class="headerlink" title="命令演示"></a>命令演示</h4><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170632-878532.png" alt="image-20200202212137182"></p>
 <h3 id="2-1-4-集合"><a href="#2-1-4-集合" class="headerlink" title="2.1.4 集合"></a>2.1.4 集合</h3><p>set 集合是 string 类型的无序集合，set 是通过 hashtable 实现的，对集合我们可以取交集、并集、差集</p>
 <h4 id="命令-3"><a href="#命令-3" class="headerlink" title="命令"></a>命令</h4><ul>
 <li>SADD key member [member …]：向名称为 key 的 set 中添加元素，set 集合不允许重复元素。</li>
@@ -4670,7 +4670,7 @@ hello alice</code></pre>
 <li>SISMEMBER key member：判断某个元素是否为集合中的元素，是，返回 1。不是，返回 0。</li>
 <li>srandmember key：随机返回一个元素</li>
 </ul>
-<h4 id="命令演示-3"><a href="#命令演示-3" class="headerlink" title="命令演示"></a>命令演示</h4><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170833-579770.png" alt="image-20200202212759047"></p>
+<h4 id="命令演示-3"><a href="#命令演示-3" class="headerlink" title="命令演示"></a>命令演示</h4><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170833-579770.png" alt="image-20200202212759047"></p>
 <h3 id="2-1-5-有序集合"><a href="#2-1-5-有序集合" class="headerlink" title="2.1.5 有序集合"></a>2.1.5 有序集合</h3><p>有序集合和集合一样也是 string 类型元素的集合,且不允许重复的成员。不同的是每个元素都会关联一个 double 类型的 <strong>分数</strong> 。redis 正是通过分数来为集合中的成员进行 <strong>从小到大</strong> 的排序。</p>
 <p>有序集合的成员是唯一的,但分数(score)却 <strong>可以重复</strong> 。</p>
 <p>集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。 集合中最大的成员数为 2^32 - 1 (4294967295, 每个集合可存储 40 多亿个成员)。</p>
@@ -4750,7 +4750,7 @@ hello alice</code></pre>
 <li>DISCARD 取消事务</li>
 <li>WATCH key 监听某个 key 的值是否发生变化,如果发生变化, watch 之后的操作会失败</li>
 </ul>
-<h4 id="命令演示-4"><a href="#命令演示-4" class="headerlink" title="命令演示"></a>命令演示</h4><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170908-801420.png" alt="image-20200202225636915"></p>
+<h4 id="命令演示-4"><a href="#命令演示-4" class="headerlink" title="命令演示"></a>命令演示</h4><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200209170908-801420.png" alt="image-20200202225636915"></p>
 <h3 id="2-2-3-Redis-数据备份与恢复"><a href="#2-2-3-Redis-数据备份与恢复" class="headerlink" title="2.2.3 Redis 数据备份与恢复"></a>2.2.3 Redis 数据备份与恢复</h3><h4 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Redis SAVE 命令用于创建当前数据库的备份。</span><br></pre></td></tr></table></figure>
 
 <h4 id="恢复数据"><a href="#恢复数据" class="headerlink" title="恢复数据"></a>恢复数据</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">如果需要恢复数据，只需将备份文件 (dump.rdb) 移动到 redis 安装目录并启动服务即可。</span><br></pre></td></tr></table></figure>
@@ -4770,7 +4770,7 @@ hello alice</code></pre>
   <entry>
     <title>redis学习笔记(2)</title>
     <url>/2020/02/12/2020-02-12-redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)/</url>
-    <content><![CDATA[<h1 id="3-进阶功能"><a href="#3-进阶功能" class="headerlink" title="3 进阶功能"></a>3 进阶功能</h1><h2 id="3-1-慢查询"><a href="#3-1-慢查询" class="headerlink" title="3.1 慢查询"></a>3.1 慢查询</h2><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121243-387827.png" alt="image-20200212121241917"></p>
+    <content><![CDATA[<h1 id="3-进阶功能"><a href="#3-进阶功能" class="headerlink" title="3 进阶功能"></a>3 进阶功能</h1><h2 id="3-1-慢查询"><a href="#3-1-慢查询" class="headerlink" title="3.1 慢查询"></a>3.1 慢查询</h2><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121243-387827.png" alt="image-20200212121241917"></p>
 <a id="more"></a>
 
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul>
@@ -4839,7 +4839,7 @@ hello alice</code></pre>
 <h2 id="3-3-发布订阅"><a href="#3-3-发布订阅" class="headerlink" title="3.3 发布订阅"></a>3.3 发布订阅</h2><p>Redis 发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。</p>
 <p>Redis 客户端可以订阅任意数量的频道。</p>
 <p>当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121019-469340.png" alt="p21"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121019-469340.png" alt="p21"></p>
 <blockquote>
 <p>类比生产者-消费者模型进行理解。发送者对应生产者，订阅者对应消费者。</p>
 </blockquote>
@@ -4981,7 +4981,7 @@ hello alice</code></pre>
 <p>爬虫本身可以想象为&lt;柯南&gt;中那个小黑人，任谁(服务器)看到这幅打扮的人都会心神警惕吧。而 headers 的作用就是给这个小黑人”变装”，让它看上去更加地像一个”好人”。</p>
 <p>这就是笔者上文所说的 <em>与浏览器访问相类</em> ，具体的体现就是 headers 这一行。</p>
 <p>这一行规定了爬虫的请求头，这是笔者从自己的浏览器中摘出来的<strong>浏览器请求头</strong>，声明了使用的是什么样的浏览器及其内核版本。</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213202739-538776.png" alt="image-20200213202738417"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213202739-538776.png" alt="image-20200213202738417"></p>
 <p>当然，<strong>get</strong> 还有<strong>proxies</strong>这样一个参数，这就相当于是直接给爬虫这个小黑人”换了一个身份”，对于这个有兴趣的可以参看<a href="http://harumonia.top/index.php/archives/212/">构建 proxy pool</a> 一文，这里就不多做赘述了。</p>
 <p>之所以先上 CSDN 的访问量爬虫，是因为这个爬虫的实现机制简单，可以作为一个很好的引入案例。</p>
 <p>那么，现在开始正餐~</p>
@@ -4997,11 +4997,11 @@ hello alice</code></pre>
 <p>于是，我开始尝试寻找新的方法。2019 年下半年的网站开发工作，让我对<strong>API</strong>这个概念有了更深一层的体会，在每次<strong>点击</strong>开始播放之后，对应的 API 又是什么呢？</p>
 <h3 id="1-开始分析网页的-API-结构"><a href="#1-开始分析网页的-API-结构" class="headerlink" title="1. 开始分析网页的 API 结构"></a>1. 开始分析网页的 API 结构</h3><p>以<a href="https://www.bilibili.com/video/av88113854">【德拉科 Draco】个人向踩点混剪（一点都不骚）</a>这个视频为例。</p>
 <p>在点击开始之后，一瞬间跳出了一大片的网络请求信息。(难怪 Safari 总是提示 B 站耗能高 (笑))</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213204118-561183.png" alt="image-20200213204116715"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213204118-561183.png" alt="image-20200213204116715"></p>
 <h3 id="2-开始寻找”嫌疑人”"><a href="#2-开始寻找”嫌疑人”" class="headerlink" title="2. 开始寻找”嫌疑人”"></a>2. 开始寻找”嫌疑人”</h3><p>主要就是看交互的<strong>参数</strong>和<strong>响应</strong>。</p>
 <p>既然要计算点击量，那么在请求中肯定<strong>包含了视频的 av 号和 cid</strong>这些特征信息吧，于是完成第一轮排查。</p>
 <p>依然剩下很多，第二轮排查的主要着力点在 API 的名字，优秀的 API 的命名不可能是很随意的，这里我选择相信 B 站程序员的职业素养，于是我赌对了。在挑了两个之后，果然被我命中了。</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213204634-611540.png" alt="image-20200213204634035"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213204634-611540.png" alt="image-20200213204634035"></p>
 <p>可以看到，这个名字是<em>h5</em>的小家伙携带了很不得了的信息呢。</p>
 <h3 id="3-测试-API"><a href="#3-测试-API" class="headerlink" title="3. 测试 API"></a>3. 测试 API</h3><p>将表单的信息复制下来，我们使用 post 命令来模拟一下，看看是什么结果。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Host&#x27;</span>:<span class="string">&#x27;api.bilibili.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;application/json, text/javascript, */*; q=0.01&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate, br&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Origin&#x27;</span>: <span class="string">&#x27;https://www.bilibili.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://www.bilibili.com/video/av88113854&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;Cookie&#x27;</span>:<span class="string">&quot;你的cookie&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;aid&#x27;</span>:<span class="string">&#x27;88113854&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;cid&#x27;</span>:<span class="string">&#x27;150536365&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;part&#x27;</span>:<span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;mid&#x27;</span>:<span class="string">&#x27;your mid&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;lv&#x27;</span>:<span class="string">&#x27;5&#x27;</span>,</span><br><span class="line">    <span class="comment"># &#x27;ftime&#x27;:&#x27;1581244587&#x27;,</span></span><br><span class="line">    <span class="comment"># &#x27;stime&#x27;:&#x27;1581419884&#x27;,</span></span><br><span class="line">    <span class="string">&#x27;jsonp&#x27;</span>:<span class="string">&#x27;jsonp&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;3&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;sub_type&#x27;</span>:<span class="string">&#x27;0&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req = requests.post(<span class="string">&#x27;https://api.bilibili.com/x/click-interface/click/web/h5&#x27;</span>,data=data,headers=headers,proxies=proxy)</span><br></pre></td></tr></table></figure>
@@ -5047,9 +5047,9 @@ hello alice</code></pre>
 <li>网页制作常识</li>
 </ol>
 <h3 id="1-捕获-API"><a href="#1-捕获-API" class="headerlink" title="1. 捕获 API"></a>1. 捕获 API</h3><p>交互的一个关键时间节点就在<strong>点击提交的时候</strong>，分析这个时候所有的网络请求，找到向服务器发出请求的那个 api。</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200215132905-267194.png" alt="image-20200215132901387"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200215132905-267194.png" alt="image-20200215132901387"></p>
 <p>这是一个<strong>POST 方法</strong>的 API，我们还要找到 POST 了哪些数据</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200215133049-114377.png" alt="image-20200215133047464"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200215133049-114377.png" alt="image-20200215133047464"></p>
 <p>API 捕获完毕。</p>
 <h3 id="2-使用-python-模拟请求"><a href="#2-使用-python-模拟请求" class="headerlink" title="2. 使用 python 模拟请求"></a>2. 使用 python 模拟请求</h3><p>通过 python 向这个 API 发送具有相同数据的 POST 请求，代码如下</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">data = &#123;</span><br><span class="line">    <span class="string">&#x27;DATETIME_CYCLE&#x27;</span>: <span class="string">&#x27;2020/02/14&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RYLX_973890&#x27;</span>: <span class="string">&#x27;本科生&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;DWMC_52258&#x27;</span>: <span class="string">&#x27;人工智能与信息技术学院&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;DLM_368457&#x27;</span>: <span class="string">&#x27;masaike&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;XM_28154&#x27;</span>: <span class="string">&#x27;masaike&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RADIO_363902&#x27;</span>: <span class="string">&#x27;masaike&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXT_311465&#x27;</span>: <span class="string">&#x27;masaike&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXT_834053&#x27;</span>: <span class="string">&#x27;masaike&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RADIO_241490&#x27;</span>: <span class="string">&#x27;国内其他城市&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;PICKER_6022&#x27;</span>: <span class="string">&#x27;江苏省,南通市,如皋市&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RADIO_443904&#x27;</span>: <span class="string">&#x27;以上都不是&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RADIO_685230&#x27;</span>: <span class="string">&#x27;以上都不是&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXT_252907&#x27;</span>: <span class="string">&#x27;36.5&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXT_386522&#x27;</span>: <span class="string">&#x27;36.5&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;CHECKBOX_168245&#x27;</span>: <span class="string">&#x27;完全健康&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RADIO_452067&#x27;</span>: <span class="string">&#x27;否&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXT_12061&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;TEXTAREA_21834&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://pdc.njucm.edu.cn/pdc/formDesignApi/dataFormSave?wid=9D9A0F8F21FF5286E0533200140A8E52&amp;userId=084517124&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;Host&#x27;</span>: <span class="string">&#x27;pdc.njucm.edu.cn&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Origin&#x27;</span>: <span class="string">&#x27;https://pdc.njucm.edu.cn&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;https://pdc.njucm.edu.cn/pdc/formDesignApi/S/LhU8pTKv&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(url,data=data,headers=headers)</span><br><span class="line"><span class="keyword">if</span> res.status_code != <span class="number">200</span>:</span><br><span class="line">    print(<span class="string">&#x27;warning!failure.&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;success&#x27;</span>)</span><br></pre></td></tr></table></figure>
@@ -5434,7 +5434,7 @@ hello alice</code></pre>
 <p>难得遇到一道困难的打卡题，就在这里写一下过程吧（虽然并不是很困难。。。）</p>
 </blockquote>
 <p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1"></p>
 <p>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）</p>
 <a id="more"></a>
 
@@ -5442,7 +5442,7 @@ hello alice</code></pre>
 <blockquote>
 <p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
 </blockquote>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1989192964.png?Expires=1602313313&" alt="p2"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1989192964.png?Expires=1602313313&" alt="p2"></p>
 <h2 id="解"><a href="#解" class="headerlink" title="解"></a>解</h2><p>首先想到的应该就是暴力法。不过暴力法没有多少分析的价值，所以略过不谈。</p>
 <p>个人认为，无论何时，暴力法都应该作为一个最后的保命手段来用比较好的。如果条件允许，还是去追求一些高效率的解法，这样每日的打卡才有意义。</p>
 <p>这里用分解子问题的思路，将这个问题进行拆分。</p>
@@ -5466,12 +5466,12 @@ hello alice</code></pre>
     <content><![CDATA[<p>感觉已经一万年没有更新博客了。。。这次是制作一个简单的爬虫。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期有一门纯文科的课程，名唤“医疗仪器原理”。谓之纯文科，自然是要背诵的题目太多了，多到了梦回高中历史的地步= =。</p>
 <p>授课老师喜欢使用雨课堂发布习题，但是雨课堂没有办法导出题目和答案，想要整理就只能一条一条地复制粘贴，更骚的是，这个网站的题目默认被转成了图片格式(？？？)。好嘛，复制粘贴都做不到了。</p>
-<p><img src="https://i.loli.net/2020/04/29/WhZH5pTk1MvJULc.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/04/29/WhZH5pTk1MvJULc.png" alt="图片.png"></p>
 <p>这种复习的效率实在是太低了，于是准备重操旧业，开始爬虫工程（面向监狱编程）</p>
 <a id="more"></a>
 
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="S1-抓包分析"><a href="#S1-抓包分析" class="headerlink" title="S1 抓包分析"></a>S1 抓包分析</h3><p>在进行交互分析之后，发现了一个有趣的链接，这个链接的文本量大得出奇，而且类型是 json！~一般这样的链接，就是我们交互分析的最终目标了。</p>
-<p><img src="https://i.loli.net/2020/04/29/SPQrEik3UldRMX9.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/04/29/SPQrEik3UldRMX9.png" alt="图片.png"></p>
 <p>这样一来，数据来源问题就解决了。</p>
 <p>继续分析，他所有的题目和答案都是保存为图片，然后给出了一个图片链接。第一次见到这种奇葩的设计，难道是为了防止我这种”数据小偷”吗?</p>
 <p>图片可以直接抓下来，但是就这样贴到笔记本上，十分地麻烦，关键是不美观啊。</p>
@@ -5480,11 +5480,11 @@ hello alice</code></pre>
 <p>不过在识别的过程中倒是出现了一个小插曲。</p>
 <h4 id="png-问题"><a href="#png-问题" class="headerlink" title="png 问题"></a>png 问题</h4><p>第一次识别之后，明明本地每个文字都很清楚，但是识别结果就是空。由于这是一个黑盒的过程，我也不知道中间到底是出了什么问题。</p>
 <p>我能想到的第一个解决思路就是尽量拆解黑盒。于是我又找了一家 OCR，然后就发现过程中出现了这样的情况。</p>
-<p><img src="https://i.loli.net/2020/04/29/1Yec5JlBIDnx7bQ.png" alt="截屏2020-04-29下午1.42.30.png"></p>
+<p><img data-src="https://i.loli.net/2020/04/29/1Yec5JlBIDnx7bQ.png" alt="截屏2020-04-29下午1.42.30.png"></p>
 <p>无背景的 png 格式的图片，上传之后背景默认被填充为了黑色，这样就与原本的文字颜色(黑色)冲突了，直接把文字给同化了。</p>
 <h3 id="图像预处理"><a href="#图像预处理" class="headerlink" title="图像预处理"></a>图像预处理</h3><p>我对于数字图像的本质理解并不是很深刻，无法从编码层面解决问题，不过条条大路通罗马。</p>
 <p>我的解决思路就是对图像进行一个预处理，赋予图像一个背景颜色，然后再进行 OCR。这个背景颜色自然是与文字颜色越泾渭分明越好，于是选择了白色。</p>
-<p><img src="https://i.loli.net/2020/04/29/Iek1qN6YBwfJSbn.png" alt="1.png"></p>
+<p><img data-src="https://i.loli.net/2020/04/29/Iek1qN6YBwfJSbn.png" alt="1.png"></p>
 <p>如此，清晰明了。进行 OCR 之后，顺利识别出了我们需要的内容。</p>
 <h3 id="S3-爬虫"><a href="#S3-爬虫" class="headerlink" title="S3 爬虫"></a>S3 爬虫</h3><h4 id="S3-1-批量分析"><a href="#S3-1-批量分析" class="headerlink" title="S3.1 批量分析"></a>S3.1 批量分析</h4><p>真的是有够别扭的，雨课堂所有的答案也是保存为图片格式的，最令人发指的是，他的选择题竟然是拆分的图片，也就是说，一个 ABCD 四项的选择题，连上题目一共有 5 张图。。。</p>
 <h4 id="S3-2-区分题型"><a href="#S3-2-区分题型" class="headerlink" title="S3.2 区分题型"></a>S3.2 区分题型</h4><p>回传的数据中，并没有出现类似‘选择’、‘判断’这种能够显示地区分题型的字段。</p>
@@ -5542,11 +5542,11 @@ hello alice</code></pre>
 <p>于是还是保险一点，使用 requests 来完成 post 操作。curl 可以让用户更加方便地输入（仅仅一行，不是不 post 表单要方便多辣），所以就保留了。我们要做的就是从 curl 中提取我们所需要的信息，</p>
 <p>这里选择使用正则表达式来进行分析，最终我们可以顺利地提取出 url、headers、data 等关键信息。</p>
 <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>已经部署好啦 <a href="http://daka.harumonia.top:5008/">http://daka.harumonia.top:5008/</a></p>
-<p><img src="https://i.loli.net/2020/05/04/x2MHB96ivYkwufV.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/05/04/x2MHB96ivYkwufV.png" alt="图片.png"></p>
 <h3 id="S1-获取-curl-命令"><a href="#S1-获取-curl-命令" class="headerlink" title="S1 获取 curl 命令"></a>S1 获取 curl 命令</h3><p>进入浏览器,进入开发者界面,然后进行一次成功的打卡交互.</p>
 <p>这时可以在开发者界面的”网络(network)”中发现一个 post 交互,进行如下图的操作(Copy as cURL),就可以得到 curl 命令</p>
 <p>curl 例子: curl ‘<a href="https://pdc.njucm.edu.cn/pdc/formDesignApi/dataFormSave?wid=****&amp;userId=****&#39;">https://pdc.njucm.edu.cn/pdc/formDesignApi/dataFormSave?wid=****&amp;userId=****&#39;</a> -H ‘User-Agent: Mozill…</p>
-<p><img src="https://i.loli.net/2020/05/04/2aFN3uyjLB6TizK.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/05/04/2aFN3uyjLB6TizK.png" alt="图片.png"></p>
 <h3 id="S2-录入"><a href="#S2-录入" class="headerlink" title="S2 录入"></a>S2 录入</h3><p>将得到的 cURL 录入到网页的表单中</p>
 <p>第二个选项是选择打卡的时间,if 输入 3,就是每天 3 点进行打卡.</p>
 <p><strong>默认一次录入一条,如果一天中需要多次打卡的,多次录入即可</strong></p>
@@ -5554,7 +5554,7 @@ hello alice</code></pre>
 <h3 id="更新记录"><a href="#更新记录" class="headerlink" title="更新记录"></a>更新记录</h3><h4 id="v1-1"><a href="#v1-1" class="headerlink" title="v1.1"></a>v1.1</h4><ol>
 <li>使用一个萌萌的机器人来进行事务完成和失败的相关通知</li>
 </ol>
-<p><img src="https://i.loli.net/2020/05/05/wn5VfGXHuaMx21B.png" alt="图片.png"></p>
+<p><img data-src="https://i.loli.net/2020/05/05/wn5VfGXHuaMx21B.png" alt="图片.png"></p>
 <ol start="2">
 <li>修改配置文件的存放思路</li>
 </ol>
@@ -5570,7 +5570,7 @@ hello alice</code></pre>
     <title>个人简历(备用)</title>
     <url>/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#x63;&#111;&#109;">&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -5720,16 +5720,16 @@ hello alice</code></pre>
 <p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p>
 <a id="more"></a>
 
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面"></p>
 <center> <u>Figure1</u>:  我所期待的终端界面</center>
 
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204803738.png" alt="image-20200719204803738"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204803738.png" alt="image-20200719204803738"></p>
 <center> <u>Figure2</u>:  PowerShell所展示的终端界面</center>
 
 <p>这实在是令人难受。</p>
 <p>那么，本篇所解决的问题，就是如何在 Windows 中搞一个花哨的命令行界面。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="解决外观问题"><a href="#解决外观问题" class="headerlink" title="解决外观问题"></a>解决外观问题</h3><h4 id="cmder"><a href="#cmder" class="headerlink" title="cmder"></a>cmder</h4><p>一开始我选择使用 <a href="https://cmder.net/">cmder</a> 来做一个基于 PowerShell 的终端界面。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719205641389.png" alt="image-20200719205641389"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719205641389.png" alt="image-20200719205641389"></p>
 <center> <u>Figure3</u>:  cmder所展示的终端界面</center>
 
 <blockquote>
@@ -5737,7 +5737,7 @@ hello alice</code></pre>
 </blockquote>
 <p>但是在我进行一些 DIY 的时候，总是会一些奇奇怪怪的 UI 错误，所以在经历了几次令人迷惑的 bug 之后，我开始寻找其它的替代方案。</p>
 <h4 id="Windows-Terminal"><a href="#Windows-Terminal" class="headerlink" title="Windows Terminal"></a>Windows Terminal</h4><p><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab#">Windows Terminal</a> 是一个官方的 ui 壳子，他所展示的界面如下。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210053548.png" alt="image-20200719210053548"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210053548.png" alt="image-20200719210053548"></p>
 <center> <u>Figure4</u>:  Windows Terminal所展示的终端界面</center>
 
 <blockquote>
@@ -5746,7 +5746,7 @@ hello alice</code></pre>
 <p>在界面上，与 cmder 所展示的极简风格相比，官网这个以基佬紫为基调，模糊透明背景的案例深得我心。于是果断下载下来。</p>
 <p>使用的第一体验就是，非常地流畅，软件的本体只有 7M 不到，想要实现案例 UI，似乎是要另外使用一个 colorTool 来完成。这种插件式的构建方式很灵活，但是也很费时间。在大概地折腾了两下之后，它在我心中已经是一个合格 的 cmder 的替代方案了……如果没有遇到下面这位的话。</p>
 <h4 id="Terminus"><a href="#Terminus" class="headerlink" title="Terminus"></a>Terminus</h4><p>这是我在 github 上面冲浪的时候无意中发现的一个界面，使用 JavaScript 开发。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210434085.png" alt="image-20200719210434085"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210434085.png" alt="image-20200719210434085"></p>
 <center> <u>Figure4</u>:  Terminus所展示的终端界面</center>
 
 <blockquote>
@@ -5770,7 +5770,7 @@ hello alice</code></pre>
 <p>本来打算用过 <strong>git bash</strong> 来搞定，但是在 Windows 上依赖 git 附加的 bash，总感觉有点不伦不类的。于是使用 WSL 来搞一点炫酷的事情。</p>
 <p>在新的 Windows 正式版本中，已经可以直接使用 WSL 了，记得年前安装 WSL 的时候，只能使用 Windows 先行版本，还为因此出现的各种 bug 头疼了好久。</p>
 <p>根据官网的文档，几条命令，再重启一下电脑，就能够使用 wsl2 了。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719212747796.png" alt="image-20200719212747796"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719212747796.png" alt="image-20200719212747796"></p>
 <center> <u>Figure5</u>:  Terminus + WSL2 所展示的终端界面</center>
 
 <p>emmmm，有点 Server 的味道了啊。</p>
@@ -5788,7 +5788,7 @@ hello alice</code></pre>
 <li>在下载.sh 文件时，可能会遇到无法连通 github 的情况，可以修改 host，更懒人的办法是，直接把.sh 文件手动 copy 到本地，然后用 sh 命令运行即可</li>
 </ol>
 </blockquote>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719214701704.png" alt="image-20200719214701704"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719214701704.png" alt="image-20200719214701704"></p>
 <center> <u>Figure6</u>:  Terminus + WSL2 + oh-my-zsh 所展示的终端界面</center>
 
 <p>清爽多了，不过比起这个默认的样式，我更习惯使用 <strong>agnoster</strong> 这个样式。</p>
@@ -5802,7 +5802,7 @@ hello alice</code></pre>
 <p>最后执行如下命令，重载 zsh。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719220527894.png" alt="image-20200719220527894"></p>
+<p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719220527894.png" alt="image-20200719220527894"></p>
 <center> <u>Figure6</u>:  最终的终端界面</center>
 
 <p>差不多就是这个味道了。后续还会做一些配色方面的 DIY。</p>
@@ -5898,6 +5898,8 @@ hello alice</code></pre>
     <url>/2020/08/05/geek-contest/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>极客大赛是我司举办的一个内部的挑战比赛，大致的内容就是拟定一道比赛题目，然后根据最后的完成度进行得分排名。比赛的时间为一天，大抵就是上班到下班这么长的时间。</p>
 <p>今年的题目是完成一个票据识别的 app。核心的模块是票据的扫描、识别和后端的存储、统计功能。衍生的加分项就很多了，测试覆盖率、界面设计等等，差不多就是软件的综合完成度、用户体验这些。</p>
+<a id="more"></a>
+
 <ol>
 <li><p>时间的利用</p>
 <p>比赛只有 12 个小时，但是在一些无所谓的事情上面浪费了很多的时间。</p>
@@ -6153,7 +6155,7 @@ hello alice</code></pre>
 <p>只有以双下划线开头的”__job”不能直接被外部访问。</p>
 <p>但是，如果一个属性以”__xxx__“的形式定义，那它又可以被外部访问了，以”__xxx__“定义的属性在 Python 的类中被称为特殊属性，有很多预定义的特殊属性可以使用，通常我们不要把普通属性用”__xxx__“定义。</p>
 <p>以单下划线开头的属性”_xxx”虽然也可以被外部访问，但是，按照习惯，他们不应该被外部访问。</p>
-<h2 id="init-内外定义区别"><a href="#init-内外定义区别" class="headerlink" title="__init__ 内外定义区别"></a>__init__ 内外定义区别</h2><p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135" alt="e48d9f5d14a056cc9f6c8ab0112dda2d.png"></p>
+<h2 id="init-内外定义区别"><a href="#init-内外定义区别" class="headerlink" title="__init__ 内外定义区别"></a>__init__ 内外定义区别</h2><p><img data-src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135" alt="e48d9f5d14a056cc9f6c8ab0112dda2d.png"></p>
 <h2 id="类属性和实例属性名字冲突怎么办"><a href="#类属性和实例属性名字冲突怎么办" class="headerlink" title="类属性和实例属性名字冲突怎么办"></a>类属性和实例属性名字冲突怎么办</h2><p>当实例属性和类属性重名时，实例属性优先级高，它将屏蔽掉对类属性的访问。</p>
 <h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><p>和属性类似，方法也分实例方法和类方法。</p>
 <p>在 class 中定义的全部是实例方法，实例方法第一个参数 self 是实例本身。</p>
@@ -6289,7 +6291,7 @@ hello alice</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -6402,7 +6404,7 @@ hello alice</code></pre>
 <h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><h3 id="术语定义"><a href="#术语定义" class="headerlink" title="术语定义"></a>术语定义</h3><p><strong>images</strong> :An image is an executable package that includes everything needed to run an application–the code, a runtime, libraries, environment variables, and configuration files.</p>
 <p><strong>container</strong> :A container is a runtime instance of an image–what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, docker ps, just as you would in Linux.</p>
 <p><code>container和VM的区别</code></p>
-<p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p199" alt="5c3f63cdcb67e40b1e9a3f1676b17868.png"></p>
+<p><img data-src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p199" alt="5c3f63cdcb67e40b1e9a3f1676b17868.png"></p>
 <h3 id="常用命令集"><a href="#常用命令集" class="headerlink" title="常用命令集"></a>常用命令集</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker container ls</span><br><span class="line">docker container ls --all</span><br><span class="line">docker container ls -aq</span><br><span class="line"></span><br><span class="line">docker rm `docker ps -a|grep Exited|awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>`</span><br></pre></td></tr></table></figure>
 
 <h3 id="参数集"><a href="#参数集" class="headerlink" title="参数集"></a>参数集</h3><p>-d detached 单独地</p>
@@ -6425,7 +6427,7 @@ hello alice</code></pre>
 <blockquote>
 <p>Data mining is the processof automatically discoveringuseful information in large data repositories.</p>
 </blockquote>
-<h3 id="数据挖掘与知识发现"><a href="#数据挖掘与知识发现" class="headerlink" title="数据挖掘与知识发现"></a>数据挖掘与知识发现</h3><p><a href="http://www.harumonia.top/image/JVRe"><img src="http://www.harumonia.top/images/2019/08/17/image.md.png" alt="image.md.png"></a></p>
+<h3 id="数据挖掘与知识发现"><a href="#数据挖掘与知识发现" class="headerlink" title="数据挖掘与知识发现"></a>数据挖掘与知识发现</h3><p><a href="http://www.harumonia.top/image/JVRe"><img data-src="http://www.harumonia.top/images/2019/08/17/image.md.png" alt="image.md.png"></a></p>
 <h2 id="数据挖掘要解决的问题"><a href="#数据挖掘要解决的问题" class="headerlink" title="数据挖掘要解决的问题"></a>数据挖掘要解决的问题</h2><ul>
 <li>可伸缩</li>
 <li>高维性</li>
@@ -6454,9 +6456,9 @@ hello alice</code></pre>
 <h4 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h4><p>识别特征显著不同于其他数据的观测值,这样的值称为 <strong>异常点</strong> 或 <strong>离群点</strong> .<br>好的异常检测器必然具有高检测率和低误报率.</p>
 <p><em>应用</em> : 检测欺诈\网络攻击\疾病的不寻常模式\生态系统扰动<br><em>典型案例</em> :信用卡欺诈检测</p>
 <h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据对象 : 记录\点\向量\模式\事件\案例\样本\观测或实体</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>四种属性类型:标称 序数 区间 比率<br><a href="http://www.harumonia.top/image/N7Zp"><img src="http://www.harumonia.top/images/2019/08/17/image04e5c16df6c5ea4b.md.png" alt="image04e5c16df6c5ea4b.md.png"></a><br>标称和序数统称 <strong>分类的</strong> (categorical) 或 <strong>定性的</strong> (qualitative) 属性.顾名思义,定性属性(如雇员 ID)不具有数的大部分性质,应当像对待符号一样对待他们.其余两种属性,即区间和比率,统称 <strong>定量的</strong> (quantitative) 或 <strong>数值的</strong> (numeric) 属性,用数表示,并且具有数的大部分性质.</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>四种属性类型:标称 序数 区间 比率<br><a href="http://www.harumonia.top/image/N7Zp"><img data-src="http://www.harumonia.top/images/2019/08/17/image04e5c16df6c5ea4b.md.png" alt="image04e5c16df6c5ea4b.md.png"></a><br>标称和序数统称 <strong>分类的</strong> (categorical) 或 <strong>定性的</strong> (qualitative) 属性.顾名思义,定性属性(如雇员 ID)不具有数的大部分性质,应当像对待符号一样对待他们.其余两种属性,即区间和比率,统称 <strong>定量的</strong> (quantitative) 或 <strong>数值的</strong> (numeric) 属性,用数表示,并且具有数的大部分性质.</p>
 <pre><code>                        定义属性层次的变换</code></pre>
-<p><a href="http://www.harumonia.top/image/NNYg"><img src="http://www.harumonia.top/images/2019/08/17/image1f4bfe8f69e2395b.md.png" alt="image1f4bfe8f69e2395b.md.png"></a></p>
+<p><a href="http://www.harumonia.top/image/NNYg"><img data-src="http://www.harumonia.top/images/2019/08/17/image1f4bfe8f69e2395b.md.png" alt="image1f4bfe8f69e2395b.md.png"></a></p>
 <h3 id="数据集的类型"><a href="#数据集的类型" class="headerlink" title="数据集的类型"></a>数据集的类型</h3><ul>
 <li>记录数据</li>
 <li>基于图形的数据</li>
@@ -6472,7 +6474,7 @@ hello alice</code></pre>
 <li>数据矩阵</li>
 <li>稀疏数据矩阵</li>
 </ul>
-<p><a href="http://www.harumonia.top/image/Nqn6"><img src="http://www.harumonia.top/images/2019/08/17/image59be1d41fb6ceff6.md.png" alt="image59be1d41fb6ceff6.md.png"></a></p>
+<p><a href="http://www.harumonia.top/image/Nqn6"><img data-src="http://www.harumonia.top/images/2019/08/17/image59be1d41fb6ceff6.md.png" alt="image59be1d41fb6ceff6.md.png"></a></p>
 <h4 id="基于图形的数据"><a href="#基于图形的数据" class="headerlink" title="基于图形的数据"></a>基于图形的数据</h4><p>这里考虑两种特殊情况:图形捕获数据对象之间的联系\数据对象本身用图形表示</p>
 <h4 id="有序数据"><a href="#有序数据" class="headerlink" title="有序数据"></a>有序数据</h4><p>属性具有涉及时间或空间序的联系</p>
 <ul>
@@ -6557,7 +6559,7 @@ hello alice</code></pre>
 <li>包装方法 Wrapper approaches<br>这些方法将目标数据挖掘算法作为黑盒,使用类似与前面介绍的理想算法</li>
 </ul>
 <h4 id="特征子集选择体系结构"><a href="#特征子集选择体系结构" class="headerlink" title="特征子集选择体系结构"></a>特征子集选择体系结构</h4><p>子集评估度量,控制新的特征子集产生的搜索策略,停止搜索判断,验证过程</p>
-<p><a href="http://www.harumonia.top/image/NsSt"><img src="http://www.harumonia.top/images/2019/08/17/imagea43b43449d9493db.md.png" alt="imagea43b43449d9493db.md.png"></a></p>
+<p><a href="http://www.harumonia.top/image/NsSt"><img data-src="http://www.harumonia.top/images/2019/08/17/imagea43b43449d9493db.md.png" alt="imagea43b43449d9493db.md.png"></a></p>
 <h4 id="特征加权-Feature-Weighting"><a href="#特征加权-Feature-Weighting" class="headerlink" title="特征加权 Feature Weighting"></a>特征加权 Feature Weighting</h4><h3 id="特征创建-Feature-Creation"><a href="#特征创建-Feature-Creation" class="headerlink" title="特征创建 Feature Creation"></a>特征创建 Feature Creation</h3><h4 id="特征提取-Feature-Extraction"><a href="#特征提取-Feature-Extraction" class="headerlink" title="特征提取 Feature Extraction"></a>特征提取 Feature Extraction</h4><p>最常使用的特征提取都是高度针对具体领域的<br>一旦数据挖掘用于一个新的领域,一个关键任务就是开发新的特征和特征提取方法</p>
 <h4 id="映射到新的空间-Mapping-the-Data-to-a-New-Space"><a href="#映射到新的空间-Mapping-the-Data-to-a-New-Space" class="headerlink" title="映射到新的空间 Mapping the Data to a New Space"></a>映射到新的空间 Mapping the Data to a New Space</h4><p>使用一种完全不同的视角挖掘数据可能揭示出重要和有趣的特征.</p>
 <p><strong>傅里叶变换 Fourier transform</strong></p>
@@ -6573,8 +6575,8 @@ hello alice</code></pre>
 <p>离散化问题就是决定选择多少个分割点和确定分割点位置的问题.</p>
 <h5 id="非监督离散化-unSupervised-Discretization"><a href="#非监督离散化-unSupervised-Discretization" class="headerlink" title="非监督离散化 unSupervised Discretization"></a>非监督离散化 unSupervised Discretization</h5><p>聚类?</p>
 <h5 id="监督离散化-Supervised-Discretization"><a href="#监督离散化-Supervised-Discretization" class="headerlink" title="监督离散化 Supervised Discretization"></a>监督离散化 Supervised Discretization</h5><p>基于统计学的方法用每个属性值来分区间,并通过过类似于根据统计检验得出的相邻区间来创建较大的区间.</p>
-<p>基于熵的方法是最有前途的离散化方法之一.<br><a href="http://www.harumonia.top/image/NHsI"><img src="http://www.harumonia.top/images/2019/08/17/imageb9a8cc3bce2b2a12.md.png" alt="imageb9a8cc3bce2b2a12.md.png"></a></p>
-<p><a href="http://www.harumonia.top/image/NfMY"><img src="http://www.harumonia.top/images/2019/08/17/image418cf8e9aaebd1f7.md.png" alt="image418cf8e9aaebd1f7.md.png"></a></p>
+<p>基于熵的方法是最有前途的离散化方法之一.<br><a href="http://www.harumonia.top/image/NHsI"><img data-src="http://www.harumonia.top/images/2019/08/17/imageb9a8cc3bce2b2a12.md.png" alt="imageb9a8cc3bce2b2a12.md.png"></a></p>
+<p><a href="http://www.harumonia.top/image/NfMY"><img data-src="http://www.harumonia.top/images/2019/08/17/image418cf8e9aaebd1f7.md.png" alt="image418cf8e9aaebd1f7.md.png"></a></p>
 <h4 id="具有过多值的分类属性"><a href="#具有过多值的分类属性" class="headerlink" title="具有过多值的分类属性"></a>具有过多值的分类属性</h4><h3 id="变量变换-Variable-Tlansformation"><a href="#变量变换-Variable-Tlansformation" class="headerlink" title="变量变换 Variable Tlansformation"></a>变量变换 Variable Tlansformation</h3><p>指用于变量的所有值的变换</p>
 <p>简单函数变换和规范化</p>
 <h4 id="简单函数-Simple-Functions"><a href="#简单函数-Simple-Functions" class="headerlink" title="简单函数 Simple Functions"></a>简单函数 Simple Functions</h4><blockquote>
@@ -6592,11 +6594,11 @@ hello alice</code></pre>
 </blockquote>
 <p>通常术语”距离”用作相异度的同义词.<br>有时相异度在[0,1]中取值,但是相异度在 0 和 ♾ 之间取值也很常见.</p>
 <h4 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h4><p>通常使用变换将相似度从相异转为相反.</p>
-<h4 id="简单属性之间的相似度和相异度"><a href="#简单属性之间的相似度和相异度" class="headerlink" title="简单属性之间的相似度和相异度"></a>简单属性之间的相似度和相异度</h4><p><a href="http://www.harumonia.top/image/NlDw"><img src="http://www.harumonia.top/images/2019/08/17/imagee59e593bbcfd3120.md.png" alt="imagee59e593bbcfd3120.md.png"></a></p>
+<h4 id="简单属性之间的相似度和相异度"><a href="#简单属性之间的相似度和相异度" class="headerlink" title="简单属性之间的相似度和相异度"></a>简单属性之间的相似度和相异度</h4><p><a href="http://www.harumonia.top/image/NlDw"><img data-src="http://www.harumonia.top/images/2019/08/17/imagee59e593bbcfd3120.md.png" alt="imagee59e593bbcfd3120.md.png"></a></p>
 <h4 id="数据对象之间的相异度-Dissimilarities-between-Data-Objects"><a href="#数据对象之间的相异度-Dissimilarities-between-Data-Objects" class="headerlink" title="数据对象之间的相异度 Dissimilarities between Data Objects"></a>数据对象之间的相异度 Dissimilarities between Data Objects</h4><ul>
-<li>距离<br><strong>欧几里得距离</strong> Euclidean distance<br><a href="http://www.harumonia.top/image/NrLi"><img src="http://www.harumonia.top/images/2019/08/17/image09c78ec0185a1ef1.png" alt="image09c78ec0185a1ef1.png"></a><br>其中,n 是维数,而 <strong>x</strong> k 和 <strong>y</strong> k 分别是 x 和 y 的第 k 个属性值(分量)</li>
+<li>距离<br><strong>欧几里得距离</strong> Euclidean distance<br><a href="http://www.harumonia.top/image/NrLi"><img data-src="http://www.harumonia.top/images/2019/08/17/image09c78ec0185a1ef1.png" alt="image09c78ec0185a1ef1.png"></a><br>其中,n 是维数,而 <strong>x</strong> k 和 <strong>y</strong> k 分别是 x 和 y 的第 k 个属性值(分量)</li>
 </ul>
-<p><strong>闵可夫斯基距离</strong> Minkowski distance<br><a href="http://www.harumonia.top/image/NzaH"><img src="http://www.harumonia.top/images/2019/08/17/image4bfd8ac1d8b3156f.png" alt="image4bfd8ac1d8b3156f.png"></a></p>
+<p><strong>闵可夫斯基距离</strong> Minkowski distance<br><a href="http://www.harumonia.top/image/NzaH"><img data-src="http://www.harumonia.top/images/2019/08/17/image4bfd8ac1d8b3156f.png" alt="image4bfd8ac1d8b3156f.png"></a></p>
 <ul>
 <li>r=1,城市街区(也称曼哈顿,出租车,L1 范数)距离</li>
 <li>r=2,欧几里得距离</li>
@@ -6604,16 +6606,16 @@ hello alice</code></pre>
 </ul>
 <p>度量与非度量</p>
 <h4 id="数据对象之间的相似度-Similarities-between-Data-Objects"><a href="#数据对象之间的相似度-Similarities-between-Data-Objects" class="headerlink" title="数据对象之间的相似度 Similarities between Data Objects"></a>数据对象之间的相似度 Similarities between Data Objects</h4><h4 id="邻近性度量的例子-Examples-of-Proximity-Measures"><a href="#邻近性度量的例子-Examples-of-Proximity-Measures" class="headerlink" title="邻近性度量的例子 Examples of Proximity Measures"></a>邻近性度量的例子 Examples of Proximity Measures</h4><h5 id="二元数据的相似性度量"><a href="#二元数据的相似性度量" class="headerlink" title="二元数据的相似性度量"></a>二元数据的相似性度量</h5><ul>
-<li>简单匹配系数 simple matching coefficient (SMC)<br><a href="http://www.harumonia.top/image/N2RF"><img src="http://www.harumonia.top/images/2019/08/17/imagec78fb1c028be231c.png" alt="imagec78fb1c028be231c.png"></a></li>
+<li>简单匹配系数 simple matching coefficient (SMC)<br><a href="http://www.harumonia.top/image/N2RF"><img data-src="http://www.harumonia.top/images/2019/08/17/imagec78fb1c028be231c.png" alt="imagec78fb1c028be231c.png"></a></li>
 </ul>
 <p>SMC 可以在一个仅包含是非题的测验中来发现回答问题相似的学生</p>
 <ul>
-<li>Jaccard 系数 Jaccard Coefficient<br><a href="http://www.harumonia.top/image/N4tT"><img src="http://www.harumonia.top/images/2019/08/17/image709b0bba0e810a01.png" alt="image709b0bba0e810a01.png"></a><br>常常用来处理非对称的二元属性对象</li>
+<li>Jaccard 系数 Jaccard Coefficient<br><a href="http://www.harumonia.top/image/N4tT"><img data-src="http://www.harumonia.top/images/2019/08/17/image709b0bba0e810a01.png" alt="image709b0bba0e810a01.png"></a><br>常常用来处理非对称的二元属性对象</li>
 </ul>
-<h5 id="余弦相似度-Cosine-Similarity"><a href="#余弦相似度-Cosine-Similarity" class="headerlink" title="余弦相似度 Cosine Similarity"></a>余弦相似度 Cosine Similarity</h5><p>常用来度量文档相似度<br><img src="http://www.harumonia.top/images/2019/08/17/imagee4c8afe3e4e60ecf.png" alt="imagee4c8afe3e4e60ecf.png"><br><a href="http://www.harumonia.top/image/NGnU"><img src="http://www.harumonia.top/images/2019/08/17/image950d41dec2581905.png" alt="image950d41dec2581905.png"></a></p>
-<h5 id="广义-Jaccard-系数-Extended-Jaccard-Coefficient-Tanimoto-Coefficient"><a href="#广义-Jaccard-系数-Extended-Jaccard-Coefficient-Tanimoto-Coefficient" class="headerlink" title="广义 Jaccard 系数 Extended Jaccard Coefficient (Tanimoto Coefficient)"></a>广义 Jaccard 系数 Extended Jaccard Coefficient (Tanimoto Coefficient)</h5><p><a href="http://www.harumonia.top/image/Nacx"><img src="http://www.harumonia.top/images/2019/08/17/image8002f990119f2a64.png" alt="image8002f990119f2a64.png"></a></p>
+<h5 id="余弦相似度-Cosine-Similarity"><a href="#余弦相似度-Cosine-Similarity" class="headerlink" title="余弦相似度 Cosine Similarity"></a>余弦相似度 Cosine Similarity</h5><p>常用来度量文档相似度<br><img data-src="http://www.harumonia.top/images/2019/08/17/imagee4c8afe3e4e60ecf.png" alt="imagee4c8afe3e4e60ecf.png"><br><a href="http://www.harumonia.top/image/NGnU"><img data-src="http://www.harumonia.top/images/2019/08/17/image950d41dec2581905.png" alt="image950d41dec2581905.png"></a></p>
+<h5 id="广义-Jaccard-系数-Extended-Jaccard-Coefficient-Tanimoto-Coefficient"><a href="#广义-Jaccard-系数-Extended-Jaccard-Coefficient-Tanimoto-Coefficient" class="headerlink" title="广义 Jaccard 系数 Extended Jaccard Coefficient (Tanimoto Coefficient)"></a>广义 Jaccard 系数 Extended Jaccard Coefficient (Tanimoto Coefficient)</h5><p><a href="http://www.harumonia.top/image/Nacx"><img data-src="http://www.harumonia.top/images/2019/08/17/image8002f990119f2a64.png" alt="image8002f990119f2a64.png"></a></p>
 <h5 id="相关性-Correlation"><a href="#相关性-Correlation" class="headerlink" title="相关性 Correlation"></a>相关性 Correlation</h5><p>皮尔森相关 Pearson’s correlation<br>判定是否存在线性关系</p>
-<p><a href="http://www.harumonia.top/image/NhsL"><img src="http://www.harumonia.top/images/2019/08/17/imagefa2b122d3c3982db.png" alt="imagefa2b122d3c3982db.png"></a></p>
+<p><a href="http://www.harumonia.top/image/NhsL"><img data-src="http://www.harumonia.top/images/2019/08/17/imagefa2b122d3c3982db.png" alt="imagefa2b122d3c3982db.png"></a></p>
 <p>Bregman 散度<br>Bregman 散度是损失或失真函数.损失函数的目的是度量用 x 近似 y 导致的失真或损失.<br>x 和 y 越类似,失真或损失就越小,因而 Bregman 散度可以用作相异性函数</p>
 <h4 id="邻近度计算问题"><a href="#邻近度计算问题" class="headerlink" title="邻近度计算问题"></a>邻近度计算问题</h4><ol>
 <li>当属性具有不同的尺度(scale)或相关时如何处理</li>
@@ -7048,8 +7050,8 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
 <p>具体点说，是豆瓣排行榜，在进行了网页分析之后，发现所有的数据都是通过 api 回传的，这感情好，直接上 requests 莽一波就完事了。</p>
 <h3 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h3><p>爬完之后发现，豆瓣排行榜只放出了前 500 条数据，500 条能干啥哦？？？</p>
 <h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><p>重新寻找，发现豆瓣的搜索功能可以一试。于是搜索关键词“1990+电视剧”，果然，1990 年的电视剧就都出来了。但是，分析了半天网页，没有发现什么 api？于是开始进行第二轮的地毯式分析，果然，在主页面的 html 文件里发现了一条又臭又长的数据“window.__DATA__”，里面存放了一大堆的诡异的字符串，这。。。。！？忽然想起来前几天看的密码学，不就是这个鲨雕样子吗，那么很大概率就是豆瓣对自己的数据进行了加密！</p>
-<p><img src="https://i.loli.net/2020/01/13/CqSXPvtVJTDkrfw.png" alt="截屏2020-01-13下午9.52.44.png"></p>
-<h3 id="开始排查"><a href="#开始排查" class="headerlink" title="开始排查"></a>开始排查</h3><p>使用 url 过滤，配合二分法截断 url，再用 js 断点调试，最后在 bundle.js 文件里发现了解密过程。<br><img src="https://i.loli.net/2020/01/13/lPLvoERhY5k6UST.png" alt="截屏2020-01-13下午9.54.17.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/CqSXPvtVJTDkrfw.png" alt="截屏2020-01-13下午9.52.44.png"></p>
+<h3 id="开始排查"><a href="#开始排查" class="headerlink" title="开始排查"></a>开始排查</h3><p>使用 url 过滤，配合二分法截断 url，再用 js 断点调试，最后在 bundle.js 文件里发现了解密过程。<br><img data-src="https://i.loli.net/2020/01/13/lPLvoERhY5k6UST.png" alt="截屏2020-01-13下午9.54.17.png"></p>
 <p>这时有两条路可以选择。</p>
 <ul>
 <li>解密</li>
@@ -7223,7 +7225,7 @@ memory usage: 726.1+ KB</code></pre>
 
 <pre><code>(array([1985., 1990., 1995., 2000., 2005., 2010., 2015., 2020.]),
  &lt;a list of 8 Text xticklabel objects&gt;)</code></pre>
-<p><img src="https://i.loli.net/2020/01/13/rTLHkQO4gmvX5yf.png" alt="output_11_1.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/rTLHkQO4gmvX5yf.png" alt="output_11_1.png"></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ten_year_type_count</span>(<span class="params">dften</span>):</span></span><br><span class="line">    s1= <span class="string">&#x27;,&#x27;</span>.join(dften.tv_type)</span><br><span class="line">    all_type = re.sub(<span class="string">r&#x27;,+&#x27;</span>,<span class="string">&#x27;,&#x27;</span>,s1)</span><br><span class="line">    <span class="keyword">return</span> [foo <span class="keyword">for</span> foo <span class="keyword">in</span> sorted(Counter(all_type.split(<span class="string">&#x27;,&#x27;</span>)).items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="literal">True</span>) <span class="keyword">if</span> foo[<span class="number">1</span>]&gt;<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">five_list = [ten_year_type_count(df_final[df_final.country==<span class="string">&quot;中国大陆&quot;</span>][df_final.year&lt;=foo][df_final.year&gt;foo<span class="number">-4</span>]) <span class="keyword">for</span> foo <span class="keyword">in</span> range(<span class="number">1994</span>,<span class="number">2021</span>,<span class="number">4</span>)]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">type_list =list(set([foo1[<span class="number">0</span>] <span class="keyword">for</span> foo <span class="keyword">in</span> five_list <span class="keyword">for</span> foo1 <span class="keyword">in</span> foo]))</span><br><span class="line">df_five_type = pd.DataFrame(index = [<span class="number">1994</span>,<span class="number">1998</span>,<span class="number">2002</span>,<span class="number">2006</span>,<span class="number">2010</span>,<span class="number">2014</span>,<span class="number">2018</span>],columns=type_list,data=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> index,five <span class="keyword">in</span> enumerate(five_list):</span><br><span class="line">    <span class="keyword">for</span> foo <span class="keyword">in</span> five:</span><br><span class="line">        df_five_type.loc[<span class="number">1994</span>+index*<span class="number">4</span>,foo[<span class="number">0</span>]] = foo[<span class="number">1</span>]</span><br><span class="line">df_five_type</span><br></pre></td></tr></table></figure>
@@ -7405,7 +7407,7 @@ memory usage: 726.1+ KB</code></pre>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">10</span>))</span><br><span class="line">sns.heatmap(data=df_five_type, annot=<span class="literal">True</span>, fmt=<span class="string">&quot;d&quot;</span>, linewidths=<span class="number">.5</span>)</span><br></pre></td></tr></table></figure>
 
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a2ffe5be0&gt;</code></pre>
-<p><img src="https://i.loli.net/2020/01/13/NAVtujdBlREgF5M.png" alt="output_14_1.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/NAVtujdBlREgF5M.png" alt="output_14_1.png"></p>
 <h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>大概地总结一下吧，这里一定程度上真实地反映了人们观念的变化对电视剧市场造成的自然选择以及历史的必然趋势。</p>
 <p>之所以说是历史的趋势，可以看到，随着时间的增长，剧种、剧目数量，都呈现上升的趋势，这是由于经济基础的建设，人民满足了基本的物质需求，继而开始追求精神需求的体现。</p>
 <p>10 年以前，战争剧稀少，诸如《亮剑》、《团长》等优质的抗战剧大多诞生于这个时期。10 年以后，由于政策的扶持和被优质片打开的市场，战争题材的电视剧开始出现井喷，说好听点良莠不齐，说难听点，一堆杂草群魔乱舞，诸多的“神剧”就是这之后的产物。</p>
@@ -7441,7 +7443,7 @@ memory usage: 726.1+ KB</code></pre>
 <p>也可以使用 ALTER TABLE 语句，将一个已经存在的表修改成其他的存储引擎。下面的例子介绍了如何将表 ai 从 MyISAM 存储引擎修改到 InnoDB 存储引擎：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql&gt; alter table ai engine &#x3D; innodb;</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.13 sec)</span><br><span class="line"></span><br><span class="line">Records: 0 Duplicates: 0 Warnings: 0</span><br><span class="line"></span><br><span class="line">mysql&gt; show create table ai \G</span><br></pre></td></tr></table></figure>
 
-<h3 id="各引擎存储特性"><a href="#各引擎存储特性" class="headerlink" title="各引擎存储特性"></a>各引擎存储特性</h3><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302154858-65354.png" alt="NeatReader-1583135271871"></p>
+<h3 id="各引擎存储特性"><a href="#各引擎存储特性" class="headerlink" title="各引擎存储特性"></a>各引擎存储特性</h3><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302154858-65354.png" alt="NeatReader-1583135271871"></p>
 <h4 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h4><p>其优势是访问的速度快，对事务完整性没有要求或者以 SELECT、INSERT 为主的应用基本上都可以使用这个引擎来创建表。</p>
 <p>每个 MyISAM 在磁盘上存储成 3 个文件，其文件名都和表名相同，但扩展名分别是：</p>
 <ul>
@@ -7567,9 +7569,9 @@ memory usage: 726.1+ KB</code></pre>
 </ol>
 </blockquote>
 <h3 id="日期类型选择"><a href="#日期类型选择" class="headerlink" title="日期类型选择"></a>日期类型选择</h3><p>MySQL 中的日期和时间类型:</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182755-801805.png" alt="NeatReader-1583144820301"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182755-801805.png" alt="NeatReader-1583144820301"></p>
 <p>MySQL 中日期和时间类型的零值表示</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182758-196851.png" alt="NeatReader-1583144823360"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182758-196851.png" alt="NeatReader-1583144823360"></p>
 <h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><h3 id="字符集的选择"><a href="#字符集的选择" class="headerlink" title="字符集的选择"></a>字符集的选择</h3><ol>
 <li>满足应用支持语言的需求，如果应用要处理各种各样的文字，或者将发布到使用不同语言的国家或地区，就应该选择 Unicode 字符集。对 MySQL 来说，目前就是 UTF-8。</li>
 <li>如果应用中涉及已有数据的导入，就要充分考虑数据库字符集对已有数据的兼容性。假如已有数据是 GBK 文字，如果选择 GB 2312-80 为数据库字符集，就很可能出现某些文字无法正确导入的问题。</li>

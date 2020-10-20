@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="数据库学习笔记(1)">
@@ -319,7 +319,7 @@
 <p>也可以使用 ALTER TABLE 语句，将一个已经存在的表修改成其他的存储引擎。下面的例子介绍了如何将表 ai 从 MyISAM 存储引擎修改到 InnoDB 存储引擎：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter table ai engine &#x3D; innodb;</span><br><span class="line"></span><br><span class="line">Query OK, 0 rows affected (0.13 sec)</span><br><span class="line"></span><br><span class="line">Records: 0 Duplicates: 0 Warnings: 0</span><br><span class="line"></span><br><span class="line">mysql&gt; show create table ai \G</span><br></pre></td></tr></table></figure>
 
-<h3 id="各引擎存储特性"><a href="#各引擎存储特性" class="headerlink" title="各引擎存储特性"></a>各引擎存储特性</h3><p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302154858-65354.png" alt="NeatReader-1583135271871"></p>
+<h3 id="各引擎存储特性"><a href="#各引擎存储特性" class="headerlink" title="各引擎存储特性"></a>各引擎存储特性</h3><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302154858-65354.png" alt="NeatReader-1583135271871"></p>
 <h4 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h4><p>其优势是访问的速度快，对事务完整性没有要求或者以 SELECT、INSERT 为主的应用基本上都可以使用这个引擎来创建表。</p>
 <p>每个 MyISAM 在磁盘上存储成 3 个文件，其文件名都和表名相同，但扩展名分别是：</p>
 <ul>
@@ -445,9 +445,9 @@
 </ol>
 </blockquote>
 <h3 id="日期类型选择"><a href="#日期类型选择" class="headerlink" title="日期类型选择"></a>日期类型选择</h3><p>MySQL 中的日期和时间类型:</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182755-801805.png" alt="NeatReader-1583144820301"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182755-801805.png" alt="NeatReader-1583144820301"></p>
 <p>MySQL 中日期和时间类型的零值表示</p>
-<p><img src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182758-196851.png" alt="NeatReader-1583144823360"></p>
+<p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200302182758-196851.png" alt="NeatReader-1583144823360"></p>
 <h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><h3 id="字符集的选择"><a href="#字符集的选择" class="headerlink" title="字符集的选择"></a>字符集的选择</h3><ol>
 <li>满足应用支持语言的需求，如果应用要处理各种各样的文字，或者将发布到使用不同语言的国家或地区，就应该选择 Unicode 字符集。对 MySQL 来说，目前就是 UTF-8。</li>
 <li>如果应用中涉及已有数据的导入，就要充分考虑数据库字符集对已有数据的兼容性。假如已有数据是 GBK 文字，如果选择 GB 2312-80 为数据库字符集，就很可能出现某些文字无法正确导入的问题。</li>
@@ -711,6 +711,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="引入根据笔者以往的爬虫经验，大部分的爬虫是在静态网页上完成的，爬虫所要做的只不过是提交请求，然后分析返回的页面即可。当然，api 本质上也可以作为静态页面来处理。这意味着只要掌握 requests 就可以完成 60%-80%的爬虫任务。 这是一个很惊人的占比，这里解释一下，静态页面可能听起来很 low，但是有着以加载速度更快、易于维护为核心的一系列优势，尤其是引入了 ajax 之后，实现了动态加载">
@@ -323,8 +323,8 @@
 <p>具体点说，是豆瓣排行榜，在进行了网页分析之后，发现所有的数据都是通过 api 回传的，这感情好，直接上 requests 莽一波就完事了。</p>
 <h3 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h3><p>爬完之后发现，豆瓣排行榜只放出了前 500 条数据，500 条能干啥哦？？？</p>
 <h3 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h3><p>重新寻找，发现豆瓣的搜索功能可以一试。于是搜索关键词“1990+电视剧”，果然，1990 年的电视剧就都出来了。但是，分析了半天网页，没有发现什么 api？于是开始进行第二轮的地毯式分析，果然，在主页面的 html 文件里发现了一条又臭又长的数据“window.__DATA__”，里面存放了一大堆的诡异的字符串，这。。。。！？忽然想起来前几天看的密码学，不就是这个鲨雕样子吗，那么很大概率就是豆瓣对自己的数据进行了加密！</p>
-<p><img src="https://i.loli.net/2020/01/13/CqSXPvtVJTDkrfw.png" alt="截屏2020-01-13下午9.52.44.png"></p>
-<h3 id="开始排查"><a href="#开始排查" class="headerlink" title="开始排查"></a>开始排查</h3><p>使用 url 过滤，配合二分法截断 url，再用 js 断点调试，最后在 bundle.js 文件里发现了解密过程。<br><img src="https://i.loli.net/2020/01/13/lPLvoERhY5k6UST.png" alt="截屏2020-01-13下午9.54.17.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/CqSXPvtVJTDkrfw.png" alt="截屏2020-01-13下午9.52.44.png"></p>
+<h3 id="开始排查"><a href="#开始排查" class="headerlink" title="开始排查"></a>开始排查</h3><p>使用 url 过滤，配合二分法截断 url，再用 js 断点调试，最后在 bundle.js 文件里发现了解密过程。<br><img data-src="https://i.loli.net/2020/01/13/lPLvoERhY5k6UST.png" alt="截屏2020-01-13下午9.54.17.png"></p>
 <p>这时有两条路可以选择。</p>
 <ul>
 <li>解密</li>
@@ -498,7 +498,7 @@ memory usage: 726.1+ KB</code></pre>
 
 <pre><code>(array([1985., 1990., 1995., 2000., 2005., 2010., 2015., 2020.]),
  &lt;a list of 8 Text xticklabel objects&gt;)</code></pre>
-<p><img src="https://i.loli.net/2020/01/13/rTLHkQO4gmvX5yf.png" alt="output_11_1.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/rTLHkQO4gmvX5yf.png" alt="output_11_1.png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ten_year_type_count</span>(<span class="params">dften</span>):</span></span><br><span class="line">    s1= <span class="string">&#x27;,&#x27;</span>.join(dften.tv_type)</span><br><span class="line">    all_type = re.sub(<span class="string">r&#x27;,+&#x27;</span>,<span class="string">&#x27;,&#x27;</span>,s1)</span><br><span class="line">    <span class="keyword">return</span> [foo <span class="keyword">for</span> foo <span class="keyword">in</span> sorted(Counter(all_type.split(<span class="string">&#x27;,&#x27;</span>)).items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="literal">True</span>) <span class="keyword">if</span> foo[<span class="number">1</span>]&gt;<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">five_list = [ten_year_type_count(df_final[df_final.country==<span class="string">&quot;中国大陆&quot;</span>][df_final.year&lt;=foo][df_final.year&gt;foo<span class="number">-4</span>]) <span class="keyword">for</span> foo <span class="keyword">in</span> range(<span class="number">1994</span>,<span class="number">2021</span>,<span class="number">4</span>)]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">type_list =list(set([foo1[<span class="number">0</span>] <span class="keyword">for</span> foo <span class="keyword">in</span> five_list <span class="keyword">for</span> foo1 <span class="keyword">in</span> foo]))</span><br><span class="line">df_five_type = pd.DataFrame(index = [<span class="number">1994</span>,<span class="number">1998</span>,<span class="number">2002</span>,<span class="number">2006</span>,<span class="number">2010</span>,<span class="number">2014</span>,<span class="number">2018</span>],columns=type_list,data=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> index,five <span class="keyword">in</span> enumerate(five_list):</span><br><span class="line">    <span class="keyword">for</span> foo <span class="keyword">in</span> five:</span><br><span class="line">        df_five_type.loc[<span class="number">1994</span>+index*<span class="number">4</span>,foo[<span class="number">0</span>]] = foo[<span class="number">1</span>]</span><br><span class="line">df_five_type</span><br></pre></td></tr></table></figure>
@@ -680,7 +680,7 @@ memory usage: 726.1+ KB</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">20</span>,<span class="number">10</span>))</span><br><span class="line">sns.heatmap(data=df_five_type, annot=<span class="literal">True</span>, fmt=<span class="string">&quot;d&quot;</span>, linewidths=<span class="number">.5</span>)</span><br></pre></td></tr></table></figure>
 
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1a2ffe5be0&gt;</code></pre>
-<p><img src="https://i.loli.net/2020/01/13/NAVtujdBlREgF5M.png" alt="output_14_1.png"></p>
+<p><img data-src="https://i.loli.net/2020/01/13/NAVtujdBlREgF5M.png" alt="output_14_1.png"></p>
 <h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>大概地总结一下吧，这里一定程度上真实地反映了人们观念的变化对电视剧市场造成的自然选择以及历史的必然趋势。</p>
 <p>之所以说是历史的趋势，可以看到，随着时间的增长，剧种、剧目数量，都呈现上升的趋势，这是由于经济基础的建设，人民满足了基本的物质需求，继而开始追求精神需求的体现。</p>
 <p>10 年以前，战争剧稀少，诸如《亮剑》、《团长》等优质的抗战剧大多诞生于这个时期。10 年以后，由于政策的扶持和被优质片打开的市场，战争题材的电视剧开始出现井喷，说好听点良莠不齐，说难听点，一堆杂草群魔乱舞，诸多的“神剧”就是这之后的产物。</p>
@@ -883,6 +883,7 @@ memory usage: 726.1+ KB</code></pre>
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

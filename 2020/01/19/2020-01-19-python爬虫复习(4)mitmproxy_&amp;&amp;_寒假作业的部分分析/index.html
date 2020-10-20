@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="前言到这里，python 爬虫部分的复习也就告一段落了，当然，除了 scrapy，老实说，对于平常爬取几千条这种小打小闹的爬虫，并没有去深入研究 scrapy 的必要（当然，了解还是要了解一下的）。 之前学习爬虫，因为需求的原因，只学习了网页爬虫。趁着寒假有空，再来看一看 app 爬虫是啥样的吧。">
@@ -337,7 +337,7 @@
 <li><p>使用 ifconfig 查找本机的 ip 地址</p>
 </li>
 <li><p>找到 inet，如下图所示，IP 地址为 192.168.3.6</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1510c350j30d502z0sx.jpg" alt="image-20200118233542424"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1510c350j30d502z0sx.jpg" alt="image-20200118233542424"></p>
 </li>
 </ol>
 </li>
@@ -349,11 +349,11 @@
 <li><p>在命令行中输入 <strong>mitmproxy</strong> ， 进入 mitmproxy 的数据流界面。</p>
 </li>
 <li><p>打开任意的 app，然后发现数据流界面开始跳出很多的响应字段，ok，配置正确。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15d0e0ksj30fq09oab0.jpg" alt="image-20200118234716015"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15d0e0ksj30fq09oab0.jpg" alt="image-20200118234716015"></p>
 </li>
 </ol>
 <p>上图为结果展示，可以点击字段进入查看详细的信息</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15hp8sohj30fs0bvgmv.jpg" alt="image-20200118235147625"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb15hp8sohj30fs0bvgmv.jpg" alt="image-20200118235147625"></p>
 <p>ps. 这里列一下流界面的快捷键</p>
 <blockquote>
 <p>?:帮助<br>q:返回 或退出<br>z:清屏<br>j:上一个或向上滑动<br>k:下一个或向下滑动<br>回车键：查看选中的请求<br>h:查看 请求内容 下一个<br>l:查看请求内容 上一个<br>tab：查看请求内容 下一个</p>
@@ -367,15 +367,15 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mitmdump -s mitmuse1.py</span><br></pre></td></tr></table></figure>
 
 <p>这里我先把所有的 json 数据写入到一个文件里面，然后再对数据进行统一的分析，这样的好处是占用内存小。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mame47mj30s10dfwf8.jpg" alt="image-20200119093308992"></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1n9p1ksqj30nj0hodm7.jpg" alt="截屏2020-01-19上午10.05.45"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mame47mj30s10dfwf8.jpg" alt="image-20200119093308992"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1n9p1ksqj30nj0hodm7.jpg" alt="截屏2020-01-19上午10.05.45"></p>
 <p>排名第一的竟然是 <strong>《活着》</strong> ！？因为读过这本书，所以我觉得这个结果过于魔幻现实了。</p>
 <p>余华的这本书绝对不是《水浒传》那种老少咸宜的读物，甚至于高中时期我们将他的书戏称为“黑暗圣经”，两倍于第二名《红楼梦》的结果让我有点无法接受(老实说红楼梦排第二也挺魔幻的，但是考虑到院里女生居多就不讨论了…)</p>
 <p>排名第三的中规中矩，<strong>《平凡的世界》</strong> 我也读过，这是如中当年的入学推荐读物(满满的回忆)</p>
 <p>第四名。。。？？？？？？？？？？？？？？？</p>
 <p>于是我开始打发假期的无聊时光。</p>
 <p>进行文本进行对比筛查，经过一系列的折腾之后，得到如下的结果。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mkm5wb8j30rg0i3win.jpg" alt="image-20200119094246243"></p>
+<p><img data-src="https://tva1.sinaimg.cn/large/006tNbRwgy1gb1mkm5wb8j30rg0i3win.jpg" alt="image-20200119094246243"></p>
 <p>这里只打印出了差异值 <strong>&lt;=5</strong> 的文本，可以看到，差异值越低，文本的相似度越高。</p>
 <p>最终可以得出结论，仅仅是在我院的内部的关于活着的 237 篇笔记，就出现了很多的雷同。所以，这次活动的出发点无疑是好的，但是可笑的地方在于， <strong>主体不明，执行不力</strong> ，到头来只是平白增加了很多同学的负担罢了。</p>
 <p>要么本着自愿的原则，鼓励报名，宽松监管，自觉养成。</p>
@@ -577,6 +577,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

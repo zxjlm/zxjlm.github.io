@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="find the key of soul">
@@ -292,8 +292,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg"></p>
+          <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg"></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg"></p>
 
       
     </div>
@@ -567,7 +567,7 @@
 <p>多说无益,上代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">button.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">				<span class="keyword">new</span> labelControl1(matrixLoder).start();</span><br><span class="line">				<span class="keyword">new</span> labelControl2(contentLoder).start();</span><br><span class="line">				<span class="keyword">new</span> labelControl3(probilityLoder).start();</span><br><span class="line">				resultOf01Button.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				resultOfcontentButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				resultOfprobilityButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				chartsOfcontentButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				chartsOfProbilityButton.setEnabled(<span class="keyword">false</span>);</span><br><span class="line">				visable_init(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">				<span class="keyword">new</span> PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();</span><br><span class="line">			&#125;</span><br><span class="line">            <span class="comment">//将post命令放在新的线程中并发执行</span></span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
 
-<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif"></p>
+<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img data-src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif"></p>
 <h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
 <h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
 <ul>
@@ -596,7 +596,7 @@
 <p>处于性能考虑,一般选择只使用 insert</p>
 <p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
 <p>处于性能考虑,我选择再上传时统一进行正则化.</p>
-<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif"></p>
+<p><img data-src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
 <p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
 </blockquote>
@@ -1677,6 +1677,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 

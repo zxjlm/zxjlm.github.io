@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.harumonia.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="概念集(重在概念的对比分析)第一章操作系统操作系统是一组能有效地组织和管理计算机硬件和软件资源，合理地对各类作业进行调度，以及方便用户使用的程序的集合。 分时系统允许多个用户同时通过自己的终端，以交互方式使用计算机，共享主机中的资源。 并行与并发并行指两个或多个事件在 同一时刻 发生并发指两个或多个事件在 同一时间间隔内 发生。 进程在系统中能独立运行并作为资源分配的基本单位，由一组及其指令、数据">
@@ -357,29 +357,29 @@
 <li>接受管道输出的接收进程则从管道中接收数据</li>
 </ul>
 <h3 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h3><p>在 OS 中引入 <strong>进程</strong> 的目的是为了使多个程序能并发执行，以提高资源利 用率和系统吞吐量<br>在操作系统中引入 <strong>线程</strong> ，则是为了减少程序在并发执行时多付出的时空 开销，是 OS 具有更好的并发性</p>
-<p><img src="https://i.loli.net/2019/12/02/I2ErsULi18MSyTD.png" alt="5E29FE42-A2E2-4C79-9CA4-AC84AD93B906.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/I2ErsULi18MSyTD.png" alt="5E29FE42-A2E2-4C79-9CA4-AC84AD93B906.png"></p>
 <h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="处理机调度"><a href="#处理机调度" class="headerlink" title="处理机调度"></a>处理机调度</h3><h4 id="高级-作业-调度"><a href="#高级-作业-调度" class="headerlink" title="高级(作业)调度"></a>高级(作业)调度</h4><p>每个用户创建进程的初始状态是“创建”，处于新建状态的进程一般首先被放到外存的进程池中，当内存中 进程的数量没有达到最多进程数时，操作系统的调度程序才从创建状态选择一个进入内存并转换为就绪状态</p>
 <p>这种从“创建”状 态转换到“就绪” 状态的操作就是高 级调度，也称为作 业调度或长程调度</p>
 <h4 id="中级-内存-调度"><a href="#中级-内存-调度" class="headerlink" title="中级(内存)调度"></a>中级(内存)调度</h4><p>提高内存利用率和系统吞吐量</p>
 <h4 id="低级-进程-调度"><a href="#低级-进程-调度" class="headerlink" title="低级(进程)调度"></a>低级(进程)调度</h4><p>决定就绪队列中的哪个进程应获得 处理机，并由分派程序将处理机分 配给被选中的进程。</p>
-<h3 id="高响应比优先-HRRN"><a href="#高响应比优先-HRRN" class="headerlink" title="高响应比优先(HRRN)"></a>高响应比优先(HRRN)</h3><p><img src="https://i.loli.net/2019/12/02/aEUP3QoWtHFL2lp.png" alt="36FD49E7-E58E-4B30-A1FA-1C64B39DD238.png"></p>
+<h3 id="高响应比优先-HRRN"><a href="#高响应比优先-HRRN" class="headerlink" title="高响应比优先(HRRN)"></a>高响应比优先(HRRN)</h3><p><img data-src="https://i.loli.net/2019/12/02/aEUP3QoWtHFL2lp.png" alt="36FD49E7-E58E-4B30-A1FA-1C64B39DD238.png"></p>
 <h3 id="非抢占式"><a href="#非抢占式" class="headerlink" title="非抢占式"></a>非抢占式</h3><p>优点:实现简单，系统开销小 适用于大多数批处理系统<br>缺点:不能用于分时系统和大多数实时系统</p>
-<h3 id="各调度算法比较"><a href="#各调度算法比较" class="headerlink" title="各调度算法比较"></a>各调度算法比较</h3><p><img src="https://i.loli.net/2019/12/02/IMgEjKOBJvL8DXP.png" alt="B2B35730-43CC-4F14-901D-B111F0ABDB43.png"></p>
+<h3 id="各调度算法比较"><a href="#各调度算法比较" class="headerlink" title="各调度算法比较"></a>各调度算法比较</h3><p><img data-src="https://i.loli.net/2019/12/02/IMgEjKOBJvL8DXP.png" alt="B2B35730-43CC-4F14-901D-B111F0ABDB43.png"></p>
 <h3 id="临界资源"><a href="#临界资源" class="headerlink" title="临界资源"></a>临界资源</h3><p>临界资源是不可剥夺性资源，它可能是硬件，也可能是软件</p>
-<h3 id="信号量的应用"><a href="#信号量的应用" class="headerlink" title="信号量的应用"></a>信号量的应用</h3><p><img src="https://i.loli.net/2019/12/02/UsirmtAM2OpjCgE.png" alt="截屏2019-11-27下午9.31.34.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/D4bGlPvXRhI3F5O.png" alt="截屏2019-11-27下午9.32.33.png"></p>
-<h3 id="管程-1"><a href="#管程-1" class="headerlink" title="管程"></a>管程</h3><h4 id="信号量机制和管程的比较"><a href="#信号量机制和管程的比较" class="headerlink" title="信号量机制和管程的比较"></a>信号量机制和管程的比较</h4><p><img src="https://i.loli.net/2019/12/02/X8d9GZ6EA1ziSbh.png" alt="截屏2019-11-27下午9.34.33.png"></p>
-<h4 id="管程和进程比较"><a href="#管程和进程比较" class="headerlink" title="管程和进程比较"></a>管程和进程比较</h4><p><img src="https://i.loli.net/2019/12/02/sOIoyvWRUEalTf3.png" alt="0A3D146A-68A6-44F4-86BF-6C9D39708E93.png"></p>
+<h3 id="信号量的应用"><a href="#信号量的应用" class="headerlink" title="信号量的应用"></a>信号量的应用</h3><p><img data-src="https://i.loli.net/2019/12/02/UsirmtAM2OpjCgE.png" alt="截屏2019-11-27下午9.31.34.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/D4bGlPvXRhI3F5O.png" alt="截屏2019-11-27下午9.32.33.png"></p>
+<h3 id="管程-1"><a href="#管程-1" class="headerlink" title="管程"></a>管程</h3><h4 id="信号量机制和管程的比较"><a href="#信号量机制和管程的比较" class="headerlink" title="信号量机制和管程的比较"></a>信号量机制和管程的比较</h4><p><img data-src="https://i.loli.net/2019/12/02/X8d9GZ6EA1ziSbh.png" alt="截屏2019-11-27下午9.34.33.png"></p>
+<h4 id="管程和进程比较"><a href="#管程和进程比较" class="headerlink" title="管程和进程比较"></a>管程和进程比较</h4><p><img data-src="https://i.loli.net/2019/12/02/sOIoyvWRUEalTf3.png" alt="0A3D146A-68A6-44F4-86BF-6C9D39708E93.png"></p>
 <h3 id="SRT"><a href="#SRT" class="headerlink" title="SRT"></a>SRT</h3><p>软实时操作系统能让绝大多数任务在确定时间内完成<br>软实时操作系统对时间的限制不是十分苛刻，响应的时间可以相对延迟，即未超过最后规定时间太多的范围内，其结果都是可以接受的，不会产生严重的后果。</p>
 <h3 id="HRT"><a href="#HRT" class="headerlink" title="HRT"></a>HRT</h3><p>硬实时操作系统必须使任务在确定的时间内完成。<br>对于硬实时操作系统而言，不仅要求各个任务能够运行得到正确的结果，同时还必须在限定的时间内完成，这个时间是由系统本身确定的，这比软实时操作系统的时间约束条件严格了许多。例如，在航天领域的嵌入式实时操作系统中，如果在规定的时间内未能得出所希望的运算结果，其产生的后果将是十分严重的。</p>
 <h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>如果一组进程中的每一个进程都在等待仅由该组进程中的 其他进程才能引发的事件，那么该组进程是死锁的。</p>
 <h3 id="避免死锁和预防死锁的区别"><a href="#避免死锁和预防死锁的区别" class="headerlink" title="避免死锁和预防死锁的区别"></a>避免死锁和预防死锁的区别</h3><p>死锁的避免与死锁防止策略不同，它不 对进程申请资源加任何限制，而是对进 程提出的每一次资源请求进行动态检查， 并根据检查结果决定是否分配资源以满 足进程的请求。由于采用了动态的资源 分配策略，所以资源利用率比死锁的防 止办法高。</p>
 <h2 id="第四-五章"><a href="#第四-五章" class="headerlink" title="第四\五章"></a>第四\五章</h2><h3 id="高速缓存-amp-amp-磁盘缓存"><a href="#高速缓存-amp-amp-磁盘缓存" class="headerlink" title="高速缓存 &amp;&amp; 磁盘缓存"></a>高速缓存 &amp;&amp; 磁盘缓存</h3><p>磁盘缓存与高速缓存不同，它本身并不 是一种实际存在的存储器，而是利用主 存中的部分存储空间暂时存放从磁盘中 读出(或写入)的信息。</p>
 <p><em>主存也可以看做是辅存的高速缓存。</em></p>
-<h3 id="静态地址映射与动态地址映射的区别"><a href="#静态地址映射与动态地址映射的区别" class="headerlink" title="静态地址映射与动态地址映射的区别"></a>静态地址映射与动态地址映射的区别</h3><p><img src="https://i.loli.net/2019/12/02/BJpTsg41v5z9lPd.png" alt="7B96EAA9-61B8-4F36-A3B9-D634B5516FAE.png"></p>
-<h3 id="动态分区与固定分区"><a href="#动态分区与固定分区" class="headerlink" title="动态分区与固定分区"></a>动态分区与固定分区</h3><p><img src="https://i.loli.net/2019/12/02/JXi23S5rjgmIbd1.png" alt="DB6F67FF-70B7-402A-91C2-FA4F457E5A63.png"></p>
-<h3 id="基于顺序搜索的动态分区分配算法比较"><a href="#基于顺序搜索的动态分区分配算法比较" class="headerlink" title="基于顺序搜索的动态分区分配算法比较"></a>基于顺序搜索的动态分区分配算法比较</h3><p><img src="https://i.loli.net/2019/12/02/QqcHfhgAV1pwaM8.png" alt="04C6CED2-080F-4A4A-9F49-E30E1ACD663D.png"></p>
-<h3 id="分页和分段"><a href="#分页和分段" class="headerlink" title="分页和分段"></a>分页和分段</h3><p><img src="https://i.loli.net/2019/12/02/LB1ntRzSCmdGHwN.png" alt="3AEADEF6-8C87-4072-A9E6-4629A10EB119.png"></p>
+<h3 id="静态地址映射与动态地址映射的区别"><a href="#静态地址映射与动态地址映射的区别" class="headerlink" title="静态地址映射与动态地址映射的区别"></a>静态地址映射与动态地址映射的区别</h3><p><img data-src="https://i.loli.net/2019/12/02/BJpTsg41v5z9lPd.png" alt="7B96EAA9-61B8-4F36-A3B9-D634B5516FAE.png"></p>
+<h3 id="动态分区与固定分区"><a href="#动态分区与固定分区" class="headerlink" title="动态分区与固定分区"></a>动态分区与固定分区</h3><p><img data-src="https://i.loli.net/2019/12/02/JXi23S5rjgmIbd1.png" alt="DB6F67FF-70B7-402A-91C2-FA4F457E5A63.png"></p>
+<h3 id="基于顺序搜索的动态分区分配算法比较"><a href="#基于顺序搜索的动态分区分配算法比较" class="headerlink" title="基于顺序搜索的动态分区分配算法比较"></a>基于顺序搜索的动态分区分配算法比较</h3><p><img data-src="https://i.loli.net/2019/12/02/QqcHfhgAV1pwaM8.png" alt="04C6CED2-080F-4A4A-9F49-E30E1ACD663D.png"></p>
+<h3 id="分页和分段"><a href="#分页和分段" class="headerlink" title="分页和分段"></a>分页和分段</h3><p><img data-src="https://i.loli.net/2019/12/02/LB1ntRzSCmdGHwN.png" alt="3AEADEF6-8C87-4072-A9E6-4629A10EB119.png"></p>
 <h1 id="错题集"><a href="#错题集" class="headerlink" title="错题集"></a>错题集</h1><h2 id="第二章-1"><a href="#第二章-1" class="headerlink" title="第二章"></a>第二章</h2><p><strong>系统调用</strong> 是专门供应程序使用的一种界面.</p>
 <p><strong>分时</strong> 操作系统允许在一台主机上同时连接多台终端.</p>
 <p>错误叙述:管程只能用于实现进程的互斥.</p>
@@ -401,8 +401,8 @@
 <p>多级页表优点 : <strong>减少页表所占的连续内存空间</strong></p>
 <p>在段页式分配中,CPU 每次从内存中取一次数据需要 <strong>3 次</strong> 访问内存.</p>
 <h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>虚拟存储器 <strong>只能基于非连续分配技术</strong></p>
-<p><img src="https://i.loli.net/2019/12/02/R9XyI3jnFUkEabZ.png" alt="7A2843C8-34A3-463E-91A5-D9127E2E2E04.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/bUE19k724LXcRnr.png" alt="6F0017F3-DBED-4B71-AA9C-DF77809EA4D6.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/R9XyI3jnFUkEabZ.png" alt="7A2843C8-34A3-463E-91A5-D9127E2E2E04.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/bUE19k724LXcRnr.png" alt="6F0017F3-DBED-4B71-AA9C-DF77809EA4D6.png"></p>
 <h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>在缓冲池方式下,为了有效地管理,需形成 <strong>空闲\输入\输出</strong> 等缓冲区队列.</p>
 <h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><p>文件系统的主要组成部分是 <strong>文件及管理文件的软件</strong></p>
 <p>文件管理实际上是管理 <strong>辅助存储空间</strong></p>
@@ -419,19 +419,19 @@
 </blockquote>
 <p>在引入线程的操作系统中,吧 <strong>线程</strong> 作为调度和分配的基本单位,而吧 <strong>进程</strong> 作为资源拥有的基本单位.</p>
 <h2 id="第三章-2"><a href="#第三章-2" class="headerlink" title="第三章"></a>第三章</h2><p>决定一个程序是否能占用处理机执行,是由 <strong>进程调度</strong> 机构决定.</p>
-<h2 id="第四章-1"><a href="#第四章-1" class="headerlink" title="第四章"></a>第四章</h2><p><img src="https://i.loli.net/2019/12/02/oKj5XTE3YhkcAJw.png" alt="954E0751-0736-4973-97B3-F45425F23428.png"></p>
+<h2 id="第四章-1"><a href="#第四章-1" class="headerlink" title="第四章"></a>第四章</h2><p><img data-src="https://i.loli.net/2019/12/02/oKj5XTE3YhkcAJw.png" alt="954E0751-0736-4973-97B3-F45425F23428.png"></p>
 <p>页表是存放在内存中的，CPU 要存取一个数据，需访问主存 <strong>两次</strong></p>
 <p>为了提高存取速度，在地址变换机构中增设一组寄存器，用来存放当前访问 的那些页表，把存放在高速缓冲寄存器中的页表叫 <strong>快表</strong> ，这个高速缓冲寄存 器又叫 <strong>联想存贮器</strong></p>
-<p><img src="https://i.loli.net/2019/12/02/bp7tucBEDoNIXnP.png" alt="A82A7ED9-3959-40A8-BBE4-4C7BB06CDB54.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/WyxjYL9MagQ1eVA.png" alt="A43E33A0-62B1-49A8-AF95-A4E12F2A198C.png"></p>
-<p><img src="https://i.loli.net/2019/12/02/sISvETeXb1gfzV7.png" alt="D13117D7-5C62-4065-AC78-81FC9EEBECC7.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/bp7tucBEDoNIXnP.png" alt="A82A7ED9-3959-40A8-BBE4-4C7BB06CDB54.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/WyxjYL9MagQ1eVA.png" alt="A43E33A0-62B1-49A8-AF95-A4E12F2A198C.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/sISvETeXb1gfzV7.png" alt="D13117D7-5C62-4065-AC78-81FC9EEBECC7.png"></p>
 <h2 id="第六章-1"><a href="#第六章-1" class="headerlink" title="第六章"></a>第六章</h2><p><strong>系统调用</strong> 是应用程序取得 OS 所有服务的唯一途径</p>
 <p>启动磁盘后.对此盘读/写信息的最小单位是 <strong>物理块</strong></p>
 <p>虚拟设备技术实现的是 <strong>独占设备模拟共享设备</strong></p>
 <p>在多进程的并发系统中,肯定不会因为竞争下列资源而产生死锁的是 <strong>磁盘</strong></p>
 <h1 id="概念重点"><a href="#概念重点" class="headerlink" title="概念重点"></a>概念重点</h1><h2 id="第二章-3"><a href="#第二章-3" class="headerlink" title="第二章"></a>第二章</h2><p>进程状态</p>
 <p>生产者-消费者</p>
-<p><img src="https://i.loli.net/2019/12/02/pjQFTia87hEOGWn.png" alt="3DA28E45-DCD3-4142-A950-8D7FAFA712FD.png"></p>
+<p><img data-src="https://i.loli.net/2019/12/02/pjQFTia87hEOGWn.png" alt="3DA28E45-DCD3-4142-A950-8D7FAFA712FD.png"></p>
 
     </div>
 
@@ -623,6 +623,7 @@
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
