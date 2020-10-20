@@ -5570,7 +5570,7 @@ hello alice</code></pre>
     <title>个人简历(备用)</title>
     <url>/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#122;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6291,7 +6291,7 @@ hello alice</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
