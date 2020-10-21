@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.harumonia.top/2020/08/05/geek-contest/</loc>
-    
-    <lastmod>2020-10-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.harumonia.top/categories/index.html</loc>
     
     <lastmod>2020-10-21</lastmod>
@@ -24,6 +17,13 @@
   
   <url>
     <loc>http://blog.harumonia.top/tags/index.html</loc>
+    
+    <lastmod>2020-10-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.harumonia.top/2020/08/05/geek-contest/</loc>
     
     <lastmod>2020-10-21</lastmod>
     
