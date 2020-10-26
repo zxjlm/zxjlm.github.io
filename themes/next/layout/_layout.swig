@@ -5,7 +5,6 @@
   {% include '_partials/head/head-unique.swig' %}
   {{- next_inject('head') }}
   <title>{% block title %}{% endblock %}</title>
-  <script type="text/javascript" src="/js/myjs/click.js"></script>
   {{ partial('_third-party/analytics/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 </head>
@@ -57,5 +56,7 @@
   {%- if theme.pjax %}
     </div>
   {%- endif %}
+
+  <script type="text/javascript" src="/js/myjs/click.js"></script>
 </body>
 </html>
