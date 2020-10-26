@@ -12,24 +12,24 @@ const root = "./public";
 // 匹配模式， **/*代表匹配所有目录下的所有文件
 const pattern = "**/*";
 
-// 压缩html
-gulp.task("minify-html", function () {
-  return (
-    gulp
-      // 匹配所有 .html结尾的文件
-      .src(`${root}/${pattern}.html`)
-      .pipe(htmlclean())
-      .pipe(
-        htmlmin({
-          removeComments: true,
-          minifyJS: true,
-          minifyCSS: true,
-          minifyURLs: true,
-        })
-      )
-      .pipe(gulp.dest("./public"))
-  );
-});
+// // 压缩html
+// gulp.task("minify-html", function () {
+//   return (
+//     gulp
+//       // 匹配所有 .html结尾的文件
+//       .src(`${root}/${pattern}.html`)
+//       .pipe(htmlclean())
+//       .pipe(
+//         htmlmin({
+//           removeComments: true,
+//           minifyJS: true,
+//           minifyCSS: true,
+//           minifyURLs: true,
+//         })
+//       )
+//       .pipe(gulp.dest("./public"))
+//   );
+// });
 
 // 压缩css
 gulp.task("minify-css", function () {
