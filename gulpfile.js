@@ -83,4 +83,4 @@ gulp.task("minify-images", function () {
   );
 });
 
-gulp.task("default", gulp.series("minify-html", "minify-css", "minify-js"));
+gulp.task("default", gulp.series("minify-css", "minify-js"));
