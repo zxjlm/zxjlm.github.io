@@ -85,9 +85,9 @@ footer:
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
 creative_commons:
-  license: by-nc-sa
+  license: CC BY-NC-SA 3.0
   sidebar: false
-  post: false
+  post: true
   language:
 
 # ---------------------------------------------------------------
