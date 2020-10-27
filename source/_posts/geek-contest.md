@@ -16,7 +16,7 @@ thumb:
 thumbChoice: default
 thumbSmall:
 thumbStyle: default
-hidden: false
+hidden: true
 ---
 
 # 前言
