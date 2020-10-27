@@ -57,6 +57,6 @@
     </div>
   {%- endif %}
 
-  <script type="text/javascript" src="/js/myjs/click.js"></script>
+  {% include '_custom/custom.swig' %}
 </body>
 </html>
