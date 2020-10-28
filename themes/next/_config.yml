@@ -162,7 +162,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe%E5%A4%B4%E5%83%8F.jpg
+  url: https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
