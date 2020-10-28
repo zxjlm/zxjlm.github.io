@@ -29,6 +29,8 @@ hidden: false
 
 PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。
 
+所以这次按照 [Windows Terminal Docs](https://docs.microsoft.com/zh-cn/windows/terminal/) , DIY 一个美观的 Terminal。
+
 <!-- more -->
 
 ![图1. 我所期待的界面](https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png)
