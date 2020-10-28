@@ -5570,7 +5570,7 @@ hello alice</code></pre>
     <title>个人简历(备用)</title>
     <url>/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#109;">&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#106;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#x7a;&#x78;&#106;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -5715,9 +5715,10 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>Windows下的终端优化方案</title>
-    <url>/2020/07/19/2020-07-19-Windows%E4%B8%8B%E7%9A%84%E7%BB%88%E7%AB%AF%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</url>
+    <url>/2020/07/19/WindowsTerminal-beautify/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Mac 上面安装了 <a href="https://www.iterm2.com/">iTerm2</a> 之后，逐渐难以忍受 <em>Windows</em> 上面简陋的终端界面，<strong>CMD</strong> 就不谈了，即使了 Windows10 加入的 <strong>PowerShell</strong> ，也依旧差强人意。</p>
 <p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p>
+<p>所以这次按照 <a href="https://docs.microsoft.com/zh-cn/windows/terminal/">Windows Terminal Docs</a> , DIY 一个美观的 Terminal。</p>
 <a id="more"></a>
 
 <p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面"></p>
@@ -5947,6 +5948,146 @@ hello alice</code></pre>
       </categories>
       <tags>
         <tag>比赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Be a better pythonista(4)：nametuple的实际应用</title>
+    <url>/2020/10/28/nametuple_act/</url>
+    <content><![CDATA[<p>Factory Function for Tuples with Named Fields</p>
+<a id="more"></a>
+
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>笔者在学习工作中使用 nametuple 的场景如下:</p>
+<ol>
+<li>在定义类似坐标、rgba 值等简单的数据容器时，可以使用 nametuple</li>
+<li>可以用来快速生成 csv、sql 对应的类</li>
+</ol>
+<p>下面解释一下为什么这些场景可以使用 nametuple 吧~</p>
+<h2 id="简单数据容器"><a href="#简单数据容器" class="headerlink" title="简单数据容器"></a>简单数据容器</h2><p>这里为了方便理解，首先使用一个众所熟知的定义数据容器的手段 – 类，来进行一个类比。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">      <span class="keyword">private</span>:</span><br><span class="line">      <span class="keyword">double</span> radius;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">public</span>:</span><br><span class="line">      构造函数...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如上是国内 C++入门教材的必经之路，通过 <em>类</em> 定义了一个简单的圆容器。这里我们选择的案例并不是 circle，而是更加复杂的 rgba。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在python中定义一个color类，包含rgba四个关键变量</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorForCompare</span>:</span></span><br><span class="line">    __slots__ = (<span class="string">&quot;r&quot;</span>,<span class="string">&quot;g&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;alpha&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,r,g,b,alpha</span>):</span></span><br><span class="line">        self.r = r  <span class="comment"># red</span></span><br><span class="line">        self.g = g  <span class="comment"># green</span></span><br><span class="line">        self.b = b  <span class="comment"># blue</span></span><br><span class="line">        self.alpha = alpha</span><br></pre></td></tr></table></figure>
+
+<p>这样，就可以使用 color_for_compare.r 来查看颜色对应的 red 值。</p>
+<p>但是这显然是不够的，因为此时它可以接收类似 color_for_compare.x = 1 这样意义不明的语句。</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">class ColorForCompare:</span><br><span class="line"><span class="addition">+    __slots__ = (&quot;r&quot;,&quot;g&quot;,&quot;b&quot;,&quot;alpha&quot;)</span></span><br><span class="line"></span><br><span class="line">    def __init__(self,r,g,b,alpha):</span><br><span class="line">        self.r = r</span><br><span class="line">        self.g = g</span><br><span class="line">        self.b = b</span><br><span class="line">        self.alpha = alpha</span><br><span class="line"></span><br><span class="line"><span class="addition">+    def __repr__(self):</span></span><br><span class="line"><span class="addition">+        return f&#x27;r = &#123;self.r&#125;, g = &#123;self.g&#125;, b = &#123;self.b&#125;, alpha = &#123;self.alpha&#125;&#x27;</span></span><br><span class="line"></span><br><span class="line">ColorForCompare(0,0,0,0)</span><br></pre></td></tr></table></figure>
+
+<pre><code>r = 0, g = 0, b = 0, alpha = 0</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">color_for_compare = ColorForCompare(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">color_for_compare.x = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-58-e007350343ef&gt; in &lt;module&gt;
+----&gt; 1 color_for_compare.x = 1
+
+
+AttributeError: &#39;ColorForCompare&#39; object has no attribute &#39;x&#39;</code></pre>
+<p>这样，使用内置的 __slots__ 将变量固定住，就避免了 x 这样意义不明的值的干扰。同时，为了美观，又加上了一个 __repr__() 来输出实例化的结果。</p>
+<p>至此，大体上完成了一个 color 容器。那么，在对应的 nametuple 中要如何实现这些功能呢？</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple</span><br><span class="line">Color = namedtuple(<span class="string">&quot;Color&quot;</span>, <span class="string">&quot;r g b alpha&quot;</span>)</span><br><span class="line"></span><br><span class="line">Color(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Color(r=0, g=0, b=0, alpha=0)</code></pre>
+<p>对了，就是这样简单，这里我们可以再测试一下是否有限制变量名称的功能。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">color = Color(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">color.x = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-64-02f8a35ba0d6&gt; in &lt;module&gt;
+      1 color = Color(0,0,0,0)
+----&gt; 2 color.x = 1
+
+
+AttributeError: &#39;Color&#39; object has no attribute &#39;x&#39;</code></pre>
+<p>通过使用 nametuple，两行代码完成了 7 行代码的工作。</p>
+<p>这里需要 <strong>补充</strong> 的是，你无法通过 color.r = 1 这样的语句来直接修改 nametuple 的值，具体可以看 <a href="https://docs.python.org/3/library/collections.html#collections.somenamedtuple._replace">python3.collections</a>,毕竟，这是个 tuple😄</p>
+<p>nametuple 本身无法应付一些复杂的场景，比如，我们可能需要根据特殊的 rgb 值来判断是否是一些特殊的颜色(如:50,0,255-&gt;蓝色)，这就需要一些额外的函数来实现。<br>还有一种更加符合面向对象思维的方法，将这个函数变成 Color 类的成员函数，组件一个完善的 Color 类。显然单纯的 nametuple 无法做到这一点。</p>
+<p>不过这并不是问题，我们完全可以通过强化 nametuple 来实现这个需求。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ColorPlus</span>(<span class="params">Color</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert_color_to_string</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">if</span> self.r == <span class="number">50</span> <span class="keyword">and</span> self.g == <span class="number">0</span> <span class="keyword">and</span> self.b == <span class="number">255</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;蓝色&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&#x27;无&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">color_p = ColorPlus(<span class="number">50</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>)</span><br><span class="line">color_p.convert_color_to_string()</span><br></pre></td></tr></table></figure>
+
+<pre><code>&#39;蓝色&#39;</code></pre>
+<p>新的类可以继承 nametuple 所定义的容器~</p>
+<p>这就是我所说的 <strong>场景二：用来快速生成 csv、sql 对应的类</strong></p>
+<h2 id="与-dictionary-的对比"><a href="#与-dictionary-的对比" class="headerlink" title="与 dictionary 的对比"></a>与 dictionary 的对比</h2><p>python 提供了一个非常方便的容器，也就是字典。这二者的区别在于，dictionary 是 unhashable 的，而 nametuple 相反。</p>
+<p>以 Counter 为例。我们想要统计一群颜色中，有多少是蓝色？</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">color1 = Color(<span class="number">50</span>,<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>)</span><br><span class="line">Counter([color, color,color1])</span><br></pre></td></tr></table></figure>
+
+<pre><code>Counter(&#123;Color(r=0, g=0, b=0, alpha=0): 2,
+         Color(r=50, g=0, b=255, alpha=0): 1&#125;)</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c = &#123;<span class="string">&quot;r&quot;</span>: <span class="number">50</span>, <span class="string">&quot;g&quot;</span>: <span class="number">205</span>, <span class="string">&quot;b&quot;</span>: <span class="number">50</span>, <span class="string">&quot;alpha&quot;</span>: <span class="number">1.0</span>&#125;</span><br><span class="line">Counter([c])</span><br></pre></td></tr></table></figure>
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-80-85ae4a80ee69&gt; in &lt;module&gt;
+      1 c = &#123;&quot;r&quot;: 50, &quot;g&quot;: 205, &quot;b&quot;: 50, &quot;alpha&quot;: 1.0&#125;
+----&gt; 2 Counter([c.items()])
+
+
+~\miniconda3\envs\jupy\lib\collections\__init__.py in __init__(*args, **kwds)
+    566             raise TypeError(&#39;expected at most 1 arguments, got %d&#39; % len(args))
+    567         super(Counter, self).__init__()
+--&gt; 568         self.update(*args, **kwds)
+    569
+    570     def __missing__(self, key):
+
+
+~\miniconda3\envs\jupy\lib\collections\__init__.py in update(*args, **kwds)
+    653                     super(Counter, self).update(iterable) # fast path when counter is empty
+    654             else:
+--&gt; 655                 _count_elements(self, iterable)
+    656         if kwds:
+    657             self.update(kwds)
+
+
+TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
+<p>dict 是无法使用 Counter 的。</p>
+<p>本质上，nametuple 仍然是 tuple，是与 dictionary 并行的 python 容器。所以这两者的选用，根据实际情况，具体问题具体分析。</p>
+<p>还有一个值得一提的区别。在日常使用 dict 时，我们可能会纠结应该时 color[‘blue’] 还是 color[‘b’]，在多人开发时，这会导致一些麻烦甚至是风险 。而在使用 nametuple 时，ide 会像对待 class 一样给出相应的代码提示。</p>
+<h2 id="nametuple-与-dictionary-和-tuple-的转换方法"><a href="#nametuple-与-dictionary-和-tuple-的转换方法" class="headerlink" title="nametuple 与 dictionary 和 tuple 的转换方法"></a>nametuple 与 dictionary 和 tuple 的转换方法</h2><h3 id="dictionary-gt-nametuple"><a href="#dictionary-gt-nametuple" class="headerlink" title="dictionary =&gt; nametuple"></a>dictionary =&gt; nametuple</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c = &#123;<span class="string">&quot;r&quot;</span>: <span class="number">50</span>, <span class="string">&quot;g&quot;</span>: <span class="number">205</span>, <span class="string">&quot;b&quot;</span>: <span class="number">50</span>, <span class="string">&quot;alpha&quot;</span>: <span class="number">1.0</span>&#125;</span><br><span class="line">Color(**c)   <span class="comment"># unpack</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>Color(r=50, g=205, b=50, alpha=1.0)</code></pre>
+<h4 id="dictionary-创建一个-nametuple"><a href="#dictionary-创建一个-nametuple" class="headerlink" title="dictionary 创建一个 nametuple"></a>dictionary 创建一个 nametuple</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Color = namedtuple(<span class="string">&quot;Color&quot;</span>, c)</span><br><span class="line">Color(**c)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Color(r=50, g=205, b=50, alpha=1.0)</code></pre>
+<h3 id="nametuple-gt-dictionary"><a href="#nametuple-gt-dictionary" class="headerlink" title="nametuple =&gt; dictionary"></a>nametuple =&gt; dictionary</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Color(**c)._asdict()</span><br></pre></td></tr></table></figure>
+
+<pre><code>OrderedDict([(&#39;r&#39;, 50), (&#39;g&#39;, 205), (&#39;b&#39;, 50), (&#39;alpha&#39;, 1.0)])</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tuple(Color(**c))</span><br></pre></td></tr></table></figure>
+
+<pre><code>(50, 205, 50, 1.0)</code></pre>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>与字典的排序方法相类似，可以使用简单的 lambda 来实现 nametuple 的排序功能</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">colors = [</span><br><span class="line">    Color(r=<span class="number">50</span>, g=<span class="number">205</span>, b=<span class="number">50</span>, alpha=<span class="number">0.1</span>),</span><br><span class="line">    Color(r=<span class="number">50</span>, g=<span class="number">205</span>, b=<span class="number">50</span>, alpha=<span class="number">0.5</span>),</span><br><span class="line">    Color(r=<span class="number">50</span>, g=<span class="number">0</span>, b=<span class="number">0</span>, alpha=<span class="number">0.3</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sorted(colors,key=<span class="keyword">lambda</span> x:x.alpha,reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[Color(r=50, g=205, b=50, alpha=0.5),
+ Color(r=50, g=0, b=0, alpha=0.3),
+ Color(r=50, g=205, b=50, alpha=0.1)]</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，就是现阶段使用 nametuple 的一些心得体会，与常见的容器对比总结如下：</p>
+<h3 id="与-class"><a href="#与-class" class="headerlink" title="与 class"></a>与 class</h3><ol>
+<li>自带了 solt 属性</li>
+<li>属性的值不可直接改变，而需要借助内置函数</li>
+<li>原生 Class 无法使用 Counter</li>
+<li>更简单的定义方法</li>
+</ol>
+<h3 id="与-dictionary"><a href="#与-dictionary" class="headerlink" title="与 dictionary"></a>与 dictionary</h3><ol>
+<li>hashable，可以使用 Counter 之类的统计方法</li>
+<li>可以在 ide 中可以得到代码提示</li>
+</ol>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>pythonista</tag>
       </tags>
   </entry>
   <entry>
@@ -6291,7 +6432,7 @@ hello alice</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
