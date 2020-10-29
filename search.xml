@@ -1,96 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>VPS上的一些好物</title>
-    <url>/2018/10/28/2018-10-28-VPS%E4%B8%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%89%A9/</url>
-    <content><![CDATA[<p>主要介绍了在个人服务器上如何一键安装 ss\ssr，Mtproto（telegram）,以及 ssh 突然断开的处理方法(主要是国外服务器容易出现断连的问题)。</p>
-<a id="more"></a>
-
-<h2 id="SS-一键安装脚本"><a href="#SS-一键安装脚本" class="headerlink" title="SS 一键安装脚本"></a>SS 一键安装脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-libev_CN.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev_CN.sh &amp;&amp; bash shadowsocks-libev_CN.sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="2020-09-补充说明"><a href="#2020-09-补充说明" class="headerlink" title="2020-09 补充说明"></a>2020-09 补充说明</h3><p>逗比的 ss 安装脚本已经被 ban 了很久了，如果有这方面需求的不如去订阅相关的服务，如果和别人合订的话开销大概 15 元/月 即可。</p>
-<h2 id="Mtproto-安装"><a href="#Mtproto-安装" class="headerlink" title="Mtproto 安装"></a>Mtproto 安装</h2><p>Mtproto 是 telegram 所使用的一个代理，这里再安利一波 telegram，很好用的社交软件，注重与保护隐私。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/mtproxy.sh &amp;&amp; chmod +x mtproxy.sh &amp;&amp; bash mtproxy.sh</span><br></pre></td></tr></table></figure>
-
-<h2 id="ssh-突然断开的处理办法"><a href="#ssh-突然断开的处理办法" class="headerlink" title="ssh 突然断开的处理办法"></a>ssh 突然断开的处理办法</h2><p>1、安装 screen 命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install screen</span><br></pre></td></tr></table></figure>
-
-<p>2、创建一个虚拟会话(amh 为自定义会话名称，可以自己更改)</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">screen -S amh</span><br></pre></td></tr></table></figure>
-
-<p>3、以下载安装 amh 控制面板为例，下载并执行 amh 面板安装脚本</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://amh.sh/file/AMH/4.2/amh.sh &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log</span><br></pre></td></tr></table></figure>
-
-<p>4、如果安装过程中，链接中断，重连 SSH 后输入</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">screen -r amh</span><br></pre></td></tr></table></figure>
-
-<p>即可查看之前任务的进度并可以继续执行。</p>
-<h3 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h3><ul>
-<li>screen -ls #查看所有 screen 会话</li>
-<li>按键盘上面的 Ctrl+a，然后再按 d #保存当前的 screen 会话</li>
-<li>exit #退出 screen</li>
-<li>screen -wipe mysql5.5 #删除会话</li>
-</ul>
-<h2 id="tcp—brr"><a href="#tcp—brr" class="headerlink" title="tcp—brr"></a>tcp—brr</h2><p>具体可以自行谷歌</p>
-]]></content>
-      <categories>
-        <category>见闻录</category>
-      </categories>
-      <tags>
-        <tag>VPS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>万历十五年</title>
-    <url>/2018/10/28/2018-10-28-%E4%B8%87%E5%8E%86%E5%8D%81%E4%BA%94%E5%B9%B4/</url>
-    <content><![CDATA[<p>《万历十五年》（英语：1587, a Year of No Significance: The Ming Dynasty in Decline）是美籍华裔历史学家黄仁宇最出名、也是体现其“大历史观”的一部明史研究专著。</p>
-<a id="more"></a>
-
-<h1 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h1><ul>
-<li>皇室的情谊不同于世俗，它不具有世俗友谊那种由于互相关怀而产生的永久性。</li>
-<li>今日受刑，明日名扬史册，这样的做法，说明忠臣烈士的名誉，确乎是一种高贵的商品，否则，何以有许多人愿意付出昂贵的代价，放弃经过千辛万苦挣来的进士出身，继之以血肉深知生命去追求。</li>
-<li>张居正的根本错误在于自信过度，不能谦虚谨慎，不肯对事实比做出必要的让步。</li>
-<li>仪式典礼只会产生更多的仪式典礼。</li>
-</ul>
-<blockquote>
-<p>但是迷信与非迷信，其间的分野也可能极为模糊。例如，当一个人强迫自己对一件事情、一种前途建立信念，则其与宗教式的皈依就相去极微，因为凡是一个人处于困境，他就不愿放弃任何足以取得成功的可能性，即使这种可能性极为渺茫，没有根据，他也要把它作为自己精神上的寄托。</p>
-</blockquote>
-<ul>
-<li><p>武将领兵作战，和文官集团的施政原则在根本上是不能相容的。</p>
-</li>
-<li><p>性恶来自先天，性善来自天赋。</p>
-</li>
-<li><p>文官政治确立后，儒家单独的伦理性格已经不能完全适应时代的需要，集权的中央政府不得不创立新的哲学理论，掺和理智上的新因素，适应新的环境。</p>
-</li>
-<li><p>朱熹</p>
-</li>
-</ul>
-<blockquote>
-<p>大凡高度的概括，总带有想象的成分。尤其是在现代科学尚未发达的时代，哲学家不可能说明宇宙就是这样，而只能假定宇宙就是这样。</p>
-</blockquote>
-<blockquote>
-<p>王阳明并没有为真理而真理的倾向。和朱熹一样，他的目的也在于利用他的思想系统，去证实他从小接受的儒家教条，以求经世致用。他的方法较之朱熹更为直接，然而这里也埋伏着危险。如果一个人把王阳明的学说看成一种单纯的方法，施用于孔孟教条之前，就很可能发生耿定向所说的“未信先横”，以为自己的灵感可以为真理的主宰。</p>
-</blockquote>
-<ul>
-<li><p>如入火聚，得清凉门。</p>
-</li>
-<li><p>当一个人口众多的国家，各人行动全凭儒家粗浅而又无法固定的原则所限制，而法律又缺乏创造性，则其社会发展的程度，必然受到限制。。</p>
-</li>
-<li><p>道德虽高于法律和技术，但要提出做争论的根据时，则要在法律及技术之后提出。</p>
-</li>
-</ul>
-<h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>汉唐尚武，故外敌辟易，畏其如虎，而最终亡于内乱。<br>宋明尚文，国内能勉强依靠高度强化的集权制度稳定，但最终亡于外敌。<br>所以在下认为，文极与武极俱是取死之道，如本朝一般，文武并举，方可大治。至于党争的问题，则暂且悬束。</p>
-<p>我认为，党争的根源在于执政理念与政治追求的冲突，至于会形成乡党、朋党等，不过是时事所近逼的结果。</p>
-<p>万历十五年一书从帝国的最高层万历皇帝，而至帝国的决策者首辅张居正、申时行，再到被轻视的武将群体的代表人物戚继光，最后是在野的名士李贽，这各个层面，反映了万历朝由盛而衰的历程，其中豪迈悲壮之处，令人叹服，令人唏嘘，令人悲嗟。<br>万历十五年是平凡的一年，这一年没有多少能被记述在历史年表之中的大事，但正如我们所知的，历史几乎是不存在突变的，任何山雨来临之前，总是有狂风黑云的积聚。万历十五年正是这样的一年，我们看不见石破天惊，天地乖离，却能感受到，那看似平静的王朝之下涌动的暗流。<br>我们不放就先依照黄仁宇先生的顺序，来看看这个庞大的帝国，它的上层而至下层，曾是如何的励精图治，最后又是如何的堕落腐朽。<br>万历皇帝登极之初，不可否认他是有着满腔的热血与抱负，只可惜，生不逢时。万历前期，朝政大事皆由张居正把与太后把持（太后怎样姑且不论，但张居正作为文臣之首，确实是有相应的才干），这也就直接导致了他后期的弱势，他不能再像正德那样任意操纵社稷神器，因为文官们的意见很大程度上左右了他的想法（我理解为文官们尝到了张居正时期文官左右君主的甜头，故而不愿再减损或者放下这份庞大到让人心动的权利），由于师从于张居正，所以万历在很多事物上</p>
-<p>与张居正是有相同态度的，这一点从张居正在世时君臣之间融洽的关系可以窥见一斑，但自张居正逝世后，申时行作为首辅，没有张居正那样的资历与手腕来镇压群臣，从而导致朝野上下群魔乱舞，万历在很多观念上与反张派事实上相悖，直接导致了很多他的想法无法得到施行，或者是下层官员阳奉阴违，政治抱负无法伸张，所以万历就采用了消极的方式来表达自己的抵触，而这又促进了君臣不协调的恶性循环，由此，万历朝开始走向衰败。<br>中央集权制度，权利本应集中在作为中央的皇帝手中，虽然我们都说张居正是权臣，但是他在位期间</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-  </entry>
-  <entry>
     <title>游戏改变世界 笔记</title>
-    <url>/2018/10/28/2018-10-28-%E6%B8%B8%E6%88%8F%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C_%E7%AC%94%E8%AE%B0/</url>
+    <url>/2018/10/28/2018-10-28-game-change-the-world/</url>
     <content><![CDATA[<blockquote>
 <p>现实已经破碎，而我们需要用游戏去修复它。</p>
 </blockquote>
@@ -176,6 +88,46 @@
       </categories>
   </entry>
   <entry>
+    <title>VPS上的一些好物</title>
+    <url>/2018/10/28/2018-10-28-sth-good-on-VPS/</url>
+    <content><![CDATA[<p>主要介绍了在个人服务器上如何一键安装 ss\ssr，Mtproto（telegram）,以及 ssh 突然断开的处理方法(主要是国外服务器容易出现断连的问题)。</p>
+<a id="more"></a>
+
+<h2 id="SS-一键安装脚本"><a href="#SS-一键安装脚本" class="headerlink" title="SS 一键安装脚本"></a>SS 一键安装脚本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-libev_CN.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev_CN.sh &amp;&amp; bash shadowsocks-libev_CN.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="2020-09-补充说明"><a href="#2020-09-补充说明" class="headerlink" title="2020-09 补充说明"></a>2020-09 补充说明</h3><p>逗比的 ss 安装脚本已经被 ban 了很久了，如果有这方面需求的不如去订阅相关的服务，如果和别人合订的话开销大概 15 元/月 即可。</p>
+<h2 id="Mtproto-安装"><a href="#Mtproto-安装" class="headerlink" title="Mtproto 安装"></a>Mtproto 安装</h2><p>Mtproto 是 telegram 所使用的一个代理，这里再安利一波 telegram，很好用的社交软件，注重与保护隐私。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/mtproxy.sh &amp;&amp; chmod +x mtproxy.sh &amp;&amp; bash mtproxy.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="ssh-突然断开的处理办法"><a href="#ssh-突然断开的处理办法" class="headerlink" title="ssh 突然断开的处理办法"></a>ssh 突然断开的处理办法</h2><p>1、安装 screen 命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install screen</span><br></pre></td></tr></table></figure>
+
+<p>2、创建一个虚拟会话(amh 为自定义会话名称，可以自己更改)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">screen -S amh</span><br></pre></td></tr></table></figure>
+
+<p>3、以下载安装 amh 控制面板为例，下载并执行 amh 面板安装脚本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://amh.sh/file/AMH/4.2/amh.sh &amp;&amp; chmod 775 amh.sh &amp;&amp; ./amh.sh 2&gt;&amp;1 | tee amh.log</span><br></pre></td></tr></table></figure>
+
+<p>4、如果安装过程中，链接中断，重连 SSH 后输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">screen -r amh</span><br></pre></td></tr></table></figure>
+
+<p>即可查看之前任务的进度并可以继续执行。</p>
+<h3 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h3><ul>
+<li>screen -ls #查看所有 screen 会话</li>
+<li>按键盘上面的 Ctrl+a，然后再按 d #保存当前的 screen 会话</li>
+<li>exit #退出 screen</li>
+<li>screen -wipe mysql5.5 #删除会话</li>
+</ul>
+<h2 id="tcp—brr"><a href="#tcp—brr" class="headerlink" title="tcp—brr"></a>tcp—brr</h2><p>具体可以自行谷歌</p>
+]]></content>
+      <categories>
+        <category>见闻录</category>
+      </categories>
+      <tags>
+        <tag>VPS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图的生成和连通性判断实验</title>
     <url>/2018/10/31/2018-10-31-%E5%9B%BE%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%A4%E6%96%AD%E5%AE%9E%E9%AA%8C/</url>
     <content><![CDATA[<h2 id="这是-2018-10-31-的实验任务"><a href="#这是-2018-10-31-的实验任务" class="headerlink" title="这是 2018-10-31 的实验任务"></a>这是 2018-10-31 的实验任务</h2><p>描述：给定一个无向图，一共 n 个点，m 条边。请编写一个程序实现两种操作： D x y  从原图中删除连接 x，y 节点的边。 Q x y  询问 x，y 节点是否连通</p>
@@ -219,7 +171,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器</title>
-    <url>/2018/11/20/2018-11-20-%E9%A1%BA%E5%BA%8F%E5%AE%B9%E5%99%A8&amp;amp;&amp;amp;%E6%B3%9B%E5%9E%8B%E7%AE%97%E6%B3%95&amp;amp;&amp;amp;%E5%85%B3%E8%81%94%E5%AE%B9%E5%99%A8/</url>
+    <url>/2018/11/20/2018-11-20-container-generic/</url>
     <content><![CDATA[<blockquote>
 <p>在网络上浏览了很多关于 STL 的资料，但是大多都不能令我满意，所以这里以一个初学者的视角来学习一遍 STL</p>
 </blockquote>
@@ -291,7 +243,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>c++实现字典（初步）</title>
-    <url>/2018/11/21/2018-11-21-c++%E5%AE%9E%E7%8E%B0%E5%AD%97%E5%85%B8%EF%BC%88%E5%88%9D%E6%AD%A5%EF%BC%89/</url>
+    <url>/2018/11/21/2018-11-21-cpp-dictionary/</url>
     <content><![CDATA[<p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  main.cpp</span></span><br><span class="line"><span class="comment">//  zidian</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by Lion Heart on 2018/11/18.</span></span><br><span class="line"><span class="comment">//  Copyright © 2018 Lion. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_cn</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_eng</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> count)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; temp_tran;</span><br><span class="line"><span class="built_in">string</span> temp_ENG[<span class="number">3000</span>];</span><br><span class="line"><span class="built_in">string</span> temp_CN[<span class="number">3000</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dictionary</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; dic;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Dictionary()&#123;&#125;;</span><br><span class="line">    ~Dictionary()&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert_word</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Batch</span><span class="params">()</span></span>;          <span class="comment">//temp</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">inquire</span><span class="params">()</span></span>;     <span class="comment">//in_batch</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span>;        <span class="comment">//hang</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">menu</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">option1</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">option2</span><span class="params">(<span class="keyword">int</span> opt2)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_eng</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">	<span class="keyword">int</span> count_word = <span class="number">0</span>;</span><br><span class="line">	<span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">&quot;ENG.txt&quot;</span>)</span></span>;</span><br><span class="line">	<span class="keyword">if</span> (!in.is_open())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Error opening file&quot;</span>; <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		in.getline(buffer, <span class="number">100</span>);</span><br><span class="line">		temp_ENG[count_word] = buffer;</span><br><span class="line">		count_word++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_cn</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">	<span class="keyword">int</span> count_word = <span class="number">0</span>;</span><br><span class="line">	<span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">&quot;ZH.txt&quot;</span>)</span></span>;</span><br><span class="line">	<span class="keyword">if</span> (!in.is_open())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Error opening file&quot;</span>; <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		in.getline(buffer, <span class="number">100</span>);</span><br><span class="line">		temp_CN[count_word] = buffer;</span><br><span class="line">		<span class="comment">//cout &lt;&lt; buffer &lt;&lt; endl;</span></span><br><span class="line">		count_word++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="comment">// insert code here...</span></span><br><span class="line">	cinfstr_cn();</span><br><span class="line">	cinfstr_eng();</span><br><span class="line"></span><br><span class="line">    Dictionary dic;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> flag=<span class="string">&quot;y&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span> (flag==<span class="string">&quot;y&quot;</span>||flag==<span class="string">&quot;Y&quot;</span>) &#123;</span><br><span class="line">        dic.menu();</span><br><span class="line">        dic.option1();</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>&lt;&lt; <span class="string">&quot;Continue Operation(Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;flag;</span><br><span class="line">		system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::menu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.Creat:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Inquire&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;3.Sort&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;4.Display&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;5.clear&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input your choice:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::option1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> opt1;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;opt1;</span><br><span class="line">    <span class="keyword">int</span> opt2;</span><br><span class="line">    <span class="keyword">switch</span> (opt1) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.One by one.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Batch generation.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;3.Back step.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input your choice:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt;opt2;</span><br><span class="line">			system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">            option2(opt2);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            inquire();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            sort();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            display();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            clear();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Wrong Input!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::option2</span><span class="params">(<span class="keyword">int</span> opt2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> flag_ina;</span><br><span class="line">    <span class="keyword">switch</span> (opt2) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">do</span>&#123;</span><br><span class="line">                insert_word();</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;Continue to input words?(Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; flag_ina;</span><br><span class="line">            &#125;<span class="keyword">while</span> (flag_ina==<span class="string">&quot;y&quot;</span>||flag_ina==<span class="string">&quot;Y&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            Batch();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">			<span class="comment">//hahahahahahahahahahahahahahahahahahahahahahaha</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Wrong Input!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::insert_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> Eng,Zh_CN;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input English:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; Eng;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input paraphrase(Chinese):&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;Zh_CN;</span><br><span class="line">    dic.insert(<span class="built_in">make_pair</span>(Eng, Zh_CN));</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::inquire</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> opt;</span><br><span class="line">    <span class="built_in">string</span> a;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Inquire by English or Chinese?&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.English&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Chinese&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;opt;</span><br><span class="line">    <span class="keyword">if</span> (opt ==<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Plsase the word you want to inquire:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">        <span class="keyword">if</span> (dic.find(a)==dic.end()) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a&lt;&lt;<span class="string">&quot; is not in this dictionary~&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; dic[a]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (opt==<span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Plsase the word you want to inquire:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">        <span class="keyword">bool</span> flag=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">auto</span> bba=dic.begin();</span><br><span class="line">		<span class="keyword">while</span>(bba!=dic.end())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (bba-&gt;second==a) &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; bba-&gt;first&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                flag=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">			++bba;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a&lt;&lt;<span class="string">&quot; is not in this dictionary~&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	test(<span class="number">4</span>);</span><br><span class="line">	Sleep(<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">//hang</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;setiosflags(ios::left)&lt;&lt;setw(<span class="number">14</span>)&lt;&lt; <span class="string">&quot;English&quot;</span>&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">9</span>)&lt;&lt;<span class="string">&quot;Chinese&quot;</span>&lt;&lt;resetiosflags(ios::left)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; dic[&quot;a&quot;];</span></span><br><span class="line">	<span class="keyword">auto</span> bba=dic.begin();</span><br><span class="line">	<span class="keyword">while</span>(bba!=dic.end())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">14</span>)&lt;&lt; bba-&gt;first&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">9</span>)&lt;&lt;bba-&gt;second&lt;&lt;resetiosflags(ios::left)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		++bba;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::Batch</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//hang</span></span><br><span class="line">	<span class="keyword">int</span> tim,n;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;---------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Vocabulary will be imported from the file.\n&quot;</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;How many words do you want to add?(&lt;=2999)&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	srand(time(<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		tim = rand() % <span class="number">2999</span>;</span><br><span class="line">		dic.insert(<span class="built_in">make_pair</span>(temp_ENG[tim], temp_CN[tim]));</span><br><span class="line">		<span class="comment">//cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;</span></span><br><span class="line">	&#125;</span><br><span class="line">	test(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> count)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;[&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;count;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;#&quot;</span>;</span><br><span class="line">		Sleep(<span class="number">500</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;]&quot;</span>;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_GREEN);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;		success&quot;</span>&lt;&lt;flush;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::clear</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> flag;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;----------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Warnning!!!/n&quot;</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;You will delete all your data in this dic!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Continnue? (Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt;flag;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (flag==<span class="string">&quot;y&quot;</span>||flag==<span class="string">&quot;Y&quot;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		dic.erase(dic.begin(),dic.end());</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">RIZHI</span></span><br><span class="line"><span class="comment">随机生成过程中出现重复可能缺失数据</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -305,22 +257,8 @@ Q 1 2</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>杂物</title>
-    <url>/2018/12/02/2018-12-02-%E6%9D%82%E7%89%A9/</url>
-    <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*报时</span></span><br><span class="line"><span class="comment"> #include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;map&gt;</span></span><br><span class="line"><span class="comment">#include &lt;string&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">using namespace std;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">map&lt;int, string&gt; mapA=&#123;&#123;0,&quot;zero&quot;&#125;,&#123; 1, &quot;one&quot;&#125;,&#123; 2,&quot;two&quot;&#125;,&#123;3,&quot;three&quot;&#125;, &#123;4,&quot;four&quot;&#125;, &#123;5,&quot;five&quot;&#125;, &#123;6,&quot;six&quot;&#125;, &#123;7,&quot;seven&quot;&#125;, &#123;8,&quot;eight&quot;&#125;, &#123;9,&quot;nine&quot;&#125;, &#123;10,&quot;ten&quot;&#125;, &#123;11,&quot;eleven&quot;&#125;, &#123;12,&quot;twelve&quot;&#125;, &#123;13,&quot;thirteen&quot;&#125;, &#123;14,&quot;fourteen&quot;&#125;, &#123;15,&quot;fifteen&quot;&#125;, &#123;16,&quot;sixteen&quot;&#125;, &#123;17,&quot;seventeen:&quot;&#125;, &#123;18,&quot;eighteen&quot;&#125;, &#123;19,&quot;nineteen&quot;&#125;, &#123;20,&quot;twenty&quot;&#125;,&#123;30,&quot;thirty&quot;&#125;,&#123;40,&quot;forty&quot;&#125;,&#123;50,&quot;fifty&quot;&#125;&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">void trans(int num)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int shiwei,gewei;</span></span><br><span class="line"><span class="comment">    if (num&lt;=20||num%10==0) &#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[num];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    else if (num&gt;20||num%10!=0)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        shiwei=num/10;</span></span><br><span class="line"><span class="comment">        shiwei*=10;</span></span><br><span class="line"><span class="comment">        gewei=num%10;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[shiwei]&lt;&lt;&quot; &quot;&lt;&lt;mapA[gewei];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int main()</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int hour,min;</span></span><br><span class="line"><span class="comment">    cin &gt;&gt; hour &gt;&gt; min;</span></span><br><span class="line"><span class="comment">    trans(hour);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot; &quot;;</span></span><br><span class="line"><span class="comment">    trans(min);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt;endl;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>鬼畜的回形数</title>
-    <url>/2018/12/02/2018-12-02-%E9%AC%BC%E7%95%9C%E7%9A%84%E5%9B%9E%E5%BD%A2%E6%95%B0/</url>
+    <url>/2018/12/02/2018-12-02-number-of-rounds/</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> q[<span class="number">200</span>][<span class="number">200</span>];</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n&gt;&gt;m;</span><br><span class="line">    <span class="comment">/*int **q;</span></span><br><span class="line"><span class="comment">    q=new int*[n];</span></span><br><span class="line"><span class="comment">    for (int i=0; i&lt;n; i++) &#123;</span></span><br><span class="line"><span class="comment">        q[i]=new int[m];</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; j++) &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;q[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//cout &lt;&lt; q[0][0]&lt;&lt;endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> right=m<span class="number">-1</span>,left=<span class="number">0</span>,up=<span class="number">0</span>,down=n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=up; i&lt;=down; i++) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[i][left]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        left++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=left; i&lt;=right; i++) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[down][i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        down--;</span><br><span class="line">        <span class="keyword">if</span> (right+<span class="number">1</span>==left||up==down+<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=down; i&gt;=up; i--) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[i][right]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        right--;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=right; i&gt;=left; i--) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[up][i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        up++;</span><br><span class="line">        <span class="keyword">if</span> (right+<span class="number">1</span>==left||up==down+<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="comment">// cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;</span></span><br><span class="line">        <span class="comment">//cout &lt;&lt; m/2+2 &lt;&lt; &quot; &quot;&lt;&lt;n/2+2&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -333,8 +271,22 @@ Q 1 2</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>杂物</title>
+    <url>/2018/12/02/2018-12-02-others/</url>
+    <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*报时</span></span><br><span class="line"><span class="comment"> #include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;map&gt;</span></span><br><span class="line"><span class="comment">#include &lt;string&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">using namespace std;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">map&lt;int, string&gt; mapA=&#123;&#123;0,&quot;zero&quot;&#125;,&#123; 1, &quot;one&quot;&#125;,&#123; 2,&quot;two&quot;&#125;,&#123;3,&quot;three&quot;&#125;, &#123;4,&quot;four&quot;&#125;, &#123;5,&quot;five&quot;&#125;, &#123;6,&quot;six&quot;&#125;, &#123;7,&quot;seven&quot;&#125;, &#123;8,&quot;eight&quot;&#125;, &#123;9,&quot;nine&quot;&#125;, &#123;10,&quot;ten&quot;&#125;, &#123;11,&quot;eleven&quot;&#125;, &#123;12,&quot;twelve&quot;&#125;, &#123;13,&quot;thirteen&quot;&#125;, &#123;14,&quot;fourteen&quot;&#125;, &#123;15,&quot;fifteen&quot;&#125;, &#123;16,&quot;sixteen&quot;&#125;, &#123;17,&quot;seventeen:&quot;&#125;, &#123;18,&quot;eighteen&quot;&#125;, &#123;19,&quot;nineteen&quot;&#125;, &#123;20,&quot;twenty&quot;&#125;,&#123;30,&quot;thirty&quot;&#125;,&#123;40,&quot;forty&quot;&#125;,&#123;50,&quot;fifty&quot;&#125;&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">void trans(int num)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int shiwei,gewei;</span></span><br><span class="line"><span class="comment">    if (num&lt;=20||num%10==0) &#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[num];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    else if (num&gt;20||num%10!=0)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        shiwei=num/10;</span></span><br><span class="line"><span class="comment">        shiwei*=10;</span></span><br><span class="line"><span class="comment">        gewei=num%10;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[shiwei]&lt;&lt;&quot; &quot;&lt;&lt;mapA[gewei];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int main()</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int hour,min;</span></span><br><span class="line"><span class="comment">    cin &gt;&gt; hour &gt;&gt; min;</span></span><br><span class="line"><span class="comment">    trans(hour);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot; &quot;;</span></span><br><span class="line"><span class="comment">    trans(min);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt;endl;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>数据结构</category>
+        <category>c++</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于Mac Xcode上使用c++读取txt文件</title>
-    <url>/2018/12/15/2018-12-15-%E5%85%B3%E4%BA%8EMac_Xcode%E4%B8%8A%E4%BD%BF%E7%94%A8c++%E8%AF%BB%E5%8F%96txt%E6%96%87%E4%BB%B6/</url>
+    <url>/2018/12/15/2018-12-15-read-txt-file-via-cpp-on-Xcode/</url>
     <content><![CDATA[<h1 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h1><p>Product -&gt;Scheme -&gt;Edit Scheme-&gt;左边选择 Run 选择-&gt;选择 Option-&gt;在 Working Dictionary 选项里面，打钩 Using cusom working dictionary<br>这样就解决了 Xcode 读取路径的问题</p>
 <h1 id="txt-文件"><a href="#txt-文件" class="headerlink" title="txt 文件"></a>txt 文件</h1><p>一般使用文本编辑创建后默认是 rtf 文件，将 rtf 文件保存为纯文本文件就可以了</p>
 ]]></content>
@@ -345,7 +297,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>蓝桥杯二三事（第一阶段施工完毕）</title>
-    <url>/2018/12/19/2018-12-19-%E8%93%9D%E6%A1%A5%E6%9D%AF%E4%BA%8C%E4%B8%89%E4%BA%8B%EF%BC%88%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%96%BD%E5%B7%A5%E5%AE%8C%E6%AF%95%EF%BC%89/</url>
+    <url>/2018/12/19/2018-12-19-sth-of-blue-bridge/</url>
     <content><![CDATA[<p>这里将会记载做蓝桥杯的题目时的一些感悟以及灵感（还有一些无聊的吐槽啦。</p>
 <a id="more"></a>
 
@@ -379,7 +331,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>我的第一只爬虫= =</title>
-    <url>/2018/12/26/2018-12-26-%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%8F%AA%E7%88%AC%E8%99%AB=_=/</url>
+    <url>/2018/12/26/2018-12-26-my-first-spider/</url>
     <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
 <a id="more"></a>
 
@@ -397,7 +349,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>P站爬虫v2.0</title>
-    <url>/2019/01/06/2019-01-06-P%E7%AB%99%E7%88%AC%E8%99%ABv2.0/</url>
+    <url>/2019/01/06/2019-01-06-pixiv-spider/</url>
     <content><![CDATA[<p>经过半个月额折腾，终于完成了 P 站爬虫 v2.0，现在可以根据关注列表来爬取关注对象的图片，唯一要做的只是输入账号密码而已。</p>
 <a id="more"></a>
 
@@ -418,7 +370,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>flask部署的问题及解决</title>
-    <url>/2019/03/11/2019-03-11-flask%E9%83%A8%E7%BD%B2%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3/</url>
+    <url>/2019/03/11/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
     <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
 </a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
 <a id="more"></a>
@@ -489,29 +441,8 @@ Q 1 2</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>No.79</title>
-    <url>/2019/06/11/2019-06-11-No.79/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/word-search">No.79 单词搜索</a></p>
-<p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
-<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
-<a id="more"></a>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">示例:</span><br><span class="line"></span><br><span class="line">board =</span><br><span class="line">[</span><br><span class="line">  [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;E&#x27;</span>],</span><br><span class="line">  [<span class="string">&#x27;S&#x27;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;S&#x27;</span>],</span><br><span class="line">  [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;E&#x27;</span>]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">给定 word = <span class="string">&quot;ABCCED&quot;</span>, 返回 <span class="literal">true</span>.</span><br><span class="line">给定 word = <span class="string">&quot;SEE&quot;</span>, 返回 <span class="literal">true</span>.</span><br><span class="line">给定 word = <span class="string">&quot;ABCB&quot;</span>, 返回 <span class="literal">false</span>.</span><br></pre></td></tr></table></figure>
-
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>这道题目可以使用回溯法来解决，这里提几个关键的地方。<br>line29 重置为 false，这是回溯法的关键，即将状态回滚回到递归前的状态。<br>line3 方向数组，配合 line22 可以将代码量压缩很多，而且逻辑关系十分清晰。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> d[<span class="number">4</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; visited;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;=<span class="number">0</span> &amp;&amp; y&gt;=<span class="number">0</span> &amp;&amp; y&lt;n &amp;&amp; x&lt;m)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">recursion</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board,<span class="keyword">int</span> startx,<span class="keyword">int</span> starty,<span class="keyword">const</span> <span class="built_in">string</span>&amp; word,<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index==word.size()<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> word[index]==board[startx][starty];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(board[startx][starty]==word[index])&#123;</span><br><span class="line">        visited[startx][starty] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> newx = startx+d[i][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">int</span> newy = starty+d[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(judge(newx,newy) &amp;&amp; !visited[newx][newy] &amp;&amp; recursion(board,newx,newy,word,index+<span class="number">1</span>) )&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[startx][starty] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">exist</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">    m=board.size();</span><br><span class="line">    n=board[<span class="number">0</span>].size();</span><br><span class="line"></span><br><span class="line">    visited = <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt;(m,<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(n,<span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//    if(my==0 ) return false;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(recursion(board,i,j,word,<span class="number">0</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>N皇后问题</title>
-    <url>/2019/06/11/2019-06-11-N%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/</url>
+    <url>/2019/06/11/2019-06-11-NQueen/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/n-queens/">No.51 N 皇后问题</a></p>
 <p>n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
 <p><img data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png" alt="question"></p>
@@ -535,8 +466,29 @@ Q 1 2</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>No.79</title>
+    <url>/2019/06/11/2019-06-11-No79/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/word-search">No.79 单词搜索</a></p>
+<p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
+<p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
+<a id="more"></a>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">示例:</span><br><span class="line"></span><br><span class="line">board =</span><br><span class="line">[</span><br><span class="line">  [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;E&#x27;</span>],</span><br><span class="line">  [<span class="string">&#x27;S&#x27;</span>,<span class="string">&#x27;F&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;S&#x27;</span>],</span><br><span class="line">  [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;E&#x27;</span>]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">给定 word = <span class="string">&quot;ABCCED&quot;</span>, 返回 <span class="literal">true</span>.</span><br><span class="line">给定 word = <span class="string">&quot;SEE&quot;</span>, 返回 <span class="literal">true</span>.</span><br><span class="line">给定 word = <span class="string">&quot;ABCB&quot;</span>, 返回 <span class="literal">false</span>.</span><br></pre></td></tr></table></figure>
+
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>这道题目可以使用回溯法来解决，这里提几个关键的地方。<br>line29 重置为 false，这是回溯法的关键，即将状态回滚回到递归前的状态。<br>line3 方向数组，配合 line22 可以将代码量压缩很多，而且逻辑关系十分清晰。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> d[<span class="number">4</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; visited;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;=<span class="number">0</span> &amp;&amp; y&gt;=<span class="number">0</span> &amp;&amp; y&lt;n &amp;&amp; x&lt;m)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">recursion</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board,<span class="keyword">int</span> startx,<span class="keyword">int</span> starty,<span class="keyword">const</span> <span class="built_in">string</span>&amp; word,<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index==word.size()<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> word[index]==board[startx][starty];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(board[startx][starty]==word[index])&#123;</span><br><span class="line">        visited[startx][starty] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> newx = startx+d[i][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">int</span> newy = starty+d[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(judge(newx,newy) &amp;&amp; !visited[newx][newy] &amp;&amp; recursion(board,newx,newy,word,index+<span class="number">1</span>) )&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[startx][starty] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">exist</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">    m=board.size();</span><br><span class="line">    n=board[<span class="number">0</span>].size();</span><br><span class="line"></span><br><span class="line">    visited = <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt;(m,<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(n,<span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//    if(my==0 ) return false;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(recursion(board,i,j,word,<span class="number">0</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 数据挖掘基础</title>
-    <url>/2019/07/16/2019-07-16-Python_%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%9F%BA%E7%A1%80/</url>
+    <url>/2019/07/16/2019-07-16-Python-basic-of-DM/</url>
     <content><![CDATA[<p>本篇记载了如何在 python 中使用数据挖掘的相关的模块。<br>都是基础级的东西了。</p>
 <pre><code>参考：
     《python数据科学入门》
@@ -633,7 +585,7 @@ stacked : 堆叠形式</code></pre>
   </entry>
   <entry>
     <title>flask 开发心得 part 1</title>
-    <url>/2019/07/16/2019-07-16-flask_%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97_part_1/</url>
+    <url>/2019/07/16/2019-07-16-flask-experience-part/</url>
     <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
 <p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
 <h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
@@ -651,7 +603,7 @@ stacked : 堆叠形式</code></pre>
   </entry>
   <entry>
     <title>担任项目经理的第一周</title>
-    <url>/2019/07/16/2019-07-16-%E6%8B%85%E4%BB%BB%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%9A%84%E7%AC%AC%E4%B8%80%E5%91%A8/</url>
+    <url>/2019/07/16/2019-07-16-the-first-week-to-be-a-project-manager/</url>
     <content><![CDATA[<p>有幸担任了工作室的“中医基础信息管理”项目的项目经理，于此写下第一周的一些心得体会，以作参考。</p>
 <p>先使用 CVS 来打个人生的 tag 吧</p>
 <p><strong>milestone 3.1</strong></p>
@@ -688,7 +640,7 @@ js监听事件</code></pre>
   </entry>
   <entry>
     <title>H5初阶学习笔记</title>
-    <url>/2019/07/18/2019-07-18-_H5%E5%88%9D%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <url>/2019/07/18/2019-07-18-H5-note/</url>
     <content><![CDATA[<h1 id="新增主体结构元素"><a href="#新增主体结构元素" class="headerlink" title="新增主体结构元素"></a>新增主体结构元素</h1><h2 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h2><table>
 <thead>
 <tr>
@@ -844,7 +796,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>numpy个人整理(初阶)</title>
-    <url>/2019/07/19/2019-07-19-numpy%E4%B8%AA%E4%BA%BA%E6%95%B4%E7%90%86(%E5%88%9D%E9%98%B6)/</url>
+    <url>/2019/07/19/2019-07-19-numpy-simple-organization/</url>
     <content><![CDATA[<p>NumPy 是 Python 语言的一个扩展程序库。支持高阶大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
 <a id="more"></a>
 
@@ -1096,7 +1048,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>No.31 下一个排列</title>
-    <url>/2019/07/22/2019-07-22-No.31_%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/</url>
+    <url>/2019/07/22/2019-07-22-No31-next-permutation/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/next-permutation/">No.31 下一个排列</a></p>
 <p>实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。</p>
 <p>如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。</p>
@@ -1133,7 +1085,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>flask部署(2)</title>
-    <url>/2019/07/30/2019-07-30-flask%E9%83%A8%E7%BD%B2(2)/</url>
+    <url>/2019/07/30/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
     <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
 <a id="more"></a>
 
@@ -1170,7 +1122,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>sklearn构造性学习(1)</title>
-    <url>/2019/08/02/2019-08-02-sklearn%E6%9E%84%E9%80%A0%E6%80%A7%E5%AD%A6%E4%B9%A0(1)/</url>
+    <url>/2019/08/02/2019-08-02-learning-sklearn-via-theory-1/</url>
     <content><![CDATA[<p>构造性学习中，以理论为主，并结合一定的例子</p>
 <p>本篇是机器学习的入门篇，主体的脉络差不多近似于 《数据挖掘导论》 一书</p>
 <a id="more"></a>
@@ -1323,7 +1275,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>sklearn应用性学习(1)</title>
-    <url>/2019/08/04/2019-08-04-sklearn%E5%BA%94%E7%94%A8%E6%80%A7%E5%AD%A6%E4%B9%A0(1)/</url>
+    <url>/2019/08/04/2019-08-04-learning-sklearn-via-practice-1/</url>
     <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
 <p>本篇主要针对无监督学习进行浅尝。</p>
 <a id="more"></a>
@@ -1396,7 +1348,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>sklearn应用性学习(2)</title>
-    <url>/2019/08/05/2019-08-05-sklearn%E5%BA%94%E7%94%A8%E6%80%A7%E5%AD%A6%E4%B9%A0(2)/</url>
+    <url>/2019/08/05/2019-08-05-learning-sklearn-via-practice-2/</url>
     <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
 <p>本篇主要针对监督学习进行浅尝。</p>
 <a id="more"></a>
@@ -1431,8 +1383,43 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>工作室异闻录(1)</title>
+    <url>/2019/08/06/2019-08-06-Anecdote-of-studio/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VENI VIDI VICI。 –凯撒</p>
+</blockquote>
+<p>我将这句话写在了大二篇章的中叶。</p>
+<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
+<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
+<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
+<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
+<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
+<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg"></a></p>
+</li>
+<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg"></a></p>
+</li>
+<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg"></a></p>
+</li>
+<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg"></a></p>
+</li>
+<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg"></a></p>
+</li>
+<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg"></a></p>
+</li>
+<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg"></a></p>
+</li>
+</ul>
+<div align=life> 
+<iframe frameborder="no" marginwidth="0" marginheight="0" width=400 height=140 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=66"></iframe>
+</div>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Be a better pythonista(1)</title>
-    <url>/2019/08/06/2019-08-06-Be_a_better_pythonista(1)/</url>
+    <url>/2019/08/06/2019-08-06-Be-a-better-pythonista-1/</url>
     <content><![CDATA[<p>Be a better pythonista 是新开的一个坑，如其名，根本目的是为了成为一个更棒的 python 开发者。</p>
 <p>如何成为一个 better pythonista？个人认为，是 python 的特性、高级语法还有对 python 形式的编程思维的理解和贯彻，这也是本系列的侧重点。</p>
 <p>Be a better pythonista 计划用前四部分完成对 cookbook 的重读，中间会对一些代码进行修正处理，并且会穿插一些个人的理解。同时，还会加入一些在开发中所遇到的一些事情、写作同时遇到的一些值得分享的东西，以为 dessert。</p>
@@ -1516,43 +1503,8 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>工作室异闻录(1)</title>
-    <url>/2019/08/06/2019-08-06-%E5%B7%A5%E4%BD%9C%E5%AE%A4%E5%BC%82%E9%97%BB%E5%BD%95(1)/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>VENI VIDI VICI。 –凯撒</p>
-</blockquote>
-<p>我将这句话写在了大二篇章的中叶。</p>
-<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
-<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
-<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
-<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
-<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
-<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg"></a></p>
-</li>
-<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg"></a></p>
-</li>
-<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg"></a></p>
-</li>
-<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg"></a></p>
-</li>
-<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg"></a></p>
-</li>
-<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg"></a></p>
-</li>
-<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img data-src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg"></a></p>
-</li>
-</ul>
-<div align=life> 
-<iframe frameborder="no" marginwidth="0" marginheight="0" width=400 height=140 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=66"></iframe>
-</div>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-  </entry>
-  <entry>
     <title>2019医学信息创新工作室暑期个人总结</title>
-    <url>/2019/08/08/2019-08-08-2019%E5%8C%BB%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%88%9B%E6%96%B0%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%9A%91%E6%9C%9F%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</url>
+    <url>/2019/08/08/2019-08-08-2019summer-summary/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>探寻不到便猜测，猜测不到便想象。只有走在路上，才能摆脱局限，摆脱执着，让所有的选择、探寻、猜测、想象都生气勃勃。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>自 7 月 1 日而今,39 天.</p>
 <p>我收获了许多,知识\友情,还有更多不可名状的事物.</p>
@@ -1630,7 +1582,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（1）</title>
-    <url>/2019/08/09/2019-08-09-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B_&amp;amp;&amp;amp;_%E8%8A%9C%E6%B9%96%E6%B8%B8%E8%AE%B0%EF%BC%881%EF%BC%89/</url>
+    <url>/2019/08/09/2019-08-09-jsjds-travel-notes-of-wuhu-1/</url>
     <content><![CDATA[<p>一个很粗糙的作品，莫名其妙的就通过了省赛，然后莫名其妙地就到了国赛。。。算了，就好好享受一下吧，至少是要不 gong 虚 fei 此 chi 行 he，哈哈。</p>
 <a id="more"></a>
 
@@ -1708,7 +1660,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
-    <url>/2019/08/10/2019-08-10-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E5%9B%BD%E8%B5%9B_&amp;amp;&amp;amp;_%E8%8A%9C%E6%B9%96%E6%B8%B8%E8%AE%B0%EF%BC%882%EF%BC%89/</url>
+    <url>/2019/08/10/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
     <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
 <p>因为台风过境,大部分的动车班次都被停运.</p>
 <p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
@@ -1746,7 +1698,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>scikit-learn 入门建议</title>
-    <url>/2019/08/12/2019-08-12-scikit-learn_%E5%85%A5%E9%97%A8%E5%BB%BA%E8%AE%AE/</url>
+    <url>/2019/08/12/2019-08-12-scikit-learn-suggestion/</url>
     <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
 <p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
 <p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
@@ -1857,7 +1809,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>Be a better pythonista(2)</title>
-    <url>/2019/08/14/2019-08-14-Be_a_better_pythonista(2)/</url>
+    <url>/2019/08/14/2019-08-14-Be-a-better-pythonista-2/</url>
     <content><![CDATA[<p>分为迭代器、文件读写、函数式编程三个部分，其中，前二者来源于 cookbook，其中加入了一些个人的理解和补正。函数式编程作为个人的扩充添加进来，主要参考了一些文章和书籍，因为很杂，就不一一列出。</p>
 <a id="more"></a>
 
@@ -1952,7 +1904,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>数据分析拾遗(不定期补充)</title>
-    <url>/2019/08/23/2019-08-23-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8B%BE%E9%81%97(%E4%B8%8D%E5%AE%9A%E6%9C%9F%E8%A1%A5%E5%85%85)/</url>
+    <url>/2019/08/23/2019-08-23-DA-intro-1/</url>
     <content><![CDATA[<p>记录在实际操作过程中遇到遇到的一些有意思的使用法.</p>
 <a id="more"></a>
 
@@ -2002,7 +1954,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>Be a better pythonista(3)</title>
-    <url>/2019/08/28/2019-08-28-Be_a_better_pythonista(3)/</url>
+    <url>/2019/08/28/2019-08-28-Be_a_better_pythonista-3/</url>
     <content><![CDATA[<p>本节主要是函数和类的一些技巧操作.</p>
 <p>当然,函数和类二者任意一个拿出来都是很巨量的篇幅,所以这里就只是选取了在项目中经常用到的一些技巧,并根据个人的实战经验来进行详细的阐述.</p>
 <p>后续可能会进行增改(如果还记得的话</p>
@@ -5825,6 +5777,54 @@ hello alice</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>万历十五年</title>
+    <url>/2018/10/28/a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline/</url>
+    <content><![CDATA[<p>《万历十五年》（英语：1587, a Year of No Significance: The Ming Dynasty in Decline）是美籍华裔历史学家黄仁宇最出名、也是体现其“大历史观”的一部明史研究专著。</p>
+<a id="more"></a>
+
+<h1 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h1><ul>
+<li>皇室的情谊不同于世俗，它不具有世俗友谊那种由于互相关怀而产生的永久性。</li>
+<li>今日受刑，明日名扬史册，这样的做法，说明忠臣烈士的名誉，确乎是一种高贵的商品，否则，何以有许多人愿意付出昂贵的代价，放弃经过千辛万苦挣来的进士出身，继之以血肉深知生命去追求。</li>
+<li>张居正的根本错误在于自信过度，不能谦虚谨慎，不肯对事实比做出必要的让步。</li>
+<li>仪式典礼只会产生更多的仪式典礼。</li>
+</ul>
+<blockquote>
+<p>但是迷信与非迷信，其间的分野也可能极为模糊。例如，当一个人强迫自己对一件事情、一种前途建立信念，则其与宗教式的皈依就相去极微，因为凡是一个人处于困境，他就不愿放弃任何足以取得成功的可能性，即使这种可能性极为渺茫，没有根据，他也要把它作为自己精神上的寄托。</p>
+</blockquote>
+<ul>
+<li><p>武将领兵作战，和文官集团的施政原则在根本上是不能相容的。</p>
+</li>
+<li><p>性恶来自先天，性善来自天赋。</p>
+</li>
+<li><p>文官政治确立后，儒家单独的伦理性格已经不能完全适应时代的需要，集权的中央政府不得不创立新的哲学理论，掺和理智上的新因素，适应新的环境。</p>
+</li>
+<li><p>朱熹</p>
+</li>
+</ul>
+<blockquote>
+<p>大凡高度的概括，总带有想象的成分。尤其是在现代科学尚未发达的时代，哲学家不可能说明宇宙就是这样，而只能假定宇宙就是这样。</p>
+</blockquote>
+<blockquote>
+<p>王阳明并没有为真理而真理的倾向。和朱熹一样，他的目的也在于利用他的思想系统，去证实他从小接受的儒家教条，以求经世致用。他的方法较之朱熹更为直接，然而这里也埋伏着危险。如果一个人把王阳明的学说看成一种单纯的方法，施用于孔孟教条之前，就很可能发生耿定向所说的“未信先横”，以为自己的灵感可以为真理的主宰。</p>
+</blockquote>
+<ul>
+<li><p>如入火聚，得清凉门。</p>
+</li>
+<li><p>当一个人口众多的国家，各人行动全凭儒家粗浅而又无法固定的原则所限制，而法律又缺乏创造性，则其社会发展的程度，必然受到限制。。</p>
+</li>
+<li><p>道德虽高于法律和技术，但要提出做争论的根据时，则要在法律及技术之后提出。</p>
+</li>
+</ul>
+<h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>汉唐尚武，故外敌辟易，畏其如虎，而最终亡于内乱。<br>宋明尚文，国内能勉强依靠高度强化的集权制度稳定，但最终亡于外敌。<br>所以在下认为，文极与武极俱是取死之道，如本朝一般，文武并举，方可大治。至于党争的问题，则暂且悬束。</p>
+<p>我认为，党争的根源在于执政理念与政治追求的冲突，至于会形成乡党、朋党等，不过是时事所近逼的结果。</p>
+<p>万历十五年一书从帝国的最高层万历皇帝，而至帝国的决策者首辅张居正、申时行，再到被轻视的武将群体的代表人物戚继光，最后是在野的名士李贽，这各个层面，反映了万历朝由盛而衰的历程，其中豪迈悲壮之处，令人叹服，令人唏嘘，令人悲嗟。<br>万历十五年是平凡的一年，这一年没有多少能被记述在历史年表之中的大事，但正如我们所知的，历史几乎是不存在突变的，任何山雨来临之前，总是有狂风黑云的积聚。万历十五年正是这样的一年，我们看不见石破天惊，天地乖离，却能感受到，那看似平静的王朝之下涌动的暗流。<br>我们不放就先依照黄仁宇先生的顺序，来看看这个庞大的帝国，它的上层而至下层，曾是如何的励精图治，最后又是如何的堕落腐朽。<br>万历皇帝登极之初，不可否认他是有着满腔的热血与抱负，只可惜，生不逢时。万历前期，朝政大事皆由张居正把与太后把持（太后怎样姑且不论，但张居正作为文臣之首，确实是有相应的才干），这也就直接导致了他后期的弱势，他不能再像正德那样任意操纵社稷神器，因为文官们的意见很大程度上左右了他的想法（我理解为文官们尝到了张居正时期文官左右君主的甜头，故而不愿再减损或者放下这份庞大到让人心动的权利），由于师从于张居正，所以万历在很多事物上</p>
+<p>与张居正是有相同态度的，这一点从张居正在世时君臣之间融洽的关系可以窥见一斑，但自张居正逝世后，申时行作为首辅，没有张居正那样的资历与手腕来镇压群臣，从而导致朝野上下群魔乱舞，万历在很多观念上与反张派事实上相悖，直接导致了很多他的想法无法得到施行，或者是下层官员阳奉阴违，政治抱负无法伸张，所以万历就采用了消极的方式来表达自己的抵触，而这又促进了君臣不协调的恶性循环，由此，万历朝开始走向衰败。<br>中央集权制度，权利本应集中在作为中央的皇帝手中，虽然我们都说张居正是权臣，但是他在位期间</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数学之美笔记</title>
     <url>/2018/10/28/art-of-math/</url>
     <content><![CDATA[<p>大学读书笔记之一:数学之美</p>
@@ -6156,7 +6156,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/2020/05/30/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;">&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6218,7 +6218,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>Programmer摘要</title>
-    <url>/2018/10/28/2018-10-28-Programmer%E6%91%98%E8%A6%81/</url>
+    <url>/2018/10/28/2018-10-28-abstract-of-Programmer/</url>
     <content><![CDATA[<h1 id="如何使用日志调试"><a href="#如何使用日志调试" class="headerlink" title="如何使用日志调试"></a>如何使用日志调试</h1><p>Logging（日志）是一种编写系统的方式，可以产生一系列信息记录，被称为 log。Printlining 只是输出简单的，通常是临时的日志。初学者一定要理解并且使用日志，因为他们对编程的理解是局限的。因为系统的复杂性,系统架构必须理解与使用日志。在理想的状态下，程序运行时产生的日志信息数量需要是可配置的。通常，日志提供了下面三个基本的优点：</p>
 <p>日志可以提供一些难以重现的 bug 的有效信息，比如在产品环境中发生的、不能在测试环境重现的 bug。<br>日志可以提供统计和与性能相关的数据，比如语句间流逝过的时间。<br>可配置的情况下，日志允许我们获取普通的信息，使得我们可以在不修改或重新部署代码的情况下调试以处理具体的问题。<br>需要输出的日志数量总是一个简约与信息量的权衡。太多的信息会使得日志变得昂贵，并且造成滚动目盲，使得发现你想要的信息变得很困难。但信息太少的话，日志可能不包含你需要的信息。出于这个原因，让日志的输出可配置是非常有用的。通常，日志中的每个记录会标记它在源代码里的位置，执行它的线程（如果可用的话），时间精度，并且通常还有一些额外的有效信息，比如一些变量的值，剩余内存大小，数据对象的数量，等等。这些日志语句撒遍源码，但只出现在主要的功能点和一些可能出现危机的代码里。每个语句可以被赋予一个等级，并且只有在系统被配置成输出相应等级的记录的时候才输出这个等级的记录。你应该设计好日志语句来标记你预期的问题。预估测量程序表现的必要性。</p>
 <p>如果你有一个永久的日志，printling 现在可以用日志的形式来完成，并且一些调试语句可能会永久地加入日志系统。</p>
@@ -6279,7 +6279,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>python进阶 手札</title>
-    <url>/2019/04/14/2019-04-14-python%E8%BF%9B%E9%98%B6_%E6%89%8B%E6%9C%AD/</url>
+    <url>/2019/04/14/2019-04-14-python-advanced/</url>
     <content><![CDATA[<p>关于 python 的内置函数以及一些高阶的技巧的学习</p>
 <a id="more"></a>
 
@@ -6489,7 +6489,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>docker (1)</title>
-    <url>/2019/08/07/2019-08-07-docker_(1)/</url>
+    <url>/2019/08/07/2019-08-07-docker-1/</url>
     <content><![CDATA[<p>参考 《第一本 docker 书》《docker 深入浅出》</p>
 <a id="more"></a>
 
@@ -6558,7 +6558,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -6683,7 +6683,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>Introduction to data mining(1)</title>
-    <url>/2019/08/17/2019-08-17-Introduction_to_data_mining(1)/</url>
+    <url>/2019/08/17/2019-08-17-Introduction_to_data_mining-1/</url>
     <content><![CDATA[<p>本篇是笔者在学习 “Introduction to data mining”(《数据挖掘导论》)的英文最新版所记录的一些学习笔记。</p>
 <p>2020.10.10 更新</p>
 <p>很可惜的是，在多次迁移的过程中，本章的图片都丢失了。</p>
