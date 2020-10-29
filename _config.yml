@@ -103,9 +103,10 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: root@39.108.229.166:/root/nginx/GitLibrary/hexo
-  branch: master
+  # type: git
+  # repo: root@39.108.229.166:/root/nginx/GitLibrary/hexo
+  # branch: master
+  type: baidu_url_submitter
 
 # Sitemap
 sitemap:
@@ -201,3 +202,10 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
+
+
+baidu_url_submit:
+  count: 10 ## 提交最新的n个链接
+  host: blog.harumonia.moe ## 百度站长平台中注册的域名
+  token: aesafYLAzNwdRiYd ## 准入秘钥
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
