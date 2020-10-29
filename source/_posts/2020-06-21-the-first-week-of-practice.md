@@ -21,7 +21,7 @@ thumbChoice: default
 thumbDesc:
 thumbSmall:
 thumbStyle: default
-hidden: false
+hidden: true
 ---
 
 ## 工作

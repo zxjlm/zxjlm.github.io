@@ -20,7 +20,11 @@ thumbStyle: default
 hidden: false
 ---
 
-Factory Function for Tuples with Named Fields
+> Factory Function for Tuples with Named Fields
+
+Python 除了大家熟知的，可以直接使用的 list、dictionary、tuple 等容器，还有一些放在 collections 包中的容器，这些容器的泛用性不及普通容器，但是在特殊的场景下，有着超过普通容器的性能与便利性。
+
+本篇就在官方文档的基础上，结合笔者的学习工作经验，于管中窥得 nametuple 之一斑。
 
 <!-- more -->
 

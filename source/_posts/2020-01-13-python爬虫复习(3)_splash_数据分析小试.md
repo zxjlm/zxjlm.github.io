@@ -1,7 +1,7 @@
 ---
 layout: post
 cid: 202
-title: python爬虫复习(3) splash &amp;&amp; 数据分析小试
+title: python爬虫复习(3) splash && 数据分析小试
 slug: 202
 date: 2020/01/13 22:19:59
 updated: 2020/01/13 22:19:59
@@ -9,7 +9,7 @@ status: publish
 author: harumonia
 categories:
   - 源流清泉
-  - python
+  - Python
 tags:
   - spider
 customSummary:
