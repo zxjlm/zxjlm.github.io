@@ -502,6 +502,7 @@ Q 1 2</code></pre>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> d[<span class="number">4</span>][<span class="number">2</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">-1</span>&#125;,&#123;<span class="number">-1</span>,<span class="number">0</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt; visited;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x&gt;=<span class="number">0</span> &amp;&amp; y&gt;=<span class="number">0</span> &amp;&amp; y&lt;n &amp;&amp; x&lt;m)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">recursion</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board,<span class="keyword">int</span> startx,<span class="keyword">int</span> starty,<span class="keyword">const</span> <span class="built_in">string</span>&amp; word,<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(index==word.size()<span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> word[index]==board[startx][starty];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(board[startx][starty]==word[index])&#123;</span><br><span class="line">        visited[startx][starty] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> newx = startx+d[i][<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">int</span> newy = starty+d[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(judge(newx,newy) &amp;&amp; !visited[newx][newy] &amp;&amp; recursion(board,newx,newy,word,index+<span class="number">1</span>) )&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        visited[startx][starty] = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">exist</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;&gt;&amp; board, <span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">    m=board.size();</span><br><span class="line">    n=board[<span class="number">0</span>].size();</span><br><span class="line"></span><br><span class="line">    visited = <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;&gt;(m,<span class="built_in">vector</span>&lt;<span class="keyword">bool</span>&gt;(n,<span class="literal">false</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//    if(my==0 ) return false;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(recursion(board,i,j,word,<span class="number">0</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -526,6 +527,7 @@ Q 1 2</code></pre>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">      <span class="function"><span class="keyword">int</span> <span class="title">backtrack</span><span class="params">(<span class="keyword">int</span> row, <span class="keyword">int</span> hills, <span class="keyword">int</span> next_row, <span class="keyword">int</span> dales, <span class="keyword">int</span> count, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     row: 当前放置皇后的行号</span></span><br><span class="line"><span class="comment">     hills: 主对角线占据情况 [1 = 被占据，0 = 未被占据]</span></span><br><span class="line"><span class="comment">     next_row: 下一行被占据的情况 [1 = 被占据，0 = 未被占据]</span></span><br><span class="line"><span class="comment">     dales: 次对角线占据情况 [1 = 被占据，0 = 未被占据]</span></span><br><span class="line"><span class="comment">     count: 所有可行解的个数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 棋盘所有的列都可放置，</span></span><br><span class="line">    <span class="comment">// 即，按位表示为 n 个 &#x27;1&#x27;</span></span><br><span class="line">    <span class="comment">// bin(cols) = 0b1111 (n = 4), bin(cols) = 0b111 (n = 3)</span></span><br><span class="line">    <span class="comment">// [1 = 可放置]</span></span><br><span class="line">    <span class="keyword">int</span> columns = (<span class="number">1</span> &lt;&lt; n) - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (row == n)   <span class="comment">// 如果已经放置了 n 个皇后</span></span><br><span class="line">      count++;  <span class="comment">// 累加可行解</span></span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 当前行可用的列</span></span><br><span class="line">      <span class="comment">// ! 表示 0 和 1 的含义对于变量 hills, next_row and dales的含义是相反的</span></span><br><span class="line">      <span class="comment">// [1 = 未被占据，0 = 被占据]</span></span><br><span class="line">      <span class="keyword">int</span> free_columns = columns &amp; ~(hills | next_row | dales);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 找到可以放置下一个皇后的列</span></span><br><span class="line">      <span class="keyword">while</span> (free_columns != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// free_columns 的第一个为 &#x27;1&#x27; 的位</span></span><br><span class="line">        <span class="comment">// 在该列我们放置当前皇后</span></span><br><span class="line">        <span class="keyword">int</span> curr_column = - free_columns &amp; free_columns;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 放置皇后</span></span><br><span class="line">        <span class="comment">// 并且排除对应的列</span></span><br><span class="line">        free_columns ^= curr_column;</span><br><span class="line"></span><br><span class="line">        count = backtrack(row + <span class="number">1</span>,</span><br><span class="line">                (hills | curr_column) &lt;&lt; <span class="number">1</span>,</span><br><span class="line">                next_row | curr_column,</span><br><span class="line">                (dales | curr_column) &gt;&gt; <span class="number">1</span>,</span><br><span class="line">                count, n);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">totalNQueens</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> backtrack(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, n);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -1125,6 +1127,7 @@ millisec:间隔时间（ms）</code></pre>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这一题在详细地了解了全排列的字典序法之后完全就称不上是一道<em>中等</em>题了，但是问题的关键就在很多人并不知道全排列的字典序法的实现机制。还是突出了平时积累和基础的重要性。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2085,7 +2088,7 @@ __exit__() *</code></pre>
   </entry>
   <entry>
     <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
-    <url>/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3&amp;quot;%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98&amp;quot;%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</url>
+    <url>/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</url>
     <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
 <p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
 <a id="more"></a>
@@ -2337,6 +2340,7 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">searchRange</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> size = nums.size(), l = <span class="number">0</span>, r = size<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">if</span>(l == r &amp;&amp; nums[<span class="number">0</span>]==target)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid] == target)&#123;</span><br><span class="line">                <span class="keyword">int</span> left=mid,right=mid;</span><br><span class="line">                <span class="keyword">while</span>(left - <span class="number">1</span> &gt;= <span class="number">0</span> &amp;&amp; nums[left<span class="number">-1</span>] == target)&#123;</span><br><span class="line">                    left--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">while</span>(right + <span class="number">1</span> &lt; size &amp;&amp; nums[right+<span class="number">1</span>] == target)&#123;</span><br><span class="line">                    right++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;left,right&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid]&gt;target)&#123;</span><br><span class="line">                r = mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                l = mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;<span class="number">-1</span>,<span class="number">-1</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2358,6 +2362,7 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>待补充，先睡会儿</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2389,6 +2394,7 @@ Name: Fare, dtype: float64</code></pre>
 <p>其中的取舍请自行判断。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2433,6 +2439,52 @@ Name: Fare, dtype: float64</code></pre>
 </ul>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>鲨雕青年欢乐多</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>No.56 合并区间:双迭代器 &amp;&amp; 国庆快乐</title>
+    <url>/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/merge-intervals/">No.56 合并区间</a></p>
+<p><strong>难度：中等</strong></p>
+<p>给出一个区间的集合，请合并所有重叠的区间。</p>
+<a id="more"></a>
+
+<pre><code>示例 1:
+
+输入: intervals = [[1,3],[2,6],[8,10],[15,18]]
+输出: [[1,6],[8,10],[15,18]]
+解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
+
+示例  2:
+
+输入: intervals = [[1,4],[4,5]]
+输出: [[1,5]]
+解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。</code></pre>
+<h2 id="国庆快乐"><a href="#国庆快乐" class="headerlink" title="国庆快乐~"></a>国庆快乐~</h2><p>我有什么办法，国庆节又没人一起出去玩，只能做做题目杀杀时间这个样子。(碎碎念)</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为实在是闲的，所以就有了这个效率奇低的代码（能这么慢也是一种本事好不好）。</p>
+<p>那么问题来了，凭什么他的效率能这么低呢？</p>
+<p>答案是 <strong>使用了 erase()</strong></p>
+<p>在看到这个题目的时候，我就有了使用双迭代器解决这个问题的构想。(双迭代器的解法堪称炫技,没有一定的基础不要轻易尝试。)<br>为什么不直接使用索引呢？因为使用索引必然会引入新的 vector 来装载。而使用双迭代器，一切都在原始的 vector 上完成，这几乎完全避免了开辟新空间所造成的消耗。<br>理论上是这样，不过在实际使用 erase 的时候，我发现似乎每一次 erase 都会造成数组的重排。这和我想象中的似乎不太一样，但是仔细一想，确实如此，这就是 <strong>数组</strong> 和 <strong>链表</strong> 的区别所在。<br>于是，引出这一题最佳的解法，链表+双迭代器解法。但是由于 LeetCode 给出的本身就是 vector，所以使用链表还是需要额外开辟空间，这岂不是与初衷背道而驰了（%&gt;_&lt;%）。</p>
+<p>所以就这样咯，下面的代码看个乐呵就行了，可以作为链表法的结构模板。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; intervals)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(intervals.size() == <span class="number">0</span>) <span class="keyword">return</span> intervals;</span><br><span class="line"></span><br><span class="line">        sort(intervals.begin(),intervals.end(),cmp1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">auto</span> j = intervals.begin();</span><br><span class="line">        <span class="keyword">auto</span> i = j++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(j!=intervals.end())&#123;</span><br><span class="line">            <span class="keyword">if</span>((*i)[<span class="number">1</span>] &lt; (*j)[<span class="number">0</span>])&#123;</span><br><span class="line">                i++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>((*i)[<span class="number">1</span>]&lt;(*j)[<span class="number">1</span>]) (*i)[<span class="number">1</span>] = (*j)[<span class="number">1</span>];</span><br><span class="line">                intervals.erase(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> intervals;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>烟花也没看成，国庆的安排了很多，结果又是窝在工作室敲代码= =</li>
+<li>唉</li>
+<li>《攀登者》体验一般般，不过吴京和章子怡的感情戏看得快哭了。。。完美戳中我的痛点。。。</li>
+<li>胡歌天下第一！！！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2495,6 +2547,7 @@ Name: Fare, dtype: float64</code></pre>
 <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1441194081.png?Expires=1602302327&" alt="p2"></p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2552,6 +2605,7 @@ Name: Fare, dtype: float64</code></pre>
 <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2855058512.png?Expires=1602302380&" alt="p1"></p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2587,6 +2641,7 @@ Name: Fare, dtype: float64</code></pre>
 <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3"></p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2627,6 +2682,7 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isNumber</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        s.erase(<span class="number">0</span>,s.find_first_not_of(<span class="string">&quot; &quot;</span>));</span><br><span class="line">        s.erase(s.find_last_not_of(<span class="string">&quot; &quot;</span>) + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = s.size();</span><br><span class="line">        <span class="keyword">bool</span> point_exist = s[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span> ? <span class="literal">false</span> : <span class="literal">true</span> , e_exist = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!(<span class="built_in">isdigit</span>(s[<span class="number">0</span>]) || (s[<span class="number">0</span>] == <span class="string">&#x27;-&#x27;</span> || s[<span class="number">0</span>] == <span class="string">&#x27;+&#x27;</span> &amp;&amp; n &gt; <span class="number">1</span>) || (s[<span class="number">0</span>] == <span class="string">&#x27;.&#x27;</span> &amp;&amp; n &gt;<span class="number">1</span>)) || s == <span class="string">&quot;+.&quot;</span> || s == <span class="string">&quot;-.&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">isdigit</span>(s[i]))</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i] == <span class="string">&#x27;e&#x27;</span>  &amp;&amp; (<span class="built_in">isdigit</span>(s[i<span class="number">-1</span>]) || (s[i<span class="number">-1</span>] == <span class="string">&#x27;.&#x27;</span> &amp;&amp; <span class="built_in">isdigit</span>(s[i<span class="number">-2</span>]))) &amp;&amp; e_exist)&#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">isdigit</span>(s[i+<span class="number">1</span>]))</span><br><span class="line">                    i++;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>((s[i+<span class="number">1</span>] == <span class="string">&#x27;-&#x27;</span> || s[i+<span class="number">1</span>] == <span class="string">&#x27;+&#x27;</span>) &amp;&amp; i &lt;= n<span class="number">-3</span> &amp;&amp; <span class="built_in">isdigit</span>(s[i+<span class="number">2</span>]))</span><br><span class="line">                    i+=<span class="number">2</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                point_exist = <span class="literal">false</span>;</span><br><span class="line">                e_exist = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i] == <span class="string">&#x27;.&#x27;</span> &amp;&amp; point_exist)</span><br><span class="line">                point_exist = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2691,6 +2747,7 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>“汪汪汪”。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2729,6 +2786,7 @@ Name: Fare, dtype: float64</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>又是快要饿死的一天。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2764,6 +2822,7 @@ Name: Fare, dtype: float64</code></pre>
 </ul>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
@@ -2798,6 +2857,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1028368401.png?Expires=1602312573&" alt="72.md.png"></p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2836,6 +2896,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>我一直以为的解脱，到头来不过是懦弱者的逃避。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2866,6 +2927,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>She was still too young to know that life never gives anything for nothing， and that a price is always exacted for what fate bestows。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2895,6 +2957,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>有些话，说出来就好了。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2925,6 +2988,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>呼儿将出换美酒，与尔同销万古愁。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2954,6 +3018,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>时隔一周，再临 LeetCode。<br>这一周干了一件很没有意义的事情，无论从那个方面来说都非常地没有意义。<br>这段经历让我更深刻地认识到一件事情，不是所有的人都值得托付信任。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -2988,6 +3053,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>梦到了老年的 zxj。<br>在一个本应该光怪陆离的世界里，他这样就坐在门前的台阶上，捧着一盏白雾蒸腾的茶，在不知道是夕阳还是朝阳的辉光里，眺望。<br>没有什么鸟语花香，也没有什么秋风萧瑟。渐渐地，一切的背景都在淡化，最终归于虚无。<br>甚至有一瞬间，<br>我感觉，<br>不是我梦到了他，<br>而是，<br>他在追忆我。</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -3053,6 +3119,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>也许吧(⊙o⊙)…</p>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -4227,7 +4294,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>python爬虫复习(4)mitmproxy &amp;&amp; 寒假作业的部分分析</title>
-    <url>/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&amp;amp;&amp;amp;_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</url>
+    <url>/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&amp;&amp;_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>到这里，python 爬虫部分的复习也就告一段落了，当然，除了 scrapy，老实说，对于平常爬取几千条这种小打小闹的爬虫，并没有去深入研究 scrapy 的必要（当然，了解还是要了解一下的）。</p>
 <p>之前学习爬虫，因为需求的原因，只学习了网页爬虫。趁着寒假有空，再来看一看 app 爬虫是啥样的吧。</p>
 <a id="more"></a>
@@ -4511,7 +4578,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>redis学习笔记(1)</title>
-    <url>/2020/02/09/2020-02-09-redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)/</url>
+    <url>/2020/02/09/2020-02-09-redis-note-1/</url>
     <content><![CDATA[<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1. 基础"></a>1. 基础</h1><h2 id="1-1-常识"><a href="#1-1-常识" class="headerlink" title="1.1 常识"></a>1.1 常识</h2><p>Redis 是用 C 语言开发的一个开源的高性能键值对（key-value）数据库。它通过提供多种键值数据类型来适应不同场景下的存储需求，目前为止 Redis 支持的键值数据类型如下：</p>
 <ul>
 <li>字符串类型</li>
@@ -4769,7 +4836,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>redis学习笔记(2)</title>
-    <url>/2020/02/12/2020-02-12-redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)/</url>
+    <url>/2020/02/12/2020-02-12-redis-note-2/</url>
     <content><![CDATA[<h1 id="3-进阶功能"><a href="#3-进阶功能" class="headerlink" title="3 进阶功能"></a>3 进阶功能</h1><h2 id="3-1-慢查询"><a href="#3-1-慢查询" class="headerlink" title="3.1 慢查询"></a>3.1 慢查询</h2><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121243-387827.png" alt="image-20200212121241917"></p>
 <a id="more"></a>
 
@@ -5354,7 +5421,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>C1.背叛者</title>
-    <url>/2020/03/07/2020-03-07-C1.%E8%83%8C%E5%8F%9B%E8%80%85/</url>
+    <url>/2020/03/07/2020-03-07-C1-The-Betrayer/</url>
     <content><![CDATA[<p>德黑兰王国西部边境，少年兵团营地，夜。</p>
 <p>道恩静静地躺在床上，脑海中意识不断地翻腾汹涌，他虽然无法从中捕获到任何有用的信息，但是他清楚，这是自己的灵性在面对危机时的主动预警。而他也正是因为无条件地信任这种虚无缥缈的东西，现在才能以一个活人的身份躺在这里。</p>
 <a id="more"></a>
@@ -5457,6 +5524,7 @@ hello alice</code></pre>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(size(height) == <span class="number">1</span> <span class="keyword">or</span> size(height) == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">auto</span> maxPosition = max_element(height.begin(), height.end());</span><br><span class="line">        <span class="keyword">auto</span> left = maxPosition;</span><br><span class="line">        <span class="keyword">auto</span> right = max_element(maxPosition+<span class="number">1</span>,height.end());</span><br><span class="line">        <span class="keyword">while</span>(left != height.begin())&#123;</span><br><span class="line">            left = max_element(height.begin(),maxPosition);</span><br><span class="line">            res+= (distance(left,maxPosition)<span class="number">-1</span>)**left - accumulate(left+<span class="number">1</span>,maxPosition,<span class="number">0</span>);</span><br><span class="line">            maxPosition = left;</span><br><span class="line">        &#125;</span><br><span class="line">        maxPosition = max_element(height.begin(), height.end());</span><br><span class="line">        <span class="keyword">while</span>(right != height.end())&#123;</span><br><span class="line">            res+= (distance(maxPosition,right)<span class="number">-1</span>)**right - accumulate(maxPosition+<span class="number">1</span>,right,<span class="number">0</span>);</span><br><span class="line">            maxPosition = right;</span><br><span class="line">            right = max_element(maxPosition+<span class="number">1</span>,height.end());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
+        <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
   </entry>
@@ -5515,7 +5583,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>自动化的每日打卡工具v1.1</title>
-    <url>/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7v1.1/</url>
+    <url>/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>惯例的前言，这次这个小玩具又是一个来源于生活的东西了。</p>
 <p>上次写了一个基于 linux 的自动打卡机，但是最近又有了新的需求。。。</p>
 <p>其一是学校的每一次表单变更都需要进入项目进行代码级别的修改、测试、部署，实在是太过麻烦。</p>
@@ -5567,72 +5635,8 @@ hello alice</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>个人简历(备用)</title>
-    <url>/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/</url>
-    <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#x6c;&#109;&#x32;&#51;&#x33;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;">&#x7a;&#x78;&#x6a;&#x6c;&#109;&#x32;&#51;&#x33;&#x40;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;</a></p>
-<p>base:南京</p>
-<p>求职意向：后端开发、测试</p>
-<p>个人总结：</p>
-<ul>
-<li>大三在读，参加过多项比赛并且获奖</li>
-<li>拥有良好的沟通和协调能力，善于应变，能够快速适应新环境</li>
-<li>具有团队协作精神，能够承受工作压力，有较高的执行力</li>
-<li>曾在工作室的项目中负责的总体规划设计和业务功能开发</li>
-<li>熟悉 windows、linux、macOS 三端开发</li>
-</ul>
-<p>个人网站：<a href="http://harumonia.top/">Zaxon</a></p>
-<a id="more"></a>
-
-<h1 id="技能树"><a href="#技能树" class="headerlink" title="技能树"></a>技能树</h1><h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><ul>
-<li>熟练:Python(flask\spider 等)、MySQL</li>
-<li>基础:C++、Linux、Java、SQLserver、JavaScript、HTML5、CSS</li>
-<li>了解:Redis、C#</li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>小工具:Photoshop、Premiere 等常用工具</li>
-<li>测试\持续集成:Buddy、Jenkins(学习中)、postman</li>
-<li>git</li>
-<li>Docker</li>
-</ul>
-<h1 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h1><h2 id="药方拍立得-2019-3-2019-8"><a href="#药方拍立得-2019-3-2019-8" class="headerlink" title="药方拍立得(2019.3-2019.8)"></a>药方拍立得(2019.3-2019.8)</h2><ul>
-<li>该项目是 2019 年计算机设计大赛的参赛项目。</li>
-<li>我担任的是该项目的队长，负责完成核心的技术工作（数据处理分析，前后端交互，手机端框架搭建，网页端搭建，服务器部署）。</li>
-<li>涉及技术:Python(Flask、爬虫、数据分析),mui 框架(移动端),layui 框架+echarts+cytoscape(网页端),MySQL,Linux(部署项目)</li>
-</ul>
-<h2 id="中医药数据分析平台-2019-12-2020-4"><a href="#中医药数据分析平台-2019-12-2020-4" class="headerlink" title="中医药数据分析平台(2019.12-2020.4)"></a>中医药数据分析平台(2019.12-2020.4)</h2><ul>
-<li>这个项目是南京中医药大学医学信息工程创新工作室的主要项目之一，主要对中医药相关数据进行同质与异质的网络分析，并 自动形成图表与书面报告(.docx)</li>
-<li>我担任项目经理一职，负责总体的项目进度管理、数据库的设计与开发、后端 api 的设计与开发、算法优化与集成等工作</li>
-<li>涉及技术:Python(Flask、数据分析、自动化测试)、easyui(网页端后台)、Linux(部署及运维)、MySQL</li>
-<li>涉及知识:Apriori、FP—growth、同质\异质网络、假设检验等</li>
-</ul>
-<h1 id="荣誉奖项"><a href="#荣誉奖项" class="headerlink" title="荣誉奖项"></a>荣誉奖项</h1><ul>
-<li>中国大学生计算机设计大赛国赛二等奖(队长) 2019</li>
-<li>蓝桥杯 C/C++程序设计省赛三等奖 2019</li>
-<li>全国中医药人工智能创新创业大赛三等奖 2019</li>
-<li>江苏省人文社科知识竞赛省优秀奖 2018</li>
-<li>南京中医药大学暑期数学建模校赛一等奖(队长) 2018</li>
-</ul>
-<h1 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h1><p>南京中医药大学 人工智能与信息技术学院 2017.9-2021.7</p>
-<ul>
-<li>GPA：专业前 20%</li>
-<li>人民奖学金三等</li>
-<li>课程：C/C++、Java、数据结构与算法、计算机组成原理、操作系统、计算机网络</li>
-</ul>
-<h1 id="社团和组织经历"><a href="#社团和组织经历" class="headerlink" title="社团和组织经历"></a>社团和组织经历</h1><ul>
-<li>敬文图书馆自管协会 外联部 普通成员</li>
-<li>南京中医药大学党委宣传部 技术助理(勤工助学)</li>
-<li>南京中医药大学网络中心 技术助理(勤工助学)</li>
-</ul>
-<h1 id="技能证书"><a href="#技能证书" class="headerlink" title="技能证书"></a>技能证书</h1><p>英语(CET-6)</p>
-]]></content>
-      <categories>
-        <category>摸摸摸</category>
-      </categories>
-  </entry>
-  <entry>
     <title>无题</title>
-    <url>/2020/06/07/2020-06-07-%E6%97%A0%E9%A2%98/</url>
+    <url>/2020/06/07/2020-06-07-no-title-1/</url>
     <content><![CDATA[<p>大三末，学院的生活已经接近尾声，何去何从，这是贯穿整个五月的问题。</p>
 <a id="more"></a>
 
@@ -5684,7 +5688,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>写在实习第一周</title>
-    <url>/2020/06/21/2020-06-21-%E5%86%99%E5%9C%A8%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8/</url>
+    <url>/2020/06/21/2020-06-21-the-first-week-of-practice/</url>
     <content><![CDATA[<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>正式实习已经差不多一周的时间了，爬虫工程师的工作比预想中的要轻松一点，也许因为这只是实习的原因吧，正式工的老哥们倒是回去得挺晚的了。</p>
 <p>老实说，在入职之前，对于同期的实习生是抱有一些幻想的。就像是《半泽直树》中的半泽、渡边等同期生一样，结成同期阵营，互相扶持。不过事实和理想还是有所差距的，同期的 6 月份加入的实习生只有一位，还是个没有多少共同语言的女生，emmmmm，还是老老实实工作吧。</p>
 <p>mentor 挺不错的，就像是在 HR 面中所说的那样，一直不厌其烦地指导我进行学习。mentor 画饼的功力不如涛哥，所以他所描绘的画卷并没有在我心中掀起多少波澜，只是表面上迎合了一下。吃饼吃多了，还是务实胜过务虚好。</p>
@@ -5953,7 +5957,11 @@ hello alice</code></pre>
   <entry>
     <title>Be a better pythonista(4)：nametuple的实际应用</title>
     <url>/2020/10/28/nametuple_act/</url>
-    <content><![CDATA[<p>Factory Function for Tuples with Named Fields</p>
+    <content><![CDATA[<blockquote>
+<p>Factory Function for Tuples with Named Fields</p>
+</blockquote>
+<p>Python 除了大家熟知的，可以直接使用的 list、dictionary、tuple 等容器，还有一些放在 collections 包中的容器，这些容器的泛用性不及普通容器，但是在特殊的场景下，有着超过普通容器的性能与便利性。</p>
+<p>本篇就在官方文档的基础上，结合笔者的学习工作经验，于管中窥得 nametuple 之一斑。</p>
 <a id="more"></a>
 
 <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>笔者在学习工作中使用 nametuple 的场景如下:</p>
@@ -6089,6 +6097,124 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
       <tags>
         <tag>pythonista</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>爬虫监控服务的数据库选择-bitmap应用</title>
+    <url>/2020/10/29/redis-log/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
+<p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
+<p>笔者写爬虫时常用的数据有 MySQL、mongoDB、Redis，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 MySQL、SQLite 。</p>
+<p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
+<a id="more"></a>
+
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>一切问题从需求出发。于是，我将服务的需求和可能出现的问题都列下来，从这些之中去发现解决思路。</p>
+<ol>
+<li>哪些公司完成了？哪些公司未完成？</li>
+<li>第一轮数据获取结束后，还会有第二轮、第三轮等数据更新。</li>
+<li>对爬虫进行时段监控，了解各个时段的爬虫效率如何？（这个时间精度不用很高，一般分析都是每 10 分钟、每半小时这样进行分析）</li>
+<li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
+</ol>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
+<p>a. 冗余数据。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. 纯粹无用数据。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. 第 4 点需求的处理思路。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
+<p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
+<p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
+<p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
+<h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
+<p>思路很清晰明了，实现也十分地简单，几乎为 0 的维护代价。</p>
+<p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
+<p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
+<p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
+<ol>
+<li>使用 json 来扩充数据维度。</li>
+<li>将字段名作为新的维度。</li>
+</ol>
+<p>使用 json 扩充维度会加大后续数据分析的难度，也会拖慢分析效率，因为要分出一部分性能用来展开多维数据。在锁定了数据最多只有三维的情况下，我选择了第二种思路。</p>
+<p>于是新的问题又出现了，选择什么样的数据结构来存储这些数据？</p>
+<p>在<a href="https://blog.harumonia.moe/2020/02/12/2020-02-12-Redis-note-2/">之前 Redis 的学习笔记中</a>，有通过 bitmap 来实现大量统计数据存储的案例。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>至此，路线逐渐成形：</p>
+<ol>
+<li>额外维护近似静态的公司名字典(只在每轮更新结束之后对该字典进行增改，注：不会删除)；将该字典的 index 作为 bitmap 的键，完成情况作为 bitmap 的值。</li>
+<li>将粗粒度的时间作为字段名，每半小时分离出新字段。</li>
+<li>设置一个额外线程，每半小时将本轮次的运行情况合并到以轮次为名称的 bitmap 字段中。</li>
+</ol>
+<p>空间用量：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">400000 &#x2F; 1024 &#x2F; 1024 &#x2F; 8MB * 2 ≈ 0.1MB</span><br></pre></td></tr></table></figure>
+
+<p>当然还会有一些不太容易量化的额外空间消耗(键消耗等)，这些空间消耗也许要比本身数据 0.1MB 要大，不过可以肯定的是，比起 MySQL 要轻量不少。同时，维护的成本很低，调用的性能很高，这一点在实际的使用中也有所体现。</p>
+<p>ps. 需要说明的是，特殊字段的存储不在这个计算中，而是新开了 set，不将特殊字段的空间加入计算，因为本身特殊字段就是暂存字段，在实际作业中，第一轮进行到 34%左右时，特殊字段就已经全部被检测完毕，并且销毁掉了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>MySQL-&gt;关系型数据库的泛用性很高，但是非关系型数据库、NoSql 等的存在也并非没有理由，因地制宜地选取数据库，根据数据库的特性去进行压榨，”让专业的人做专业的事”。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>data store</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人简历(备用)</title>
+    <url>/2020/05/30/resume/</url>
+    <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>base:南京</p>
+<p>求职意向：后端开发、测试</p>
+<p>个人总结：</p>
+<ul>
+<li>大三在读，参加过多项比赛并且获奖</li>
+<li>拥有良好的沟通和协调能力，善于应变，能够快速适应新环境</li>
+<li>具有团队协作精神，能够承受工作压力，有较高的执行力</li>
+<li>曾在工作室的项目中负责的总体规划设计和业务功能开发</li>
+<li>熟悉 windows、linux、macOS 三端开发</li>
+</ul>
+<p>个人网站：<a href="http://harumonia.top/">Zaxon</a></p>
+<a id="more"></a>
+
+<h1 id="技能树"><a href="#技能树" class="headerlink" title="技能树"></a>技能树</h1><h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><ul>
+<li>熟练:Python(flask\spider 等)、MySQL</li>
+<li>基础:C++、Linux、Java、SQLserver、JavaScript、HTML5、CSS</li>
+<li>了解:Redis、C#</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>小工具:Photoshop、Premiere 等常用工具</li>
+<li>测试\持续集成:Buddy、Jenkins(学习中)、postman</li>
+<li>git</li>
+<li>Docker</li>
+</ul>
+<h1 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h1><h2 id="药方拍立得-2019-3-2019-8"><a href="#药方拍立得-2019-3-2019-8" class="headerlink" title="药方拍立得(2019.3-2019.8)"></a>药方拍立得(2019.3-2019.8)</h2><ul>
+<li>该项目是 2019 年计算机设计大赛的参赛项目。</li>
+<li>我担任的是该项目的队长，负责完成核心的技术工作（数据处理分析，前后端交互，手机端框架搭建，网页端搭建，服务器部署）。</li>
+<li>涉及技术:Python(Flask、爬虫、数据分析),mui 框架(移动端),layui 框架+echarts+cytoscape(网页端),MySQL,Linux(部署项目)</li>
+</ul>
+<h2 id="中医药数据分析平台-2019-12-2020-4"><a href="#中医药数据分析平台-2019-12-2020-4" class="headerlink" title="中医药数据分析平台(2019.12-2020.4)"></a>中医药数据分析平台(2019.12-2020.4)</h2><ul>
+<li>这个项目是南京中医药大学医学信息工程创新工作室的主要项目之一，主要对中医药相关数据进行同质与异质的网络分析，并 自动形成图表与书面报告(.docx)</li>
+<li>我担任项目经理一职，负责总体的项目进度管理、数据库的设计与开发、后端 api 的设计与开发、算法优化与集成等工作</li>
+<li>涉及技术:Python(Flask、数据分析、自动化测试)、easyui(网页端后台)、Linux(部署及运维)、MySQL</li>
+<li>涉及知识:Apriori、FP—growth、同质\异质网络、假设检验等</li>
+</ul>
+<h1 id="荣誉奖项"><a href="#荣誉奖项" class="headerlink" title="荣誉奖项"></a>荣誉奖项</h1><ul>
+<li>中国大学生计算机设计大赛国赛二等奖(队长) 2019</li>
+<li>蓝桥杯 C/C++程序设计省赛三等奖 2019</li>
+<li>全国中医药人工智能创新创业大赛三等奖 2019</li>
+<li>江苏省人文社科知识竞赛省优秀奖 2018</li>
+<li>南京中医药大学暑期数学建模校赛一等奖(队长) 2018</li>
+</ul>
+<h1 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h1><p>南京中医药大学 人工智能与信息技术学院 2017.9-2021.7</p>
+<ul>
+<li>GPA：专业前 20%</li>
+<li>人民奖学金三等</li>
+<li>课程：C/C++、Java、数据结构与算法、计算机组成原理、操作系统、计算机网络</li>
+</ul>
+<h1 id="社团和组织经历"><a href="#社团和组织经历" class="headerlink" title="社团和组织经历"></a>社团和组织经历</h1><ul>
+<li>敬文图书馆自管协会 外联部 普通成员</li>
+<li>南京中医药大学党委宣传部 技术助理(勤工助学)</li>
+<li>南京中医药大学网络中心 技术助理(勤工助学)</li>
+</ul>
+<h1 id="技能证书"><a href="#技能证书" class="headerlink" title="技能证书"></a>技能证书</h1><p>英语(CET-6)</p>
+]]></content>
+      <categories>
+        <category>摸摸摸</category>
+      </categories>
   </entry>
   <entry>
     <title>Programmer摘要</title>
@@ -6432,7 +6558,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -6774,7 +6900,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>操作系统复习(易错题&amp;amp;&amp;amp;概念题及部分解析)</title>
-    <url>/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&amp;amp;&amp;amp;%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</url>
+    <url>/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&amp;&amp;%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</url>
     <content><![CDATA[<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><p>1.单处理机计算机系统中，（A ）是并行操作的。</p>
 <p>A.处理机操作和通道操作是并行的<br>B.程序与程序<br>C.主程序与子程序<br>D.用户程序与操作系统程序</p>
 <pre><code>单处理机系统：只有1个运算器，运行状态最多一个
@@ -7168,8 +7294,8 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
       </tags>
   </entry>
   <entry>
-    <title>python爬虫复习(3) splash &amp;amp;&amp;amp; 数据分析小试</title>
-    <url>/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_&amp;amp;&amp;amp;_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</url>
+    <title>python爬虫复习(3) splash &amp;&amp; 数据分析小试</title>
+    <url>/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</url>
     <content><![CDATA[<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>根据笔者以往的爬虫经验，大部分的爬虫是在静态网页上完成的，爬虫所要做的只不过是提交请求，然后分析返回的页面即可。当然，api 本质上也可以作为静态页面来处理。这意味着只要掌握 requests 就可以完成 60%-80%的爬虫任务。</p>
 <p>这是一个很惊人的占比，这里解释一下，静态页面可能听起来很 low，但是有着以加载速度更快、易于维护为核心的一系列优势，尤其是引入了 ajax 之后，实现了动态加载，通过更加频繁的前后端交互，使得用户的使用更加丝滑流畅。</p>
 <p>但是总有一些网站是静态爬虫无法应付的。它们就是与 js 耦合度较高的，需要 js 进行渲染的页面，与上文所述的情况（前端只接收数据，而不用对数据进行计算层面的处理）不同，这类网站将部分的计算工作交托给前端，牺牲部分的用户体验来实现缓解服务器压力等一系列目的。</p>
@@ -7564,7 +7690,7 @@ memory usage: 726.1+ KB</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>python</category>
+        <category>Python</category>
       </categories>
       <tags>
         <tag>spider</tag>

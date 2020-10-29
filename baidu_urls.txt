@@ -1,10 +1,10 @@
+https://blog.harumonia.moe/2020/10/29/redis-log/
 https://blog.harumonia.moe/2020/10/28/nametuple_act/
 https://blog.harumonia.moe/2020/08/05/geek-contest/
 https://blog.harumonia.moe/2020/07/19/WindowsTerminal-beautify/
-https://blog.harumonia.moe/2020/06/21/2020-06-21-%E5%86%99%E5%9C%A8%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8/
-https://blog.harumonia.moe/2020/06/07/2020-06-07-%E6%97%A0%E9%A2%98/
-https://blog.harumonia.moe/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/
-https://blog.harumonia.moe/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7v1.1/
+https://blog.harumonia.moe/2020/06/21/2020-06-21-the-first-week-of-practice/
+https://blog.harumonia.moe/2020/06/07/2020-06-07-no-title-1/
+https://blog.harumonia.moe/2020/05/30/resume/
+https://blog.harumonia.moe/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7/
 https://blog.harumonia.moe/2020/04/29/2020-04-29-%E9%9B%A8%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E7%88%AC%E8%99%AB+%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/
 https://blog.harumonia.moe/2020/04/04/2020-04-04-(%E6%89%93%E5%8D%A1)%E6%8E%A5%E9%9B%A8%E6%B0%B4/
-https://blog.harumonia.moe/2020/03/07/2020-03-07-C1.%E8%83%8C%E5%8F%9B%E8%80%85/

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.harumonia.moe/2020/10/28/nametuple_act/</loc>
-    <lastmod>2020-10-28</lastmod>
+    <loc>https://blog.harumonia.moe/2020/10/29/redis-log/</loc>
+    <lastmod>2020-10-29</lastmod>
   </url>
   <url>
     <loc>https://blog.harumonia.moe/2020/08/05/geek-contest/</loc>
+    <lastmod>2020-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/2020/10/28/nametuple_act/</loc>
     <lastmod>2020-10-28</lastmod>
   </url>
   <url>
@@ -13,23 +17,23 @@
     <lastmod>2020-07-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/06/21/2020-06-21-%E5%86%99%E5%9C%A8%E5%AE%9E%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8/</loc>
+    <loc>https://blog.harumonia.moe/2020/06/21/2020-06-21-the-first-week-of-practice/</loc>
     <lastmod>2020-07-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/06/07/2020-06-07-%E6%97%A0%E9%A2%98/</loc>
+    <loc>https://blog.harumonia.moe/2020/06/07/2020-06-07-no-title-1/</loc>
     <lastmod>2020-06-07</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/03/07/2020-03-07-C1.%E8%83%8C%E5%8F%9B%E8%80%85/</loc>
+    <loc>https://blog.harumonia.moe/2020/03/07/2020-03-07-C1-The-Betrayer/</loc>
     <lastmod>2020-05-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/05/30/2020-05-30-%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86(%E5%A4%87%E7%94%A8)/</loc>
+    <loc>https://blog.harumonia.moe/2020/05/30/resume/</loc>
     <lastmod>2020-05-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7v1.1/</loc>
+    <loc>https://blog.harumonia.moe/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-05-18</lastmod>
   </url>
   <url>
@@ -53,11 +57,11 @@
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/09/2020-02-09-redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)/</loc>
+    <loc>https://blog.harumonia.moe/2020/02/09/2020-02-09-redis-note-1/</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/12/2020-02-12-redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)/</loc>
+    <loc>https://blog.harumonia.moe/2020/02/12/2020-02-12-redis-note-2/</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
@@ -77,7 +81,7 @@
     <lastmod>2020-02-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&amp;&amp;_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</loc>
+    <loc>https://blog.harumonia.moe/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&&_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</loc>
     <lastmod>2020-01-19</lastmod>
   </url>
   <url>
@@ -85,7 +89,7 @@
     <lastmod>2020-01-18</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_&amp;&amp;_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</loc>
+    <loc>https://blog.harumonia.moe/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</loc>
     <lastmod>2020-01-13</lastmod>
   </url>
   <url>
@@ -117,7 +121,7 @@
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&amp;&amp;%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</loc>
+    <loc>https://blog.harumonia.moe/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&&%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</loc>
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
@@ -217,6 +221,10 @@
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
+    <loc>https://blog.harumonia.moe/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</loc>
+    <lastmod>2019-10-13</lastmod>
+  </url>
+  <url>
     <loc>https://blog.harumonia.moe/2019/10/04/2019-10-04-No.48_%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F_%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
@@ -225,7 +233,7 @@
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3&quot;%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98&quot;%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</loc>
+    <loc>https://blog.harumonia.moe/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</loc>
     <lastmod>2019-09-08</lastmod>
   </url>
   <url>
