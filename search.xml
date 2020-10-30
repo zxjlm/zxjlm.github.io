@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>游戏改变世界 笔记</title>
-    <url>/2018/10/28/2018-10-28-game-change-the-world/</url>
+    <url>/2018-10-28-game-change-the-world.html</url>
     <content><![CDATA[<blockquote>
 <p>现实已经破碎，而我们需要用游戏去修复它。</p>
 </blockquote>
@@ -89,7 +89,7 @@
   </entry>
   <entry>
     <title>VPS上的一些好物</title>
-    <url>/2018/10/28/2018-10-28-sth-good-on-VPS/</url>
+    <url>/2018-10-28-sth-good-on-VPS.html</url>
     <content><![CDATA[<p>主要介绍了在个人服务器上如何一键安装 ss\ssr，Mtproto（telegram）,以及 ssh 突然断开的处理方法(主要是国外服务器容易出现断连的问题)。</p>
 <a id="more"></a>
 
@@ -129,7 +129,7 @@
   </entry>
   <entry>
     <title>图的生成和连通性判断实验</title>
-    <url>/2018/10/31/2018-10-31-%E5%9B%BE%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%A4%E6%96%AD%E5%AE%9E%E9%AA%8C/</url>
+    <url>/2018-10-31-experiment-graph-generate-and-connectedness.html</url>
     <content><![CDATA[<h2 id="这是-2018-10-31-的实验任务"><a href="#这是-2018-10-31-的实验任务" class="headerlink" title="这是 2018-10-31 的实验任务"></a>这是 2018-10-31 的实验任务</h2><p>描述：给定一个无向图，一共 n 个点，m 条边。请编写一个程序实现两种操作： D x y  从原图中删除连接 x，y 节点的边。 Q x y  询问 x，y 节点是否连通</p>
 <h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>第一行两个数 n,m（5&lt;=n&lt;=40000,1&lt;=m&lt;=100000）</p>
 <p>接下来 m 行，每行一对整数  x y （x,y&lt;=n）,表示 x,y 之间有边相连。保证没有重复的边。</p>
@@ -171,7 +171,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器</title>
-    <url>/2018/11/20/2018-11-20-container-generic/</url>
+    <url>/2018-11-20-container-generic.html</url>
     <content><![CDATA[<blockquote>
 <p>在网络上浏览了很多关于 STL 的资料，但是大多都不能令我满意，所以这里以一个初学者的视角来学习一遍 STL</p>
 </blockquote>
@@ -243,7 +243,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>c++实现字典（初步）</title>
-    <url>/2018/11/21/2018-11-21-cpp-dictionary/</url>
+    <url>/2018-11-21-cpp-dictionary.html</url>
     <content><![CDATA[<p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  main.cpp</span></span><br><span class="line"><span class="comment">//  zidian</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by Lion Heart on 2018/11/18.</span></span><br><span class="line"><span class="comment">//  Copyright © 2018 Lion. All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_cn</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_eng</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> count)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; temp_tran;</span><br><span class="line"><span class="built_in">string</span> temp_ENG[<span class="number">3000</span>];</span><br><span class="line"><span class="built_in">string</span> temp_CN[<span class="number">3000</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dictionary</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; dic;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Dictionary()&#123;&#125;;</span><br><span class="line">    ~Dictionary()&#123;&#125;;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert_word</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Batch</span><span class="params">()</span></span>;          <span class="comment">//temp</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">inquire</span><span class="params">()</span></span>;     <span class="comment">//in_batch</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span>;        <span class="comment">//hang</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">menu</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">option1</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">option2</span><span class="params">(<span class="keyword">int</span> opt2)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_eng</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">	<span class="keyword">int</span> count_word = <span class="number">0</span>;</span><br><span class="line">	<span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">&quot;ENG.txt&quot;</span>)</span></span>;</span><br><span class="line">	<span class="keyword">if</span> (!in.is_open())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Error opening file&quot;</span>; <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		in.getline(buffer, <span class="number">100</span>);</span><br><span class="line">		temp_ENG[count_word] = buffer;</span><br><span class="line">		count_word++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cinfstr_cn</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">	<span class="keyword">int</span> count_word = <span class="number">0</span>;</span><br><span class="line">	<span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">&quot;ZH.txt&quot;</span>)</span></span>;</span><br><span class="line">	<span class="keyword">if</span> (!in.is_open())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Error opening file&quot;</span>; <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span> (!in.eof())</span><br><span class="line">	&#123;</span><br><span class="line">		in.getline(buffer, <span class="number">100</span>);</span><br><span class="line">		temp_CN[count_word] = buffer;</span><br><span class="line">		<span class="comment">//cout &lt;&lt; buffer &lt;&lt; endl;</span></span><br><span class="line">		count_word++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="comment">// insert code here...</span></span><br><span class="line">	cinfstr_cn();</span><br><span class="line">	cinfstr_eng();</span><br><span class="line"></span><br><span class="line">    Dictionary dic;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">string</span> flag=<span class="string">&quot;y&quot;</span>;</span><br><span class="line">    <span class="keyword">while</span> (flag==<span class="string">&quot;y&quot;</span>||flag==<span class="string">&quot;Y&quot;</span>) &#123;</span><br><span class="line">        dic.menu();</span><br><span class="line">        dic.option1();</span><br><span class="line"></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>&lt;&lt; <span class="string">&quot;Continue Operation(Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;flag;</span><br><span class="line">		system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::menu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.Creat:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Inquire&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;3.Sort&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;4.Display&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;5.clear&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input your choice:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::option1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> opt1;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;opt1;</span><br><span class="line">    <span class="keyword">int</span> opt2;</span><br><span class="line">    <span class="keyword">switch</span> (opt1) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.One by one.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Batch generation.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;3.Back step.&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input your choice:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt;opt2;</span><br><span class="line">			system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">            option2(opt2);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            inquire();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            sort();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            display();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            clear();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Wrong Input!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::option2</span><span class="params">(<span class="keyword">int</span> opt2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> flag_ina;</span><br><span class="line">    <span class="keyword">switch</span> (opt2) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">do</span>&#123;</span><br><span class="line">                insert_word();</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;Continue to input words?(Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                <span class="built_in">cin</span> &gt;&gt; flag_ina;</span><br><span class="line">            &#125;<span class="keyword">while</span> (flag_ina==<span class="string">&quot;y&quot;</span>||flag_ina==<span class="string">&quot;Y&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            Batch();</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">			<span class="comment">//hahahahahahahahahahahahahahahahahahahahahahaha</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Wrong Input!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::insert_word</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> Eng,Zh_CN;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input English:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; Eng;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Please input paraphrase(Chinese):&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;Zh_CN;</span><br><span class="line">    dic.insert(<span class="built_in">make_pair</span>(Eng, Zh_CN));</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::inquire</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> opt;</span><br><span class="line">    <span class="built_in">string</span> a;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Inquire by English or Chinese?&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;1.English&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;2.Chinese&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt;opt;</span><br><span class="line">    <span class="keyword">if</span> (opt ==<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Plsase the word you want to inquire:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">        <span class="keyword">if</span> (dic.find(a)==dic.end()) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a&lt;&lt;<span class="string">&quot; is not in this dictionary~&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; dic[a]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (opt==<span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Plsase the word you want to inquire:&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">        <span class="keyword">bool</span> flag=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">auto</span> bba=dic.begin();</span><br><span class="line">		<span class="keyword">while</span>(bba!=dic.end())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (bba-&gt;second==a) &#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; bba-&gt;first&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">                flag=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">			++bba;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a&lt;&lt;<span class="string">&quot; is not in this dictionary~&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    system(<span class="string">&quot;cls&quot;</span>);                                  <span class="comment">//aaaaaaaaaa</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::sort</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	test(<span class="number">4</span>);</span><br><span class="line">	Sleep(<span class="number">1000</span>);</span><br><span class="line">    <span class="comment">//hang</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::display</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	system(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;--------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;setiosflags(ios::left)&lt;&lt;setw(<span class="number">14</span>)&lt;&lt; <span class="string">&quot;English&quot;</span>&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">9</span>)&lt;&lt;<span class="string">&quot;Chinese&quot;</span>&lt;&lt;resetiosflags(ios::left)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="comment">//cout &lt;&lt; dic[&quot;a&quot;];</span></span><br><span class="line">	<span class="keyword">auto</span> bba=dic.begin();</span><br><span class="line">	<span class="keyword">while</span>(bba!=dic.end())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">14</span>)&lt;&lt; bba-&gt;first&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(<span class="number">9</span>)&lt;&lt;bba-&gt;second&lt;&lt;resetiosflags(ios::left)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		++bba;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::Batch</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//hang</span></span><br><span class="line">	<span class="keyword">int</span> tim,n;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;---------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Vocabulary will be imported from the file.\n&quot;</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;How many words do you want to add?(&lt;=2999)&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	srand(time(<span class="literal">NULL</span>));</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		tim = rand() % <span class="number">2999</span>;</span><br><span class="line">		dic.insert(<span class="built_in">make_pair</span>(temp_ENG[tim], temp_CN[tim]));</span><br><span class="line">		<span class="comment">//cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;</span></span><br><span class="line">	&#125;</span><br><span class="line">	test(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> count)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;[&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;count;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;#&quot;</span>;</span><br><span class="line">		Sleep(<span class="number">500</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;]&quot;</span>;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_GREEN);</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;		success&quot;</span>&lt;&lt;flush;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Dictionary::clear</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> flag;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">&quot;----------------------------------------------------&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Warnning!!!/n&quot;</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;You will delete all your data in this dic!&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Continnue? (Y/N)&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt;flag;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (flag==<span class="string">&quot;y&quot;</span>||flag==<span class="string">&quot;Y&quot;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		dic.erase(dic.begin(),dic.end());</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">RIZHI</span></span><br><span class="line"><span class="comment">随机生成过程中出现重复可能缺失数据</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -258,7 +258,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>鬼畜的回形数</title>
-    <url>/2018/12/02/2018-12-02-number-of-rounds/</url>
+    <url>/2018-12-02-number-of-rounds.html</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> q[<span class="number">200</span>][<span class="number">200</span>];</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n&gt;&gt;m;</span><br><span class="line">    <span class="comment">/*int **q;</span></span><br><span class="line"><span class="comment">    q=new int*[n];</span></span><br><span class="line"><span class="comment">    for (int i=0; i&lt;n; i++) &#123;</span></span><br><span class="line"><span class="comment">        q[i]=new int[m];</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;m; j++) &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;q[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//cout &lt;&lt; q[0][0]&lt;&lt;endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> right=m<span class="number">-1</span>,left=<span class="number">0</span>,up=<span class="number">0</span>,down=n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=up; i&lt;=down; i++) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[i][left]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        left++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=left; i&lt;=right; i++) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[down][i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        down--;</span><br><span class="line">        <span class="keyword">if</span> (right+<span class="number">1</span>==left||up==down+<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=down; i&gt;=up; i--) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[i][right]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        right--;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=right; i&gt;=left; i--) &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; q[up][i]&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        up++;</span><br><span class="line">        <span class="keyword">if</span> (right+<span class="number">1</span>==left||up==down+<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="comment">// cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;</span></span><br><span class="line">        <span class="comment">//cout &lt;&lt; m/2+2 &lt;&lt; &quot; &quot;&lt;&lt;n/2+2&lt;&lt;endl;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -272,7 +272,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>杂物</title>
-    <url>/2018/12/02/2018-12-02-others/</url>
+    <url>/2018-12-02-others.html</url>
     <content><![CDATA[<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*报时</span></span><br><span class="line"><span class="comment"> #include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;map&gt;</span></span><br><span class="line"><span class="comment">#include &lt;string&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">using namespace std;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">map&lt;int, string&gt; mapA=&#123;&#123;0,&quot;zero&quot;&#125;,&#123; 1, &quot;one&quot;&#125;,&#123; 2,&quot;two&quot;&#125;,&#123;3,&quot;three&quot;&#125;, &#123;4,&quot;four&quot;&#125;, &#123;5,&quot;five&quot;&#125;, &#123;6,&quot;six&quot;&#125;, &#123;7,&quot;seven&quot;&#125;, &#123;8,&quot;eight&quot;&#125;, &#123;9,&quot;nine&quot;&#125;, &#123;10,&quot;ten&quot;&#125;, &#123;11,&quot;eleven&quot;&#125;, &#123;12,&quot;twelve&quot;&#125;, &#123;13,&quot;thirteen&quot;&#125;, &#123;14,&quot;fourteen&quot;&#125;, &#123;15,&quot;fifteen&quot;&#125;, &#123;16,&quot;sixteen&quot;&#125;, &#123;17,&quot;seventeen:&quot;&#125;, &#123;18,&quot;eighteen&quot;&#125;, &#123;19,&quot;nineteen&quot;&#125;, &#123;20,&quot;twenty&quot;&#125;,&#123;30,&quot;thirty&quot;&#125;,&#123;40,&quot;forty&quot;&#125;,&#123;50,&quot;fifty&quot;&#125;&#125;;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">void trans(int num)</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int shiwei,gewei;</span></span><br><span class="line"><span class="comment">    if (num&lt;=20||num%10==0) &#123;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[num];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">    else if (num&gt;20||num%10!=0)</span></span><br><span class="line"><span class="comment">    &#123;</span></span><br><span class="line"><span class="comment">        shiwei=num/10;</span></span><br><span class="line"><span class="comment">        shiwei*=10;</span></span><br><span class="line"><span class="comment">        gewei=num%10;</span></span><br><span class="line"><span class="comment">        cout &lt;&lt; mapA[shiwei]&lt;&lt;&quot; &quot;&lt;&lt;mapA[gewei];</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">int main()</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    int hour,min;</span></span><br><span class="line"><span class="comment">    cin &gt;&gt; hour &gt;&gt; min;</span></span><br><span class="line"><span class="comment">    trans(hour);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot; &quot;;</span></span><br><span class="line"><span class="comment">    trans(min);</span></span><br><span class="line"><span class="comment">    cout &lt;&lt;endl;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -286,7 +286,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>关于Mac Xcode上使用c++读取txt文件</title>
-    <url>/2018/12/15/2018-12-15-read-txt-file-via-cpp-on-Xcode/</url>
+    <url>/2018-12-15-read-txt-file-via-cpp-on-Xcode.html</url>
     <content><![CDATA[<h1 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h1><p>Product -&gt;Scheme -&gt;Edit Scheme-&gt;左边选择 Run 选择-&gt;选择 Option-&gt;在 Working Dictionary 选项里面，打钩 Using cusom working dictionary<br>这样就解决了 Xcode 读取路径的问题</p>
 <h1 id="txt-文件"><a href="#txt-文件" class="headerlink" title="txt 文件"></a>txt 文件</h1><p>一般使用文本编辑创建后默认是 rtf 文件，将 rtf 文件保存为纯文本文件就可以了</p>
 ]]></content>
@@ -297,7 +297,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>蓝桥杯二三事（第一阶段施工完毕）</title>
-    <url>/2018/12/19/2018-12-19-sth-of-blue-bridge/</url>
+    <url>/2018-12-19-sth-of-blue-bridge.html</url>
     <content><![CDATA[<p>这里将会记载做蓝桥杯的题目时的一些感悟以及灵感（还有一些无聊的吐槽啦。</p>
 <a id="more"></a>
 
@@ -331,7 +331,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>我的第一只爬虫= =</title>
-    <url>/2018/12/26/2018-12-26-my-first-spider/</url>
+    <url>/2018-12-26-my-first-spider.html</url>
     <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
 <a id="more"></a>
 
@@ -349,7 +349,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>P站爬虫v2.0</title>
-    <url>/2019/01/06/2019-01-06-pixiv-spider/</url>
+    <url>/2019-01-06-pixiv-spider.html</url>
     <content><![CDATA[<p>经过半个月额折腾，终于完成了 P 站爬虫 v2.0，现在可以根据关注列表来爬取关注对象的图片，唯一要做的只是输入账号密码而已。</p>
 <a id="more"></a>
 
@@ -370,7 +370,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>flask部署的问题及解决</title>
-    <url>/2019/03/11/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
+    <url>/2019-03-11-questions-and-solutions-of-flask-deploy-1.html</url>
     <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
 </a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
 <a id="more"></a>
@@ -442,7 +442,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>N皇后问题</title>
-    <url>/2019/06/11/2019-06-11-NQueen/</url>
+    <url>/2019-06-11-NQueen.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/n-queens/">No.51 N 皇后问题</a></p>
 <p>n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。</p>
 <p><img data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/8-queens.png" alt="question"></p>
@@ -467,7 +467,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>No.79</title>
-    <url>/2019/06/11/2019-06-11-No79/</url>
+    <url>/2019-06-11-No79.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/word-search">No.79 单词搜索</a></p>
 <p>给定一个二维网格和一个单词，找出该单词是否存在于网格中。</p>
 <p>单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。</p>
@@ -488,7 +488,7 @@ Q 1 2</code></pre>
   </entry>
   <entry>
     <title>Python 数据挖掘基础</title>
-    <url>/2019/07/16/2019-07-16-Python-basic-of-DM/</url>
+    <url>/2019-07-16-Python-basic-of-DM.html</url>
     <content><![CDATA[<p>本篇记载了如何在 python 中使用数据挖掘的相关的模块。<br>都是基础级的东西了。</p>
 <pre><code>参考：
     《python数据科学入门》
@@ -585,7 +585,7 @@ stacked : 堆叠形式</code></pre>
   </entry>
   <entry>
     <title>flask 开发心得 part 1</title>
-    <url>/2019/07/16/2019-07-16-flask-experience-part/</url>
+    <url>/2019-07-16-flask-experience-part.html</url>
     <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
 <p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
 <h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
@@ -603,7 +603,7 @@ stacked : 堆叠形式</code></pre>
   </entry>
   <entry>
     <title>担任项目经理的第一周</title>
-    <url>/2019/07/16/2019-07-16-the-first-week-to-be-a-project-manager/</url>
+    <url>/2019-07-16-the-first-week-to-be-a-project-manager.html</url>
     <content><![CDATA[<p>有幸担任了工作室的“中医基础信息管理”项目的项目经理，于此写下第一周的一些心得体会，以作参考。</p>
 <p>先使用 CVS 来打个人生的 tag 吧</p>
 <p><strong>milestone 3.1</strong></p>
@@ -640,7 +640,7 @@ js监听事件</code></pre>
   </entry>
   <entry>
     <title>H5初阶学习笔记</title>
-    <url>/2019/07/18/2019-07-18-H5-note/</url>
+    <url>/2019-07-18-H5-note.html</url>
     <content><![CDATA[<h1 id="新增主体结构元素"><a href="#新增主体结构元素" class="headerlink" title="新增主体结构元素"></a>新增主体结构元素</h1><h2 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h2><table>
 <thead>
 <tr>
@@ -796,7 +796,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>numpy个人整理(初阶)</title>
-    <url>/2019/07/19/2019-07-19-numpy-simple-organization/</url>
+    <url>/2019-07-19-numpy-simple-organization.html</url>
     <content><![CDATA[<p>NumPy 是 Python 语言的一个扩展程序库。支持高阶大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。</p>
 <a id="more"></a>
 
@@ -988,67 +988,8 @@ millisec:间隔时间（ms）</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>起居杂录小纲</title>
-    <url>/2019/07/19/2019-07-19-%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95%E5%B0%8F%E7%BA%B2/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>正经人谁写日记啊？ –《邪不压正》</p>
-</blockquote>
-<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
-<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
-<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
-<p>那么,我为什么要写这样一组日记式的博客呢.</p>
-<p><strong>博客，是用来炫技的地方</strong>。</p>
-<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
-<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
-<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
-<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
-<hr>
-<p>写于 2019 年 07 月 19 日的结句.</p>
-<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>桂苑酌记小纲</title>
-    <url>/2019/07/20/2019-07-20-%E6%A1%82%E8%8B%91%E9%85%8C%E8%AE%B0%E5%B0%8F%E7%BA%B2/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
-</blockquote>
-<p>#题解<br>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
-<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
-<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
-<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
-<p>至于“记”。</p>
-<blockquote>
-<p>记者,书也。 ——《广雅》</p>
-</blockquote>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
-<p>专业书和非专业书。</p>
-<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
-<p>不过，这一节并不准备留给这些“专业书”。</p>
-<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
-<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
-<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
-<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
-<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
-<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>No.31 下一个排列</title>
-    <url>/2019/07/22/2019-07-22-No31-next-permutation/</url>
+    <url>/2019-07-22-No31-next-permutation.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/next-permutation/">No.31 下一个排列</a></p>
 <p>实现获取下一个排列的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。</p>
 <p>如果不存在下一个更大的排列，则将数字重新排列成最小的排列（即升序排列）。</p>
@@ -1085,7 +1026,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>flask部署(2)</title>
-    <url>/2019/07/30/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
+    <url>/2019-07-30-questions-and-solutions-of-flask-deploy-2.html</url>
     <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
 <a id="more"></a>
 
@@ -1122,7 +1063,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>sklearn构造性学习(1)</title>
-    <url>/2019/08/02/2019-08-02-learning-sklearn-via-theory-1/</url>
+    <url>/2019-08-02-learning-sklearn-via-theory-1.html</url>
     <content><![CDATA[<p>构造性学习中，以理论为主，并结合一定的例子</p>
 <p>本篇是机器学习的入门篇，主体的脉络差不多近似于 《数据挖掘导论》 一书</p>
 <a id="more"></a>
@@ -1275,7 +1216,7 @@ millisec:间隔时间（ms）</code></pre>
   </entry>
   <entry>
     <title>sklearn应用性学习(1)</title>
-    <url>/2019/08/04/2019-08-04-learning-sklearn-via-practice-1/</url>
+    <url>/2019-08-04-learning-sklearn-via-practice-1.html</url>
     <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
 <p>本篇主要针对无监督学习进行浅尝。</p>
 <a id="more"></a>
@@ -1348,7 +1289,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>sklearn应用性学习(2)</title>
-    <url>/2019/08/05/2019-08-05-learning-sklearn-via-practice-2/</url>
+    <url>/2019-08-05-learning-sklearn-via-practice-2.html</url>
     <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
 <p>本篇主要针对监督学习进行浅尝。</p>
 <a id="more"></a>
@@ -1384,7 +1325,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>工作室异闻录(1)</title>
-    <url>/2019/08/06/2019-08-06-Anecdote-of-studio/</url>
+    <url>/2019-08-06-Anecdote-of-studio.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>VENI VIDI VICI。 –凯撒</p>
 </blockquote>
@@ -1419,7 +1360,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>Be a better pythonista(1)</title>
-    <url>/2019/08/06/2019-08-06-Be-a-better-pythonista-1/</url>
+    <url>/2019-08-06-Be-a-better-pythonista-1.html</url>
     <content><![CDATA[<p>Be a better pythonista 是新开的一个坑，如其名，根本目的是为了成为一个更棒的 python 开发者。</p>
 <p>如何成为一个 better pythonista？个人认为，是 python 的特性、高级语法还有对 python 形式的编程思维的理解和贯彻，这也是本系列的侧重点。</p>
 <p>Be a better pythonista 计划用前四部分完成对 cookbook 的重读，中间会对一些代码进行修正处理，并且会穿插一些个人的理解。同时，还会加入一些在开发中所遇到的一些事情、写作同时遇到的一些值得分享的东西，以为 dessert。</p>
@@ -1504,7 +1445,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>2019医学信息创新工作室暑期个人总结</title>
-    <url>/2019/08/08/2019-08-08-2019summer-summary/</url>
+    <url>/2019-08-08-2019summer-summary.html</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>探寻不到便猜测，猜测不到便想象。只有走在路上，才能摆脱局限，摆脱执着，让所有的选择、探寻、猜测、想象都生气勃勃。</p>
 <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>自 7 月 1 日而今,39 天.</p>
 <p>我收获了许多,知识\友情,还有更多不可名状的事物.</p>
@@ -1582,7 +1523,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（1）</title>
-    <url>/2019/08/09/2019-08-09-jsjds-travel-notes-of-wuhu-1/</url>
+    <url>/2019-08-09-jsjds-travel-notes-of-wuhu-1.html</url>
     <content><![CDATA[<p>一个很粗糙的作品，莫名其妙的就通过了省赛，然后莫名其妙地就到了国赛。。。算了，就好好享受一下吧，至少是要不 gong 虚 fei 此 chi 行 he，哈哈。</p>
 <a id="more"></a>
 
@@ -1660,7 +1601,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
-    <url>/2019/08/10/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
+    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2.html</url>
     <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
 <p>因为台风过境,大部分的动车班次都被停运.</p>
 <p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
@@ -1697,28 +1638,8 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>scikit-learn 入门建议</title>
-    <url>/2019/08/12/2019-08-12-scikit-learn-suggestion/</url>
-    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
-<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
-<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
-<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
-<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
-<p><a href="https://www.datacamp.com/">datacamp</a></p>
-<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
-<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
-<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
-<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
-<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
-<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-      </categories>
-  </entry>
-  <entry>
     <title>文化苦旅</title>
-    <url>/2019/08/12/2019-08-12-%E6%96%87%E5%8C%96%E8%8B%A6%E6%97%85%EF%BC%88%E7%AC%94%E8%AE%B0%EF%BC%89/</url>
+    <url>/2019-08-12-9787806276983-note.html</url>
     <content><![CDATA[<p>《文化苦旅》这本书在高中时已经读过一次，不过当时终究是阅历尚浅，不少的所谓的体会颇有“为赋新词强说愁”之感。</p>
 <p>2019 年的暑假，正巧颇有闲暇，所以再次翻开此书。</p>
 <a id="more"></a>
@@ -1808,8 +1729,28 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </categories>
   </entry>
   <entry>
+    <title>scikit-learn 入门建议</title>
+    <url>/2019-08-12-scikit-learn-suggestion.html</url>
+    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
+<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
+<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
+<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
+<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
+<p><a href="https://www.datacamp.com/">datacamp</a></p>
+<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
+<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
+<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
+<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
+<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
+<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Be a better pythonista(2)</title>
-    <url>/2019/08/14/2019-08-14-Be-a-better-pythonista-2/</url>
+    <url>/2019-08-14-Be-a-better-pythonista-2.html</url>
     <content><![CDATA[<p>分为迭代器、文件读写、函数式编程三个部分，其中，前二者来源于 cookbook，其中加入了一些个人的理解和补正。函数式编程作为个人的扩充添加进来，主要参考了一些文章和书籍，因为很杂，就不一一列出。</p>
 <a id="more"></a>
 
@@ -1904,7 +1845,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>数据分析拾遗(不定期补充)</title>
-    <url>/2019/08/23/2019-08-23-DA-intro-1/</url>
+    <url>/2019-08-23-DA-intro-1.html</url>
     <content><![CDATA[<p>记录在实际操作过程中遇到遇到的一些有意思的使用法.</p>
 <a id="more"></a>
 
@@ -1954,7 +1895,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
   </entry>
   <entry>
     <title>Be a better pythonista(3)</title>
-    <url>/2019/08/28/2019-08-28-Be_a_better_pythonista-3/</url>
+    <url>/2019-08-28-Be_a_better_pythonista-3.html</url>
     <content><![CDATA[<p>本节主要是函数和类的一些技巧操作.</p>
 <p>当然,函数和类二者任意一个拿出来都是很巨量的篇幅,所以这里就只是选取了在项目中经常用到的一些技巧,并根据个人的实战经验来进行详细的阐述.</p>
 <p>后续可能会进行增改(如果还记得的话</p>
@@ -2040,7 +1981,7 @@ __exit__() *</code></pre>
   </entry>
   <entry>
     <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
-    <url>/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</url>
+    <url>/2019-09-01-Titanic-solution-via-RF.html</url>
     <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
 <p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
 <a id="more"></a>
@@ -2210,7 +2151,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>浅谈特征工程 Feature  Engineering</title>
-    <url>/2019/09/08/2019-09-08-%E6%B5%85%E8%B0%88%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B_Feature__Engineering/</url>
+    <url>/2019-09-08-Feature-Engineering.html</url>
     <content><![CDATA[<p>至此,看过了很多的机器学习的文章,发现大多是重于算法的讲解,但是机器学习是 <em>对数据集进行算法处理</em> ,数据集的重要地位不言而喻.<br>个人认为,优质的数据集可以极大地提高模型精度和运算效率.一个很好的例子就是 sklearn 的 dataset,处理起来顺滑无比,但是在对上一篇文章所讲的泰坦尼克数据集进行机器学习时,如果也像在鸢尾花集上那样,结果自然是惨不忍睹.<br>所以这里单开一篇讲一下特征工程.</p>
 <p>参考资料:<br>kaggle-sina\Anisotropic<br>$Feature\ Engineering$<br>Tsai</p>
 <p>ps.<br>基础的一些处理可以直接使用 numpy+pandas,灵活小巧.<br>不过如果涉及到一些统计方法,那么建议使用 sklearn 封装好的类.</p>
@@ -2276,7 +2217,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.34 在排序数组中查找元素的第一个和最后一个位置:二分法</title>
-    <url>/2019/09/26/2019-09-26-No.34_%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE_%E4%BA%8C%E5%88%86%E6%B3%95/</url>
+    <url>/2019-09-26-find-first-and-last-position-of-element-in-sorted-array.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/">No.34 在排序数组中查找元素的第一个和最后一个位置</a></p>
 <p>给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。</p>
 <p>你的算法时间复杂度必须是  O(log n) 级别。</p>
@@ -2303,7 +2244,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.39\40\216\377 组合总和1-4</title>
-    <url>/2019/09/27/2019-09-27-No.39_40_216_377_%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C1-4/</url>
+    <url>/2019-09-27-summary-of-combination-1-4.html</url>
     <content><![CDATA[<p>待补充</p>
 <a id="more"></a>
 
@@ -2325,7 +2266,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.49 字母异位词分组:哈希表</title>
-    <url>/2019/09/30/2019-09-30-No.49_%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84_%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <url>/2019-09-30-group-anagrams.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/group-anagrams/">No.49 字母异位词分组</a></p>
 <p><strong>难度:中等</strong></p>
 <p>给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。</p>
@@ -2357,52 +2298,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.56 合并区间:双迭代器 &amp;&amp; 国庆快乐</title>
-    <url>/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_&amp;amp;&amp;amp;_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/merge-intervals/">No.56 合并区间</a></p>
-<p><strong>难度：中等</strong></p>
-<p>给出一个区间的集合，请合并所有重叠的区间。</p>
-<a id="more"></a>
-
-<pre><code>示例 1:
-
-输入: intervals = [[1,3],[2,6],[8,10],[15,18]]
-输出: [[1,6],[8,10],[15,18]]
-解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
-
-示例  2:
-
-输入: intervals = [[1,4],[4,5]]
-输出: [[1,5]]
-解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。</code></pre>
-<h2 id="国庆快乐"><a href="#国庆快乐" class="headerlink" title="国庆快乐~"></a>国庆快乐~</h2><p>我有什么办法，国庆节又没人一起出去玩，只能做做题目杀杀时间这个样子。(碎碎念)</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为实在是闲的，所以就有了这个效率奇低的代码（能这么慢也是一种本事好不好）。</p>
-<p>那么问题来了，凭什么他的效率能这么低呢？</p>
-<p>答案是 <strong>使用了 erase()</strong></p>
-<p>在看到这个题目的时候，我就有了使用双迭代器解决这个问题的构想。(双迭代器的解法堪称炫技,没有一定的基础不要轻易尝试。)<br>为什么不直接使用索引呢？因为使用索引必然会引入新的 vector 来装载。而使用双迭代器，一切都在原始的 vector 上完成，这几乎完全避免了开辟新空间所造成的消耗。<br>理论上是这样，不过在实际使用 erase 的时候，我发现似乎每一次 erase 都会造成数组的重排。这和我想象中的似乎不太一样，但是仔细一想，确实如此，这就是 <strong>数组</strong> 和 <strong>链表</strong> 的区别所在。<br>于是，引出这一题最佳的解法，链表+双迭代器解法。但是由于 LeetCode 给出的本身就是 vector，所以使用链表还是需要额外开辟空间，这岂不是与初衷背道而驰了（%&gt;_&lt;%）。</p>
-<p>所以就这样咯，下面的代码看个乐呵就行了，可以作为链表法的结构模板。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">merge</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; intervals)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(intervals.size() == <span class="number">0</span>) <span class="keyword">return</span> intervals;</span><br><span class="line"></span><br><span class="line">        sort(intervals.begin(),intervals.end(),cmp1);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">auto</span> j = intervals.begin();</span><br><span class="line">        <span class="keyword">auto</span> i = j++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(j!=intervals.end())&#123;</span><br><span class="line">            <span class="keyword">if</span>((*i)[<span class="number">1</span>] &lt; (*j)[<span class="number">0</span>])&#123;</span><br><span class="line">                i++;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>((*i)[<span class="number">1</span>]&lt;(*j)[<span class="number">1</span>]) (*i)[<span class="number">1</span>] = (*j)[<span class="number">1</span>];</span><br><span class="line">                intervals.erase(j);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> intervals;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>烟花也没看成，国庆的安排了很多，结果又是窝在工作室敲代码= =</li>
-<li>唉</li>
-<li>《攀登者》体验一般般，不过吴京和章子怡的感情戏看得快哭了。。。完美戳中我的痛点。。。</li>
-<li>胡歌天下第一！！！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
-        <tag>鲨雕青年欢乐多</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No.56 合并区间:双迭代器 &amp;&amp; 国庆快乐</title>
-    <url>/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</url>
+    <url>/2019-10-01-merge-intervals.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/merge-intervals/">No.56 合并区间</a></p>
 <p><strong>难度：中等</strong></p>
 <p>给出一个区间的集合，请合并所有重叠的区间。</p>
@@ -2447,7 +2343,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.48 旋转图像:数学</title>
-    <url>/2019/10/04/2019-10-04-No.48_%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F_%E6%95%B0%E5%AD%A6/</url>
+    <url>/2019-10-04-rotate-image.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/rotate-image/">No.48 旋转图像</a></p>
 <p>给定一个 n × n 的二维矩阵表示一个图像。</p>
 <p>将图像顺时针旋转 90 度。</p>
@@ -2510,7 +2406,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>周赛157</title>
-    <url>/2019/10/06/2019-10-06-%E5%91%A8%E8%B5%9B157/</url>
+    <url>/2019-10-06-week-157.html</url>
     <content><![CDATA[<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1437205549.png?Expires=1602302340&" alt="res"></p>
 <p>只做了三题。。。<br>前两题使用哈希表解，不过第一题应该有更简单的数学解法，不过当时时间紧迫，就没有多去考虑。<br>第三题是深搜。。。好久没写深搜了，卡了好久，不过还好最后做出来了= =</p>
 <h2 id="玩筹码"><a href="#玩筹码" class="headerlink" title="玩筹码"></a>玩筹码</h2><blockquote>
@@ -2568,7 +2464,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.64 最小路径和:动态规划</title>
-    <url>/2019/10/10/2019-10-10-No.64_%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    <url>/2019-10-10-minimum-path-sum.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
 <p>给定一个包含非负整数的 m x n  网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
 <a id="more"></a>
@@ -2604,7 +2500,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.65 有效数字</title>
-    <url>/2019/10/12/2019-10-12-No.65_%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97_%E7%83%A6/</url>
+    <url>/2019-10-12-valid-number.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/valid-number/">No.65 有效数字</a></p>
 <p><strong>难度：困难</strong></p>
 <p>验证给定的字符串是否可以解释为十进制数字。</p>
@@ -2644,7 +2540,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.68 文本左右对齐:字符串题目总结(1)</title>
-    <url>/2019/10/13/2019-10-13-No.68_%E6%96%87%E6%9C%AC%E5%B7%A6%E5%8F%B3%E5%AF%B9%E9%BD%90_%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93(1)/</url>
+    <url>/2019-10-13-text-justification.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/text-justification/">No.68 文本左右对齐</a></p>
 <p><strong>难度：困难</strong></p>
 <p>给定一个单词数组和一个长度  maxWidth，重新排版单词，使其成为每行恰好有  maxWidth  个字符，且左右两端对齐的文本。</p>
@@ -2709,7 +2605,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>周赛158</title>
-    <url>/2019/10/13/2019-10-13-%E5%91%A8%E8%B5%9B158/</url>
+    <url>/2019-10-13-week-158.html</url>
     <content><![CDATA[<h2 id="分割平衡字符串"><a href="#分割平衡字符串" class="headerlink" title="分割平衡字符串"></a>分割平衡字符串</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/">传送门</a></p>
 <blockquote>
 <p>在一个「平衡字符串」中，’L’ 和 ‘R’ 字符的数量是相同的。<br>给出一个平衡字符串 s，请你将它分割成尽可能多的平衡字符串。<br>返回可以通过分割得到的平衡字符串的最大数量。</p>
@@ -2744,7 +2640,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.71 简化路径:shashasha</title>
-    <url>/2019/10/14/2019-10-14-No.71_%E7%AE%80%E5%8C%96%E8%B7%AF%E5%BE%84_shashasha/</url>
+    <url>/2019-10-14-simplify-path.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
 <p>以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。</p>
 <p>在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..）  表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径</p>
@@ -2785,7 +2681,7 @@ Name: Fare, dtype: float64</code></pre>
   </entry>
   <entry>
     <title>No.72 编辑距离:动态规划</title>
-    <url>/2019/10/17/2019-10-17-No.72_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    <url>/2019-10-17-edit-distance.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/edit-distance/">No.72 编辑距离</a></p>
 <p><strong>难度：困难</strong></p>
 <p>给你两个单词  word1 和  word2，请你计算出将  word1  转换成  word2 所使用的最少操作数  。</p>
@@ -2815,7 +2711,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>No. 80 删除排序数组中的重复项 II</title>
-    <url>/2019/10/23/2019-10-23-No._80_%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9_II/</url>
+    <url>/2019-10-23-remove-duplicates-from-sorted-array-ii.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/">No.80 删除排序数组中的重复项 II</a></p>
 <p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素最多出现两次，返回移除后数组的新长度。</p>
 <p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
@@ -2854,7 +2750,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>No.84 柱状图中最大的矩形:多解法</title>
-    <url>/2019/10/24/2019-10-24-No.84_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2_%E5%A4%9A%E8%A7%A3%E6%B3%95/</url>
+    <url>/2019-10-24-largest-rectangle-in-histogram.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/">No.84 柱状图中最大的矩形</a></p>
 <p><strong>难度：困难</strong></p>
 <p>给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
@@ -2885,7 +2781,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>No.85 最大矩形</title>
-    <url>/2019/10/25/2019-10-25-No.85_%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/</url>
+    <url>/2019-10-25-maximal-rectangle.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/maximal-rectangle/">No.85 最大矩形</a></p>
 <p><strong>难度：困难</strong></p>
 <p>给定一个仅包含  0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。</p>
@@ -2915,7 +2811,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>No.77 组合:回溯法</title>
-    <url>/2019/10/26/2019-10-26-No.77_%E7%BB%84%E5%90%88_%E5%9B%9E%E6%BA%AF%E6%B3%95/</url>
+    <url>/2019-10-26-combinations.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/combinations/">No.77 组合</a></p>
 <p>给定两个整数 n 和 k，返回 1 … n 中所有可能的 k 个数的组合。</p>
 <a id="more"></a>
@@ -2946,7 +2842,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>N0.151 翻转字符串里的单词:多解法</title>
-    <url>/2019/11/04/2019-11-04-N0.151_%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D_%E5%A4%9A%E8%A7%A3%E6%B3%95/</url>
+    <url>/2019-11-04-reverse-words-in-a-string.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/reverse-words-in-a-string/">N0.151 翻转字符串里的单词</a></p>
 <p>给定一个字符串，逐个翻转字符串中的每个单词。</p>
 <a id="more"></a>
@@ -2976,7 +2872,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>136-137 出现的数字问题:位运算</title>
-    <url>/2019/11/06/2019-11-06-136-137_%E5%87%BA%E7%8E%B0%E7%9A%84%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98_%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+    <url>/2019-11-06-single-number.html</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/single-number/">No. 136 出现的数字问题(简单)</a></p>
 <p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p>
 <p>说明：<br>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p>
@@ -3011,7 +2907,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>关于前后端分离</title>
-    <url>/2019/11/09/2019-11-09-%E5%85%B3%E4%BA%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</url>
+    <url>/2019-11-09-discussion-about-frontend-backend-separation.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在对 18 级的同学们进行培训，正好讲到 jinja2 这一块，在进行了仔细的梳理之后，忽然发现 jinja2 这种渲染模式与国内目前的潮流–前后端分离所不符合。<br>所以作为一个负责的老学长，我写下这一篇，来给 18 级的学弟学妹们介绍、分析一下，免得入了歧途。</p>
 <h2 id="传统的开发模式"><a href="#传统的开发模式" class="headerlink" title="传统的开发模式"></a>传统的开发模式</h2><p>前端写好静态的 HTML 页面交付给后端开发。静态页面可以本地开发，也无需考虑业务逻辑只需要实现 View 即可。<br>后端使用模板引擎去套模板，当年使用最广泛的就是 jsp，freemarker 等等，同时内嵌一些后端提供的模板变量和一些逻辑操作。<br>然后前后端集成对接，遇到问题，前台返工，后台返工。<br>然后在集成，直至集成成功。</p>
 <h2 id="前后端分离的开发模式"><a href="#前后端分离的开发模式" class="headerlink" title="前后端分离的开发模式"></a>前后端分离的开发模式</h2><p>前后端分离并不只是开发模式，而是 web 应用的一种架构模式。在开发阶段，前后端工程师约定好数据交互接口，实现并行开发和测试；在运行阶段前后端分离模式需要对 web 应用进行分离部署，前后端之前使用 HTTP 或者其他协议进行交互请求。</p>
@@ -3041,7 +2937,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>周赛162</title>
-    <url>/2019/11/10/2019-11-10-%E5%91%A8%E8%B5%9B162/</url>
+    <url>/2019-11-10-week-162.html</url>
     <content><![CDATA[<a id="more"></a>
 
 <h2 id="题目-amp-amp-分析"><a href="#题目-amp-amp-分析" class="headerlink" title="题目 &amp;&amp; 分析"></a>题目 &amp;&amp; 分析</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。<br>另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和 ci 分别表示指定的行和列（从 0 开始编号）。<br>你需要将每对 [ri, ci] 指定的行和列上的所有单元格的值加 1。<br>请你在执行完所有 indices 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。</p>
@@ -3077,7 +2973,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(一)</title>
-    <url>/2019/11/17/2019-11-17-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%B8%80)/</url>
+    <url>/2019-11-17-Course-Design-of-Java-QS-1.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ul>
 <li>系统环境: macOS Catalina 10.15</li>
 <li>java 版本: JDK12</li>
@@ -3166,7 +3062,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(二)</title>
-    <url>/2019/11/21/2019-11-21-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%BA%8C)/</url>
+    <url>/2019-11-21-Course-Design-of-Java-QS-2.html</url>
     <content><![CDATA[<h2 id="windowbuilder-安装和使用"><a href="#windowbuilder-安装和使用" class="headerlink" title="windowbuilder 安装和使用"></a>windowbuilder 安装和使用</h2><p>类比于在 VS stdio 上开发 c#,eclipse 有对应的 GUI 开发工具,也就是 windowbuilder.<br>当然同类型的工具也有 NetBeans 等.编程虽然有趣,但是本身是一件很麻烦的事情,所以我就只选择了普遍评价较高的 windowbuilder 作尝试.<br><a href="https://download.eclipse.org/windowbuilder/latest/">windowbuilder 主页</a></p>
 <p>S1:安装插件(install new software)(这里注意活用 help 功能)<br>S2:将 <a href="https://download.eclipse.org/windowbuilder/latest/">https://download.eclipse.org/windowbuilder/latest/</a> 复制到 work with 一栏中<br>S3:一路点击 next 全选安装即可</p>
 <p>安装完毕会提示重启,重启完成,在 new-&gt;other-&gt;windowbuilder-&gt;swing Designer-&gt;Application Window 中创建项目.</p>
@@ -3221,7 +3117,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(三)</title>
-    <url>/2019/11/24/2019-11-24-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%B8%89)/</url>
+    <url>/2019-11-24-Course-Design-of-Java-QS-3.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次进行 Java 的大作业,虽然是一拖三,不过还是准备做得漂亮一点.Java 还是很有趣的,并且可能以后工作室项目能用得到.</p>
 <p>嗯,如果做得好了,就请自己去搓一顿!</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
@@ -3283,7 +3179,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>图像处理课堂习题整理</title>
-    <url>/2019/11/25/2019-11-25-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E6%95%B4%E7%90%86/</url>
+    <url>/2019-11-25-Image-Processing-Review.html</url>
     <content><![CDATA[<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg"></p>
 <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg"></p>
 ]]></content>
@@ -3297,7 +3193,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>操作系统一轮复习整理(文档部分)</title>
-    <url>/2019/11/30/2019-11-30-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%80%E8%BD%AE%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86(%E6%96%87%E6%A1%A3%E9%83%A8%E5%88%86)/</url>
+    <url>/2019-11-30-some-doc-of-OS-review.html</url>
     <content><![CDATA[<h1 id="概念集-重在概念的对比分析"><a href="#概念集-重在概念的对比分析" class="headerlink" title="概念集(重在概念的对比分析)"></a>概念集(重在概念的对比分析)</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><p>操作系统是一组能有效地组织和管理计算机硬件和软件资源，合理地对各类作业进行调度，以及方便用户使用的程序的集合。</p>
 <h3 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h3><p>允许多个用户同时通过自己的终端，以交互方式使用计算机，共享主机中的资源。</p>
 <h3 id="并行与并发"><a href="#并行与并发" class="headerlink" title="并行与并发"></a>并行与并发</h3><p>并行指两个或多个事件在 <strong>同一时刻</strong> 发生<br>并发指两个或多个事件在 <strong>同一时间间隔内</strong> 发生。</p>
@@ -3420,8 +3316,132 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>软件开发本质论 笔记</title>
+    <url>/2019-12-14-The-Nature-of-Software-Development-note.html</url>
+    <content><![CDATA[<p>[美]Ron Jeffries</p>
+<h2 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h2><p>80/20 法则:每个人想要的功能特性可能都不相同,但是没有人想要所有的功能特性.</p>
+<p>首先推出能够产生价值的功能特性.</p>
+<p>引导团队构建不仅对我们有意义,同时对用户也有意义的特性,即, <strong>最小可市场化功能特性</strong><br>与最小可市场化功能特性相比,在更细的粒度上提供商业方向更能使我们受益.</p>
+<p>价值的最大化在于频繁交付小的\以价值为中心的功能特性.</p>
+<a id="more"></a>
+
+<h3 id="价值是什么"><a href="#价值是什么" class="headerlink" title="价值是什么"></a>价值是什么</h3><p>简单地说,价值就是”我们想要的东西”.<br>所以,在不同的情境下,价值的侧重不同.</p>
+<h3 id="如何衡量价值"><a href="#如何衡量价值" class="headerlink" title="如何衡量价值"></a>如何衡量价值</h3><p>价值的衡量具有一定的主观性,纯粹以数据衡量价值是不可取的.</p>
+<ol>
+<li>我们知道的并非真正的数据</li>
+<li>大的差别很重要,小的差别则并不重要</li>
+<li>不同类型的价值不具备可比性</li>
+</ol>
+<p>你的想法? &lt;==&gt; 数据?<br>团队协商,达成共识?</p>
+<blockquote>
+<p>Ron 认为,通过数值来表示价值可能会是我们滑入深渊.因为数值往往将多个衡量指标无序地混杂在一起.<br>同时,他指出 <strong>大多数与金钱相关的衡量指标在时间上都落后</strong> .</p>
+</blockquote>
+<p><em>所有的衡量指标的真正作用都是帮助产品推动人\项目干系人\以及团队成员理解什么是真正的价值.</em></p>
+<h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><p>传统软件开发:分析-设计-编码-测试<br>根据功能特性开发:更加地灵活,更加地高效</p>
+<blockquote>
+<p>这有点类似于敏捷开发,不过以前跟某人交流的时候,他指出国内大部分的公司目前所谓的敏捷开发都只是有形而无实.</p>
+</blockquote>
+<h3 id="组建强大的团队"><a href="#组建强大的团队" class="headerlink" title="组建强大的团队"></a>组建强大的团队</h3><p><strong>确保其团队成员知道要做什么,然后让他们自己去搞清楚怎么做</strong></p>
+<ul>
+<li>目的来源于具体的业务:填鸭式地直接告知解决方法,而不是通过主动思考,整个团队将需要更长的时间获得明确的目标感.</li>
+<li>自主能够给整个团队带来责任感</li>
+<li>专精源自迭代过程</li>
+</ul>
+<p><strong>一言以蔽之,在自主的专精团队中,每个人都清楚团队的目的.</strong></p>
+<blockquote>
+<p>团队成员的能力波动值太大的话,是灾难性的.</p>
+</blockquote>
+<h3 id="自然开发的管理之道"><a href="#自然开发的管理之道" class="headerlink" title="自然开发的管理之道"></a>自然开发的管理之道</h3><p>跨职能团队拥有交付软件的每一个增量版本所需的全部技术与能力,团队成员能够自己进行测试,自己编写文档,所有与软件开发直接相关的事情都可以有他们去做.越是接近这样的理想状态,所需的协作配合就越少.</p>
+<p>五大管理要素:</p>
+<ul>
+<li>计划</li>
+<li>组织</li>
+<li>人员配备</li>
+<li>领导</li>
+<li>控制</li>
+</ul>
+<p>制定计划:<br>无论是长期计划还是短期计划,核心都是从高价值的功能特性到低价值的功能特性.<br>管理人员要随时关注计划的进展,同时,高层计划者和管理者要十分清楚项目有哪些功能特性,同时要求产品推动人通过演示实际可用的软件来展现这些功能特性.<br><strong>计划的根本目的是为了取得更好地结果.so,随时关注价值的变化,并适当地对计划进行调整</strong></p>
+<p>自然软件开发的方法倡导将权力授予实际完成工作的人.</p>
+<blockquote>
+<p>放权是一个很艰难的抉择,这需要建立在有足够的信任,或者自己有绝对的权利之上,即,相信他们能够做好,当然,如果最不好,我能有权利把你们开除了.缺一不可.</p>
+</blockquote>
+<h3 id="根据功能特性组织团队"><a href="#根据功能特性组织团队" class="headerlink" title="根据功能特性组织团队"></a>根据功能特性组织团队</h3><p>没有足够多的专家? -&gt; 组建实践社区,用现有的专家去培养专家</p>
+<p><em>功能特性团队使得”规模扩展”很容易</em></p>
+<blockquote>
+<p>很明显再就是暑假时的项目管理模式,将培训与项目结合,并行工作,不过当时的我也不是什么专家,所以组织安排大家学习的结果差强人意.也许收获最大的反而是我?</p>
+</blockquote>
+<h3 id="根据功能特性组织团队-1"><a href="#根据功能特性组织团队-1" class="headerlink" title="根据功能特性组织团队"></a>根据功能特性组织团队</h3><ul>
+<li><p>做计划是必要的</p>
+<ul>
+<li>项目的时间期限和开始预算</li>
+<li>优先开发那些最优价值的功能特性</li>
+<li>确保产品能够随时发布,并在时间结束时立刻停止</li>
+</ul>
+</li>
+<li><p>详细的计划是无用的</p>
+</li>
+<li><p>持续计划:分解功能特性</p>
+<ul>
+<li>团队应该以固定的节奏工作<ol>
+<li>这样的工作周期通常称为”迭代”或”冲刺”,一般为几周</li>
+<li>每个功能特性最好在两-三天完成</li>
+</ol>
+</li>
+<li>承担多少工作?<ol>
+<li>每个迭代周期的工作量根据上个周期来划分</li>
+<li><strong>重要的不是准确地估计工作量,而是能够以一贯的节奏来完成工作</strong></li>
+</ol>
+</li>
+<li>根据”挑战性的目标”制定计划,危害性很大<ol>
+<li>赶工会客整个项目带来更多的缺陷</li>
+<li>压力具有破坏性,避免向团队施压</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>五卡法</em></p>
+<blockquote>
+<p>这一点暑假就做得很不好,或者说,这是我和涛哥双核驱动模式下的一个必然的恶果.</p>
+</blockquote>
+<h3 id="根据功能特性构建产品"><a href="#根据功能特性构建产品" class="headerlink" title="根据功能特性构建产品"></a>根据功能特性构建产品</h3><ul>
+<li>在每一个短周期内,完整地构建一个小的产品</li>
+<li>细化产品愿景</li>
+<li>总是将价值可能最大的任务列位下一个目标</li>
+<li>确定真实的进展</li>
+<li>淘汰测试再修复式的收尾方式</li>
+<li>随着项目进行,进一步扩展和优化设计<ol>
+<li>设计得太多或者太少都会导致开发缓慢</li>
+</ol>
+</li>
+</ul>
+<p><strong>为了加快开发速度,我们能做的最有价值的事情就是提高团队成员的技能.这一投入很快就能带来以下回报:浪费在修复缺陷上的时间会更少,开发过程会更加流畅.不要将迅猛当作高效.速度最快的团队总是平稳\优雅地前进.</strong></p>
+<h4 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h4><p>我们需要稳步前进.为此,需要时刻爆出设计的清晰和整洁.为了做到这一点,必须进行重构.</p>
+<p>构建一个功能特性所需的时间大致来自以下两个主要方面:</p>
+<ul>
+<li>它本身固有的难度</li>
+<li>将它加入现有代码时可能的难度</li>
+</ul>
+<p><strong>露营地规则:在离开露营地时,要让它比你来的时候更好.</strong></p>
+<h2 id="价值的完整循环"><a href="#价值的完整循环" class="headerlink" title="价值的完整循环"></a>价值的完整循环</h2><ul>
+<li>我们最终想要的是价值,提供价值的则是功能特性.功能特性发布得越早,我们就能越早提供价值.</li>
+<li>基于价值的管理比基于时间或工件等不提供价值的事物更胜一筹.</li>
+<li>根据功能特性做计划很简单,只有正在必要时才进行估算.根据以往完成的工作量来安排下一阶段的工作,效果会更好.</li>
+<li>采用逐渐增加功能特性的增量式开发方法,要求我们每隔几周就能够开发出小而完整的产品.所开发的产品必须总是能够正常运行,而且其设计也是良好的.</li>
+<li>开发工作必须要交付真正可用的功能特性.产品必须经过严格的测试,业务人员和开发人员都需要参与其中.同时,产品还必须拥有良好的设计,而且开发人员需要保持产品的设计一直处于良好状态.</li>
+</ul>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>梦里不知天在水，满船清梦压星河。</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+      <tags>
+        <tag>软件开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理复习</title>
-    <url>/2019/12/14/2019-12-14-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0/</url>
+    <url>/2019-12-14-principles-of-computer-composition-review.html</url>
     <content><![CDATA[<h1 id="一轮"><a href="#一轮" class="headerlink" title="一轮"></a>一轮</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><ol>
 <li><p>在 Cache 的地址映射中，若主存中的任意一块均可映射到 Cache 内的任意一快的位置上，则这种方法称为（ <strong>全相联映射</strong> ）</p>
 </li>
@@ -3599,132 +3619,8 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>软件开发本质论 笔记</title>
-    <url>/2019/12/14/2019-12-14-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%9C%AC%E8%B4%A8%E8%AE%BA_%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>[美]Ron Jeffries</p>
-<h2 id="价值"><a href="#价值" class="headerlink" title="价值"></a>价值</h2><p>80/20 法则:每个人想要的功能特性可能都不相同,但是没有人想要所有的功能特性.</p>
-<p>首先推出能够产生价值的功能特性.</p>
-<p>引导团队构建不仅对我们有意义,同时对用户也有意义的特性,即, <strong>最小可市场化功能特性</strong><br>与最小可市场化功能特性相比,在更细的粒度上提供商业方向更能使我们受益.</p>
-<p>价值的最大化在于频繁交付小的\以价值为中心的功能特性.</p>
-<a id="more"></a>
-
-<h3 id="价值是什么"><a href="#价值是什么" class="headerlink" title="价值是什么"></a>价值是什么</h3><p>简单地说,价值就是”我们想要的东西”.<br>所以,在不同的情境下,价值的侧重不同.</p>
-<h3 id="如何衡量价值"><a href="#如何衡量价值" class="headerlink" title="如何衡量价值"></a>如何衡量价值</h3><p>价值的衡量具有一定的主观性,纯粹以数据衡量价值是不可取的.</p>
-<ol>
-<li>我们知道的并非真正的数据</li>
-<li>大的差别很重要,小的差别则并不重要</li>
-<li>不同类型的价值不具备可比性</li>
-</ol>
-<p>你的想法? &lt;==&gt; 数据?<br>团队协商,达成共识?</p>
-<blockquote>
-<p>Ron 认为,通过数值来表示价值可能会是我们滑入深渊.因为数值往往将多个衡量指标无序地混杂在一起.<br>同时,他指出 <strong>大多数与金钱相关的衡量指标在时间上都落后</strong> .</p>
-</blockquote>
-<p><em>所有的衡量指标的真正作用都是帮助产品推动人\项目干系人\以及团队成员理解什么是真正的价值.</em></p>
-<h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><p>传统软件开发:分析-设计-编码-测试<br>根据功能特性开发:更加地灵活,更加地高效</p>
-<blockquote>
-<p>这有点类似于敏捷开发,不过以前跟某人交流的时候,他指出国内大部分的公司目前所谓的敏捷开发都只是有形而无实.</p>
-</blockquote>
-<h3 id="组建强大的团队"><a href="#组建强大的团队" class="headerlink" title="组建强大的团队"></a>组建强大的团队</h3><p><strong>确保其团队成员知道要做什么,然后让他们自己去搞清楚怎么做</strong></p>
-<ul>
-<li>目的来源于具体的业务:填鸭式地直接告知解决方法,而不是通过主动思考,整个团队将需要更长的时间获得明确的目标感.</li>
-<li>自主能够给整个团队带来责任感</li>
-<li>专精源自迭代过程</li>
-</ul>
-<p><strong>一言以蔽之,在自主的专精团队中,每个人都清楚团队的目的.</strong></p>
-<blockquote>
-<p>团队成员的能力波动值太大的话,是灾难性的.</p>
-</blockquote>
-<h3 id="自然开发的管理之道"><a href="#自然开发的管理之道" class="headerlink" title="自然开发的管理之道"></a>自然开发的管理之道</h3><p>跨职能团队拥有交付软件的每一个增量版本所需的全部技术与能力,团队成员能够自己进行测试,自己编写文档,所有与软件开发直接相关的事情都可以有他们去做.越是接近这样的理想状态,所需的协作配合就越少.</p>
-<p>五大管理要素:</p>
-<ul>
-<li>计划</li>
-<li>组织</li>
-<li>人员配备</li>
-<li>领导</li>
-<li>控制</li>
-</ul>
-<p>制定计划:<br>无论是长期计划还是短期计划,核心都是从高价值的功能特性到低价值的功能特性.<br>管理人员要随时关注计划的进展,同时,高层计划者和管理者要十分清楚项目有哪些功能特性,同时要求产品推动人通过演示实际可用的软件来展现这些功能特性.<br><strong>计划的根本目的是为了取得更好地结果.so,随时关注价值的变化,并适当地对计划进行调整</strong></p>
-<p>自然软件开发的方法倡导将权力授予实际完成工作的人.</p>
-<blockquote>
-<p>放权是一个很艰难的抉择,这需要建立在有足够的信任,或者自己有绝对的权利之上,即,相信他们能够做好,当然,如果最不好,我能有权利把你们开除了.缺一不可.</p>
-</blockquote>
-<h3 id="根据功能特性组织团队"><a href="#根据功能特性组织团队" class="headerlink" title="根据功能特性组织团队"></a>根据功能特性组织团队</h3><p>没有足够多的专家? -&gt; 组建实践社区,用现有的专家去培养专家</p>
-<p><em>功能特性团队使得”规模扩展”很容易</em></p>
-<blockquote>
-<p>很明显再就是暑假时的项目管理模式,将培训与项目结合,并行工作,不过当时的我也不是什么专家,所以组织安排大家学习的结果差强人意.也许收获最大的反而是我?</p>
-</blockquote>
-<h3 id="根据功能特性组织团队-1"><a href="#根据功能特性组织团队-1" class="headerlink" title="根据功能特性组织团队"></a>根据功能特性组织团队</h3><ul>
-<li><p>做计划是必要的</p>
-<ul>
-<li>项目的时间期限和开始预算</li>
-<li>优先开发那些最优价值的功能特性</li>
-<li>确保产品能够随时发布,并在时间结束时立刻停止</li>
-</ul>
-</li>
-<li><p>详细的计划是无用的</p>
-</li>
-<li><p>持续计划:分解功能特性</p>
-<ul>
-<li>团队应该以固定的节奏工作<ol>
-<li>这样的工作周期通常称为”迭代”或”冲刺”,一般为几周</li>
-<li>每个功能特性最好在两-三天完成</li>
-</ol>
-</li>
-<li>承担多少工作?<ol>
-<li>每个迭代周期的工作量根据上个周期来划分</li>
-<li><strong>重要的不是准确地估计工作量,而是能够以一贯的节奏来完成工作</strong></li>
-</ol>
-</li>
-<li>根据”挑战性的目标”制定计划,危害性很大<ol>
-<li>赶工会客整个项目带来更多的缺陷</li>
-<li>压力具有破坏性,避免向团队施压</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<p><em>五卡法</em></p>
-<blockquote>
-<p>这一点暑假就做得很不好,或者说,这是我和涛哥双核驱动模式下的一个必然的恶果.</p>
-</blockquote>
-<h3 id="根据功能特性构建产品"><a href="#根据功能特性构建产品" class="headerlink" title="根据功能特性构建产品"></a>根据功能特性构建产品</h3><ul>
-<li>在每一个短周期内,完整地构建一个小的产品</li>
-<li>细化产品愿景</li>
-<li>总是将价值可能最大的任务列位下一个目标</li>
-<li>确定真实的进展</li>
-<li>淘汰测试再修复式的收尾方式</li>
-<li>随着项目进行,进一步扩展和优化设计<ol>
-<li>设计得太多或者太少都会导致开发缓慢</li>
-</ol>
-</li>
-</ul>
-<p><strong>为了加快开发速度,我们能做的最有价值的事情就是提高团队成员的技能.这一投入很快就能带来以下回报:浪费在修复缺陷上的时间会更少,开发过程会更加流畅.不要将迅猛当作高效.速度最快的团队总是平稳\优雅地前进.</strong></p>
-<h4 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h4><p>我们需要稳步前进.为此,需要时刻爆出设计的清晰和整洁.为了做到这一点,必须进行重构.</p>
-<p>构建一个功能特性所需的时间大致来自以下两个主要方面:</p>
-<ul>
-<li>它本身固有的难度</li>
-<li>将它加入现有代码时可能的难度</li>
-</ul>
-<p><strong>露营地规则:在离开露营地时,要让它比你来的时候更好.</strong></p>
-<h2 id="价值的完整循环"><a href="#价值的完整循环" class="headerlink" title="价值的完整循环"></a>价值的完整循环</h2><ul>
-<li>我们最终想要的是价值,提供价值的则是功能特性.功能特性发布得越早,我们就能越早提供价值.</li>
-<li>基于价值的管理比基于时间或工件等不提供价值的事物更胜一筹.</li>
-<li>根据功能特性做计划很简单,只有正在必要时才进行估算.根据以往完成的工作量来安排下一阶段的工作,效果会更好.</li>
-<li>采用逐渐增加功能特性的增量式开发方法,要求我们每隔几周就能够开发出小而完整的产品.所开发的产品必须总是能够正常运行,而且其设计也是良好的.</li>
-<li>开发工作必须要交付真正可用的功能特性.产品必须经过严格的测试,业务人员和开发人员都需要参与其中.同时,产品还必须拥有良好的设计,而且开发人员需要保持产品的设计一直处于良好状态.</li>
-</ul>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>梦里不知天在水，满船清梦压星河。</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-      <tags>
-        <tag>软件开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈Linux的使用与应用</title>
-    <url>/2019/12/24/2019-12-24-%E6%B5%85%E8%B0%88Linux%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8/</url>
+    <url>/2019-12-24-some-discussion-of-Linux.html</url>
     <content><![CDATA[<p>这是 Linux 课程的大作业…</p>
 <p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/410079949.jpg?Expires=1602316585&" alt="head"></p>
 <a id="more"></a>
@@ -3761,7 +3657,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>项目中遇到的问题及解决方案(200103-1)</title>
-    <url>/2020/01/03/2020-01-03-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(200103-1)/</url>
+    <url>/2020-01-03-QS-in-project-200103-1.html</url>
     <content><![CDATA[<h2 id="echarts-节点点击事件"><a href="#echarts-节点点击事件" class="headerlink" title="echarts 节点点击事件"></a>echarts 节点点击事件</h2><p>由于项目需要在点击 echarts 的 items 或者 labels 的时候,修改 DOM 树,所以要做一个 echarts 的点击事件.</p>
 <p>在网上找了很久,大多是没有解答的空问题.<br>然后试图用 js 的原生方法来解决问题,发现确实有点麻烦,因为 echarts 在初期构建的时候,滤掉了冗余的信息,最后只给出了一个精简的绘图结果.</p>
 <p>思考:echarts 原生的点击是如何实现的?</p>
@@ -3789,7 +3685,7 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
   </entry>
   <entry>
     <title>python爬虫复习(1) selenium</title>
-    <url>/2020/01/05/2020-01-05-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(1)_selenium/</url>
+    <url>/2020-01-05-spider-review-1-selenium.html</url>
     <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>selenium 虽然是新手友好型的爬虫工具，但是个人觉得绝对不是适合新手入门的爬虫。<br>推荐在了解了 <strong>requests 体系</strong> 的爬虫，有了爬虫的一些常识之后，再来看 selenium。</p>
 <p><strong>事实上，requests 体系的爬虫已经足够满足现阶段大多数网站的爬虫需求</strong></p>
 <a id="more"></a>
@@ -3857,7 +3753,7 @@ Python基础教程,Python入门教程(非常详细)
   </entry>
   <entry>
     <title>python爬虫复习(2) 提高效率</title>
-    <url>/2020/01/08/2020-01-08-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(2)_%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87/</url>
+    <url>/2020-01-08-spider-review-2-Improve-efficiency.html</url>
     <content><![CDATA[<p>提高爬虫效率主要从三个方面开始复习。</p>
 <ol>
 <li>并发</li>
@@ -3963,7 +3859,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>Linux常用命令复习1</title>
-    <url>/2020/01/17/2020-01-17-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%8D%E4%B9%A01/</url>
+    <url>/2020-01-17-Linux-cmd-review.html</url>
     <content><![CDATA[<h2 id="文件-amp-amp-目录"><a href="#文件-amp-amp-目录" class="headerlink" title="文件 &amp;&amp; 目录"></a>文件 &amp;&amp; 目录</h2><h3 id="目录大小-amp-amp-浏览和切换目录"><a href="#目录大小-amp-amp-浏览和切换目录" class="headerlink" title="目录大小 &amp;&amp; 浏览和切换目录"></a>目录大小 &amp;&amp; 浏览和切换目录</h3><ul>
 <li><p>pwd 当前路径</p>
 </li>
@@ -4246,7 +4142,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>python爬虫复习(4)mitmproxy &amp;&amp; 寒假作业的部分分析</title>
-    <url>/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&amp;&amp;_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</url>
+    <url>/2020-01-19-spider-review-4-mitmproxy.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>到这里，python 爬虫部分的复习也就告一段落了，当然，除了 scrapy，老实说，对于平常爬取几千条这种小打小闹的爬虫，并没有去深入研究 scrapy 的必要（当然，了解还是要了解一下的）。</p>
 <p>之前学习爬虫，因为需求的原因，只学习了网页爬虫。趁着寒假有空，再来看一看 app 爬虫是啥样的吧。</p>
 <a id="more"></a>
@@ -4342,7 +4238,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>己亥年正月初一:鼠年，新年快乐</title>
-    <url>/2020/01/25/2020-01-25-%E5%B7%B1%E4%BA%A5%E5%B9%B4%E6%AD%A3%E6%9C%88%E5%88%9D%E4%B8%80_%E9%BC%A0%E5%B9%B4%EF%BC%8C%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</url>
+    <url>/2020-01-25-2020-spring-festival.html</url>
     <content><![CDATA[<h2 id="关于疫情"><a href="#关于疫情" class="headerlink" title="关于疫情"></a>关于疫情</h2><p>各地的疫情警报使得今年的春节有一种别样的味道。</p>
 <p>我看到有人心系灾区捐款捐物，也看到有人趁此机会将自己推上舆论的风口攫取利益；我看到有人抱着舍身取义的心态奔赴一线，也看到有人仅将其作为茶余饭后的谈资不值一哂。</p>
 <p>灾难面前众生百态，精彩如同一部小说，却远比我看过的任何小说都要精彩。对人的刻画，对社会的刻画，名为现实的大作家，以它的春秋笔法，将一切尽书于人前。</p>
@@ -4394,7 +4290,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>己亥年正月十二:生日快乐</title>
-    <url>/2020/02/05/2020-02-05-%E5%B7%B1%E4%BA%A5%E5%B9%B4%E6%AD%A3%E6%9C%88%E5%8D%81%E4%BA%8C_%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90/</url>
+    <url>/2020-02-05-happy-birthday.html</url>
     <content><![CDATA[<p><img data-src="https://ask-fd.zol-img.com.cn/g5/M00/08/08/ChMkJ1nrTbuILjb1AAQeG5kptTkAAhc7ANm2dIABB4z837.jpg" alt="aisi"></p>
 <a id="more"></a>
 
@@ -4428,7 +4324,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>搭建一个基于flask和redis的代理池(proxy pool)</title>
-    <url>/2020/02/08/2020-02-08-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Eflask%E5%92%8Credis%E7%9A%84%E4%BB%A3%E7%90%86%E6%B1%A0(proxy_pool)/</url>
+    <url>/2020-02-08-proxy-pool-base-on-flask-and-redis.html</url>
     <content><![CDATA[<p>在进行网页爬虫的项目时，常常会因为爬取的频率过高而触发 <strong>反爬虫机制</strong> ，这时候，面临两个选择：</p>
 <ol>
 <li>休息片刻。一般反爬虫机制不会进行永久的 IP 封禁，只是暂时限制访问而已，等待封禁时间结束再进行爬取即可。当然对于某些拥有黑名单机制的网站，如果封禁次数过多，封禁的时间也会随着这个次数而提高。</li>
@@ -4530,7 +4426,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>redis学习笔记(1)</title>
-    <url>/2020/02/09/2020-02-09-redis-note-1/</url>
+    <url>/2020-02-09-redis-note-1.html</url>
     <content><![CDATA[<h1 id="1-基础"><a href="#1-基础" class="headerlink" title="1. 基础"></a>1. 基础</h1><h2 id="1-1-常识"><a href="#1-1-常识" class="headerlink" title="1.1 常识"></a>1.1 常识</h2><p>Redis 是用 C 语言开发的一个开源的高性能键值对（key-value）数据库。它通过提供多种键值数据类型来适应不同场景下的存储需求，目前为止 Redis 支持的键值数据类型如下：</p>
 <ul>
 <li>字符串类型</li>
@@ -4780,7 +4676,7 @@ hello alice</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>data store</category>
+        <category>DateBase</category>
       </categories>
       <tags>
         <tag>redis</tag>
@@ -4788,7 +4684,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>redis学习笔记(2)</title>
-    <url>/2020/02/12/2020-02-12-redis-note-2/</url>
+    <url>/2020-02-12-redis-note-2.html</url>
     <content><![CDATA[<h1 id="3-进阶功能"><a href="#3-进阶功能" class="headerlink" title="3 进阶功能"></a>3 进阶功能</h1><h2 id="3-1-慢查询"><a href="#3-1-慢查询" class="headerlink" title="3.1 慢查询"></a>3.1 慢查询</h2><p><img data-src="http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200212121243-387827.png" alt="image-20200212121241917"></p>
 <a id="more"></a>
 
@@ -4986,7 +4882,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>关于B站视频的访问量爬虫</title>
-    <url>/2020/02/13/2020-02-13-%E5%85%B3%E4%BA%8EB%E7%AB%99%E8%A7%86%E9%A2%91%E7%9A%84%E8%AE%BF%E9%97%AE%E9%87%8F%E7%88%AC%E8%99%AB/</url>
+    <url>/2020-02-13-PV-spider-of-bilibili.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>“<em>酒香不怕巷子深</em>“，这样的想法在这个时代已经算是非常地消极和落伍的一个思想了。</p>
 <p>就像是一部电影，如战狼、哪吒这样，优秀的宣发能够带来远超电影本身质量的收益；而反过来，如闪光少女这样的电影，质量足以称为上乘，但是票房确差强人意，这就是典型的忽视了市场规则的下场。</p>
 <p>访问量、点赞、收藏、投币等要素共同决定了一个视频的热度。但是，除了前者之外，都需要一个确切的 B 站账户，笔者目前还没有能力来维持一个基数庞大的 B 站账号池，所以就只能在第一个要素，<strong>点击量</strong> 上下文章咯。</p>
@@ -5053,7 +4949,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>完成一个自动打卡的脚本</title>
-    <url>/2020/02/15/2020-02-15-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E7%9A%84%E8%84%9A%E6%9C%AC/</url>
+    <url>/2020-02-15-a-Automatic-clocking-script.html</url>
     <content><![CDATA[<h1 id="完成一个自动打卡的脚本"><a href="#完成一个自动打卡的脚本" class="headerlink" title="完成一个自动打卡的脚本"></a>完成一个自动打卡的脚本</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于近期疫情猖獗，学校开始要求大家进行每日的健康打卡。</p>
 <p>但是对于笔者这种死宅，根本不会出门的那种，每日的打卡基本上都是一模一样的内容。这种情况下打卡反而成了一种负担，如果哪天忙忘了，又免不了被一顿批评。</p>
 <p>程序员自然有程序员的解决办法。所以这里就做了一个自动打卡的脚本，托管在服务器上，这样就可以不用去管这件事情咯。</p>
@@ -5115,7 +5011,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>自用的vim小笔记(1)</title>
-    <url>/2020/02/16/2020-02-16-%E8%87%AA%E7%94%A8%E7%9A%84vim%E5%B0%8F%E7%AC%94%E8%AE%B0(1)/</url>
+    <url>/2020-02-16-vim-note-1.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着开发的深入，使用 vim 的频率渐次提升，但是技巧却始终停留在初见阶段（一些技巧虽然学过但是都忘了。。。），极大地影响了开发的效率，所以，再次学习 vim 势在必行。</p>
 <a id="more"></a>
 
@@ -5373,7 +5269,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>C1.背叛者</title>
-    <url>/2020/03/07/2020-03-07-C1-The-Betrayer/</url>
+    <url>/2020-03-07-C1-The-Betrayer.html</url>
     <content><![CDATA[<p>德黑兰王国西部边境，少年兵团营地，夜。</p>
 <p>道恩静静地躺在床上，脑海中意识不断地翻腾汹涌，他虽然无法从中捕获到任何有用的信息，但是他清楚，这是自己的灵性在面对危机时的主动预警。而他也正是因为无条件地信任这种虚无缥缈的东西，现在才能以一个活人的身份躺在这里。</p>
 <a id="more"></a>
@@ -5448,7 +5344,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>(打卡)接雨水</title>
-    <url>/2020/04/04/2020-04-04-(%E6%89%93%E5%8D%A1)%E6%8E%A5%E9%9B%A8%E6%B0%B4/</url>
+    <url>/2020-04-04-catch-rain.html</url>
     <content><![CDATA[<blockquote>
 <p>难得遇到一道困难的打卡题，就在这里写一下过程吧（虽然并不是很困难。。。）</p>
 </blockquote>
@@ -5482,7 +5378,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>雨课堂习题爬虫+文字识别</title>
-    <url>/2020/04/29/2020-04-29-%E9%9B%A8%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E7%88%AC%E8%99%AB+%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</url>
+    <url>/2020-04-29-rain-classroom-exercises-spider-and-OCR.html</url>
     <content><![CDATA[<p>感觉已经一万年没有更新博客了。。。这次是制作一个简单的爬虫。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本学期有一门纯文科的课程，名唤“医疗仪器原理”。谓之纯文科，自然是要背诵的题目太多了，多到了梦回高中历史的地步= =。</p>
 <p>授课老师喜欢使用雨课堂发布习题，但是雨课堂没有办法导出题目和答案，想要整理就只能一条一条地复制粘贴，更骚的是，这个网站的题目默认被转成了图片格式(？？？)。好嘛，复制粘贴都做不到了。</p>
@@ -5535,7 +5431,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>自动化的每日打卡工具v1.1</title>
-    <url>/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7/</url>
+    <url>/2020-05-04-a-Automatic-clocking-script.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>惯例的前言，这次这个小玩具又是一个来源于生活的东西了。</p>
 <p>上次写了一个基于 linux 的自动打卡机，但是最近又有了新的需求。。。</p>
 <p>其一是学校的每一次表单变更都需要进入项目进行代码级别的修改、测试、部署，实在是太过麻烦。</p>
@@ -5588,7 +5484,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>无题</title>
-    <url>/2020/06/07/2020-06-07-no-title-1/</url>
+    <url>/2020-06-07-no-title-1.html</url>
     <content><![CDATA[<p>大三末，学院的生活已经接近尾声，何去何从，这是贯穿整个五月的问题。</p>
 <a id="more"></a>
 
@@ -5640,7 +5536,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>写在实习第一周</title>
-    <url>/2020/06/21/2020-06-21-the-first-week-of-practice/</url>
+    <url>/2020-06-21-the-first-week-of-practice.html</url>
     <content><![CDATA[<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>正式实习已经差不多一周的时间了，爬虫工程师的工作比预想中的要轻松一点，也许因为这只是实习的原因吧，正式工的老哥们倒是回去得挺晚的了。</p>
 <p>老实说，在入职之前，对于同期的实习生是抱有一些幻想的。就像是《半泽直树》中的半泽、渡边等同期生一样，结成同期阵营，互相扶持。不过事实和理想还是有所差距的，同期的 6 月份加入的实习生只有一位，还是个没有多少共同语言的女生，emmmmm，还是老老实实工作吧。</p>
 <p>mentor 挺不错的，就像是在 HR 面中所说的那样，一直不厌其烦地指导我进行学习。mentor 画饼的功力不如涛哥，所以他所描绘的画卷并没有在我心中掀起多少波澜，只是表面上迎合了一下。吃饼吃多了，还是务实胜过务虚好。</p>
@@ -5671,7 +5567,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>Windows下的终端优化方案</title>
-    <url>/2020/07/19/WindowsTerminal-beautify/</url>
+    <url>/WindowsTerminal-beautify.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Mac 上面安装了 <a href="https://www.iterm2.com/">iTerm2</a> 之后，逐渐难以忍受 <em>Windows</em> 上面简陋的终端界面，<strong>CMD</strong> 就不谈了，即使了 Windows10 加入的 <strong>PowerShell</strong> ，也依旧差强人意。</p>
 <p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p>
 <p>所以这次按照 <a href="https://docs.microsoft.com/zh-cn/windows/terminal/">Windows Terminal Docs</a> , DIY 一个美观的 Terminal。</p>
@@ -5778,7 +5674,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>万历十五年</title>
-    <url>/2018/10/28/a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline/</url>
+    <url>/a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline.html</url>
     <content><![CDATA[<p>《万历十五年》（英语：1587, a Year of No Significance: The Ming Dynasty in Decline）是美籍华裔历史学家黄仁宇最出名、也是体现其“大历史观”的一部明史研究专著。</p>
 <a id="more"></a>
 
@@ -5826,7 +5722,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>数学之美笔记</title>
-    <url>/2018/10/28/art-of-math/</url>
+    <url>/art-of-math.html</url>
     <content><![CDATA[<p>大学读书笔记之一:数学之美</p>
 <blockquote>
 <p>数学，正确看待时，不仅具有真理，还具有至高的美-一种冷而严峻的美，一种屹立不摇的美，如雕塑一般，一种不为我们软弱天性所动摇的美。也不像绘画或音乐有富丽堂皇的装饰，而是纯粹地崇高、绝对地完美，是最伟大的艺术，然而这是极其纯净的美，只有这个最伟大的艺术才能显示出最严格的完美。数学中一定能找到最卓越的试金石——超越自我时之喜悦感，如同写诗。<br>– Bertrand Arthur William Russell</p>
@@ -5899,8 +5795,67 @@ hello alice</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>起居杂录小纲</title>
+    <url>/dailylife.html</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>正经人谁写日记啊？ –《邪不压正》</p>
+</blockquote>
+<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
+<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
+<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
+<p>那么,我为什么要写这样一组日记式的博客呢.</p>
+<p><strong>博客，是用来炫技的地方</strong>。</p>
+<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
+<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
+<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
+<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
+<hr>
+<p>写于 2019 年 07 月 19 日的结句.</p>
+<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>桂苑酌记小纲</title>
+    <url>/drink-with-reading.html</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
+</blockquote>
+<p>#题解<br>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
+<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
+<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
+<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
+<p>至于“记”。</p>
+<blockquote>
+<p>记者,书也。 ——《广雅》</p>
+</blockquote>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
+<p>专业书和非专业书。</p>
+<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
+<p>不过，这一节并不准备留给这些“专业书”。</p>
+<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
+<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
+<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
+<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
+<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
+<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>极客大赛与赛后反思</title>
-    <url>/2020/08/05/geek-contest/</url>
+    <url>/geek-contest.html</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>极客大赛是我司举办的一个内部的挑战比赛，大致的内容就是拟定一道比赛题目，然后根据最后的完成度进行得分排名。比赛的时间为一天，大抵就是上班到下班这么长的时间。</p>
 <p>今年的题目是完成一个票据识别的 app。核心的模块是票据的扫描、识别和后端的存储、统计功能。衍生的加分项就很多了，测试覆盖率、界面设计等等，差不多就是软件的综合完成度、用户体验这些。</p>
 <a id="more"></a>
@@ -5956,7 +5911,7 @@ hello alice</code></pre>
   </entry>
   <entry>
     <title>Be a better pythonista(4)：nametuple的实际应用</title>
-    <url>/2020/10/28/nametuple_act/</url>
+    <url>/nametuple_act.html</url>
     <content><![CDATA[<blockquote>
 <p>Factory Function for Tuples with Named Fields</p>
 </blockquote>
@@ -6100,10 +6055,10 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>爬虫监控服务的数据库选择-bitmap应用</title>
-    <url>/2020/10/29/redis-log/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
+    <url>/redis-log.html</url>
+    <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
 <p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
-<p>笔者写爬虫时常用的数据有 MySQL、mongoDB、Redis，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 MySQL、SQLite 。</p>
+<p>笔者写爬虫时常用的数据有 <strong>MySQL</strong>、<strong>mongoDB</strong>、<strong>Redis</strong>，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 <strong>MySQL</strong>、<strong>SQLite</strong> 。</p>
 <p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
 <a id="more"></a>
 
@@ -6115,12 +6070,12 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 <li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
 </ol>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
-<p>a. 冗余数据。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. 纯粹无用数据。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. 第 4 点需求的处理思路。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
+<p>a. <strong>冗余数据</strong>。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. <strong>纯粹无用数据</strong>。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. <strong>第 4 点需求的处理思路</strong>。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
 <p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
 <p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
 <p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
 <h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
-<p>思路很清晰明了，实现也十分地简单，几乎为 0 的维护代价。</p>
+<p>思路很清晰明了，实现也十分地简单，维护代价几乎为 0 。</p>
 <p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
 <p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
 <p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
@@ -6146,7 +6101,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>data store</category>
+        <category>DateBase</category>
       </categories>
       <tags>
         <tag>Redis</tag>
@@ -6154,9 +6109,9 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>个人简历(备用)</title>
-    <url>/2020/05/30/resume/</url>
+    <url>/resume.html</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;">&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#x33;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#x36;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6218,7 +6173,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>Programmer摘要</title>
-    <url>/2018/10/28/2018-10-28-abstract-of-Programmer/</url>
+    <url>/2018-10-28-abstract-of-Programmer.html</url>
     <content><![CDATA[<h1 id="如何使用日志调试"><a href="#如何使用日志调试" class="headerlink" title="如何使用日志调试"></a>如何使用日志调试</h1><p>Logging（日志）是一种编写系统的方式，可以产生一系列信息记录，被称为 log。Printlining 只是输出简单的，通常是临时的日志。初学者一定要理解并且使用日志，因为他们对编程的理解是局限的。因为系统的复杂性,系统架构必须理解与使用日志。在理想的状态下，程序运行时产生的日志信息数量需要是可配置的。通常，日志提供了下面三个基本的优点：</p>
 <p>日志可以提供一些难以重现的 bug 的有效信息，比如在产品环境中发生的、不能在测试环境重现的 bug。<br>日志可以提供统计和与性能相关的数据，比如语句间流逝过的时间。<br>可配置的情况下，日志允许我们获取普通的信息，使得我们可以在不修改或重新部署代码的情况下调试以处理具体的问题。<br>需要输出的日志数量总是一个简约与信息量的权衡。太多的信息会使得日志变得昂贵，并且造成滚动目盲，使得发现你想要的信息变得很困难。但信息太少的话，日志可能不包含你需要的信息。出于这个原因，让日志的输出可配置是非常有用的。通常，日志中的每个记录会标记它在源代码里的位置，执行它的线程（如果可用的话），时间精度，并且通常还有一些额外的有效信息，比如一些变量的值，剩余内存大小，数据对象的数量，等等。这些日志语句撒遍源码，但只出现在主要的功能点和一些可能出现危机的代码里。每个语句可以被赋予一个等级，并且只有在系统被配置成输出相应等级的记录的时候才输出这个等级的记录。你应该设计好日志语句来标记你预期的问题。预估测量程序表现的必要性。</p>
 <p>如果你有一个永久的日志，printling 现在可以用日志的形式来完成，并且一些调试语句可能会永久地加入日志系统。</p>
@@ -6279,7 +6234,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>python进阶 手札</title>
-    <url>/2019/04/14/2019-04-14-python-advanced/</url>
+    <url>/2019-04-14-python-advanced.html</url>
     <content><![CDATA[<p>关于 python 的内置函数以及一些高阶的技巧的学习</p>
 <a id="more"></a>
 
@@ -6489,7 +6444,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>docker (1)</title>
-    <url>/2019/08/07/2019-08-07-docker-1/</url>
+    <url>/2019-08-07-docker-1.html</url>
     <content><![CDATA[<p>参考 《第一本 docker 书》《docker 深入浅出》</p>
 <a id="more"></a>
 
@@ -6558,7 +6513,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -6683,7 +6638,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>Introduction to data mining(1)</title>
-    <url>/2019/08/17/2019-08-17-Introduction_to_data_mining-1/</url>
+    <url>/2019-08-17-Introduction_to_data_mining-1.html</url>
     <content><![CDATA[<p>本篇是笔者在学习 “Introduction to data mining”(《数据挖掘导论》)的英文最新版所记录的一些学习笔记。</p>
 <p>2020.10.10 更新</p>
 <p>很可惜的是，在多次迁移的过程中，本章的图片都丢失了。</p>
@@ -6900,7 +6855,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   </entry>
   <entry>
     <title>操作系统复习(易错题&amp;amp;&amp;amp;概念题及部分解析)</title>
-    <url>/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&amp;&amp;%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</url>
+    <url>/2019-12-05-some-question-of-OS-review.html</url>
     <content><![CDATA[<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><p>1.单处理机计算机系统中，（A ）是并行操作的。</p>
 <p>A.处理机操作和通道操作是并行的<br>B.程序与程序<br>C.主程序与子程序<br>D.用户程序与操作系统程序</p>
 <pre><code>单处理机系统：只有1个运算器，运行状态最多一个
@@ -7229,7 +7184,7 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
   </entry>
   <entry>
     <title>人类群星闪耀时(笔记)</title>
-    <url>/2019/12/25/2019-12-25-%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E6%97%B6(%E7%AC%94%E8%AE%B0)/</url>
+    <url>/2019-12-25-Sternstunden-der-Menschheit-note.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>星空浩瀚.熠熠繁星,哪一颗会是我,亦或是哪一颗都不会是我.<br>一瞬之间,思绪漾开,仿佛脚尖所点过的每一处,摇曳生莲.</p>
 <p>– 2019.10.19 于合肥</p>
 <a id="more"></a>
@@ -7295,7 +7250,7 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
   </entry>
   <entry>
     <title>python爬虫复习(3) splash &amp;&amp; 数据分析小试</title>
-    <url>/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</url>
+    <url>/2020-01-13-spider-review-3-splash.html</url>
     <content><![CDATA[<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>根据笔者以往的爬虫经验，大部分的爬虫是在静态网页上完成的，爬虫所要做的只不过是提交请求，然后分析返回的页面即可。当然，api 本质上也可以作为静态页面来处理。这意味着只要掌握 requests 就可以完成 60%-80%的爬虫任务。</p>
 <p>这是一个很惊人的占比，这里解释一下，静态页面可能听起来很 low，但是有着以加载速度更快、易于维护为核心的一系列优势，尤其是引入了 ajax 之后，实现了动态加载，通过更加频繁的前后端交互，使得用户的使用更加丝滑流畅。</p>
 <p>但是总有一些网站是静态爬虫无法应付的。它们就是与 js 耦合度较高的，需要 js 进行渲染的页面，与上文所述的情况（前端只接收数据，而不用对数据进行计算层面的处理）不同，这类网站将部分的计算工作交托给前端，牺牲部分的用户体验来实现缓解服务器压力等一系列目的。</p>
@@ -7698,7 +7653,7 @@ memory usage: 726.1+ KB</code></pre>
   </entry>
   <entry>
     <title>数据库开发（1）</title>
-    <url>/2020/03/02/2020-03-02-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%EF%BC%881%EF%BC%89/</url>
+    <url>/2020-03-02-database-development-1.html</url>
     <content><![CDATA[<p>数据库学习笔记(1)</p>
 <a id="more"></a>
 
@@ -7915,7 +7870,7 @@ memory usage: 726.1+ KB</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>data store</category>
+        <category>DateBase</category>
       </categories>
       <tags>
         <tag>mysql</tag>
@@ -7923,7 +7878,7 @@ memory usage: 726.1+ KB</code></pre>
   </entry>
   <entry>
     <title>今日简史-笔记</title>
-    <url>/2019/09/26/2019-09-26-%E4%BB%8A%E6%97%A5%E7%AE%80%E5%8F%B2-%E7%AC%94%E8%AE%B0/</url>
+    <url>/2019-09-26-21-Lessons-for-the-21st-Century.html</url>
     <content><![CDATA[<h1 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h1><blockquote>
 <p>本摘录由 Apple Books 导出</p>
 </blockquote>

@@ -1,411 +1,407 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.harumonia.moe/2020/10/29/redis-log/</loc>
+    <loc>https://blog.harumonia.moe/geek-contest.html</loc>
+    <lastmod>2020-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/redis-log.html</loc>
     <lastmod>2020-10-29</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/08/05/geek-contest/</loc>
-    <lastmod>2020-10-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/2020/10/28/nametuple_act/</loc>
+    <loc>https://blog.harumonia.moe/nametuple_act.html</loc>
     <lastmod>2020-10-28</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/07/19/WindowsTerminal-beautify/</loc>
+    <loc>https://blog.harumonia.moe/WindowsTerminal-beautify.html</loc>
     <lastmod>2020-07-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/06/21/2020-06-21-the-first-week-of-practice/</loc>
+    <loc>https://blog.harumonia.moe/2020-06-21-the-first-week-of-practice.html</loc>
     <lastmod>2020-07-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/06/07/2020-06-07-no-title-1/</loc>
+    <loc>https://blog.harumonia.moe/2020-06-07-no-title-1.html</loc>
     <lastmod>2020-06-07</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/03/07/2020-03-07-C1-The-Betrayer/</loc>
+    <loc>https://blog.harumonia.moe/2020-03-07-C1-The-Betrayer.html</loc>
     <lastmod>2020-05-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/05/30/resume/</loc>
+    <loc>https://blog.harumonia.moe/resume.html</loc>
     <lastmod>2020-05-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/05/04/2020-05-04-%E8%87%AA%E5%8A%A8%E5%8C%96%E7%9A%84%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://blog.harumonia.moe/2020-05-04-a-Automatic-clocking-script.html</loc>
     <lastmod>2020-05-18</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/16/2020-02-16-%E8%87%AA%E7%94%A8%E7%9A%84vim%E5%B0%8F%E7%AC%94%E8%AE%B0(1)/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-16-vim-note-1.html</loc>
     <lastmod>2020-05-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/03/02/2020-03-02-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%EF%BC%881%EF%BC%89/</loc>
+    <loc>https://blog.harumonia.moe/2020-03-02-database-development-1.html</loc>
     <lastmod>2020-05-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/04/29/2020-04-29-%E9%9B%A8%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E7%88%AC%E8%99%AB+%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/</loc>
+    <loc>https://blog.harumonia.moe/2020-04-29-rain-classroom-exercises-spider-and-OCR.html</loc>
     <lastmod>2020-05-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/04/04/2020-04-04-(%E6%89%93%E5%8D%A1)%E6%8E%A5%E9%9B%A8%E6%B0%B4/</loc>
+    <loc>https://blog.harumonia.moe/2020-04-04-catch-rain.html</loc>
     <lastmod>2020-05-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/08/2020-02-08-%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Eflask%E5%92%8Credis%E7%9A%84%E4%BB%A3%E7%90%86%E6%B1%A0(proxy_pool)/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-08-proxy-pool-base-on-flask-and-redis.html</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/09/2020-02-09-redis-note-1/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-09-redis-note-1.html</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/12/2020-02-12-redis-note-2/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-12-redis-note-2.html</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/13/2020-02-13-%E5%85%B3%E4%BA%8EB%E7%AB%99%E8%A7%86%E9%A2%91%E7%9A%84%E8%AE%BF%E9%97%AE%E9%87%8F%E7%88%AC%E8%99%AB/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-13-PV-spider-of-bilibili.html</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/15/2020-02-15-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E7%9A%84%E8%84%9A%E6%9C%AC/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-15-a-Automatic-clocking-script.html</loc>
     <lastmod>2020-02-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/02/05/2020-02-05-%E5%B7%B1%E4%BA%A5%E5%B9%B4%E6%AD%A3%E6%9C%88%E5%8D%81%E4%BA%8C_%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90/</loc>
+    <loc>https://blog.harumonia.moe/2020-02-05-happy-birthday.html</loc>
     <lastmod>2020-02-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/25/2020-01-25-%E5%B7%B1%E4%BA%A5%E5%B9%B4%E6%AD%A3%E6%9C%88%E5%88%9D%E4%B8%80_%E9%BC%A0%E5%B9%B4%EF%BC%8C%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-25-2020-spring-festival.html</loc>
     <lastmod>2020-02-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/19/2020-01-19-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(4)mitmproxy_&&_%E5%AF%92%E5%81%87%E4%BD%9C%E4%B8%9A%E7%9A%84%E9%83%A8%E5%88%86%E5%88%86%E6%9E%90/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-19-spider-review-4-mitmproxy.html</loc>
     <lastmod>2020-01-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/17/2020-01-17-Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%8D%E4%B9%A01/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-17-Linux-cmd-review.html</loc>
     <lastmod>2020-01-18</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/13/2020-01-13-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(3)_splash_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B0%8F%E8%AF%95/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-13-spider-review-3-splash.html</loc>
     <lastmod>2020-01-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/08/2020-01-08-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(2)_%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-08-spider-review-2-Improve-efficiency.html</loc>
     <lastmod>2020-01-08</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/05/2020-01-05-python%E7%88%AC%E8%99%AB%E5%A4%8D%E4%B9%A0(1)_selenium/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-05-spider-review-1-selenium.html</loc>
     <lastmod>2020-01-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2020/01/03/2020-01-03-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(200103-1)/</loc>
+    <loc>https://blog.harumonia.moe/2020-01-03-QS-in-project-200103-1.html</loc>
     <lastmod>2020-01-03</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/25/2019-12-25-%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E6%97%B6(%E7%AC%94%E8%AE%B0)/</loc>
+    <loc>https://blog.harumonia.moe/2019-12-25-Sternstunden-der-Menschheit-note.html</loc>
     <lastmod>2019-12-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/24/2019-12-24-%E6%B5%85%E8%B0%88Linux%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
+    <loc>https://blog.harumonia.moe/2019-12-24-some-discussion-of-Linux.html</loc>
     <lastmod>2019-12-24</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/14/2019-12-14-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%9C%AC%E8%B4%A8%E8%AE%BA_%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.harumonia.moe/2019-12-14-The-Nature-of-Software-Development-note.html</loc>
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/30/2019-11-30-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%80%E8%BD%AE%E5%A4%8D%E4%B9%A0%E6%95%B4%E7%90%86(%E6%96%87%E6%A1%A3%E9%83%A8%E5%88%86)/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-30-some-doc-of-OS-review.html</loc>
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/05/2019-12-05-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0(%E6%98%93%E9%94%99%E9%A2%98&&%E6%A6%82%E5%BF%B5%E9%A2%98%E5%8F%8A%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90)/</loc>
+    <loc>https://blog.harumonia.moe/2019-12-05-some-question-of-OS-review.html</loc>
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/12/14/2019-12-14-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>https://blog.harumonia.moe/2019-12-14-principles-of-computer-composition-review.html</loc>
     <lastmod>2019-12-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/25/2019-11-25-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%AF%BE%E5%A0%82%E4%B9%A0%E9%A2%98%E6%95%B4%E7%90%86/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-25-Image-Processing-Review.html</loc>
     <lastmod>2019-11-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/24/2019-11-24-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%B8%89)/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-24-Course-Design-of-Java-QS-3.html</loc>
     <lastmod>2019-11-24</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/17/2019-11-17-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%B8%80)/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-17-Course-Design-of-Java-QS-1.html</loc>
     <lastmod>2019-11-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/21/2019-11-21-Java%E8%AF%BE%E8%AE%BE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E4%BA%8C)/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-21-Course-Design-of-Java-QS-2.html</loc>
     <lastmod>2019-11-21</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/10/2019-11-10-%E5%91%A8%E8%B5%9B162/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-10-week-162.html</loc>
     <lastmod>2019-11-10</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/09/2019-11-09-%E5%85%B3%E4%BA%8E%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-09-discussion-about-frontend-backend-separation.html</loc>
     <lastmod>2019-11-09</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/06/2019-11-06-136-137_%E5%87%BA%E7%8E%B0%E7%9A%84%E6%95%B0%E5%AD%97%E9%97%AE%E9%A2%98_%E4%BD%8D%E8%BF%90%E7%AE%97/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-06-single-number.html</loc>
     <lastmod>2019-11-06</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/11/04/2019-11-04-N0.151_%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D_%E5%A4%9A%E8%A7%A3%E6%B3%95/</loc>
+    <loc>https://blog.harumonia.moe/2019-11-04-reverse-words-in-a-string.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/24/2019-10-24-No.84_%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2_%E5%A4%9A%E8%A7%A3%E6%B3%95/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-24-largest-rectangle-in-histogram.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/26/2019-09-26-%E4%BB%8A%E6%97%A5%E7%AE%80%E5%8F%B2-%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-26-21-Lessons-for-the-21st-Century.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/10/2019-10-10-No.64_%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-10-minimum-path-sum.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/12/2019-10-12-No.65_%E6%9C%89%E6%95%88%E6%95%B0%E5%AD%97_%E7%83%A6/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-12-valid-number.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/13/2019-10-13-No.68_%E6%96%87%E6%9C%AC%E5%B7%A6%E5%8F%B3%E5%AF%B9%E9%BD%90_%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93(1)/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-13-text-justification.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/23/2019-10-23-No._80_%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9_II/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-23-remove-duplicates-from-sorted-array-ii.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/13/2019-10-13-%E5%91%A8%E8%B5%9B158/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-13-week-158.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/14/2019-10-14-No.71_%E7%AE%80%E5%8C%96%E8%B7%AF%E5%BE%84_shashasha/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-14-simplify-path.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/17/2019-10-17-No.72_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-17-edit-distance.html</loc>
     <lastmod>2019-11-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/26/2019-10-26-No.77_%E7%BB%84%E5%90%88_%E5%9B%9E%E6%BA%AF%E6%B3%95/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-26-combinations.html</loc>
     <lastmod>2019-10-26</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/25/2019-10-25-No.85_%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-25-maximal-rectangle.html</loc>
     <lastmod>2019-10-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/26/2019-09-26-No.34_%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE_%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-26-find-first-and-last-position-of-element-in-sorted-array.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/27/2019-09-27-No.39_40_216_377_%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C1-4/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-27-summary-of-combination-1-4.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/30/2019-09-30-No.49_%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84_%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-30-group-anagrams.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_&amp;&amp;_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-01-merge-intervals.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/01/2019-10-01-No.56_%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4_%E5%8F%8C%E8%BF%AD%E4%BB%A3%E5%99%A8_%E5%9B%BD%E5%BA%86%E5%BF%AB%E4%B9%90/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-04-rotate-image.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/04/2019-10-04-No.48_%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F_%E6%95%B0%E5%AD%A6/</loc>
+    <loc>https://blog.harumonia.moe/2019-10-06-week-157.html</loc>
     <lastmod>2019-10-13</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/10/06/2019-10-06-%E5%91%A8%E8%B5%9B157/</loc>
-    <lastmod>2019-10-13</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/2019/09/01/2019-09-01-%E4%BD%BF%E7%94%A8%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E8%A7%A3%E5%86%B3%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%B9%B8%E5%AD%98%E9%97%AE%E9%A2%98(1)%E2%80%94%E2%80%94%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-01-Titanic-solution-via-RF.html</loc>
     <lastmod>2019-09-08</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/09/08/2019-09-08-%E6%B5%85%E8%B0%88%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B_Feature__Engineering/</loc>
+    <loc>https://blog.harumonia.moe/2019-09-08-Feature-Engineering.html</loc>
     <lastmod>2019-09-08</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/28/2019-08-28-Be_a_better_pythonista-3/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-28-Be_a_better_pythonista-3.html</loc>
     <lastmod>2019-09-01</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/23/2019-08-23-DA-intro-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-23-DA-intro-1.html</loc>
     <lastmod>2019-08-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/17/2019-08-17-Introduction_to_data_mining-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-17-Introduction_to_data_mining-1.html</loc>
     <lastmod>2019-08-17</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/14/2019-08-14-Be-a-better-pythonista-2/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-14-Be-a-better-pythonista-2.html</loc>
     <lastmod>2019-08-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/06/2019-08-06-Be-a-better-pythonista-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-06-Be-a-better-pythonista-1.html</loc>
     <lastmod>2019-08-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/12/2019-08-12-scikit-learn-suggestion/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-12-scikit-learn-suggestion.html</loc>
     <lastmod>2019-08-12</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/12/2019-08-12-%E6%96%87%E5%8C%96%E8%8B%A6%E6%97%85%EF%BC%88%E7%AC%94%E8%AE%B0%EF%BC%89/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-12-9787806276983-note.html</loc>
     <lastmod>2019-08-12</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/10/2019-08-10-jsjds-travel-notes-of-wuhu-2/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-10-jsjds-travel-notes-of-wuhu-2.html</loc>
     <lastmod>2019-08-10</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/09/2019-08-09-jsjds-travel-notes-of-wuhu-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-09-jsjds-travel-notes-of-wuhu-1.html</loc>
     <lastmod>2019-08-10</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/08/2019-08-08-2019summer-summary/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-08-2019summer-summary.html</loc>
     <lastmod>2019-08-08</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/07/2019-08-07-docker-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-07-docker-1.html</loc>
     <lastmod>2019-08-07</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/06/2019-08-06-Anecdote-of-studio/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-06-Anecdote-of-studio.html</loc>
     <lastmod>2019-08-06</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/02/2019-08-02-learning-sklearn-via-theory-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-02-learning-sklearn-via-theory-1.html</loc>
     <lastmod>2019-08-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/05/2019-08-05-learning-sklearn-via-practice-2/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-05-learning-sklearn-via-practice-2.html</loc>
     <lastmod>2019-08-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/08/04/2019-08-04-learning-sklearn-via-practice-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-08-04-learning-sklearn-via-practice-1.html</loc>
     <lastmod>2019-08-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/30/2019-07-30-questions-and-solutions-of-flask-deploy-2/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-30-questions-and-solutions-of-flask-deploy-2.html</loc>
     <lastmod>2019-07-31</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/22/2019-07-22-No31-next-permutation/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-22-No31-next-permutation.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/03/11/2019-03-11-questions-and-solutions-of-flask-deploy-1/</loc>
+    <loc>https://blog.harumonia.moe/2019-03-11-questions-and-solutions-of-flask-deploy-1.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/06/11/2019-06-11-No79/</loc>
+    <loc>https://blog.harumonia.moe/2019-06-11-No79.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/06/11/2019-06-11-NQueen/</loc>
+    <loc>https://blog.harumonia.moe/2019-06-11-NQueen.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/16/2019-07-16-flask-experience-part/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-16-flask-experience-part.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/16/2019-07-16-Python-basic-of-DM/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-16-Python-basic-of-DM.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/18/2019-07-18-H5-note/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-18-H5-note.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/19/2019-07-19-%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95%E5%B0%8F%E7%BA%B2/</loc>
+    <loc>https://blog.harumonia.moe/dailylife.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/19/2019-07-19-numpy-simple-organization/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-19-numpy-simple-organization.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/20/2019-07-20-%E6%A1%82%E8%8B%91%E9%85%8C%E8%AE%B0%E5%B0%8F%E7%BA%B2/</loc>
+    <loc>https://blog.harumonia.moe/drink-with-reading.html</loc>
     <lastmod>2019-07-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/11/21/2018-11-21-cpp-dictionary/</loc>
+    <loc>https://blog.harumonia.moe/2018-11-21-cpp-dictionary.html</loc>
     <lastmod>2019-07-20</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/01/06/2019-01-06-pixiv-spider/</loc>
+    <loc>https://blog.harumonia.moe/2019-01-06-pixiv-spider.html</loc>
     <lastmod>2019-07-20</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/07/16/2019-07-16-the-first-week-to-be-a-project-manager/</loc>
+    <loc>https://blog.harumonia.moe/2019-07-16-the-first-week-to-be-a-project-manager.html</loc>
     <lastmod>2019-07-16</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2019/04/14/2019-04-14-python-advanced/</loc>
+    <loc>https://blog.harumonia.moe/2019-04-14-python-advanced.html</loc>
     <lastmod>2019-04-14</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/12/26/2018-12-26-my-first-spider/</loc>
+    <loc>https://blog.harumonia.moe/2018-12-26-my-first-spider.html</loc>
     <lastmod>2018-12-26</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/12/19/2018-12-19-sth-of-blue-bridge/</loc>
+    <loc>https://blog.harumonia.moe/2018-12-19-sth-of-blue-bridge.html</loc>
     <lastmod>2018-12-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/12/15/2018-12-15-read-txt-file-via-cpp-on-Xcode/</loc>
+    <loc>https://blog.harumonia.moe/2018-12-15-read-txt-file-via-cpp-on-Xcode.html</loc>
     <lastmod>2018-12-15</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/12/02/2018-12-02-number-of-rounds/</loc>
+    <loc>https://blog.harumonia.moe/2018-12-02-number-of-rounds.html</loc>
     <lastmod>2018-12-02</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/12/02/2018-12-02-others/</loc>
+    <loc>https://blog.harumonia.moe/2018-12-02-others.html</loc>
     <lastmod>2018-12-02</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/11/20/2018-11-20-container-generic/</loc>
+    <loc>https://blog.harumonia.moe/2018-11-20-container-generic.html</loc>
     <lastmod>2018-11-21</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/28/a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline/</loc>
+    <loc>https://blog.harumonia.moe/a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline.html</loc>
     <lastmod>2018-11-12</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/31/2018-10-31-%E5%9B%BE%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%A4%E6%96%AD%E5%AE%9E%E9%AA%8C/</loc>
+    <loc>https://blog.harumonia.moe/2018-10-31-experiment-graph-generate-and-connectedness.html</loc>
     <lastmod>2018-10-31</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/28/2018-10-28-sth-good-on-VPS/</loc>
+    <loc>https://blog.harumonia.moe/2018-10-28-sth-good-on-VPS.html</loc>
     <lastmod>2018-10-28</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/28/2018-10-28-abstract-of-Programmer/</loc>
+    <loc>https://blog.harumonia.moe/2018-10-28-abstract-of-Programmer.html</loc>
     <lastmod>2018-10-28</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/28/art-of-math/</loc>
+    <loc>https://blog.harumonia.moe/art-of-math.html</loc>
     <lastmod>2018-10-28</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2018/10/28/2018-10-28-game-change-the-world/</loc>
+    <loc>https://blog.harumonia.moe/2018-10-28-game-change-the-world.html</loc>
     <lastmod>2018-10-28</lastmod>
   </url>
 </urlset> 
