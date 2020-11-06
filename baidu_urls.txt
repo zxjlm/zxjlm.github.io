@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/morikokoro/
 https://blog.harumonia.moe/redis-log/
 https://blog.harumonia.moe/nametuple_act/
 https://blog.harumonia.moe/geek-contest/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/2020-06-07-no-title-1/
 https://blog.harumonia.moe/resume/
 https://blog.harumonia.moe/2020-05-04-a-Automatic-clocking-script/
 https://blog.harumonia.moe/2020-04-29-rain-classroom-exercises-spider-and-OCR/
-https://blog.harumonia.moe/2020-04-04-catch-rain/
