@@ -7,3 +7,7 @@
 {% if post.hidden == false %}
 {% endif %}
 ```
+
+2. 添加一言
+
+\_layout.swig
