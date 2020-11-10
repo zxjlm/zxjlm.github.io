@@ -23,7 +23,8 @@
     </a>
     {%- if subtitle %}
       <p class="site-subtitle" itemprop="description">{{ subtitle }}</p>
-      <p id="hitokoto"></p>
+      <p class="site-hit" id="hitokoto"></p>
+      <p class="site-hit" id="hitofrom"></p>
     {%- endif %}
     {%- if theme.custom_logo and (theme.scheme === 'Gemini' or theme.scheme === 'Pisces') %}
       <a>
