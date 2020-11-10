@@ -6114,7 +6114,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;">&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#x6d;&#x32;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#122;&#x78;&#x6a;&#x6c;&#x6d;&#x32;&#x33;&#51;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6516,7 +6516,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -7888,7 +7888,10 @@ memory usage: 726.1+ KB</code></pre>
 <li>api</li>
 </ol>
 <p>我司已经有静态网页的检测工具,不过随着 api 类爬虫日益增加,需要一个新的可以用来检测 api 变动的脚本.</p>
-<p>这里我选择开发一个命令行工具,而非 web 平台服务.理由是前者更加 geek &amp;&amp; cool,同时,前者只要稍作改动,就可以很好地兼容后者.</p>
+<p>这里我选择开发一个命令行工具,而非 web 平台服务.理由是前者更加 geek &amp;&amp; cool.并且前者只要稍作改动,就可以很好地兼容后者.</p>
+<p>我将其命名为 Mori Kokoro , 取自柯南的 <em>毛利小五郎</em> . 就一个检测脚本而言，它的工作与侦探 🔍 相类似(发现坏家伙 😀).同时这个脚本算是我第一个开发的命令行脚本,无论是代码质量,还是功能实现,都缺乏信心,所以就以毛利为名.</p>
+<p><a href="https://github.com/zxjlm/Mori">Mori 项目地址</a></p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori.PNG" alt="main"></p>
 <a id="more"></a>
 
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><h3 id="核心需求"><a href="#核心需求" class="headerlink" title="核心需求"></a>核心需求</h3><ol>
@@ -7911,6 +7914,7 @@ memory usage: 726.1+ KB</code></pre>
 <p>所以将配置文件扩展为可以在命令行参数中指定.</p>
 <h3 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h3><p>仅仅生成报告还是不够,在企业中常常使用邮件来作为记录媒介.</p>
 <p>通常不仅是脚本的执行者需要知道结果,业务的相关负责人都有这方面的需求.所以加入邮件模块.</p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/email.PNG" alt="email"></p>
 <h4 id="发送邮件-优化"><a href="#发送邮件-优化" class="headerlink" title="发送邮件-优化"></a>发送邮件-优化</h4><ol>
 <li>发送邮件的同时,将 xls 报告 attach</li>
 <li>优化邮件内容,直接以 html-table 发送</li>
@@ -7937,6 +7941,8 @@ memory usage: 726.1+ KB</code></pre>
 <p>以上是调用代码.</p>
 <p>在查阅源码之后,发现 exception 是先被捕获到一个 TraceBack 类中,然后以这个类作为对象,再调用 print 将其输出.</p>
 <p>于是,提取出 TraceBack 类,将其暂存到结果中.在输出函数中,判断是否检测成功,如果失败,则输出 traceback 内容.</p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori-traceback.PNG" alt="traceback"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>第一次进行 python 的命令行脚本开发,要考虑的东西很多(需求分析、代码优化、修 bug、……),当然,完成之后的成就感让这一切都显得很值得.</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
