@@ -29,7 +29,13 @@ hidden: false
 
 我司已经有静态网页的检测工具,不过随着 api 类爬虫日益增加,需要一个新的可以用来检测 api 变动的脚本.
 
-这里我选择开发一个命令行工具,而非 web 平台服务.理由是前者更加 geek && cool,同时,前者只要稍作改动,就可以很好地兼容后者.
+这里我选择开发一个命令行工具,而非 web 平台服务.理由是前者更加 geek && cool.并且前者只要稍作改动,就可以很好地兼容后者.
+
+我将其命名为 Mori Kokoro , 取自柯南的 _毛利小五郎_ . 就一个检测脚本而言，它的工作与侦探 🔍 相类似(发现坏家伙 😀).同时这个脚本算是我第一个开发的命令行脚本,无论是代码质量,还是功能实现,都缺乏信心,所以就以毛利为名.
+
+[Mori 项目地址](https://github.com/zxjlm/Mori)
+
+![main](https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori.PNG)
 
 <!-- more -->
 
@@ -69,6 +75,8 @@ hidden: false
 仅仅生成报告还是不够,在企业中常常使用邮件来作为记录媒介.
 
 通常不仅是脚本的执行者需要知道结果,业务的相关负责人都有这方面的需求.所以加入邮件模块.
+
+![email](https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/email.PNG)
 
 #### 发送邮件-优化
 
@@ -140,3 +148,9 @@ except:
 在查阅源码之后,发现 exception 是先被捕获到一个 TraceBack 类中,然后以这个类作为对象,再调用 print 将其输出.
 
 于是,提取出 TraceBack 类,将其暂存到结果中.在输出函数中,判断是否检测成功,如果失败,则输出 traceback 内容.
+
+![traceback](https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori-traceback.PNG)
+
+## 总结
+
+第一次进行 python 的命令行脚本开发,要考虑的东西很多(需求分析、代码优化、修 bug、……),当然,完成之后的成就感让这一切都显得很值得.
