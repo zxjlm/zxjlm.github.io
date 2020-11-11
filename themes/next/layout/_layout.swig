@@ -9,15 +9,15 @@
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 
 <script>
-  fetch('https://v1.hitokoto.cn/')
+  fetch('http://39.108.229.166:5002/get-short-cn-poetry')
     .then(function (res){
       return res.json();
     })
     .then(function (data) {
       var hitokoto = document.getElementById('hitokoto');
       var hitofrom = document.getElementById('hitofrom');
-      hitokoto.innerText = data.hitokoto;
-      hitofrom.innerText = '--- '+data.from;
+      hitokoto.innerHTML = data.msg;
+      hitofrom.innerHTML = '--- '+data.from;
     })
     .catch(function (err) {
       console.error(err);
