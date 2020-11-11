@@ -2,7 +2,7 @@ https://blog.harumonia.moe/mori-kokoro/
 https://blog.harumonia.moe/redis-log/
 https://blog.harumonia.moe/nametuple_act/
 https://blog.harumonia.moe/geek-contest/
-https://blog.harumonia.moe/WindowsTerminal-beautify/
+https://blog.harumonia.moe/windows-terminal-beautify/
 https://blog.harumonia.moe/2020-06-21-the-first-week-of-practice/
 https://blog.harumonia.moe/2020-06-07-no-title-1/
 https://blog.harumonia.moe/resume/
