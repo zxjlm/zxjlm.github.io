@@ -10,7 +10,7 @@ author: harumonia
 categories:
   - 源流清泉
 tags:
-  - 终端美化
+  - 美化
 customSummary:
 noThumbInfoStyle: default
 outdatedNotice: no
