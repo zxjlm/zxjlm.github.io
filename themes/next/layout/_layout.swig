@@ -9,7 +9,7 @@
   {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 
 <script>
-  fetch('http://39.108.229.166:5002/get-short-cn-poetry')
+  fetch('https://v1.hitokoto.cn/?c=i')
     .then(function (res){
       return res.json();
     })
