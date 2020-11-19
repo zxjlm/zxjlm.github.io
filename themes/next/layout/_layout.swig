@@ -16,7 +16,7 @@
     .then(function (data) {
       var hitokoto = document.getElementById('hitokoto');
       var hitofrom = document.getElementById('hitofrom');
-      hitokoto.innerHTML = data.msg;
+      hitokoto.innerHTML = data.hitokoto;
       hitofrom.innerHTML = '--- '+data.from;
     })
     .catch(function (err) {
