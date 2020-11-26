@@ -5803,6 +5803,79 @@ hello alice</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>awk 学习记录</title>
+    <url>/learn-awk-1/</url>
+    <content><![CDATA[<p>上周在外网搭建了一个服务,主要是用来对 Mori 的各种处理状态做测试.</p>
+<p>今天在看网站统计的时候,发现请求的次数不太正常,主要表现就是出现了下面这种画风的请求.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">INFO:     174.49.25.36:51271 - <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 OK</span><br><span class="line">INFO:     14.139.155.142:41680 - <span class="string">&quot;GET /currentsetting.htm HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:58868 - <span class="string">&quot;GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:58844 - <span class="string">&quot;GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1&quot;</span> 200 OK</span><br><span class="line">INFO:     91.241.19.84:42642 - <span class="string">&quot;GET /console/ HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:36206 - <span class="string">&quot;POST /api/jsonws/invoke HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:55124 - <span class="string">&quot;POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:36174 - <span class="string">&quot;GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:42156 - <span class="string">&quot;GET /index.php?s=/Index/\think\app/invokefunction&amp;function=call_user_func_array&amp;vars[0]=md5&amp;vars[1][]=HelloThinkPHP21 HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     91.241.19.84:52646 - <span class="string">&quot;GET /?a=fetch&amp;content=&lt;php&gt;die(@md5(HelloThinkCMF))&lt;/php&gt; HTTP/1.1&quot;</span> 200 OK</span><br><span class="line">INFO:     91.241.19.84:53606 - <span class="string">&quot;GET /solr/admin/info/system?wt=json HTTP/1.1&quot;</span> 404 Not Found</span><br><span class="line">INFO:     203.205.34.139:47518 - <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 OK</span><br><span class="line">INFO:     182.185.14.56:62446 - <span class="string">&quot;GET /currentsetting.htm HTTP/1.1&quot;</span> 404 Not Found</span><br></pre></td></tr></table></figure>
+
+<p>随手摘了一个 ip (219.149.212.74) 查询了一下,竟然是国内的 = =|||</p>
+<p>又想到从大二下接触 web 开发,到现在两年多,部署了几个服务,但是却没有好好分析过网站的日志文件,正好就趁着这个机会看看吧.</p>
+<a id="more"></a>
+
+<h2 id="为什么是-awk"><a href="#为什么是-awk" class="headerlink" title="为什么是 awk"></a>为什么是 awk</h2><p>通过 python,我们同样可以实现对日志分析的功能,所以,为什么要舍近求远,去使用 awk 呢？我个人的理由如下.</p>
+<ol>
+<li>性能</li>
+<li>炫酷</li>
+<li>简单</li>
+</ol>
+<p><a href="https://www.quora.com/Is-AWK-faster-than-Python">Is AWK faster than Python?</a> 关于这一点的讨论并不鲜见.从直觉来讲,与原生 linux 系统更加贴近的 awk 应该比万金油语言 python 拥有更好的性能.</p>
+<p>不过这位使用的数据量级太低,并且他本人也建议使用大文本再进行一次测试.于是,我使用了公开数据集<a href="https://data.un.org/_Docs/SYB/CSV/SYB62_309_201906_Education.csv">SYB62_309_201906_Education</a>,将其膨胀到 220M,然后又做了一次测试.</p>
+<p>在阿里云 1c2g 的轻量级应用服务器上,得到的结果如下.</p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/awk_test.PNG" alt="linux_res"></p>
+<p>awk 代码:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">awk &#x27;BEGIN &#123; FPAT = &quot;[^,]*|\&quot;[^\&quot;]+\&quot;&quot; &#125; NR&gt;2 &#123; print $2 &quot;,&quot; $3 &#125;&#x27; SYB62_309_201906_Education.csv &gt; awk_result.csv</span><br></pre></td></tr></table></figure>
+
+<p>python 代码:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;../dataSet/SYB62_309_201906_Education.csv&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> f.readlines()[<span class="number">2</span>:]:</span><br><span class="line">        re_ = re.findall(<span class="string">r&#x27;(?:\s*(?:(\&quot;[^\&quot;]*\&quot;)|([^,]+))\s*,?)+?&#x27;</span>, line)</span><br><span class="line">        res.append((re_[<span class="number">1</span>][<span class="number">0</span>] <span class="keyword">or</span> re_[<span class="number">1</span>][<span class="number">1</span>]) + <span class="string">&#x27;,&#x27;</span> +</span><br><span class="line">                   (re_[<span class="number">2</span>][<span class="number">0</span>] <span class="keyword">or</span> re_[<span class="number">2</span>][<span class="number">1</span>])+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;../dataSet/reader_normal.csv&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.writelines(res)</span><br></pre></td></tr></table></figure>
+
+<p>在进行了相同的数据集分析之后,awk 能够以 <strong>更少的代码量和更高的运行效率</strong> 完成数据集的分割工作.当然,性能只是一个考虑方面,更主要的是,awk 够 geek,而我够闲.</p>
+<p><strong>PS1:</strong><br>之所以说 <strong>在原生 linux 系统上</strong>,是因为我在 wsl 上面同样做过一次测试,得到的结果如下.</p>
+<p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/awk_wsl.PNG" alt="wsl_res"></p>
+<p><strong>PS2:</strong><br>对于简单的 CSV(comma-separated values) 文件,也就是没有 <strong>“</strong> 和 <strong>,</strong> 等干扰项的文件,使用分割比使用正则有高得多的效率.</p>
+<h2 id="awk-分析网站访问日志"><a href="#awk-分析网站访问日志" class="headerlink" title="awk 分析网站访问日志"></a>awk 分析网站访问日志</h2><p>使用的日志是测试 api 的访问记录 access.log,具体的文件信息如下.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">File: ‘access.log’</span><br><span class="line">  Size: 4063334         Blocks: 7944       IO Block: 4096   regular file</span><br><span class="line">Device: fd01h/64769d    Inode: 155109      Links: 1</span><br><span class="line">Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)</span><br><span class="line">Access: 2020-11-25 18:06:33.577884826 +0800</span><br><span class="line">Modify: 2020-11-25 18:06:23.101795585 +0800</span><br><span class="line">Change: 2020-11-25 18:06:23.101795585 +0800</span><br><span class="line"> Birth: -</span><br></pre></td></tr></table></figure>
+
+<p>日志的格式如下:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">114.220.205.222 - - [10/Aug/2020:09:05:18 +0000] <span class="string">&quot;GET /api/items/5?q=somequery HTTP/1.1&quot;</span> 200 29 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">89.248.174.166 - - [10/Aug/2020:09:07:56 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 zgrab/0.x&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">114.220.205.222 - - [10/Aug/2020:09:10:52 +0000] <span class="string">&quot;GET /api/docs HTTP/1.1&quot;</span> 404 555 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">114.220.205.222 - - [10/Aug/2020:09:13:10 +0000] <span class="string">&quot;GET /api/docs HTTP/1.1&quot;</span> 404 22 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">114.220.205.222 - - [10/Aug/2020:09:13:49 +0000] <span class="string">&quot;GET /api/docs HTTP/1.1&quot;</span> 404 22 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">80.82.78.85 - - [10/Aug/2020:09:39:13 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">39.107.127.149 - - [10/Aug/2020:10:14:54 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">180.163.220.68 - - [10/Aug/2020:10:17:12 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;-&quot;</span> <span class="string">&quot;Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 baidu.sogo.uc.UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">180.163.220.68 - - [10/Aug/2020:10:17:14 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;http://baidu.com/&quot;</span> <span class="string">&quot;Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 baidu.sogo.uc.UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">42.236.10.78 - - [10/Aug/2020:10:17:27 +0000] <span class="string">&quot;GET / HTTP/1.1&quot;</span> 200 15 <span class="string">&quot;http://baidu.com/&quot;</span> <span class="string">&quot;Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 baidu.sogo.uc.UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN&quot;</span> <span class="string">&quot;-&quot;</span></span><br><span class="line">(normal_test)</span><br></pre></td></tr></table></figure>
+
+<h3 id="统计访问的人数"><a href="#统计访问的人数" class="headerlink" title="统计访问的人数"></a>统计访问的人数</h3><p>在不考虑使用代理的情况下,可以假定一个 ip 代表一个独立访客.</p>
+<h3 id="统计某个-ip-的总访问次数"><a href="#统计某个-ip-的总访问次数" class="headerlink" title="统计某个 ip 的总访问次数"></a>统计某个 ip 的总访问次数</h3><p>首先,在 awk 中是存在 <em>数组(Array)</em> 这个概念的,不过这里的数组更加类似于 c++的 map、python 的 dict.通过索引取值,但是这个索引并不局限于数字,也可以是字符串.也就是说,与其说是 Array,不如说是 Key-Value .</p>
+<p>对 ip 的统计主要就是使用了这个功能.我对日志进行遍历,然后做成 <strong>哈希表</strong> ,最后使用 linux 自带的 sort 进行统计.</p>
+<p>awk 自身也有排序函数 asort 和 asorti,不过在实际使用的过程中,asort 会破坏原有的 indices,这在 StackOverflow 上吗也有人遇到了同样的问题,<a href="https://stackoverflow.com/questions/5342782/sort-associative-array-with-awk">Sort associative array with AWK</a>.通过原生的 awk 方法解决太麻烦了,所以这里偷个懒直接使用 linux 的 sort 函数.</p>
+<p><strong>ps.</strong> sort 必要的参数说明</p>
+<blockquote>
+<p>-r, –reverse reverse the result of comparisons<br>-n, –numeric-sort compare according to string numerical value<br>-k, –key=KEYDEF sort via a key; KEYDEF gives location and type</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">time gawk <span class="string">&#x27;&#123;seen[$1]++&#125; END &#123;for(foo in seen) &#123;print foo,seen[foo]&#125;&#125;&#x27;</span> access.log | sort -nrk 2|head</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># 132.145.91.50 4305</span></span><br><span class="line"><span class="comment"># 58.210.143.102 316</span></span><br><span class="line"><span class="comment"># 146.56.217.168 162</span></span><br><span class="line"><span class="comment"># 80.82.70.187 155</span></span><br><span class="line"><span class="comment"># 42.51.60.61 155</span></span><br><span class="line"><span class="comment"># 183.136.225.56 105</span></span><br><span class="line"><span class="comment"># 121.235.166.248 100</span></span><br><span class="line"><span class="comment"># 183.136.225.35 78</span></span><br><span class="line"><span class="comment"># 163.177.13.2 78</span></span><br><span class="line"><span class="comment"># 101.251.242.238 78</span></span><br><span class="line"><span class="comment"># gawk &#x27;&#123;seen[$1]++&#125; END &#123;for(foo in seen) &#123;print foo,seen[foo]&#125;&#125;&#x27; access.log  0.02s user 0.00s system 71% cpu 0.032 total</span></span><br><span class="line"><span class="comment"># sort -nrk 2  0.07s user 0.00s system 74% cpu 0.090 total</span></span><br><span class="line"><span class="comment"># head  0.00s user 0.00s system 1% cpu 0.079 total</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果不使用 awk,也可以通过 linux 的组合命令实现统计的效果.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">time awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> access.log | sort -n | uniq -c |sort -nr -k 1|head</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># 4305 132.145.91.50</span></span><br><span class="line"><span class="comment"># ... 结果同上</span></span><br><span class="line"><span class="comment"># awk &#x27;&#123;print $1&#125;&#x27; access.log  0.01s user 0.00s system 41% cpu 0.031 total</span></span><br><span class="line"><span class="comment"># sort -n  0.10s user 0.00s system 68% cpu 0.150 total</span></span><br><span class="line"><span class="comment"># uniq -c  0.03s user 0.00s system 22% cpu 0.155 total</span></span><br><span class="line"><span class="comment"># sort -nr -k 1  0.09s user 0.00s system 39% cpu 0.240 total</span></span><br><span class="line"><span class="comment"># head  0.00s user 0.00s system 0% cpu 0.232 total</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看到,awk 在遍历的同时完成了统计的功能,而命令组则需要反复进行遍历,这就使得命令组的时间消耗大大高于 awk.</p>
+<h3 id="URL-访问量"><a href="#URL-访问量" class="headerlink" title="URL 访问量"></a>URL 访问量</h3><h4 id="清洗"><a href="#清洗" class="headerlink" title="清洗"></a>清洗</h4><p>根据统计访问量的目标不同,有着不同的清洗思路.</p>
+<p>比如想要知道哪些文章点击量更高,又或者是哪个静态文件的访问量高 or 存在异常点击,前者很明显要排除所有 jpg\gif\txt 之类的静态文件,后者则差不多要是前者的补集.</p>
+<p>这里以统计 url 接口为例.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk <span class="string">&#x27;$7 !~ /\/static/ &amp;&amp; $7 !~ /\.jpg|\.png|\.jpeg|\.gif|\.css|\.js|\.woff/ &#123;print&#125;&#x27;</span> access.log &gt; clean_access.log</span><br></pre></td></tr></table></figure>
+
+<p>清洗前后的结果对比.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wc access.log &amp;&amp; wc clean_access.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment">#  23587  436203 4063334 access.log</span></span><br><span class="line"><span class="comment">#  22336  407926 3771874 clean_access.log</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk <span class="string">&#x27;&#123;seen[$7]++&#125; END &#123;for(foo in seen)&#123;print foo,seen[foo]&#125;&#125;&#x27;</span> clean_access.log |sort -nr -k 2 |head</span><br></pre></td></tr></table></figure>
+
+<p>清洗与统计合并:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk <span class="string">&#x27;$7 !~ /\/static/ &amp;&amp; $7 !~ /\.jpg|\.png|\.jpeg|\.gif|\.css|\.js|\.woff/ &#123;seen[$7]++&#125; END &#123;for(foo in seen)&#123;print foo,seen[foo]&#125;&#125;&#x27;</span> access.log |sort -nr -k 2 |head</span><br></pre></td></tr></table></figure>
+
+<h2 id="To-Be-Continue"><a href="#To-Be-Continue" class="headerlink" title="To Be Continue"></a>To Be Continue</h2>]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>awk</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mori Kokoro 开发过程中遇到的问题(2) 以及使用代码收集</title>
     <url>/mori-question-and-code-collection/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>距离 Mori v0.1 成形已经过了一周.这一周里面对这个代码进行了进一步的优化.</p>
@@ -6057,7 +6130,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#106;&#108;&#109;&#50;&#51;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;">&#x7a;&#x78;&#106;&#108;&#109;&#50;&#51;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#x33;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;">&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#x33;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6566,7 +6639,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
