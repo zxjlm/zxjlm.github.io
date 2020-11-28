@@ -109,7 +109,9 @@ Change: 2020-11-25 18:06:23.101795585 +0800
  Birth: -
 ```
 
-日志的格式如下:
+### 日志格式
+
+> format : ip - - [time] "url" statuscode "-" "UA" "-"
 
 ```bash
 114.220.205.222 - - [10/Aug/2020:09:05:18 +0000] "GET /api/items/5?q=somequery HTTP/1.1" 200 29 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" "-"
@@ -216,4 +218,42 @@ awk '{seen[$7]++} END {for(foo in seen){print foo,seen[foo]}}' clean_access.log 
 awk '$7 !~ /\/static/ && $7 !~ /\.jpg|\.png|\.jpeg|\.gif|\.css|\.js|\.woff/ {seen[$7]++} END {for(foo in seen){print foo,seen[foo]}}' access.log |sort -nr -k 2 |head
 ```
 
-## To Be Continue
+### 每日访问量
+
+这里的每日访问量是指包括失败请求、静态资源请求在内的总的访问量。 [样例数据](#日志格式)
+
+```bash
+awk 'BEGIN {FPAT = "([^ ]+)|\\[([^\\]]+)\\]|(\"[^\"]+\")"} {split($4,a,":");gsub("\\[","",a[1]);seen[a[1]]++} END {for(foo in seen){print foo,seen[foo]}}' access.log|head
+
+# output
+# 17/Sep/2020 474
+# 14/Sep/2020 81
+# 11/Sep/2020 97
+# 08/Oct/2020 454
+# 31/Oct/2020 996
+# 11/Aug/2020 113
+# 29/Sep/2020 434
+# 05/Oct/2020 436
+# 08/Nov/2020 188
+# 17/Oct/2020 127
+```
+
+#### 分析
+
+> FPAT = "([^ ]+)|\\[([^\\]]+)\\]|(\"[^\"]+\")"
+
+指定了对文件的分割正则,分割之后的时间格式: _[10/Aug/2020:09:05:18 +0000]_
+
+我们需要的是**每日**的访问量，所以要将该时间继续分割提取。
+
+> {split($4,a,":");gsub("\\[","",a[1]);}
+
+做的就是这个工作，提取除精确到 day 的日期。 _10/Aug/2020_
+
+再之后使用 map 进行统计计数。
+
+## 总结
+
+将以上的脚本整合，然后设置一个定时执行，就可以每天整合一次网站访问记录。配合 echarts，可以将网站访问以漂亮的图表的形式输出。
+
+至此，DIY 网站运行统计收工。
