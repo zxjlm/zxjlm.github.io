@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/font-antispider-cracker/
 https://blog.harumonia.moe/learn-awk-1/
 https://blog.harumonia.moe/mori-question-and-code-collection/
 https://blog.harumonia.moe/mori-kokoro/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/geek-contest/
 https://blog.harumonia.moe/windows-terminal-beautify/
 https://blog.harumonia.moe/2020-06-21-the-first-week-of-practice/
 https://blog.harumonia.moe/2020-06-07-no-title-1/
-https://blog.harumonia.moe/resume/
