@@ -1,6 +1,9 @@
 ---
 title: 数据库中的.frm\.myi\.myd文件
 author: harumonia
+layout: post
+date: 2020-12-07 17:44:26
+updated: 2020-12-07 23:12:00
 categories:
   - 源流清泉
   - DataBase
@@ -21,6 +24,8 @@ hidden: false
 不过这些备份文件是 _.MYD / .MYI / .frm_ 这样的后缀，emmmmm，对于用惯了 _.sql_ 的我来说，还是很头大的。
 
 本篇的主要内容就是如何使用 _.frm / .MYI  / .MYD_  文件来恢复数据库，同时，做了一些关联的延申。
+
+<!-- more -->
 
 ## 恢复文件
 
