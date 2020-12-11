@@ -23,7 +23,7 @@ hidden: false
 
 不过这些备份文件是 _.MYD / .MYI / .frm_ 这样的后缀，emmmmm，对于用惯了 _.sql_ 的我来说，还是很头大的。
 
-本篇的主要内容就是如何使用 _.frm / .MYI  / .MYD_  文件来恢复数据库，同时，做了一些关联的延申。
+本篇的主要内容就是如何使用 _.frm / .MYI / .MYD_ 文件来恢复数据库，同时，做了一些关联的延申。
 
 <!-- more -->
 
@@ -70,11 +70,11 @@ docker cp 备份数据 mysql1:/var/lib/mysql/数据库名/
 
 延申中主要了解了如下的内容.
 
-mysql的两大常用存储引擎 **MyISAM** 和 **InnoDB** 的区别在哪里？
+mysql 的两大常用存储引擎 **MyISAM** 和 **InnoDB** 的区别在哪里？
 
-为什么一定要在5.x版本的 MyISAM 中恢复？可不可以直接在8.x版本的MyISAM中恢复？
+为什么一定要在 5.x 版本的 MyISAM 中恢复？可不可以直接在 8.x 版本的 MyISAM 中恢复？
 
-是否可以通过挂载数据盘来简化上述的_8.0_版本的操作?
+是否可以通过挂载数据盘来简化上述的*8.0*版本的操作?
 
 ### 为什么是.MYD/.MYI/.frm
 
@@ -112,13 +112,13 @@ INNODB:
 4. InnoDB stores its tables and indexes in a tablespace
 5. InnoDB supports transaction. You can commit and rollback with InnoDB
 
-### 为什么不能在8.x版本的MyISAM中恢复
+### 为什么不能在 8.x 版本的 MyISAM 中恢复
 
-存储文件的差异不仅存在于不同的物理引擎之间，使用不同版本的MySQL，即使是相同的存储引擎，也会有存储文件上的差异。
+存储文件的差异不仅存在于不同的物理引擎之间，使用不同版本的 MySQL，即使是相同的存储引擎，也会有存储文件上的差异。
 
-从[Removal of File-based Metadata Storage](https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-file-removal.html)可以看到，作为存储表定义的 _.frm文件_ 已经遭到了废弃，这也是为什么我无法在8.x的MyISAM中直接恢复数据库。
+从[Removal of File-based Metadata Storage](https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-file-removal.html)可以看到，作为存储表定义的 _.frm 文件_ 已经遭到了废弃，这也是为什么我无法在 8.x 的 MyISAM 中直接恢复数据库。
 
-这种备份实在是坑人坑己。大概一年之前，我大部分的开发都是无脑选择的mysql5.6，最主要的原因就是引用参考的很多代码都是5.6的数据库，学校教的数据库也是老版本的。不过随着技术见闻日渐增长，也逐渐开始使用更新版本的mysql8.0.如果我也是像这位网站管理一样使用这种备份方式，那么"恢复以前那么多数据库"这件事情的工作量就足够我放弃拥抱新技术，继续坐守5.6了。
+这种备份实在是坑人坑己。大概一年之前，我大部分的开发都是无脑选择的 mysql5.6，最主要的原因就是引用参考的很多代码都是 5.6 的数据库，学校教的数据库也是老版本的。不过随着技术见闻日渐增长，也逐渐开始使用更新版本的 mysql8.0.如果我也是像这位网站管理一样使用这种备份方式，那么"恢复以前那么多数据库"这件事情的工作量就足够我放弃拥抱新技术，继续坐守 5.6 了。
 
 #### 数据库备份法
 
@@ -126,18 +126,18 @@ INNODB:
 
 > If we had to avoid the command line always, we would never have made it to the moon. Either get another astronaut or train harder.
 
-在 [7.4 Using mysqldump for Backups](https://dev.mysql.com/doc/refman/8.0/en/using-mysqldump.html) 有提到的一种备份法,就是将数据库变成sql文件来保存。
+在 [7.4 Using mysqldump for Backups](https://dev.mysql.com/doc/refman/8.0/en/using-mysqldump.html) 有提到的一种备份法,就是将数据库变成 sql 文件来保存。
 
 ```shell
 # 将tcm_web数据库备份到tcm_web.sql文件
 mysqldump -u root -p tcm_web > tcm_web.sql
 ```
 
-这样做的最大的好处就是通用.上述的版本与物理引擎,都可以使用sql文件来恢复,并且恢复也就是一行命令的事情.
+这样做的最大的好处就是通用.上述的版本与物理引擎,都可以使用 sql 文件来恢复,并且恢复也就是一行命令的事情.
 
-其次的一个好处就是,在一定程度上避免了考虑数据库的运行状态.这与其说是mysqldump的好处,不如说是直接复制文件的坏处.如果在删除数据库的地方发生了什么，或者在主数据库上执行了其他有害的SQL，该怎么办？这些语句将复制到从属服务器并执行相同的操作，从而无法回滚到事件发生之前的某个时刻.
+其次的一个好处就是,在一定程度上避免了考虑数据库的运行状态.这与其说是 mysqldump 的好处,不如说是直接复制文件的坏处.如果在删除数据库的地方发生了什么，或者在主数据库上执行了其他有害的 SQL，该怎么办？这些语句将复制到从属服务器并执行相同的操作，从而无法回滚到事件发生之前的某个时刻.
 
-最后的一个好处就是简单方便.不需要去寻找数据库的data文件夹在哪里,也不需要复制粘贴各种调试,直接一行命令完成备份,一行命令完成恢复~
+最后的一个好处就是简单方便.不需要去寻找数据库的 data 文件夹在哪里,也不需要复制粘贴各种调试,直接一行命令完成备份,一行命令完成恢复~
 
 ### “cant change permissions of ca-key.pem”的解决方法
 
@@ -160,27 +160,22 @@ mysqld: Can't change permissions of the file 'ca-key.pem' (Errcode: 1 - Operatio
 2020-12-07T13:04:33.350619Z 0 [ERROR] Aborting
 ```
 
-主要就是权限的问题，这里需要挂载到Windows上面的文件夹的读写权限，偏偏windows的授权策略还挺麻烦的。
+主要就是权限的问题，这里需要挂载到 Windows 上面的文件夹的读写权限，偏偏 windows 的授权策略还挺麻烦的。
 
-最后我在GitHub上面找到了[解决方案](https://github.com/docker-library/mysql/issues/302)。
+最后我在 GitHub 上面找到了[解决方案](https://github.com/docker-library/mysql/issues/302)。
 
 > I tried what you suggested [@yosifkit](https://github.com/yosifkit), but no luck. Eventually, I changed the image version to `mysql:5.7.16` and now it is working fine. Sorry to disappoint you 😞
 
-于是将版本换成5.7.16，成功运行。
+于是将版本换成 5.7.16，成功运行。
 
-此时，进入到挂载数据盘的文件夹，container中的数据就可以直接在host里面访问到了。(tcm_web就是我备份的数据库文件夹)
+此时，进入到挂载数据盘的文件夹，container 中的数据就可以直接在 host 里面访问到了。(tcm_web 就是我备份的数据库文件夹)
 
 ![image-20201207215507998](https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207215507998.png)
 
-
-
-
-
 ## 后记
 
-本来只是想记录一下mysql文件恢复的解决方案,不过后来发散开来,又查阅了很多的资料,才有了这一篇博客.(还是闲的~)
+本来只是想记录一下 mysql 文件恢复的解决方案,不过后来发散开来,又查阅了很多的资料,才有了这一篇博客.(还是闲的~)
 
-其实还有一些坑没有填上,比如在实际操作的过程中,我发现**5.7**的data文件夹内容结构和**5.7.16**的内容有些差距,这种情况的成因是什么?
+其实还有一些坑没有填上,比如在实际操作的过程中,我发现**5.7**的 data 文件夹内容结构和**5.7.16**的内容有些差距,这种情况的成因是什么?
 
 这样发散下去是没有止境的,我所掌握的永远都只在圆圈以内罢了.
-
