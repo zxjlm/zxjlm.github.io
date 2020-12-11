@@ -1638,6 +1638,26 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </categories>
   </entry>
   <entry>
+    <title>scikit-learn 入门建议</title>
+    <url>/2019-08-12-scikit-learn-suggestion/</url>
+    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
+<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
+<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
+<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
+<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
+<p><a href="https://www.datacamp.com/">datacamp</a></p>
+<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
+<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
+<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
+<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
+<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
+<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+  </entry>
+  <entry>
     <title>文化苦旅</title>
     <url>/2019-08-12-9787806276983-note/</url>
     <content><![CDATA[<p>《文化苦旅》这本书在高中时已经读过一次，不过当时终究是阅历尚浅，不少的所谓的体会颇有“为赋新词强说愁”之感。</p>
@@ -1726,26 +1746,6 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 ]]></content>
       <categories>
         <category>桂苑酌记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>scikit-learn 入门建议</title>
-    <url>/2019-08-12-scikit-learn-suggestion/</url>
-    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
-<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
-<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
-<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
-<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
-<p><a href="https://www.datacamp.com/">datacamp</a></p>
-<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
-<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
-<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
-<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
-<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
-<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
       </categories>
   </entry>
   <entry>
@@ -6464,7 +6464,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;">&#x7a;&#120;&#x6a;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6525,11 +6525,68 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
       </categories>
   </entry>
   <entry>
+    <title>wsl2上的jupyter配置</title>
+    <url>/some-config-of-jupyter-on-wsl2/</url>
+    <content><![CDATA[<p>由于之前疏于对公司电脑上面的 C 盘的管理，它的存储空间不出意外地炸了。</p>
+<p>于是就开始了繁琐的清理工作。首先通过 设置 -&gt; 存储 找到 C 盘占用空间的大头。也就是微信文件和 miniconda，微信由于日常的工作联系等积压了大约 5G 左右，miniconda…emmm…8G = =</p>
+<p>看了一下，pytorch、tensorflow 等一系列的包、环境，这个手术动起来还是挺麻烦的，牵连太多了。</p>
+<p>不过随着工作任务的固定，有些包和环境确实也不需要了，于是就有了接下来的一些迷惑操作。</p>
+<a id="more"></a>
+
+<h2 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h2><p>本来只是打算清理一下各种环境，于是在网上找到了一个邪道的方法。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; req.txt</span><br><span class="line">pip uninstall -r req.txt -y</span><br></pre></td></tr></table></figure>
+
+<p>之所以说邪道，因为这个操作看似合理，实际上直接把我的 miniconda 折腾残了，字面上的意思，损坏了关键文件，打不开了 = =</p>
+<p><del>还不如直接删</del></p>
+<p>不过再仔细想想，感觉对于现在的工作，miniconda 的各种特性并不是刚需，于是出于释放存储空间的根本目的，直接将 miniconda 连根拔起。</p>
+<p>ps. 关于 pip 和 conda 的关系,可以看<a href="https://www.anaconda.com/blog/understanding-conda-and-pip">Understanding Conda and Pip</a></p>
+<h2 id="jupyter-lab"><a href="#jupyter-lab" class="headerlink" title="jupyter lab"></a>jupyter lab</h2><p>miniconda 虽然没了，但是一直放在上面的 jupyterlab 还是要用的。</p>
+<p>刚入职的时候还是老老实实的 windows 开发，后来入了 wsl 邪教之后开发就全部放在了 wsl 上，于是早期工作相关的会使用 windows，现在工作相关的会使用 wsl，跳来跳去还挺麻烦的，些许的强迫症让我决定就趁着这个机会将早期工作的大头–jupyter，迁移到 wsl 上面。</p>
+<p>主要的参考文章 : <a href="https://davidbailey.codes/blog/2020-07-10-setting-up-jupyterlab-on-windows-10">Setting up JupyterLab on Windows 10 with WSL 2</a></p>
+<p>然后在实际操作的过程中遇到的问题还挺多，所以在这里重新梳理一下。</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>当然不能再放在 wsl 原装的 python 上面，不然省个锤子的空间</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在D盘建立一个虚拟环境 env_jupyter</span></span><br><span class="line">mkdir -p /mnt/d/wsl_venv/</span><br><span class="line">cd /mnt/d/wsl_venv/</span><br><span class="line">python3 -m venv env_jupyter</span><br></pre></td></tr></table></figure>
+
+<p>(可选)为了方便快速进入虚拟环境，可以在 bashrc 或者 zshrc 中加入启动别名(alias)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">alias venv_jupyter=&quot;source /mnt/d/Project/Python/venv_wsl/jupyter/bin/activate&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install jupyterlab</span><br></pre></td></tr></table></figure>
+
+<p>之后就可以使用 <strong>jupyter lab</strong> 启动了，我这里出现了这样一个错误.</p>
+<blockquote>
+<p>Start : This command cannot be run due to the error: The system cannot find the file specified.</p>
+</blockquote>
+<p>原因是确实了配置文件,当然，它是由默认配置的，这个错误并不影响使用，可以使用如下命令解决。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 生成配置文件</span></span><br><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+
+<h3 id="更改启动目录"><a href="#更改启动目录" class="headerlink" title="更改启动目录"></a>更改启动目录</h3><p>我的 jupyter 相关的文件\项目都是集中放在同一个文件夹下，然后使用 git 实现公司\家\服务器的同步的，所以可以直接将启动目录定死。</p>
+<p>在 <a href="#%E5%AE%89%E8%A3%85">安装</a> 中生成了配置文件之后，这个文件的位置是 <code>/root/.jupyter/jupyter_notebook_config.py</code>， 可以使用 <em>vim</em> 或者 <em>vs code(<code>code .</code>)</em> 等手段编辑。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## The directory to use for notebooks and kernels.</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">&#x27;/mnt/d/Project/myLearnningLab/jupyter/&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="直接打开浏览器"><a href="#直接打开浏览器" class="headerlink" title="直接打开浏览器"></a>直接打开浏览器</h3><p>这里参考了 <a href="https://github.com/jupyter/notebook/issues/4594">Launching notebook to browser on WSL</a></p>
+<p>先使用 <code>ln -s /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe /usr/bin/chrome</code> 建立 chrome 的软路由。(将 <em>/mnt/c/…/chrome.exe</em> 替换成自己的浏览器安装路径，此步骤忽略则将下述 <code>chrome</code> 变更为浏览器安装路径 )</p>
+<p>然后直接将如下代码加入配置文件即可。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line">webbrowser.register(<span class="string">&#x27;chrome&#x27;</span>,<span class="literal">None</span>,webbrowser.GenericBrowser(<span class="string">&#x27;/usr/bin/chrome&#x27;</span>))</span><br><span class="line">c.NotebookApp.browser = <span class="string">&#x27;chrome&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="解除-root-限制"><a href="#解除-root-限制" class="headerlink" title="解除 root 限制"></a>解除 root 限制</h3><p>到这里，jupyter 依然运行不了，提示 <code>Running as root is not recommended. Use --allow-root to bypass.</code></p>
+<p>可以直接将启动命令变更为 <code>jupyter lab --allow-root</code></p>
+<p>也可以在配置文件中将 <code>c.NotebookApp.allow_root</code>的值变更为 <em>True</em></p>
+<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>至此，配置完成。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>wsl</category>
+      </categories>
+      <tags>
+        <tag>wsl</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库中的.frm\.myi\.myd文件</title>
     <url>/sql-frm-myi-myd-files/</url>
     <content><![CDATA[<p>最近在寻找一些毕设要用到的数据，医药相关的，恰好在某个网站上面找到了备份数据库(手段不太光彩，这里就不细说了)，省去了写爬虫的麻烦。</p>
 <p>不过这些备份文件是 <em>.MYD / .MYI / .frm</em> 这样的后缀，emmmmm，对于用惯了 <em>.sql</em> 的我来说，还是很头大的。</p>
-<p>本篇的主要内容就是如何使用 <em>.frm / .MYI  / .MYD</em>  文件来恢复数据库，同时，做了一些关联的延申。</p>
+<p>本篇的主要内容就是如何使用 <em>.frm / .MYI / .MYD</em> 文件来恢复数据库，同时，做了一些关联的延申。</p>
 <a id="more"></a>
 
 <h2 id="恢复文件"><a href="#恢复文件" class="headerlink" title="恢复文件"></a>恢复文件</h2><p>直接先 po 出我恢复文件的方法。这里需要根据 mysql 的版本不同分一下情况。</p>
@@ -6548,9 +6605,9 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 <p>这样，通过 <em>mysql workbench</em> 或者 <em>navicat</em> 之类的 GUI 就可以看到数据了。之后是同步到 8.0 还是直接导出就自己选择了。</p>
 <p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207214445489.png" alt="image-20201207214445489"></p>
 <h2 id="延申"><a href="#延申" class="headerlink" title="延申"></a>延申</h2><p>延申中主要了解了如下的内容.</p>
-<p>mysql的两大常用存储引擎 <strong>MyISAM</strong> 和 <strong>InnoDB</strong> 的区别在哪里？</p>
-<p>为什么一定要在5.x版本的 MyISAM 中恢复？可不可以直接在8.x版本的MyISAM中恢复？</p>
-<p>是否可以通过挂载数据盘来简化上述的_8.0_版本的操作?</p>
+<p>mysql 的两大常用存储引擎 <strong>MyISAM</strong> 和 <strong>InnoDB</strong> 的区别在哪里？</p>
+<p>为什么一定要在 5.x 版本的 MyISAM 中恢复？可不可以直接在 8.x 版本的 MyISAM 中恢复？</p>
+<p>是否可以通过挂载数据盘来简化上述的<em>8.0</em>版本的操作?</p>
 <h3 id="为什么是-MYD-MYI-frm"><a href="#为什么是-MYD-MYI-frm" class="headerlink" title="为什么是.MYD/.MYI/.frm"></a>为什么是.MYD/.MYI/.frm</h3><p>数据库存在多种存储引擎，每个引擎有着不同的特性。<em>.MYD/.MYI/.frm</em> 对应的是 <strong>MyISAM</strong> 引擎.</p>
 <p>每个文件的作用如下</p>
 <ul>
@@ -6580,34 +6637,34 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 <li>InnoDB stores its tables and indexes in a tablespace</li>
 <li>InnoDB supports transaction. You can commit and rollback with InnoDB</li>
 </ol>
-<h3 id="为什么不能在8-x版本的MyISAM中恢复"><a href="#为什么不能在8-x版本的MyISAM中恢复" class="headerlink" title="为什么不能在8.x版本的MyISAM中恢复"></a>为什么不能在8.x版本的MyISAM中恢复</h3><p>存储文件的差异不仅存在于不同的物理引擎之间，使用不同版本的MySQL，即使是相同的存储引擎，也会有存储文件上的差异。</p>
-<p>从<a href="https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-file-removal.html">Removal of File-based Metadata Storage</a>可以看到，作为存储表定义的 <em>.frm文件</em> 已经遭到了废弃，这也是为什么我无法在8.x的MyISAM中直接恢复数据库。</p>
-<p>这种备份实在是坑人坑己。大概一年之前，我大部分的开发都是无脑选择的mysql5.6，最主要的原因就是引用参考的很多代码都是5.6的数据库，学校教的数据库也是老版本的。不过随着技术见闻日渐增长，也逐渐开始使用更新版本的mysql8.0.如果我也是像这位网站管理一样使用这种备份方式，那么”恢复以前那么多数据库”这件事情的工作量就足够我放弃拥抱新技术，继续坐守5.6了。</p>
+<h3 id="为什么不能在-8-x-版本的-MyISAM-中恢复"><a href="#为什么不能在-8-x-版本的-MyISAM-中恢复" class="headerlink" title="为什么不能在 8.x 版本的 MyISAM 中恢复"></a>为什么不能在 8.x 版本的 MyISAM 中恢复</h3><p>存储文件的差异不仅存在于不同的物理引擎之间，使用不同版本的 MySQL，即使是相同的存储引擎，也会有存储文件上的差异。</p>
+<p>从<a href="https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-file-removal.html">Removal of File-based Metadata Storage</a>可以看到，作为存储表定义的 <em>.frm 文件</em> 已经遭到了废弃，这也是为什么我无法在 8.x 的 MyISAM 中直接恢复数据库。</p>
+<p>这种备份实在是坑人坑己。大概一年之前，我大部分的开发都是无脑选择的 mysql5.6，最主要的原因就是引用参考的很多代码都是 5.6 的数据库，学校教的数据库也是老版本的。不过随着技术见闻日渐增长，也逐渐开始使用更新版本的 mysql8.0.如果我也是像这位网站管理一样使用这种备份方式，那么”恢复以前那么多数据库”这件事情的工作量就足够我放弃拥抱新技术，继续坐守 5.6 了。</p>
 <h4 id="数据库备份法"><a href="#数据库备份法" class="headerlink" title="数据库备份法"></a>数据库备份法</h4><p>毫无疑问这种备份法不值得提倡。那么如何正确地备份数据库呢？</p>
 <blockquote>
 <p>If we had to avoid the command line always, we would never have made it to the moon. Either get another astronaut or train harder.</p>
 </blockquote>
-<p>在 <a href="https://dev.mysql.com/doc/refman/8.0/en/using-mysqldump.html">7.4 Using mysqldump for Backups</a> 有提到的一种备份法,就是将数据库变成sql文件来保存。</p>
+<p>在 <a href="https://dev.mysql.com/doc/refman/8.0/en/using-mysqldump.html">7.4 Using mysqldump for Backups</a> 有提到的一种备份法,就是将数据库变成 sql 文件来保存。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 将tcm_web数据库备份到tcm_web.sql文件</span></span><br><span class="line">mysqldump -u root -p tcm_web &gt; tcm_web.sql</span><br></pre></td></tr></table></figure>
 
-<p>这样做的最大的好处就是通用.上述的版本与物理引擎,都可以使用sql文件来恢复,并且恢复也就是一行命令的事情.</p>
-<p>其次的一个好处就是,在一定程度上避免了考虑数据库的运行状态.这与其说是mysqldump的好处,不如说是直接复制文件的坏处.如果在删除数据库的地方发生了什么，或者在主数据库上执行了其他有害的SQL，该怎么办？这些语句将复制到从属服务器并执行相同的操作，从而无法回滚到事件发生之前的某个时刻.</p>
-<p>最后的一个好处就是简单方便.不需要去寻找数据库的data文件夹在哪里,也不需要复制粘贴各种调试,直接一行命令完成备份,一行命令完成恢复~</p>
+<p>这样做的最大的好处就是通用.上述的版本与物理引擎,都可以使用 sql 文件来恢复,并且恢复也就是一行命令的事情.</p>
+<p>其次的一个好处就是,在一定程度上避免了考虑数据库的运行状态.这与其说是 mysqldump 的好处,不如说是直接复制文件的坏处.如果在删除数据库的地方发生了什么，或者在主数据库上执行了其他有害的 SQL，该怎么办？这些语句将复制到从属服务器并执行相同的操作，从而无法回滚到事件发生之前的某个时刻.</p>
+<p>最后的一个好处就是简单方便.不需要去寻找数据库的 data 文件夹在哪里,也不需要复制粘贴各种调试,直接一行命令完成备份,一行命令完成恢复~</p>
 <h3 id="“cant-change-permissions-of-ca-key-pem”的解决方法"><a href="#“cant-change-permissions-of-ca-key-pem”的解决方法" class="headerlink" title="“cant change permissions of ca-key.pem”的解决方法"></a>“cant change permissions of ca-key.pem”的解决方法</h3><p>在<a href="#8.x">8.x 的文件恢复</a> 中，我是用的是从 host 拷贝文件到 container 的方法。后来觉得这个方法太麻烦，而且以后如果想要从 container 中取出文件也要经过一堆的操作命令。</p>
 <p>于是就用 docker 的 -v 参数，挂载 host 的文件夹到 container.</p>
 <p>这里引发了一个 Windows 特有的错误。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 运行的日志如下</span></span><br><span class="line">2020-12-07T13:04:27.056363Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</span><br><span class="line">2020-12-07T13:04:27.064426Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive</span><br><span class="line">2020-12-07T13:04:32.266049Z 0 [Warning] InnoDB: New log files created, LSN=45790</span><br><span class="line">2020-12-07T13:04:32.967320Z 0 [Warning] InnoDB: Creating foreign key constraint system tables.</span><br><span class="line">2020-12-07T13:04:33.077801Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: bfe2230e-388c-11eb-93e3-0242ac110002.</span><br><span class="line">2020-12-07T13:04:33.132017Z 0 [Warning] Gtid table is not ready to be used. Table &#x27;mysql.gtid_executed&#x27; cannot be opened.</span><br><span class="line">mysqld: Can&#x27;t change permissions of the file &#x27;ca-key.pem&#x27; (Errcode: 1 - Operation not permitted)</span><br><span class="line">2020-12-07T13:04:33.350597Z 0 [ERROR] Could not set file permission for ca-key.pem</span><br><span class="line">2020-12-07T13:04:33.350619Z 0 [ERROR] Aborting</span><br></pre></td></tr></table></figure>
 
-<p>主要就是权限的问题，这里需要挂载到Windows上面的文件夹的读写权限，偏偏windows的授权策略还挺麻烦的。</p>
-<p>最后我在GitHub上面找到了<a href="https://github.com/docker-library/mysql/issues/302">解决方案</a>。</p>
+<p>主要就是权限的问题，这里需要挂载到 Windows 上面的文件夹的读写权限，偏偏 windows 的授权策略还挺麻烦的。</p>
+<p>最后我在 GitHub 上面找到了<a href="https://github.com/docker-library/mysql/issues/302">解决方案</a>。</p>
 <blockquote>
 <p>I tried what you suggested <a href="https://github.com/yosifkit">@yosifkit</a>, but no luck. Eventually, I changed the image version to <code>mysql:5.7.16</code> and now it is working fine. Sorry to disappoint you 😞</p>
 </blockquote>
-<p>于是将版本换成5.7.16，成功运行。</p>
-<p>此时，进入到挂载数据盘的文件夹，container中的数据就可以直接在host里面访问到了。(tcm_web就是我备份的数据库文件夹)</p>
+<p>于是将版本换成 5.7.16，成功运行。</p>
+<p>此时，进入到挂载数据盘的文件夹，container 中的数据就可以直接在 host 里面访问到了。(tcm_web 就是我备份的数据库文件夹)</p>
 <p><img data-src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207215507998.png" alt="image-20201207215507998"></p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>本来只是想记录一下mysql文件恢复的解决方案,不过后来发散开来,又查阅了很多的资料,才有了这一篇博客.(还是闲的~)</p>
-<p>其实还有一些坑没有填上,比如在实际操作的过程中,我发现<strong>5.7</strong>的data文件夹内容结构和<strong>5.7.16</strong>的内容有些差距,这种情况的成因是什么?</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>本来只是想记录一下 mysql 文件恢复的解决方案,不过后来发散开来,又查阅了很多的资料,才有了这一篇博客.(还是闲的~)</p>
+<p>其实还有一些坑没有填上,比如在实际操作的过程中,我发现<strong>5.7</strong>的 data 文件夹内容结构和<strong>5.7.16</strong>的内容有些差距,这种情况的成因是什么?</p>
 <p>这样发散下去是没有止境的,我所掌握的永远都只在圆圈以内罢了.</p>
 ]]></content>
       <categories>
@@ -7067,7 +7124,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
