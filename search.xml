@@ -1638,26 +1638,6 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>scikit-learn 入门建议</title>
-    <url>/2019-08-12-scikit-learn-suggestion/</url>
-    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
-<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
-<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
-<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
-<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
-<p><a href="https://www.datacamp.com/">datacamp</a></p>
-<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
-<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
-<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
-<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
-<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
-<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-      </categories>
-  </entry>
-  <entry>
     <title>文化苦旅</title>
     <url>/2019-08-12-9787806276983-note/</url>
     <content><![CDATA[<p>《文化苦旅》这本书在高中时已经读过一次，不过当时终究是阅历尚浅，不少的所谓的体会颇有“为赋新词强说愁”之感。</p>
@@ -1746,6 +1726,26 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 ]]></content>
       <categories>
         <category>桂苑酌记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>scikit-learn 入门建议</title>
+    <url>/2019-08-12-scikit-learn-suggestion/</url>
+    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
+<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
+<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
+<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
+<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
+<p><a href="https://www.datacamp.com/">datacamp</a></p>
+<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
+<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
+<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
+<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
+<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
+<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
       </categories>
   </entry>
   <entry>
@@ -6464,7 +6464,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#106;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;">&#x7a;&#120;&#106;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6527,51 +6527,52 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
   <entry>
     <title>wsl2上的jupyter配置</title>
     <url>/some-config-of-jupyter-on-wsl2/</url>
-    <content><![CDATA[<p>由于之前疏于对公司电脑上面的 C 盘的管理，它的存储空间不出意外地炸了。</p>
-<p>于是就开始了繁琐的清理工作。首先通过 设置 -&gt; 存储 找到 C 盘占用空间的大头。也就是微信文件和 miniconda，微信由于日常的工作联系等积压了大约 5G 左右，miniconda…emmm…8G = =</p>
-<p>看了一下，pytorch、tensorflow 等一系列的包、环境，这个手术动起来还是挺麻烦的，牵连太多了。</p>
-<p>不过随着工作任务的固定，有些包和环境确实也不需要了，于是就有了接下来的一些迷惑操作。</p>
+    <content><![CDATA[<p>由于之前疏于对公司电脑上面的 C 盘的管理,它的存储空间不出意外地炸了.</p>
+<p>于是就开始了繁琐的清理工作.首先通过 设置 -&gt; 存储 找到 C 盘占用空间的大头.也就是微信文件和 miniconda,微信由于日常的工作联系等积压了大约 5G 左右,miniconda…emmm…8G = =</p>
+<p>看了一下,pytorch、tensorflow 等一系列的包、环境,这个手术动起来还是挺麻烦的,牵连太多了.</p>
+<p>不过随着工作任务的固定,有些包和环境确实也不需要了,于是就有了接下来的一些迷惑操作.</p>
 <a id="more"></a>
 
-<h2 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h2><p>本来只是打算清理一下各种环境，于是在网上找到了一个邪道的方法。</p>
+<h2 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h2><p>本来只是打算清理一下各种环境,于是在网上找到了一个邪道的方法.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; req.txt</span><br><span class="line">pip uninstall -r req.txt -y</span><br></pre></td></tr></table></figure>
 
-<p>之所以说邪道，因为这个操作看似合理，实际上直接把我的 miniconda 折腾残了，字面上的意思，损坏了关键文件，打不开了 = =</p>
+<p>之所以说邪道,因为这个操作看似合理,实际上直接把我的 miniconda 折腾残了,字面上的意思,损坏了关键文件,打不开了 = =</p>
 <p><del>还不如直接删</del></p>
-<p>不过再仔细想想，感觉对于现在的工作，miniconda 的各种特性并不是刚需，于是出于释放存储空间的根本目的，直接将 miniconda 连根拔起。</p>
+<p>不过再仔细想想,感觉对于现在的工作,miniconda 的各种特性并不是刚需,于是出于释放存储空间的根本目的,直接将 miniconda 连根拔起.</p>
 <p>ps. 关于 pip 和 conda 的关系,可以看<a href="https://www.anaconda.com/blog/understanding-conda-and-pip">Understanding Conda and Pip</a></p>
-<h2 id="jupyter-lab"><a href="#jupyter-lab" class="headerlink" title="jupyter lab"></a>jupyter lab</h2><p>miniconda 虽然没了，但是一直放在上面的 jupyterlab 还是要用的。</p>
-<p>刚入职的时候还是老老实实的 windows 开发，后来入了 wsl 邪教之后开发就全部放在了 wsl 上，于是早期工作相关的会使用 windows，现在工作相关的会使用 wsl，跳来跳去还挺麻烦的，些许的强迫症让我决定就趁着这个机会将早期工作的大头–jupyter，迁移到 wsl 上面。</p>
+<h2 id="jupyter-lab"><a href="#jupyter-lab" class="headerlink" title="jupyter lab"></a>jupyter lab</h2><p>miniconda 虽然没了,但是一直放在上面的 jupyterlab 还是要用的.</p>
+<p>刚入职的时候还是老老实实的 windows 开发,后来入了 wsl 邪教之后开发就全部放在了 wsl 上,于是早期工作相关的会使用 windows,现在工作相关的会使用 wsl,跳来跳去还挺麻烦的,些许的强迫症让我决定就趁着这个机会将早期工作的大头–jupyter,迁移到 wsl 上面.</p>
 <p>主要的参考文章 : <a href="https://davidbailey.codes/blog/2020-07-10-setting-up-jupyterlab-on-windows-10">Setting up JupyterLab on Windows 10 with WSL 2</a></p>
-<p>然后在实际操作的过程中遇到的问题还挺多，所以在这里重新梳理一下。</p>
-<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>当然不能再放在 wsl 原装的 python 上面，不然省个锤子的空间</p>
+<p>然后在实际操作的过程中遇到的问题还挺多,所以在这里重新梳理一下.</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>当然不能再放在 wsl 原装的 python 上面,不然省个锤子的空间</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在D盘建立一个虚拟环境 env_jupyter</span></span><br><span class="line">mkdir -p /mnt/d/wsl_venv/</span><br><span class="line">cd /mnt/d/wsl_venv/</span><br><span class="line">python3 -m venv env_jupyter</span><br></pre></td></tr></table></figure>
 
-<p>(可选)为了方便快速进入虚拟环境，可以在 bashrc 或者 zshrc 中加入启动别名(alias)</p>
+<p>(可选)为了方便快速进入虚拟环境,可以在 bashrc 或者 zshrc 中加入启动别名(alias)</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">alias venv_jupyter=&quot;source /mnt/d/Project/Python/venv_wsl/jupyter/bin/activate&quot;</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install jupyterlab</span><br></pre></td></tr></table></figure>
 
-<p>之后就可以使用 <strong>jupyter lab</strong> 启动了，我这里出现了这样一个错误.</p>
+<p>之后就可以使用 <strong>jupyter lab</strong> 启动了,我这里出现了这样一个错误.</p>
 <blockquote>
 <p>Start : This command cannot be run due to the error: The system cannot find the file specified.</p>
 </blockquote>
-<p>原因是确实了配置文件,当然，它是由默认配置的，这个错误并不影响使用，可以使用如下命令解决。</p>
+<p>原因是确实了配置文件,当然,它是由默认配置的,这个错误并不影响使用,可以使用如下命令解决.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 生成配置文件</span></span><br><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
 
-<h3 id="更改启动目录"><a href="#更改启动目录" class="headerlink" title="更改启动目录"></a>更改启动目录</h3><p>我的 jupyter 相关的文件\项目都是集中放在同一个文件夹下，然后使用 git 实现公司\家\服务器的同步的，所以可以直接将启动目录定死。</p>
-<p>在 <a href="#%E5%AE%89%E8%A3%85">安装</a> 中生成了配置文件之后，这个文件的位置是 <code>/root/.jupyter/jupyter_notebook_config.py</code>， 可以使用 <em>vim</em> 或者 <em>vs code(<code>code .</code>)</em> 等手段编辑。</p>
+<h3 id="更改启动目录"><a href="#更改启动目录" class="headerlink" title="更改启动目录"></a>更改启动目录</h3><p>我的 jupyter 相关的文件\项目都是集中放在同一个文件夹下,然后使用 git 实现公司\家\服务器的同步的,所以可以直接将启动目录定死.</p>
+<p>在 <a href="#%E5%AE%89%E8%A3%85">安装</a> 中生成了配置文件之后,这个文件的位置是 <code>/root/.jupyter/jupyter_notebook_config.py</code>, 可以使用 <em>vim</em> 或者 <em>vs code(<code>code .</code>)</em> 等手段编辑.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">## The directory to use for notebooks and kernels.</span></span><br><span class="line">c.NotebookApp.notebook_dir = <span class="string">&#x27;/mnt/d/Project/myLearnningLab/jupyter/&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="直接打开浏览器"><a href="#直接打开浏览器" class="headerlink" title="直接打开浏览器"></a>直接打开浏览器</h3><p>这里参考了 <a href="https://github.com/jupyter/notebook/issues/4594">Launching notebook to browser on WSL</a></p>
-<p>先使用 <code>ln -s /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe /usr/bin/chrome</code> 建立 chrome 的软路由。(将 <em>/mnt/c/…/chrome.exe</em> 替换成自己的浏览器安装路径，此步骤忽略则将下述 <code>chrome</code> 变更为浏览器安装路径 )</p>
-<p>然后直接将如下代码加入配置文件即可。</p>
+<p>先使用 <code>ln -s /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe /usr/bin/chrome</code> 建立 chrome 的软路由.(将 <em>/mnt/c/…/chrome.exe</em> 替换成自己的浏览器安装路径,此步骤忽略则将下述 <code>chrome</code> 变更为浏览器安装路径 )</p>
+<p>然后直接将如下代码加入配置文件即可.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line">webbrowser.register(<span class="string">&#x27;chrome&#x27;</span>,<span class="literal">None</span>,webbrowser.GenericBrowser(<span class="string">&#x27;/usr/bin/chrome&#x27;</span>))</span><br><span class="line">c.NotebookApp.browser = <span class="string">&#x27;chrome&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="解除-root-限制"><a href="#解除-root-限制" class="headerlink" title="解除 root 限制"></a>解除 root 限制</h3><p>到这里，jupyter 依然运行不了，提示 <code>Running as root is not recommended. Use --allow-root to bypass.</code></p>
+<h3 id="解除-root-限制"><a href="#解除-root-限制" class="headerlink" title="解除 root 限制"></a>解除 root 限制</h3><p>到这里,jupyter 依然运行不了,提示 <code>Running as root is not recommended. Use --allow-root to bypass.</code></p>
 <p>可以直接将启动命令变更为 <code>jupyter lab --allow-root</code></p>
 <p>也可以在配置文件中将 <code>c.NotebookApp.allow_root</code>的值变更为 <em>True</em></p>
-<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>至此，配置完成。</p>
+<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>至此,配置完成.</p>
+<p>之前在 windows 上面的 jupyter 问题多多,最典型的就是某些插件无法安装,比如我喜欢的主题 <em>jupyterlab-theme-solarized-dark</em> ,更换成 wsl 之后这些问题就不存在了~</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -7124,7 +7125,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
