@@ -113,6 +113,17 @@ webbrowser.register('chrome',None,webbrowser.GenericBrowser('/usr/bin/chrome'))
 c.NotebookApp.browser = 'chrome'
 ```
 
+#### 可能会出现的问题
+
+无法定向到 _'http://localhost:8888/?token=****'_ ,而是出现了如下的字样,然后浏览器打开定向到文件路径.
+
+```shell
+To access the notebook, open this file in a browser:
+    file:///cygdrive/c/home/.local/share/jupyter/runtime/nbserver-1003-open.html
+```
+
+这个时候将 _jupyter_notebook_config.py_ 中的 `use_redirect_file` 值改为 **False** .
+
 ### 解除 root 限制
 
 到这里,jupyter 依然运行不了,提示 `Running as root is not recommended. Use --allow-root to bypass.`
