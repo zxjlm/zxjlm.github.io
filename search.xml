@@ -6185,21 +6185,27 @@ hello alice</code></pre>
 <p>清洗与统计合并:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk <span class="string">&#x27;$7 !~ /\/static/ &amp;&amp; $7 !~ /\.jpg|\.png|\.jpeg|\.gif|\.css|\.js|\.woff/ &#123;seen[$7]++&#125; END &#123;for(foo in seen)&#123;print foo,seen[foo]&#125;&#125;&#x27;</span> access.log |sort -nr -k 2 |head</span><br></pre></td></tr></table></figure>
 
-<h3 id="每日访问量"><a href="#每日访问量" class="headerlink" title="每日访问量"></a>每日访问量</h3><p>这里的每日访问量是指包括失败请求、静态资源请求在内的总的访问量。 <a href="#%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F">样例数据</a></p>
+<h3 id="每日访问量"><a href="#每日访问量" class="headerlink" title="每日访问量"></a>每日访问量</h3><p>这里的每日访问量是指包括失败请求、静态资源请求在内的总的访问量. <a href="#%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F">样例数据</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">awk <span class="string">&#x27;BEGIN &#123;FPAT = &quot;([^ ]+)|\\[([^\\]]+)\\]|(\&quot;[^\&quot;]+\&quot;)&quot;&#125; &#123;split($4,a,&quot;:&quot;);gsub(&quot;\\[&quot;,&quot;&quot;,a[1]);seen[a[1]]++&#125; END &#123;for(foo in seen)&#123;print foo,seen[foo]&#125;&#125;&#x27;</span> access.log|head</span><br><span class="line"></span><br><span class="line"><span class="comment"># output</span></span><br><span class="line"><span class="comment"># 17/Sep/2020 474</span></span><br><span class="line"><span class="comment"># 14/Sep/2020 81</span></span><br><span class="line"><span class="comment"># 11/Sep/2020 97</span></span><br><span class="line"><span class="comment"># 08/Oct/2020 454</span></span><br><span class="line"><span class="comment"># 31/Oct/2020 996</span></span><br><span class="line"><span class="comment"># 11/Aug/2020 113</span></span><br><span class="line"><span class="comment"># 29/Sep/2020 434</span></span><br><span class="line"><span class="comment"># 05/Oct/2020 436</span></span><br><span class="line"><span class="comment"># 08/Nov/2020 188</span></span><br><span class="line"><span class="comment"># 17/Oct/2020 127</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><blockquote>
 <p>FPAT = “([^ ]+)|\[([^\]]+)\]|(&quot;[^&quot;]+&quot;)”</p>
 </blockquote>
 <p>指定了对文件的分割正则,分割之后的时间格式: <em>[10/Aug/2020:09:05:18 +0000]</em></p>
-<p>我们需要的是<strong>每日</strong>的访问量，所以要将该时间继续分割提取。</p>
+<p>我们需要的是<strong>每日</strong>的访问量,所以要将该时间继续分割提取.</p>
 <blockquote>
 <p>{split($4,a,”:”);gsub(“\[“,””,a[1]);}</p>
 </blockquote>
-<p>做的就是这个工作，提取除精确到 day 的日期。 <em>10/Aug/2020</em></p>
-<p>再之后使用 map 进行统计计数。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>将以上的脚本整合，然后设置一个定时执行，就可以每天整合一次网站访问记录。配合 echarts，可以将网站访问以漂亮的图表的形式输出。</p>
-<p>至此，DIY 网站运行统计收工。</p>
+<p>做的就是这个工作,提取除精确到 day 的日期. <em>10/Aug/2020</em></p>
+<p>再之后使用 map 进行统计计数.</p>
+<h2 id="补充-持续更新-ing"><a href="#补充-持续更新-ing" class="headerlink" title="补充(持续更新 ing)"></a>补充(持续更新 ing)</h2><h3 id="将-awk-的结果作为-cmd-参数"><a href="#将-awk-的结果作为-cmd-参数" class="headerlink" title="将 awk 的结果作为 cmd 参数"></a>将 awk 的结果作为 cmd 参数</h3><p>最简单的使用就像这样.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo $(awk)</span><br></pre></td></tr></table></figure>
+
+<p>这种用法,可以用来将 docker 中的无效 image 快速移除.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker rmi $(docker images |awk &#x27;$1==&quot;&lt;none&gt;&quot; &#123;print $3&#125;&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>将以上的脚本整合,然后设置一个定时执行,就可以每天整合一次网站访问记录.配合 echarts,可以将网站访问以漂亮的图表的形式输出.</p>
+<p>至此,DIY 网站运行统计收工.</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -6464,7 +6470,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#108;&#x6d;&#50;&#x33;&#51;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#109;">&#x7a;&#120;&#x6a;&#108;&#x6d;&#50;&#x33;&#51;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#111;&#109;">&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#x33;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -7129,7 +7135,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#103;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>

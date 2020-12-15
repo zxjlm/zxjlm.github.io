@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.harumonia.moe/learn-awk-1/</loc>
+    <lastmod>2020-12-15</lastmod>
+  </url>
+  <url>
     <loc>https://blog.harumonia.moe/geek-contest/</loc>
-    <lastmod>2020-12-13</lastmod>
+    <lastmod>2020-12-15</lastmod>
   </url>
   <url>
     <loc>https://blog.harumonia.moe/some-config-of-jupyter-on-wsl2/</loc>
@@ -15,10 +19,6 @@
   <url>
     <loc>https://blog.harumonia.moe/font-antispider-cracker/</loc>
     <lastmod>2020-12-01</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/learn-awk-1/</loc>
-    <lastmod>2020-11-24</lastmod>
   </url>
   <url>
     <loc>https://blog.harumonia.moe/mori-question-and-code-collection/</loc>
