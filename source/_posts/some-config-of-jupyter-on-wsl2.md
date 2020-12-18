@@ -115,7 +115,7 @@ c.NotebookApp.browser = 'chrome'
 
 #### 可能会出现的问题
 
-无法定向到 _'http://localhost:8888/?token=****'_ ,而是出现了如下的字样,然后浏览器打开定向到文件路径.
+无法定向到 " _http://localhost:8888/?token=\*\*\*\*_ " ,而是出现了如下的字样,然后浏览器打开定向到文件路径.
 
 ```shell
 To access the notebook, open this file in a browser:
