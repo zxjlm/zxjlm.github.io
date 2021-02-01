@@ -1,29 +1,29 @@
 ---
-title: Poirot 开发记录(待补充思路图)
-date: 2020-12-17 15:55:00
-updated: 2020-12-17 15:55:00
+title: Poirot开发记录(1) -- 进度条
+tags:
+  - dailyTools
 status: publish
 author: harumonia
 categories:
   - 源流清泉
   - Python
-tags:
-  - dailyTools
-customSummary:
 noThumbInfoStyle: default
-outdatedNotice: no
-thumb:
+outdatedNotice: "no"
 thumbChoice: default
-thumbSmall:
 thumbStyle: default
 hidden: false
+date: 2020-12-17 15:55:00
+updated: 2021-02-01 17:32:00
+customSummary:
+thumb:
+thumbSmall:
 ---
 
 Poirot 是自动将字体文件(woff\woff2\ttf)映射为结果字典,主要用于中文字体反爬虫的破解,包括 css 字体映射和图片文字反爬虫.
 
 实现的基础思路可见于[字体反爬虫解决方案-自动化通过字体文件生成映射字典](https://blog.harumonia.moe/font-antispider-cracker/).
 
-与 [Mori](https://blog.harumonia.moe/mori-kokoro/) 同属于爬虫工作的小工具.名字取自大侦探波洛(_Hercule Poirot_). 与 Mori 不同,这次从 _便利性_ 的角度考虑,采用了 web 服务的形式.
+与 [Mori](https://blog.harumonia.moe/mori-kokoro/) 同属于爬虫工作的小工具.名字取自大侦探波洛(_Hercule Poirot_). 与 Mori 的脚本服务不同,这次从实际使用的角度考虑,采用了 web 服务的形式.
 
 本篇记录了 Poirot 的开发中学习到的技术和踩到的坑。
 
@@ -89,7 +89,68 @@ for (var i = 0; i < 10; i++) {
 
 在前端请求数据分析接口 A 的同时,开启一个子线程用来统计分析的进度. 同时开启一个轮询接口 B 专门用来返回这个分析进度. 前端每隔一段时间向接口 B 查询进度，并反馈到进度条.
 
-这样做的一个缺点就是,进度条的上涨不够平滑,很可能出现第一个 10s 上涨 2%，第二个 10s 上涨 20%这样让用户惊诧莫名的情况.
+前端轮询的一个可参考案例就是 Miguel GrinBerg 的 [flask-celery-example](https://github.com/miguelgrinberg/flask-celery-example) , 这里轮询了 celery 的 task，让用户能够知道后台程序的处理进度。
+
+#### 前端实现
+
+引入了 [nanobar](https://nanobar.jacoborus.codes/) 用作进度条的展示， 以及 [toastr](https://github.com/CodeSeven/toastr) 用作关键消息闪现提示。
+
+```javascript
+async function getData(url = "") {
+  const response = await fetch(url, {
+    method: "GET",
+    mode: "cors",
+    cache: "no-cache",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+  });
+  return response.json();
+}
+
+function update_progress(nanobar, status_div, now_state = "") {
+  // nanobar 是nanobar.js 提供的一个进度条插件
+  // status_div 是展示进度条的div块
+
+  let url = api_for_sandbox_progress.replace("none", task_id); // 将这里的url替换成实际要请求的url
+  getData(url).then((data) => {
+    percent = parseInt((data["info"]["current"] * 100) / data["info"]["total"]);
+    nanobar.go(percent);
+    $(status_div.childNodes[1]).text(percent + "%");
+    $(status_div.childNodes[2]).text(data["state"]);
+
+    if ("result" in data) {
+      $(status_div.childNodes[3]).text("Result: " + data["result"]);
+    } else {
+      $(status_div.childNodes[3]).text("Result: " + data["state"]);
+    }
+
+    if (data["state"] === "SUCCESS") {
+      toastr["success"]("COMPLETE"); // toastr是一个消息闪现插件
+
+      load_neo_page();
+    } else if (data["state"] === "FAILURE") {
+      toastr["error"]("FAILURE");
+    } else {
+      if (data["state"] !== now_state) {
+        toastr["success"](data["state"]);
+      }
+      now_state = data["state"];
+      $(status_div.childNodes[3]).text("Result: " + data["state"]);
+
+      setTimeout(function () {
+        update_progress(nanobar, status_div, now_state);
+      }, 2000);
+    }
+  });
+}
+```
+
+#### 后端实现
+
+轮询机制下的后端代码就是将状态存储在一个队列中，当轮询请求到达时将这个队列里面的消息交付给这个请求。
 
 ### WebSocket
 
@@ -104,7 +165,7 @@ for (var i = 0; i < 10; i++) {
 
 [文档](https://flask-socketio.readthedocs.io/en/latest/)，文档中有详细的 websocket 使用案例。这里摘出我所使用的部分以为样例。
 
-后端实现 👇
+### 后端实现 👇
 
 ```python
 socketio = SocketIO(app, async_mode=None)
@@ -147,7 +208,7 @@ def disconnect_request():
          callback=can_disconnect)
 ```
 
-前端实现 👇
+### 前端实现 👇
 
 ```js
 const socket = io(namespace);
@@ -175,22 +236,16 @@ socket.close();
 
 在经历了几次优化之后，**实际在代码中的应用与样例代码有所出入**。
 
-### 前端的坑
+#### 前端的坑
 
 前端的 socket 请求需要后端的接口对应,不能出现前端有 socket 请求而后端没有对应的接口的情况,反之则没有问题.
 
 这个坑主要是在使用 gunicorn 进行部署时出现,报错信息为 `Invalid session **** (further occurrences of this error will be logged with level INFO)` .
 
-## WebSocket\长轮询\SSE 在进度条上的使用
+## 后记
 
-在完成了 websocket 的进度条之后，我又马后炮地意识到一个问题。websocket 是一个全双工的通信，但是实际上我们使用到的只是一个单工通信而已(Server->Browser),这样是不是显得大材小用了呢?换言之，这样会不会导致不必要的性能损耗?
+至此，进度条采用了从三种实现方式中选择了 socket .
 
-同样，单单从性能的角度考虑，这种使用情境下的 websocket 和长轮询哪个对服务器压力更低呢?
+实际上，选择 socket 最核心的原因就是，以前没有实际使用过这个技术，正好借着这次的机会实践一下而已。
 
-首先从进度监控的角度来说，都是开启一个独立的监控线程，
-
-[draft]
-
-websocket 的长连接 -> 何时开启，何时关闭
-
-长轮询在 ip 访问次数受限的情况下
+至于性能方面，socket、前端长轮询、SSE 中哪个实现方法的效率最高、消耗最低，则不在这边文章的考虑范围之内了。
