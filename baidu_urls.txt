@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/poirot-development-progressbar/
 https://blog.harumonia.moe/some-config-of-jupyter-on-wsl2/
 https://blog.harumonia.moe/sql-frm-myi-myd-files/
 https://blog.harumonia.moe/font-antispider-cracker/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/mori-kokoro/
 https://blog.harumonia.moe/redis-log/
 https://blog.harumonia.moe/nametuple_act/
 https://blog.harumonia.moe/geek-contest/
-https://blog.harumonia.moe/windows-terminal-beautify/

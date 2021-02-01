@@ -2856,36 +2856,6 @@ Name: Fare, dtype: float64</code></pre>
       </categories>
   </entry>
   <entry>
-    <title>No.72 编辑距离:动态规划</title>
-    <url>/2019-10-17-edit-distance/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/edit-distance/">No.72 编辑距离</a></p>
-<p><strong>难度：困难</strong></p>
-<p>给你两个单词  word1 和  word2，请你计算出将  word1  转换成  word2 所使用的最少操作数  。</p>
-<p>你可以对一个单词进行如下三种操作：</p>
-<p>插入一个字符<br>删除一个字符<br>替换一个字符</p>
-<a id="more"></a>
-
-<p>示例  1：</p>
-<p>输入：word1 = “horse”, word2 = “ros”<br>输出：3<br>解释：</p>
-<pre><code>horse -&gt; rorse (将 &#39;h&#39; 替换为 &#39;r&#39;)
-rorse -&gt; rose (删除 &#39;r&#39;)
-rose -&gt; ros (删除 &#39;e&#39;)</code></pre>
-<p>示例  2：</p>
-<p>输入：word1 = “intention”, word2 = “execution”<br>输出：5<br>解释：</p>
-<pre><code>intention -&gt; inention (删除 &#39;t&#39;)
-inention -&gt; enention (将 &#39;i&#39; 替换为 &#39;e&#39;)
-enention -&gt; exention (将 &#39;n&#39; 替换为 &#39;x&#39;)
-exention -&gt; exection (将 &#39;n&#39; 替换为 &#39;c&#39;)
-exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1349495973.png?Expires=1602312517&" alt="p1"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1028368401.png?Expires=1602312573&" alt="72.md.png"></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>No.71 简化路径:shashasha</title>
     <url>/2019-10-14-simplify-path/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
@@ -2925,6 +2895,36 @@ exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
         <tag>LeetCode</tag>
         <tag>字符串</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>No.72 编辑距离:动态规划</title>
+    <url>/2019-10-17-edit-distance/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/edit-distance/">No.72 编辑距离</a></p>
+<p><strong>难度：困难</strong></p>
+<p>给你两个单词  word1 和  word2，请你计算出将  word1  转换成  word2 所使用的最少操作数  。</p>
+<p>你可以对一个单词进行如下三种操作：</p>
+<p>插入一个字符<br>删除一个字符<br>替换一个字符</p>
+<a id="more"></a>
+
+<p>示例  1：</p>
+<p>输入：word1 = “horse”, word2 = “ros”<br>输出：3<br>解释：</p>
+<pre><code>horse -&gt; rorse (将 &#39;h&#39; 替换为 &#39;r&#39;)
+rorse -&gt; rose (删除 &#39;r&#39;)
+rose -&gt; ros (删除 &#39;e&#39;)</code></pre>
+<p>示例  2：</p>
+<p>输入：word1 = “intention”, word2 = “execution”<br>输出：5<br>解释：</p>
+<pre><code>intention -&gt; inention (删除 &#39;t&#39;)
+inention -&gt; enention (将 &#39;i&#39; 替换为 &#39;e&#39;)
+enention -&gt; exention (将 &#39;n&#39; 替换为 &#39;x&#39;)
+exention -&gt; exection (将 &#39;n&#39; 替换为 &#39;c&#39;)
+exection -&gt; execution (插入 &#39;u&#39;)</code></pre>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1349495973.png?Expires=1602312517&" alt="p1"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img data-src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1028368401.png?Expires=1602312573&" alt="72.md.png"></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
   </entry>
   <entry>
     <title>No. 80 删除排序数组中的重复项 II</title>
@@ -6410,6 +6410,74 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>Poirot开发记录(1) -- 进度条</title>
+    <url>/poirot-development-progressbar/</url>
+    <content><![CDATA[<p>Poirot 是自动将字体文件(woff\woff2\ttf)映射为结果字典,主要用于中文字体反爬虫的破解,包括 css 字体映射和图片文字反爬虫.</p>
+<p>实现的基础思路可见于<a href="https://blog.harumonia.moe/font-antispider-cracker/">字体反爬虫解决方案-自动化通过字体文件生成映射字典</a>.</p>
+<p>与 <a href="https://blog.harumonia.moe/mori-kokoro/">Mori</a> 同属于爬虫工作的小工具.名字取自大侦探波洛(<em>Hercule Poirot</em>). 与 Mori 的脚本服务不同,这次从实际使用的角度考虑,采用了 web 服务的形式.</p>
+<p>本篇记录了 Poirot 的开发中学习到的技术和踩到的坑。</p>
+<p>主要包括:</p>
+<ol>
+<li>flask-websocket 的使用</li>
+<li>进度条的实现</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="进度条的实现"><a href="#进度条的实现" class="headerlink" title="进度条的实现"></a>进度条的实现</h2><p>制作前端进度条的目的无非是以下几种.</p>
+<ol>
+<li>美观的\功能全面的 UI</li>
+<li>防止给用户造成无相应的错觉</li>
+</ol>
+<p>第二点在进行数据分析的项目时比较常见,动辄数分钟的后端处理,对于不明就里的用户来说很容易去乱点一些东西,以致不必要的麻烦.</p>
+<p>使用目的的不同也就导致了实现方案的不同.我开发主要使用过 3 种实现方案.</p>
+<ol>
+<li>假进度条</li>
+<li>前端轮询</li>
+<li>WebScoket</li>
+</ol>
+<p>接下来我将详细解释三者的具体实现.</p>
+<h3 id="假进度条"><a href="#假进度条" class="headerlink" title="假进度条"></a>假进度条</h3><p>顾名思义，这就是一个脱离了后端的，无法真正反映处理进度的”进度条”,简言之，空壳子. 使用这类进度条的原因有很多:技术力不足,时间不够,服务器性能等.</p>
+<p>前端实现一个进度条非常简单,以我最常用的 Bootstrap 为例.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;progress-bar w-75&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">role</span>=<span class="string">&quot;progressbar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">aria-valuenow</span>=<span class="string">&quot;75&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">aria-valuemax</span>=<span class="string">&quot;100&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过改变这个 tag 的宽度属性就可以实现进度条效果.具体的就是在 js 中使用 for 循环来控制(代码如下),如此就能完成一个 10 秒的进度条.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> bar = $(<span class="string">&quot;.progress-bar&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  bar.style[<span class="string">&quot;width&quot;</span>] = i * <span class="number">10</span> + <span class="string">&quot;%&quot;</span>;</span><br><span class="line">  sleep(<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是这里有一个 <strong>根本的原则(先决条件)</strong> ，那就是后端处理的时间必须可估算,传统的数据处理时间与回传数据的数据量是可以满足函数关系的(在保证后端稳定运行,负载可靠的情况下).</p>
+<p>微小的偏差是允许的,但是如果出现前后端进度极大偏差,那就失了进度条使用的初衷.</p>
+<p>这里的一个强化方案就是, <em>预估时间永远比处理时间要长</em> ,当后端处理完成返回数据时，直接将进度条拉满,这样就实现了前后端同步的假象.</p>
+<h3 id="前端轮询"><a href="#前端轮询" class="headerlink" title="前端轮询"></a>前端轮询</h3><p>在前端请求数据分析接口 A 的同时,开启一个子线程用来统计分析的进度. 同时开启一个轮询接口 B 专门用来返回这个分析进度. 前端每隔一段时间向接口 B 查询进度，并反馈到进度条.</p>
+<p>前端轮询的一个可参考案例就是 Miguel GrinBerg 的 <a href="https://github.com/miguelgrinberg/flask-celery-example">flask-celery-example</a> , 这里轮询了 celery 的 task，让用户能够知道后台程序的处理进度。</p>
+<h4 id="前端实现"><a href="#前端实现" class="headerlink" title="前端实现"></a>前端实现</h4><p>引入了 <a href="https://nanobar.jacoborus.codes/">nanobar</a> 用作进度条的展示， 以及 <a href="https://github.com/CodeSeven/toastr">toastr</a> 用作关键消息闪现提示。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params">url = <span class="string">&quot;&quot;</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(url, &#123;</span><br><span class="line">    method: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">    mode: <span class="string">&quot;cors&quot;</span>,</span><br><span class="line">    cache: <span class="string">&quot;no-cache&quot;</span>,</span><br><span class="line">    credentials: <span class="string">&quot;same-origin&quot;</span>,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    redirect: <span class="string">&quot;follow&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> response.json();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update_progress</span>(<span class="params">nanobar, status_div, now_state = <span class="string">&quot;&quot;</span></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// nanobar 是nanobar.js 提供的一个进度条插件</span></span><br><span class="line">  <span class="comment">// status_div 是展示进度条的div块</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> url = api_for_sandbox_progress.replace(<span class="string">&quot;none&quot;</span>, task_id); <span class="comment">// 将这里的url替换成实际要请求的url</span></span><br><span class="line">  getData(url).then(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">    percent = <span class="built_in">parseInt</span>((data[<span class="string">&quot;info&quot;</span>][<span class="string">&quot;current&quot;</span>] * <span class="number">100</span>) / data[<span class="string">&quot;info&quot;</span>][<span class="string">&quot;total&quot;</span>]);</span><br><span class="line">    nanobar.go(percent);</span><br><span class="line">    $(status_div.childNodes[<span class="number">1</span>]).text(percent + <span class="string">&quot;%&quot;</span>);</span><br><span class="line">    $(status_div.childNodes[<span class="number">2</span>]).text(data[<span class="string">&quot;state&quot;</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&quot;result&quot;</span> <span class="keyword">in</span> data) &#123;</span><br><span class="line">      $(status_div.childNodes[<span class="number">3</span>]).text(<span class="string">&quot;Result: &quot;</span> + data[<span class="string">&quot;result&quot;</span>]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      $(status_div.childNodes[<span class="number">3</span>]).text(<span class="string">&quot;Result: &quot;</span> + data[<span class="string">&quot;state&quot;</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (data[<span class="string">&quot;state&quot;</span>] === <span class="string">&quot;SUCCESS&quot;</span>) &#123;</span><br><span class="line">      toastr[<span class="string">&quot;success&quot;</span>](<span class="string">&quot;COMPLETE&quot;</span>); <span class="comment">// toastr是一个消息闪现插件</span></span><br><span class="line"></span><br><span class="line">      load_neo_page();</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data[<span class="string">&quot;state&quot;</span>] === <span class="string">&quot;FAILURE&quot;</span>) &#123;</span><br><span class="line">      toastr[<span class="string">&quot;error&quot;</span>](<span class="string">&quot;FAILURE&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (data[<span class="string">&quot;state&quot;</span>] !== now_state) &#123;</span><br><span class="line">        toastr[<span class="string">&quot;success&quot;</span>](data[<span class="string">&quot;state&quot;</span>]);</span><br><span class="line">      &#125;</span><br><span class="line">      now_state = data[<span class="string">&quot;state&quot;</span>];</span><br><span class="line">      $(status_div.childNodes[<span class="number">3</span>]).text(<span class="string">&quot;Result: &quot;</span> + data[<span class="string">&quot;state&quot;</span>]);</span><br><span class="line"></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        update_progress(nanobar, status_div, now_state);</span><br><span class="line">      &#125;, <span class="number">2000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="后端实现"><a href="#后端实现" class="headerlink" title="后端实现"></a>后端实现</h4><p>轮询机制下的后端代码就是将状态存储在一个队列中，当轮询请求到达时将这个队列里面的消息交付给这个请求。</p>
+<h3 id="WebSocket"><a href="#WebSocket" class="headerlink" title="WebSocket"></a>WebSocket</h3><blockquote>
+<p>WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection.<br>–wikipedia</p>
+</blockquote>
+<p>在进度条上，使用 websocket 的根本目的是通过服务器端返回实时数据给前端。与前端轮询的”等间隔的时间内提高不定长的进度条长度”不同，WebScoket 拥有更加灵活的使用方式,这样做的好处就是能够让进度条的涨势更加平滑，与<a href="#%E5%81%87%E8%BF%9B%E5%BA%A6%E6%9D%A1">假进度条</a>的平滑不同，这是在实时反映后端处理进度的基础上的。</p>
+<p>具体的实现可见于下一段<a href="#flask-websocket-%E7%9A%84%E4%BD%BF%E7%94%A8">flask-websocket 的使用</a></p>
+<h2 id="flask-websocket-的使用"><a href="#flask-websocket-的使用" class="headerlink" title="flask-websocket 的使用"></a>flask-websocket 的使用</h2><p><a href="https://flask-socketio.readthedocs.io/en/latest/">文档</a>，文档中有详细的 websocket 使用案例。这里摘出我所使用的部分以为样例。</p>
+<h3 id="后端实现-👇"><a href="#后端实现-👇" class="headerlink" title="后端实现 👇"></a>后端实现 👇</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">socketio = SocketIO(app, async_mode=<span class="literal">None</span>)</span><br><span class="line">thread = <span class="literal">None</span></span><br><span class="line">thread_lock = Lock()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">background_thread</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;开始记录实时的处理进度，每隔2s返回一次&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        socketio.sleep(<span class="number">2</span>)</span><br><span class="line">        ret = []</span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">not</span> SocketQueue.res_queue.empty():</span><br><span class="line">            ProgressBar.now_length += <span class="number">1</span></span><br><span class="line">            ret.append(SocketQueue.res_queue.get())</span><br><span class="line">        socketio.emit(<span class="string">&#x27;my_response&#x27;</span>,</span><br><span class="line">                      &#123;<span class="string">&#x27;data&#x27;</span>: ret, <span class="string">&#x27;width&#x27;</span>: str(ProgressBar.calculate()) + <span class="string">&#x27;%&#x27;</span>&#125;,</span><br><span class="line">                      namespace=<span class="string">&#x27;/test&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@socketio.on(&#x27;connect&#x27;, namespace=&#x27;/test&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_connect</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;建立websocket连接&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">global</span> thread</span><br><span class="line">    <span class="keyword">with</span> thread_lock:</span><br><span class="line">        <span class="keyword">if</span> thread <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            thread = socketio.start_background_task(background_thread)</span><br><span class="line"></span><br><span class="line"><span class="meta">@socketio.on(&#x27;disconnect_request&#x27;, namespace=&#x27;/test&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">disconnect_request</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;关闭websocket连接&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">    @copy_current_request_context</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">can_disconnect</span>():</span></span><br><span class="line">        disconnect()</span><br><span class="line"></span><br><span class="line">    session[<span class="string">&#x27;receive_count&#x27;</span>] = session.get(<span class="string">&#x27;receive_count&#x27;</span>, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    emit(<span class="string">&#x27;my_response&#x27;</span>,</span><br><span class="line">         &#123;<span class="string">&#x27;data&#x27;</span>: <span class="string">&#x27;Disconnected!&#x27;</span>, <span class="string">&#x27;count&#x27;</span>: session[<span class="string">&#x27;receive_count&#x27;</span>]&#125;,</span><br><span class="line">         callback=can_disconnect)</span><br></pre></td></tr></table></figure>
+
+<h3 id="前端实现-👇"><a href="#前端实现-👇" class="headerlink" title="前端实现 👇"></a>前端实现 👇</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> socket = io(namespace);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;connect&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//   socket.emit(&quot;my_event&quot;, &#123; data: &quot;I&#x27;m connected!&quot; &#125;);</span></span><br><span class="line">  toastr.success(<span class="string">&quot;connect success&quot;</span>, <span class="string">&quot;&quot;</span>, &#123; <span class="attr">timeOut</span>: <span class="number">500</span> &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">&quot;my_response&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">msgs, cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (msgs[<span class="string">&quot;data&quot;</span>].length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> progress = $(<span class="string">&quot;#crack-progress&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">    progress.style[<span class="string">&quot;width&quot;</span>] = msgs[<span class="string">&quot;width&quot;</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  msgs[<span class="string">&quot;data&quot;</span>].forEach(<span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">    toastr.success(msg, <span class="string">&quot;&quot;</span>, &#123; <span class="attr">timeOut</span>: <span class="number">1000</span> &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">if</span> (cb) cb();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.emit(<span class="string">&quot;disconnect_request&quot;</span>);</span><br><span class="line">socket.close();</span><br></pre></td></tr></table></figure>
+
+<p>在经历了几次优化之后，<strong>实际在代码中的应用与样例代码有所出入</strong>。</p>
+<h4 id="前端的坑"><a href="#前端的坑" class="headerlink" title="前端的坑"></a>前端的坑</h4><p>前端的 socket 请求需要后端的接口对应,不能出现前端有 socket 请求而后端没有对应的接口的情况,反之则没有问题.</p>
+<p>这个坑主要是在使用 gunicorn 进行部署时出现,报错信息为 <code>Invalid session **** (further occurrences of this error will be logged with level INFO)</code> .</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>至此，进度条采用了从三种实现方式中选择了 socket .</p>
+<p>实际上，选择 socket 最核心的原因就是，以前没有实际使用过这个技术，正好借着这次的机会实践一下而已。</p>
+<p>至于性能方面，socket、前端长轮询、SSE 中哪个实现方法的效率最高、消耗最低，则不在这边文章的考虑范围之内了。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>dailyTools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫监控服务的数据库选择-bitmap应用</title>
     <url>/redis-log/</url>
     <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
@@ -6470,7 +6538,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#109;&#x32;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#122;&#x78;&#x6a;&#x6c;&#109;&#x32;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#54;&#x33;&#46;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#54;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -7138,7 +7206,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
