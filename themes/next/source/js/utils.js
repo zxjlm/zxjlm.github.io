@@ -238,6 +238,7 @@ NexT.utils = {
         event.preventDefault();
         var str_id = decodeURI(event.currentTarget.getAttribute('href').replace('#', ''));
         var target = document.getElementById(str_id);
+        var offset = target.getBoundingClientRect().top + window.scrollY;
         window.anime({
           targets  : document.scrollingElement,
           duration : 500,
