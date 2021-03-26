@@ -24,6 +24,12 @@ mongoDB 可以使用如下命令实现按入库的顺序逆序排列, 并且性�
 db.getCollection('goudi_new_new').find({}).sort({$natural:-1}).limit(5)
 ```
 
+## MySql
+
+在讨论 mysql 为什么使用自增 id 为主键之前, 有一个问题, mysql 有哪些主键选择.
+
+在常规的数据库中, 主键存在两种选择, 也就是 auto-increment (int\bigint) 和 uuid (Universally Unique Identifier) (varchar).
+
 | TABLE_NAME              | DATA   | TIME(sec) |
 | ----------------------- | ------ | --------- |
 | test_for_auto_increment | 0.33MB | 77.594    |
@@ -34,6 +40,7 @@ db.getCollection('goudi_new_new').find({}).sort({$natural:-1}).limit(5)
 
 1. [What Is MongoDB's \_id Field and How to Use It](https://orangematter.solarwinds.com/2019/12/22/what-is-mongodbs-id-field-and-how-to-use-it/)
 2. [MySQL UUID Smackdown: UUID vs. INT for Primary Key](https://www.mysqltutorial.org/mysql-uuid/)
+3. [THE CASE AGAINST AUTO INCREMENT IN MYSQL](https://blog.pythian.com/case-auto-increment-mysql/)
 
 ## SQL
 
