@@ -162,8 +162,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -234,8 +233,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -249,8 +247,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -263,8 +260,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -277,8 +273,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据结构</category>
-        <category>c++</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -292,7 +287,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>c++数据结构学习</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
   </entry>
   <entry>
@@ -321,7 +316,7 @@ Q 1 2</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>c++数据结构学习</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
       <tags>
         <tag>c++</tag>
@@ -462,7 +457,7 @@ Q 1 2</code></pre>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
-        <tag>algorithm</tag>
+        <tag>Algorithm \ Data Structure</tag>
       </tags>
   </entry>
   <entry>
@@ -483,7 +478,7 @@ Q 1 2</code></pre>
         <category>leetcodeの解题日志</category>
       </categories>
       <tags>
-        <tag>algorithm</tag>
+        <tag>Algorithm \ Data Structure</tag>
       </tags>
   </entry>
   <entry>
@@ -787,7 +782,7 @@ millisec:间隔时间（ms）</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>HTML5+CSS</category>
+        <category>HTML5\CSS</category>
       </categories>
       <tags>
         <tag>前端</tag>
@@ -1023,43 +1018,6 @@ millisec:间隔时间（ms）</code></pre>
         <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
-  </entry>
-  <entry>
-    <title>flask部署(2)</title>
-    <url>/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
-    <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
-<a id="more"></a>
-
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>阿里云 ubuntu 16</p>
-<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p>安装 virtualenv<br>sudo pip install virtualenv</p>
-<p>使用 virtualenv<br>virtualenv ENV 创建目录环境<br>source ./bin/activate 激活环境</p>
-<p>安装 gunicorn<br>pip install gunicorn</p>
-<p>安装依赖包 requirement.txt</p>
-<p>启动程序<br>gunicorn -w 4 -b 0.0.0.0:5001 -D manage:app<br>这里的-d 意思就是在后台运行，当然你也可以配置守护进程</p>
-<p>配置 gunicorn.conf</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># gunicorn.conf</span><br><span class="line"></span><br><span class="line"># 并行工作进程数</span><br><span class="line">workers &#x3D; 2</span><br><span class="line"># 指定每个工作者的线程数</span><br><span class="line">threads &#x3D; 2</span><br><span class="line"># 监听内网端口5000</span><br><span class="line">bind &#x3D; &#39;0.0.0.0:5001&#39;</span><br><span class="line"># 设置守护进程,将进程交给supervisor管理</span><br><span class="line">daemon &#x3D; &#39;true&#39;</span><br><span class="line"># 工作模式协程</span><br><span class="line">worker_class &#x3D; &#39;gevent&#39;</span><br><span class="line"># 设置最大并发量</span><br><span class="line">worker_connections &#x3D; 2000</span><br><span class="line"># 设置进程文件目录</span><br><span class="line">pidfile &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;run&#x2F;gunicorn.pid&#39;</span><br><span class="line"># 设置访问日志和错误信息日志路径</span><br><span class="line">accesslog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_acess.log&#39;</span><br><span class="line">errorlog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_error.log&#39;</span><br><span class="line"># 设置日志记录水平</span><br><span class="line">loglevel &#x3D; &#39;debug&#39;</span><br></pre></td></tr></table></figure>
-
-<h1 id="问题-amp-解决"><a href="#问题-amp-解决" class="headerlink" title="问题 &amp; 解决"></a>问题 &amp; 解决</h1><p>Q:setuptools pkg_resources pip wheel failed with error code 1</p>
-<p>S:<br>vi /root/.pip/pip.conf 修改如下:<br>[global]<br>index-url = <a href="https://pypi.python.org/simple/">https://pypi.python.org/simple/</a><br>[install]<br>trusted-host=mirrors.aliyun.com trusted-host=pypi.python.org</p>
-<p>Q:json 类的报错问题<br>S:具体的原因我还没有搞明白，Linux 默认的 python3 是 3.5 版本的，但是在进行 jinja2 渲染的时候，常常会出现 json 的报错，两种解决办法。</p>
-<ul>
-<li>修改源文件，去掉 json 调用</li>
-<li>将 3.5 手动升级到 3.7<br>各有优劣吧，3.5 版本稳定，3.7 要自己去编译升级，很复杂，而复杂往往就意味着出错率高。<br>这里我选择了后者，因为开发环境就是 3.7，直接升级到 3.7，一劳永逸。</li>
-</ul>
-<p>Q:如何升级到 3.7<br>S:参考<a href="https://segmentfault.com/a/1190000018264955">博客园上的一篇文章</a></p>
-<p>Q:升级了 python3.7 之后可能会出现的一些问题</p>
-<p>1.Command ‘(‘lsb_release’, ‘-a’)’ returned non-zero exit status 1 问题解决</p>
-<p>S:</p>
-<p>1.网上有很多的花里胡哨的办法，然后，我，直接把文件删了。。。。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm &#x2F;usr&#x2F;bin&#x2F;lsb_release</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
-      </tags>
   </entry>
   <entry>
     <title>sklearn构造性学习(1)</title>
@@ -1321,6 +1279,43 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
       </categories>
       <tags>
         <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>flask部署(2)</title>
+    <url>/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
+    <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
+<a id="more"></a>
+
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>阿里云 ubuntu 16</p>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p>安装 virtualenv<br>sudo pip install virtualenv</p>
+<p>使用 virtualenv<br>virtualenv ENV 创建目录环境<br>source ./bin/activate 激活环境</p>
+<p>安装 gunicorn<br>pip install gunicorn</p>
+<p>安装依赖包 requirement.txt</p>
+<p>启动程序<br>gunicorn -w 4 -b 0.0.0.0:5001 -D manage:app<br>这里的-d 意思就是在后台运行，当然你也可以配置守护进程</p>
+<p>配置 gunicorn.conf</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># gunicorn.conf</span><br><span class="line"></span><br><span class="line"># 并行工作进程数</span><br><span class="line">workers &#x3D; 2</span><br><span class="line"># 指定每个工作者的线程数</span><br><span class="line">threads &#x3D; 2</span><br><span class="line"># 监听内网端口5000</span><br><span class="line">bind &#x3D; &#39;0.0.0.0:5001&#39;</span><br><span class="line"># 设置守护进程,将进程交给supervisor管理</span><br><span class="line">daemon &#x3D; &#39;true&#39;</span><br><span class="line"># 工作模式协程</span><br><span class="line">worker_class &#x3D; &#39;gevent&#39;</span><br><span class="line"># 设置最大并发量</span><br><span class="line">worker_connections &#x3D; 2000</span><br><span class="line"># 设置进程文件目录</span><br><span class="line">pidfile &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;run&#x2F;gunicorn.pid&#39;</span><br><span class="line"># 设置访问日志和错误信息日志路径</span><br><span class="line">accesslog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_acess.log&#39;</span><br><span class="line">errorlog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_error.log&#39;</span><br><span class="line"># 设置日志记录水平</span><br><span class="line">loglevel &#x3D; &#39;debug&#39;</span><br></pre></td></tr></table></figure>
+
+<h1 id="问题-amp-解决"><a href="#问题-amp-解决" class="headerlink" title="问题 &amp; 解决"></a>问题 &amp; 解决</h1><p>Q:setuptools pkg_resources pip wheel failed with error code 1</p>
+<p>S:<br>vi /root/.pip/pip.conf 修改如下:<br>[global]<br>index-url = <a href="https://pypi.python.org/simple/">https://pypi.python.org/simple/</a><br>[install]<br>trusted-host=mirrors.aliyun.com trusted-host=pypi.python.org</p>
+<p>Q:json 类的报错问题<br>S:具体的原因我还没有搞明白，Linux 默认的 python3 是 3.5 版本的，但是在进行 jinja2 渲染的时候，常常会出现 json 的报错，两种解决办法。</p>
+<ul>
+<li>修改源文件，去掉 json 调用</li>
+<li>将 3.5 手动升级到 3.7<br>各有优劣吧，3.5 版本稳定，3.7 要自己去编译升级，很复杂，而复杂往往就意味着出错率高。<br>这里我选择了后者，因为开发环境就是 3.7，直接升级到 3.7，一劳永逸。</li>
+</ul>
+<p>Q:如何升级到 3.7<br>S:参考<a href="https://segmentfault.com/a/1190000018264955">博客园上的一篇文章</a></p>
+<p>Q:升级了 python3.7 之后可能会出现的一些问题</p>
+<p>1.Command ‘(‘lsb_release’, ‘-a’)’ returned non-zero exit status 1 问题解决</p>
+<p>S:</p>
+<p>1.网上有很多的花里胡哨的办法，然后，我，直接把文件删了。。。。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm &#x2F;usr&#x2F;bin&#x2F;lsb_release</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2107,7 +2102,7 @@ Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>数据分析</category>
+        <category>Data Mining</category>
       </categories>
   </entry>
   <entry>
@@ -2360,7 +2355,7 @@ Name: Fare, dtype: float64</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>dataMining</category>
+        <category>Data Mining</category>
       </categories>
       <tags>
         <tag>随机森林</tag>
@@ -2805,7 +2800,7 @@ Name: Fare, dtype: float64</code></pre>
 <li>有限状态机（DFA）。DFA 重在思路，实际上这么多题做下来，DFA 直接套用的也就一题= =</li>
 <li>哈希表。万能的哈希表，在处理记数类型的问题时可以极大地压缩时间消耗。</li>
 <li>STL 库的基本应用。这是半基础吧，不熟悉也能做题目，但是很多方法直接调用库里的比手写一遍要节约很多时间。</li>
-<li>algorithm 库。同上。</li>
+<li>Algorithm \ Data Structure 库。同上。</li>
 </ul>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; <span class="title">fullJustify</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; words, <span class="keyword">int</span> maxWidth)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = words.size(), sum = <span class="number">0</span>, start_word = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">            sum += words[i].length();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(sum &gt; maxWidth)&#123;</span><br><span class="line">                <span class="keyword">int</span> interval = i - start_word - <span class="number">1</span>;</span><br><span class="line">                <span class="built_in">string</span> tmp_s = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == start_word + <span class="number">1</span>)</span><br><span class="line">                    res.push_back(words[i<span class="number">-1</span>]+blank_generate(maxWidth-words[i<span class="number">-1</span>].length()));</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(interval == <span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> j = start_word; j &lt; i; j++)</span><br><span class="line">                        tmp_s += words[j] + <span class="string">&quot; &quot;</span>;</span><br><span class="line">                    res.push_back(tmp_s.substr(<span class="number">0</span>,maxWidth));</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">int</span> now_sum = sum - words[i].length() - interval - <span class="number">1</span>, blank_h = (maxWidth - now_sum) % interval, blank_low = (maxWidth - now_sum) / interval;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> j = start_word; j &lt;= blank_h + start_word; j++)</span><br><span class="line">                        tmp_s += words[j] + blank_generate(blank_low + <span class="number">1</span>);</span><br><span class="line">                    tmp_s = tmp_s.substr(<span class="number">0</span> , tmp_s.length() - <span class="number">1</span>);</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> j = start_word+blank_h+<span class="number">1</span> ; j &lt; i; j++)</span><br><span class="line">                        tmp_s += words[j] + blank_generate(blank_low);</span><br><span class="line">                    tmp_s = tmp_s.substr(<span class="number">0</span> , tmp_s.length() - blank_low);</span><br><span class="line">                    res.push_back(tmp_s);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                sum = <span class="number">-1</span>;</span><br><span class="line">                start_word = i--;</span><br><span class="line">            &#125;</span><br><span class="line">            sum++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">string</span> tmp_s = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = start_word;i &lt; n; i++)</span><br><span class="line">            tmp_s += words[i] + <span class="string">&quot; &quot;</span>;</span><br><span class="line">        tmp_s += blank_generate(maxWidth - tmp_s.length());</span><br><span class="line">        res.push_back(tmp_s.substr(<span class="number">0</span>,maxWidth));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">blank_generate</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        <span class="built_in">string</span> res = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; x ; i++)</span><br><span class="line">            res += <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -6614,7 +6609,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>DateBase</category>
+        <category>DataBase</category>
       </categories>
       <tags>
         <tag>Redis</tag>
@@ -6624,7 +6619,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#x33;&#x40;&#49;&#x36;&#51;&#x2e;&#99;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#108;&#x6d;&#50;&#51;&#x33;&#x40;&#49;&#x36;&#51;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -6694,7 +6689,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 <a id="more"></a>
 
 <hr>
-<p>warning: 2020-12-24 jupyter发布3.0版本,不过该版本尚不稳定,所以建议还是使用 <code>pip install jupyterlab==2.2.9</code> 安装更稳定的2.x版本</p>
+<p>warning: 2020-12-24 jupyter 发布 3.0 版本,不过该版本尚不稳定,所以建议还是使用 <code>pip install jupyterlab==2.2.9</code> 安装更稳定的 2.x 版本</p>
 <hr>
 <h2 id="删除环境"><a href="#删除环境" class="headerlink" title="删除环境"></a>删除环境</h2><p>本来只是打算清理一下各种环境,于是在网上找到了一个邪道的方法.</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; req.txt</span><br><span class="line">pip uninstall -r req.txt -y</span><br></pre></td></tr></table></figure>
@@ -6743,7 +6738,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>wsl</category>
+        <category>WSL</category>
       </categories>
       <tags>
         <tag>wsl</tag>
@@ -6841,6 +6836,117 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么 mongodb 使用 ObjectId,  而 Mysql 使用自增 id</title>
+    <url>/why-mongo-use-object-id/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先需要说明的一点是, 本篇并不是为了讨论 ObjectId 和自增 id 谁更好用.在笔者看来, 文档型数据库和关系型数据库的使用场景不同, 有不同的使用倾向是理所当然的事情, 没有必要拉到一块儿”关公战秦琼”.</p>
+<p>本篇单从设计的角度来说, 为什么 ObjectId 和 自增 id 分别使用于各自的使用场景.</p>
+<a id="more"></a>
+
+<h2 id="MySql"><a href="#MySql" class="headerlink" title="MySql"></a>MySql</h2><p>在讨论 mysql 为什么使用自增 id 为主键之前, 有一个问题, mysql 有哪些主键选择.</p>
+<p>在常规的数据库中, 主键存在两种选择, 也就是 auto-increment (int\bigint) 和 uuid (Universally Unique Identifier) (varchar).</p>
+<h3 id="自增主键"><a href="#自增主键" class="headerlink" title="自增主键"></a>自增主键</h3><p>自增主键用来为新的数据项生成一个在数据表中唯一的 id.</p>
+<p>在数据表中的数据量膨胀到一个峰值时, 需要对数据表进行分片, 而分片很容易就会导致数据表的自增 id 不再唯一.</p>
+<h4 id="引申-自增主键的数值极限"><a href="#引申-自增主键的数值极限" class="headerlink" title="引申: 自增主键的数值极限"></a>引申: 自增主键的数值极限</h4><p>先说结论, <strong>实际使用基本上达不到自增主键的极限</strong> .</p>
+<p>自增主键一般选用三个类型, int、unsigned int、bigint.</p>
+<p>int 的取值范围是 0~2147483648, unsigned 是其两倍.</p>
+<p>寻常单数据库在达到这个数量级之前, 存储空间就要告急了, 这种情况下, 一般会选择进行分库分表, 而分库分表之后, 再想要使用自增主键, 就需要进行一系列严格的规划设计.通常, 我们会改用下文的 UUID 来作为主键.</p>
+<h3 id="UUID-主键"><a href="#UUID-主键" class="headerlink" title="UUID 主键"></a>UUID 主键</h3><p>UUID 同样是一个唯一的 id, 它的唯一不再局限于数据表, 而是在 “整个宇宙” 中都独一无二.</p>
+<p>这种说法当然有欠考虑, UUID 不是”绝对”的唯一, 但是在日常的使用中可以将其看作绝对唯一.它的这个特性可以用来解决分布式数据库中的 <em>主键唯一性</em> 问题.</p>
+<p>但是 UUID 的缺点也很明显.</p>
+<ol>
+<li>查找效率</li>
+<li>占用更多的存储空间</li>
+<li>排序问题</li>
+<li>插入操作时性能很低</li>
+</ol>
+<h4 id="查找效率"><a href="#查找效率" class="headerlink" title="查找效率"></a>查找效率</h4><p>最直观的看, 相比起 <em>1, 2, 3</em> 这样简单的数字, 36 位的 UUID 在做查找时显然更加吃力.当然我们所说的查找效率并不会如此肤浅.</p>
+<p>由于主键天然就是索引, 所以在大量数据的情况下做准确查找(=)时, 二者的查找效率相差并不明显.但是在做模糊查找(LIKE)时, 自增 ID 的效率会高于 UUID.</p>
+<h4 id="占用更多的存储空间"><a href="#占用更多的存储空间" class="headerlink" title="占用更多的存储空间"></a>占用更多的存储空间</h4><ul>
+<li><p>UUID 本身占用的存储空间是自增 id 的 4 倍. (varchar(32) vs bigint)</p>
+</li>
+<li><p>根据 UUID 所建立的索引也会占用更多的存储空间.</p>
+</li>
+</ul>
+<p>二者结合起来, 存储空间的差距可以看一下 <a href="#UUID%E5%92%8C%E8%87%AA%E5%A2%9EID%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E5%AF%B9%E6%AF%94">UUID 和自增 ID 存储空间对比</a></p>
+<h5 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h5><p>针对存储空间的一个优化, 就是使用 binary UUID, 在 MySQL 中自带一个将 UUID 从 varchar 转换为 binary 的函数 – UUID_TO_BIN(), 同样, 可以使用 BIN_TO_UUID() 来逆向这个过程.</p>
+<h4 id="排序问题"><a href="#排序问题" class="headerlink" title="排序问题"></a>排序问题</h4><p>自增 id 能够直接用来进行排序, 但是 UUID 显然不具备这个特性.</p>
+<h4 id="插入效率"><a href="#插入效率" class="headerlink" title="插入效率"></a>插入效率</h4><p>在讨论插入效率之前, 先要理解一个概念, Innodb 的页是什么.</p>
+<blockquote>
+<p>Page 是 Innodb 存储的最基本结构, 也是 Innodb 磁盘管理的最小单位, 与数据库相关的所有内容都存储在 Page 结构里.</p>
+</blockquote>
+<p>当插入一个新的 UUID 主键数据时, InnoDB 会查找应该将这个行放置在哪个数据页中, 如果数据页不再缓存中, 则会将这张数据页加载进来.也就是说, 当插入这样一条新的数据时, 整个 B 树都会受到影响, 这也是 UUID 插入效率低下的本质原因.</p>
+<p>关于 UUID 和自增 ID 的插入效率, 在下文中同样有实践比较.</p>
+<h3 id="UUID-和自增-ID-存储空间对比"><a href="#UUID-和自增-ID-存储空间对比" class="headerlink" title="UUID 和自增 ID 存储空间对比"></a>UUID 和自增 ID 存储空间对比</h3><p>这里列出了新建一张一万条数据的数据表时, UUID、BIN-UUID 和 auto-increment 三者的存储空间、插入时间对比.</p>
+<p>相关的代码可见于<a href="#SQL">附录</a>.</p>
+<table>
+<thead>
+<tr>
+<th>TABLE_NAME</th>
+<th>DATA</th>
+<th>TIME(sec)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>test_for_auto_increment</td>
+<td>0.33MB</td>
+<td>77.594</td>
+</tr>
+<tr>
+<td>test_for_uuid</td>
+<td>1.52MB</td>
+<td>80.000</td>
+</tr>
+<tr>
+<td>test_for_uuid_bin</td>
+<td>0.45MB</td>
+<td>74.250</td>
+</tr>
+</tbody></table>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>自增 id 有着极高的性能与使用效率, 并且足够应付绝大多数的情境.而 UUID 虽然有诸多的缺点, 但是天然适合分布式这样的业务情境.</p>
+<p>除了 UUID 之外, 还有其他的, Nature Key、snowflake 等算法能够生成 varchar 类型的主键, 它们的缺点大同小异, 不过都在 UUID 的基础上有了不同方向、不同程度的优化.</p>
+<p>在大二为 xminer 设计数据库时, 导师让我将主键更改为 UUID, 彼时对这种主键惊为天人, 不过在现在看来, 实在是没有什么必要 😉.</p>
+<h2 id="Mongodb"><a href="#Mongodb" class="headerlink" title="Mongodb"></a>Mongodb</h2><p>现在将视角返回到 MongoDB, MongoDB 采用的是 ObjectID 作为“主键”.</p>
+<blockquote>
+<p>ObjectIds are small, likely unique, fast to generate, and ordered</p>
+</blockquote>
+<p><em>unique</em> 这个特性是否能让你回想起之前提到的 UUID? 根据这个特性, 它的一个作用就明显了, <em>有利于分布式</em>.</p>
+<p>文档型数据库海纳百川, 没有硬性的数据结构需求, “啥都可以往里面填” 的结果就是, 文档型数据库往往对应了很大的数据量以及高并发的业务需求.这也是 MongoDB 采用这种近乎唯一的 id 作为默认主键的原因.</p>
+<p>虽然早早地就抛出了它的作用, 不过我们最好还是更加深入地了解以下, <strong>什么是 ObjectID</strong>.</p>
+<h3 id="ObjectID"><a href="#ObjectID" class="headerlink" title="ObjectID"></a>ObjectID</h3><p>从<a href="https://docs.mongodb.com/manual/reference/method/ObjectId/">官方文档</a>来看, <code>ObjectId</code> 由以下的部分组成.</p>
+<ul>
+<li>a 4-byte timestamp value, representing the ObjectId’s creation, measured in seconds since the Unix epoch</li>
+<li>a 5-byte random value</li>
+<li>a 3-byte incrementing counter, initialized to a random value</li>
+</ul>
+<p>在 MongoDB 2.x 的版本中, 第二点的 5-byte 又可以细分为</p>
+<ul>
+<li>a 3-byte machine identifier</li>
+<li>a 2-byte process id</li>
+</ul>
+<p>正因为<code>ObjectID</code>将时间戳纳入主键生成的范围, mongoDB 可以使用如下命令实现按入库的顺序逆序排列, 并且性能效率要比的查找排序要高很多.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">db.getCollection(&#x27;collection_name&#x27;).find(&#123;&#125;).sort(&#123;$natural:-1&#125;).limit(5)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://orangematter.solarwinds.com/2019/12/22/what-is-mongodbs-id-field-and-how-to-use-it/">What Is MongoDB’s _id Field and How to Use It</a></li>
+<li><a href="https://www.mysqltutorial.org/mysql-uuid/">MySQL UUID Smackdown: UUID vs. INT for Primary Key</a></li>
+<li><a href="https://blog.pythian.com/case-auto-increment-mysql/">THE CASE AGAINST AUTO INCREMENT IN MYSQL</a></li>
+<li><a href="https://mareks-082.medium.com/auto-increment-keys-vs-uuid-a74d81f7476a">auto-increment-keys-vs-uuid</a></li>
+<li><a href="https://segmentfault.com/a/1190000008545713">mysql 中 InnoDB 引擎中页的概念</a></li>
+</ol>
+<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><h3 id="UUID-BIN"><a href="#UUID-BIN" class="headerlink" title="UUID_BIN"></a>UUID_BIN</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- drop table &#96;test_for_uuid_bin&#96;;</span><br><span class="line"></span><br><span class="line">CREATE TABLE &#96;test_for_uuid_bin&#96;</span><br><span class="line">(</span><br><span class="line"> id BINARY(16) PRIMARY KEY,</span><br><span class="line">    val VARCHAR(255)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE generate_data_uuid_bin()</span><br><span class="line">BEGIN</span><br><span class="line">  DECLARE i INT unsigned DEFAULT 1;</span><br><span class="line">  WHILE i &lt; 10000 DO</span><br><span class="line">    INSERT INTO &#96;test_for_uuid_bin&#96; (&#96;id&#96;, &#96;val&#96;) VALUES (</span><br><span class="line">    UUID_TO_BIN(UUID()),</span><br><span class="line">      ROUND(RAND()*100, 2)</span><br><span class="line">    );</span><br><span class="line">    SET i &#x3D; i + 1;</span><br><span class="line">  END WHILE;</span><br><span class="line">END$$</span><br><span class="line">DELIMITER ;</span><br><span class="line"></span><br><span class="line">call generate_data_uuid_bin()</span><br></pre></td></tr></table></figure>
+
+<h3 id="UUID"><a href="#UUID" class="headerlink" title="UUID"></a>UUID</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">drop table &#96;test_for_uuid&#96;;</span><br><span class="line"></span><br><span class="line">CREATE TABLE &#96;test_for_uuid&#96;</span><br><span class="line">(</span><br><span class="line"> id varchar(36) PRIMARY KEY,</span><br><span class="line">    val VARCHAR(255)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE generate_data_uuid()</span><br><span class="line">BEGIN</span><br><span class="line">  DECLARE i INT unsigned DEFAULT 1;</span><br><span class="line">  WHILE i &lt; 10000 DO</span><br><span class="line">    INSERT INTO &#96;test_for_uuid&#96; (&#96;id&#96;, &#96;val&#96;) VALUES (</span><br><span class="line">      UUID(),</span><br><span class="line">      ROUND(RAND()*100, 2)</span><br><span class="line">    );</span><br><span class="line">    SET i &#x3D; i + 1;</span><br><span class="line">  END WHILE;</span><br><span class="line">END$$</span><br><span class="line">DELIMITER ;</span><br><span class="line"></span><br><span class="line">call generate_data_uuid()</span><br></pre></td></tr></table></figure>
+
+<h3 id="AUTO-INCREMENT"><a href="#AUTO-INCREMENT" class="headerlink" title="AUTO_INCREMENT"></a>AUTO_INCREMENT</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-- drop table &#96;test_for_auto_increment&#96;;</span><br><span class="line"></span><br><span class="line">CREATE TABLE &#96;test_for_auto_increment&#96;</span><br><span class="line">(</span><br><span class="line"> id int auto_increment PRIMARY KEY,</span><br><span class="line">    val VARCHAR(255)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">DELIMITER $$</span><br><span class="line">CREATE PROCEDURE generate_data_auto_increment()</span><br><span class="line">BEGIN</span><br><span class="line">  DECLARE i INT unsigned DEFAULT 1;</span><br><span class="line">  WHILE i &lt; 10000 DO</span><br><span class="line">    INSERT INTO &#96;test_for_auto_increment&#96; (&#96;val&#96;) VALUES (</span><br><span class="line">      ROUND(RAND()*100, 2)</span><br><span class="line">    );</span><br><span class="line">    SET i &#x3D; i + 1;</span><br><span class="line">  END WHILE;</span><br><span class="line">END$$</span><br><span class="line">DELIMITER ;</span><br><span class="line"></span><br><span class="line">call generate_data_auto_increment()</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+      <tags>
+        <tag>DataBase</tag>
       </tags>
   </entry>
   <entry>
@@ -7292,7 +7398,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -7412,7 +7518,7 @@ TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>docker</category>
+        <category>Docker</category>
       </categories>
   </entry>
   <entry>
