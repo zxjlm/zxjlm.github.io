@@ -9,7 +9,7 @@ status: publish
 author: harumonia
 categories:
   - 源流清泉
-  - c++数据结构学习
+  - Algorithm \ Data Structure
 tags:
   - c++
   - 竞赛

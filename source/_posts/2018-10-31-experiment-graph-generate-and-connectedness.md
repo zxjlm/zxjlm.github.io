@@ -9,8 +9,7 @@ status: publish
 author: harumonia
 categories:
   - 源流清泉
-  - 数据结构
-  - c++
+  - Algorithm \ Data Structure
 tags:
   - 算法
 thumb:

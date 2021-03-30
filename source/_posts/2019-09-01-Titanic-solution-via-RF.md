@@ -9,7 +9,7 @@ status: publish
 author: harumonia
 categories:
   - 源流清泉
-  - dataMining
+  - Data Mining
 tags:
   - 随机森林
 customSummary:
