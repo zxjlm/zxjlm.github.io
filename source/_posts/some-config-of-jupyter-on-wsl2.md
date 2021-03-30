@@ -4,7 +4,7 @@ date: 2020-12-11 10:46:19
 updated: 2020-12-11 10:46:19
 categories:
   - 源流清泉
-  - wsl
+  - WSL
 tags:
   - wsl
 customSummary:
@@ -29,7 +29,7 @@ hidden: false
 
 ---
 
-warning: 2020-12-24 jupyter发布3.0版本,不过该版本尚不稳定,所以建议还是使用 `pip install jupyterlab==2.2.9` 安装更稳定的2.x版本
+warning: 2020-12-24 jupyter 发布 3.0 版本,不过该版本尚不稳定,所以建议还是使用 `pip install jupyterlab==2.2.9` 安装更稳定的 2.x 版本
 
 ---
 

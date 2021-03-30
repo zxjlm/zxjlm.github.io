@@ -7,7 +7,7 @@ status: publish
 author: harumonia
 categories:
   - 源流清泉
-  - DateBase
+  - DataBase
 tags:
   - Redis
 customSummary:

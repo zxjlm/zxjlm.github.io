@@ -1,6 +1,26 @@
 ---
-title: 为什么 mongodb 使用 ObjectId,  而 Mysql 使用自增 id
+title: "为什么 mongodb 使用 ObjectId,  而 Mysql 使用自增 id"
+layout: post
+cid: 230
+slug: 230
+date: 2021-03-30 18:07:14
+updated: 2021-03-30 18:07:14
+status: publish
+author: harumonia
+categories:
+  - 源流清泉
 tags:
+  - DataBase
+customSummary:
+noThumbInfoStyle: default
+outdatedNotice: no
+reprint: standard
+thumb:
+thumbChoice: default
+thumbDesc:
+thumbSmall:
+thumbStyle: default
+hidden: false
 ---
 
 ## 前言
