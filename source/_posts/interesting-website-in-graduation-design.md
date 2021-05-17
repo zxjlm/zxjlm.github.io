@@ -1,7 +1,23 @@
 ---
+layout: post
 title: interesting-website-and-tools-in-graduation-design
 date: 2021-04-13 08:19:19
 tags:
+updated: 2021-04-13 08:19:19
+status: publish
+author: harumonia
+categories:
+  - 见闻录
+tags:
+  - 毕业设计
+customSummary:
+noThumbInfoStyle: default
+outdatedNotice: no
+thumb:
+thumbChoice: default
+thumbSmall:
+thumbStyle: default
+hidden: false
 ---
 
 本篇将会介绍一些笔者在完成毕设的过程中所发现的一些有趣的网站或者工具.包括:
