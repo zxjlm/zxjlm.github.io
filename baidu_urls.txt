@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/interesting-website-in-graduation-design/
 https://blog.harumonia.moe/why-mongo-use-object-id/
 https://blog.harumonia.moe/frankenstein-develop-1/
 https://blog.harumonia.moe/poirot-development-progressbar/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/font-antispider-cracker/
 https://blog.harumonia.moe/learn-awk-1/
 https://blog.harumonia.moe/mori-question-and-code-collection/
 https://blog.harumonia.moe/mori-kokoro/
-https://blog.harumonia.moe/redis-log/
