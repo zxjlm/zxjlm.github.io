@@ -2,8 +2,20 @@
 title: Christin开发记录(1)
 date: 2021-05-21 20:46:07
 tags:
+  - 毕业设计
+author: harumonia
+categories:
+  - 源流清泉
+  - Python
+noThumbInfoStyle: default
+outdatedNotice: "no"
+thumbChoice: default
+thumbStyle: default
+hidden: false
+customSummary:
+thumb:
+thumbSmall:
 ---
-
 
 ## 关于 Christin
 
