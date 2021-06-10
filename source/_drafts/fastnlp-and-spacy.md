@@ -4,7 +4,7 @@ date: 2021-06-06 18:05:42
 tags:
 ---
 
-fastNLP 和 spaCy 都是自然语言处理常用的算法包，本篇将会应用的角度，通过这两个算法包训练一个可用的命名实体识别模型。
+fastNLP 和 spaCy 都是自然语言处理常用的算法包,本篇将会应用的角度,分别使用这两个算法包训练一个可用的命名实体识别模型.
 
 <!-- more -->
 
@@ -77,7 +77,7 @@ def transfer_sentence(df_input):
         else:
             idx += 1
             return
-    # 如果目标列表为空，说明数据集中没有特征数据，丢弃
+    # 如果目标列表为空,说明数据集中没有特征数据,丢弃
     if not targets:
         return
     return Instance(
@@ -109,7 +109,7 @@ for file_path in file_path_list:
 +-------------------+------------------+------------------+---------+------------------+-------------------+
 | raw_chars         | chars            | target           | seq_len | words            | whole_targets     |
 +-------------------+------------------+------------------+---------+------------------+-------------------+
-| 代诉：右肺癌，... | ['代', '诉', ... | ['O', 'O', 'O... | 77      | ['代', '诉', ... | ['ZZ', 'ZZ', '... |
+| 代诉：右肺癌,... | ['代', '诉', ... | ['O', 'O', 'O... | 77      | ['代', '诉', ... | ['ZZ', 'ZZ', '... |
 | 代诉：服上药后... | ['代', '诉', ... | ['O', 'O', 'O... | 114     | ['代', '诉', ... | ['BW', 'BW', '... |
 | 右下肺占位,右...  | ['右', '下', ... | ['O', 'O', 'O... | 94      | ['右', '下', ... | ['ZZ', 'ZZ', '... |
 | 右上肺占位,经...  | ['右', '上', ... | ['O', 'O', 'O... | 133     | ['右', '上', ... | ['ZZ', 'ZZ', '... |
@@ -139,11 +139,14 @@ target_vocab.from_dataset(dataset, field_name='target')
 #  使用vocabulary将chars列转换为index
 target_vocab.index_dataset(dataset, field_name='target')
 
+# 重命名列名, fastnlp这里似乎是写死的, 只有words能被识别读取
 dataset.rename_field('chars', 'words')
 
+# *设置输入列和目标列
 dataset.set_input('words','target','seq_len')
 dataset.set_target('target','seq_len')
 
+# 设置训练集和开发集
 train  = dataset[:1750]
 dev = dataset[1750:1900]
 
@@ -166,7 +169,9 @@ trainer.train()
 
 这里详细的代码说明可以去[官方文档](https://fastnlp.readthedocs.io/zh/latest/user/installation.html)的序列标注以及详细说明查看.
 
-最终得到形如下属结构的输出, 就是我们的模型结果.
+其中, **设置输入列和目标列** 这一点比较重要, 笔者也是看了源码之后才发现这个操作的, 不知道是不是有其他的配置办法.s
+
+最终得到形如下数据结构的输出, 就是我们的模型结果.
 
 ```json
 {
@@ -181,7 +186,9 @@ trainer.train()
 
 ### 工具评价
 
-总的来说, fastNLP 是绝佳的科研拍档, 我的毕设的 NLP 部分将诸多文献从理论转为实践, fastNLP 功不可没. 它能够训练模型, 并验证模型的准确率等各种指标参数, 但是这个模型如何实际应用, 却并没有提供一个很好的接口. 而从应用的角度来说, 尽管后续开发出了 [fastHan](https://github.com/fastnlp/fastHan)来不足这些短板, 但是它的使用效果还是不如人意.
+总的来说, fastNLP 是绝佳的科研拍档, 我的毕设的 NLP 部分将诸多文献从理论转为实践, fastNLP 功不可没.
+
+它虽然能够训练模型, 并验证模型的准确率等各种指标参数, 但是这个模型如何实际应用, 却并没有提供一个很好的接口. 而从应用的角度来说, 尽管后续开发出了 [fastHan](https://github.com/fastnlp/fastHan)来不足这些短板, 但是它的使用效果还是不如人意.
 
 ## spaCy
 
