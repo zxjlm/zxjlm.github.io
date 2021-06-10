@@ -2,6 +2,20 @@
 title: fastNLP和spaCy的使用
 date: 2021-06-06 18:05:42
 tags:
+  - 毕业设计
+  - 自然语言处理
+author: harumonia
+categories:
+  - 源流清泉
+  - Python
+noThumbInfoStyle: default
+outdatedNotice: "no"
+thumbChoice: default
+thumbStyle: default
+hidden: false
+customSummary:
+thumb:
+thumbSmall:
 ---
 
 fastNLP 和 spaCy 都是自然语言处理常用的算法包,本篇将会应用的角度,分别使用这两个算法包训练一个可用的命名实体识别模型.
