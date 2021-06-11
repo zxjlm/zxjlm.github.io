@@ -1,6 +1,6 @@
 ---
 layout: post
-title: interesting-website-and-tools-in-graduation-design
+title: 毕业设计过程中的一些有趣/有用的网站
 date: 2021-04-13 08:19:19
 updated: 2021-04-13 08:19:19
 status: publish
