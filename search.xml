@@ -9950,6 +9950,8 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
 <h2 id="CI-CD-部署"><a href="#CI-CD-部署" class="headerlink" title="CI/CD/部署"></a>CI/CD/部署</h2><p>本项目在 CI/CD 方面, 使用 <strong>pre-commit</strong> 做代码的质量控制, 使用 <strong>Github Action</strong> 来做线上代码质量的控制, 以及对不同版本的 Python 的支持能力, 使用 <strong>DockerHub</strong> 来对容器的构建进行验证. 并未使用 Jenkins 之类的更专业的持续集成工具.</p>
 <p>部署上, 由于采用纯前后端分离的开发形式, 所以前端页面有自己的一套路由, 无法也没有必要与 flask 做兼容, 所以, 使用 nginx 将前后端代理至统一的端口即可.</p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本篇的主要内容是毕设项目的整体设计, 值得一提的是, 这篇文章写于毕设答辩前夕, 站在总结的角度来对项目初期的一些设计和问题进行梳理, 看看整个项目的演进过程与预期的异同, 倒也别是一番滋味~</p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>附录中将会链上毕设相关的一些内容.</p>
+<p><a href="https://blog.harumonia.moe/fastnlp-and-spacy/">Python 自然语言处理应用 - fastnlp 和 spaCy</a></p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -10992,7 +10994,7 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
       </tags>
   </entry>
   <entry>
-    <title>interesting-website-and-tools-in-graduation-design</title>
+    <title>毕业设计过程中的一些有趣/有用的网站</title>
     <url>/interesting-website-in-graduation-design/</url>
     <content><![CDATA[<p>本篇将会介绍一些笔者在完成毕设的过程中所发现的一些有趣的网站或者工具.包括:</p>
 <ul>
@@ -11759,7 +11761,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#111;&#109;">&#122;&#x78;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#54;&#51;&#x2e;&#x63;&#111;&#109;">&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#51;&#x33;&#64;&#x31;&#54;&#51;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -12921,7 +12923,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
