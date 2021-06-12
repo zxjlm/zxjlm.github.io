@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/upon-graduation/
 https://blog.harumonia.moe/fastnlp-and-spacy/
 https://blog.harumonia.moe/christin-develop-1/
 https://blog.harumonia.moe/interesting-website-in-graduation-design/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/poirot-development-progressbar/
 https://blog.harumonia.moe/some-config-of-jupyter-on-wsl2/
 https://blog.harumonia.moe/sql-frm-myi-myd-files/
 https://blog.harumonia.moe/font-antispider-cracker/
-https://blog.harumonia.moe/learn-awk-1/
