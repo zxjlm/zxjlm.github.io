@@ -27,20 +27,20 @@ github_discussions:
 # More info available at https://valine.js.org
 # extend: https://github.com/DesertsP/Valine-Admin
 valine:
-  enable: false
-  appId: # your leancloud application appid
-  appKey: # your leancloud application appkey
+  enable: true
+  appId: r4JnhWDHnAkpVuaNKYAjM4rG-MdYXbMMI # your leancloud application appid
+  appKey: V82g09a4cwRrbvD1eTpo6SVt # your leancloud application appkey
   placeholder: Just go go # comment box placeholder
   avatar: # gravatar style
-  # meta:
-  #   - nick
-  #   - mail
-  #   - link
+  meta:
+    - nick
+    - mail
+    - link
   pageSize: 10 # pagination size
   # lang: zh-CN
   visitor: false
   highlight: true
-  recordIP: false
+  recordIP: true
   # serverURLs:
   # Emoji See: https://valine.js.org/emoji.html
   # emojiCDN: //i0.hdslb.com/bfs/emote/
