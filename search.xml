@@ -9828,7 +9828,7 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
 <h1 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h1><blockquote>
 <p>文字是信息的载体，而非信息本身。</p>
 </blockquote>
-<h3 id="罗塞塔石碑带来的启示："><a href="#罗塞塔石碑带来的启示：" class="headerlink" title="罗塞塔石碑带来的启示："></a>罗塞塔石碑带来的启示：</h3><p>·信息的冗余是信息安全的保障。<br>·语言的数据（语料），尤其是双语式或者多语的，对照语料对翻译至关重要，它是我们从事机器翻译研究的基础。</p>
+<h2 id="罗塞塔石碑带来的启示"><a href="#罗塞塔石碑带来的启示" class="headerlink" title="罗塞塔石碑带来的启示"></a>罗塞塔石碑带来的启示</h2><p>·信息的冗余是信息安全的保障。<br>·语言的数据（语料），尤其是双语式或者多语的，对照语料对翻译至关重要，它是我们从事机器翻译研究的基础。</p>
 <h3 id="基于统计的自然语言的处理方法：统计语言模型"><a href="#基于统计的自然语言的处理方法：统计语言模型" class="headerlink" title="基于统计的自然语言的处理方法：统计语言模型"></a>基于统计的自然语言的处理方法：统计语言模型</h3><h4 id="隐含马尔可夫模型"><a href="#隐含马尔可夫模型" class="headerlink" title="隐含马尔可夫模型"></a>隐含马尔可夫模型</h4><p>最初应用于通信领域，继而推广到语言和语音处理之中，成为连接自然语言处理和通信的桥梁。 同时，也 是机器学习的主要工具之一。需要一个训练算法（鲍姆—韦尔奇算法）和使用时的解码算法（维特比算法）。<br><strong>马尔可夫链（Markov Chain）</strong></p>
 <h2 id="信息熵（H-单位：bit）"><a href="#信息熵（H-单位：bit）" class="headerlink" title="信息熵（H 单位：bit）"></a>信息熵（H 单位：bit）</h2><p>一条信息的信息量与其不确定性有着直接的关系。（信息量等于不确定性）<br>一本书重复的内容多，信息量就小，冗余度大。<br>互信息在解决二义性方面的作用</p>
 <p>布尔代数不仅把逻辑和数学合二为一，而且给了我们一个看待世界的全新的视角。</p>
@@ -9853,7 +9853,7 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
 <blockquote>
 <p>关键算法：伪随机数产生器算法（Pseudo-Random Number Generator ,PRNG）</p>
 </blockquote>
-<p><strong>特征：不可逆性</strong></p>
+<p>特征：<strong>不可逆性</strong></p>
 <p>素相同，那么他们的指纹一定相同。</p>
 <h3 id="相似哈希——排查重复网页"><a href="#相似哈希——排查重复网页" class="headerlink" title="相似哈希——排查重复网页"></a>相似哈希——排查重复网页</h3><p>如果两个网页的相似哈希差越小，这两个网页相似性就越高。</p>
 <p>密码设计——加密函数不应该通过几个自变量和函数值就能推出函数本身</p>
@@ -10799,7 +10799,7 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
 <a id="more"></a>
 
 <p>友链扫描的基础网站选择的是 <a href="http://www.mee.gov.cn/">生态环境部</a> 的网站,基础目标是找到所有省、地级市的生态环境数据源,最终目标是开发出具有泛化能力的友链扫描工具.</p>
-<p>整个脚本的开发主要划分为3个阶段.</p>
+<p>整个脚本的开发主要划分为 3 个阶段.</p>
 <ol>
 <li>分析</li>
 <li>开发(设计)</li>
@@ -10811,7 +10811,7 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
 <h3 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h3><p>网站群存在一些特性,比如网站的友链分布特征,链接的命名特征等.</p>
 <p>具体来讲,就是我所需要的 <em>环境保护</em> 数据源友链都在某一个<code>a|li|option</code>标签群组中,并且名字中都会带有<em>环保</em>等标识字段.其中,前者是大部分友链的共性特征(可泛化),后者是该任务的独有特征(不可泛化).</p>
 <p>除此之外,友链还有其他的特征,比如 <strong>域名不同</strong> 等.</p>
-<p>根据这些特性,我们可以制作出一系列的 <code>过滤器</code> . 过滤器的价值在于能够使用更少的请求次数获得同等价值的数据,简言之,提高爬虫的命中率.在这次的项目中,如果不使用这些过滤器,总共需要大约3万次的请求,得到的有效结果是447条,而使用这些过滤器之后总共的请求次数只需要4000+而已.</p>
+<p>根据这些特性,我们可以制作出一系列的 <code>过滤器</code> . 过滤器的价值在于能够使用更少的请求次数获得同等价值的数据,简言之,提高爬虫的命中率.在这次的项目中,如果不使用这些过滤器,总共需要大约 3 万次的请求,得到的有效结果是 447 条,而使用这些过滤器之后总共的请求次数只需要 4000+而已.</p>
 <p>在完成了这些分析之后,就可以开始下一步的开发设计了.</p>
 <h2 id="开发-设计"><a href="#开发-设计" class="headerlink" title="开发(设计)"></a>开发(设计)</h2><p>开发阶段又可以细分为几个步骤.</p>
 <ol>
@@ -10821,11 +10821,11 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
 <li>深度过滤</li>
 </ol>
 <h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p>这个项目可以划分为一下几个模块.</p>
-<h4 id="动态页面请求模块"><a href="#动态页面请求模块" class="headerlink" title="动态页面请求模块"></a>动态页面请求模块</h4><p>页面请求模块所负责的内容是 <strong>获取整个页面的内容</strong> ,这里之所以强调 <em>整个页面</em> ,是因为有些网站存在 动态加载 ,简单的url请求是无法获取到页面的全部数据的.</p>
+<h4 id="动态页面请求模块"><a href="#动态页面请求模块" class="headerlink" title="动态页面请求模块"></a>动态页面请求模块</h4><p>页面请求模块所负责的内容是 <strong>获取整个页面的内容</strong> ,这里之所以强调 <em>整个页面</em> ,是因为有些网站存在 动态加载 ,简单的 url 请求是无法获取到页面的全部数据的.</p>
 <p>这一类的典型是 <a href="http://hbt.jiangsu.gov.cn/">江苏生态环境厅</a>, 抓包后可以发现,它的友链是从 “<a href="http://hbt.jiangsu.gov.cn/col/col3603/index.html&quot;">http://hbt.jiangsu.gov.cn/col/col3603/index.html&quot;</a> 这个链接动态加载的.如果只进行简单请求,那么很容易就得出 <em>这个网站没有友链</em> 这样错误的结论.</p>
 <p>爬虫方面,解决动态加载的方法有很多,我所选择的是 <code>Selenium</code>. 在等待页面完全加载之后,进行页面内容的解析.</p>
-<h4 id="简单页面请求模块"><a href="#简单页面请求模块" class="headerlink" title="简单页面请求模块"></a>简单页面请求模块</h4><p>区别于<a href="#%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97">前者</a>,这个模块就是简单的url请求(requests),但是封装了代理等请求机制.考虑到可以在之后的并行工具 – <strong>站点扫描工具</strong> 中复用,将其独立为一个模块.</p>
-<h4 id="过滤器组"><a href="#过滤器组" class="headerlink" title="过滤器组"></a>过滤器组</h4><p>过滤器组在扫描的同时对获取到的url进行过滤,留下符合条件的url进行下一轮的爬取.</p>
+<h4 id="简单页面请求模块"><a href="#简单页面请求模块" class="headerlink" title="简单页面请求模块"></a>简单页面请求模块</h4><p>区别于<a href="#%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97">前者</a>,这个模块就是简单的 url 请求(requests),但是封装了代理等请求机制.考虑到可以在之后的并行工具 – <strong>站点扫描工具</strong> 中复用,将其独立为一个模块.</p>
+<h4 id="过滤器组"><a href="#过滤器组" class="headerlink" title="过滤器组"></a>过滤器组</h4><p>过滤器组在扫描的同时对获取到的 url 进行过滤,留下符合条件的 url 进行下一轮的爬取.</p>
 <p>同时,过滤器组的设计需要考虑如下问题.</p>
 <ol>
 <li>过滤器是否存在顺序关系？什么样的顺序性能最优？</li>
@@ -10833,15 +10833,15 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
 </ol>
 <p>强调顺序,是因为不同的过滤器有不同的时间复杂度,按照复杂度由低到高的顺序排列,将会得到理论上的性能最优解.</p>
 <p>而泛用性上,我们可以将具有泛用性的过滤器保存下来,并封装到对象中；而不具备泛用性的,可以直接扔到一个外部的 <code>utils.py</code> 这样的工具文件中,或者不做保留.</p>
-<h4 id="遍历模块"><a href="#遍历模块" class="headerlink" title="遍历模块"></a>遍历模块</h4><p>遍历模块对基础url进行DFS,同时,它还有调度两个请求模块和过滤器模块的职责.</p>
-<h4 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h4><p>子模块按需构建,这里我构建了一个模块用来根据行政区划来将扫描的结果归档为excel,不过子模块中的模块组显然不具备 <em>泛用性</em>,所以这里不做讨论 .</p>
+<h4 id="遍历模块"><a href="#遍历模块" class="headerlink" title="遍历模块"></a>遍历模块</h4><p>遍历模块对基础 url 进行 DFS,同时,它还有调度两个请求模块和过滤器模块的职责.</p>
+<h4 id="子模块"><a href="#子模块" class="headerlink" title="子模块"></a>子模块</h4><p>子模块按需构建,这里我构建了一个模块用来根据行政区划来将扫描的结果归档为 excel,不过子模块中的模块组显然不具备 <em>泛用性</em>,所以这里不做讨论 .</p>
 <h3 id="代码抽象"><a href="#代码抽象" class="headerlink" title="代码抽象"></a>代码抽象</h3><p>分析阶段我们抽取出一系列的网站特性,并初步设计了过滤器组.这里通过代码实现过滤器组.</p>
 <h4 id="节点过滤器"><a href="#节点过滤器" class="headerlink" title="节点过滤器"></a>节点过滤器</h4><p>节点过滤器用来筛选出所有的外链.</p>
 <p>外链的特征:</p>
 <ul>
 <li>必然是 <code>a</code> or <code>option</code> 标签</li>
 <li>必然 <strong>跨域</strong></li>
-<li>URI长度限定</li>
+<li>URI 长度限定</li>
 </ul>
 <p>节点过滤器可以嵌入到 <code>BeautifulSoup</code> 的 <code>find()</code> 函数中.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__fixed_filter</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> tag<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -10887,7 +10887,7 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
             tmp_list <span class="token operator">+=</span> v
     self<span class="token punctuation">.</span>tag_list <span class="token operator">=</span> tmp_list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="黑名单过滤"><a href="#黑名单过滤" class="headerlink" title="黑名单过滤"></a>黑名单过滤</h4><p>白名单过滤会将 <strong>在顶级域名黑名单内的域名</strong> 滤出. 这个白名单是由开发者自己指定,一般是用在第一次过滤结束之后,一些难以根据代码规则滤出的url,我们可以手动添加进黑名单中,这样以后跑的时候就不用再受这些坏链接的困扰了.</p>
+<h4 id="黑名单过滤"><a href="#黑名单过滤" class="headerlink" title="黑名单过滤"></a>黑名单过滤</h4><p>白名单过滤会将 <strong>在顶级域名黑名单内的域名</strong> 滤出. 这个白名单是由开发者自己指定,一般是用在第一次过滤结束之后,一些难以根据代码规则滤出的 url,我们可以手动添加进黑名单中,这样以后跑的时候就不用再受这些坏链接的困扰了.</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__float_filter_domain_suffix</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>domain_suffix<span class="token punctuation">:</span>
         <span class="token keyword">return</span>
@@ -10905,7 +10905,7 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
 
     self<span class="token punctuation">.</span>tag_list <span class="token operator">=</span> result_list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="后缀过滤器"><a href="#后缀过滤器" class="headerlink" title="后缀过滤器"></a>后缀过滤器</h4><p>我们需要的只是 <strong>网页</strong> , 而 <em>图片、css、js甚至是exe</em> , 这些都没有实际价值, 反而会严重拖慢我们的扫描速度.</p>
+<h4 id="后缀过滤器"><a href="#后缀过滤器" class="headerlink" title="后缀过滤器"></a>后缀过滤器</h4><p>我们需要的只是 <strong>网页</strong> , 而 <em>图片、css、js 甚至是 exe</em> , 这些都没有实际价值, 反而会严重拖慢我们的扫描速度.</p>
 <p>这里我根据爬取的记录加入了一些后缀, <strong>并不全面哦</strong> .</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">__core_filter</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
 
@@ -11377,19 +11377,24 @@ r<span class="token punctuation">.</span>elapsed <span class="token operator">=<
 </span></span>
 ColorForCompare(0,0,0,0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>r = 0, g = 0, b = 0, alpha = 0</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output <span class="token builtin class-name">:</span> r <span class="token operator">=</span> <span class="token number">0</span>, g <span class="token operator">=</span> <span class="token number">0</span>, b <span class="token operator">=</span> <span class="token number">0</span>, alpha <span class="token operator">=</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">color_for_compare <span class="token operator">=</span> ColorForCompare<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
 color_for_compare<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>---------------------------------------------------------------------------
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
 
-AttributeError                            Traceback (most recent call last)
+---------------------------------------------------------------------------
 
-&lt;ipython-input-58-e007350343ef&gt; in &lt;module&gt;
-----&gt; 1 color_for_compare.x = 1
+AttributeError                            Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>ipython-input-58-e007350343ef<span class="token operator">></span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+----<span class="token operator">></span> <span class="token number">1</span> color_for_compare.x <span class="token operator">=</span> <span class="token number">1</span>
 
 
-AttributeError: &#39;ColorForCompare&#39; object has no attribute &#39;x&#39;</code></pre>
+AttributeError: <span class="token string">'ColorForCompare'</span> object has no attribute <span class="token string">'x'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>这样，使用内置的 __slots__ 将变量固定住，就避免了 x 这样意义不明的值的干扰。同时，为了美观，又加上了一个 __repr__() 来输出实例化的结果。</p>
 <p>至此，大体上完成了一个 color 容器。那么，在对应的 nametuple 中要如何实现这些功能呢？</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> namedtuple
@@ -11397,21 +11402,27 @@ Color <span class="token operator">=</span> namedtuple<span class="token punctua
 
 Color<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre><code>Color(r=0, g=0, b=0, alpha=0)</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+
+Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p>对了，就是这样简单，这里我们可以再测试一下是否有限制变量名称的功能。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">color <span class="token operator">=</span> Color<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
 color<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>---------------------------------------------------------------------------
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
 
-AttributeError                            Traceback (most recent call last)
+    ---------------------------------------------------------------------------
 
-&lt;ipython-input-64-02f8a35ba0d6&gt; in &lt;module&gt;
-      1 color = Color(0,0,0,0)
-----&gt; 2 color.x = 1
+    AttributeError                            Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>
+
+    <span class="token operator">&lt;</span>ipython-input-64-02f8a35ba0d<span class="token operator"><span class="token file-descriptor important">6</span>></span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+          <span class="token number">1</span> color <span class="token operator">=</span> Color<span class="token punctuation">(</span><span class="token number">0,0</span>,0,0<span class="token punctuation">)</span>
+    ----<span class="token operator">></span> <span class="token number">2</span> color.x <span class="token operator">=</span> <span class="token number">1</span>
 
 
-AttributeError: &#39;Color&#39; object has no attribute &#39;x&#39;</code></pre>
+    AttributeError: <span class="token string">'Color'</span> object has no attribute <span class="token string">'x'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>通过使用 nametuple，两行代码完成了 7 行代码的工作。</p>
 <p>这里需要 <strong>补充</strong> 的是，你无法通过 color.r = 1 这样的语句来直接修改 nametuple 的值，具体可以看 <a href="https://docs.python.org/3/library/collections.html#collections.somenamedtuple._replace">python3.collections</a>,毕竟，这是个 tuple😄</p>
 <p>nametuple 本身无法应付一些复杂的场景，比如，我们可能需要根据特殊的 rgb 值来判断是否是一些特殊的颜色(如:50,0,255-&gt;蓝色)，这就需要一些额外的函数来实现。<br>还有一种更加符合面向对象思维的方法，将这个函数变成 Color 类的成员函数，组件一个完善的 Color 类。显然单纯的 nametuple 无法做到这一点。</p>
@@ -11426,7 +11437,8 @@ AttributeError: &#39;Color&#39; object has no attribute &#39;x&#39;</code></pre>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">color_p <span class="token operator">=</span> ColorPlus<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
 color_p<span class="token punctuation">.</span>convert_color_to_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>&#39;蓝色&#39;</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:  <span class="token string">'蓝色'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>新的类可以继承 nametuple 所定义的容器~</p>
 <p>这就是我所说的 <strong>场景二：用来快速生成 csv、sql 对应的类</strong></p>
 <h2 id="与-dictionary-的对比"><a href="#与-dictionary-的对比" class="headerlink" title="与 dictionary 的对比"></a>与 dictionary 的对比</h2><p>python 提供了一个非常方便的容器，也就是字典。这二者的区别在于，dictionary 是 unhashable 的，而 nametuple 相反。</p>
@@ -11434,54 +11446,71 @@ color_p<span class="token punctuation">.</span>convert_color_to_string<span clas
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">color1 <span class="token operator">=</span> Color<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
 Counter<span class="token punctuation">(</span><span class="token punctuation">[</span>color<span class="token punctuation">,</span> color<span class="token punctuation">,</span>color1<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>Counter(&#123;Color(r=0, g=0, b=0, alpha=0): 2,
-         Color(r=50, g=0, b=255, alpha=0): 1&#125;)</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+
+    Counter<span class="token punctuation">(</span><span class="token punctuation">&#123;</span>Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>: <span class="token number">2</span>,
+             Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">255</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>: <span class="token number">1</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"r"</span><span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">:</span> <span class="token number">205</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">"alpha"</span><span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">&#125;</span>
 Counter<span class="token punctuation">(</span><span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>---------------------------------------------------------------------------
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
 
-TypeError                                 Traceback (most recent call last)
+    ---------------------------------------------------------------------------
 
-&lt;ipython-input-80-85ae4a80ee69&gt; in &lt;module&gt;
-      1 c = &#123;&quot;r&quot;: 50, &quot;g&quot;: 205, &quot;b&quot;: 50, &quot;alpha&quot;: 1.0&#125;
-----&gt; 2 Counter([c.items()])
+    TypeError                                 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>
 
-
-~\miniconda3\envs\jupy\lib\collections\__init__.py in __init__(*args, **kwds)
-    566             raise TypeError(&#39;expected at most 1 arguments, got %d&#39; % len(args))
-    567         super(Counter, self).__init__()
---&gt; 568         self.update(*args, **kwds)
-    569
-    570     def __missing__(self, key):
+    <span class="token operator">&lt;</span>ipython-input-80-85ae4a80ee6<span class="token operator"><span class="token file-descriptor important">9</span>></span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">></span>
+          <span class="token number">1</span> c <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"r"</span><span class="token builtin class-name">:</span> <span class="token number">50</span>, <span class="token string">"g"</span><span class="token builtin class-name">:</span> <span class="token number">205</span>, <span class="token string">"b"</span><span class="token builtin class-name">:</span> <span class="token number">50</span>, <span class="token string">"alpha"</span><span class="token builtin class-name">:</span> <span class="token number">1.0</span><span class="token punctuation">&#125;</span>
+    ----<span class="token operator">></span> <span class="token number">2</span> Counter<span class="token punctuation">(</span><span class="token punctuation">[</span>c.items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
 
-~\miniconda3\envs\jupy\lib\collections\__init__.py in update(*args, **kwds)
-    653                     super(Counter, self).update(iterable) # fast path when counter is empty
-    654             else:
---&gt; 655                 _count_elements(self, iterable)
-    656         if kwds:
-    657             self.update(kwds)
+    ~<span class="token punctuation">\</span>miniconda3<span class="token punctuation">\</span>envs<span class="token punctuation">\</span>jupy<span class="token punctuation">\</span>lib<span class="token punctuation">\</span>collections<span class="token punctuation">\</span>__init__.py <span class="token keyword">in</span> __init__<span class="token punctuation">(</span>*args, **kwds<span class="token punctuation">)</span>
+        <span class="token number">566</span>             raise TypeError<span class="token punctuation">(</span><span class="token string">'expected at most 1 arguments, got %d'</span> % len<span class="token punctuation">(</span>args<span class="token punctuation">))</span>
+        <span class="token number">567</span>         super<span class="token punctuation">(</span>Counter, self<span class="token punctuation">)</span>.__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    --<span class="token operator">></span> <span class="token number">568</span>         self.update<span class="token punctuation">(</span>*args, **kwds<span class="token punctuation">)</span>
+        <span class="token number">569</span>
+        <span class="token number">570</span>     def __missing__<span class="token punctuation">(</span>self, key<span class="token punctuation">)</span>:
 
 
-TypeError: unhashable type: &#39;dict_items&#39;</code></pre>
+    ~<span class="token punctuation">\</span>miniconda3<span class="token punctuation">\</span>envs<span class="token punctuation">\</span>jupy<span class="token punctuation">\</span>lib<span class="token punctuation">\</span>collections<span class="token punctuation">\</span>__init__.py <span class="token keyword">in</span> update<span class="token punctuation">(</span>*args, **kwds<span class="token punctuation">)</span>
+        <span class="token number">653</span>                     super<span class="token punctuation">(</span>Counter, self<span class="token punctuation">)</span>.update<span class="token punctuation">(</span>iterable<span class="token punctuation">)</span> <span class="token comment"># fast path when counter is empty</span>
+        <span class="token number">654</span>             else:
+    --<span class="token operator">></span> <span class="token number">655</span>                 _count_elements<span class="token punctuation">(</span>self, iterable<span class="token punctuation">)</span>
+        <span class="token number">656</span>         <span class="token keyword">if</span> kwds:
+        <span class="token number">657</span>             self.update<span class="token punctuation">(</span>kwds<span class="token punctuation">)</span>
+
+
+    TypeError: unhashable type: <span class="token string">'dict_items'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>dict 是无法使用 Counter 的。</p>
 <p>本质上，nametuple 仍然是 tuple，是与 dictionary 并行的 python 容器。所以这两者的选用，根据实际情况，具体问题具体分析。</p>
 <p>还有一个值得一提的区别。在日常使用 dict 时，我们可能会纠结应该时 color[‘blue’] 还是 color[‘b’]，在多人开发时，这会导致一些麻烦甚至是风险 。而在使用 nametuple 时，ide 会像对待 class 一样给出相应的代码提示。</p>
 <h2 id="nametuple-与-dictionary-和-tuple-的转换方法"><a href="#nametuple-与-dictionary-和-tuple-的转换方法" class="headerlink" title="nametuple 与 dictionary 和 tuple 的转换方法"></a>nametuple 与 dictionary 和 tuple 的转换方法</h2><h3 id="dictionary-gt-nametuple"><a href="#dictionary-gt-nametuple" class="headerlink" title="dictionary =&gt; nametuple"></a>dictionary =&gt; nametuple</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"r"</span><span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">"g"</span><span class="token punctuation">:</span> <span class="token number">205</span><span class="token punctuation">,</span> <span class="token string">"b"</span><span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">"alpha"</span><span class="token punctuation">:</span> <span class="token number">1.0</span><span class="token punctuation">&#125;</span>
 Color<span class="token punctuation">(</span><span class="token operator">**</span>c<span class="token punctuation">)</span>   <span class="token comment"># unpack</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>Color(r=50, g=205, b=50, alpha=1.0)</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+
+    Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">205</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h4 id="dictionary-创建一个-nametuple"><a href="#dictionary-创建一个-nametuple" class="headerlink" title="dictionary 创建一个 nametuple"></a>dictionary 创建一个 nametuple</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">Color <span class="token operator">=</span> namedtuple<span class="token punctuation">(</span><span class="token string">"Color"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span>
 Color<span class="token punctuation">(</span><span class="token operator">**</span>c<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<pre><code>Color(r=50, g=205, b=50, alpha=1.0)</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+
+    Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">205</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="nametuple-gt-dictionary"><a href="#nametuple-gt-dictionary" class="headerlink" title="nametuple =&gt; dictionary"></a>nametuple =&gt; dictionary</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">Color<span class="token punctuation">(</span><span class="token operator">**</span>c<span class="token punctuation">)</span><span class="token punctuation">.</span>_asdict<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre><code>OrderedDict([(&#39;r&#39;, 50), (&#39;g&#39;, 205), (&#39;b&#39;, 50), (&#39;alpha&#39;, 1.0)])</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+    OrderedDict<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'r'</span>, <span class="token number">50</span><span class="token punctuation">)</span>, <span class="token punctuation">(</span><span class="token string">'g'</span>, <span class="token number">205</span><span class="token punctuation">)</span>, <span class="token punctuation">(</span><span class="token string">'b'</span>, <span class="token number">50</span><span class="token punctuation">)</span>, <span class="token punctuation">(</span><span class="token string">'alpha'</span>, <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">tuple</span><span class="token punctuation">(</span>Color<span class="token punctuation">(</span><span class="token operator">**</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre><code>(50, 205, 50, 1.0)</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+    <span class="token punctuation">(</span><span class="token number">50</span>, <span class="token number">205</span>, <span class="token number">50</span>, <span class="token number">1.0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>与字典的排序方法相类似，可以使用简单的 lambda 来实现 nametuple 的排序功能</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">colors <span class="token operator">=</span> <span class="token punctuation">[</span>
     Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> g<span class="token operator">=</span><span class="token number">205</span><span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -11491,9 +11520,11 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">sorted</span><span class="token punctuation">(</span>colors<span class="token punctuation">,</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">.</span>alpha<span class="token punctuation">,</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre><code>[Color(r=50, g=205, b=50, alpha=0.5),
- Color(r=50, g=0, b=0, alpha=0.3),
- Color(r=50, g=205, b=50, alpha=0.1)]</code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">output:
+    <span class="token punctuation">[</span>Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">205</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">)</span>,
+     Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">)</span>,
+     Color<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">g</span><span class="token operator">=</span><span class="token number">205</span>, <span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">50</span>, <span class="token assign-left variable">alpha</span><span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上，就是现阶段使用 nametuple 的一些心得体会，与常见的容器对比总结如下：</p>
 <h3 id="与-class"><a href="#与-class" class="headerlink" title="与 class"></a>与 class</h3><ol>
 <li>自带了 solt 属性</li>
@@ -11761,7 +11792,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#106;&#108;&#109;&#50;&#x33;&#51;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#x7a;&#120;&#106;&#108;&#109;&#50;&#x33;&#51;&#64;&#x31;&#x36;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#106;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#109;">&#x7a;&#x78;&#106;&#108;&#x6d;&#50;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -11876,7 +11907,7 @@ c<span class="token punctuation">.</span>NotebookApp<span class="token punctuati
 webbrowser<span class="token punctuation">.</span>register<span class="token punctuation">(</span><span class="token string">'chrome'</span><span class="token punctuation">,</span><span class="token boolean">None</span><span class="token punctuation">,</span>webbrowser<span class="token punctuation">.</span>GenericBrowser<span class="token punctuation">(</span><span class="token string">'/usr/bin/chrome'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>browser <span class="token operator">=</span> <span class="token string">'chrome'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="可能会出现的问题"><a href="#可能会出现的问题" class="headerlink" title="可能会出现的问题"></a>可能会出现的问题</h4><p>无法定向到 “ <em><a href="http://localhost:8888/?token=%5C*%5C*%5C*%5C">http://localhost:8888/?token=\*\*\*\</a>*</em> “ ,而是出现了如下的字样,然后浏览器打开定向到文件路径.</p>
+<h4 id="可能会出现的问题"><a href="#可能会出现的问题" class="headerlink" title="可能会出现的问题"></a>可能会出现的问题</h4><p>无法定向到 <a href="http://localhost:8888/?token=%5C*%5C*%5C*%5C*">http://localhost:8888/?token=\*\*\*\*</a> ,而是出现了如下的字样,然后浏览器打开定向到文件路径.</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">To access the notebook, <span class="token function">open</span> this <span class="token function">file</span> <span class="token keyword">in</span> a browser:
     file:///cygdrive/c/home/.local/share/jupyter/runtime/nbserver-1003-open.html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -12044,6 +12075,12 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
 <p>这四年来, 干过一些年少轻狂的事情, 也写过一些无病呻吟的文字, 但总的来说, 印证了那句老话, “不因虚度度年华而悔恨，也不因碌碌无为而羞愧”, 谨以此篇, 以作激励, 希望在大学之后的生活, 同样能够活出自己的精彩.</p>
 <p>2021.6 于南京中医药大学</p>
 ]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
   </entry>
   <entry>
     <title>为什么 mongodb 使用 ObjectId,  而 Mysql 使用自增 id</title>
@@ -12960,7 +12997,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>

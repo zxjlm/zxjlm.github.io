@@ -29,11 +29,9 @@ function generateBanner(title) {
   for (let i = 0; i < title.length; i++) {
     const char = title[i];
     let charBox = document.createElement("div");
-    let rn = random(1.5, 3.5);
+    let rn = i != 0 ? random(1.5, 2.5) : 2.5;
     if (char === " ") {
-      charBox.innerHTML = `<span class='char' style='height: ${
-        rn / 2
-      }rem'></span>`;
+      charBox.innerHTML = `<span class='char' style='height: 3rem'></span>`;
     } else {
       charBox.innerHTML = "<span class='char'>" + char + "</span>";
     }
