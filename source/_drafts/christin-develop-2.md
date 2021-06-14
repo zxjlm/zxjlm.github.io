@@ -1,5 +1,5 @@
 ---
-title: Christin开发记录(2)
+title: Christin开发记录(2) - nginx和前后端分离
 date: 2021-06-06 18:05:28
 tags:
 ---
