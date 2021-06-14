@@ -526,11 +526,11 @@ search:
   # placeholder: 想要搜些什么？
 
 engine_search:
-  enable: false
+  enable: true
   href: "https://www.google.com/search?q=site:"
   # href: "https://www.baidu.com/s?wd=site:"
   # href: "https://www.bing.com/search?q=site:"
-  domain: yunyoujun.cn
+  domain: harumonia.moe
 
 # https://github.com/wzpan/hexo-generator-search
 local_search:
@@ -554,8 +554,8 @@ google_adsense:
 # Analysis
 # ---------------
 google_analytics:
-  enable: false
-  id: UA-XXXXXXXXX-X
+  enable: true
+  id: G-EBNGE3F0F6
 
 # Google Tagmanager
 google_tagmanager:
@@ -615,7 +615,7 @@ mourn:
 
 # SEO
 # https://ziyuan.baidu.com/linksubmit/index
-baidu_push: false
+baidu_push: true
 
 # custom (You can use variables.)
 custom:
