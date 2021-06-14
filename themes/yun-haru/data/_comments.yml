@@ -38,7 +38,7 @@ valine:
     - link
   pageSize: 10 # pagination size
   # lang: zh-CN
-  visitor: false
+  visitor: true
   highlight: true
   recordIP: true
   # serverURLs:
