@@ -363,9 +363,11 @@ scrollreveal:
 bg_image:
   enable: true
   url: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-0-blur-30px.jpg # recomend image related to your mode
-  dark: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/galaxy.jpg
+  # dark: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/galaxy.jpg
+  # dark: https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/bg_two_gl.webp
+  dark: https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/bg_tree_gl.webp
   # blur: 30px
-  opacity: 1
+  opacity: 0.7
 
 # Reward (Donate)
 # If enable true, reward would be displayed in every posts and pages by default.
@@ -377,7 +379,7 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      # path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg
+      path: https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3741.JPG
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
@@ -385,7 +387,7 @@ reward:
       color: "#12B7F5"
       icon: icon-qq-line
     - name: 微信支付
-      # path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg
+      path: https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3742.JPG
       color: "#2DC100"
       icon: icon-wechat-pay-line
     # - name: paypal
