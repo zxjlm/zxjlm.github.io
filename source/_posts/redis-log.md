@@ -18,6 +18,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。

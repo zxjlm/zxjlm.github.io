@@ -20,6 +20,7 @@ thumbDesc:
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 # 个人介绍

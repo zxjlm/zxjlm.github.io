@@ -16,6 +16,7 @@ hidden: false
 customSummary:
 thumb:
 thumbSmall:
+email: zxjlm233@gmail.com
 ---
 
 fastNLP 和 spaCy 都是自然语言处理常用的算法包,本篇将会应用的角度,分别使用这两个算法包训练一个可用的命名实体识别模型.
