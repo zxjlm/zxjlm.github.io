@@ -87,22 +87,29 @@ class ColorForCompare:
 ColorForCompare(0,0,0,0)
 ```
 
-    r = 0, g = 0, b = 0, alpha = 0
+```shell
+output : r = 0, g = 0, b = 0, alpha = 0
+```
 
 ```python
 color_for_compare = ColorForCompare(0,0,0,0)
 color_for_compare.x = 1
 ```
 
-    ---------------------------------------------------------------------------
+```shell
+output:
 
-    AttributeError                            Traceback (most recent call last)
+---------------------------------------------------------------------------
 
-    <ipython-input-58-e007350343ef> in <module>
-    ----> 1 color_for_compare.x = 1
+AttributeError                            Traceback (most recent call last)
+
+<ipython-input-58-e007350343ef> in <module>
+----> 1 color_for_compare.x = 1
 
 
-    AttributeError: 'ColorForCompare' object has no attribute 'x'
+AttributeError: 'ColorForCompare' object has no attribute 'x'
+
+```
 
 这样，使用内置的 \_\_slots\_\_ 将变量固定住，就避免了 x 这样意义不明的值的干扰。同时，为了美观，又加上了一个 \_\_repr\_\_() 来输出实例化的结果。
 
@@ -115,7 +122,11 @@ Color = namedtuple("Color", "r g b alpha")
 Color(0,0,0,0)
 ```
 
-    Color(r=0, g=0, b=0, alpha=0)
+```shell
+output:
+
+Color(r=0, g=0, b=0, alpha=0)
+```
 
 对了，就是这样简单，这里我们可以再测试一下是否有限制变量名称的功能。
 
@@ -123,6 +134,9 @@ Color(0,0,0,0)
 color = Color(0,0,0,0)
 color.x = 1
 ```
+
+```shell
+output:
 
     ---------------------------------------------------------------------------
 
@@ -134,6 +148,7 @@ color.x = 1
 
 
     AttributeError: 'Color' object has no attribute 'x'
+```
 
 通过使用 nametuple，两行代码完成了 7 行代码的工作。
 
@@ -158,7 +173,9 @@ color_p = ColorPlus(50,0,255,0)
 color_p.convert_color_to_string()
 ```
 
-    '蓝色'
+```shell
+output:  '蓝色'
+```
 
 新的类可以继承 nametuple 所定义的容器~
 
@@ -175,13 +192,21 @@ color1 = Color(50,0,255,0)
 Counter([color, color,color1])
 ```
 
+```shell
+output:
+
     Counter({Color(r=0, g=0, b=0, alpha=0): 2,
              Color(r=50, g=0, b=255, alpha=0): 1})
+
+```
 
 ```python
 c = {"r": 50, "g": 205, "b": 50, "alpha": 1.0}
 Counter([c])
 ```
+
+```shell
+output:
 
     ---------------------------------------------------------------------------
 
@@ -209,6 +234,7 @@ Counter([c])
 
 
     TypeError: unhashable type: 'dict_items'
+```
 
 dict 是无法使用 Counter 的。
 
@@ -225,7 +251,11 @@ c = {"r": 50, "g": 205, "b": 50, "alpha": 1.0}
 Color(**c)   # unpack
 ```
 
+```shell
+output:
+
     Color(r=50, g=205, b=50, alpha=1.0)
+```
 
 #### dictionary 创建一个 nametuple
 
@@ -234,7 +264,11 @@ Color = namedtuple("Color", c)
 Color(**c)
 ```
 
+```shell
+output:
+
     Color(r=50, g=205, b=50, alpha=1.0)
+```
 
 ### nametuple => dictionary
 
@@ -242,13 +276,19 @@ Color(**c)
 Color(**c)._asdict()
 ```
 
+```shell
+output:
     OrderedDict([('r', 50), ('g', 205), ('b', 50), ('alpha', 1.0)])
+```
 
 ```python
 tuple(Color(**c))
 ```
 
+```shell
+output:
     (50, 205, 50, 1.0)
+```
 
 ## 排序
 
@@ -266,9 +306,12 @@ colors = [
 sorted(colors,key=lambda x:x.alpha,reverse=True)
 ```
 
+```shell
+output:
     [Color(r=50, g=205, b=50, alpha=0.5),
      Color(r=50, g=0, b=0, alpha=0.3),
      Color(r=50, g=205, b=50, alpha=0.1)]
+```
 
 ## 总结
 
