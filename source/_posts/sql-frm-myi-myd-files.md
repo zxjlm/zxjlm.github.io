@@ -17,6 +17,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 最近在寻找一些毕设要用到的数据，医药相关的，恰好在某个网站上面找到了备份数据库(手段不太光彩，这里就不细说了)，省去了写爬虫的麻烦。

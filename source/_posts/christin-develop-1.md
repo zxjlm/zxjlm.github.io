@@ -15,6 +15,7 @@ hidden: false
 customSummary:
 thumb:
 thumbSmall:
+email: zxjlm233@gmail.com
 ---
 
 ## 关于 Christin

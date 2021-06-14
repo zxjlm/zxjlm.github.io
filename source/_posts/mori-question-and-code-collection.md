@@ -18,6 +18,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 ## 前言

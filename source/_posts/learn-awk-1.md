@@ -17,6 +17,7 @@ thumb:
 thumbChoice: default
 thumbSmall:
 thumbStyle: default
+email: zxjlm233@gmail.com
 hidden: false
 ---
 

@@ -18,6 +18,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 > Factory Function for Tuples with Named Fields

@@ -15,6 +15,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 由于之前疏于对公司电脑上面的 C 盘的管理,它的存储空间不出意外地炸了.

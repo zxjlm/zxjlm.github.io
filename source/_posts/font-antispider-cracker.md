@@ -19,6 +19,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 ## 字体反爬虫

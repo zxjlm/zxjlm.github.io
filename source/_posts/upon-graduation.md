@@ -2,6 +2,19 @@
 title: 大学生活阶段性小结
 date: 2021-06-11 10:35:44
 tags:
+  - 生活
+author: harumonia
+categories:
+  - 起居杂录
+email: zxjlm233@gmail.com
+noThumbInfoStyle: default
+outdatedNotice: "no"
+thumbChoice: default
+thumbStyle: default
+hidden: false
+customSummary:
+thumb:
+thumbSmall:
 ---
 
 醉花阴 - 满船清梦

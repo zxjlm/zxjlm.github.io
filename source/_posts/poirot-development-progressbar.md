@@ -17,6 +17,7 @@ updated: 2021-02-01 17:32:00
 customSummary:
 thumb:
 thumbSmall:
+email: zxjlm233@gmail.com
 ---
 
 Poirot 是自动将字体文件(woff\woff2\ttf)映射为结果字典,主要用于中文字体反爬虫的破解,包括 css 字体映射和图片文字反爬虫.

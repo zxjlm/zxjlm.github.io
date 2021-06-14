@@ -13,6 +13,7 @@ tags:
   - 读书笔记
 thumb:
 thumbStyle: default
+email: zxjlm233@gmail.com
 hidden: false
 ---
 

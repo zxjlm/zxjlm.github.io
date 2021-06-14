@@ -17,6 +17,7 @@ thumbChoice: default
 thumbSmall:
 thumbStyle: default
 hidden: false
+email: zxjlm233@gmail.com
 ---
 
 本篇将会介绍一些笔者在完成毕设的过程中所发现的一些有趣的网站或者工具.包括:
