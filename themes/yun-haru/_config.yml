@@ -419,7 +419,7 @@ post_edit:
 # Footer Settings
 # ---------------
 footer:
-  since: 2019
+  since: 2018
 
   # Icon between year and copyright info.
   icon:
@@ -434,7 +434,7 @@ footer:
 
   powered:
     # Hexo link (Powered by Hexo).
-    enable: true
+    enable: false
 
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # https://beian.miit.gov.cn/
@@ -443,10 +443,10 @@ footer:
     # icp: 苏ICP备xxxxxxxx号
 
   live_time:
-    enable: false
+    enable: true
     prefix: 本博客已萌萌哒地运行
     suffix: (●'◡'●)
-    start_time: "2019-04-12T00:00:00"
+    start_time: "2018-10-25T00:00:00"
 
   # Display support
   # support:
