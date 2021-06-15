@@ -137,3 +137,4 @@ A<sub>6</sub>: 图数据库的可视化有两种方案, 其一是经由后端查
 附录中将会链上毕设相关的一些内容.
 
 [Python 自然语言处理应用 - fastnlp 和 spaCy](https://blog.harumonia.moe/fastnlp-and-spacy/)
+[Nginx 在纯粹前后端分离设计中的桥梁作用](https://blog.harumonia.moe/christin-develop-2/)
