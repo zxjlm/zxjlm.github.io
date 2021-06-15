@@ -163,9 +163,9 @@ menu:
       path: /tags/
       icon: icon-price-tag-3-line
   custom:
-    title: 文档
-    path: https://yun.yunyoujun.cn
-    icon: icon-settings-line
+    title: 读书
+    path: /books
+    icon: icon-book-2-line
 
 # archive
 archive:
