@@ -1,9 +1,23 @@
 ---
 title: Christin开发记录(2) - nginx和前后端分离
-date: 2021-06-06 18:05:28
+date: 2021-06-12 18:05:28
+updated: 2021-06-15 09:57:56
 tags:
+  - 毕业设计
+author: harumonia
+categories:
+  - 源流清泉
+  - Python
+noThumbInfoStyle: default
+outdatedNotice: "no"
+thumbChoice: default
+thumbStyle: default
+hidden: false
+customSummary:
+thumb:
+thumbSmall:
+email: zxjlm233@gmail.com
 ---
-
 
 在[Christin 开发记录(1)](https://blog.harumonia.moe/christin-develop-1/)中， 我们讲过了这个项目的大体的设计思路，本篇以及之后的几篇将会详细地阐述各个技术要点的具体实现方案。
 
