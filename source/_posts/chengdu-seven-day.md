@@ -2,6 +2,19 @@
 title: 毕业旅行
 date: 2021-06-28 21:09:20
 tags:
+  - 旅行
+author: harumonia
+categories:
+  - 起居杂录
+noThumbInfoStyle: default
+outdatedNotice: "no"
+thumbChoice: default
+thumbStyle: default
+hidden: false
+customSummary:
+thumb:
+thumbSmall:
+email: zxjlm233@gmail.com
 ---
 
 本篇又是一个日常记述, 主要内容是博主毕业旅行的二三事.
