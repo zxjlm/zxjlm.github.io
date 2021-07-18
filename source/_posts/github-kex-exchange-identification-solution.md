@@ -1,7 +1,21 @@
 ---
-title: kex_exchange_identification错误
-date: 2021-07-18 20:07:13
+title: kex_exchange_identification问题及解决
+date: 2021-07-18 20:30:19
+updated: 2021-07-18 20:41:35
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: "no"
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 tags:
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
 
 简单地记述了一下在使用 _github_ 时遇到的 **kex_exchange_identification** 错误.
