@@ -4,13 +4,13 @@ date: 2021-06-24 10:19:25
 tags:
 ---
 
-本篇主要内容是如何进行一次完整的 ner 模型训练流程.
+本篇主要内容是如何进行一次完整的 NER 模型训练流程.
 
 <!-- more -->
 
-## 前
+## 前言
 
-在[fastNLP 和 spaCy 的使用](https://blog.harumonia.moe/fastnlp-and-spacy/)
+在[fastNLP 和 spaCy 的使用](https://blog.harumonia.moe/fastnlp-and-spacy/) 一文中, 我们大概地讨论了 fastNLP 和 spaCy 的各自的优势以及所衍生出的用途的差异, 而本篇中将会围绕 spaCy 完成一个简单的 NER 训练流程.
 
 ## 数据标注
 
