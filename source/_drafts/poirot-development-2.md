@@ -59,3 +59,21 @@ for i in f.getBestCmap():
 ```
 
 由于最终得到的直接就是一个 pillow 实例, 所以如果需要对图像进行增强等操作的话, 直接对该实例进行处理即可.
+
+## OCR 识别优化
+
+在过去的版本里面, Poirot 使用的是基于 [chineseocr_lite](https://github.com/ouyanghuiyu/chineseocr_lite) 的本地 ocr 服务, 不过该服务的识别效率太低, 准确的说, 有识别过程中占用的性能太高\ 配置太过于繁琐等缺点.
+
+这次将会使用更为高效的 **Tesseract** 作为本地 OCR 的升级方案, 更准确地说是使用 [pytesseract](https://pypi.org/project/pytesseract/).
+
+具体的安装流程可以参考官方给出的文档, 需要先安装 _Tesseract_ 服务, 然后才能正常使用. Windows 直接上安装包, linux 直接使用 apt\yum 进行以来安装即可.
+
+需要注意的一点就是, Windows 在使用 pytesseract 时, 需要先配置环境变量, 或者, 加入 `pytesseract.pytesseract.tesseract_cmd = r'C:\{安装服务的路径}\Tesseract-OCR\tesseract.exe'` 声明 Tesseract 的命令行路径, 其它系统则无需这样的操作.
+
+可以简化为如下的代码.
+
+```python
+if os.sys.platform == 'win32':
+    pytesseract.pytesseract.tesseract_cmd = r'C:\{安装服务的路径}\Tesseract-OCR\tesseract.exe'
+text = pytesseract.image_to_string(image, lang='chi_sim')
+```
