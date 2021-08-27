@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/poirot-development-2/
 https://blog.harumonia.moe/github-kex-exchange-identification-solution/
 https://blog.harumonia.moe/chengdu-seven-day/
 https://blog.harumonia.moe/christin-develop-2/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/christin-develop-1/
 https://blog.harumonia.moe/interesting-website-in-graduation-design/
 https://blog.harumonia.moe/why-mongo-use-object-id/
 https://blog.harumonia.moe/frankenstein-develop-1/
-https://blog.harumonia.moe/poirot-development-progressbar/
