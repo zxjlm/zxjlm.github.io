@@ -1,8 +1,26 @@
 ---
 title: Poirot 开发记录(2) - 字体抽取和OCR的优化方案
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: 'no'
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 date: 2021-08-25 21:27:55
+categories:
+  - 源流清泉
+  - Python
 tags:
+  - spider
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
+
 
 承接前面两篇, [字体反爬虫解决方案](https://blog.harumonia.moe/font-antispider-cracker/) 和 [进度条方案](https://blog.harumonia.moe/poirot-development-progressbar/), 本篇是对旧版本的 Poirot 部分内容的性能优化.
 
@@ -106,6 +124,24 @@ text = pytesseract.image_to_string(image, lang='chi_sim', config='--psm 10')
 ```
 
 `text` 对象可能包含诸如 `\x0` 之类不太友好的后缀, 可以使用 `.strip()` 进行去除.
+
+#### Docker 配置更新
+
+使用 `python:3.6` 镜像的话, 由于该镜像是简化之后的版本, 如果需要安装tesseractor, 则需要进行一次 `update` 操作.
+
+```shell
+RUN apt-get clean \
+  && apt-get update -y \
+  && apt-get -y install tesseract-ocr \
+  && apt-get install -y libtesseract-dev \
+  && apt-get -y install tesseract-ocr-chi-sim
+```
+
+这一步对于国内的用户来说可能过于痛苦, 所以在运行该命令之前可以先替换为国内的镜像源.
+
+```shell
+RUN sed -i s@/deb.debian.org/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+```
 
 ## 总结
 
