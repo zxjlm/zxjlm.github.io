@@ -20,6 +20,8 @@ thumbSmall:
 
 简单地记述了一下在使用 _github_ 时遇到的 **kex_exchange_identification** 错误.
 
+<!-- more -->
+
 ## 问题描述
 
 毕业旅行的博客摸了很久, GitHub 也很有没有用过了, 然后在 _push_ 的时候遇到了这个问题.
