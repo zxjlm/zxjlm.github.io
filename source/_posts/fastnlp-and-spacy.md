@@ -222,6 +222,26 @@ python -m spacy convert ./dataSet/dev.conll ./corpus
 
 最终, 在 corpus 文件夹中得到两个文件, train.spacy 和 dev.spacy, 这就是将要用来训练的文件.
 
+##### conll 处理注意事项
+
+> `ValueError: [E903] The token-per-line NER file is not formatted correctly.`
+
+在使用 cli 进行数据格式转变时可能会遇到如上的错误, 这是 conll 的格式错误导致的, 这里会持续整理一些导致格式错误的原因, 以方便进行排查.
+
+1. 脏数据
+
+可能会由于数据集中的脏数据, 出现如下的问题
+
+```shell
+冠  B-N
+位  I-N
+指  I-N
+定  I-N
+ O
+```
+
+最后的 `O` 标注就是格式错误的原因, `O` 之前可能是一个特殊字符, 也可能纯粹是个空串, 可以使用 `.strip()` 方法统一去除.
+
 #### spaCy 模型训练
 
 spaCy 提供一种简单地模型训练方法, 即 [通过配置文件训练](https://spacy.io/usage/training).
