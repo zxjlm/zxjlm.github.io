@@ -11715,6 +11715,31 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
       </tags>
   </entry>
   <entry>
+    <title>pdfplumber内存泄露问题解决方案(施工中)</title>
+    <url>/pdfplumber-memory-leak/</url>
+    <content><![CDATA[<p>在使用 <strong>pdfplumber</strong> 时会出现内存递增的情况, 最终导致内存的爆炸, 这一点在高频率地调用时尤为明显.<br>本篇主要解决的就是 <strong>pdfplumber</strong> 这个依赖包所导致的内存泄露问题.</p>
+<a id="more"></a>
+
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>解决方案在官方的issue中有提到, <a href="https://github.com/jsvine/pdfplumber/issues/193">Memory issues on very large PDFs</a> 和 <a href="https://github.com/CodeForManaus/vacina-manaus-backend/issues/70">Alto uso de memória/memory leak</a>, 添加如下的代码即可.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> pdfplumber<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data/my.pdf"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> pdf<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> page <span class="token keyword">in</span> pdf<span class="token punctuation">.</span>pages<span class="token punctuation">:</span>
+        run_my_code<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        page<span class="token punctuation">.</span>flush_cache<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>另外, 在Stack Overflow的一篇中有提到, 使用 <code>del pdf</code> 来手动清理pdf的残留.</p>
+<p>结合以上两种方法, 在实际使用中确实解决了内存不断增加的问题.</p>
+<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>现在知道了如何解决这个问题, 但是这个问题又是如何产生的呢? 这是本篇真正需要探索的.</p>
+<p><strong>施工中</strong></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>solution</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Poirot 开发记录(2) - 字体抽取和OCR的优化方案</title>
     <url>/poirot-development-2/</url>
     <content><![CDATA[<p>承接前面两篇, <a href="https://blog.harumonia.moe/font-antispider-cracker/">字体反爬虫解决方案</a> 和 <a href="https://blog.harumonia.moe/poirot-development-progressbar/">进度条方案</a>, 本篇是对旧版本的 Poirot 部分内容的性能优化.</p>
@@ -12048,7 +12073,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#49;&#x36;&#51;&#46;&#99;&#111;&#x6d;">&#x7a;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#49;&#x36;&#51;&#46;&#99;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#122;&#120;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#122;&#120;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -13253,7 +13278,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
