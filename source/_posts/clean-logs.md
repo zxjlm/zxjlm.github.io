@@ -1,7 +1,26 @@
 ---
-title:
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: "no"
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 date: 2021-09-17 22:03:57
+updated: 2021-09-17 11:08:02
+title: bash脚本 - 过期日志文件清理
 tags:
+  - 实用小工具
+  - 脚本
+categories:
+  - 源流清泉
+  - Shell
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
 
 公司服务器上的日志文件多年积压, 已经占用了很大一部分不必要的内存空间. 所以本篇将完成一个功能性脚本, 其内容是扫描过期的日志文件, 并对文件进行对应的操作.
