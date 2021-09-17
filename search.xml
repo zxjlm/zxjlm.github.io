@@ -10077,6 +10077,212 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
       </tags>
   </entry>
   <entry>
+    <title>bash脚本 - 过期日志文件清理</title>
+    <url>/clean-logs/</url>
+    <content><![CDATA[<p>公司服务器上的日志文件多年积压, 已经占用了很大一部分不必要的内存空间. 所以本篇将完成一个功能性脚本, 其内容是扫描过期的日志文件, 并对文件进行对应的操作.</p>
+<p>好久没有写过 bash 脚本了, 本篇也算是对这项技能的一个温习吧.</p>
+<a id="more"></a>
+
+<h2 id="明确需求"><a href="#明确需求" class="headerlink" title="明确需求"></a>明确需求</h2><p>这个脚本最核心的目标是 <strong>清理过期的日志文件</strong> , 然后就是需要考虑如何进行清理(清理的逻辑).</p>
+<p>文件是否需要被清理, 其依据文件的最后修改日期, 该内容可以通过 <code>ls -l</code> 或者 <code>date -r</code> 等命令实现.</p>
+<p>在确定文件需要被清理之后, TL 给出的需求是, 6 个月 ~ 12 个月的清空, 大于 12 个月的删除. 这里比较敏感的是删除操作, 如果该文件被 python 的<code>open()</code> 之类的命令打开, 而没有被 <code>f.close()</code>, 文件的句柄无法释放, 强行使用 <code>rm</code> 命令无法达到空间释放的目的(需要进行重启才能释放句柄, 进而释放内存). 所以, 在进行删除操作之前, 最好看一下文件句柄的情况.</p>
+<p>最后, 类似日期 \ 路径等参数, 最好是能够从外部输入, 这样最为灵活.</p>
+<h2 id="开工"><a href="#开工" class="headerlink" title="开工"></a>开工</h2><h3 id="bash-复习"><a href="#bash-复习" class="headerlink" title="bash 复习"></a>bash 复习</h3><p>bash 脚本的学习与回顾强推 <a href="https://wangdoc.com/bash/intro.html">Bash 脚本教程</a>, 其中对 bash 以及其引申的一些知识都做得很好.</p>
+<p>预料中, 这个脚本需要用到的指令如下:</p>
+<ul>
+<li>find</li>
+<li>readarray</li>
+<li>rm</li>
+<li>kill</li>
+<li>echo</li>
+</ul>
+<p>另外, 条件判断 \ 循环 \ 函数 \ 数组这几项也需要有所了解.</p>
+<h2 id="查找过期文件"><a href="#查找过期文件" class="headerlink" title="查找过期文件"></a>查找过期文件</h2><p>一开始笔者准备通过 <code>ls</code> + <code>awk</code> 来实现找到过期文件的目的的, 但是这样逻辑上会比较复杂, 后来想到可以直接使用 <code>find</code> 嘛~</p>
+<p>核心代码如下, <code>-iname</code> 等相关的参数可以使用 <code>man find</code> 了解.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># path_dir: 文件的路径</span>
+<span class="token comment"># remove_timeline: 最后修改日期大于(+)这个时间则会被删除</span>
+
+<span class="token function">find</span> <span class="token variable">$path_dir</span> -iname <span class="token string">"*.log*"</span> -atime +<span class="token variable">$remove_timeline</span> -type f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h2><p>直接对 <em>find</em> 得到的结果进行遍历处理即可, 但是在实际操作之中, 去发现了一些比较奇怪的文件.</p>
+<p>比如 <code>/logs/ example1.log</code>, 这个文件不知为何以 <em>空格</em> 开头, 这在对 find 的结果做切分时会被切分为两个子串, 不仅达不到我们的目的, 甚至会成为安全隐患.</p>
+<p>所以在这里, 将 find 的结果进行预切分, 形成数组, 然后对每个元素进行清洗. 这里参考了<a href="https://stackoverflow.com/questions/10586153/how-to-split-a-string-into-an-array-in-bash">stackover flow</a>的回答, 其代码如下.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># bash version >= 4.4</span>
+<span class="token builtin class-name">readarray</span> -d <span class="token string">''</span> files_half_year_ago <span class="token operator">&lt;</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">find</span> <span class="token variable">$path_dir</span> -iname <span class="token string">"*.log*"</span> -atime -<span class="token variable">$remove_timeline</span> -atime +<span class="token variable">$clean_timeline</span> -type f -print0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment"># bash version &lt; 4.4</span>
+<span class="token comment"># files_half_year_ago=()</span>
+<span class="token comment"># while IFS=  read -r -d $'\n'; do</span>
+<span class="token comment">#     files_half_year_ago+=("$REPLY")</span>
+<span class="token comment"># done &lt; &lt;(find $path_dir -iname "*.log*" -atime -$remove_timeline -atime +$clean_timeline -type f)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里将 find 的结果存入了 <code>files_half_year_ago</code> 变量, 接下来使用 for 循环遍历该数组.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function-name function">fine_handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment"># 文件处理函数</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">filename</span> <span class="token keyword">in</span> <span class="token string">"<span class="token variable">$&#123;files_half_year_ago<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span>"</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+    file_handler <span class="token string">"clean"</span> <span class="token variable">$filename</span>
+<span class="token keyword">done</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要注意的是, <code>&quot;$&#123;files_half_year_ago[@]&#125;&quot;</code> 的双引号不能丢掉, 不然空格在遍历时仍然会作为拆分符号被使用.</p>
+<p><code>file_handler</code> 函数接收两个参数, 第一个参数是操作, 如 “<em>clean</em>“. 第二个参数, 更严谨地说应该是第二组参数, 是文件的路径, 如果其中没有空格, 则就是一个字符串, 而如果其中有空格, 则会被作为两个字符串参数处理. 所以, 在函数接收参数时, 需要用一个取巧的办法.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function-name function">file_handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token builtin class-name">local</span> <span class="token assign-left variable">option</span><span class="token operator">=</span><span class="token variable">$1</span>
+    <span class="token builtin class-name">shift</span>
+    <span class="token builtin class-name">local</span> <span class="token assign-left variable">file_name</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$@</span>"</span>
+
+    <span class="token punctuation">..</span>.
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这样, 即使路径因为分隔符而被作为多个参数传入了, 仍然会被约束为一个完整的字符串使用. 需要注意的是, 在后续的使用中都需要对 <em>filename</em> 变量添加双引号.</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>至此, 我们已经能够顺利地遍历 <code>find</code> 的结果了. 接下来就是对文件进行操作.</p>
+<p>正如前面的分析, 在对文件进行操作之前, 我们需要知道文件的句柄有没有被其他进程调用. 这里我的判断方法就是使用 <code>lsof</code> 查看文件使用被其他进程使用. 核心代码如下:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">local</span> <span class="token assign-left variable">process_list</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">lsof</span> -t <span class="token string">"<span class="token variable">$file_name</span>"</span><span class="token variable">`</span></span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$process_list</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token function">kill</span> -9 <span class="token variable">$process_list</span>
+<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里将 <code>lsof</code> 的结果交给了 <em>process list</em> 变量, 然后进行判断, 如果 lsof 为空, 或者只有 1 个进程在调用, 则可以直接使用 <code>[ $process_list ]</code>, 但是当有多个进程调用时, 再使用这个命令就会出错了, 所以最保险的是如上代码所示, 使用双引号将 process_list 包起来.</p>
+<p>到这里, 文件相关的进程被 kill 掉, 句柄自然也就释放了, 接下来进行文件操作也就无所顾忌.</p>
+<ul>
+<li>删除: <code>rm $file_name</code></li>
+<li>清空: <code>echo &#39;&#39; &gt; $file_name</code></li>
+</ul>
+<h2 id="完整的脚本"><a href="#完整的脚本" class="headerlink" title="完整的脚本"></a>完整的脚本</h2><p>一个完整的脚本, 输入参数 \ 使用说明等内容都是缺不得的, 最好还要在各个处理阶段加上一些输出内容. 所以, 最终代码如下.</p>
+<p>删除 \ 清空 这些敏感操作已经在展示代码中去除了, 可以自行在注释的位置添加.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+<span class="token assign-left variable">remove_timeline</span><span class="token operator">=</span><span class="token number">365</span>
+<span class="token assign-left variable">clean_timeline</span><span class="token operator">=</span><span class="token number">180</span>
+<span class="token assign-left variable">path_dir</span><span class="token operator">=</span>-1
+<span class="token assign-left variable">force_clean</span><span class="token operator">=</span><span class="token number">0</span>
+
+<span class="token function-name function">Help</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"Log clean tool."</span>
+   <span class="token builtin class-name">echo</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"Syntax: scriptTemplate [-p|h|t|T|v]"</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"options:"</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-p     Path of log files."</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-f     Force clean | remove files. It will kill the releated process."</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-h     Print this Help."</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-v     Verbose mode."</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-T     Num of days. File modified time over than this nums will be delete. default 365"</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">"-t     Num of days. File modified time over than this nums will be clean. default 180"</span>
+   <span class="token builtin class-name">echo</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function-name function">file_handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token builtin class-name">local</span> <span class="token assign-left variable">option</span><span class="token operator">=</span><span class="token variable">$1</span>
+    <span class="token builtin class-name">shift</span>
+    <span class="token builtin class-name">local</span> <span class="token assign-left variable">file_name</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$@</span>"</span>
+
+    <span class="token keyword">if</span> <span class="token operator">!</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$file_name</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"invalid filename: <span class="token variable">$file_name</span> , skip it"</span>
+        <span class="token builtin class-name">return</span>
+    <span class="token keyword">fi</span>
+
+    <span class="token builtin class-name">local</span> <span class="token assign-left variable">process_list</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">lsof</span> -t <span class="token string">"<span class="token variable">$file_name</span>"</span><span class="token variable">`</span></span>
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$process_list</span>"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$force_clean</span> -eq <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+            <span class="token function">kill</span> -9 <span class="token variable">$process_list</span>
+        <span class="token keyword">else</span>
+            <span class="token builtin class-name">printf</span> <span class="token string">"file <span class="token variable">$file_name</span> is been used,<span class="token entity" title="\n">\n</span>process pid:<span class="token entity" title="\n">\n</span>--------<span class="token entity" title="\n">\n</span><span class="token variable">$process_list</span><span class="token entity" title="\n">\n</span>--------<span class="token entity" title="\n">\n</span>skip it<span class="token entity" title="\n">\n</span>"</span>
+            <span class="token builtin class-name">continue</span>
+        <span class="token keyword">fi</span>
+    <span class="token keyword">fi</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$option</span> <span class="token operator">==</span> <span class="token string">"delete"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"delete"</span> <span class="token variable">$file_name</span>
+        <span class="token comment"># 删除操作</span>
+    <span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token variable">$option</span> <span class="token operator">==</span> <span class="token string">"clean"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"clean"</span> <span class="token variable">$file_name</span>
+        <span class="token comment"># 清空操作</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">"invalid option"</span>
+    <span class="token keyword">fi</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> <span class="token string">"hvfp:t:T:"</span> option<span class="token punctuation">;</span> <span class="token keyword">do</span>
+   <span class="token keyword">case</span> <span class="token variable">$option</span> <span class="token keyword">in</span>
+        f<span class="token punctuation">)</span>
+            <span class="token assign-left variable">force_clean</span><span class="token operator">=</span><span class="token number">1</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        h<span class="token punctuation">)</span>
+            Help
+            <span class="token builtin class-name">exit</span> <span class="token number">0</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        p<span class="token punctuation">)</span>
+            <span class="token assign-left variable">path_dir</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$OPTARG</span>"</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token function">v</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> <span class="token string">"to be continue"</span>
+            <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        T<span class="token punctuation">)</span>
+            <span class="token assign-left variable">remove_timeline</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$OPTARG</span>"</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        t<span class="token punctuation">)</span>
+            <span class="token assign-left variable">clean_timeline</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$OPTARG</span>"</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        ?<span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> <span class="token string">"script usage: <span class="token variable"><span class="token variable">$(</span><span class="token function">basename</span> $0<span class="token variable">)</span></span> [-v] [-h] [-f] [-p] [-t] [-T]"</span> <span class="token operator">></span><span class="token file-descriptor important">&amp;2</span>
+            <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+            <span class="token punctuation">;</span><span class="token punctuation">;</span>
+   <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+<span class="token builtin class-name">shift</span> <span class="token string">"<span class="token variable"><span class="token variable">$((</span>$OPTIND <span class="token operator">-</span> <span class="token number">1</span><span class="token variable">))</span></span>"</span>
+
+<span class="token comment"># echo "$remove_timeline , $clean_timeline , $path_dir"</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$remove_timeline</span> -lt <span class="token variable">$clean_timeline</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Error: value of -T must more than value of -t."</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$path_dir</span> <span class="token operator">==</span> <span class="token string">"-1"</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"Error: -p arg is required."</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$remove_timeline</span> , <span class="token variable">$clean_timeline</span> , <span class="token variable">$path_dir</span>"</span>
+
+<span class="token comment"># v4.4+</span>
+<span class="token builtin class-name">readarray</span> -d <span class="token string">''</span> files_half_year_ago <span class="token operator">&lt;</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">find</span> <span class="token variable">$path_dir</span> -iname <span class="token string">"*.log*"</span> -atime -<span class="token variable">$remove_timeline</span> -atime +<span class="token variable">$clean_timeline</span> -type f -print0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">readarray</span> -d <span class="token string">''</span> files_year_ago <span class="token operator">&lt;</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">find</span> <span class="token variable">$path_dir</span> -iname <span class="token string">"*.log*"</span> -atime -<span class="token variable">$remove_timeline</span> -type f -print0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment"># declare -p files_year_ago;</span>
+
+<span class="token comment"># v4.4-</span>
+<span class="token comment"># files_year_ago=()</span>
+<span class="token comment"># while IFS=  read -r -d $'\n'; do</span>
+<span class="token comment">#     files_year_ago+=("$REPLY")</span>
+<span class="token comment"># done &lt; &lt;(find $path_dir -iname "*.log*" -atime +$remove_timeline -type f)</span>
+
+<span class="token comment"># files_half_year_ago=()</span>
+<span class="token comment"># while IFS=  read -r -d $'\n'; do</span>
+<span class="token comment">#     files_half_year_ago+=("$REPLY")</span>
+<span class="token comment"># done &lt; &lt;(find $path_dir -iname "*.log*" -atime -$remove_timeline -atime +$clean_timeline -type f)</span>
+
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">filename</span> <span class="token keyword">in</span> <span class="token string">"<span class="token variable">$&#123;files_half_year_ago<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span>"</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+    file_handler <span class="token string">"clean"</span> <span class="token variable">$filename</span>
+<span class="token keyword">done</span>
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">filename</span> <span class="token keyword">in</span> <span class="token string">"<span class="token variable">$&#123;files_year_ago<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span>"</span><span class="token punctuation">;</span> <span class="token keyword">do</span>
+    file_handler <span class="token string">"delete"</span> <span class="token variable">$filename</span>
+<span class="token keyword">done</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>实用小工具</tag>
+        <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>起居杂录小纲</title>
     <url>/dailylife/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
@@ -12073,7 +12279,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#120;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#122;&#120;&#106;&#108;&#109;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#108;&#109;&#x32;&#51;&#x33;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;">&#x7a;&#120;&#x6a;&#108;&#109;&#x32;&#51;&#x33;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -13278,7 +13484,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>

@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/clean-logs/
 https://blog.harumonia.moe/pdfplumber-memory-leak/
 https://blog.harumonia.moe/poirot-development-2/
 https://blog.harumonia.moe/github-kex-exchange-identification-solution/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/upon-graduation/
 https://blog.harumonia.moe/fastnlp-and-spacy/
 https://blog.harumonia.moe/christin-develop-1/
 https://blog.harumonia.moe/interesting-website-in-graduation-design/
-https://blog.harumonia.moe/why-mongo-use-object-id/
