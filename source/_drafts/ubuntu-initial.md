@@ -4,6 +4,26 @@ date: 2021-12-08 10:19:25
 tags:
 ---
 
+## 安装 Ubuntu
+
+todo
+
+### 关于换源
+
+GUI 版的 ubuntu 默认会在中文环境下选择中国区的服务源, 所以不需要再手动换源.
+
+## 安装 ssh 服务
+
+由于 ubuntu 自带安装 ssh client, 所以如果只是连接其他服务器, 则不需要安装额外的东西. 如果是想要将本机作为 ssh 服务器, 则需要安装 ssh server.
+
+```shell
+sudo apt install openssh-server
+```
+
+### ssh GUI
+
+ubuntu 自带一个 ssh GUI, 也就是 **Remmina** . 不只是 ssh, rdp(远程桌面协议) 和 vnc 也很好地得到了支持. 搭配 ssh-config, 即使没有 Windows 上傻瓜式的 xshell, 也可以得到极佳的 ssh 终端体验.
+
 ## Docker
 
 [文档地址](https://docs.docker.com/engine/install/ubuntu/)
