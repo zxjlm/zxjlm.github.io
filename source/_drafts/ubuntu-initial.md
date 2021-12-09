@@ -4,9 +4,13 @@ date: 2021-12-08 10:19:25
 tags:
 ---
 
+## 前言
+
+公司的 Windows 系统一言难尽, 搭配低配的电脑, 稍有一些花哨的操作, 风扇直接暴走.
+
 ## 安装 Ubuntu
 
-todo
+ubuntu 的安装教程网上多种多样, 这里笔者是按照[官网的流程](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)进行安装.
 
 ### 关于换源
 
@@ -71,9 +75,34 @@ wget https://www.eudic.net/download/eudic.deb?v=2021-09-29
 
 ```
 
-## 向日葵
+## 远程桌面
+
+### 向日葵
 
 [下载页面](https://sunlogin.oray.com/download/)
+
+### rdp
+
+```shell
+sudo apt-get install xrdp
+
+sudo systemctl enable xrdp
+
+sudo ufw allow 3389/tcp
+```
+
+#### 连接后黑屏
+
+```shell
+sudo nano /etc/xrdp/startwm.sh
+
+## 在 line 30 (也就是 */etc/profile* 那一行) 前, 添加如下内容
+unset DBUS_SESSION_BUS_ADDRESS
+unset XDG_RUNTIME_DIR
+##
+
+sudo systemctl restart xrdp
+```
 
 ## 快捷键冲突
 
@@ -83,6 +112,14 @@ wget https://www.eudic.net/download/eudic.deb?v=2021-09-29
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 ```
+
+## 扩展功能
+
+### 搭建 smb 服务
+
+smb 可以用来共享局域网文件共享服务, 打破 Linux \ Mac \ Windows 的文件壁垒. 同时 iPad 上的一些软件, 如 VLC, 也可以通过 smb 来获取服务器上的共享文件进行播放, 十分方便.
+
+[官方教程](https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share)
 
 ## 参考
 
