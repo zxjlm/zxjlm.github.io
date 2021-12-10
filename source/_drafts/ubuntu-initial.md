@@ -28,6 +28,21 @@ sudo apt install openssh-server
 
 ubuntu 自带一个 ssh GUI, 也就是 **Remmina** . 不只是 ssh, rdp(远程桌面协议) 和 vnc 也很好地得到了支持. 搭配 ssh-config, 即使没有 Windows 上傻瓜式的 xshell, 也可以得到极佳的 ssh 终端体验.
 
+## git
+
+### github 加速
+
+修改 .gitconfig 文件.
+
+```plain_text
+[core]
+    gitproxy = socks5://127.0.0.1:7890
+[http]
+    proxy = socks5://127.0.0.1:7890
+[https]
+    proxy = socks5://127.0.0.1:7890
+```
+
 ## Docker
 
 [文档地址](https://docs.docker.com/engine/install/ubuntu/)
