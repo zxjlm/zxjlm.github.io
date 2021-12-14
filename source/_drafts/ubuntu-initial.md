@@ -6,7 +6,23 @@ tags:
 
 ## 前言
 
-公司的 Windows 系统一言难尽, 搭配低配的电脑, 稍有一些花哨的操作, 风扇直接暴走.
+### 系统环境
+
+```plain_text
+Laptop: ThinkPad T480
+
+BIOS Information
+    Vendor: LENOVO
+    Version: N24ET37W (1.12 )
+    Release Date: 03/14/2018
+    Address: 0xE0000
+    Runtime Size: 128 kB
+    ROM Size: 16 MB
+
+CPU Information
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+```
 
 ## 安装 Ubuntu
 
@@ -27,6 +43,10 @@ sudo apt install openssh-server
 ### ssh GUI
 
 ubuntu 自带一个 ssh GUI, 也就是 **Remmina** . 不只是 ssh, rdp(远程桌面协议) 和 vnc 也很好地得到了支持. 搭配 ssh-config, 即使没有 Windows 上傻瓜式的 xshell, 也可以得到极佳的 ssh 终端体验.
+
+## clash
+
+[Web UI](https://clash.razord.top/#/proxies)
 
 ## git
 
@@ -118,6 +138,12 @@ unset XDG_RUNTIME_DIR
 
 sudo systemctl restart xrdp
 ```
+
+## 多版本 Python
+
+Ubuntu 20.04 默认的 Python 版本是 3.8， 如果需要其他版本, 如 3.6， 可以通过如下方式安装.
+
+[参考链接](https://towardsdatascience.com/installing-multiple-alternative-versions-of-python-on-ubuntu-20-04-237be5177474)
 
 ## 快捷键冲突
 
