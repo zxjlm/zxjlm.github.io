@@ -86,6 +86,39 @@ echo \
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+
+# 可选
+## 为当前用户赋予docker权限
+sudo usermod -aG docker $USER && newgrp docker
+```
+
+## zsh
+
+```shell
+apt install zsh
+```
+
+### on-my-zsh
+
+需要先配置代理
+
+```shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+#### plugins
+
+1. zsh-autosuggestions
+
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+## update to .zshrc
+# plugins=(
+#     # other plugins...
+#     zsh-autosuggestions
+# )
 ```
 
 ## 数据库可视化工具
@@ -144,6 +177,18 @@ sudo systemctl restart xrdp
 Ubuntu 20.04 默认的 Python 版本是 3.8， 如果需要其他版本, 如 3.6， 可以通过如下方式安装.
 
 [参考链接](https://towardsdatascience.com/installing-multiple-alternative-versions-of-python-on-ubuntu-20-04-237be5177474)
+
+## wine
+
+### 微信(wechat)
+
+#### 问题
+
+1. 无法显示、发送图片
+
+```shell
+sudo apt-get install libjpeg62:i386
+```
 
 ## 快捷键冲突
 
