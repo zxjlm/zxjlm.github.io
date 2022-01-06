@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.harumonia.moe/chengdu-seven-day/</loc>
-    <lastmod>2021-12-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/christin-develop-1/</loc>
-    <lastmod>2021-12-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/fastnlp-and-spacy/</loc>
-    <lastmod>2021-12-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/frankenstein-develop-1/</loc>
-    <lastmod>2021-12-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.harumonia.moe/geek-contest/</loc>
-    <lastmod>2021-12-29</lastmod>
-  </url>
-  <url>
     <loc>https://blog.harumonia.moe/poirot-development-2/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/ubuntu-initial/</loc>
+    <lastmod>2022-01-06</lastmod>
   </url>
   <url>
     <loc>https://blog.harumonia.moe/upon-graduation/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/chengdu-seven-day/</loc>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/christin-develop-1/</loc>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/fastnlp-and-spacy/</loc>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/frankenstein-develop-1/</loc>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/geek-contest/</loc>
+    <lastmod>2022-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.harumonia.moe/my-2021/</loc>
+    <lastmod>2022-01-06</lastmod>
   </url>
   <url>
     <loc>https://blog.harumonia.moe/clean-logs/</loc>

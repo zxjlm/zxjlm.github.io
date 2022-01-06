@@ -11700,6 +11700,43 @@ r<span class="token punctuation">.</span>elapsed <span class="token operator">=<
       </tags>
   </entry>
   <entry>
+    <title>2021</title>
+    <url>/my-2021/</url>
+    <content><![CDATA[<p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p>
+<p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p>
+<a id="more"></a>
+
+<h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度"><a href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" class="headerlink" title="以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度"></a>以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度</h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ …… – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p>
+<p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p>
+<p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p>
+<p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么”伟大”, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p>
+<p>这种满足感应该是 <strong>过程</strong>, 也就是作为”学习”这个行为的催化剂, 而非是 <strong>结果</strong>.</p>
+<h2 id="更优化的学习方式和碎片化的生活"><a href="#更优化的学习方式和碎片化的生活" class="headerlink" title="更优化的学习方式和碎片化的生活"></a>更优化的学习方式和碎片化的生活</h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p>
+<p>列一下过去一年中的书单吧.</p>
+<ol>
+<li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li>
+<li>&lt;知识图谱: 概念与技术&gt;</li>
+<li>&lt;20 世纪简史&gt;</li>
+<li>&lt;修改软件的艺术&gt;</li>
+<li>&lt;希望之线&gt;</li>
+</ol>
+<p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p>
+<p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p>
+<p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然”用推理悬疑类来调剂”这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p>
+<p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, “这些时间如何被利用起来”, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 “起点” \ “bilibili” 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p>
+<p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做”上下文切换的开销大”, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有”村上春树工作法”, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对”碎片化时间”还是没有一个很好的解决.</p>
+<p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的”番茄钟”, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p>
+<h2 id="小小目标"><a href="#小小目标" class="headerlink" title="小小目标"></a>小小目标</h2><p>对于 2022 年, 先定几个小小的目标吧.</p>
+<ol>
+<li>Apple Watch 的闭环率达到 90%, 健健康康.</li>
+<li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li>
+<li>完成一次旅行(根据实际疫情而定).</li>
+<li>加薪 50% 以上.</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 “消费行为” , 而理性考虑与现实行动才是 “生产行为” , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Be a better pythonista(4)：nametuple的实际应用</title>
     <url>/nametuple_act/</url>
     <content><![CDATA[<blockquote>
@@ -12279,7 +12316,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#108;&#x6d;&#x32;&#51;&#x33;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#x7a;&#120;&#x6a;&#108;&#x6d;&#x32;&#51;&#x33;&#x40;&#x31;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -12525,6 +12562,133 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
       <tags>
         <tag>mysql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu初始环境配置(持续更新中)</title>
+    <url>/ubuntu-initial/</url>
+    <content><![CDATA[<p>本想改造一下公司电脑的 Windows,后来干脆直接给电脑刷了个 Windows, 于是, 风扇不再是噪声源, 电脑不再是暖手宝, 一切都变得清爽了起来.</p>
+<p>唯一美中不足的是 ubuntu 上的软件和 Windows 还是有些差异的, 所以就有了本篇, 将各个常用的软件(从程序员的角度)的安装和坑点列出来.</p>
+<p>另附一个开发中的 <a href="https://github.com/zxjlm/ubuntu-dev-setup-especially-for-cn">Ubuntu 初始化脚本</a>.</p>
+<a id="more"></a>
+
+<h3 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h3><pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Laptop: ThinkPad T480
+
+BIOS Information
+    Vendor: LENOVO
+    Version: N24ET37W (1.12 )
+    Release Date: 03&#x2F;14&#x2F;2018
+    Address: 0xE0000
+    Runtime Size: 128 kB
+    ROM Size: 16 MB
+
+CPU Information
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="安装-Ubuntu"><a href="#安装-Ubuntu" class="headerlink" title="安装 Ubuntu"></a>安装 Ubuntu</h2><p>ubuntu 的安装教程网上多种多样, 这里笔者是按照<a href="https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview">官网的流程</a>进行安装.</p>
+<h3 id="关于换源"><a href="#关于换源" class="headerlink" title="关于换源"></a>关于换源</h3><p>GUI 版的 ubuntu 默认会在中文环境下选择中国区的服务源, 所以不需要再手动换源.</p>
+<h2 id="安装-ssh-服务"><a href="#安装-ssh-服务" class="headerlink" title="安装 ssh 服务"></a>安装 ssh 服务</h2><p>由于 ubuntu 自带安装 ssh client, 所以如果只是连接其他服务器, 则不需要安装额外的东西. 如果是想要将本机作为 ssh 服务器, 则需要安装 ssh server.</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="ssh-GUI"><a href="#ssh-GUI" class="headerlink" title="ssh GUI"></a>ssh GUI</h3><p>ubuntu 自带一个 ssh GUI, 也就是 <strong>Remmina</strong> . 不只是 ssh, rdp(远程桌面协议) 和 vnc 也很好地得到了支持. 搭配 ssh-config, 即使没有 Windows 上傻瓜式的 xshell, 也可以得到极佳的 ssh 终端体验.</p>
+<h2 id="clash"><a href="#clash" class="headerlink" title="clash"></a>clash</h2><p><a href="https://clash.razord.top/#/proxies">Web UI</a></p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="github-加速"><a href="#github-加速" class="headerlink" title="github 加速"></a>github 加速</h3><p>修改 .gitconfig 文件.</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">[core]
+    gitproxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:7890
+[http]
+    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:7890
+[https]
+    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:7890<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/">文档地址</a></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 基础依赖</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token punctuation">\</span>
+    ca-certificates <span class="token punctuation">\</span>
+    <span class="token function">curl</span> <span class="token punctuation">\</span>
+    gnupg <span class="token punctuation">\</span>
+    lsb-release
+
+<span class="token comment"># 配置证书</span>
+<span class="token function">curl</span> -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+<span class="token comment"># 使用稳定版docker</span>
+<span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>
+  <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  <span class="token variable"><span class="token variable">$(</span>lsb_release -cs<span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io
+
+
+<span class="token comment"># 可选</span>
+<span class="token comment">## 为当前用户赋予docker权限</span>
+<span class="token function">sudo</span> <span class="token function">usermod</span> -aG docker <span class="token environment constant">$USER</span> <span class="token operator">&amp;&amp;</span> newgrp docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">apt</span> <span class="token function">install</span> <span class="token function">zsh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="on-my-zsh"><a href="#on-my-zsh" class="headerlink" title="on-my-zsh"></a>on-my-zsh</h3><p>需要先配置代理</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sh</span> -c <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h4><ol>
+<li>zsh-autosuggestions</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> clone https://github.com/zsh-users/zsh-autosuggestions <span class="token variable">$&#123;ZSH_CUSTOM<span class="token operator">:-</span>~<span class="token operator">/</span>.oh-my-zsh<span class="token operator">/</span>custom&#125;</span>/plugins/zsh-autosuggestions
+
+<span class="token comment">## update to .zshrc</span>
+<span class="token comment"># plugins=(</span>
+<span class="token comment">#     # other plugins...</span>
+<span class="token comment">#     zsh-autosuggestions</span>
+<span class="token comment"># )</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="数据库可视化工具"><a href="#数据库可视化工具" class="headerlink" title="数据库可视化工具"></a>数据库可视化工具</h2><p><a href="https://github.com/dbeaver/dbeaver/releases">dbeaver v21.3.0</a></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">wget</span> https://github.com/dbeaver/dbeaver/releases/download/21.3.0/dbeaver-ce_21.3.0_amd64.deb
+
+<span class="token function">sudo</span> dkpg -i dbeaver-ce_21.3.0_amd64.deb
+
+<span class="token function">rm</span> -f dbeaver-ce_21.3.0_amd64.deb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="欧陆词典"><a href="#欧陆词典" class="headerlink" title="欧陆词典"></a>欧陆词典</h2><p><a href="https://www.eudic.net/v4/en/app/download">下载页面</a></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">wget</span> https://www.eudic.net/download/eudic.deb?v<span class="token operator">=</span><span class="token number">2021</span>-09-29
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="远程桌面"><a href="#远程桌面" class="headerlink" title="远程桌面"></a>远程桌面</h2><h3 id="向日葵"><a href="#向日葵" class="headerlink" title="向日葵"></a>向日葵</h3><p><a href="https://sunlogin.oray.com/download/">下载页面</a></p>
+<h3 id="rdp"><a href="#rdp" class="headerlink" title="rdp"></a>rdp</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> xrdp
+
+<span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> xrdp
+
+<span class="token function">sudo</span> ufw allow <span class="token number">3389</span>/tcp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="连接后黑屏"><a href="#连接后黑屏" class="headerlink" title="连接后黑屏"></a>连接后黑屏</h4><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">nano</span> /etc/xrdp/startwm.sh
+
+<span class="token comment">## 在 line 30 (也就是 */etc/profile* 那一行) 前, 添加如下内容</span>
+<span class="token builtin class-name">unset</span> <span class="token environment constant">DBUS_SESSION_BUS_ADDRESS</span>
+<span class="token builtin class-name">unset</span> <span class="token environment constant">XDG_RUNTIME_DIR</span>
+<span class="token comment">##</span>
+
+<span class="token function">sudo</span> systemctl restart xrdp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="多版本-Python"><a href="#多版本-Python" class="headerlink" title="多版本 Python"></a>多版本 Python</h2><p>Ubuntu 20.04 默认的 Python 版本是 3.8， 如果需要其他版本, 如 3.6， 可以通过如下方式安装.</p>
+<p><a href="https://towardsdatascience.com/installing-multiple-alternative-versions-of-python-on-ubuntu-20-04-237be5177474">参考链接</a></p>
+<h2 id="wine"><a href="#wine" class="headerlink" title="wine"></a>wine</h2><h3 id="微信-wechat"><a href="#微信-wechat" class="headerlink" title="微信(wechat)"></a>微信(wechat)</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ol>
+<li>无法显示、发送图片</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libjpeg62:i386<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="快捷键冲突"><a href="#快捷键冲突" class="headerlink" title="快捷键冲突"></a>快捷键冲突</h2><ol>
+<li>和 idea 的冲突</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm.keybindings switch-to-workspace-left <span class="token string">"[]"</span>
+gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm.keybindings switch-to-workspace-right <span class="token string">"[]"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="扩展功能"><a href="#扩展功能" class="headerlink" title="扩展功能"></a>扩展功能</h2><h3 id="搭建-smb-服务"><a href="#搭建-smb-服务" class="headerlink" title="搭建 smb 服务"></a>搭建 smb 服务</h3><p>smb 可以用来共享局域网文件共享服务, 打破 Linux \ Mac \ Windows 的文件壁垒. 同时 iPad 上的一些软件, 如 VLC, 也可以通过 smb 来获取服务器上的共享文件进行播放, 十分方便.</p>
+<p><a href="https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share">官方教程</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token assign-left variable">TEMP_DEB</span><span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span>mktemp<span class="token variable">)</span></span>"</span> <span class="token operator">&amp;&amp;</span>
+<span class="token function">wget</span> -O <span class="token string">"<span class="token variable">$TEMP_DEB</span>"</span> <span class="token string">'http://path.to/my.deb'</span> <span class="token operator">&amp;&amp;</span>
+<span class="token function">sudo</span> dpkg -i <span class="token string">"<span class="token variable">$TEMP_DEB</span>"</span>
+<span class="token function">rm</span> -f <span class="token string">"<span class="token variable">$TEMP_DEB</span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
   </entry>
   <entry>
     <title>大学生活阶段性小结</title>
@@ -13484,7 +13648,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
