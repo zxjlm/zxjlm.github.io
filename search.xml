@@ -12316,7 +12316,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#x7a;&#x78;&#x6a;&#108;&#109;&#50;&#x33;&#x33;&#64;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;">&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -12591,8 +12591,18 @@ CPU op-mode(s):      32-bit, 64-bit<span aria-hidden="true" class="line-numbers-
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> openssh-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="ssh-GUI"><a href="#ssh-GUI" class="headerlink" title="ssh GUI"></a>ssh GUI</h3><p>ubuntu 自带一个 ssh GUI, 也就是 <strong>Remmina</strong> . 不只是 ssh, rdp(远程桌面协议) 和 vnc 也很好地得到了支持. 搭配 ssh-config, 即使没有 Windows 上傻瓜式的 xshell, 也可以得到极佳的 ssh 终端体验.</p>
-<h2 id="clash"><a href="#clash" class="headerlink" title="clash"></a>clash</h2><p><a href="https://clash.razord.top/#/proxies">Web UI</a></p>
-<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="github-加速"><a href="#github-加速" class="headerlink" title="github 加速"></a>github 加速</h3><p>修改 .gitconfig 文件.</p>
+<h2 id="clash"><a href="#clash" class="headerlink" title="clash"></a>clash</h2><p><a href="https://github.com/Dreamacro/clash/releases">github 项目下载地址</a></p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sudp <span class="token function">mkdir</span> -p /opt/clash
+<span class="token function">sudo</span> <span class="token function">chmod</span> -R <span class="token number">777</span> /opt/clash
+gunzip -k  **.gz <span class="token operator">></span>/opt/clash/clash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>随后手动启动 clash 即可.</p>
+<p>当然, 每次开机都需要手动运行一次还是挺麻烦的, 所以推荐使用 <strong>systemd</strong> 托管. 参考 <a href="https://github.com/Dreamacro/clash/wiki/clash-as-a-daemon">clash-as-a-daemon</a></p>
+<p><a href="https://clash.razord.top/#/proxies">Web UI</a></p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> config --global user.name <span class="token string">"<span class="token variable">$git_config_user_name</span>"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"<span class="token variable">$git_config_user_email</span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="github-加速"><a href="#github-加速" class="headerlink" title="github 加速"></a>github 加速</h3><p>修改 .gitconfig 文件. 以上文安装的 clash 为例.</p>
 <pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">[core]
     gitproxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:7890
 [http]
@@ -12623,7 +12633,10 @@ CPU op-mode(s):      32-bit, 64-bit<span aria-hidden="true" class="line-numbers-
 
 <span class="token comment"># 可选</span>
 <span class="token comment">## 为当前用户赋予docker权限</span>
-<span class="token function">sudo</span> <span class="token function">usermod</span> -aG docker <span class="token environment constant">$USER</span> <span class="token operator">&amp;&amp;</span> newgrp docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># sudo usermod -aG docker $USER &amp;&amp; newgrp docker</span>
+<span class="token function">sudo</span> <span class="token function">groupadd</span> docker
+<span class="token function">sudo</span> <span class="token function">usermod</span> -aG docker <span class="token environment constant">$USER</span>
+<span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> /var/run/docker.sock<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">apt</span> <span class="token function">install</span> <span class="token function">zsh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -12648,6 +12661,8 @@ CPU op-mode(s):      32-bit, 64-bit<span aria-hidden="true" class="line-numbers-
 
 <span class="token function">rm</span> -f dbeaver-ce_21.3.0_amd64.deb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="文件同步"><a href="#文件同步" class="headerlink" title="文件同步"></a>文件同步</h2><h3 id="onedrive"><a href="#onedrive" class="headerlink" title="onedrive"></a>onedrive</h3><p>由于微软官方并没有给出一个 onedrive linux 版本, 所以只能够使用第三方的服务来进行 onedrive 同步.</p>
+<p>笔者使用的是 GitHub 上面的<a href="https://github.com/abraunegg/onedrive">ondrive</a>项目.</p>
 <h2 id="欧陆词典"><a href="#欧陆词典" class="headerlink" title="欧陆词典"></a>欧陆词典</h2><p><a href="https://www.eudic.net/v4/en/app/download">下载页面</a></p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">wget</span> https://www.eudic.net/download/eudic.deb?v<span class="token operator">=</span><span class="token number">2021</span>-09-29
 
@@ -13648,7 +13663,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
