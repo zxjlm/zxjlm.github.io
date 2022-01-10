@@ -10,6 +10,7 @@ thumbStyle: default
 hidden: false
 email: zxjlm233@gmail.com
 date: 2022-01-05 10:19:25
+updated: 2022-01-07 10:14:56
 tags:
 customSummary:
 thumb:
@@ -65,13 +66,30 @@ ubuntu 自带一个 ssh GUI, 也就是 **Remmina** . 不只是 ssh, rdp(远程�
 
 ## clash
 
+[github 项目下载地址](https://github.com/Dreamacro/clash/releases)
+
+```shell
+sudp mkdir -p /opt/clash
+sudo chmod -R 777 /opt/clash
+gunzip -k  **.gz >/opt/clash/clash
+```
+
+随后手动启动 clash 即可.
+
+当然, 每次开机都需要手动运行一次还是挺麻烦的, 所以推荐使用 **systemd** 托管. 参考 [clash-as-a-daemon](https://github.com/Dreamacro/clash/wiki/clash-as-a-daemon)
+
 [Web UI](https://clash.razord.top/#/proxies)
 
 ## git
 
+```shell
+git config --global user.name "$git_config_user_name"
+git config --global user.email "$git_config_user_email"
+```
+
 ### github 加速
 
-修改 .gitconfig 文件.
+修改 .gitconfig 文件. 以上文安装的 clash 为例.
 
 ```plain_text
 [core]
@@ -109,7 +127,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 # 可选
 ## 为当前用户赋予docker权限
-sudo usermod -aG docker $USER && newgrp docker
+# sudo usermod -aG docker $USER && newgrp docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo chmod 777 /var/run/docker.sock
 ```
 
 ## zsh
@@ -151,6 +172,14 @@ sudo dkpg -i dbeaver-ce_21.3.0_amd64.deb
 
 rm -f dbeaver-ce_21.3.0_amd64.deb
 ```
+
+## 文件同步
+
+### onedrive
+
+由于微软官方并没有给出一个 onedrive linux 版本, 所以只能够使用第三方的服务来进行 onedrive 同步.
+
+笔者使用的是 GitHub 上面的[ondrive](https://github.com/abraunegg/onedrive)项目.
 
 ## 欧陆词典
 
