@@ -238,14 +238,26 @@ Ubuntu 20.04 默认的 Python 版本是 3.8， 如果需要其他版本, 如 3.6
 sudo apt-get install libjpeg62:i386
 ```
 
+## 关于 kubernetes
+
+待补充
+
 ## 快捷键冲突
 
-1. 和 idea 的冲突
+一. 和 idea 的冲突 (_ctrl + alt + <-_ 和 _ctrl + alt + ->_)
 
 ```shell
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 ```
+
+二. 简繁体转换和全局搜索的冲突 (Ctrl + Shift + F)
+
+```plain_text
+右上角输入法图标 -> 配置当前输入法 -> 附加组件 -> 简繁转换 -> 配置
+```
+
+一般也用不到繁体, 使用 `esc` 键禁掉即可.
 
 ## 扩展功能
 
