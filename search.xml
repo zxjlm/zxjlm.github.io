@@ -12316,7 +12316,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;">&#122;&#120;&#x6a;&#108;&#109;&#x32;&#x33;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#x33;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;">&#122;&#x78;&#106;&#x6c;&#x6d;&#x32;&#x33;&#51;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -12691,12 +12691,15 @@ gunzip -k  **.gz <span class="token operator">></span>/opt/clash/clash<span aria
 </ol>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libjpeg62:i386<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="快捷键冲突"><a href="#快捷键冲突" class="headerlink" title="快捷键冲突"></a>快捷键冲突</h2><ol>
-<li>和 idea 的冲突</li>
-</ol>
+<h2 id="关于-kubernetes"><a href="#关于-kubernetes" class="headerlink" title="关于 kubernetes"></a>关于 kubernetes</h2><p>待补充</p>
+<h2 id="快捷键冲突"><a href="#快捷键冲突" class="headerlink" title="快捷键冲突"></a>快捷键冲突</h2><p>一. 和 idea 的冲突 (<em>ctrl + alt + &lt;-_ 和 _ctrl + alt + -&gt;</em>)</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm.keybindings switch-to-workspace-left <span class="token string">"[]"</span>
 gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm.keybindings switch-to-workspace-right <span class="token string">"[]"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<p>二. 简繁体转换和全局搜索的冲突 (Ctrl + Shift + F)</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">右上角输入法图标 -&gt; 配置当前输入法 -&gt; 附加组件 -&gt; 简繁转换 -&gt; 配置<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>一般也用不到繁体, 使用 <code>esc</code> 键禁掉即可.</p>
 <h2 id="扩展功能"><a href="#扩展功能" class="headerlink" title="扩展功能"></a>扩展功能</h2><h3 id="搭建-smb-服务"><a href="#搭建-smb-服务" class="headerlink" title="搭建 smb 服务"></a>搭建 smb 服务</h3><p>smb 可以用来共享局域网文件共享服务, 打破 Linux \ Mac \ Windows 的文件壁垒. 同时 iPad 上的一些软件, 如 VLC, 也可以通过 smb 来获取服务器上的共享文件进行播放, 十分方便.</p>
 <p><a href="https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share">官方教程</a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token assign-left variable">TEMP_DEB</span><span class="token operator">=</span><span class="token string">"<span class="token variable"><span class="token variable">$(</span>mktemp<span class="token variable">)</span></span>"</span> <span class="token operator">&amp;&amp;</span>
@@ -13663,7 +13666,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
