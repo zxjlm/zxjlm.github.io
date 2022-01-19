@@ -100,6 +100,12 @@ git config --global user.email "$git_config_user_email"
     proxy = socks5://127.0.0.1:7890
 ```
 
+### git GUI
+
+由于常用的 git GUI [sourceTree](https://www.sourcetreeapp.com/) 并不支持 ubuntu, 所以这里推荐使用 [GitKraken](https://www.gitkraken.com/).
+
+这个 GUI 工具是付费的, 破解方法见于 [GitKraken 工具的破解、BeyondCompare 配置](https://xinghailin.vip/2021/08/gitkraken%E5%B7%A5%E5%85%B7%E7%9A%84%E7%A0%B4%E8%A7%A3%E3%80%81beyondcompare%E9%85%8D%E7%BD%AE/).
+
 ## Docker
 
 [文档地址](https://docs.docker.com/engine/install/ubuntu/)
@@ -240,7 +246,15 @@ sudo apt-get install libjpeg62:i386
 
 ## 关于 kubernetes
 
-待补充
+### minikube
+
+[文档](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+
+国内的启动命令推荐为:
+
+```shell
+minikube start --registry-mirror=https://registry.docker-cn.com --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers
+```
 
 ## 快捷键冲突
 
