@@ -18,7 +18,7 @@ thumbDesc:
 thumbSmall:
 ---
 
-呻吟语一篇.
+不胜人间一醉.
 
 <!-- more -->
 
