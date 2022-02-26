@@ -72,7 +72,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 vector<vector<int>> merge(vector<vector<int>>& intervals) {
         if(intervals.size() == 0) return intervals;
 

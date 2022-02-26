@@ -61,7 +61,7 @@ hidden: false
 
 以下为代码，这里首次尝试了全迭代器的写法，感觉还不错，有复健的感觉了。
 
-```cpp
+```c++
 int trap(vector<int>& height) {
         int res=0;
         if(size(height) == 1 or size(height) == 0) return 0;

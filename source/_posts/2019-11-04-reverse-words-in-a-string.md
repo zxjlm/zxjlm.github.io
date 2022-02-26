@@ -72,7 +72,7 @@ class Solution:
 
 ## 代码
 
-```cpp
+```c++
 # 栈
 class Solution {
 public:

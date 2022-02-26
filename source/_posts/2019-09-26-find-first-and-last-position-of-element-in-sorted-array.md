@@ -53,7 +53,7 @@ No.34 是一个典型的二分法问题，不过在二分法的基础上做出�
 
 ## 具体代码
 
-```cpp
+```c++
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
