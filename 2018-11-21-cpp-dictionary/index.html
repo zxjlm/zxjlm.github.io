@@ -3,323 +3,323 @@
     ScrollReveal().reveal(target);
   })
 });</script><link id="light-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism.css" media="(prefers-color-scheme:light)"><link id="dark-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism-tomorrow.css" media="(prefers-color-scheme:dark)"><link rel="icon" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">const Yun = window.Yun || {};
-    window.CONFIG = {"hostname":"blog.harumonia.moe","root":"/","title":"Zaxon-迷雾中的藏宝地","version":"1.6.1","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};</script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-EBNGE3F0F6"></script><script>function gtag(){dataLayer.push(arguments)}CONFIG.hostname===location.hostname&&(window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EBNGE3F0F6"))</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><meta name="description" content="这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。） &#x2F;&#x2F; &#x2F;&#x2F;  main.cpp &#x2F;&#x2F;  zidian &#x2F;&#x2F; &#x2F;&#x2F;  Created by Lion Heart on 2018&#x2F;11&#x2F;18. &#x2F;&#x2F;  Copyright © 2018 Lion. All rights reserved. &#x2F;&#x2F;  #include &lt;iostr"><meta property="og:type" content="article"><meta property="og:title" content="c++实现字典（初步）"><meta property="og:url" content="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/index.html"><meta property="og:site_name" content="Zaxon"><meta property="og:description" content="这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。） &#x2F;&#x2F; &#x2F;&#x2F;  main.cpp &#x2F;&#x2F;  zidian &#x2F;&#x2F; &#x2F;&#x2F;  Created by Lion Heart on 2018&#x2F;11&#x2F;18. &#x2F;&#x2F;  Copyright © 2018 Lion. All rights reserved. &#x2F;&#x2F;  #include &lt;iostr"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2018-11-21T13:47:00.000Z"><meta property="article:modified_time" content="2019-07-20T22:13:35.000Z"><meta property="article:author" content="harumonia"><meta property="article:tag" content="算法"><meta name="twitter:card" content="summary"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button sidebar-nav-active" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel sidebar-panel-active" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="harumonia"><img width="96" loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp" alt="harumonia"></a><div class="site-author-name"><a href="/about/">harumonia</a></div><span class="site-name">Zaxon</span><sub class="site-subtitle">Find the key of soul</sub><div class="site-desciption">lazy</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">123</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">15</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">65</span></a></div><a class="site-state-item hty-icon-button" href="/books" title="读书"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-book-2-line"></use></svg></span></a></nav><hr style="margin-bottom:.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=DSmoEtSKHITcV9pghYqqmSQ80-SPnPjm&amp;noverify=0" title="QQ" target="_blank" style="color:#12b7f5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/zxjlm" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.douban.com/people/Zxj_Butterfly_m/" title="豆瓣" target="_blank" style="color:#072"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douban-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=305617499" title="网易云音乐" target="_blank" style="color:#c20c0c"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/1801214" title="哔哩哔哩" target="_blank" style="color:#ff8eb3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/Harumonia1996" title="Twitter" target="_blank" style="color:#1da1f2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:zxjlm233@gmail.com" title="E-Mail" target="_blank" style="color:#8e71c1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:#1e90ff"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color:#f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content">很遗憾，咱没写啥目录</div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="harumonia"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Zaxon"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">c++实现字典（初步）</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span><time title="创建时间：2018-11-21 13:47:00" itemprop="dateCreated datePublished" datetime="2018-11-21T13:47:00+00:00">2018-11-21</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span><time title="修改时间：2019-07-20 22:13:35" itemprop="dateModified" datetime="2019-07-20T22:13:35+00:00">2019-07-20</time></div><div class="post-classify"><span class="post-category"><span class="post-meta-item-icon" style="margin-right:3px"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">源流清泉</span></a></span> > <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Algorithm-Data-Structure/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Algorithm \ Data Structure</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">算法</span></a></span></div><div class="post-author"><span class="author-name">harumonia</span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7"><p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//</span>
-<span class="token comment">//  main.cpp</span>
-<span class="token comment">//  zidian</span>
-<span class="token comment">//</span>
-<span class="token comment">//  Created by Lion Heart on 2018/11/18.</span>
-<span class="token comment">//  Copyright © 2018 Lion. All rights reserved.</span>
-<span class="token comment">//</span>
+    window.CONFIG = {"hostname":"blog.harumonia.moe","root":"/","title":"Zaxon-迷雾中的藏宝地","version":"1.6.1","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};</script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-EBNGE3F0F6"></script><script>function gtag(){dataLayer.push(arguments)}CONFIG.hostname===location.hostname&&(window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EBNGE3F0F6"))</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><meta name="description" content="这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。） &#x2F;&#x2F; &#x2F;&#x2F;  main.cpp &#x2F;&#x2F;  zidian &#x2F;&#x2F; &#x2F;&#x2F;  Created by Lion Heart on 2018&#x2F;11&#x2F;18. &#x2F;&amp;#x2"><meta property="og:type" content="article"><meta property="og:title" content="c++实现字典（初步）"><meta property="og:url" content="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/index.html"><meta property="og:site_name" content="Zaxon"><meta property="og:description" content="这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。） &#x2F;&#x2F; &#x2F;&#x2F;  main.cpp &#x2F;&#x2F;  zidian &#x2F;&#x2F; &#x2F;&#x2F;  Created by Lion Heart on 2018&#x2F;11&#x2F;18. &#x2F;&amp;#x2"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2018-11-21T13:47:00.000Z"><meta property="article:modified_time" content="2019-07-20T22:13:35.000Z"><meta property="article:author" content="harumonia"><meta property="article:tag" content="算法"><meta name="twitter:card" content="summary"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button sidebar-nav-active" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel sidebar-panel-active" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="harumonia"><img width="96" loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp" alt="harumonia"></a><div class="site-author-name"><a href="/about/">harumonia</a></div><span class="site-name">Zaxon</span><sub class="site-subtitle">Find the key of soul</sub><div class="site-desciption">lazy</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">123</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">15</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">65</span></a></div><a class="site-state-item hty-icon-button" href="/books" title="读书"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-book-2-line"></use></svg></span></a></nav><hr style="margin-bottom:.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://qm.qq.com/cgi-bin/qm/qr?k=DSmoEtSKHITcV9pghYqqmSQ80-SPnPjm&amp;noverify=0" title="QQ" target="_blank" style="color:#12b7f5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/zxjlm" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://www.douban.com/people/Zxj_Butterfly_m/" title="豆瓣" target="_blank" style="color:#072"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douban-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://music.163.com/#/user/home?id=305617499" title="网易云音乐" target="_blank" style="color:#c20c0c"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-netease-cloud-music-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://space.bilibili.com/1801214" title="哔哩哔哩" target="_blank" style="color:#ff8eb3"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bilibili-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/Harumonia1996" title="Twitter" target="_blank" style="color:#1da1f2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:zxjlm233@gmail.com" title="E-Mail" target="_blank" style="color:#8e71c1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:#1e90ff"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color:#f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content">很遗憾，咱没写啥目录</div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="harumonia"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="Zaxon"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">c++实现字典（初步）</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span><time title="创建时间：2018-11-21 13:47:00" itemprop="dateCreated datePublished" datetime="2018-11-21T13:47:00+00:00">2018-11-21</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span><time title="修改时间：2019-07-20 22:13:35" itemprop="dateModified" datetime="2019-07-20T22:13:35+00:00">2019-07-20</time></div><div class="post-classify"><span class="post-category"><span class="post-meta-item-icon" style="margin-right:3px"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">源流清泉</span></a></span> > <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Algorithm-Data-Structure/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Algorithm \ Data Structure</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/%E7%AE%97%E6%B3%95/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">算法</span></a></span></div><div class="post-author"><span class="author-name">harumonia</span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7"><p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F;
+&#x2F;&#x2F;  main.cpp
+&#x2F;&#x2F;  zidian
+&#x2F;&#x2F;
+&#x2F;&#x2F;  Created by Lion Heart on 2018&#x2F;11&#x2F;18.
+&#x2F;&#x2F;  Copyright © 2018 Lion. All rights reserved.
+&#x2F;&#x2F;
 
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;map></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;time.h></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;Windows.h></span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iomanip></span></span>
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt;
+#include &lt;time.h&gt;
+#include &lt;Windows.h&gt;
+#include &lt;iomanip&gt;
 
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+using namespace std;
 
-<span class="token keyword">void</span> <span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+void cinfstr_cn();
+void cinfstr_eng();
+void test(int count);
 
-map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> string<span class="token operator">></span> temp_tran<span class="token punctuation">;</span>
-string temp_ENG<span class="token punctuation">[</span><span class="token number">3000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-string temp_CN<span class="token punctuation">[</span><span class="token number">3000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+map&lt;string, string&gt; temp_tran;
+string temp_ENG[3000];
+string temp_CN[3000];
 
-<span class="token keyword">class</span> <span class="token class-name">Dictionary</span>
-<span class="token punctuation">&#123;</span>
-<span class="token keyword">private</span><span class="token operator">:</span>
-    map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> string<span class="token operator">></span> dic<span class="token punctuation">;</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token function">Dictionary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-    <span class="token operator">~</span><span class="token function">Dictionary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">insert_word</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">Batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">//temp</span>
-    <span class="token keyword">void</span> <span class="token function">inquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">//in_batch</span>
-    <span class="token keyword">void</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//hang</span>
-    <span class="token keyword">void</span> <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+class Dictionary
+&#123;
+private:
+    map&lt;string, string&gt; dic;
+public:
+    Dictionary()&#123;&#125;;
+    ~Dictionary()&#123;&#125;;
+    void insert_word();
+    void Batch();          &#x2F;&#x2F;temp
+    void inquire();     &#x2F;&#x2F;in_batch
+    void sort();        &#x2F;&#x2F;hang
+    void display();
+    void clear();
 
-    <span class="token keyword">void</span> <span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">option1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">void</span> <span class="token function">option2</span><span class="token punctuation">(</span><span class="token keyword">int</span> opt2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    void menu();
+    void option1();
+    void option2(int opt2);
 
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+&#125;;
 
-<span class="token keyword">void</span> <span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ENG.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        temp_ENG<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
-        count_word<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+void cinfstr_eng()
+&#123;
+    char buffer[256];
+    int count_word &#x3D; 0;
+    ifstream in(&quot;ENG.txt&quot;);
+    if (!in.is_open())
+    &#123;
+        cout &lt;&lt; &quot;Error opening file&quot;; exit(1);
+    &#125;
+    while (!in.eof())
+    &#123;
+        in.getline(buffer, 100);
+        temp_ENG[count_word] &#x3D; buffer;
+        count_word++;
+    &#125;
 
-<span class="token punctuation">&#125;</span>
+&#125;
 
-<span class="token keyword">void</span> <span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ZH.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        temp_CN<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
-        <span class="token comment">//cout &lt;&lt; buffer &lt;&lt; endl;</span>
-        count_word<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+void cinfstr_cn()
+&#123;
+    char buffer[256];
+    int count_word &#x3D; 0;
+    ifstream in(&quot;ZH.txt&quot;);
+    if (!in.is_open())
+    &#123;
+        cout &lt;&lt; &quot;Error opening file&quot;; exit(1);
+    &#125;
+    while (!in.eof())
+    &#123;
+        in.getline(buffer, 100);
+        temp_CN[count_word] &#x3D; buffer;
+        &#x2F;&#x2F;cout &lt;&lt; buffer &lt;&lt; endl;
+        count_word++;
+    &#125;
 
-<span class="token punctuation">&#125;</span>
-
-
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// insert code here...</span>
-    <span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    Dictionary dic<span class="token punctuation">;</span>
-
-    string flag<span class="token operator">=</span><span class="token string">"y"</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token string">"y"</span><span class="token operator">||</span>flag<span class="token operator">==</span><span class="token string">"Y"</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        dic<span class="token punctuation">.</span><span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        dic<span class="token punctuation">.</span><span class="token function">option1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        cout <span class="token operator">&lt;&lt;</span>endl<span class="token operator">&lt;&lt;</span> <span class="token string">"Continue Operation(Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        cin<span class="token operator">>></span>flag<span class="token punctuation">;</span>
-        <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+&#125;
 
 
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+
+int main(int argc, const char * argv[]) &#123;
+    &#x2F;&#x2F; insert code here...
+    cinfstr_cn();
+    cinfstr_eng();
+
+    Dictionary dic;
+
+    string flag&#x3D;&quot;y&quot;;
+    while (flag&#x3D;&#x3D;&quot;y&quot;||flag&#x3D;&#x3D;&quot;Y&quot;) &#123;
+        dic.menu();
+        dic.option1();
+
+        cout &lt;&lt;endl&lt;&lt; &quot;Continue Operation(Y&#x2F;N)&quot;&lt;&lt;endl;
+        cin&gt;&gt;flag;
+        system(&quot;cls&quot;);
+    &#125;
 
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1.Creat:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"2.Inquire"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"3.Sort"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"4.Display"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"5.clear"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input your choice:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">option1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> opt1<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span>opt1<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> opt2<span class="token punctuation">;</span>
-    <span class="token keyword">switch</span> <span class="token punctuation">(</span>opt1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
-            <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1.One by one."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"2.Batch generation."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"3.Back step."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input your choice:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            cin <span class="token operator">>></span>opt2<span class="token punctuation">;</span>
-            <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
-            <span class="token function">option2</span><span class="token punctuation">(</span>opt2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
-            <span class="token function">inquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
-            <span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">4</span><span class="token operator">:</span>
-            <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
-            <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">default</span><span class="token operator">:</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Wrong Input!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">&#125;</span>
-
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">option2</span><span class="token punctuation">(</span><span class="token keyword">int</span> opt2<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    string flag_ina<span class="token punctuation">;</span>
-    <span class="token keyword">switch</span> <span class="token punctuation">(</span>opt2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
-            <span class="token keyword">do</span><span class="token punctuation">&#123;</span>
-                <span class="token function">insert_word</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                cout <span class="token operator">&lt;&lt;</span><span class="token string">"Continue to input words?(Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-                cin <span class="token operator">>></span> flag_ina<span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span><span class="token keyword">while</span> <span class="token punctuation">(</span>flag_ina<span class="token operator">==</span><span class="token string">"y"</span><span class="token operator">||</span>flag_ina<span class="token operator">==</span><span class="token string">"Y"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
-            <span class="token function">Batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
-            <span class="token comment">//hahahahahahahahahahahahahahahahahahahahahahaha</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-
-        <span class="token keyword">default</span><span class="token operator">:</span>
-            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Wrong Input!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+    system(&quot;pause&quot;);
+    return 0;
+&#125;
 
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">insert_word</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    string Eng<span class="token punctuation">,</span>Zh_CN<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input English:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> Eng<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input paraphrase(Chinese):"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span>Zh_CN<span class="token punctuation">;</span>
-    dic<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span>Eng<span class="token punctuation">,</span> Zh_CN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
-<span class="token punctuation">&#125;</span>
+void Dictionary::menu()
+&#123;
+    cout &lt;&lt; &quot;--------------------&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;1.Creat:&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;2.Inquire&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;3.Sort&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;4.Display&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;------&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;5.clear&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;--------------------&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;Please input your choice:&quot;&lt;&lt;endl;
+&#125;
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">inquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> opt<span class="token punctuation">;</span>
-    string a<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Inquire by English or Chinese?"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1.English"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"2.Chinese"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span>opt<span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>opt <span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Plsase the word you want to inquire:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        cin <span class="token operator">>></span> a<span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>dic<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token operator">==</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            cout <span class="token operator">&lt;&lt;</span> a<span class="token operator">&lt;&lt;</span><span class="token string">" is not in this dictionary~"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">else</span>
-        <span class="token punctuation">&#123;</span>
-            cout <span class="token operator">&lt;&lt;</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>opt<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Plsase the word you want to inquire:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        cin <span class="token operator">>></span> a<span class="token punctuation">;</span>
-        <span class="token keyword">bool</span> flag<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>bba<span class="token operator">-></span>second<span class="token operator">==</span>a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-                cout <span class="token operator">&lt;&lt;</span> bba<span class="token operator">-></span>first<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-                flag<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-            <span class="token operator">++</span>bba<span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-            cout <span class="token operator">&lt;&lt;</span> a<span class="token operator">&lt;&lt;</span><span class="token string">" is not in this dictionary~"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
-<span class="token punctuation">&#125;</span>
+void Dictionary::option1()
+&#123;
+    int opt1;
+    cin &gt;&gt;opt1;
+    int opt2;
+    switch (opt1) &#123;
+        case 1:
+            system(&quot;cls&quot;);                                  &#x2F;&#x2F;aaaaaaaaaa
+            cout &lt;&lt; &quot;1.One by one.&quot;&lt;&lt;endl;
+            cout &lt;&lt; &quot;2.Batch generation.&quot;&lt;&lt;endl;
+            cout &lt;&lt; &quot;3.Back step.&quot;&lt;&lt;endl;
+            cout &lt;&lt; &quot;------------------------------&quot;&lt;&lt;endl;
+            cout &lt;&lt; &quot;Please input your choice:&quot;&lt;&lt;endl;
+            cin &gt;&gt;opt2;
+            system(&quot;cls&quot;);                                  &#x2F;&#x2F;aaaaaaaaaa
+            option2(opt2);
+            break;
+        case 2:
+            inquire();
+            break;
+        case 3:
+            sort();
+            break;
+        case 4:
+            display();
+            break;
+        case 5:
+            clear();
+            break;
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//hang</span>
-<span class="token punctuation">&#125;</span>
+        default:
+            cout &lt;&lt; &quot;Wrong Input!&quot;&lt;&lt;endl;
+            break;
+    &#125;
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span><span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span> <span class="token string">"English"</span><span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token string">"Chinese"</span><span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    <span class="token comment">//cout &lt;&lt; dic["a"];</span>
-    <span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span> bba<span class="token operator">-></span>first<span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>bba<span class="token operator">-></span>second<span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-        <span class="token operator">++</span>bba<span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+&#125;
+
+void Dictionary::option2(int opt2)
+&#123;
+    string flag_ina;
+    switch (opt2) &#123;
+        case 1:
+            do&#123;
+                insert_word();
+                cout &lt;&lt;&quot;Continue to input words?(Y&#x2F;N)&quot;&lt;&lt;endl;
+                cin &gt;&gt; flag_ina;
+            &#125;while (flag_ina&#x3D;&#x3D;&quot;y&quot;||flag_ina&#x3D;&#x3D;&quot;Y&quot;);
+            break;
+        case 2:
+            Batch();
+            break;
+        case 3:
+            &#x2F;&#x2F;hahahahahahahahahahahahahahahahahahahahahahaha
+            break;
+
+        default:
+            cout &lt;&lt; &quot;Wrong Input!&quot;&lt;&lt;endl;
+            break;
+    &#125;
+&#125;
 
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">Batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token comment">//hang</span>
-    <span class="token keyword">int</span> tim<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+void Dictionary::insert_word()
+&#123;
+    string Eng,Zh_CN;
+    cout &lt;&lt; &quot;Please input English:&quot;&lt;&lt;endl;
+    cin &gt;&gt; Eng;
+    cout &lt;&lt; &quot;Please input paraphrase(Chinese):&quot;&lt;&lt;endl;
+    cin &gt;&gt;Zh_CN;
+    dic.insert(make_pair(Eng, Zh_CN));
+    system(&quot;cls&quot;);                                  &#x2F;&#x2F;aaaaaaaaaa
+&#125;
 
-    cout <span class="token operator">&lt;&lt;</span><span class="token string">"---------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Vocabulary will be imported from the file.\n"</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"How many words do you want to add?(&lt;=2999)"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
-    <span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        tim <span class="token operator">=</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2999</span><span class="token punctuation">;</span>
-        dic<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span>temp_ENG<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">,</span> temp_CN<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+void Dictionary::inquire()
+&#123;
+    int opt;
+    string a;
+    cout &lt;&lt; &quot;Inquire by English or Chinese?&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;1.English&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;2.Chinese&quot;&lt;&lt;endl;
+    cin &gt;&gt;opt;
+    if (opt &#x3D;&#x3D;1) &#123;
+        cout &lt;&lt; &quot;Plsase the word you want to inquire:&quot;&lt;&lt;endl;
+        cin &gt;&gt; a;
+        if (dic.find(a)&#x3D;&#x3D;dic.end()) &#123;
+            cout &lt;&lt; a&lt;&lt;&quot; is not in this dictionary~&quot;&lt;&lt;endl;
+        &#125;
+        else
+        &#123;
+            cout &lt;&lt; dic[a]&lt;&lt;endl;
+        &#125;
+    &#125;
+    if (opt&#x3D;&#x3D;2) &#123;
+        cout &lt;&lt; &quot;Plsase the word you want to inquire:&quot;&lt;&lt;endl;
+        cin &gt;&gt; a;
+        bool flag&#x3D;1;
+        auto bba&#x3D;dic.begin();
+        while(bba!&#x3D;dic.end())
+        &#123;
+            if (bba-&gt;second&#x3D;&#x3D;a) &#123;
+                cout &lt;&lt; bba-&gt;first&lt;&lt;endl;
+                flag&#x3D;0;
+                break;
+            &#125;
+            ++bba;
+        &#125;
+        if (flag) &#123;
+            cout &lt;&lt; a&lt;&lt;&quot; is not in this dictionary~&quot;&lt;&lt;endl;
+        &#125;
+    &#125;
+    system(&quot;cls&quot;);                                  &#x2F;&#x2F;aaaaaaaaaa
+&#125;
 
-<span class="token punctuation">&#125;</span>
+void Dictionary::sort()
+&#123;
+    system(&quot;cls&quot;);
+    test(4);
+    Sleep(1000);
+    &#x2F;&#x2F;hang
+&#125;
 
-<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> count<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"["</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"#"</span><span class="token punctuation">;</span>
-        <span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
-    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_GREEN<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span><span class="token string">"        success"</span><span class="token operator">&lt;&lt;</span>flush<span class="token punctuation">;</span>
-    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token operator">|</span>FOREGROUND_GREEN<span class="token operator">|</span>FOREGROUND_BLUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span><span class="token string">"!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+void Dictionary::display()
+&#123;
+    system(&quot;cls&quot;);
+    cout &lt;&lt; &quot;--------------------------------------------------&quot;&lt;&lt;endl;
+    cout &lt;&lt;setiosflags(ios::left)&lt;&lt;setw(14)&lt;&lt; &quot;English&quot;&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(9)&lt;&lt;&quot;Chinese&quot;&lt;&lt;resetiosflags(ios::left)&lt;&lt;endl;
+    &#x2F;&#x2F;cout &lt;&lt; dic[&quot;a&quot;];
+    auto bba&#x3D;dic.begin();
+    while(bba!&#x3D;dic.end())
+    &#123;
+        cout &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(14)&lt;&lt; bba-&gt;first&lt;&lt;resetiosflags(ios::left) &lt;&lt; setiosflags(ios::left)&lt;&lt;setw(9)&lt;&lt;bba-&gt;second&lt;&lt;resetiosflags(ios::left)&lt;&lt;endl;
+        ++bba;
+    &#125;
+&#125;
 
-<span class="token punctuation">&#125;</span>
 
-<span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    string flag<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span><span class="token string">"----------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Warnning!!!/n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"You will delete all your data in this dic!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Continnue? (Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span>flag<span class="token punctuation">;</span>
+void Dictionary::Batch()
+&#123;
+    &#x2F;&#x2F;hang
+    int tim,n;
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token string">"y"</span><span class="token operator">||</span>flag<span class="token operator">==</span><span class="token string">"Y"</span><span class="token punctuation">)</span>
-    <span class="token punctuation">&#123;</span>
-        dic<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">else</span>
-    <span class="token punctuation">&#123;</span>
-    <span class="token punctuation">&#125;</span>
+    cout &lt;&lt;&quot;---------------------------------------------------&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;Vocabulary will be imported from the file.\n&quot;;
+    cout &lt;&lt; &quot;How many words do you want to add?(&lt;&#x3D;2999)&quot; &lt;&lt; endl;
+    cin &gt;&gt; n;
+    srand(time(NULL));
+    for (int i &#x3D; 0; i &lt; n; i++)
+    &#123;
+        tim &#x3D; rand() % 2999;
+        dic.insert(make_pair(temp_ENG[tim], temp_CN[tim]));
+        &#x2F;&#x2F;cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;
+    &#125;
+    test(4);
 
-<span class="token punctuation">&#125;</span>
+&#125;
 
-<span class="token comment">/*
+void test(int count)
+&#123;
+    cout &lt;&lt; &quot;[&quot;;
+    for (int i&#x3D;0;i&lt;count;i++)
+    &#123;
+        cout &lt;&lt; &quot;#&quot;;
+        Sleep(500);
+    &#125;
+    cout &lt;&lt; &quot;]&quot;;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_GREEN);
+    cout&lt;&lt;&quot;        success&quot;&lt;&lt;flush;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
+    cout &lt;&lt;&quot;!&quot;&lt;&lt;endl;
+
+&#125;
+
+void Dictionary::clear()
+&#123;
+    string flag;
+    cout &lt;&lt;&quot;----------------------------------------------------&quot;&lt;&lt;endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED);
+    printf(&quot;Warnning!!!&#x2F;n&quot;);
+    cout &lt;&lt; &quot;You will delete all your data in this dic!&quot;&lt;&lt;endl;
+    cout &lt;&lt; &quot;Continnue? (Y&#x2F;N)&quot;&lt;&lt;endl;
+    cin &gt;&gt;flag;
+
+    if (flag&#x3D;&#x3D;&quot;y&quot;||flag&#x3D;&#x3D;&quot;Y&quot;)
+    &#123;
+        dic.erase(dic.begin(),dic.end());
+    &#125;
+    else
+    &#123;
+    &#125;
+
+&#125;
+
+&#x2F;*
 RIZHI
 随机生成过程中出现重复可能缺失数据
-*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div><div id="qr" style="display:none"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3741.JPG"><img loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3741.JPG" alt="支付宝" title="支付宝"></a><div><span style="color:#00a3ee"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3742.JPG"><img loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3742.JPG" alt="微信支付" title="微信支付"></a><div><span style="color:#2dc100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>harumonia</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/" title="c++实现字典（初步）">https://blog.harumonia.moe/2018-11-21-cpp-dictionary/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a>许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2018-12-02-others/" rel="prev" title="杂物"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">杂物</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2018-11-20-container-generic/" rel="next" title="顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器"><span class="post-nav-text">顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2018 – 2022 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author">harumonia</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="打赏" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div><div id="qr" style="display:none"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3741.JPG"><img loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3741.JPG" alt="支付宝" title="支付宝"></a><div><span style="color:#00a3ee"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3742.JPG"><img loading="lazy" src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/IMG_3742.JPG" alt="微信支付" title="微信支付"></a><div><span style="color:#2dc100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>harumonia</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://blog.harumonia.moe/2018-11-21-cpp-dictionary/" title="c++实现字典（初步）">https://blog.harumonia.moe/2018-11-21-cpp-dictionary/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a>许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2018-12-02-others/" rel="prev" title="杂物"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">杂物</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2018-11-20-container-generic/" rel="next" title="顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器"><span class="post-nav-text">顺序容器&amp;&amp;泛型算法&amp;&amp;关联容器</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2018 – 2022 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author">harumonia</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
   setTimeout(blog_live_time, 1000);
   const start = new Date('2018-10-25T00:00:00');
   const now = new Date();
