@@ -605,10 +605,10 @@ AttributeError: 'Student' object has no attribute 'age'
 
 # 特殊函数
 
-\_\_str** 用户 默认输出
-\_\_repr** 开发者 默认输出
+\_\_str\*\* 用户 默认输出
+\_\_repr\*\* 开发者 默认输出
 
-### \_\_cmp\_\_
+## \_\_cmp\_\_
 
 对 int、str 等内置数据类型排序时，Python 的 sorted() 按照默认的比较函数 cmp 排序，但是，如果对一组 Student 类的实例排序时，就必须提供我们自己的特殊方法 \_\_cmp\_\_()：
 
@@ -632,10 +632,10 @@ class Student(object):
 
 ### 数学运算
 
-\_\_add** 加
-\_\_sub** 减
-\_\_mul** 乘
-\_\_div** 除
+\_\_add\*\* 加
+\_\_sub\*\* 减
+\_\_mul\*\* 乘
+\_\_div\*\* 除
 
 ### property
 

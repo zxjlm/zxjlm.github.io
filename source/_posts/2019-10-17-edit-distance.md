@@ -24,9 +24,9 @@ hidden: false
 
 [No.72 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
 
-**难度：困难**
+难度：**困难**
 
-给你两个单词  word1 和  word2，请你计算出将  word1  转换成  word2 所使用的最少操作数  。
+给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
 
 你可以对一个单词进行如下三种操作：
 
@@ -36,7 +36,7 @@ hidden: false
 
 <!-- more -->
 
-示例  1：
+示例 1：
 
 输入：word1 = "horse", word2 = "ros"  
 输出：3  
@@ -46,7 +46,7 @@ hidden: false
     rorse -> rose (删除 'r')
     rose -> ros (删除 'e')
 
-示例  2：
+示例 2：
 
 输入：word1 = "intention", word2 = "execution"  
 输出：5  

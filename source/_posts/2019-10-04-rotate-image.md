@@ -27,12 +27,13 @@ hidden: false
 
 [No.48 旋转图像](https://leetcode-cn.com/problems/rotate-image/)
 
-给定一个 n × n 的二维矩阵表示一个图像。
+给定一个 n×n 的二维矩阵表示一个图像。
 
 将图像顺时针旋转 90 度。
 
 <!-- more -->
 
+```plain_text
 说明：
 
 你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
@@ -70,6 +71,7 @@ hidden: false
         [12, 6, 8, 9],
         [16, 7,10,11]
     ]
+```
 
 ## 结果
 
@@ -93,15 +95,15 @@ hidden: false
 
 ```cpp
 void rotate(vector<vector<int>>& matrix) {
-	int len = matrix.size();
-	for(int i = 0 ; i < len ; i++){
-		for(int j = 0; j < i; j++){
-			swap(matrix[i][j],matrix[j][i]);
-		}
-	}
-	for(int i = 0 ; i < len ; i++){
-		reverse(matrix[i].begin(),matrix[i].end());
-	}
+    int len = matrix.size();
+    for(int i = 0 ; i < len ; i++){
+        for(int j = 0; j < i; j++){
+            swap(matrix[i][j],matrix[j][i]);
+        }
+    }
+    for(int i = 0 ; i < len ; i++){
+        reverse(matrix[i].begin(),matrix[i].end());
+    }
 }
 ```
 

@@ -28,9 +28,10 @@ hidden: false
 
 <!-- more -->
 
+```plain_text
 示例:
 
-输入: n = 4, k = 2
+输入:n = 4, k = 2
 输出:
 
     [
@@ -41,6 +42,7 @@ hidden: false
     [1,3],
     [1,4],
     ]
+```
 
 ## 结果
 

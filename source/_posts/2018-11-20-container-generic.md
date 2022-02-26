@@ -51,36 +51,36 @@ vector<int> ivec(10);       //10个0
 
 ### 容器的遍历手段
 
-#### 方法一：
+#### 方法一
 
 ```cpp
 copy(a.begin(), a.end(), ostream_iterator<int>(cout," "));
 ```
 
-#### 方法二：
+#### 方法二
 
 ```cpp
-vector<int>::iterator it = v.begin();
-	// const时。 vector<int>::const_iterator iter=v.begin();
-	for(; it != v.end(); ++it)
-	{
-		cout<<(*it)<<" ";
-	}
-	cout<<endl;
+    vector<int>::iterator it = v.begin();
+    // const时。 vector<int>::const_iterator iter=v.begin();
+    for(; it != v.end(); ++it)
+    {
+        cout<<(*it)<<" ";
+    }
+    cout<<endl;
 ```
 
-#### 方法三：
+#### 方法三
 
 ```cpp
 for(unsigned int i = 0; i < v.size(); ++i)
-	{
-		cout<<v[i]<<" ";
-	}
-	cout<<endl;
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
 
 ```
 
-#### 方法四：
+#### 方法四
 
 ```cpp
     for_each(a.begin(), a.end(), [](int s){cout<<s<<" ";});//联动下述lambda
@@ -114,10 +114,10 @@ e.g. 4 2 4 4 4 2 2 2 2 2
 ```
 
 ```cpp
-[ captures ] <tparams>(optional)(c++20) ( params ) specifiers exception attr -> ret requires(optional)(c++20) { body }	(1)
-[ captures ] ( params ) -> ret { body }	(2)
-[ captures ] ( params ) { body }	(3)
-[ captures ] { body }	(4)
+[ captures ] <tparams>(optional)(c++20) ( params ) specifiers exception attr -> ret requires(optional)(c++20) { body }(1)
+[ captures ] ( params ) -> ret { body } (2)
+[ captures ] ( params ) { body }    (3)
+[ captures ] { body }   (4)
 
 ```
 

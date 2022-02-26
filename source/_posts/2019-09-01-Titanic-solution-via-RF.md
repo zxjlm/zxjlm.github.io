@@ -46,6 +46,7 @@ RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 
 
 存在以下的 12 个属性,其中,Survived 是 **结果**.
 
+```plain_text
     PassengerId -  Unique ID of the passenger
     Survived -  Survived (1) or died (0)
     Pclass -  Passenger's class (1st, 2nd, or 3rd)
@@ -58,6 +59,7 @@ RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 
     FareFare -  paid for ticket
     Cabin - Cabin number
     Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q = Queenstown)
+```
 
 ## 处理思路
 
@@ -72,6 +74,7 @@ RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 
 
 输出 _Dataframe.info()_
 
+```plain_text
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 891 entries, 0 to 890
     Data columns (total 12 columns):
@@ -89,6 +92,7 @@ RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 
     Embarked       889 non-null object
     dtypes: float64(2), int64(5), object(5)
     memory usage: 83.6+ KB
+```
 
 可以看出,要处理的是 _name_ \ _Sex_ \ _Ticket_ \ _Cabin_ \ _Embarked_ 这几项.
 
@@ -132,6 +136,7 @@ df1.drop(['Ticket'],axis=1,inplace=True)
 
 查看各属性的残缺值比例,并按照降序排列
 
+```plain_text
     Cabin       0.771044
     Age         0.198653
     Embarked    0.002245
@@ -142,6 +147,7 @@ df1.drop(['Ticket'],axis=1,inplace=True)
     Pclass      0.000000
     Survived    0.000000
     dtype: float64
+```
 
 我准备先从残缺值比低的开始修正(又是废话....
 
@@ -171,6 +177,7 @@ df1.drop(['Ticket'],axis=1,inplace=True)
 
 聚类得出各个水平的 Cabin 的平均值,并划分区间
 
+```plain_text
     Cabin
     G     14.205000
     F     18.079367
@@ -182,6 +189,7 @@ df1.drop(['Ticket'],axis=1,inplace=True)
     C    107.926598
     B    122.383078
     Name: Fare, dtype: float64
+```
 
 然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.
 

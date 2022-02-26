@@ -95,7 +95,7 @@ _典型案例_ :信用卡欺诈检测
 
 数据对象 : 记录\点\向量\模式\事件\案例\样本\观测或实体
 
-#### 属性
+### 属性
 
 四种属性类型:标称 序数 区间 比率
 [![image04e5c16df6c5ea4b.md.png](http://www.harumonia.top/images/2019/08/17/image04e5c16df6c5ea4b.md.png)](http://www.harumonia.top/image/N7Zp)
@@ -210,8 +210,8 @@ _典型案例_ :信用卡欺诈检测
 
 将两个或多个对象合并成单个对象
 
-<u> **定量** 属性(如价格)通常通过求和或求平均值进行聚集</u>
-<u> **定性** 属性(如商品)可以忽略或汇总成在一个商店销售的所有商品的集合</u>
+ **定量** 属性(如价格)通常通过求和或求平均值进行聚集
+ **定性** 属性(如商品)可以忽略或汇总成在一个商店销售的所有商品的集合
 
 聚集的动机有多种:
 首先,数据归约导致的较小数据集需要较少的内存和处理时间,因此,可以使用开销更大的数据挖掘算法.
@@ -307,7 +307,7 @@ _典型案例_ :信用卡欺诈检测
 
 使用一种完全不同的视角挖掘数据可能揭示出重要和有趣的特征.
 
-**傅里叶变换 Fourier transform**
+傅里叶变换 Fourier transform
 
 > 对于时间序列和其他类型的数据,**小波变换 wavelet transform** 也非常有用
 
@@ -376,7 +376,6 @@ _典型案例_ :信用卡欺诈检测
 #### 定义 Definitions
 
 > the similarity between two objects is a numerical measure of the degreeto which the two objects are alike.
-
 > The dissimilarity betweentwo objects is a numerical measureof the de- gree to which the two objects are different.
 
 通常术语"距离"用作相异度的同义词.

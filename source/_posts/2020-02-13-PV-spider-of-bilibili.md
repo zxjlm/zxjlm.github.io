@@ -48,7 +48,7 @@ url = "https://blog.csdn.net/Acher_zxj/article/details/104276531"
 
 count = 0
 while True:
-	res = requests.get(url,headers=headers)
+    res = requests.get(url,headers=headers)
     print("now in loop {}".format(count))
 ```
 
@@ -75,7 +75,7 @@ while True:
 1. B 站的视频访问是需要登录的，不登录的访问似乎是不计数的(还是只记一次来着)？
 2. B 站视频并不是你**进入页面**时就算是一个访问的，而是你点击了这个视频，即**开始观看**之后，才算是一个视频访问量。
 
-由于上述的两个问题，那么很显然我们无法像*CSDN 访问量爬虫*那样简单地实现了。
+由于上述的两个问题，那么很显然我们无法像 _CSDN 访问量爬虫_ 那样简单地实现了。
 
 关于第一个问题，我们的解决方法很简单。
 在浏览器中找到你的 cookie，然后将其添加到 headers 中即可。
@@ -104,7 +104,7 @@ while True:
 
 ![image-20200213204634035](http://typora-zxj.oss-cn-beijing.aliyuncs.com/typora/20200213204634-611540.png)
 
-可以看到，这个名字是*h5*的小家伙携带了很不得了的信息呢。
+可以看到，这个名字是 _h5_ 的小家伙携带了很不得了的信息呢。
 
 ### 3. 测试 API
 
@@ -120,7 +120,7 @@ headers = {
     'Origin': 'https://www.bilibili.com',
     'Connection': 'keep-alive',
     'Referer': 'https://www.bilibili.com/video/av88113854',
-	'Cookie':"你的cookie"
+    'Cookie':"你的cookie"
 }
 
 data = {
@@ -163,7 +163,7 @@ headers = {
     'Origin': 'https://www.bilibili.com',
     'Connection': 'keep-alive',
     'Referer': 'https://www.bilibili.com/video/av88113854',
-	'Cookie':"你的cookie"
+    'Cookie':"你的cookie"
 }
 
 data_bk1 = {

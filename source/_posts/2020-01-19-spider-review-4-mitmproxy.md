@@ -40,19 +40,19 @@ hidden: false
 
 ## 安装
 
-1. 安装本体
+s1. 安装本体
 
 ```bash
 brew install mitmproxy
 ```
 
-2. 安装 python 包
+s2. 安装 python 包
 
 ```bash
 pip install mitproxy
 ```
 
-3. 安装证书
+s3. 安装证书
 
    1. shell 中输入 mitmdump
 
@@ -61,7 +61,7 @@ pip install mitproxy
 
 ps.使用 **shift+cmd+.** 可以查看隐藏文件
 
-4. 连接代理
+s4. 连接代理
 
    1. 使用 ifconfig 查找本机的 ip 地址
 
@@ -69,7 +69,7 @@ ps.使用 **shift+cmd+.** 可以查看隐藏文件
 
       ![image-20200118233542424](https://tva1.sinaimg.cn/large/006tNbRwgy1gb1510c350j30d502z0sx.jpg)
 
-​ 在设置->无线局域网->无线局域网配置->配置代理
+​在设置->无线局域网->无线局域网配置->配置代理
 
 ps. mitmproxy 的端口是 8080
 
@@ -97,7 +97,7 @@ ps. 这里列一下流界面的快捷键
 > l:查看请求内容 上一个
 > tab：查看请求内容 下一个
 
-**至此，所有的准备工作就都已经完成了，接下来选择一下实验目标吧**
+至此，所有的准备工作就都已经完成了，接下来选择一下实验目标吧
 
 # mission start
 

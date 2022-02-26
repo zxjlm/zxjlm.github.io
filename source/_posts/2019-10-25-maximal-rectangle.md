@@ -24,12 +24,13 @@ hidden: false
 
 [No.85 最大矩形](https://leetcode-cn.com/problems/maximal-rectangle/)
 
-**难度：困难**
+难度：**困难**
 
-给定一个仅包含  0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。
+给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。
 
 <!-- more -->
 
+```plain_text
 示例:
 
 输入:
@@ -42,6 +43,7 @@ hidden: false
     ]
 
 输出: 6
+```
 
 ## 结果
 

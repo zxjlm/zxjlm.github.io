@@ -30,7 +30,7 @@ hidden: false
 [windowbuilder 主页](https://download.eclipse.org/windowbuilder/latest/)
 
 S1:安装插件(install new software)(这里注意活用 help 功能)
-S2:将 https://download.eclipse.org/windowbuilder/latest/ 复制到 work with 一栏中
+S2:将 "https://download.eclipse.org/windowbuilder/latest/" 复制到 work with 一栏中
 S3:一路点击 next 全选安装即可
 
 安装完毕会提示重启,重启完成,在 new->other->windowbuilder->swing Designer->Application Window 中创建项目.
@@ -48,21 +48,21 @@ S3:一路点击 next 全选安装即可
 
 ```Java
 button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new labelControl1(matrixLoder).start();
-				new labelControl2(contentLoder).start();
-				new labelControl3(probilityLoder).start();
-				resultOf01Button.setEnabled(false);
-				resultOfcontentButton.setEnabled(false);
-				resultOfprobilityButton.setEnabled(false);
-				chartsOfcontentButton.setEnabled(false);
-				chartsOfProbilityButton.setEnabled(false);
-				visable_init(true);
+    public void actionPerformed(ActionEvent e) {
+        new labelControl1(matrixLoder).start();
+        new labelControl2(contentLoder).start();
+        new labelControl3(probilityLoder).start();
+        resultOf01Button.setEnabled(false);
+        resultOfcontentButton.setEnabled(false);
+        resultOfprobilityButton.setEnabled(false);
+        chartsOfcontentButton.setEnabled(false);
+        chartsOfProbilityButton.setEnabled(false);
+        visable_init(true);
 
-				new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
-			}
+        new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
+    }
             //将post命令放在新的线程中并发执行
-		});
+        });
 ```
 
 ### 效果图展示
@@ -88,111 +88,111 @@ button.addActionListener(new ActionListener() {
 
 ```Java
 JSONObject js = new JSONObject();
-		js = JSON.parseObject(s1);
+        js = JSON.parseObject(s1);
 
 
-		HashSet<String> row =new HashSet<String>();
-		List<String> cols = new ArrayList<>(js.keySet());
-		List<String> rows = new ArrayList<>(js.getJSONObject(cols.get(0)).keySet());
+        HashSet<String> row =new HashSet<String>();
+        List<String> cols = new ArrayList<>(js.keySet());
+        List<String> rows = new ArrayList<>(js.getJSONObject(cols.get(0)).keySet());
 
 
 
-		a = new Object[rows.size()][cols.size()];
+        a = new Object[rows.size()][cols.size()];
 
-		for (int i = 0; i < cols.size(); i++) {
-			JSONObject eachcol = js.getJSONObject(cols.get(i));
-			for (int j = 0; j < rows.size(); j++) {
-//				System.out.println(eachcol.getString(rows.get(j)));
-				a[j][i] = eachcol.getString(rows.get(j));
-			}
-		}
+        for (int i = 0; i < cols.size(); i++) {
+    JSONObject eachcol = js.getJSONObject(cols.get(i));
+    for (int j = 0; j < rows.size(); j++) {
+//        System.out.println(eachcol.getString(rows.get(j)));
+        a[j][i] = eachcol.getString(rows.get(j));
+    }
+        }
 
-		tb = new JTable(a,cols.toArray());
+        tb = new JTable(a,cols.toArray());
 
-		Container con = getContentPane();
+        Container con = getContentPane();
 
-		getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
+        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
 
-		tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-		setTitle(name);
-		setSize(10000,10000);
-		setVisible(true);
-		validate();
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
+        setTitle(name);
+        setSize(10000,10000);
+        setVisible(true);
+        validate();
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
 ```
 
 #### csv2jtable
 
 ```Java
 Object[] columnnames;
-		CSVReader CSVFileReader = null;
-		try {
-			CSVFileReader = new CSVReader(new FileReader(filepath));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		List myEntries = null;
-		try {
-			myEntries = CSVFileReader.readAll();
-		} catch (IOException | CsvException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		columnnames = (String[]) myEntries.get(0);
-		DefaultTableModel tableModel = new DefaultTableModel(columnnames, myEntries.size()-1);
-		int rowcount = tableModel.getRowCount();
-		for (int x = 0; x<rowcount+1; x++)
-		{
-		    int columnnumber = 0;
-		    // if x = 0 this is the first row...skip it... data used for columnnames
-		    if (x>0)
-		    {
-		        for (String thiscellvalue : (String[])myEntries.get(x))
-		        {
-//		        	System.out.println(thiscellvalue);
-		            tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
-		            columnnumber++;
-		        }
-		    }
-		}
-		System.out.println(tableModel);
-		return tableModel;
+        CSVReader CSVFileReader = null;
+        try {
+    CSVFileReader = new CSVReader(new FileReader(filepath));
+        } catch (FileNotFoundException e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+        }
+        List myEntries = null;
+        try {
+    myEntries = CSVFileReader.readAll();
+        } catch (IOException | CsvException e) {
+    // TODO Auto-generated catch block
+    e.printStackTrace();
+        }
+        columnnames = (String[]) myEntries.get(0);
+        DefaultTableModel tableModel = new DefaultTableModel(columnnames, myEntries.size()-1);
+        int rowcount = tableModel.getRowCount();
+        for (int x = 0; x<rowcount+1; x++)
+        {
+            int columnnumber = 0;
+            // if x = 0 this is the first row...skip it... data used for columnnames
+            if (x>0)
+            {
+                for (String thiscellvalue : (String[])myEntries.get(x))
+                {
+//                    System.out.println(thiscellvalue);
+                    tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
+                    columnnumber++;
+                }
+            }
+        }
+        System.out.println(tableModel);
+        return tableModel;
 ```
 
 #### jtextarea2jtable
 
 ```Java
 if (e.getDocument() == textPane.getDocument()) {
-					Document doc = e.getDocument();
-					String str = null;
-					try {
-						str = doc.getText(0, doc.getLength());
-					} catch (BadLocationException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					arr = str.split("\\s+");
+            Document doc = e.getDocument();
+            String str = null;
+            try {
+        str = doc.getText(0, doc.getLength());
+            } catch (BadLocationException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+            }
+            arr = str.split("\\s+");
 
-					if (arr.length %2 == 0) {
-						Object [] columnnames = {"处方名","药名"};
-						Object a[][];
+            if (arr.length %2 == 0) {
+        Object [] columnnames = {"处方名","药名"};
+        Object a[][];
 
-						a = new Object[arr.length/2][2];
+        a = new Object[arr.length/2][2];
 
-						for (int j = 0; j < arr.length; j++) {
-							a[j/2][j%2] = arr[j];
-						}
+        for (int j = 0; j < arr.length; j++) {
+            a[j/2][j%2] = arr[j];
+        }
 
-						table_1 = new JTable(a,columnnames);
-						table_1.setBounds(86, 285, 678, 251);
-						table_1.setEnabled(false);
-						jContentPane.add(table_1);
-						table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-					}
+        table_1 = new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            }
 
-				}
+        }
 ```
 
 ### 一些属性
@@ -217,52 +217,52 @@ A: 重载 JTable.isCellEditable(row, column), 令其始终返回 false.
 ```Java
 textPane.getDocument().addDocumentListener(new DocumentListener() {
 
-			@Override
-			public void removeUpdate(DocumentEvent e) {
-				// TODO Auto-generated method stub
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        // TODO Auto-generated method stub
 
-			}
+    }
 
-			@Override
-			public void insertUpdate(DocumentEvent e) {
-				// TODO Auto-generated method stub
-				if (e.getDocument() == textPane.getDocument()) {
-					Document doc = e.getDocument();
-					String str = null;
-					try {
-						str = doc.getText(0, doc.getLength());
-					} catch (BadLocationException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
-					arr = str.split("\\s+");
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        // TODO Auto-generated method stub
+        if (e.getDocument() == textPane.getDocument()) {
+            Document doc = e.getDocument();
+            String str = null;
+            try {
+        str = doc.getText(0, doc.getLength());
+            } catch (BadLocationException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+            }
+            arr = str.split("\\s+");
 
-					if (arr.length %2 == 0) {
-						Object [] columnnames = {"处方名","药名"};
-						Object a[][];
+            if (arr.length %2 == 0) {
+        Object [] columnnames = {"处方名","药名"};
+        Object a[][];
 
-						a = new Object[arr.length/2][2];
+        a = new Object[arr.length/2][2];
 
-						for (int j = 0; j < arr.length; j++) {
-							a[j/2][j%2] = arr[j];
-						}
+        for (int j = 0; j < arr.length; j++) {
+            a[j/2][j%2] = arr[j];
+        }
 
-						table_1 = new JTable(a,columnnames);
-						table_1.setBounds(86, 285, 678, 251);
-						table_1.setEnabled(false);
-						jContentPane.add(table_1);
-						table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-					}
+        table_1 = new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            }
 
-				}
-			}
+        }
+    }
 
-			@Override
-			public void changedUpdate(DocumentEvent e) {
-				// TODO Auto-generated method stub
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+        // TODO Auto-generated method stub
 
-			}
-		});
+    }
+        });
 ```
 
 ### 补充说明
@@ -283,4 +283,4 @@ textPane.getDocument().addDocumentListener(new DocumentListener() {
 
 > 就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。
 
-         -- 茨威格<人类群星闪耀时>
+-- 茨威格<人类群星闪耀时>

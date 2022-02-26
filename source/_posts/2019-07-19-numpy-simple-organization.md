@@ -36,7 +36,7 @@ array, zeros, zeros_like, ones, ones_like, empty, empty_like, arange, linspace, 
 _配合 reshape 使用_
 如果在 reshape 操作中将维度指定为-1，则会自动计算其他维度
 
-**reshape and resize \`s return**
+reshape and resize `s return
 
 将不同数组堆叠在一起
 vstack,hstack
@@ -83,9 +83,7 @@ np.mat(array) # 数组转换
 
 ### 矩阵运算
 
-满足基本的矩阵运算
-
-_乘法运算时要注意行列约束_
+满足基本的矩阵运算, _乘法运算时要注意行列约束_
 
 ## 访问
 
@@ -96,7 +94,7 @@ _乘法运算时要注意行列约束_
 当提供比轴数更少的索引时，缺失的索引被认为是一个完整切片
 e.g.
 
-    b[-1]
+  b[-1]
 
 迭代（Iterating） 多维数组是相对于第一个轴完成的
 

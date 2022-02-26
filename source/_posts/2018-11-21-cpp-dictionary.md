@@ -68,38 +68,38 @@ public:
 
 void cinfstr_eng()
 {
-	char buffer[256];
-	int count_word = 0;
-	ifstream in("ENG.txt");
-	if (!in.is_open())
-	{
-		cout << "Error opening file"; exit(1);
-	}
-	while (!in.eof())
-	{
-		in.getline(buffer, 100);
-		temp_ENG[count_word] = buffer;
-		count_word++;
-	}
+    char buffer[256];
+    int count_word = 0;
+    ifstream in("ENG.txt");
+    if (!in.is_open())
+    {
+        cout << "Error opening file"; exit(1);
+    }
+    while (!in.eof())
+    {
+        in.getline(buffer, 100);
+        temp_ENG[count_word] = buffer;
+        count_word++;
+    }
 
 }
 
 void cinfstr_cn()
 {
-	char buffer[256];
-	int count_word = 0;
-	ifstream in("ZH.txt");
-	if (!in.is_open())
-	{
-		cout << "Error opening file"; exit(1);
-	}
-	while (!in.eof())
-	{
-		in.getline(buffer, 100);
-		temp_CN[count_word] = buffer;
-		//cout << buffer << endl;
-		count_word++;
-	}
+    char buffer[256];
+    int count_word = 0;
+    ifstream in("ZH.txt");
+    if (!in.is_open())
+    {
+        cout << "Error opening file"; exit(1);
+    }
+    while (!in.eof())
+    {
+        in.getline(buffer, 100);
+        temp_CN[count_word] = buffer;
+        //cout << buffer << endl;
+        count_word++;
+    }
 
 }
 
@@ -107,8 +107,8 @@ void cinfstr_cn()
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-	cinfstr_cn();
-	cinfstr_eng();
+    cinfstr_cn();
+    cinfstr_eng();
 
     Dictionary dic;
 
@@ -119,11 +119,11 @@ int main(int argc, const char * argv[]) {
 
         cout <<endl<< "Continue Operation(Y/N)"<<endl;
         cin>>flag;
-		system("cls");
+        system("cls");
     }
 
 
-	system("pause");
+    system("pause");
     return 0;
 }
 
@@ -135,8 +135,8 @@ void Dictionary::menu()
     cout << "2.Inquire"<<endl;
     cout << "3.Sort"<<endl;
     cout << "4.Display"<<endl;
-	cout << "------"<<endl;
-	cout << "5.clear"<<endl;
+    cout << "------"<<endl;
+    cout << "5.clear"<<endl;
     cout << "--------------------"<<endl;
     cout << "Please input your choice:"<<endl;
 }
@@ -148,14 +148,14 @@ void Dictionary::option1()
     int opt2;
     switch (opt1) {
         case 1:
-			system("cls");                                  //aaaaaaaaaa
+            system("cls");                                  //aaaaaaaaaa
             cout << "1.One by one."<<endl;
             cout << "2.Batch generation."<<endl;
             cout << "3.Back step."<<endl;
-			cout << "------------------------------"<<endl;
+            cout << "------------------------------"<<endl;
             cout << "Please input your choice:"<<endl;
             cin >>opt2;
-			system("cls");                                  //aaaaaaaaaa
+            system("cls");                                  //aaaaaaaaaa
             option2(opt2);
             break;
         case 2:
@@ -167,7 +167,7 @@ void Dictionary::option1()
         case 4:
             display();
             break;
-		case 5:
+        case 5:
             clear();
             break;
 
@@ -193,7 +193,7 @@ void Dictionary::option2(int opt2)
             Batch();
             break;
         case 3:
-			//hahahahahahahahahahahahahahahahahahahahahahaha
+            //hahahahahahahahahahahahahahahahahahahahahahaha
             break;
 
         default:
@@ -211,7 +211,7 @@ void Dictionary::insert_word()
     cout << "Please input paraphrase(Chinese):"<<endl;
     cin >>Zh_CN;
     dic.insert(make_pair(Eng, Zh_CN));
-	system("cls");                                  //aaaaaaaaaa
+    system("cls");                                  //aaaaaaaaaa
 }
 
 void Dictionary::inquire()
@@ -237,15 +237,15 @@ void Dictionary::inquire()
         cout << "Plsase the word you want to inquire:"<<endl;
         cin >> a;
         bool flag=1;
-		auto bba=dic.begin();
-		while(bba!=dic.end())
+        auto bba=dic.begin();
+        while(bba!=dic.end())
         {
             if (bba->second==a) {
                 cout << bba->first<<endl;
                 flag=0;
                 break;
             }
-			++bba;
+            ++bba;
         }
         if (flag) {
             cout << a<<" is not in this dictionary~"<<endl;
@@ -256,23 +256,23 @@ void Dictionary::inquire()
 
 void Dictionary::sort()
 {
-	system("cls");
-	test(4);
-	Sleep(1000);
+    system("cls");
+    test(4);
+    Sleep(1000);
     //hang
 }
 
 void Dictionary::display()
 {
-	system("cls");
-	cout << "--------------------------------------------------"<<endl;
+    system("cls");
+    cout << "--------------------------------------------------"<<endl;
     cout <<setiosflags(ios::left)<<setw(14)<< "English"<<resetiosflags(ios::left) << setiosflags(ios::left)<<setw(9)<<"Chinese"<<resetiosflags(ios::left)<<endl;
-	//cout << dic["a"];
-	auto bba=dic.begin();
-	while(bba!=dic.end())
+    //cout << dic["a"];
+    auto bba=dic.begin();
+    while(bba!=dic.end())
     {
         cout << setiosflags(ios::left)<<setw(14)<< bba->first<<resetiosflags(ios::left) << setiosflags(ios::left)<<setw(9)<<bba->second<<resetiosflags(ios::left)<<endl;
-		++bba;
+        ++bba;
     }
 }
 
@@ -280,56 +280,56 @@ void Dictionary::display()
 void Dictionary::Batch()
 {
     //hang
-	int tim,n;
+    int tim,n;
 
-	cout <<"---------------------------------------------------"<<endl;
-	cout << "Vocabulary will be imported from the file.\n";
-	cout << "How many words do you want to add?(<=2999)" << endl;
-	cin >> n;
-	srand(time(NULL));
-	for (int i = 0; i < n; i++)
-	{
-		tim = rand() % 2999;
-		dic.insert(make_pair(temp_ENG[tim], temp_CN[tim]));
-		//cout << dic[temp_ENG[tim]] << endl;
-	}
-	test(4);
+    cout <<"---------------------------------------------------"<<endl;
+    cout << "Vocabulary will be imported from the file.\n";
+    cout << "How many words do you want to add?(<=2999)" << endl;
+    cin >> n;
+    srand(time(NULL));
+    for (int i = 0; i < n; i++)
+    {
+        tim = rand() % 2999;
+        dic.insert(make_pair(temp_ENG[tim], temp_CN[tim]));
+        //cout << dic[temp_ENG[tim]] << endl;
+    }
+    test(4);
 
 }
 
 void test(int count)
 {
-	cout << "[";
-	for (int i=0;i<count;i++)
-	{
-		cout << "#";
-		Sleep(500);
-	}
-	cout << "]";
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_GREEN);
-	cout<<"		success"<<flush;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
-	cout <<"!"<<endl;
+    cout << "[";
+    for (int i=0;i<count;i++)
+    {
+        cout << "#";
+        Sleep(500);
+    }
+    cout << "]";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_GREEN);
+    cout<<"        success"<<flush;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
+    cout <<"!"<<endl;
 
 }
 
 void Dictionary::clear()
 {
-	string flag;
-	cout <<"----------------------------------------------------"<<endl;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED);
-	printf("Warnning!!!/n");
-	cout << "You will delete all your data in this dic!"<<endl;
-	cout << "Continnue? (Y/N)"<<endl;
-	cin >>flag;
+    string flag;
+    cout <<"----------------------------------------------------"<<endl;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_RED);
+    printf("Warnning!!!/n");
+    cout << "You will delete all your data in this dic!"<<endl;
+    cout << "Continnue? (Y/N)"<<endl;
+    cin >>flag;
 
-	if (flag=="y"||flag=="Y")
-	{
-		dic.erase(dic.begin(),dic.end());
-	}
-	else
-	{
-	}
+    if (flag=="y"||flag=="Y")
+    {
+        dic.erase(dic.begin(),dic.end());
+    }
+    else
+    {
+    }
 
 }
 

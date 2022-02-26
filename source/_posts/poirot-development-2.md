@@ -84,7 +84,7 @@ line (1) : 创建一个模式为1的(1-bit pixels, black and white, stored with 
 line (2) : ImageDraw 模块能够对图片进行简单的操作, 这里通过 .Draw() 方法将上面创造的图片实例化为可以调用 ImageDraw 方法进行操作的对象.
 line (3) : ImageFont 模块能够存储 _位图字体( bitmap fonts )_ , .truetype() 方法则能够从 _文件_ 或者 _类文件对象( file-like object )_ 中加载 [TrueType](https://zh.wikipedia.org/wiki/TrueType) 或者 [OpenType](https://zh.wikipedia.org/wiki/OpenType) 的字体, 对于该 module 的更多详细说明可以参照 [ImageFont 文档](https://pillow.readthedocs.io/en/stable/reference/ImageFont.html).
 line (4) : 从字体文件中获取对应字形的大小.
-line (5) : `(img_size - x) // 2` 是为了让绘制的字体处于图像的中央, 通过修改这对参数, 能够指定绘制字形的坐标. 
+line (5) : `(img_size - x) // 2` 是为了让绘制的字体处于图像的中央, 通过修改这对参数, 能够指定绘制字形的坐标.
 
 最后, 将这个画布图片返回, 类型为Image.
 
@@ -98,7 +98,7 @@ line (5) : `(img_size - x) // 2` 是为了让绘制的字体处于图像的中�
 
 具体的安装流程可以参考官方给出的文档, 需要先安装 _Tesseract_ 服务, 然后才能正常使用. Windows 直接上安装包, linux 直接使用 apt\yum 进行以来安装即可.
 
-安装完本体之后, 还要手动下载一下语言包, 默认是不提供简体中文的. 所以需要下载 __chi-smi__ (chinese-simplified) 这个标识的语言包. 
+安装完本体之后, 还要手动下载一下语言包, 默认是不提供简体中文的. 所以需要下载 _chi-smi_ (chinese-simplified) 这个标识的语言包.
 
 在windows中, 需要手动将该语言包放入 Tesseract 的路径下, 而在ubuntu中, 虽然说可以使用  `apt install tesseract-ocr-chi-smi` 进行安装, 不过最终还是提示 _未找到对应的语言包_ , 最终依然是手动下载之.
 
@@ -117,7 +117,7 @@ text = pytesseract.image_to_string(image, lang='chi_sim')
 
 #### 单个字符的识别
 
-如上的代码在实际识别字体图片时效果并不算好, 原因是 Tesseract 默认是多字符识别模式, 比如 __嬴__ 这个字, 会被拆分成多个字, 这里就需要手动进行配置约束, 使用单字符识别模式, 也即:
+如上的代码在实际识别字体图片时效果并不算好, 原因是 Tesseract 默认是多字符识别模式, 比如 **嬴** 这个字, 会被拆分成多个字, 这里就需要手动进行配置约束, 使用单字符识别模式, 也即:
 
 ```python
 text = pytesseract.image_to_string(image, lang='chi_sim', config='--psm 10')

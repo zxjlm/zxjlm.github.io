@@ -130,10 +130,10 @@ hidden: false
   - 数字分配
     chmod number filename
   - 字母分配
-    - - 追加
-        - chmod u+r file 给 user 添加读的权限
-        - chmod g+w file 给 group 添加写的权限
-    - - 移除
+    - 追加
+      - chmod u+r file 给 user 添加读的权限
+      - chmod g+w file 给 group 添加写的权限
+    - 移除
     - = 修改
 
 ## Nano 文本剪辑器

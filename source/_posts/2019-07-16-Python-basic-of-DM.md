@@ -182,16 +182,16 @@ series.resample('H').ffill() .bfill()
 
 范式
 
-```python
+    ```python
 weekly_df['Ali']=stock_df['ali'].resample('W').mean()
-```
+    ```
 
 ## 数据分箱
 
-```python
+    ```python
 bins=[0,59,70,80,100]
 df['categ']=pd.cut(df['score'],bins,labels=['bad','good','great','perfect'])
-```
+    ```
 
 ## 数据分组
 
@@ -279,26 +279,26 @@ sns.color_palette('hls',num)
 
 seaborn.pythondata.org
 
-### 杂项
+## 杂项
 
 每一行的是由[0]和[1]组成
 [0]是 index 的类型,[1]是一个 Series
 
 shift+tab
 
-#### magic function
+### magic function
 
 %timeit +函数
 e.g. %timeit np.arange(10)
 
-#### 数据获取
+### 数据获取
 
 public dataset
 
-#### seaborn 字体
+### seaborn 字体
 
-```python
+    ```python
 myfont=FontProperties(fname=r'/Users/zxjsama/Library/Fonts/SimHei.ttf')
 sns.set(font=myfont.get_family())
 sns.set_style("whitegrid",{"font.sans-serif":['SimHei']})
-```
+    ```

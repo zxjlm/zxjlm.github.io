@@ -116,6 +116,7 @@ def timeCul(processNumberList):
 timeCul([1,3,5,7,10])
 ```
 
+```plain_text
     res: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
     Prcess number 1,Time cost 10.276863813400269
     res: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
@@ -126,6 +127,7 @@ timeCul([1,3,5,7,10])
     Prcess number 7,Time cost 1.357300043106079
     res: [200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
     Prcess number 10,Time cost 0.7208449840545654
+```
 
 可以看到,随着进程数量的提升,爬虫的效率得到了显著的提高
 
@@ -146,12 +148,14 @@ p_2.start()
 p_2.join()
 ```
 
+```plain_text
     hello bob
     hello alice
+```
 
 ### 关于多线程
 
-**纯粹的多线程爬虫不适合复杂的任务**
+纯粹的多线程爬虫不适合复杂的任务
 
 当某一个线程的爬虫出现故障，由于内存共享机制，所有的线程会受到牵连
 
@@ -261,7 +265,9 @@ for link in links_list:
     word_sum+=int(word_num)
 ```
 
+```plain_text
     47.9 s ± 6.06 s per loop (mean ± std. dev. of 7 runs, 1 loop each)
+```
 
 ### 协程方法
 
@@ -370,7 +376,6 @@ ps.由于 jupyter 自身的限制，所以这里使用 pycharm 运行并计时
 
 由进程到线程，由线程到协程，任务的划分越来越精细，但是代价是什么呢？
 
-<br>
 
 **补充说明** ：
 

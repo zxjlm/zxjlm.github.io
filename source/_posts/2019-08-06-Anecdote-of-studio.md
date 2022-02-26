@@ -54,7 +54,3 @@ hidden: true
 
 - 我也曾挥斥方遒（然后现在在工作时间摸鱼啊%>\_<%）(这个人怎么闭着眼睛说话？)
   [![IMG_2482.th.jpg](http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg)](http://www.harumonia.top/image/gos)
-
-<div align=life> 
-<iframe frameborder="no" marginwidth="0" marginheight="0" width=400 height=140 src="https://music.163.com/outchain/player?type=2&id=34341360&auto=1&height=66"></iframe>
-</div>
