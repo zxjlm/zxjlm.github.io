@@ -51,38 +51,38 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
 
 <span class="token keyword">void</span> <span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	<span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-	<span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ENG.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-	<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		temp_ENG<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
-		count_word<span class="token operator">++</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
+    <span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ENG.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        temp_ENG<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
+        count_word<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">void</span> <span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	<span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-	<span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ZH.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-	<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		temp_CN<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
-		<span class="token comment">//cout &lt;&lt; buffer &lt;&lt; endl;</span>
-		count_word<span class="token operator">++</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
+    <span class="token keyword">char</span> buffer<span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> count_word <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    ifstream <span class="token function">in</span><span class="token punctuation">(</span><span class="token string">"ZH.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">is_open</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Error opening file"</span><span class="token punctuation">;</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>in<span class="token punctuation">.</span><span class="token function">eof</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        in<span class="token punctuation">.</span><span class="token function">getline</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        temp_CN<span class="token punctuation">[</span>count_word<span class="token punctuation">]</span> <span class="token operator">=</span> buffer<span class="token punctuation">;</span>
+        <span class="token comment">//cout &lt;&lt; buffer &lt;&lt; endl;</span>
+        count_word<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
 <span class="token punctuation">&#125;</span>
 
@@ -90,8 +90,8 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token comment">// insert code here...</span>
-	<span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">cinfstr_cn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">cinfstr_eng</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     Dictionary dic<span class="token punctuation">;</span>
 
@@ -102,11 +102,11 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
 
         cout <span class="token operator">&lt;&lt;</span>endl<span class="token operator">&lt;&lt;</span> <span class="token string">"Continue Operation(Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
         cin<span class="token operator">>></span>flag<span class="token punctuation">;</span>
-		<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 
 
-	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
 
@@ -118,8 +118,8 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"2.Inquire"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"3.Sort"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"4.Display"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"5.clear"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"5.clear"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input your choice:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
@@ -131,14 +131,14 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
     <span class="token keyword">int</span> opt2<span class="token punctuation">;</span>
     <span class="token keyword">switch</span> <span class="token punctuation">(</span>opt1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
         <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
-			<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
+            <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
             cout <span class="token operator">&lt;&lt;</span> <span class="token string">"1.One by one."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
             cout <span class="token operator">&lt;&lt;</span> <span class="token string">"2.Batch generation."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
             cout <span class="token operator">&lt;&lt;</span> <span class="token string">"3.Back step."</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-			cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+            cout <span class="token operator">&lt;&lt;</span> <span class="token string">"------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
             cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input your choice:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
             cin <span class="token operator">>></span>opt2<span class="token punctuation">;</span>
-			<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
+            <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
             <span class="token function">option2</span><span class="token punctuation">(</span>opt2<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
@@ -150,7 +150,7 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
         <span class="token keyword">case</span> <span class="token number">4</span><span class="token operator">:</span>
             <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
-		<span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
+        <span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
             <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
 
@@ -176,7 +176,7 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
             <span class="token function">Batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
-			<span class="token comment">//hahahahahahahahahahahahahahahahahahahahahahaha</span>
+            <span class="token comment">//hahahahahahahahahahahahahahahahahahahahahahaha</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
 
         <span class="token keyword">default</span><span class="token operator">:</span>
@@ -194,7 +194,7 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
     cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Please input paraphrase(Chinese):"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cin <span class="token operator">>></span>Zh_CN<span class="token punctuation">;</span>
     dic<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span>Eng<span class="token punctuation">,</span> Zh_CN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">//aaaaaaaaaa</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">inquire</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -220,15 +220,15 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
         cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Plsase the word you want to inquire:"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
         cin <span class="token operator">>></span> a<span class="token punctuation">;</span>
         <span class="token keyword">bool</span> flag<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-		<span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
         <span class="token punctuation">&#123;</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>bba<span class="token operator">-></span>second<span class="token operator">==</span>a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
                 cout <span class="token operator">&lt;&lt;</span> bba<span class="token operator">-></span>first<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
                 flag<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
                 <span class="token keyword">break</span><span class="token punctuation">;</span>
             <span class="token punctuation">&#125;</span>
-			<span class="token operator">++</span>bba<span class="token punctuation">;</span>
+            <span class="token operator">++</span>bba<span class="token punctuation">;</span>
         <span class="token punctuation">&#125;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
             cout <span class="token operator">&lt;&lt;</span> a<span class="token operator">&lt;&lt;</span><span class="token string">" is not in this dictionary~"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
@@ -239,23 +239,23 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
 
 <span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">//hang</span>
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"cls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"--------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     cout <span class="token operator">&lt;&lt;</span><span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span> <span class="token string">"English"</span><span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token string">"Chinese"</span><span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	<span class="token comment">//cout &lt;&lt; dic["a"];</span>
-	<span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">//cout &lt;&lt; dic["a"];</span>
+    <span class="token keyword">auto</span> bba<span class="token operator">=</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>bba<span class="token operator">!=</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">&#123;</span>
         cout <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span> bba<span class="token operator">-></span>first<span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">setiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token function">setw</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>bba<span class="token operator">-></span>second<span class="token operator">&lt;&lt;</span><span class="token function">resetiosflags</span><span class="token punctuation">(</span>ios<span class="token operator">::</span>left<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-		<span class="token operator">++</span>bba<span class="token punctuation">;</span>
+        <span class="token operator">++</span>bba<span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span>
 
@@ -263,56 +263,56 @@ string temp_CN<span class="token punctuation">[</span><span class="token number"
 <span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">Batch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     <span class="token comment">//hang</span>
-	<span class="token keyword">int</span> tim<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> tim<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
 
-	cout <span class="token operator">&lt;&lt;</span><span class="token string">"---------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Vocabulary will be imported from the file.\n"</span><span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"How many words do you want to add?(&lt;=2999)"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-	cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
-	<span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		tim <span class="token operator">=</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2999</span><span class="token punctuation">;</span>
-		dic<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span>temp_ENG<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">,</span> temp_CN<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token comment">//cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;</span>
-	<span class="token punctuation">&#125;</span>
-	<span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span><span class="token string">"---------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Vocabulary will be imported from the file.\n"</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"How many words do you want to add?(&lt;=2999)"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token function">srand</span><span class="token punctuation">(</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        tim <span class="token operator">=</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2999</span><span class="token punctuation">;</span>
+        dic<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">make_pair</span><span class="token punctuation">(</span>temp_ENG<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">,</span> temp_CN<span class="token punctuation">[</span>tim<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//cout &lt;&lt; dic[temp_ENG[tim]] &lt;&lt; endl;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> count<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"["</span><span class="token punctuation">;</span>
-	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		cout <span class="token operator">&lt;&lt;</span> <span class="token string">"#"</span><span class="token punctuation">;</span>
-		<span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
-	<span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_GREEN<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	cout<span class="token operator">&lt;&lt;</span><span class="token string">"		success"</span><span class="token operator">&lt;&lt;</span>flush<span class="token punctuation">;</span>
-	<span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token operator">|</span>FOREGROUND_GREEN<span class="token operator">|</span>FOREGROUND_BLUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span><span class="token string">"!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"["</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>count<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"#"</span><span class="token punctuation">;</span>
+        <span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
+    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_GREEN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token string">"        success"</span><span class="token operator">&lt;&lt;</span>flush<span class="token punctuation">;</span>
+    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token operator">|</span>FOREGROUND_GREEN<span class="token operator">|</span>FOREGROUND_BLUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span><span class="token string">"!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
 
 <span class="token punctuation">&#125;</span>
 
 <span class="token keyword">void</span> <span class="token class-name">Dictionary</span><span class="token operator">::</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-	string flag<span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span><span class="token string">"----------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	<span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Warnning!!!/n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"You will delete all your data in this dic!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Continnue? (Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
-	cin <span class="token operator">>></span>flag<span class="token punctuation">;</span>
+    string flag<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span><span class="token string">"----------------------------------------------------"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token function">SetConsoleTextAttribute</span><span class="token punctuation">(</span><span class="token function">GetStdHandle</span><span class="token punctuation">(</span>STD_OUTPUT_HANDLE<span class="token punctuation">)</span><span class="token punctuation">,</span>FOREGROUND_RED<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Warnning!!!/n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"You will delete all your data in this dic!"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Continnue? (Y/N)"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span>flag<span class="token punctuation">;</span>
 
-	<span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token string">"y"</span><span class="token operator">||</span>flag<span class="token operator">==</span><span class="token string">"Y"</span><span class="token punctuation">)</span>
-	<span class="token punctuation">&#123;</span>
-		dic<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-	<span class="token keyword">else</span>
-	<span class="token punctuation">&#123;</span>
-	<span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token operator">==</span><span class="token string">"y"</span><span class="token operator">||</span>flag<span class="token operator">==</span><span class="token string">"Y"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        dic<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>dic<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>dic<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#125;</span>
 
 <span class="token punctuation">&#125;</span>
 
