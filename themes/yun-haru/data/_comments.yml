@@ -27,7 +27,7 @@ github_discussions:
 # More info available at https://valine.js.org
 # extend: https://github.com/DesertsP/Valine-Admin
 valine:
-  enable: true
+  enable: false
   appId: r4JnhWDHnAkpVuaNKYAjM4rG-MdYXbMMI # your leancloud application appid
   appKey: V82g09a4cwRrbvD1eTpo6SVt # your leancloud application appkey
   placeholder: Just go go # comment box placeholder

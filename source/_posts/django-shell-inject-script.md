@@ -1,8 +1,23 @@
 ---
-title: django(python)-shell注入脚本
-date: 2022-01-17 16:23:41
+title: django-shell-inject-script
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: 'no'
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
+date: 2022-02-17 16:23:41
+updated: 2022-02-17 16:23:41
 tags:
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
+
 
 在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.
 
