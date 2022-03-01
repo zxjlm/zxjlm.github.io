@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/2022-2/
 https://blog.harumonia.moe/django-shell-inject-script/
 https://blog.harumonia.moe/ubuntu-initial/
 https://blog.harumonia.moe/my-2021/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/poirot-development-2/
 https://blog.harumonia.moe/github-kex-exchange-identification-solution/
 https://blog.harumonia.moe/chengdu-seven-day/
 https://blog.harumonia.moe/christin-develop-2/
-https://blog.harumonia.moe/upon-graduation/
