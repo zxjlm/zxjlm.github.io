@@ -117,7 +117,7 @@ No.65 中的处理方式是 **有限状态机（DFA）** ，这一题的处理�
 
 ## 代码
 
-```cpp
+```c++
 class Solution {
 public:
     vector<string> fullJustify(vector<string>& words, int maxWidth) {

@@ -63,7 +63,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 class Solution {
 public:
     int minPathSum(vector<vector<int>>& grid) {

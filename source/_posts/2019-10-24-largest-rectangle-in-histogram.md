@@ -58,7 +58,7 @@ hidden: false
 
 解法一：
 
-```cpp
+```c++
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
@@ -76,7 +76,7 @@ public:
 
 解法二：
 
-```cpp
+```c++
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {

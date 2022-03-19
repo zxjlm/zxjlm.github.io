@@ -93,7 +93,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 void rotate(vector<vector<int>>& matrix) {
     int len = matrix.size();
     for(int i = 0 ; i < len ; i++){

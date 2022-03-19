@@ -41,7 +41,7 @@ string 类 vector。专门用于保存字符
 
 ### 相关的构造函数
 
-```cpp
+```c++
 vector<int> ivec(10,-1);    //10个-1
 vector<string> svec(10,"hi");  //10个hi
 vector<int> ivec(10);       //10个0
@@ -53,13 +53,13 @@ vector<int> ivec(10);       //10个0
 
 #### 方法一
 
-```cpp
+```c++
 copy(a.begin(), a.end(), ostream_iterator<int>(cout," "));
 ```
 
 #### 方法二
 
-```cpp
+```c++
     vector<int>::iterator it = v.begin();
     // const时。 vector<int>::const_iterator iter=v.begin();
     for(; it != v.end(); ++it)
@@ -71,7 +71,7 @@ copy(a.begin(), a.end(), ostream_iterator<int>(cout," "));
 
 #### 方法三
 
-```cpp
+```c++
 for(unsigned int i = 0; i < v.size(); ++i)
     {
         cout<<v[i]<<" ";
@@ -82,7 +82,7 @@ for(unsigned int i = 0; i < v.size(); ++i)
 
 #### 方法四
 
-```cpp
+```c++
     for_each(a.begin(), a.end(), [](int s){cout<<s<<" ";});//联动下述lambda
 ```
 
@@ -96,7 +96,7 @@ for(unsigned int i = 0; i < v.size(); ++i)
 e.g. 4 2 4 4 4 2 2 2 2 2
 此时使用 erase 函数，可以实现容器中元素去重功能。
 
-```cpp
+```c++
     auto uni=unique(a.begin(), a.end());
     a.erase(uni, a.end());
 ```
@@ -109,11 +109,11 @@ e.g. 4 2 4 4 4 2 2 2 2 2
 
 #### 使用尾置返回
 
-```cpp
+```c++
 []()->int {}
 ```
 
-```cpp
+```c++
 [ captures ] <tparams>(optional)(c++20) ( params ) specifiers exception attr -> ret requires(optional)(c++20) { body }(1)
 [ captures ] ( params ) -> ret { body } (2)
 [ captures ] ( params ) { body }    (3)
@@ -130,7 +130,7 @@ lambda 函数体中不止含有 return 时，需要使用尾置返回指定 retu
 functional 库
 可以看作一个通用的函数适配器，接受一个可调用对象，生成一个新的可调用对象来“适应”原对象的参数列表。
 
-```cpp
+```c++
 auto newCallable=bind(callable,arg_list)
 ```
 
@@ -156,7 +156,7 @@ arg_list 中可包含形如\_n 的样式，意为第 n 个参数。
 
 ### iostream 迭代器
 
-```cpp
+```c++
     istream_iterator<int> in_iter(cin),eof;
     vector<int> vec(in_iter,eof);
 ```
@@ -166,7 +166,7 @@ arg_list 中可包含形如\_n 的样式，意为第 n 个参数。
 PS.
 范围 for 语句
 
-```cpp
+```c++
 for(变量 : 容器或序列 )
 {
     操作//不可对容器或序列进行增删
@@ -176,7 +176,7 @@ for(变量 : 容器或序列 )
 accumulate 函数
 accumulate 带有三个形参：头两个形参指定要累加的元素范围，第三个形参则是累加的初值。
 
-```cpp
+```c++
 int sum = accumulate(vec.begin() , vec.end() , 42);
 
 ```
@@ -189,7 +189,7 @@ int sum = accumulate(vec.begin() , vec.end() , 42);
 
 ### map 遍历
 
-```cpp
+```c++
 //目前掌握两种普通遍历（while && for）
 auto bba=a.begin();
     while (bba!=a.end()) {

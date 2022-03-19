@@ -57,7 +57,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 class Solution {
 public:
     vector<vector<int>> ret;

@@ -62,7 +62,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 vector<vector<string>> groupAnagrams(vector<string>& strs) {
         map<string,vector<string> > ma;
         vector<vector<string>> res;

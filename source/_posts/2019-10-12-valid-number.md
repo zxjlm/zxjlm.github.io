@@ -73,7 +73,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 class Solution {
 public:
     bool isNumber(string s) {

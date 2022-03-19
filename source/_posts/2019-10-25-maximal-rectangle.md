@@ -59,7 +59,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& matrix) {

@@ -80,7 +80,7 @@ int len = removeDuplicates(nums);
 
 解一：
 
-```cpp
+```c++
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -108,7 +108,7 @@ public:
 
 解二：
 
-```cpp
+```c++
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums)
