@@ -1,9 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated: {{ date }}
+updated: {{ updated }}
 status: publish
 author: harumonia
+categories:
 tags:
 customSummary:
 noThumbInfoStyle: default
