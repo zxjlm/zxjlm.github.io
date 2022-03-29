@@ -1007,43 +1007,43 @@ int main()
     <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
 <a id="more"></a>
 
-<pre class="line-numbers language-py" data-language="py"><code class="language-py"><span class="token comment">#用于爬取typecho框架下handsome主题的主标题信息</span>
-<span class="token comment">#Author：harumonia</span>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">#用于爬取typecho框架下handsome主题的主标题信息
+#Author：harumonia
 
-<span class="token keyword">import</span> requests
-<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+import requests
+from bs4 import BeautifulSoup
 
-<span class="token keyword">def</span> <span class="token function">get_movies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    headers <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-    <span class="token string">'user-agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>
-    <span class="token punctuation">&#125;</span>
-    movie_list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token comment">#movie_list2 = []</span>
+def get_movies():
+    headers &#x3D; &#123;
+    &#39;user-agent&#39;: &#39;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;71.0.3578.98 Safari&#x2F;537.36&#39;
+    &#125;
+    movie_list1 &#x3D; []
+    #movie_list2 &#x3D; []
 
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        link <span class="token operator">=</span> <span class="token string">'https://www.moerats.com/page/'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'/'</span>
-        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>link<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span> timeout<span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"页响应状态码:"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+    for i in range(1,10):
+        link &#x3D; &#39;https:&#x2F;&#x2F;www.moerats.com&#x2F;page&#x2F;&#39; + str(i)+&#39;&#x2F;&#39;
+        r &#x3D; requests.get(link, headers&#x3D;headers, timeout&#x3D; 10)
+        print (str(i),&quot;页响应状态码:&quot;, r.status_code)
 
-        soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">,</span> <span class="token string">"lxml"</span><span class="token punctuation">)</span>
-        div_list1 <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> class_<span class="token operator">=</span><span class="token string">'post-meta wrapper-lg'</span><span class="token punctuation">)</span>
-        <span class="token comment">#div_list2 = soup.find_all('div', class_='bd')</span>
+        soup &#x3D; BeautifulSoup(r.text, &quot;lxml&quot;)
+        div_list1 &#x3D; soup.find_all(&#39;div&#39;, class_&#x3D;&#39;post-meta wrapper-lg&#39;)
+        #div_list2 &#x3D; soup.find_all(&#39;div&#39;, class_&#x3D;&#39;bd&#39;)
 
-        <span class="token keyword">for</span> each <span class="token keyword">in</span> div_list1<span class="token punctuation">:</span>
-            movie <span class="token operator">=</span> each<span class="token punctuation">.</span>h2<span class="token punctuation">.</span>a<span class="token punctuation">.</span>text<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token comment">#print(each.a.span.next_sibling.next_sibling.text)</span>
-            movie_list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>movie<span class="token punctuation">)</span>
-        <span class="token triple-quoted-string string">'''
+        for each in div_list1:
+            movie &#x3D; each.h2.a.text.strip()
+            #print(each.a.span.next_sibling.next_sibling.text)
+            movie_list1.append(movie)
+        &#39;&#39;&#39;
         for each in div_list2:
-            director=each.p.text.strip()
+            director&#x3D;each.p.text.strip()
             movie_list2.append(director)
-        '''</span>
-    <span class="token keyword">return</span> movie_list1
+        &#39;&#39;&#39;
+    return movie_list1
 
-movies <span class="token operator">=</span> get_movies<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> movies<span class="token punctuation">:</span>
-    <span class="token keyword">print</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
-<span class="token comment">#print (movies2)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+movies &#x3D; get_movies()
+for i in movies:
+    print (i,end&#x3D;&#39;\n&#39;)
+#print (movies2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -10379,6 +10379,157 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
       </tags>
   </entry>
   <entry>
+    <title>design-better-api(施工中)</title>
+    <url>/design-better-api/</url>
+    <content><![CDATA[<p>本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.</p>
+<a id="more"></a>
+
+<h2 id="使用一致的接口逻辑"><a href="#使用一致的接口逻辑" class="headerlink" title="使用一致的接口逻辑"></a>使用一致的接口逻辑</h2><p>接口逻辑包括如下方面:</p>
+<ol>
+<li>命名逻辑</li>
+<li>接口处理逻辑</li>
+</ol>
+<p>一致的接口逻辑有以下的几种好处:</p>
+<p>对于开发者来说: 前端能够根据后端的接口逻辑来有规律地复用一些代码和异常处理逻辑.<br>对于使用者来说: 一致的接口逻辑能够很容易地推导出其他的资源的获取方式或者参数的使用方式, 属于用户友好型设计.</p>
+<p>下面列出一些笔者常用的命名风格, 以供参考.</p>
+<ul>
+<li>资源、参数、字段名等采用相同的命名风格, 如匈牙利命名法(foo_bar) 、驼峰命名法(fooBar). (笔者常用匈牙利命名法)</li>
+<li>资源统一设计为复数或者单数的形式.  (笔者常用复数形式)</li>
+</ul>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text"># 综合
+&#x2F;api&#x2F;v1&#x2F;name_spaces
+&#x2F;api&#x2F;v1&#x2F;name_spaces&#x2F;&#123;id&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>采用统一的认证逻辑(这一点通常在使用web框架时就自动满足了)</li>
+<li>接口返回的状态码符合标准规范</li>
+<li>接口的使用方法(method)符合标准规范</li>
+</ul>
+<p>本质上还是 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTFul</a> 的那一套, 关于 RESTFul 的具体实践见于下文.</p>
+<h2 id="使用-ISO-8601-UTC-返回结果"><a href="#使用-ISO-8601-UTC-返回结果" class="headerlink" title="使用 ISO 8601 UTC 返回结果"></a>使用 ISO 8601 UTC 返回结果</h2><p>在解释这个问题之前, 首先需要了解一下数据库中的时间格式。</p>
+<p>以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 <a href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html">官方对时间格式的说明文档</a></p>
+<p>在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。</p>
+<p>以 Django 为例:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">value_to_string</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">:</span>    
+    val <span class="token operator">=</span> self<span class="token punctuation">.</span>value_from_object<span class="token punctuation">(</span>obj<span class="token punctuation">)</span>   
+    <span class="token keyword">return</span> <span class="token string">''</span> <span class="token keyword">if</span> val <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">else</span> val<span class="token punctuation">.</span>isoformat<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>从前端的角度来说，ISO格式的时间能够被解析为 <code>Date</code> 对象，进而根据客户端配置的时区来展示为当地的时间.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// JavaScript</span>
+date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2022-03-16T22:00:09.254459+08:00"</span><span class="token punctuation">)</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="提供健康度检查的接口"><a href="#提供健康度检查的接口" class="headerlink" title="提供健康度检查的接口"></a>提供健康度检查的接口</h2><p><strong>Health Check</strong> 接口反馈的是API服务的运行状态.</p>
+<p>check的条目可以包含以下的几点.</p>
+<ul>
+<li>下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。</li>
+<li>数据库连通性检查。检查基础的数据库增删改查操作是否可用。</li>
+<li>数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。</li>
+<li>内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。</li>
+<li>消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。</li>
+</ul>
+<p>本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。</p>
+<p><strong>API Health Check</strong> 的一个下位替代品是 <strong>API Ping</strong> ，它的作用是检查API是否 <em>可用</em> ，而忽略了API的 <em>可用性</em> 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。</p>
+<p>对于健康度的一个典型实践，可以参考 <strong>k8s的存活探针</strong> 相关的内容。</p>
+<h2 id="声明API版本"><a href="#声明API版本" class="headerlink" title="声明API版本"></a>声明API版本</h2><p>API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。</p>
+<p>比较初级的API版本声明方式是在 <strong>params</strong> 中声明或者在 <strong>path</strong> 中声明. 如下所示。</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">https:&#x2F;&#x2F;api.averagecompany.com&#x2F;v1&#x2F;health
+https:&#x2F;&#x2F;api.averagecompany.com&#x2F;health?api_version&#x3D;1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。</p>
+<h2 id="采用API-KEY的认证"><a href="#采用API-KEY的认证" class="headerlink" title="采用API KEY的认证"></a>采用API KEY的认证</h2><p>todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥</p>
+<h2 id="符合RESTFul设计"><a href="#符合RESTFul设计" class="headerlink" title="符合RESTFul设计"></a>符合RESTFul设计</h2><p>内容接<a href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E8%87%B4%E7%9A%84%E6%8E%A5%E5%8F%A3%E9%80%BB%E8%BE%91">使用一致的接口逻辑</a></p>
+<h3 id="使用规范的HTTP状态码"><a href="#使用规范的HTTP状态码" class="headerlink" title="使用规范的HTTP状态码"></a>使用规范的HTTP状态码</h3><p>以下列出一些常用的状态码。</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>成功请求</td>
+</tr>
+<tr>
+<td>201</td>
+<td>成功创建</td>
+</tr>
+<tr>
+<td>400</td>
+<td>错误的请求</td>
+</tr>
+<tr>
+<td>401</td>
+<td>未认证的请求</td>
+</tr>
+<tr>
+<td>403</td>
+<td>权限不足</td>
+</tr>
+<tr>
+<td>404</td>
+<td>无此资源</td>
+</tr>
+<tr>
+<td>429</td>
+<td>流量超限</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务器内部错误</td>
+</tr>
+</tbody></table>
+<p>其中, 服务器内部错误一般会进行一层封装处理，不会展示具体的错误细节。</p>
+<p><del>HTTP状态码更形象的内容可以参考<a href="https://http.cat/">http cat</a></del></p>
+<p>HTTP状态码更详细的内容可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN</a></p>
+<h3 id="使用规范的HTTP方法"><a href="#使用规范的HTTP方法" class="headerlink" title="使用规范的HTTP方法"></a>使用规范的HTTP方法</h3><p>以下列出一些常用的方法。</p>
+<ul>
+<li>POST 创建资源<ul>
+<li>POST /users</li>
+</ul>
+</li>
+<li>GET 请求资源<ul>
+<li>GET /users  请求列表资源<ul>
+<li>GET /users/{id}  请求单个资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PATCH 部分更新资源<ul>
+<li>PATCH /users/{id}</li>
+</ul>
+</li>
+<li>PUT 全量更新资源<ul>
+<li>PUT /users/{id}</li>
+</ul>
+</li>
+<li>DELETE 删除资源<ul>
+<li>DELETE /users/{id}</li>
+</ul>
+</li>
+</ul>
+<p>除了方法之外，在命名时还应该遵循 <em>self-explaining</em> 原则, 本质上，url路径是对资源的定位，查找与操作都是以资源为主体，这一点会体现在 <strong>path</strong> 的命名上。</p>
+<p>HTTP方法更详细的内容可以参考<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">MDN</a></p>
+<p>RESTFul更详细的内容可以参考<a href="https://en.wikipedia.org/wiki/Representational_state_transfer">restful - wiki</a></p>
+<h2 id="使用标准的报错信息"><a href="#使用标准的报错信息" class="headerlink" title="使用标准的报错信息"></a>使用标准的报错信息</h2><p>包括统一的错误码、报错信息. 一般会采用如下的</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&#123;
+    &#39;code&#39;: number
+    &#39;data&#39;: object
+    &#39;message&#39;: string
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="返回创建的资源"><a href="#返回创建的资源" class="headerlink" title="返回创建的资源"></a>返回创建的资源</h2><p>对于创建资源的请求，最好在接口中返回创建之后的资源对象，方便后续数据的使用。如 <strong>ID</strong> 等由后端生成补全的数据，前端如果想要得到，则需要额外进行一次 GET 请求，返回创建资源能够避免这个损耗。</p>
+<h2 id="更倾向于使用PATCH而非PUT"><a href="#更倾向于使用PATCH而非PUT" class="headerlink" title="更倾向于使用PATCH而非PUT"></a>更倾向于使用PATCH而非PUT</h2><p>PATCH用于部分更新，PUT用于全量更新。<br>大部分业务情境下我们需要使用的是资源的部分更新，这时候如果使用PATCH，则只需要传回要修改的键值对以及一个资源标识符，而使用PUT，则需要传回全量的数据。</p>
+<p>两者更详细的对比可以见于 <a href="https://www.baeldung.com/cs/http-put-vs-patch">http-put-vs-patch</a></p>
+<h2 id="使用分页"><a href="#使用分页" class="headerlink" title="使用分页"></a>使用分页</h2><p>使用分页有如下的好处。</p>
+<ul>
+<li>对前端友好。现在主流的表格组件都支持分页或者有对应的分页解决方案。</li>
+<li>缓解后端的请求压力与数据库压力。本质上，分页的请求使用的是 offset 和 limit 的 SQL请求，拥有更少的IO损耗。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>django-shell-inject-script</title>
     <url>/django-shell-inject-script/</url>
     <content><![CDATA[<p>在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.</p>
@@ -12429,7 +12580,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#120;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;">&#122;&#120;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#120;&#x6a;&#108;&#109;&#x32;&#51;&#x33;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#x6d;">&#122;&#120;&#x6a;&#108;&#109;&#x32;&#51;&#x33;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -13889,7 +14040,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
