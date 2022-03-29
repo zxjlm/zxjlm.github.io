@@ -1,5 +1,5 @@
 ---
-title: design-better-api(施工中)
+title: API设计个人经验小结(施工中)
 status: publish
 author: harumonia
 noThumbInfoStyle: default
@@ -10,7 +10,7 @@ thumbStyle: default
 hidden: false
 email: zxjlm233@gmail.com
 date: 2022-03-29 09:50:04
-updated:
+updated: 2022-03-29 10:37:56
 categories:
 tags:
 customSummary:
@@ -52,65 +52,6 @@ thumbSmall:
 - 接口的使用方法(method)符合标准规范
 
 本质上还是 [RESTFul](https://en.wikipedia.org/wiki/Representational_state_transfer) 的那一套, 关于 RESTFul 的具体实践见于下文.
-
-## 使用 ISO 8601 UTC 返回结果
-
-在解释这个问题之前, 首先需要了解一下数据库中的时间格式。
-
-以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 [官方对时间格式的说明文档](https://dev.mysql.com/doc/refman/8.0/en/datetime.html)
-
-在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。
-
-以 Django 为例:
-
-```python
-def value_to_string(self, obj):    
-    val = self.value_from_object(obj)   
-    return '' if val is None else val.isoformat()
-```
-
-从前端的角度来说，ISO格式的时间能够被解析为 `Date` 对象，进而根据客户端配置的时区来展示为当地的时间.
-
-```javascript
-// JavaScript
-date = new Date("2022-03-16T22:00:09.254459+08:00")
-date.toLocaleString()
-```
-
-## 提供健康度检查的接口
-
-__Health Check__ 接口反馈的是API服务的运行状态.
-
-check的条目可以包含以下的几点.
-
-- 下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。
-- 数据库连通性检查。检查基础的数据库增删改查操作是否可用。
-- 数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。
-- 内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。
-- 消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。
-
-本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。
-
-__API Health Check__ 的一个下位替代品是 __API Ping__ ，它的作用是检查API是否 _可用_ ，而忽略了API的 _可用性_ 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。
-
-对于健康度的一个典型实践，可以参考 __k8s的存活探针__ 相关的内容。
-
-## 声明API版本
-
-API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。
-
-比较初级的API版本声明方式是在 __params__ 中声明或者在 __path__ 中声明. 如下所示。
-
-```plain_text
-https://api.averagecompany.com/v1/health
-https://api.averagecompany.com/health?api_version=1.0
-```
-
-而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。
-
-## 采用API KEY的认证
-
-todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥
 
 ## 符合RESTFul设计
 
@@ -188,3 +129,62 @@ PATCH用于部分更新，PUT用于全量更新。
 
 - 对前端友好。现在主流的表格组件都支持分页或者有对应的分页解决方案。
 - 缓解后端的请求压力与数据库压力。本质上，分页的请求使用的是 offset 和 limit 的 SQL请求，拥有更少的IO损耗。
+
+## 使用 ISO 8601 UTC 返回结果
+
+在解释这个问题之前, 首先需要了解一下数据库中的时间格式。
+
+以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 [官方对时间格式的说明文档](https://dev.mysql.com/doc/refman/8.0/en/datetime.html)
+
+在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。
+
+以 Django 为例:
+
+```python
+def value_to_string(self, obj):    
+    val = self.value_from_object(obj)   
+    return '' if val is None else val.isoformat()
+```
+
+从前端的角度来说，ISO格式的时间能够被解析为 `Date` 对象，进而根据客户端配置的时区来展示为当地的时间.
+
+```javascript
+// JavaScript
+date = new Date("2022-03-16T22:00:09.254459+08:00")
+date.toLocaleString()
+```
+
+## 提供健康度检查的接口
+
+__Health Check__ 接口反馈的是API服务的运行状态.
+
+check的条目可以包含以下的几点.
+
+- 下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。
+- 数据库连通性检查。检查基础的数据库增删改查操作是否可用。
+- 数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。
+- 内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。
+- 消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。
+
+本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。
+
+__API Health Check__ 的一个下位替代品是 __API Ping__ ，它的作用是检查API是否 _可用_ ，而忽略了API的 _可用性_ 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。
+
+对于健康度的一个典型实践，可以参考 __k8s的存活探针__ 相关的内容。
+
+## 声明API版本
+
+API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。
+
+比较初级的API版本声明方式是在 __params__ 中声明或者在 __path__ 中声明. 如下所示。
+
+```plain_text
+https://api.averagecompany.com/v1/health
+https://api.averagecompany.com/health?api_version=1.0
+```
+
+而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。
+
+## 采用API KEY的认证
+
+todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥
