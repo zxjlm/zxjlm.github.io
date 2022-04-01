@@ -1,5 +1,5 @@
 ---
-title: 通过github同步代码片段
+title: github同步代码片段的自动化脚本
 status: publish
 author: harumonia
 noThumbInfoStyle: default
@@ -10,7 +10,7 @@ thumbStyle: default
 hidden: false
 email: zxjlm233@gmail.com
 date: 2022-03-19 11:56:55
-updated: 2022-03-19 11:56:55
+updated: 2022-04-1 11:10:55
 categories:
   - 源流清泉
   - Shell
@@ -27,7 +27,7 @@ thumbSmall:
 
 同步的方法有很多, 我试过onedriver \ codemass \ gist 等手段, 但是各有各的缺点(后文补充), 所以最后还是选择了一个相对折中的方案, GitHub.
 
-本文主要介绍的就是如何通过GitHub实现自动代码片段的同步.
+本文主要介绍的就是如何通过自动化脚本实现GitHub代码片段的同步.
 
 代码环境:
 
