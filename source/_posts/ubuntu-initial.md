@@ -187,6 +187,16 @@ rm -f dbeaver-ce_21.3.0_amd64.deb
 
 笔者使用的是 GitHub 上面的[ondrive](https://github.com/abraunegg/onedrive)项目.
 
+## switchhosts
+
+[switchhosts](https://github.com/oldj/SwitchHosts/releases) 是一个管理 hosts 文件的应用，基于 Electron 、React、UmiJS 、Chakra UI、CodeMirror 等技术开发。
+
+SwitchHosts 的数据文件存储于 `~/.SwitchHosts` (Windows 下存储于用户个人文件夹下的 .SwitchHosts 文件夹）， 其中 `~/.SwitchHosts/data` 文件夹包含数据，`~/.SwitchHosts/config` 文件夹包含各项配置信息。
+
+```shell
+wget https://github.com/oldj/SwitchHosts/releases/download/v4.1.1/SwitchHosts_linux_x86_64_4.1.1.6077.AppImage
+```
+
 ## 欧陆词典
 
 [下载页面](https://www.eudic.net/v4/en/app/download)
