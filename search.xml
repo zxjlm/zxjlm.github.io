@@ -10570,6 +10570,73 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
 ]]></content>
   </entry>
   <entry>
+    <title>doccano的使用注意</title>
+    <url>/doccano-use/</url>
+    <content><![CDATA[<blockquote>
+<p>本篇完成于 2022-04-12, 对应的 doccano 版本为 1.6.2.</p>
+</blockquote>
+<p><a href="https://github.com/doccano/doccano">doccano</a> 是一个标注平台, 支持图片分类\文本分类\文本标注等多种标注功能.</p>
+<p>有关它的一些基础的使用方法, 可以参考 <a href="https://zhuanlan.zhihu.com/p/371752234">如何使用文本标注工具——doccano?</a> 这篇文章.</p>
+<p>本篇主要介绍的是 doccano 在部署时的一些问题和 <strong>自动标注功能</strong> .</p>
+<h2 id="Docker-Compose-构建"><a href="#Docker-Compose-构建" class="headerlink" title="Docker Compose 构建"></a>Docker Compose 构建</h2><p>doccano 支持多种形式的部署方式, 包括:</p>
+<ul>
+<li>源码部署(单体应用)</li>
+<li>Docker部署(单体应用)</li>
+<li>Docker Compose部署(集群应用)</li>
+<li>以及一些国外平台的一键部署</li>
+</ul>
+<p>这里笔者使用的是 <strong>Docker Compose</strong> 部署方式, 因为涉及到一些源码的改动, 使用这种方式是部署起来更加灵活.</p>
+<p>doccano 的 docker 构建文件对国内不太友好, 它的后端使用的是 python - django, 而后端项目的管理使用的是 <em>poetry</em>. 整个镜像使用的 Linux 发行版是 Debian. 所以在国内的服务器上构建时会陷入 backend 和 nginx 两个组件速度极其缓慢的问题.</p>
+<p>这里需要修改一些配置文件, 来适应国内的网络环境, 达到加速构建的目的.</p>
+<h3 id="Debian-加速"><a href="#Debian-加速" class="headerlink" title="Debian 加速"></a>Debian 加速</h3><p>在根目录的 <em>docker</em> 文件夹下, 有 <em>Dockerfile.prod</em> 和 <em>Dockerfile.nginx</em> 两个文件, 分别对应了 doccano 的后端和 nginx 的镜像.</p>
+<p>可以在文件中找到 <em>RUN apt-get update</em>, 在前面加上一行  <code>sed -i &#39;s/deb.debian.org/mirrors.aliyun.com/g&#39; /etc/apt/sources.list</code> , 也就是我们俗称的 “换源” . 这里由于笔者是使用的 <em>阿里云</em> 的服务器, 所以换的是阿里的源.</p>
+<h3 id="Poetry"><a href="#Poetry" class="headerlink" title="Poetry"></a>Poetry</h3><p>Poetry的安装需要用到他们 <a href="https://github.com/python-poetry/poetry">Github仓库</a> 的 get-poetry.py 文件, 在国内网络环境下, 下载这个文件会很玄学, 所以推荐先将文件放入构建目录 <em>backend</em>, 只有这个文件是不够的, 文件中会触发下载 poetry 的最新依赖包, 这个也是托管在 Github上的, 所以也需要提前下载下来.</p>
+<p>这样, 就可以把安装 poetry 的 <code>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -</code> 这个命令替换为 <code>python get-poetry.py --file poetry-1.1.13-linux.tar.gz</code> 这个命令.</p>
+<blockquote>
+<p>补充: 记得更新 CPOY 命令, poetry 的安装先于 python 依赖包的安装.</p>
+</blockquote>
+<p>由于 poetry 的安装包体积较大, 所以建议清理一下, 否则镜像的体积可能会超过 100M .</p>
+<h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>yarn 的安装同样会受到一些来自国内网络环境 “微小的阻力”, 所以需要进行换源.</p>
+<p>具体的操作就是在 <code>yarn install</code> 这个命令之前使用 <code>yarn config set registry https://registry.npm.taobao.org</code>.</p>
+<h2 id="gnutls-handshake-问题"><a href="#gnutls-handshake-问题" class="headerlink" title="gnutls_handshake() 问题"></a>gnutls_handshake() 问题</h2><p>在使用yarn进行安装时, 还有可能会出现 gnutls_handshake()的报错.这个错误的具体成因和解决方案可以见于<a href="https://www.bswen.com/2021/11/how-to-solve-github-https-clone-error.html">others-How to solve ‘gnutls_handshake() failed’ error when doing ‘git clone’ from github.com ?
+</a> </p>
+<p>这里我使用的是第一种方案, 将https更改为http.</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">git config --global url.&quot;http:&#x2F;&#x2F;github.com&#x2F;&quot;.insteadOf git:&#x2F;&#x2F;github.com&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="自动标注"><a href="#自动标注" class="headerlink" title="自动标注"></a>自动标注</h2><p>doccano 在文本标注项目中支持以 RESTFul 的形式调用我们的预测接口. 一些详细的使用方法可以参考 <a href="https://github.com/doccano/doccano/issues/1417">How to connect to a local REST API for auto annotation?</a>.</p>
+<p>这里列出一些 Tips.</p>
+<ol>
+<li>一般我们会以 <strong>POST</strong> 的形式来调用接口, 因为 <strong>GET</strong> 可能会出现 URL 超长的情况.</li>
+<li>我们需要将待预测文本放在 <strong>Request Body</strong> 中, 这需要使用它的一个内置语法, 即 <em></em> 代表待预测文本. 注意, 双括号中的空格不能省略.</li>
+<li>接口返回的的数据需要遵循统一的规范, 这个规范是我们自己决定的.</li>
+</ol>
+<p>接口的返回如果使用如下的格式.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+    <span class="token string">'start_offset'</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token string">'end_offset'</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token string">'label'</span><span class="token punctuation">:</span> <span class="token string">""</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>那么在渲染时就需要使用如下的格式进行匹配.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span><span class="token operator">%</span> <span class="token keyword">for</span> entity <span class="token keyword">in</span> input <span class="token operator">%</span><span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token string">"start_offset"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> entity<span class="token punctuation">.</span>start_offset <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token string">"end_offset"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> entity<span class="token punctuation">.</span>end_offset<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            <span class="token string">"label"</span><span class="token operator">:</span> <span class="token string">"&#123;&#123; entity.label &#125;&#125;"</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">&#123;</span><span class="token operator">%</span> <span class="token keyword">if</span> not loop<span class="token punctuation">.</span>last <span class="token operator">%</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token operator">%</span> endif <span class="token operator">%</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#123;</span><span class="token operator">%</span> endfor <span class="token operator">%</span><span class="token punctuation">&#125;</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>NLP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>桂苑酌记小纲</title>
     <url>/drink-with-reading/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
@@ -12580,7 +12647,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#106;&#x6c;&#x6d;&#50;&#x33;&#x33;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;">&#x7a;&#120;&#106;&#x6c;&#x6d;&#50;&#x33;&#x33;&#x40;&#49;&#x36;&#x33;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#64;&#x31;&#x36;&#51;&#x2e;&#99;&#111;&#x6d;">&#122;&#x78;&#x6a;&#x6c;&#109;&#50;&#51;&#51;&#64;&#x31;&#x36;&#51;&#x2e;&#99;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -14040,7 +14107,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
