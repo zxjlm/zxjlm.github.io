@@ -1,5 +1,5 @@
 ---
-title: docker-image-smaller
+title: Docker 镜像优化实践
 status: publish
 author: harumonia
 noThumbInfoStyle: default
