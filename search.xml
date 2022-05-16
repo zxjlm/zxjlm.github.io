@@ -497,86 +497,6 @@ auto bba&#x3D;a.begin();
       </tags>
   </entry>
   <entry>
-    <title>鬼畜的回形数</title>
-    <url>/2018-12-02-number-of-rounds/</url>
-    <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
-
-
-using namespace std;
-
-int judge(int n,int m)
-&#123;
-    if (n%2&#x3D;&#x3D;0) &#123;
-        return n&#x2F;2+1;
-    &#125;
-    else&#123;
-        return n&#x2F;2;
-    &#125;
-&#125;
-
-int main()
-&#123;
-    int q[200][200];
-    int n,m;
-    cin &gt;&gt; n&gt;&gt;m;
-    &#x2F;*int **q;
-    q&#x3D;new int*[n];
-    for (int i&#x3D;0; i&lt;n; i++) &#123;
-        q[i]&#x3D;new int[m];
-    &#125;*&#x2F;
-    for (int i&#x3D;0; i&lt;n; i++) &#123;
-        for (int j&#x3D;0; j&lt;m; j++) &#123;
-            cin&gt;&gt;q[i][j];
-        &#125;
-    &#125;
-    &#x2F;&#x2F;cout &lt;&lt; q[0][0]&lt;&lt;endl;
-
-    int right&#x3D;m-1,left&#x3D;0,up&#x3D;0,down&#x3D;n-1;
-    while (1)&#123;
-        for (int i&#x3D;up; i&lt;&#x3D;down; i++) &#123;
-            cout &lt;&lt; q[i][left]&lt;&lt;&quot; &quot;;
-        &#125;
-        left++;
-        for (int i&#x3D;left; i&lt;&#x3D;right; i++) &#123;
-            cout &lt;&lt; q[down][i]&lt;&lt;&quot; &quot;;
-        &#125;
-        down--;
-        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
-            break;
-        &#125;
-        for (int i&#x3D;down; i&gt;&#x3D;up; i--) &#123;
-            cout &lt;&lt; q[i][right]&lt;&lt;&quot; &quot;;
-        &#125;
-        right--;
-        for (int i&#x3D;right; i&gt;&#x3D;left; i--) &#123;
-            cout &lt;&lt; q[up][i]&lt;&lt;&quot; &quot;;
-        &#125;
-        up++;
-        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
-            break;
-        &#125;
-       &#x2F;&#x2F; cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;
-        &#x2F;&#x2F;cout &lt;&lt; m&#x2F;2+2 &lt;&lt; &quot; &quot;&lt;&lt;n&#x2F;2+2&lt;&lt;endl;
-    &#125;
-    cout &lt;&lt;endl;
-
-
-
-    return 0;
-&#125;
-
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Algorithm \ Data Structure</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++实现字典（初步）</title>
     <url>/2018-11-21-cpp-dictionary/</url>
     <content><![CDATA[<p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p>
@@ -907,6 +827,86 @@ RIZHI
       </tags>
   </entry>
   <entry>
+    <title>鬼畜的回形数</title>
+    <url>/2018-12-02-number-of-rounds/</url>
+    <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+
+
+using namespace std;
+
+int judge(int n,int m)
+&#123;
+    if (n%2&#x3D;&#x3D;0) &#123;
+        return n&#x2F;2+1;
+    &#125;
+    else&#123;
+        return n&#x2F;2;
+    &#125;
+&#125;
+
+int main()
+&#123;
+    int q[200][200];
+    int n,m;
+    cin &gt;&gt; n&gt;&gt;m;
+    &#x2F;*int **q;
+    q&#x3D;new int*[n];
+    for (int i&#x3D;0; i&lt;n; i++) &#123;
+        q[i]&#x3D;new int[m];
+    &#125;*&#x2F;
+    for (int i&#x3D;0; i&lt;n; i++) &#123;
+        for (int j&#x3D;0; j&lt;m; j++) &#123;
+            cin&gt;&gt;q[i][j];
+        &#125;
+    &#125;
+    &#x2F;&#x2F;cout &lt;&lt; q[0][0]&lt;&lt;endl;
+
+    int right&#x3D;m-1,left&#x3D;0,up&#x3D;0,down&#x3D;n-1;
+    while (1)&#123;
+        for (int i&#x3D;up; i&lt;&#x3D;down; i++) &#123;
+            cout &lt;&lt; q[i][left]&lt;&lt;&quot; &quot;;
+        &#125;
+        left++;
+        for (int i&#x3D;left; i&lt;&#x3D;right; i++) &#123;
+            cout &lt;&lt; q[down][i]&lt;&lt;&quot; &quot;;
+        &#125;
+        down--;
+        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
+            break;
+        &#125;
+        for (int i&#x3D;down; i&gt;&#x3D;up; i--) &#123;
+            cout &lt;&lt; q[i][right]&lt;&lt;&quot; &quot;;
+        &#125;
+        right--;
+        for (int i&#x3D;right; i&gt;&#x3D;left; i--) &#123;
+            cout &lt;&lt; q[up][i]&lt;&lt;&quot; &quot;;
+        &#125;
+        up++;
+        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
+            break;
+        &#125;
+       &#x2F;&#x2F; cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;
+        &#x2F;&#x2F;cout &lt;&lt; m&#x2F;2+2 &lt;&lt; &quot; &quot;&lt;&lt;n&#x2F;2+2&lt;&lt;endl;
+    &#125;
+    cout &lt;&lt;endl;
+
+
+
+    return 0;
+&#125;
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Algorithm \ Data Structure</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杂物</title>
     <url>/2018-12-02-others/</url>
     <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;*报时
@@ -1053,78 +1053,6 @@ for i in movies:
         <tag>Python</tag>
         <tag>爬虫</tag>
         <tag>入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>flask部署的问题及解决</title>
-    <url>/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
-    <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
-</a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
-<a id="more"></a>
-
-<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><h3 id="端口被占用"><a href="#端口被占用" class="headerlink" title="端口被占用"></a>端口被占用</h3><p>查看所有的服务端口（ESTABLISHED</p>
-<blockquote>
-<p>netstat -a</p>
-</blockquote>
-<p>查看所有的服务端口，显示 pid 号（LISTEN，ESTABLISHED）</p>
-<blockquote>
-<p>netstat -ap</p>
-</blockquote>
-<p>查看某一（**）端口，则可以结合 grep 命令：</p>
-<blockquote>
-<p>netstat -ap | grep **</p>
-</blockquote>
-<p>如查看**端口，也可以在终端中输入：</p>
-<blockquote>
-<p>lsof -i:**</p>
-</blockquote>
-<p>若要停止使用这个端口的程序，使用 kill +对应的 pid</p>
-<blockquote>
-<p>kill pid</p>
-</blockquote>
-<p>还有一个比较好用的命令，查看**端口：</p>
-<blockquote>
-<p>sudo netstat -lnp | grep **</p>
-</blockquote>
-<p>查看端口号和运行程序：</p>
-<blockquote>
-<p>netstat -atunp | more</p>
-</blockquote>
-<p>查看进程所用端口：</p>
-<blockquote>
-<p>netstat -tlnp|grep **</p>
-</blockquote>
-<p>以上的命令对排查该类问题有很好的帮助。<br>同时，如果安装了宝塔 Linux 的 LMNP 群的话，就不用再另行</p>
-<blockquote>
-<p>sudo apt-get install nginx</p>
-</blockquote>
-<p>了，不然宝塔的 Nginx 会占用 80 端口而导致失败。</p>
-<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><h3 id="uwsgi-的配置问题"><a href="#uwsgi-的配置问题" class="headerlink" title="uwsgi 的配置问题"></a>uwsgi 的配置问题</h3><p>uwsgi 的配置文件需要在 ray 所提供的样例之上进行适应性调整。<br>另，评论中指出的</p>
-<blockquote>
-<p>config.ini 文件<br>chdir = /home/www/ 要改成 chdir = /home/www/my_flask</p>
-</blockquote>
-<p>供参考</p>
-<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><h3 id="502-提示"><a href="#502-提示" class="headerlink" title="502 提示"></a>502 提示</h3><p>部署完成之后遇到了 502 提示，在网上查找了许多的解决方案都没有用，后来才发现，uwsgi 所占用的 8001 端口并没有处于运行状态，<strong>手动运行 uwsgi</strong>后网站恢复运行，进而考虑到是<code>Supervisor</code>出现问题，使用</p>
-<blockquote>
-<p>sudo service supervisor start</p>
-</blockquote>
-<p>查找出错误并解决之（似乎是配置文件中指定的 log 文件夹要自己创建，它并不会自动创建这样子）。</p>
-<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><h3 id="个人的调试办法"><a href="#个人的调试办法" class="headerlink" title="个人的调试办法"></a>个人的调试办法</h3><p>在网站第一次全部部署完成之后，出现了很多的小问题，这里我将项目拆解开来进行一步一步的测试</p>
-<h4 id="S1-检测文件本身是否有问题"><a href="#S1-检测文件本身是否有问题" class="headerlink" title="S1 检测文件本身是否有问题"></a>S1 检测文件本身是否有问题</h4><p>方法是直接运行 manage.py</p>
-<blockquote>
-<p>这里注意，要用过外网访问 localhost：5000 的话，要使用 python manage.py runserver –host 0.0.0.0</p>
-</blockquote>
-<p>记得要给 5000 端口放行</p>
-<h4 id="S2-检测-uwsgi-有无问题"><a href="#S2-检测-uwsgi-有无问题" class="headerlink" title="S2 检测 uwsgi 有无问题"></a>S2 检测 uwsgi 有无问题</h4><p>uwsgi 成功运行之后了，网站再次变为可访问状态，使用 Ctrl+C 之后，网站再次不可访问，然后配置使用<strong>Supervisor</strong> 将 uwsgi 变为保持开启状态。<br>操作完成之后，网站变为可访问（依旧是 5000 端口）</p>
-<h3 id="S3-检测-Nginx"><a href="#S3-检测-Nginx" class="headerlink" title="S3 检测 Nginx"></a>S3 检测 Nginx</h3><p>不出意外的话，这就是最后一步了，表面上是 Nginx 一直在报错，然而实际上 Nginx 配置并没有什么问题，完成了上述两步的调试之后，Nginx 也就不报错了，这时可以直接使用域名访问网站。</p>
-<h2 id="关于-flask-制作网站的后续"><a href="#关于-flask-制作网站的后续" class="headerlink" title="关于 flask 制作网站的后续"></a>关于 flask 制作网站的后续</h2><p>后面准备给网站加上域名（应该不是这个模拟网站，而是工作室的网站吧）<br>掌握对网站维护的技巧<br>以上。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -1385,6 +1313,78 @@ driver<span class="token punctuation">.</span>close<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>flask部署的问题及解决</title>
+    <url>/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
+    <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
+</a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
+<a id="more"></a>
+
+<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><h3 id="端口被占用"><a href="#端口被占用" class="headerlink" title="端口被占用"></a>端口被占用</h3><p>查看所有的服务端口（ESTABLISHED</p>
+<blockquote>
+<p>netstat -a</p>
+</blockquote>
+<p>查看所有的服务端口，显示 pid 号（LISTEN，ESTABLISHED）</p>
+<blockquote>
+<p>netstat -ap</p>
+</blockquote>
+<p>查看某一（**）端口，则可以结合 grep 命令：</p>
+<blockquote>
+<p>netstat -ap | grep **</p>
+</blockquote>
+<p>如查看**端口，也可以在终端中输入：</p>
+<blockquote>
+<p>lsof -i:**</p>
+</blockquote>
+<p>若要停止使用这个端口的程序，使用 kill +对应的 pid</p>
+<blockquote>
+<p>kill pid</p>
+</blockquote>
+<p>还有一个比较好用的命令，查看**端口：</p>
+<blockquote>
+<p>sudo netstat -lnp | grep **</p>
+</blockquote>
+<p>查看端口号和运行程序：</p>
+<blockquote>
+<p>netstat -atunp | more</p>
+</blockquote>
+<p>查看进程所用端口：</p>
+<blockquote>
+<p>netstat -tlnp|grep **</p>
+</blockquote>
+<p>以上的命令对排查该类问题有很好的帮助。<br>同时，如果安装了宝塔 Linux 的 LMNP 群的话，就不用再另行</p>
+<blockquote>
+<p>sudo apt-get install nginx</p>
+</blockquote>
+<p>了，不然宝塔的 Nginx 会占用 80 端口而导致失败。</p>
+<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><h3 id="uwsgi-的配置问题"><a href="#uwsgi-的配置问题" class="headerlink" title="uwsgi 的配置问题"></a>uwsgi 的配置问题</h3><p>uwsgi 的配置文件需要在 ray 所提供的样例之上进行适应性调整。<br>另，评论中指出的</p>
+<blockquote>
+<p>config.ini 文件<br>chdir = /home/www/ 要改成 chdir = /home/www/my_flask</p>
+</blockquote>
+<p>供参考</p>
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><h3 id="502-提示"><a href="#502-提示" class="headerlink" title="502 提示"></a>502 提示</h3><p>部署完成之后遇到了 502 提示，在网上查找了许多的解决方案都没有用，后来才发现，uwsgi 所占用的 8001 端口并没有处于运行状态，<strong>手动运行 uwsgi</strong>后网站恢复运行，进而考虑到是<code>Supervisor</code>出现问题，使用</p>
+<blockquote>
+<p>sudo service supervisor start</p>
+</blockquote>
+<p>查找出错误并解决之（似乎是配置文件中指定的 log 文件夹要自己创建，它并不会自动创建这样子）。</p>
+<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><h3 id="个人的调试办法"><a href="#个人的调试办法" class="headerlink" title="个人的调试办法"></a>个人的调试办法</h3><p>在网站第一次全部部署完成之后，出现了很多的小问题，这里我将项目拆解开来进行一步一步的测试</p>
+<h4 id="S1-检测文件本身是否有问题"><a href="#S1-检测文件本身是否有问题" class="headerlink" title="S1 检测文件本身是否有问题"></a>S1 检测文件本身是否有问题</h4><p>方法是直接运行 manage.py</p>
+<blockquote>
+<p>这里注意，要用过外网访问 localhost：5000 的话，要使用 python manage.py runserver –host 0.0.0.0</p>
+</blockquote>
+<p>记得要给 5000 端口放行</p>
+<h4 id="S2-检测-uwsgi-有无问题"><a href="#S2-检测-uwsgi-有无问题" class="headerlink" title="S2 检测 uwsgi 有无问题"></a>S2 检测 uwsgi 有无问题</h4><p>uwsgi 成功运行之后了，网站再次变为可访问状态，使用 Ctrl+C 之后，网站再次不可访问，然后配置使用<strong>Supervisor</strong> 将 uwsgi 变为保持开启状态。<br>操作完成之后，网站变为可访问（依旧是 5000 端口）</p>
+<h3 id="S3-检测-Nginx"><a href="#S3-检测-Nginx" class="headerlink" title="S3 检测 Nginx"></a>S3 检测 Nginx</h3><p>不出意外的话，这就是最后一步了，表面上是 Nginx 一直在报错，然而实际上 Nginx 配置并没有什么问题，完成了上述两步的调试之后，Nginx 也就不报错了，这时可以直接使用域名访问网站。</p>
+<h2 id="关于-flask-制作网站的后续"><a href="#关于-flask-制作网站的后续" class="headerlink" title="关于 flask 制作网站的后续"></a>关于 flask 制作网站的后续</h2><p>后面准备给网站加上域名（应该不是这个模拟网站，而是工作室的网站吧）<br>掌握对网站维护的技巧<br>以上。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>N皇后问题</title>
     <url>/2019-06-11-NQueen/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/n-queens/">No.51 N 皇后问题</a></p>
@@ -1576,24 +1576,6 @@ bool exist(vector&lt;vector&lt;char&gt;&gt;&amp; board, string word) &#123;
       </tags>
   </entry>
   <entry>
-    <title>flask 开发心得 part 1</title>
-    <url>/2019-07-16-flask-experience-part/</url>
-    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
-<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
-<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
-<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
-<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
-<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 数据挖掘基础</title>
     <url>/2019-07-16-Python-basic-of-DM/</url>
     <content><![CDATA[<p>本篇记载了如何在 python 中使用数据挖掘的相关的模块。<br>都是基础级的东西了。</p>
@@ -1689,6 +1671,24 @@ sns<span class="token punctuation">.</span>set_style<span class="token punctuati
       </categories>
       <tags>
         <tag>datasci</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>flask 开发心得 part 1</title>
+    <url>/2019-07-16-flask-experience-part/</url>
+    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
+<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
+<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
+<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
+<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
+<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2175,68 +2175,6 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
       </tags>
   </entry>
   <entry>
-    <title>flask部署(2)</title>
-    <url>/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
-    <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
-<a id="more"></a>
-
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>阿里云 ubuntu 16</p>
-<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p>安装 virtualenv<br>sudo pip install virtualenv</p>
-<p>使用 virtualenv<br>virtualenv ENV 创建目录环境<br>source ./bin/activate 激活环境</p>
-<p>安装 gunicorn<br>pip install gunicorn</p>
-<p>安装依赖包 requirement.txt</p>
-<p>启动程序<br>gunicorn -w 4 -b 0.0.0.0:5001 -D manage:app<br>这里的-d 意思就是在后台运行，当然你也可以配置守护进程</p>
-<p>配置 gunicorn.conf</p>
-<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># gunicorn.conf
-
-# 并行工作进程数
-workers &#x3D; 2
-# 指定每个工作者的线程数
-threads &#x3D; 2
-# 监听内网端口5000
-bind &#x3D; &#39;0.0.0.0:5001&#39;
-# 设置守护进程,将进程交给supervisor管理
-daemon &#x3D; &#39;true&#39;
-# 工作模式协程
-worker_class &#x3D; &#39;gevent&#39;
-# 设置最大并发量
-worker_connections &#x3D; 2000
-# 设置进程文件目录
-pidfile &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;run&#x2F;gunicorn.pid&#39;
-# 设置访问日志和错误信息日志路径
-accesslog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_acess.log&#39;
-errorlog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_error.log&#39;
-# 设置日志记录水平
-loglevel &#x3D; &#39;debug&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="问题-amp-解决"><a href="#问题-amp-解决" class="headerlink" title="问题 &amp; 解决"></a>问题 &amp; 解决</h1><p>Q:setuptools pkg_resources pip wheel failed with error code 1</p>
-<p>S:<br>vi /root/.pip/pip.conf 修改如下:</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">[global]
-index-url &#x3D; https:&#x2F;&#x2F;pypi.python.org&#x2F;simple&#x2F;
-[install]
-trusted-host&#x3D;mirrors.aliyun.com trusted-host&#x3D;pypi.python.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>Q:json 类的报错问题<br>S:具体的原因我还没有搞明白，Linux 默认的 python3 是 3.5 版本的，但是在进行 jinja2 渲染的时候，常常会出现 json 的报错，两种解决办法。</p>
-<ul>
-<li>修改源文件，去掉 json 调用</li>
-<li>将 3.5 手动升级到 3.7<br>各有优劣吧，3.5 版本稳定，3.7 要自己去编译升级，很复杂，而复杂往往就意味着出错率高。<br>这里我选择了后者，因为开发环境就是 3.7，直接升级到 3.7，一劳永逸。</li>
-</ul>
-<p>Q:如何升级到 3.7<br>S:参考<a href="https://segmentfault.com/a/1190000018264955">博客园上的一篇文章</a></p>
-<p>Q:升级了 python3.7 之后可能会出现的一些问题</p>
-<p>1.Command ‘(‘lsb_release’, ‘-a’)’ returned non-zero exit status 1 问题解决</p>
-<p>S:</p>
-<p>1.网上有很多的花里胡哨的办法，然后，我，直接把文件删了。。。。</p>
-<pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">rm &#x2F;usr&#x2F;bin&#x2F;lsb_release<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>No.31 下一个排列</title>
     <url>/2019-07-22-No31-next-permutation/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/next-permutation/">No.31 下一个排列</a></p>
@@ -2303,100 +2241,65 @@ public:
       </categories>
   </entry>
   <entry>
-    <title>sklearn应用性学习(1)</title>
-    <url>/2019-08-04-learning-sklearn-via-practice-1/</url>
-    <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
-<p>本篇主要针对无监督学习进行浅尝。</p>
+    <title>flask部署(2)</title>
+    <url>/2019-07-30-questions-and-solutions-of-flask-deploy-2/</url>
+    <content><![CDATA[<p>上一篇的部署是用的 uwsgi，这次听说 gunicorn 很方便，就试了一下</p>
 <a id="more"></a>
 
-<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><p>Definition:根据数据的相似性将数据分为多类的过程.</p>
-<h3 id="sklearn-cluster"><a href="#sklearn-cluster" class="headerlink" title="sklearn.cluster"></a>sklearn.cluster</h3><p>sklearn.cluster 模块提供的各聚类算法函数可以使用不同的数据形式作为 输入:<br>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。<br>相似性矩阵输入格式:即由[样本数目，样本数目]定义的矩阵形式，矩阵中 的每一个元素为两个样本的相似度，如 DBSCAN， AffinityPropagation(近邻传 播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为 1. 矩阵中每 个元素的取值范围为[0,1]。</p>
-<h2 id="降维"><a href="#降维" class="headerlink" title="降维"></a>降维</h2><p>降维是指在某些限定条件下，降低随机变量个数，得到一组“不相关”主变量的过程。 降维可进一步细分为变量选择和特征提取两大方法。</p>
-<h1 id="聚类-1"><a href="#聚类-1" class="headerlink" title="聚类"></a>聚类</h1><h2 id="kMeans"><a href="#kMeans" class="headerlink" title="kMeans"></a>kMeans</h2><p>k-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似 度，而簇间的相似度较低。<br>其处理过程如下: 1.随机选择 k 个点作为初始的聚类中心; 2.对于剩下的点，根据其与聚类中心的距离，将其归入最近的簇 3.对每个簇，计算所有点的均值作为新的聚类中心 4.重复 2、3 直到聚类中心不再发生改变</p>
-<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>调用 KMeans 方法所需参数:<br>• <strong>n_clusters</strong>:用于指定聚类中心的个数<br>• <strong>init</strong>:初始聚类中心的初始化方法<br>• <strong>max_iter</strong>:最大的迭代次数<br>• 一般调用时只用给出 n_clusters 即可，init<br>默认是 k-means++，max_iter 默认是 300<br>其它参数:<br>• <strong>data</strong>:加载的数据<br>• <strong>label</strong>:聚类后各数据所属的标签<br>• <strong>axis</strong>: 按行求和<br>• <strong>fit_predict()</strong>:计算簇中心以及为簇分配序号</p>
-<blockquote>
-<p>MacOS 在执行 open 命令时,添加 <em>encoding=’gbk’</em>,避免编码错误</p>
-</blockquote>
-<h3 id="扩展和改进"><a href="#扩展和改进" class="headerlink" title="扩展和改进"></a>扩展和改进</h3><p>计算两条数据相似性时，Sklearn 的 K-Means 默认用的是欧式距离。虽然还有余弦相<br>似度，马氏距离等多种方法，但没有设定计算距离方法的参数。</p>
-<p>更改 <a href="https://github.com/scikit-learn/scikit-learn/blob/581b0e1d73414f47ef6cde6cd282667b7e767a36/sklearn/metrics/pairwise.py#L163"><strong>euclidean_distances</strong></a> 的源码<br>建 议 使 用 scipy.spatial.distance.cdist 方 法</p>
-<blockquote>
-<p>Considering the rows of X (and Y=X) as vectors, compute the</p>
-</blockquote>
-<pre><code>distance matrix between each pair of vectors.
-For efficiency reasons, the euclidean distance between a pair of row
-vector x and y is computed as::
-    dist(x, y) = sqrt(dot(x, x) - 2 * dot(x, y) + dot(y, y))
-This formulation has two advantages over other ways of computing distances.
-First, it is computationally efficient when dealing with sparse data.
-Second, if one argument varies but the other remains unchanged, then
-`dot(x, x)` and/or `dot(y, y)` can be pre-computed.
-However, this is not the most precise way of doing this computation, and
-the distance matrix returned by this function may not be exactly
-symmetric as required by, e.g., ``scipy.spatial.distance`` functions.
-Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
-<h2 id="DBSCAN-密度聚类"><a href="#DBSCAN-密度聚类" class="headerlink" title="DBSCAN 密度聚类"></a>DBSCAN 密度聚类</h2><p>DBSCAN 算法是一种基于密度的聚类算法:<br>• 聚类的时候不需要预先指定簇的个数<br>• 最终的簇的个数不定</p>
-<p>DBSCAN 算法将数据点分为三类:<br>• 核心点:在半径 Eps 内含有超过 MinPts 数目的点<br>• 边界点:在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内<br>• 噪音点:既不是核心点也不是边界点的点</p>
-<h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p>1.将所有点标记为核心点、边界点或噪声点; 2.删除噪声点; 3.为距离在 Eps 之内的所有核心点之间赋予一条边; 4.每组连通的核心点形成一个簇; 5.将每个边界点指派到一个与之关联的核心点的簇中(哪一个核心点的半径范围之内)。</p>
-<h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><p>DBSCAN 主要参数:<br>eps: 两个样本被看作邻居节点的最大距离  min_samples: 簇的样本数<br>metric:距离计算方式</p>
-<h2 id="降维-1"><a href="#降维-1" class="headerlink" title="降维"></a>降维</h2><h3 id="pca"><a href="#pca" class="headerlink" title="pca"></a>pca</h3><ul>
-<li><p>主成分分析(Principal Component Analysis，PCA)是最常用的 一种降维方法，通常用于高维数据集的探索与可视化，还可以用作数 据压缩和预处理等。</p>
-</li>
-<li><p>PCA 可以把具有相关性的高维变量合成为线性无关的低维变量，称为 主成分。主成分能够尽可能保留原始数据的信息。</p>
-</li>
-</ul>
-<h4 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
-<li>n_components:指定主成分的个数，即降维后数据的维度</li>
-<li>svd_solver :设置特征值分解的方法，默认为‘auto’,其他可选有<br>‘full’, ‘arpack’, ‘randomized’。</li>
-</ul>
-<h3 id="非负矩阵分解"><a href="#非负矩阵分解" class="headerlink" title="非负矩阵分解"></a>非负矩阵分解</h3><p><a href="https://blog.csdn.net/acdreamers/article/details/44663421/">原理参考</a><br>非负矩阵分解(Non-negative Matrix Factorization ，NMF) 是在矩阵中所有元素均为非负数约束条件之下的矩阵分解方法。<br>基本思想:给定一个非负矩阵 V，NMF 能够找到一个非负矩阵 W 和一个 非负矩阵 H，使得矩阵 W 和 H 的乘积近似等于矩阵 V 中的值。</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>阿里云 ubuntu 16</p>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p>安装 virtualenv<br>sudo pip install virtualenv</p>
+<p>使用 virtualenv<br>virtualenv ENV 创建目录环境<br>source ./bin/activate 激活环境</p>
+<p>安装 gunicorn<br>pip install gunicorn</p>
+<p>安装依赖包 requirement.txt</p>
+<p>启动程序<br>gunicorn -w 4 -b 0.0.0.0:5001 -D manage:app<br>这里的-d 意思就是在后台运行，当然你也可以配置守护进程</p>
+<p>配置 gunicorn.conf</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># gunicorn.conf
+
+# 并行工作进程数
+workers &#x3D; 2
+# 指定每个工作者的线程数
+threads &#x3D; 2
+# 监听内网端口5000
+bind &#x3D; &#39;0.0.0.0:5001&#39;
+# 设置守护进程,将进程交给supervisor管理
+daemon &#x3D; &#39;true&#39;
+# 工作模式协程
+worker_class &#x3D; &#39;gevent&#39;
+# 设置最大并发量
+worker_connections &#x3D; 2000
+# 设置进程文件目录
+pidfile &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;run&#x2F;gunicorn.pid&#39;
+# 设置访问日志和错误信息日志路径
+accesslog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_acess.log&#39;
+errorlog &#x3D; &#39;&#x2F;var&#x2F;www&#x2F;myflask&#x2F;log&#x2F;gunicorn_error.log&#39;
+# 设置日志记录水平
+loglevel &#x3D; &#39;debug&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="问题-amp-解决"><a href="#问题-amp-解决" class="headerlink" title="问题 &amp; 解决"></a>问题 &amp; 解决</h1><p>Q:setuptools pkg_resources pip wheel failed with error code 1</p>
+<p>S:<br>vi /root/.pip/pip.conf 修改如下:</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">[global]
+index-url &#x3D; https:&#x2F;&#x2F;pypi.python.org&#x2F;simple&#x2F;
+[install]
+trusted-host&#x3D;mirrors.aliyun.com trusted-host&#x3D;pypi.python.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Q:json 类的报错问题<br>S:具体的原因我还没有搞明白，Linux 默认的 python3 是 3.5 版本的，但是在进行 jinja2 渲染的时候，常常会出现 json 的报错，两种解决办法。</p>
 <ul>
-<li>W 矩阵:基础图像矩阵，相当于从原 矩阵 V 中抽取出来的特征</li>
-<li>H 矩阵:系数矩阵。</li>
-<li>NMF 能够广泛应用于图像分析、文本<br>挖掘和语音处理等领域。</li>
+<li>修改源文件，去掉 json 调用</li>
+<li>将 3.5 手动升级到 3.7<br>各有优劣吧，3.5 版本稳定，3.7 要自己去编译升级，很复杂，而复杂往往就意味着出错率高。<br>这里我选择了后者，因为开发环境就是 3.7，直接升级到 3.7，一劳永逸。</li>
 </ul>
-<h4 id="主要参数-1"><a href="#主要参数-1" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
-<li>n_components:用于指定分解后矩阵的单个维度 k;</li>
-<li>init:W 矩阵和 H 矩阵的初始化方式，默认为‘nndsvdar’。</li>
-</ul>
-<h2 id="实战-图像分割"><a href="#实战-图像分割" class="headerlink" title="(实战)图像分割"></a>(实战)图像分割</h2><p>图像分割常用方法:</p>
-<ol>
-<li>阈值分割:对图像灰度值进行度量，设置不同类别的阈值，达到分割的目的。</li>
-<li>边缘分割:对图像边缘进行检测，即检测图像中灰度值发生跳变的地方，则为一片<br>区域的边缘。</li>
-<li>直方图法:对图像的颜色建立直方图，而直方图的波峰波谷能够表示一块区域的颜<br>色值的范围，来达到分割的目的。</li>
-<li>特定理论:基于聚类分析、小波变换等理论完成图像分割。</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> PIL<span class="token punctuation">.</span>Image <span class="token keyword">as</span> image
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
-
-<span class="token keyword">def</span> <span class="token function">loadData</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span>
-    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    img <span class="token operator">=</span> image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
-    m<span class="token punctuation">,</span>n <span class="token operator">=</span> img<span class="token punctuation">.</span>size
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> img<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>y<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>z<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token punctuation">,</span>n
-
-imgData<span class="token punctuation">,</span>row<span class="token punctuation">,</span>col <span class="token operator">=</span> loadData<span class="token punctuation">(</span><span class="token string">'课程数据/基于聚类的整图分割/bull.jpg'</span><span class="token punctuation">)</span>
-label <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>imgData<span class="token punctuation">)</span>
-
-label <span class="token operator">=</span> label<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span>col<span class="token punctuation">]</span><span class="token punctuation">)</span>
-pic_new <span class="token operator">=</span> image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"L"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> col<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>col<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        pic_new<span class="token punctuation">.</span>putpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token operator">/</span><span class="token punctuation">(</span>label<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-pic_new<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"result-bull-4.jpg"</span><span class="token punctuation">,</span> <span class="token string">"JPEG"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Q:如何升级到 3.7<br>S:参考<a href="https://segmentfault.com/a/1190000018264955">博客园上的一篇文章</a></p>
+<p>Q:升级了 python3.7 之后可能会出现的一些问题</p>
+<p>1.Command ‘(‘lsb_release’, ‘-a’)’ returned non-zero exit status 1 问题解决</p>
+<p>S:</p>
+<p>1.网上有很多的花里胡哨的办法，然后，我，直接把文件删了。。。。</p>
+<pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">rm &#x2F;usr&#x2F;bin&#x2F;lsb_release<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
         <category>Python</category>
       </categories>
       <tags>
-        <tag>sklearn</tag>
+        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2683,6 +2586,103 @@ grid_search<span class="token punctuation">.</span>fit<span class="token punctua
 <h3 id="OvR-One-vs-Rest"><a href="#OvR-One-vs-Rest" class="headerlink" title="OvR(One vs Rest)"></a>OvR(One vs Rest)</h3><p>n 个类别进行 n 次分类,选择分类得分最高的</p>
 <h3 id="OvO-one-vs-one"><a href="#OvO-one-vs-one" class="headerlink" title="OvO(one vs one)"></a>OvO(one vs one)</h3><p>n 个类别进行 C(n,2)次分类,选择赢数最高的分类</p>
 <p><strong>ovo 耗时更长,准确率更高</strong></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>sklearn应用性学习(1)</title>
+    <url>/2019-08-04-learning-sklearn-via-practice-1/</url>
+    <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
+<p>本篇主要针对无监督学习进行浅尝。</p>
+<a id="more"></a>
+
+<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><p>Definition:根据数据的相似性将数据分为多类的过程.</p>
+<h3 id="sklearn-cluster"><a href="#sklearn-cluster" class="headerlink" title="sklearn.cluster"></a>sklearn.cluster</h3><p>sklearn.cluster 模块提供的各聚类算法函数可以使用不同的数据形式作为 输入:<br>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。<br>相似性矩阵输入格式:即由[样本数目，样本数目]定义的矩阵形式，矩阵中 的每一个元素为两个样本的相似度，如 DBSCAN， AffinityPropagation(近邻传 播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为 1. 矩阵中每 个元素的取值范围为[0,1]。</p>
+<h2 id="降维"><a href="#降维" class="headerlink" title="降维"></a>降维</h2><p>降维是指在某些限定条件下，降低随机变量个数，得到一组“不相关”主变量的过程。 降维可进一步细分为变量选择和特征提取两大方法。</p>
+<h1 id="聚类-1"><a href="#聚类-1" class="headerlink" title="聚类"></a>聚类</h1><h2 id="kMeans"><a href="#kMeans" class="headerlink" title="kMeans"></a>kMeans</h2><p>k-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似 度，而簇间的相似度较低。<br>其处理过程如下: 1.随机选择 k 个点作为初始的聚类中心; 2.对于剩下的点，根据其与聚类中心的距离，将其归入最近的簇 3.对每个簇，计算所有点的均值作为新的聚类中心 4.重复 2、3 直到聚类中心不再发生改变</p>
+<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>调用 KMeans 方法所需参数:<br>• <strong>n_clusters</strong>:用于指定聚类中心的个数<br>• <strong>init</strong>:初始聚类中心的初始化方法<br>• <strong>max_iter</strong>:最大的迭代次数<br>• 一般调用时只用给出 n_clusters 即可，init<br>默认是 k-means++，max_iter 默认是 300<br>其它参数:<br>• <strong>data</strong>:加载的数据<br>• <strong>label</strong>:聚类后各数据所属的标签<br>• <strong>axis</strong>: 按行求和<br>• <strong>fit_predict()</strong>:计算簇中心以及为簇分配序号</p>
+<blockquote>
+<p>MacOS 在执行 open 命令时,添加 <em>encoding=’gbk’</em>,避免编码错误</p>
+</blockquote>
+<h3 id="扩展和改进"><a href="#扩展和改进" class="headerlink" title="扩展和改进"></a>扩展和改进</h3><p>计算两条数据相似性时，Sklearn 的 K-Means 默认用的是欧式距离。虽然还有余弦相<br>似度，马氏距离等多种方法，但没有设定计算距离方法的参数。</p>
+<p>更改 <a href="https://github.com/scikit-learn/scikit-learn/blob/581b0e1d73414f47ef6cde6cd282667b7e767a36/sklearn/metrics/pairwise.py#L163"><strong>euclidean_distances</strong></a> 的源码<br>建 议 使 用 scipy.spatial.distance.cdist 方 法</p>
+<blockquote>
+<p>Considering the rows of X (and Y=X) as vectors, compute the</p>
+</blockquote>
+<pre><code>distance matrix between each pair of vectors.
+For efficiency reasons, the euclidean distance between a pair of row
+vector x and y is computed as::
+    dist(x, y) = sqrt(dot(x, x) - 2 * dot(x, y) + dot(y, y))
+This formulation has two advantages over other ways of computing distances.
+First, it is computationally efficient when dealing with sparse data.
+Second, if one argument varies but the other remains unchanged, then
+`dot(x, x)` and/or `dot(y, y)` can be pre-computed.
+However, this is not the most precise way of doing this computation, and
+the distance matrix returned by this function may not be exactly
+symmetric as required by, e.g., ``scipy.spatial.distance`` functions.
+Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
+<h2 id="DBSCAN-密度聚类"><a href="#DBSCAN-密度聚类" class="headerlink" title="DBSCAN 密度聚类"></a>DBSCAN 密度聚类</h2><p>DBSCAN 算法是一种基于密度的聚类算法:<br>• 聚类的时候不需要预先指定簇的个数<br>• 最终的簇的个数不定</p>
+<p>DBSCAN 算法将数据点分为三类:<br>• 核心点:在半径 Eps 内含有超过 MinPts 数目的点<br>• 边界点:在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内<br>• 噪音点:既不是核心点也不是边界点的点</p>
+<h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p>1.将所有点标记为核心点、边界点或噪声点; 2.删除噪声点; 3.为距离在 Eps 之内的所有核心点之间赋予一条边; 4.每组连通的核心点形成一个簇; 5.将每个边界点指派到一个与之关联的核心点的簇中(哪一个核心点的半径范围之内)。</p>
+<h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><p>DBSCAN 主要参数:<br>eps: 两个样本被看作邻居节点的最大距离  min_samples: 簇的样本数<br>metric:距离计算方式</p>
+<h2 id="降维-1"><a href="#降维-1" class="headerlink" title="降维"></a>降维</h2><h3 id="pca"><a href="#pca" class="headerlink" title="pca"></a>pca</h3><ul>
+<li><p>主成分分析(Principal Component Analysis，PCA)是最常用的 一种降维方法，通常用于高维数据集的探索与可视化，还可以用作数 据压缩和预处理等。</p>
+</li>
+<li><p>PCA 可以把具有相关性的高维变量合成为线性无关的低维变量，称为 主成分。主成分能够尽可能保留原始数据的信息。</p>
+</li>
+</ul>
+<h4 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
+<li>n_components:指定主成分的个数，即降维后数据的维度</li>
+<li>svd_solver :设置特征值分解的方法，默认为‘auto’,其他可选有<br>‘full’, ‘arpack’, ‘randomized’。</li>
+</ul>
+<h3 id="非负矩阵分解"><a href="#非负矩阵分解" class="headerlink" title="非负矩阵分解"></a>非负矩阵分解</h3><p><a href="https://blog.csdn.net/acdreamers/article/details/44663421/">原理参考</a><br>非负矩阵分解(Non-negative Matrix Factorization ，NMF) 是在矩阵中所有元素均为非负数约束条件之下的矩阵分解方法。<br>基本思想:给定一个非负矩阵 V，NMF 能够找到一个非负矩阵 W 和一个 非负矩阵 H，使得矩阵 W 和 H 的乘积近似等于矩阵 V 中的值。</p>
+<ul>
+<li>W 矩阵:基础图像矩阵，相当于从原 矩阵 V 中抽取出来的特征</li>
+<li>H 矩阵:系数矩阵。</li>
+<li>NMF 能够广泛应用于图像分析、文本<br>挖掘和语音处理等领域。</li>
+</ul>
+<h4 id="主要参数-1"><a href="#主要参数-1" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
+<li>n_components:用于指定分解后矩阵的单个维度 k;</li>
+<li>init:W 矩阵和 H 矩阵的初始化方式，默认为‘nndsvdar’。</li>
+</ul>
+<h2 id="实战-图像分割"><a href="#实战-图像分割" class="headerlink" title="(实战)图像分割"></a>(实战)图像分割</h2><p>图像分割常用方法:</p>
+<ol>
+<li>阈值分割:对图像灰度值进行度量，设置不同类别的阈值，达到分割的目的。</li>
+<li>边缘分割:对图像边缘进行检测，即检测图像中灰度值发生跳变的地方，则为一片<br>区域的边缘。</li>
+<li>直方图法:对图像的颜色建立直方图，而直方图的波峰波谷能够表示一块区域的颜<br>色值的范围，来达到分割的目的。</li>
+<li>特定理论:基于聚类分析、小波变换等理论完成图像分割。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> PIL<span class="token punctuation">.</span>Image <span class="token keyword">as</span> image
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+
+<span class="token keyword">def</span> <span class="token function">loadData</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span>
+    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    img <span class="token operator">=</span> image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+    m<span class="token punctuation">,</span>n <span class="token operator">=</span> img<span class="token punctuation">.</span>size
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> img<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>y<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>z<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token punctuation">,</span>n
+
+imgData<span class="token punctuation">,</span>row<span class="token punctuation">,</span>col <span class="token operator">=</span> loadData<span class="token punctuation">(</span><span class="token string">'课程数据/基于聚类的整图分割/bull.jpg'</span><span class="token punctuation">)</span>
+label <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>imgData<span class="token punctuation">)</span>
+
+label <span class="token operator">=</span> label<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span>col<span class="token punctuation">]</span><span class="token punctuation">)</span>
+pic_new <span class="token operator">=</span> image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"L"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> col<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>col<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        pic_new<span class="token punctuation">.</span>putpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token operator">/</span><span class="token punctuation">(</span>label<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+pic_new<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"result-bull-4.jpg"</span><span class="token punctuation">,</span> <span class="token string">"JPEG"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -3026,44 +3026,6 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
-    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
-    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
-<p>因为台风过境,大部分的动车班次都被停运.</p>
-<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
-<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
-<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
-
-<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
-<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
-<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
-<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
-<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
-
-<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
-<p>一条长江,分开了两个世界.</p>
-<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
-<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
-<!--
-[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
-
-<p>对比,就是这么鲜明.</p>
-<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
-<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
-<p>没错,它的特色,就是没有特色.</p>
-<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
-<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
-<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
-<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
-</ul>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（1）</title>
     <url>/2019-08-09-jsjds-travel-notes-of-wuhu-1/</url>
     <content><![CDATA[<p>一个很粗糙的作品，莫名其妙的就通过了省赛，然后莫名其妙地就到了国赛。。。算了，就好好享受一下吧，至少是要不 gong 虚 fei 此 chi 行 he，哈哈。</p>
@@ -3142,23 +3104,41 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>scikit-learn 入门建议</title>
-    <url>/2019-08-12-scikit-learn-suggestion/</url>
-    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
-<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
-<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
-<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
-<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
-<p><a href="https://www.datacamp.com/">datacamp</a></p>
-<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
-<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
-<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
-<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
-<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
-<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
+    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
+    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
+    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
+<p>因为台风过境,大部分的动车班次都被停运.</p>
+<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
+<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
+<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
+
+<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
+<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
+<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
+<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
+<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
+
+<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
+<p>一条长江,分开了两个世界.</p>
+<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
+<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
+<!--
+[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
+
+<p>对比,就是这么鲜明.</p>
+<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
+<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
+<p>没错,它的特色,就是没有特色.</p>
+<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
+<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
+<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
+<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
+</ul>
 ]]></content>
       <categories>
-        <category>源流清泉</category>
+        <category>起居杂录</category>
       </categories>
   </entry>
   <entry>
@@ -3250,6 +3230,26 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
 ]]></content>
       <categories>
         <category>桂苑酌记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>scikit-learn 入门建议</title>
+    <url>/2019-08-12-scikit-learn-suggestion/</url>
+    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
+<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
+<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
+<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
+<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
+<p><a href="https://www.datacamp.com/">datacamp</a></p>
+<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
+<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
+<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
+<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
+<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
+<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
       </categories>
   </entry>
   <entry>
@@ -4864,6 +4864,88 @@ public:
       </tags>
   </entry>
   <entry>
+    <title>No.65 有效数字</title>
+    <url>/2019-10-12-valid-number/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/valid-number/">No.65 有效数字</a></p>
+<p>难度：<strong>困难</strong></p>
+<a id="more"></a>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">验证给定的字符串是否可以解释为十进制数字。
+
+例如:
+
+    &quot;0&quot;&#x3D;&gt;true
+    &quot; 0.1 &quot;&#x3D;&gt;true
+    &quot;abc&quot;&#x3D;&gt;false
+    &quot;1 a&quot;&#x3D;&gt;false
+    &quot;2e10&quot;&#x3D;&gt;true
+    &quot; -90e3 &quot;&#x3D;&gt;true
+    &quot; 1e&quot;&#x3D;&gt;false
+    &quot;e3&quot;&#x3D;&gt;false
+    &quot; 6e-1&quot;&#x3D;&gt;true
+    &quot; 99e2.5&quot;&#x3D;&gt;false
+    &quot;53.5e93&quot;&#x3D;&gt;true
+    &quot; --6 &quot;&#x3D;&gt;false
+    &quot;-+3&quot;&#x3D;&gt;false
+    &quot;95a54e53&quot;&#x3D;&gt;false
+
+说明: 我们有意将问题陈述地比较模糊。在实现代码之前，你应当事先思考所有可能的情况。这里给出一份可能存在于有效十进制数字中的字符列表：
+
+数字 0-9  
+指数 - &quot;e&quot;  
+正&#x2F;负号 - &quot;+&quot;&#x2F;&quot;-&quot;  
+小数点 - &quot;.&quot;  
+当然，在输入中，这些字符的上下文也很重要。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/387135797.png?Expires=1602310817&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>如 tag 所标注的那样，这是一道很烦人的题目，因为有各种各样的情况需要考虑。</p>
+<p>同样，这是一道适合心情不好的时候做的题目。他需要冷静而清晰的思路去梳理种种的情况，所以，当这道题目做完，心情也就平复了。</p>
+<p>主要是集几种特殊情况的考虑。比如”.-“,”-.”,”+e”等等。通过条件判断语句的约束，就可以解决这道问题。在官方没有给出具体的需要考虑的情况的前提下，主要还是看做题人的数学素养如何。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    bool isNumber(string s) &#123;
+        s.erase(0,s.find_first_not_of(&quot; &quot;));
+        s.erase(s.find_last_not_of(&quot; &quot;) + 1);
+
+        int n &#x3D; s.size();
+        bool point_exist &#x3D; s[0] &#x3D;&#x3D; &#39;.&#39; ? false : true , e_exist &#x3D; true;
+
+        if(!(isdigit(s[0]) || (s[0] &#x3D;&#x3D; &#39;-&#39; || s[0] &#x3D;&#x3D; &#39;+&#39; &amp;&amp; n &gt; 1) || (s[0] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; n &gt;1)) || s &#x3D;&#x3D; &quot;+.&quot; || s &#x3D;&#x3D; &quot;-.&quot;)
+            return false;
+
+
+        for(int i &#x3D; 1;i &lt; n; i++)&#123;
+            if(isdigit(s[i]))
+                continue;
+            else if(s[i] &#x3D;&#x3D; &#39;e&#39;  &amp;&amp; (isdigit(s[i-1]) || (s[i-1] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; isdigit(s[i-2]))) &amp;&amp; e_exist)&#123;
+                if(isdigit(s[i+1]))
+                    i++;
+                else if((s[i+1] &#x3D;&#x3D; &#39;-&#39; || s[i+1] &#x3D;&#x3D; &#39;+&#39;) &amp;&amp; i &lt;&#x3D; n-3 &amp;&amp; isdigit(s[i+2]))
+                    i+&#x3D;2;
+                else
+                    return false;
+                point_exist &#x3D; false;
+                e_exist &#x3D; false;
+            &#125;
+            else if(s[i] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; point_exist)
+                point_exist &#x3D; false;
+            else
+                return false;
+        &#125;
+        return true;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>No.68 文本左右对齐:字符串题目总结(1)</title>
     <url>/2019-10-13-text-justification/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/text-justification/">No.68 文本左右对齐</a></p>
@@ -5003,164 +5085,6 @@ public:
       </categories>
       <tags>
         <tag>算法</tag>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No.65 有效数字</title>
-    <url>/2019-10-12-valid-number/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/valid-number/">No.65 有效数字</a></p>
-<p>难度：<strong>困难</strong></p>
-<a id="more"></a>
-
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">验证给定的字符串是否可以解释为十进制数字。
-
-例如:
-
-    &quot;0&quot;&#x3D;&gt;true
-    &quot; 0.1 &quot;&#x3D;&gt;true
-    &quot;abc&quot;&#x3D;&gt;false
-    &quot;1 a&quot;&#x3D;&gt;false
-    &quot;2e10&quot;&#x3D;&gt;true
-    &quot; -90e3 &quot;&#x3D;&gt;true
-    &quot; 1e&quot;&#x3D;&gt;false
-    &quot;e3&quot;&#x3D;&gt;false
-    &quot; 6e-1&quot;&#x3D;&gt;true
-    &quot; 99e2.5&quot;&#x3D;&gt;false
-    &quot;53.5e93&quot;&#x3D;&gt;true
-    &quot; --6 &quot;&#x3D;&gt;false
-    &quot;-+3&quot;&#x3D;&gt;false
-    &quot;95a54e53&quot;&#x3D;&gt;false
-
-说明: 我们有意将问题陈述地比较模糊。在实现代码之前，你应当事先思考所有可能的情况。这里给出一份可能存在于有效十进制数字中的字符列表：
-
-数字 0-9  
-指数 - &quot;e&quot;  
-正&#x2F;负号 - &quot;+&quot;&#x2F;&quot;-&quot;  
-小数点 - &quot;.&quot;  
-当然，在输入中，这些字符的上下文也很重要。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/387135797.png?Expires=1602310817&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>如 tag 所标注的那样，这是一道很烦人的题目，因为有各种各样的情况需要考虑。</p>
-<p>同样，这是一道适合心情不好的时候做的题目。他需要冷静而清晰的思路去梳理种种的情况，所以，当这道题目做完，心情也就平复了。</p>
-<p>主要是集几种特殊情况的考虑。比如”.-“,”-.”,”+e”等等。通过条件判断语句的约束，就可以解决这道问题。在官方没有给出具体的需要考虑的情况的前提下，主要还是看做题人的数学素养如何。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    bool isNumber(string s) &#123;
-        s.erase(0,s.find_first_not_of(&quot; &quot;));
-        s.erase(s.find_last_not_of(&quot; &quot;) + 1);
-
-        int n &#x3D; s.size();
-        bool point_exist &#x3D; s[0] &#x3D;&#x3D; &#39;.&#39; ? false : true , e_exist &#x3D; true;
-
-        if(!(isdigit(s[0]) || (s[0] &#x3D;&#x3D; &#39;-&#39; || s[0] &#x3D;&#x3D; &#39;+&#39; &amp;&amp; n &gt; 1) || (s[0] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; n &gt;1)) || s &#x3D;&#x3D; &quot;+.&quot; || s &#x3D;&#x3D; &quot;-.&quot;)
-            return false;
-
-
-        for(int i &#x3D; 1;i &lt; n; i++)&#123;
-            if(isdigit(s[i]))
-                continue;
-            else if(s[i] &#x3D;&#x3D; &#39;e&#39;  &amp;&amp; (isdigit(s[i-1]) || (s[i-1] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; isdigit(s[i-2]))) &amp;&amp; e_exist)&#123;
-                if(isdigit(s[i+1]))
-                    i++;
-                else if((s[i+1] &#x3D;&#x3D; &#39;-&#39; || s[i+1] &#x3D;&#x3D; &#39;+&#39;) &amp;&amp; i &lt;&#x3D; n-3 &amp;&amp; isdigit(s[i+2]))
-                    i+&#x3D;2;
-                else
-                    return false;
-                point_exist &#x3D; false;
-                e_exist &#x3D; false;
-            &#125;
-            else if(s[i] &#x3D;&#x3D; &#39;.&#39; &amp;&amp; point_exist)
-                point_exist &#x3D; false;
-            else
-                return false;
-        &#125;
-        return true;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No.71 简化路径:shashasha</title>
-    <url>/2019-10-14-simplify-path/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
-<p>以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。</p>
-<p>在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..）  表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径</p>
-<p>请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。</p>
-<a id="more"></a>
-
-<p>示例 1：</p>
-<p>输入：”/home/“<br>输出：”/home”<br>解释：注意，最后一个目录名后面没有斜杠。</p>
-<p>示例 2：</p>
-<p>输入：”/../“<br>输出：”/“<br>解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。</p>
-<p>示例 3：</p>
-<p>输入：”/home//foo/“<br>输出：”/home/foo”<br>解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。</p>
-<p>示例 4：</p>
-<p>输入：”/a/./b/../../c/“<br>输出：”/c”</p>
-<p>示例 5：</p>
-<p>输入：”/a/../../b/../c//.//“<br>输出：”/c”</p>
-<p>示例 6：</p>
-<p>输入：”/a//b////c/d//././/..”<br>输出：”/a/b/c”</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>放在诸多的字符串题目中，这一题可以说平平无奇。<br>不过在优化答案的过程中，有了一些很有意思的感想，所以就把它单独列为一篇 blog 吧。</p>
-<p>我们应该俯视问题，而不是仰视问题。同样推广到人生之中也是在这样，眼界决定境界，布局决定结局。 by. 日常犯二的 zxj</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经典的栈使用法。<br>关键是思路要正确。<br>如果选择每次校验是”.” 还是”..”还是”///“,那么恭喜你，掉进坑里了。<br>所以，我选择每次去找两个”/“之间的字符串，注意，是所有字符串，然后对比已知的特殊情况”..”和”.”。<br>实际上这是非常巧妙的一种方法，这里建议自己先做一遍在看下面的代码。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    string simplifyPath(string path) &#123;
-        stack&lt;string&gt; st;
-        string res &#x3D; &quot;&quot;;
-        int n &#x3D; path.size();
-
-        while(path[--n] &#x3D;&#x3D; &#39;&#x2F;&#39;)
-            continue;
-        path &#x3D; path.substr(0,n+1) +&quot;&#x2F;&quot;;
-
-        for(int i &#x3D; 0; i &lt;&#x3D; n; i++)&#123;
-            if(path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;)&#123;
-                while(i &lt;&#x3D; n &amp;&amp; path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;) i++;
-                int left &#x3D; i;
-                while(i &lt;&#x3D; n &amp;&amp; path[i] !&#x3D; &#39;&#x2F;&#39;) i++;
-
-                string tmp &#x3D; path.substr(left,i-left);
-                if(tmp &#x3D;&#x3D; &quot;..&quot;) &#123;
-                    if(!st.empty())
-                        st.pop();
-                &#125;
-                else if(tmp &#x3D;&#x3D; &quot;.&quot;) tmp &#x3D; &quot;wakaka,woshicaidan&quot;;
-                else st.push(tmp);
-                i--;
-            &#125;
-        &#125;
-
-        while(!st.empty())&#123;
-            res &#x3D; &quot;&#x2F;&quot; + st.top() + res;
-            st.pop();
-        &#125;
-        if(res &#x3D;&#x3D; &quot;&quot;) return &quot;&#x2F;&quot;;
-        return res;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>很麻烦的一道题目，从结果的那种图片可以看出，我做了几次优化，最后时间从击败 44%升到 91% ，很有成就感。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
         <tag>字符串</tag>
       </tags>
   </entry>
@@ -5315,6 +5239,82 @@ public:
         <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
+  </entry>
+  <entry>
+    <title>No.71 简化路径:shashasha</title>
+    <url>/2019-10-14-simplify-path/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
+<p>以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。</p>
+<p>在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..）  表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径</p>
+<p>请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。</p>
+<a id="more"></a>
+
+<p>示例 1：</p>
+<p>输入：”/home/“<br>输出：”/home”<br>解释：注意，最后一个目录名后面没有斜杠。</p>
+<p>示例 2：</p>
+<p>输入：”/../“<br>输出：”/“<br>解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。</p>
+<p>示例 3：</p>
+<p>输入：”/home//foo/“<br>输出：”/home/foo”<br>解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。</p>
+<p>示例 4：</p>
+<p>输入：”/a/./b/../../c/“<br>输出：”/c”</p>
+<p>示例 5：</p>
+<p>输入：”/a/../../b/../c//.//“<br>输出：”/c”</p>
+<p>示例 6：</p>
+<p>输入：”/a//b////c/d//././/..”<br>输出：”/a/b/c”</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>放在诸多的字符串题目中，这一题可以说平平无奇。<br>不过在优化答案的过程中，有了一些很有意思的感想，所以就把它单独列为一篇 blog 吧。</p>
+<p>我们应该俯视问题，而不是仰视问题。同样推广到人生之中也是在这样，眼界决定境界，布局决定结局。 by. 日常犯二的 zxj</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经典的栈使用法。<br>关键是思路要正确。<br>如果选择每次校验是”.” 还是”..”还是”///“,那么恭喜你，掉进坑里了。<br>所以，我选择每次去找两个”/“之间的字符串，注意，是所有字符串，然后对比已知的特殊情况”..”和”.”。<br>实际上这是非常巧妙的一种方法，这里建议自己先做一遍在看下面的代码。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    string simplifyPath(string path) &#123;
+        stack&lt;string&gt; st;
+        string res &#x3D; &quot;&quot;;
+        int n &#x3D; path.size();
+
+        while(path[--n] &#x3D;&#x3D; &#39;&#x2F;&#39;)
+            continue;
+        path &#x3D; path.substr(0,n+1) +&quot;&#x2F;&quot;;
+
+        for(int i &#x3D; 0; i &lt;&#x3D; n; i++)&#123;
+            if(path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;)&#123;
+                while(i &lt;&#x3D; n &amp;&amp; path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;) i++;
+                int left &#x3D; i;
+                while(i &lt;&#x3D; n &amp;&amp; path[i] !&#x3D; &#39;&#x2F;&#39;) i++;
+
+                string tmp &#x3D; path.substr(left,i-left);
+                if(tmp &#x3D;&#x3D; &quot;..&quot;) &#123;
+                    if(!st.empty())
+                        st.pop();
+                &#125;
+                else if(tmp &#x3D;&#x3D; &quot;.&quot;) tmp &#x3D; &quot;wakaka,woshicaidan&quot;;
+                else st.push(tmp);
+                i--;
+            &#125;
+        &#125;
+
+        while(!st.empty())&#123;
+            res &#x3D; &quot;&#x2F;&quot; + st.top() + res;
+            st.pop();
+        &#125;
+        if(res &#x3D;&#x3D; &quot;&quot;) return &quot;&#x2F;&quot;;
+        return res;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>很麻烦的一道题目，从结果的那种图片可以看出，我做了几次优化，最后时间从击败 44%升到 91% ，很有成就感。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>字符串</tag>
+      </tags>
   </entry>
   <entry>
     <title>No.72 编辑距离:动态规划</title>
@@ -6486,20 +6486,6 @@ public class json2table extends JFrame&#123;
       </tags>
   </entry>
   <entry>
-    <title>图像处理课堂习题整理</title>
-    <url>/2019-11-25-Image-Processing-Review/</url>
-    <content><![CDATA[<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg" loading="lazy"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg" loading="lazy"></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-      </categories>
-      <tags>
-        <tag>复习</tag>
-        <tag>图像处理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java课设中的问题以及解决方案(三)</title>
     <url>/2019-11-24-Course-Design-of-Java-QS-3/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次进行 Java 的大作业,虽然是一拖三,不过还是准备做得漂亮一点.Java 还是很有趣的,并且可能以后工作室项目能用得到.</p>
@@ -6588,6 +6574,20 @@ String date &#x3D; String.format(&quot;%tF%n&quot;, date)+&quot; &quot;+String.f
       </categories>
       <tags>
         <tag>Java课程设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图像处理课堂习题整理</title>
+    <url>/2019-11-25-Image-Processing-Review/</url>
+    <content><![CDATA[<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B01.jpg?Expires=1602237641&" alt="图像处理-2.jpg" loading="lazy"></p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B02.jpg?Expires=1602237653&" alt="图像处理-3.jpg" loading="lazy"></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+      <tags>
+        <tag>复习</tag>
+        <tag>图像处理</tag>
       </tags>
   </entry>
   <entry>
@@ -10146,184 +10146,6 @@ slides <span class="token operator">=</span> req<span class="token punctuation">
       </tags>
   </entry>
   <entry>
-    <title>起居杂录小纲</title>
-    <url>/dailylife/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>正经人谁写日记啊？ –《邪不压正》</p>
-</blockquote>
-<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
-<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
-<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
-<p>那么,我为什么要写这样一组日记式的博客呢.</p>
-<p><strong>博客，是用来炫技的地方</strong>。</p>
-<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
-<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
-<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
-<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
-<hr>
-<p>写于 2019 年 07 月 19 日的结句.</p>
-<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>API设计个人经验小结(施工中)</title>
-    <url>/design-better-api/</url>
-    <content><![CDATA[<p>本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.</p>
-<a id="more"></a>
-
-<h2 id="使用一致的接口逻辑"><a href="#使用一致的接口逻辑" class="headerlink" title="使用一致的接口逻辑"></a>使用一致的接口逻辑</h2><p>接口逻辑包括如下方面:</p>
-<ol>
-<li>命名逻辑</li>
-<li>接口处理逻辑</li>
-</ol>
-<p>一致的接口逻辑有以下的几种好处:</p>
-<p>对于开发者来说: 前端能够根据后端的接口逻辑来有规律地复用一些代码和异常处理逻辑.<br>对于使用者来说: 一致的接口逻辑能够很容易地推导出其他的资源的获取方式或者参数的使用方式, 属于用户友好型设计.</p>
-<p>下面列出一些笔者常用的命名风格, 以供参考.</p>
-<ul>
-<li>资源、参数、字段名等采用相同的命名风格, 如匈牙利命名法(foo_bar) 、驼峰命名法(fooBar). (笔者常用匈牙利命名法)</li>
-<li>资源统一设计为复数或者单数的形式.  (笔者常用复数形式)</li>
-</ul>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text"># 综合
-&#x2F;api&#x2F;v1&#x2F;name_spaces
-&#x2F;api&#x2F;v1&#x2F;name_spaces&#x2F;&#123;id&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>采用统一的认证逻辑(这一点通常在使用web框架时就自动满足了)</li>
-<li>接口返回的状态码符合标准规范</li>
-<li>接口的使用方法(method)符合标准规范</li>
-</ul>
-<p>本质上还是 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTFul</a> 的那一套, 关于 RESTFul 的具体实践见于下文.</p>
-<h2 id="符合RESTFul设计"><a href="#符合RESTFul设计" class="headerlink" title="符合RESTFul设计"></a>符合RESTFul设计</h2><p>内容接<a href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E8%87%B4%E7%9A%84%E6%8E%A5%E5%8F%A3%E9%80%BB%E8%BE%91">使用一致的接口逻辑</a></p>
-<h3 id="使用规范的HTTP状态码"><a href="#使用规范的HTTP状态码" class="headerlink" title="使用规范的HTTP状态码"></a>使用规范的HTTP状态码</h3><p>以下列出一些常用的状态码。</p>
-<table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>成功请求</td>
-</tr>
-<tr>
-<td>201</td>
-<td>成功创建</td>
-</tr>
-<tr>
-<td>400</td>
-<td>错误的请求</td>
-</tr>
-<tr>
-<td>401</td>
-<td>未认证的请求</td>
-</tr>
-<tr>
-<td>403</td>
-<td>权限不足</td>
-</tr>
-<tr>
-<td>404</td>
-<td>无此资源</td>
-</tr>
-<tr>
-<td>429</td>
-<td>流量超限</td>
-</tr>
-<tr>
-<td>5xx</td>
-<td>服务器内部错误</td>
-</tr>
-</tbody></table>
-<p>其中, 服务器内部错误一般会进行一层封装处理，不会展示具体的错误细节。</p>
-<p><del>HTTP状态码更形象的内容可以参考<a href="https://http.cat/">http cat</a></del></p>
-<p>HTTP状态码更详细的内容可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN</a></p>
-<h3 id="使用规范的HTTP方法"><a href="#使用规范的HTTP方法" class="headerlink" title="使用规范的HTTP方法"></a>使用规范的HTTP方法</h3><p>以下列出一些常用的方法。</p>
-<ul>
-<li>POST 创建资源<ul>
-<li>POST /users</li>
-</ul>
-</li>
-<li>GET 请求资源<ul>
-<li>GET /users  请求列表资源<ul>
-<li>GET /users/{id}  请求单个资源</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>PATCH 部分更新资源<ul>
-<li>PATCH /users/{id}</li>
-</ul>
-</li>
-<li>PUT 全量更新资源<ul>
-<li>PUT /users/{id}</li>
-</ul>
-</li>
-<li>DELETE 删除资源<ul>
-<li>DELETE /users/{id}</li>
-</ul>
-</li>
-</ul>
-<p>除了方法之外，在命名时还应该遵循 <em>self-explaining</em> 原则, 本质上，url路径是对资源的定位，查找与操作都是以资源为主体，这一点会体现在 <strong>path</strong> 的命名上。</p>
-<p>HTTP方法更详细的内容可以参考<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">MDN</a></p>
-<p>RESTFul更详细的内容可以参考<a href="https://en.wikipedia.org/wiki/Representational_state_transfer">restful - wiki</a></p>
-<h2 id="使用标准的报错信息"><a href="#使用标准的报错信息" class="headerlink" title="使用标准的报错信息"></a>使用标准的报错信息</h2><p>包括统一的错误码、报错信息. 一般会采用如下的</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&#123;
-    &#39;code&#39;: number
-    &#39;data&#39;: object
-    &#39;message&#39;: string
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="返回创建的资源"><a href="#返回创建的资源" class="headerlink" title="返回创建的资源"></a>返回创建的资源</h2><p>对于创建资源的请求，最好在接口中返回创建之后的资源对象，方便后续数据的使用。如 <strong>ID</strong> 等由后端生成补全的数据，前端如果想要得到，则需要额外进行一次 GET 请求，返回创建资源能够避免这个损耗。</p>
-<h2 id="更倾向于使用PATCH而非PUT"><a href="#更倾向于使用PATCH而非PUT" class="headerlink" title="更倾向于使用PATCH而非PUT"></a>更倾向于使用PATCH而非PUT</h2><p>PATCH用于部分更新，PUT用于全量更新。<br>大部分业务情境下我们需要使用的是资源的部分更新，这时候如果使用PATCH，则只需要传回要修改的键值对以及一个资源标识符，而使用PUT，则需要传回全量的数据。</p>
-<p>两者更详细的对比可以见于 <a href="https://www.baeldung.com/cs/http-put-vs-patch">http-put-vs-patch</a></p>
-<h2 id="使用分页"><a href="#使用分页" class="headerlink" title="使用分页"></a>使用分页</h2><p>使用分页有如下的好处。</p>
-<ul>
-<li>对前端友好。现在主流的表格组件都支持分页或者有对应的分页解决方案。</li>
-<li>缓解后端的请求压力与数据库压力。本质上，分页的请求使用的是 offset 和 limit 的 SQL请求，拥有更少的IO损耗。</li>
-</ul>
-<h2 id="使用-ISO-8601-UTC-返回结果"><a href="#使用-ISO-8601-UTC-返回结果" class="headerlink" title="使用 ISO 8601 UTC 返回结果"></a>使用 ISO 8601 UTC 返回结果</h2><p>在解释这个问题之前, 首先需要了解一下数据库中的时间格式。</p>
-<p>以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 <a href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html">官方对时间格式的说明文档</a></p>
-<p>在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。</p>
-<p>以 Django 为例:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">value_to_string</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">:</span>    
-    val <span class="token operator">=</span> self<span class="token punctuation">.</span>value_from_object<span class="token punctuation">(</span>obj<span class="token punctuation">)</span>   
-    <span class="token keyword">return</span> <span class="token string">''</span> <span class="token keyword">if</span> val <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">else</span> val<span class="token punctuation">.</span>isoformat<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>从前端的角度来说，ISO格式的时间能够被解析为 <code>Date</code> 对象，进而根据客户端配置的时区来展示为当地的时间.</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// JavaScript</span>
-date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2022-03-16T22:00:09.254459+08:00"</span><span class="token punctuation">)</span>
-date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="提供健康度检查的接口"><a href="#提供健康度检查的接口" class="headerlink" title="提供健康度检查的接口"></a>提供健康度检查的接口</h2><p><strong>Health Check</strong> 接口反馈的是API服务的运行状态.</p>
-<p>check的条目可以包含以下的几点.</p>
-<ul>
-<li>下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。</li>
-<li>数据库连通性检查。检查基础的数据库增删改查操作是否可用。</li>
-<li>数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。</li>
-<li>内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。</li>
-<li>消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。</li>
-</ul>
-<p>本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。</p>
-<p><strong>API Health Check</strong> 的一个下位替代品是 <strong>API Ping</strong> ，它的作用是检查API是否 <em>可用</em> ，而忽略了API的 <em>可用性</em> 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。</p>
-<p>对于健康度的一个典型实践，可以参考 <strong>k8s的存活探针</strong> 相关的内容。</p>
-<h2 id="声明API版本"><a href="#声明API版本" class="headerlink" title="声明API版本"></a>声明API版本</h2><p>API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。</p>
-<p>比较初级的API版本声明方式是在 <strong>params</strong> 中声明或者在 <strong>path</strong> 中声明. 如下所示。</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">https:&#x2F;&#x2F;api.averagecompany.com&#x2F;v1&#x2F;health
-https:&#x2F;&#x2F;api.averagecompany.com&#x2F;health?api_version&#x3D;1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。</p>
-<h2 id="采用API-KEY的认证"><a href="#采用API-KEY的认证" class="headerlink" title="采用API KEY的认证"></a>采用API KEY的认证</h2><p>todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥</p>
-]]></content>
-  </entry>
-  <entry>
     <title>bash脚本 - 过期日志文件清理</title>
     <url>/clean-logs/</url>
     <content><![CDATA[<p>公司服务器上的日志文件多年积压, 已经占用了很大一部分不必要的内存空间. 所以本篇将完成一个功能性脚本, 其内容是扫描过期的日志文件, 并对文件进行对应的操作.</p>
@@ -10530,6 +10352,184 @@ https:&#x2F;&#x2F;api.averagecompany.com&#x2F;health?api_version&#x3D;1.0<span a
       </tags>
   </entry>
   <entry>
+    <title>起居杂录小纲</title>
+    <url>/dailylife/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>正经人谁写日记啊？ –《邪不压正》</p>
+</blockquote>
+<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
+<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
+<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
+<p>那么,我为什么要写这样一组日记式的博客呢.</p>
+<p><strong>博客，是用来炫技的地方</strong>。</p>
+<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
+<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
+<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
+<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
+<hr>
+<p>写于 2019 年 07 月 19 日的结句.</p>
+<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>API设计个人经验小结(施工中)</title>
+    <url>/design-better-api/</url>
+    <content><![CDATA[<p>本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.</p>
+<a id="more"></a>
+
+<h2 id="使用一致的接口逻辑"><a href="#使用一致的接口逻辑" class="headerlink" title="使用一致的接口逻辑"></a>使用一致的接口逻辑</h2><p>接口逻辑包括如下方面:</p>
+<ol>
+<li>命名逻辑</li>
+<li>接口处理逻辑</li>
+</ol>
+<p>一致的接口逻辑有以下的几种好处:</p>
+<p>对于开发者来说: 前端能够根据后端的接口逻辑来有规律地复用一些代码和异常处理逻辑.<br>对于使用者来说: 一致的接口逻辑能够很容易地推导出其他的资源的获取方式或者参数的使用方式, 属于用户友好型设计.</p>
+<p>下面列出一些笔者常用的命名风格, 以供参考.</p>
+<ul>
+<li>资源、参数、字段名等采用相同的命名风格, 如匈牙利命名法(foo_bar) 、驼峰命名法(fooBar). (笔者常用匈牙利命名法)</li>
+<li>资源统一设计为复数或者单数的形式.  (笔者常用复数形式)</li>
+</ul>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text"># 综合
+&#x2F;api&#x2F;v1&#x2F;name_spaces
+&#x2F;api&#x2F;v1&#x2F;name_spaces&#x2F;&#123;id&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>采用统一的认证逻辑(这一点通常在使用web框架时就自动满足了)</li>
+<li>接口返回的状态码符合标准规范</li>
+<li>接口的使用方法(method)符合标准规范</li>
+</ul>
+<p>本质上还是 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTFul</a> 的那一套, 关于 RESTFul 的具体实践见于下文.</p>
+<h2 id="符合RESTFul设计"><a href="#符合RESTFul设计" class="headerlink" title="符合RESTFul设计"></a>符合RESTFul设计</h2><p>内容接<a href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E8%87%B4%E7%9A%84%E6%8E%A5%E5%8F%A3%E9%80%BB%E8%BE%91">使用一致的接口逻辑</a></p>
+<h3 id="使用规范的HTTP状态码"><a href="#使用规范的HTTP状态码" class="headerlink" title="使用规范的HTTP状态码"></a>使用规范的HTTP状态码</h3><p>以下列出一些常用的状态码。</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>成功请求</td>
+</tr>
+<tr>
+<td>201</td>
+<td>成功创建</td>
+</tr>
+<tr>
+<td>400</td>
+<td>错误的请求</td>
+</tr>
+<tr>
+<td>401</td>
+<td>未认证的请求</td>
+</tr>
+<tr>
+<td>403</td>
+<td>权限不足</td>
+</tr>
+<tr>
+<td>404</td>
+<td>无此资源</td>
+</tr>
+<tr>
+<td>429</td>
+<td>流量超限</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>服务器内部错误</td>
+</tr>
+</tbody></table>
+<p>其中, 服务器内部错误一般会进行一层封装处理，不会展示具体的错误细节。</p>
+<p><del>HTTP状态码更形象的内容可以参考<a href="https://http.cat/">http cat</a></del></p>
+<p>HTTP状态码更详细的内容可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">MDN</a></p>
+<h3 id="使用规范的HTTP方法"><a href="#使用规范的HTTP方法" class="headerlink" title="使用规范的HTTP方法"></a>使用规范的HTTP方法</h3><p>以下列出一些常用的方法。</p>
+<ul>
+<li>POST 创建资源<ul>
+<li>POST /users</li>
+</ul>
+</li>
+<li>GET 请求资源<ul>
+<li>GET /users  请求列表资源<ul>
+<li>GET /users/{id}  请求单个资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PATCH 部分更新资源<ul>
+<li>PATCH /users/{id}</li>
+</ul>
+</li>
+<li>PUT 全量更新资源<ul>
+<li>PUT /users/{id}</li>
+</ul>
+</li>
+<li>DELETE 删除资源<ul>
+<li>DELETE /users/{id}</li>
+</ul>
+</li>
+</ul>
+<p>除了方法之外，在命名时还应该遵循 <em>self-explaining</em> 原则, 本质上，url路径是对资源的定位，查找与操作都是以资源为主体，这一点会体现在 <strong>path</strong> 的命名上。</p>
+<p>HTTP方法更详细的内容可以参考<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">MDN</a></p>
+<p>RESTFul更详细的内容可以参考<a href="https://en.wikipedia.org/wiki/Representational_state_transfer">restful - wiki</a></p>
+<h2 id="使用标准的报错信息"><a href="#使用标准的报错信息" class="headerlink" title="使用标准的报错信息"></a>使用标准的报错信息</h2><p>包括统一的错误码、报错信息. 一般会采用如下的</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&#123;
+    &#39;code&#39;: number
+    &#39;data&#39;: object
+    &#39;message&#39;: string
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="返回创建的资源"><a href="#返回创建的资源" class="headerlink" title="返回创建的资源"></a>返回创建的资源</h2><p>对于创建资源的请求，最好在接口中返回创建之后的资源对象，方便后续数据的使用。如 <strong>ID</strong> 等由后端生成补全的数据，前端如果想要得到，则需要额外进行一次 GET 请求，返回创建资源能够避免这个损耗。</p>
+<h2 id="更倾向于使用PATCH而非PUT"><a href="#更倾向于使用PATCH而非PUT" class="headerlink" title="更倾向于使用PATCH而非PUT"></a>更倾向于使用PATCH而非PUT</h2><p>PATCH用于部分更新，PUT用于全量更新。<br>大部分业务情境下我们需要使用的是资源的部分更新，这时候如果使用PATCH，则只需要传回要修改的键值对以及一个资源标识符，而使用PUT，则需要传回全量的数据。</p>
+<p>两者更详细的对比可以见于 <a href="https://www.baeldung.com/cs/http-put-vs-patch">http-put-vs-patch</a></p>
+<h2 id="使用分页"><a href="#使用分页" class="headerlink" title="使用分页"></a>使用分页</h2><p>使用分页有如下的好处。</p>
+<ul>
+<li>对前端友好。现在主流的表格组件都支持分页或者有对应的分页解决方案。</li>
+<li>缓解后端的请求压力与数据库压力。本质上，分页的请求使用的是 offset 和 limit 的 SQL请求，拥有更少的IO损耗。</li>
+</ul>
+<h2 id="使用-ISO-8601-UTC-返回结果"><a href="#使用-ISO-8601-UTC-返回结果" class="headerlink" title="使用 ISO 8601 UTC 返回结果"></a>使用 ISO 8601 UTC 返回结果</h2><p>在解释这个问题之前, 首先需要了解一下数据库中的时间格式。</p>
+<p>以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 <a href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html">官方对时间格式的说明文档</a></p>
+<p>在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。</p>
+<p>以 Django 为例:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">value_to_string</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">:</span>    
+    val <span class="token operator">=</span> self<span class="token punctuation">.</span>value_from_object<span class="token punctuation">(</span>obj<span class="token punctuation">)</span>   
+    <span class="token keyword">return</span> <span class="token string">''</span> <span class="token keyword">if</span> val <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">else</span> val<span class="token punctuation">.</span>isoformat<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>从前端的角度来说，ISO格式的时间能够被解析为 <code>Date</code> 对象，进而根据客户端配置的时区来展示为当地的时间.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// JavaScript</span>
+date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2022-03-16T22:00:09.254459+08:00"</span><span class="token punctuation">)</span>
+date<span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="提供健康度检查的接口"><a href="#提供健康度检查的接口" class="headerlink" title="提供健康度检查的接口"></a>提供健康度检查的接口</h2><p><strong>Health Check</strong> 接口反馈的是API服务的运行状态.</p>
+<p>check的条目可以包含以下的几点.</p>
+<ul>
+<li>下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。</li>
+<li>数据库连通性检查。检查基础的数据库增删改查操作是否可用。</li>
+<li>数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。</li>
+<li>内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。</li>
+<li>消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。</li>
+</ul>
+<p>本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。</p>
+<p><strong>API Health Check</strong> 的一个下位替代品是 <strong>API Ping</strong> ，它的作用是检查API是否 <em>可用</em> ，而忽略了API的 <em>可用性</em> 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。</p>
+<p>对于健康度的一个典型实践，可以参考 <strong>k8s的存活探针</strong> 相关的内容。</p>
+<h2 id="声明API版本"><a href="#声明API版本" class="headerlink" title="声明API版本"></a>声明API版本</h2><p>API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。</p>
+<p>比较初级的API版本声明方式是在 <strong>params</strong> 中声明或者在 <strong>path</strong> 中声明. 如下所示。</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">https:&#x2F;&#x2F;api.averagecompany.com&#x2F;v1&#x2F;health
+https:&#x2F;&#x2F;api.averagecompany.com&#x2F;health?api_version&#x3D;1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。</p>
+<h2 id="采用API-KEY的认证"><a href="#采用API-KEY的认证" class="headerlink" title="采用API KEY的认证"></a>采用API KEY的认证</h2><p>todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥</p>
+]]></content>
+  </entry>
+  <entry>
     <title>django-shell-inject-script</title>
     <url>/django-shell-inject-script/</url>
     <content><![CDATA[<p>在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.</p>
@@ -10634,38 +10634,6 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
       </categories>
       <tags>
         <tag>NLP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>桂苑酌记小纲</title>
-    <url>/drink-with-reading/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
-</blockquote>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
-<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
-<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
-<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
-<p>至于“记”。</p>
-<blockquote>
-<p>记者,书也。 ——《广雅》</p>
-</blockquote>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
-<p>专业书和非专业书。</p>
-<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
-<p>不过，这一节并不准备留给这些“专业书”。</p>
-<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
-<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
-<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
-<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
-<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
-<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
       </tags>
   </entry>
   <entry>
@@ -10852,6 +10820,38 @@ WORKDIR &#x2F;FamousNER<span aria-hidden="true" class="line-numbers-rows"><span>
       <tags>
         <tag>Docker</tag>
         <tag>optimization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>桂苑酌记小纲</title>
+    <url>/drink-with-reading/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
+</blockquote>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
+<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
+<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
+<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
+<p>至于“记”。</p>
+<blockquote>
+<p>记者,书也。 ——《广雅》</p>
+</blockquote>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
+<p>专业书和非专业书。</p>
+<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
+<p>不过，这一节并不准备留给这些“专业书”。</p>
+<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
+<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
+<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
+<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
+<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
+<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
       </tags>
   </entry>
   <entry>
@@ -12217,6 +12217,43 @@ r<span class="token punctuation">.</span>elapsed <span class="token operator">=<
       </tags>
   </entry>
   <entry>
+    <title>2021</title>
+    <url>/my-2021/</url>
+    <content><![CDATA[<p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p>
+<p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p>
+<a id="more"></a>
+
+<h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度"><a href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" class="headerlink" title="以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度"></a>以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度</h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ …… – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p>
+<p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p>
+<p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p>
+<p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么”伟大”, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p>
+<p>这种满足感应该是 <strong>过程</strong>, 也就是作为”学习”这个行为的催化剂, 而非是 <strong>结果</strong>.</p>
+<h2 id="更优化的学习方式和碎片化的生活"><a href="#更优化的学习方式和碎片化的生活" class="headerlink" title="更优化的学习方式和碎片化的生活"></a>更优化的学习方式和碎片化的生活</h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p>
+<p>列一下过去一年中的书单吧.</p>
+<ol>
+<li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li>
+<li>&lt;知识图谱: 概念与技术&gt;</li>
+<li>&lt;20 世纪简史&gt;</li>
+<li>&lt;修改软件的艺术&gt;</li>
+<li>&lt;希望之线&gt;</li>
+</ol>
+<p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p>
+<p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p>
+<p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然”用推理悬疑类来调剂”这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p>
+<p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, “这些时间如何被利用起来”, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 “起点” \ “bilibili” 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p>
+<p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做”上下文切换的开销大”, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有”村上春树工作法”, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对”碎片化时间”还是没有一个很好的解决.</p>
+<p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的”番茄钟”, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p>
+<h2 id="小小目标"><a href="#小小目标" class="headerlink" title="小小目标"></a>小小目标</h2><p>对于 2022 年, 先定几个小小的目标吧.</p>
+<ol>
+<li>Apple Watch 的闭环率达到 90%, 健健康康.</li>
+<li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li>
+<li>完成一次旅行(根据实际疫情而定).</li>
+<li>加薪 50% 以上.</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 “消费行为” , 而理性考虑与现实行动才是 “生产行为” , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Be a better pythonista(4)：nametuple的实际应用</title>
     <url>/nametuple_act/</url>
     <content><![CDATA[<blockquote>
@@ -12438,43 +12475,6 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
       </tags>
   </entry>
   <entry>
-    <title>2021</title>
-    <url>/my-2021/</url>
-    <content><![CDATA[<p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p>
-<p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p>
-<a id="more"></a>
-
-<h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度"><a href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" class="headerlink" title="以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度"></a>以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度</h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ …… – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p>
-<p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p>
-<p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p>
-<p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么”伟大”, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p>
-<p>这种满足感应该是 <strong>过程</strong>, 也就是作为”学习”这个行为的催化剂, 而非是 <strong>结果</strong>.</p>
-<h2 id="更优化的学习方式和碎片化的生活"><a href="#更优化的学习方式和碎片化的生活" class="headerlink" title="更优化的学习方式和碎片化的生活"></a>更优化的学习方式和碎片化的生活</h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p>
-<p>列一下过去一年中的书单吧.</p>
-<ol>
-<li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li>
-<li>&lt;知识图谱: 概念与技术&gt;</li>
-<li>&lt;20 世纪简史&gt;</li>
-<li>&lt;修改软件的艺术&gt;</li>
-<li>&lt;希望之线&gt;</li>
-</ol>
-<p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p>
-<p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p>
-<p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然”用推理悬疑类来调剂”这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p>
-<p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, “这些时间如何被利用起来”, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 “起点” \ “bilibili” 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p>
-<p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做”上下文切换的开销大”, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有”村上春树工作法”, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对”碎片化时间”还是没有一个很好的解决.</p>
-<p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的”番茄钟”, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p>
-<h2 id="小小目标"><a href="#小小目标" class="headerlink" title="小小目标"></a>小小目标</h2><p>对于 2022 年, 先定几个小小的目标吧.</p>
-<ol>
-<li>Apple Watch 的闭环率达到 90%, 健健康康.</li>
-<li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li>
-<li>完成一次旅行(根据实际疫情而定).</li>
-<li>加薪 50% 以上.</li>
-</ol>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 “消费行为” , 而理性考虑与现实行动才是 “生产行为” , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p>
-]]></content>
-  </entry>
-  <entry>
     <title>开发人员的Mac软件推荐列表(持续更新)</title>
     <url>/new-mac-software-init/</url>
     <content><![CDATA[<p>开发者新Mac配置推荐. 本列表以开源免费的软件为主, 以及部分实用的收费软件. 不会包含盗版软件获取途径与软件破解方法, 取而代之的是, 会提供一些优惠获取途径.</p>
@@ -12493,7 +12493,10 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
 <p><a href="https://code.visualstudio.com/download">vscode</a></p>
 <p>宇宙第一编辑器, 搭配各种插件, 能够应付绝大多数的开发情境.</p>
 <h3 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h3><h4 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h4><p><a href="https://github.com/nvm-sh/nvm#install--update-script">nvm install</a></p>
-<h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><h4 id="Dash"><a href="#Dash" class="headerlink" title="*Dash"></a>*Dash</h4><p><a href="https://kapeli.com/dash">dash</a></p>
+<h3 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h3><h4 id="iterm2"><a href="#iterm2" class="headerlink" title="iterm2"></a>iterm2</h4><p><a href="https://iterm2.com/">iterm2</a></p>
+<p>iterm2 可以用来作为自带的终端工具 <strong>Terminal</strong> 的替代品. 拥有更丰富的功能和更美观的界面.</p>
+<h5 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h5><p>oh-my-zsh 是zsh的增强组件, 具体安装及配置可见于<a href="https://blog.harumonia.moe/ubuntu-initial/">ubuntu初始化</a> 的 oh-my-zsh 一节.</p>
+<h4 id="Dash"><a href="#Dash" class="headerlink" title="*Dash"></a>*Dash</h4><p><a href="https://kapeli.com/dash">dash</a></p>
 <p>文档管理工具  <em>dash</em> 能够方便地管理各种类型的文档, 其官方维护了很多的文档, 并且对于 <em>Go</em> 之类自带文档的, 或者文档在Github上面的, 都有很好的支持.</p>
 <p>将dash管理的文档是在本地的, 所以即使断网了也不影响开发工作.</p>
 <h2 id="办公"><a href="#办公" class="headerlink" title="办公"></a>办公</h2><h3 id="ms-office"><a href="#ms-office" class="headerlink" title="*ms office"></a>*ms office</h3><p>微软的office套件是绝对的办公利器. 可以拼车家庭版, 每年只需要40+就可以享受全部的订阅服务.</p>
@@ -12508,6 +12511,10 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
 <h4 id="hidden-bar"><a href="#hidden-bar" class="headerlink" title="hidden bar"></a>hidden bar</h4><p><a href="https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12">hidden bar</a> 可以让菜单栏折叠, 把不常用的一些软件, 如 Docker Desktop \ 剪切板 等隐藏起来, 为其他的软件腾出空间.</p>
 <h3 id="switch-hosts"><a href="#switch-hosts" class="headerlink" title="switch hosts"></a>switch hosts</h3><p><a href="https://github.com/oldj/SwitchHosts/releases">switch hosts</a> 是用来切换hosts文件配置的. 对于需要mock host或者其他host频繁切换的情境非常适合.</p>
 <h3 id="alfred"><a href="#alfred" class="headerlink" title="*alfred"></a>*alfred</h3><p><a href="https://www.alfredapp.com/">Alfred</a> 自动化管理工具, 功能十分强大齐备, 可以取代 <strong>聚焦</strong> \ <strong>Maccy</strong> 等软件. 通过 <em>apple script</em> 可以和很多的 Mac 软件进行 “梦幻联动” .</p>
+<h4 id="联动指南"><a href="#联动指南" class="headerlink" title="联动指南"></a>联动指南</h4><ul>
+<li><a href="https://github.com/vitorgalvao/custom-alfred-iterm-scripts">iterm2</a></li>
+<li><a href="https://github.com/alfredapp/1password-workflow#readme">1password</a></li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -12809,10 +12816,67 @@ socket<span class="token punctuation">.</span><span class="token function">close
       </tags>
   </entry>
   <entry>
+    <title>爬虫监控服务的数据库选择-bitmap应用</title>
+    <url>/redis-log/</url>
+    <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
+<p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
+<p>笔者写爬虫时常用的数据有 <strong>MySQL</strong>、<strong>mongoDB</strong>、<strong>Redis</strong>，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 <strong>MySQL</strong>、<strong>SQLite</strong>。</p>
+<p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
+<a id="more"></a>
+
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>一切问题从需求出发。于是，我将服务的需求和可能出现的问题都列下来，从这些之中去发现解决思路。</p>
+<ol>
+<li>哪些公司完成了？哪些公司未完成？</li>
+<li>第一轮数据获取结束后，还会有第二轮、第三轮等数据更新。</li>
+<li>对爬虫进行时段监控，了解各个时段的爬虫效率如何？（这个时间精度不用很高，一般分析都是每 10 分钟、每半小时这样进行分析）</li>
+<li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
+</ol>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
+<p>a. <strong>冗余数据</strong>。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. <strong>纯粹无用数据</strong>。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. <strong>第 4 点需求的处理思路</strong>。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
+<p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
+<p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
+<p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
+<h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
+<p>思路很清晰明了，实现也十分地简单，维护代价几乎为 0 。</p>
+<p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
+<p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
+<p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
+<ol>
+<li>使用 json 来扩充数据维度。</li>
+<li>将字段名作为新的维度。</li>
+</ol>
+<p>使用 json 扩充维度会加大后续数据分析的难度，也会拖慢分析效率，因为要分出一部分性能用来展开多维数据。在锁定了数据最多只有三维的情况下，我选择了第二种思路。</p>
+<p>于是新的问题又出现了，选择什么样的数据结构来存储这些数据？</p>
+<p>在<a href="https://blog.harumonia.moe/2020/02/12/2020-02-12-Redis-note-2/">之前 Redis 的学习笔记中</a>，有通过 bitmap 来实现大量统计数据存储的案例。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>至此，路线逐渐成形：</p>
+<ol>
+<li>额外维护近似静态的公司名字典(只在每轮更新结束之后对该字典进行增改，注：不会删除)；将该字典的 index 作为 bitmap 的键，完成情况作为 bitmap 的值。</li>
+<li>将粗粒度的时间作为字段名，每半小时分离出新字段。</li>
+<li>设置一个额外线程，每半小时将本轮次的运行情况合并到以轮次为名称的 bitmap 字段中。</li>
+</ol>
+<p>空间用量：</p>
+<pre class="line-numbers language-math" data-language="math"><code class="language-math">400000 &#x2F; 1024 &#x2F; 1024 &#x2F; 8MB * 2 ≈ 0.1MB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>当然还会有一些不太容易量化的额外空间消耗(键消耗等)，这些空间消耗也许要比本身数据 0.1MB 要大，不过可以肯定的是，比起 MySQL 要轻量不少。同时，维护的成本很低，调用的性能很高，这一点在实际的使用中也有所体现。</p>
+<p>ps1. 需要说明的是，特殊字段的存储不在这个计算中，而是新开了 set，不将特殊字段的空间加入计算，因为本身特殊字段就是暂存字段，在实际作业中，第一轮进行到 34%左右时，特殊字段就已经全部被检测完毕，并且销毁掉了。</p>
+<p>ps2. 键的生成由代码决定而不是由定时任务决定，所以也避免了空键浪费存储空间的问题。</p>
+<p>结果如图所示。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/spider-stat.PNG" alt="result.png" loading="lazy"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>MySQL-&gt;关系型数据库的泛用性很高，但是非关系型数据库、NoSql 等的存在也并非没有理由，因地制宜地选取数据库，根据数据库的特性去进行压榨，”让专业的人做专业的事”。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>DataBase</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#x6d;&#x32;&#x33;&#x33;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#108;&#x6d;&#x32;&#x33;&#x33;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#x6f;&#109;">&#x7a;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -12871,63 +12935,6 @@ socket<span class="token punctuation">.</span><span class="token function">close
       <categories>
         <category>摸摸摸</category>
       </categories>
-  </entry>
-  <entry>
-    <title>爬虫监控服务的数据库选择-bitmap应用</title>
-    <url>/redis-log/</url>
-    <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
-<p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
-<p>笔者写爬虫时常用的数据有 <strong>MySQL</strong>、<strong>mongoDB</strong>、<strong>Redis</strong>，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 <strong>MySQL</strong>、<strong>SQLite</strong>。</p>
-<p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
-<a id="more"></a>
-
-<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>一切问题从需求出发。于是，我将服务的需求和可能出现的问题都列下来，从这些之中去发现解决思路。</p>
-<ol>
-<li>哪些公司完成了？哪些公司未完成？</li>
-<li>第一轮数据获取结束后，还会有第二轮、第三轮等数据更新。</li>
-<li>对爬虫进行时段监控，了解各个时段的爬虫效率如何？（这个时间精度不用很高，一般分析都是每 10 分钟、每半小时这样进行分析）</li>
-<li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
-</ol>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
-<p>a. <strong>冗余数据</strong>。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. <strong>纯粹无用数据</strong>。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. <strong>第 4 点需求的处理思路</strong>。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
-<p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
-<p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
-<p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
-<h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
-<p>思路很清晰明了，实现也十分地简单，维护代价几乎为 0 。</p>
-<p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
-<p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
-<p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
-<ol>
-<li>使用 json 来扩充数据维度。</li>
-<li>将字段名作为新的维度。</li>
-</ol>
-<p>使用 json 扩充维度会加大后续数据分析的难度，也会拖慢分析效率，因为要分出一部分性能用来展开多维数据。在锁定了数据最多只有三维的情况下，我选择了第二种思路。</p>
-<p>于是新的问题又出现了，选择什么样的数据结构来存储这些数据？</p>
-<p>在<a href="https://blog.harumonia.moe/2020/02/12/2020-02-12-Redis-note-2/">之前 Redis 的学习笔记中</a>，有通过 bitmap 来实现大量统计数据存储的案例。</p>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>至此，路线逐渐成形：</p>
-<ol>
-<li>额外维护近似静态的公司名字典(只在每轮更新结束之后对该字典进行增改，注：不会删除)；将该字典的 index 作为 bitmap 的键，完成情况作为 bitmap 的值。</li>
-<li>将粗粒度的时间作为字段名，每半小时分离出新字段。</li>
-<li>设置一个额外线程，每半小时将本轮次的运行情况合并到以轮次为名称的 bitmap 字段中。</li>
-</ol>
-<p>空间用量：</p>
-<pre class="line-numbers language-math" data-language="math"><code class="language-math">400000 &#x2F; 1024 &#x2F; 1024 &#x2F; 8MB * 2 ≈ 0.1MB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>当然还会有一些不太容易量化的额外空间消耗(键消耗等)，这些空间消耗也许要比本身数据 0.1MB 要大，不过可以肯定的是，比起 MySQL 要轻量不少。同时，维护的成本很低，调用的性能很高，这一点在实际的使用中也有所体现。</p>
-<p>ps1. 需要说明的是，特殊字段的存储不在这个计算中，而是新开了 set，不将特殊字段的空间加入计算，因为本身特殊字段就是暂存字段，在实际作业中，第一轮进行到 34%左右时，特殊字段就已经全部被检测完毕，并且销毁掉了。</p>
-<p>ps2. 键的生成由代码决定而不是由定时任务决定，所以也避免了空键浪费存储空间的问题。</p>
-<p>结果如图所示。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/spider-stat.PNG" alt="result.png" loading="lazy"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>MySQL-&gt;关系型数据库的泛用性很高，但是非关系型数据库、NoSql 等的存在也并非没有理由，因地制宜地选取数据库，根据数据库的特性去进行压榨，”让专业的人做专业的事”。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>DataBase</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
   </entry>
   <entry>
     <title>wsl2上的jupyter配置</title>
@@ -13215,49 +13222,6 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
       </tags>
   </entry>
   <entry>
-    <title>大学生活阶段性小结</title>
-    <url>/upon-graduation/</url>
-    <content><![CDATA[<p>醉花阴 - 满船清梦</p>
-<p>红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.<br>杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.</p>
-<p>– harumonia, 二〇二一年六月, 于南京中医药大学</p>
-<a id="more"></a>
-
-<h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><p>“我的大学”, 这是一段很漫长的故事了, 从 2017 年 9 月一个人背着沉重的行李, 怀揣满身的失意来到这里, 到现在我安安静静地坐在这里写下这段文字, 中间已经过去了 4 年. 再回首, 不免又生出”往事已矣”之嗟叹, 而历历往事, 其中的苦乐, 又仿佛是在昨日.</p>
-<h3 id="军训"><a href="#军训" class="headerlink" title="军训"></a>军训</h3><p>军训作为这段生活的第一页, 还是有很多有趣的回忆的.</p>
-<p>自初中 <em>CGL</em> 病愈之后, 我一直体弱, 对于这种重体力的活动, 我一向是敬而远之的. 而大学, 也许是为了翻开人生的新篇, 又或许是对过去与未来的自弃, 我跟着新同学们军训了一段时间. 理所当然的, 后来申请了免训, 这毕竟不是什么热血少年漫, 终究是要以生命安全为第一要务.</p>
-<p>在此之后, 当然也没有闲着, 除了应付每日的通讯稿额度, 剩下大把的时间还是用来做我最喜欢的事情 – 看书. 在这期间, 我看完了两本书, 一本是延续了中学时期的惯性所选择的东野圭吾的&lt;白夜行&gt;, 另一本则是出于纯粹的兴趣爱好所选择的&lt;计算机组装与维修&gt;(事实证明这本书最终并没有在我的大学生涯中起到任何作用= =).</p>
-<p>军训期间另一个值得一说的, 我找了第一份兼职工作 – 在学校网络中心担任学生助理. 找兼职的原因很纯粹, 贫穷. 彼时的我沉迷于 <em>FGO</em> – 当然现在也是 – 并且常有氪金, 而这种娱乐性质的开销又羞于向父母开口, 所以便自己自力更生.</p>
-<h3 id="大一"><a href="#大一" class="headerlink" title="大一"></a>大一</h3><p>大一唯一值得称道的大概就是我利用周末的时间广游了南京一地的人文胜地. 中山陵及其周边 \ 总统府 \ 栖霞山 \ 灵谷寺 \ 牛首山等, 这些大多是一个人的旅行, 少数是与高中的几位好友邀约, 个中趣味, 不足为外人道哉. 这其中的一个有趣的插曲就是, 2018 年的元旦, 与徐君等人的紫金山跨年,虽然最后没有看到日出(阴天去看日出?), 却也是一大乐事.</p>
-<p>除去上述, 我的大一与寻常学生并无二致, 就是宿舍\食堂\教学楼, 三点之间来回周转. 这段时间课业较轻,一鼓作气冲完了四六级之余尚有闲暇, 所以又找了一份图书馆的兼职(逐渐化身打工战士), 而在图书馆中,我读完了 <em>Ken Follett</em> 的 <strong>世纪三部曲</strong> 中的 &lt;巨人的陨落&gt; 与 &lt;世界的凛冬&gt;, 黄仁宇的&lt;万历十五年&gt;, 亦有东野圭吾的&lt;假面山庄&gt;等小说若干, 当然, 由于工作地点是医学库, 所以也读了很多医学类的书籍, 其中有得知何君患病后, 读&lt;内科学&gt;等著作, 不甚了了, 而后转读&lt;内经&gt;等, 深感医学之博大. 至于哲学方面, 则是读了南怀瑾的&lt;禅宗与道家&gt;, 其内容与冯友兰的&lt;中国哲学简史&gt;中相互印证之处, 读之有 “恺之食甘蔗” 之妙.</p>
-<p>至于专业, 说来有趣, 我在课余所接触到的第一门语言便是 Python, 而这契机便是想从 <em>Pixiv</em> 上面爬取一些漂亮的图片, 当时用 <em>selenium</em> 做了很笨重的一个爬虫, 不过效果确实不错, 而为了访问 <em>Pixiv</em>, 我又租了国外的 VPS 若干, 其中又被迫掌握了 Linux 的常规使用技巧和养成了用 <em>Google</em> 搜索的习惯. 这段历史也有几篇博客留存, 不过其中内容现在看来颇为青涩, 便将其置为隐藏, 以免对其他初学者产生误导.</p>
-<p>比赛方面, 这一学年似乎就报了两个比赛, 一个是 <em>人文社科知识竞赛</em>, 差不多类似于 <em>千分题</em>, 是文科类型的知识竞赛, 而文史又恰是我所长, 最终获得了江苏省的优秀奖(具体成绩是前 3%, 更具体的就没有显示了). 另一个是和陆君及王君参加的暑期数学建模培训, 最终赛题是 “垃圾短信分类”, 虽然我的看家功夫”爬虫”没有爬上用场, 不过其伴生的”数据收集”能力确实大放异彩, 而 python 亦是作为主力的编程语言助力良多, 最终这个比赛获得的是校赛的一等奖(应该是唯一的?).</p>
-<h3 id="大二"><a href="#大二" class="headerlink" title="大二"></a>大二</h3><p>大二出现了这段平静生活的第一个转折点, 那就是本科导师. 严格来说我并没有达到选择本导的要求, 由于大一下沉迷各种奇技淫巧, 成绩自然也有所下滑(当然体育成绩被记了 0 分才是大头= =, 不过比起撞钟的老师和水课的学生, 还是将时间投入到自己的爱好上更有意义). 不过大一上过杨涛老师的网络基础课, 于是尝试性的发了一个申请 ,我更愿意称之为是一个巧合, 这个申请作为众多申请中仅有的一例通过了.</p>
-<p>进入杨老师的工作室之后, 原有的生活节奏自然也被打乱了. 由于每周都有一次汇报, 技术的学习终归是有了一个比较明确的方向, 还记得我的第一次汇报就是网络爬虫, 似乎还和小汪学姐的汇报撞车了(笑. 后来, 为了获得更多的空余时间, 我辞去了网路中心学生助理一职, 只留了图书馆的兼职, 毕竟这个职位附赠一个图书馆工位, 座位资源在图书馆旺季还是很珍贵的.</p>
-<p>也是这个学年, 我学习了 Python 的 Web 开发技术, 三脚猫的功夫, 却被误认为是”大佬”, 因此开始了生活节奏极度混乱的大二第二学期. 这一学期先是报了学校举办的软信大赛, 然后成功突围参加了蓝桥杯程序设计大赛. 而后又被许君和唐君拉去参加了大学生计算机设计大赛, 还有大创(大创我也就前期改了改文档, 而真正的技术方面, 反而是没有起到太大的帮助), 整个大二下几乎就是围绕着”大学生计算机设计大赛”在转, 我们的选题是”药方拍立得”, 从确定选题的 3 月 14 日起, 花了一周的时间开发出了一个移动应用和配套的后端, 怎么说呢, deadline 是人类的第一生产力, 全心全力扑在技术上的结果就是, 校赛突围, 并且对整个 Python 的开发体系有了长足而深刻的认识.</p>
-<p>之后是省赛, 省赛并没有添加什么新的功能, 只是将原有的功能进行了优化, 而这个省赛的时间点又与”蓝桥杯”省赛的时间点重合, 自然又是一阵昏天黑地的忙碌. 省赛最后是在徐州举办, 实打实的享受了一趟”公款旅行”, 这个倾注了我前前后后两个月心血的作品最终也不负众望地从省赛突围.</p>
-<p>省赛之后就要开始准备各科的期末了, 又是一段疲于奔命的时光, 这里就不细表了. 期间抽空与高君前往鸡鸣寺赏樱, 却是错过了花期, 转又往玄武湖一游, 颇得王徽之”乘兴而来, 兴尽而返”之远意.</p>
-<p>再后来是暑期工作室集训, 我有幸被杨老师任命为 17 级的领头人, 负责协助他对同学们进行技术方面的培训. 教学相长, 这一过程中我对于项目管理\实施等书本上的纯粹理论进行了实践, 亦有所收获. 并且这也使我与工作室其他诸君愈发熟稔.</p>
-<p>大二下的句号划在了安徽芜湖, 这里是国赛的举办地, 在这里我获得了大学阶段的第一个国奖.</p>
-<p>大二所读之书多集中于技术方面, 小说读有米泽穗信的&lt;冰菓&gt;, 文学类读有余秋雨的几篇名作, 社科类则是读了吴军的&lt;文明之光&gt;和 Yuval Noah Harari 的&lt;人类简史&gt;, 俱是佳作, 其余诸书不表.</p>
-<p>大二所获之奖甚多, 包括人奖在内, 诸多奖项也算是不负这一年来的忙碌.</p>
-<h3 id="大三"><a href="#大三" class="headerlink" title="大三"></a>大三</h3><p>大三之初, 中秋节, 被陶君与于君拉过去参加数学建模, 这是我大学来的第一次通宵, 其演算的结果也颇令我与指导老师沈老师满意, 而最终比赛成绩名落孙山, 着实是一个很大的打击.</p>
-<p>而后十月份, 又被杨老师委派去参加在安徽中医药大学举办的”全国中医药人工智能大赛”, 比起最终的奖项, 与工作室诸君的回忆, 沿途安徽地区的人文景观, 还算不错的伙食, 这些才是更大的收获.年末,与陶君确认恋人关系至今. 元旦又与徐君一道, 去尝试了价格较为昂贵的”虹料理”, 一顿差不多是我勤工助学两个月的收入, 不过吃得也的确尽兴.</p>
-<p>大三就没有再去参加多少比赛了, 转而开始找工作. 通过了阿里的笔试, 败于面试. 在 LeetCode 上面刷了不少的题目, 参加了一些的线上比赛. 后来又投了三份简历, 一份是医学图像岗, 一份是数据技术岗, 一份是后端开发岗, 最终数据技术岗和后端开发岗进入最终轮面试, 而由于数据技术岗公司更加成熟,规模更大, 于是放弃了薪资更高的后端开发岗.</p>
-<p>由于疫情的原因, 大三的寒假得以好好地在家里沉淀过往之所学, 期间产出博客数篇, 俱无问津者.</p>
-<h3 id="大四"><a href="#大四" class="headerlink" title="大四"></a>大四</h3><p>大四的大部分时间都是在启信宝苏州部进行实习, 期间发生趣事多为社会之事, 与本篇主旨无关, 故不表.而与学习生活相关的, 在这段时间, 我对技术进行了深化, 并且以此为基开始了我的毕业设计.</p>
-<p>而后大四下学期, 四月份中旬, 返回学校, 开始正式完善毕业设计的算法模块, 这是一个完成度比较高的毕业设计, 也是整个大学以来我最满意的独立项目. 最终这个毕设的综合评分是 94 分, 我不知道这个成绩排名如何, 想来也是不错的.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大学这四年, 大一如春之深林, 大二如秋之硕果, 大三如冬之莽原, 大四如夏之虫鸣, 俱是佳季, 各有风骚.</p>
-<p>这四年来, 干过一些年少轻狂的事情, 也写过一些无病呻吟的文字, 但总的来说, 印证了那句老话, “不因虚度度年华而悔恨，也不因碌碌无为而羞愧”, 谨以此篇, 以作激励, 希望在大学之后的生活, 同样能够活出自己的精彩.</p>
-<p>2021.6 于南京中医药大学</p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu初始环境配置(持续更新中)</title>
     <url>/ubuntu-initial/</url>
     <content><![CDATA[<p>本想改造一下公司电脑的 Windows,后来干脆直接给电脑刷了个 Windows, 于是, 风扇不再是噪声源, 电脑不再是暖手宝, 一切都变得清爽了起来.</p>
@@ -13412,110 +13376,46 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
 ]]></content>
   </entry>
   <entry>
-    <title>Windows下的终端优化方案</title>
-    <url>/windows-terminal-beautify/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Mac 上面安装了 <a href="https://www.iterm2.com/">iTerm2</a> 之后，逐渐难以忍受 <em>Windows</em> 上面简陋的终端界面，<strong>CMD</strong> 就不谈了，即使了 Windows10 加入的 <strong>PowerShell</strong> ，也依旧差强人意。</p>
-<p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p>
-<p>所以这次按照 <a href="https://docs.microsoft.com/zh-cn/windows/terminal/">Windows Terminal Docs</a> , DIY 一个美观的 Terminal。</p>
+    <title>大学生活阶段性小结</title>
+    <url>/upon-graduation/</url>
+    <content><![CDATA[<p>醉花阴 - 满船清梦</p>
+<p>红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.<br>杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.</p>
+<p>– harumonia, 二〇二一年六月, 于南京中医药大学</p>
 <a id="more"></a>
 
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面" loading="lazy"></p>
-<center> <u>Figure1</u>:  我所期待的终端界面</center>
-
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204803738.png" alt="image-20200719204803738" loading="lazy"></p>
-<center> <u>Figure2</u>:  PowerShell所展示的终端界面</center>
-
-<p>这实在是令人难受。</p>
-<p>那么，本篇所解决的问题，就是如何在 Windows 中搞一个花哨的命令行界面。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="解决外观问题"><a href="#解决外观问题" class="headerlink" title="解决外观问题"></a>解决外观问题</h3><h4 id="cmder"><a href="#cmder" class="headerlink" title="cmder"></a>cmder</h4><p>一开始我选择使用 <a href="https://cmder.net/">cmder</a> 来做一个基于 PowerShell 的终端界面。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719205641389.png" alt="image-20200719205641389" loading="lazy"></p>
-<center> <u>Figure3</u>:  cmder所展示的终端界面</center>
-
-<blockquote>
-<p>Cmder is a software package created out of pure frustration over the absence of nice console emulators on Windows. It is based on amazing software, and spiced up with the Monokai color scheme and a custom prompt layout, looking sexy from the start.</p>
-</blockquote>
-<p>但是在我进行一些 DIY 的时候，总是会一些奇奇怪怪的 UI 错误，所以在经历了几次令人迷惑的 bug 之后，我开始寻找其它的替代方案。</p>
-<h4 id="Windows-Terminal"><a href="#Windows-Terminal" class="headerlink" title="Windows Terminal"></a>Windows Terminal</h4><p><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab#">Windows Terminal</a> 是一个官方的 ui 壳子，他所展示的界面如下。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210053548.png" alt="image-20200719210053548" loading="lazy"></p>
-<center> <u>Figure4</u>:  Windows Terminal所展示的终端界面</center>
-
-<blockquote>
-<p>Windows 终端程序是一款新式、快速、高效、强大且高效的终端应用程序，适用于命令行工具和命令提示符，PowerShell 和 WSL 等 Shell 用户。主要功能包括多个选项卡、窗格、Unicode、和 UTF-8 字符支持，GPU 加速文本渲染引擎以及自定义主题、样式和配置。</p>
-</blockquote>
-<p>在界面上，与 cmder 所展示的极简风格相比，官网这个以基佬紫为基调，模糊透明背景的案例深得我心。于是果断下载下来。</p>
-<p>使用的第一体验就是，非常地流畅，软件的本体只有 7M 不到，想要实现案例 UI，似乎是要另外使用一个 colorTool 来完成。这种插件式的构建方式很灵活，但是也很费时间。在大概地折腾了两下之后，它在我心中已经是一个合格 的 cmder 的替代方案了……如果没有遇到下面这位的话。</p>
-<h4 id="Terminus"><a href="#Terminus" class="headerlink" title="Terminus"></a>Terminus</h4><p>这是我在 github 上面冲浪的时候无意中发现的一个界面，使用 JavaScript 开发。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210434085.png" alt="image-20200719210434085" loading="lazy"></p>
-<center> <u>Figure4</u>:  Terminus所展示的终端界面</center>
-
-<blockquote>
-<p><strong>Terminus</strong> is a highly configurable terminal emulator for Windows, macOS and Linux</p>
-<ul>
-<li>Integrated SSH client and connection manager</li>
-<li>Theming and color schemes</li>
-<li>Fully configurable shortcuts</li>
-<li>Split panes</li>
-<li>Remembers your tabs</li>
-<li>PowerShell (and PS Core), WSL, Git-Bash, Cygwin, Cmder and CMD support</li>
-<li>Direct file transfer from/to SSH sessions via Zmodem</li>
-<li>Full Unicode support including double-width characters</li>
-<li>Doesn’t choke on fast-flowing outputs</li>
-<li>Proper shell experience on Windows including tab completion (via Clink)</li>
-</ul>
-</blockquote>
-<p>类似 cmder，这是一个一体化的软件，减少了很多用户可以配置的项目，而添加了一些成熟的配置方案供用户选择。另外，自带 SSH，大概地试了一下，感觉 xshell 也可以雪藏了。</p>
-<p>总的来说，Windows Terminal 和 Termius 都能够实现我们的美化 UI 的需求，但是拓展功能方面有很大的差别。</p>
-<h3 id="拓展命令行"><a href="#拓展命令行" class="headerlink" title="拓展命令行"></a>拓展命令行</h3><p>虽然 PowerShell 拓展了 windows 的命令行，使其更加接近 Linux，但是终究还是有所差距的。上文所以到的 Terminus 和 Windows Terminal，只是实现了 UI 上的强化，并没有完成命令行的拓展。</p>
-<p>本来打算用过 <strong>git bash</strong> 来搞定，但是在 Windows 上依赖 git 附加的 bash，总感觉有点不伦不类的。于是使用 WSL 来搞一点炫酷的事情。</p>
-<p>在新的 Windows 正式版本中，已经可以直接使用 WSL 了，记得年前安装 WSL 的时候，只能使用 Windows 先行版本，还为因此出现的各种 bug 头疼了好久。</p>
-<p>根据官网的文档，几条命令，再重启一下电脑，就能够使用 wsl2 了。</p>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719212747796.png" alt="image-20200719212747796" loading="lazy"></p>
-<center> <u>Figure5</u>:  Terminus + WSL2 所展示的终端界面</center>
-
-<p>emmmm，有点 Server 的味道了啊。</p>
-<p>到这一步，已经实现了 <strong>UI 美化、命令行强化</strong> 的目标。</p>
-<p>当然，UI 还能够进一步美化，那就是从内部美化。</p>
-<p>这里我选择使用 zsh + ohmyzsh 套餐。</p>
-<h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h3><p>首先，使用如下命令来安装 zsh。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">zsh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后，在 <a href="https://ohmyz.sh/#install">oh-my-zsh</a> 官网的文档上的命令完成安装。</p>
-<blockquote>
-<p>补充说明：</p>
-<ol>
-<li>安装过程中会使用到 <em>git</em> ，不过 git 默认安装在 wsl2 的 Ubuntu 中，所以就不用手动再装了。</li>
-<li>在下载.sh 文件时，可能会遇到无法连通 github 的情况，可以修改 host，更懒人的办法是，直接把.sh 文件手动 copy 到本地，然后用 sh 命令运行即可</li>
-</ol>
-</blockquote>
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719214701704.png" alt="image-20200719214701704" loading="lazy"></p>
-<center> <u>Figure6</u>:  Terminus + WSL2 + oh-my-zsh 所展示的终端界面</center>
-
-<p>清爽多了，不过比起这个默认的样式，我更习惯使用 <strong>agnoster</strong> 这个样式。</p>
-<blockquote>
-<p>更多的样式可以在<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">文档</a>中寻到。</p>
-</blockquote>
-<p>使用如下命令打开 zsh 的配置文件。(*rc 文件，有兴趣的可以了解一下)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后将 ZSH_THEME 修改成所需要的样式的名称即可。</p>
-<p>最后执行如下命令，重载 zsh。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719220527894.png" alt="image-20200719220527894" loading="lazy"></p>
-<center> <u>Figure6</u>:  最终的终端界面</center>
-
-<p>差不多就是这个味道了。后续还会做一些配色方面的 DIY。</p>
-<blockquote>
-<p>关于 oh-my-zsh 的补充：</p>
-<p>目前的一些教程会让下载其他的 oh-my-zsh 插件，但是有一些插件现在已经在 oh-my-zsh 之中了，不必下载，只需要在配置文件中把名字加上就可以使用。</p>
-<p>详情可以查阅<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">文档</a></p>
-</blockquote>
+<h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><p>“我的大学”, 这是一段很漫长的故事了, 从 2017 年 9 月一个人背着沉重的行李, 怀揣满身的失意来到这里, 到现在我安安静静地坐在这里写下这段文字, 中间已经过去了 4 年. 再回首, 不免又生出”往事已矣”之嗟叹, 而历历往事, 其中的苦乐, 又仿佛是在昨日.</p>
+<h3 id="军训"><a href="#军训" class="headerlink" title="军训"></a>军训</h3><p>军训作为这段生活的第一页, 还是有很多有趣的回忆的.</p>
+<p>自初中 <em>CGL</em> 病愈之后, 我一直体弱, 对于这种重体力的活动, 我一向是敬而远之的. 而大学, 也许是为了翻开人生的新篇, 又或许是对过去与未来的自弃, 我跟着新同学们军训了一段时间. 理所当然的, 后来申请了免训, 这毕竟不是什么热血少年漫, 终究是要以生命安全为第一要务.</p>
+<p>在此之后, 当然也没有闲着, 除了应付每日的通讯稿额度, 剩下大把的时间还是用来做我最喜欢的事情 – 看书. 在这期间, 我看完了两本书, 一本是延续了中学时期的惯性所选择的东野圭吾的&lt;白夜行&gt;, 另一本则是出于纯粹的兴趣爱好所选择的&lt;计算机组装与维修&gt;(事实证明这本书最终并没有在我的大学生涯中起到任何作用= =).</p>
+<p>军训期间另一个值得一说的, 我找了第一份兼职工作 – 在学校网络中心担任学生助理. 找兼职的原因很纯粹, 贫穷. 彼时的我沉迷于 <em>FGO</em> – 当然现在也是 – 并且常有氪金, 而这种娱乐性质的开销又羞于向父母开口, 所以便自己自力更生.</p>
+<h3 id="大一"><a href="#大一" class="headerlink" title="大一"></a>大一</h3><p>大一唯一值得称道的大概就是我利用周末的时间广游了南京一地的人文胜地. 中山陵及其周边 \ 总统府 \ 栖霞山 \ 灵谷寺 \ 牛首山等, 这些大多是一个人的旅行, 少数是与高中的几位好友邀约, 个中趣味, 不足为外人道哉. 这其中的一个有趣的插曲就是, 2018 年的元旦, 与徐君等人的紫金山跨年,虽然最后没有看到日出(阴天去看日出?), 却也是一大乐事.</p>
+<p>除去上述, 我的大一与寻常学生并无二致, 就是宿舍\食堂\教学楼, 三点之间来回周转. 这段时间课业较轻,一鼓作气冲完了四六级之余尚有闲暇, 所以又找了一份图书馆的兼职(逐渐化身打工战士), 而在图书馆中,我读完了 <em>Ken Follett</em> 的 <strong>世纪三部曲</strong> 中的 &lt;巨人的陨落&gt; 与 &lt;世界的凛冬&gt;, 黄仁宇的&lt;万历十五年&gt;, 亦有东野圭吾的&lt;假面山庄&gt;等小说若干, 当然, 由于工作地点是医学库, 所以也读了很多医学类的书籍, 其中有得知何君患病后, 读&lt;内科学&gt;等著作, 不甚了了, 而后转读&lt;内经&gt;等, 深感医学之博大. 至于哲学方面, 则是读了南怀瑾的&lt;禅宗与道家&gt;, 其内容与冯友兰的&lt;中国哲学简史&gt;中相互印证之处, 读之有 “恺之食甘蔗” 之妙.</p>
+<p>至于专业, 说来有趣, 我在课余所接触到的第一门语言便是 Python, 而这契机便是想从 <em>Pixiv</em> 上面爬取一些漂亮的图片, 当时用 <em>selenium</em> 做了很笨重的一个爬虫, 不过效果确实不错, 而为了访问 <em>Pixiv</em>, 我又租了国外的 VPS 若干, 其中又被迫掌握了 Linux 的常规使用技巧和养成了用 <em>Google</em> 搜索的习惯. 这段历史也有几篇博客留存, 不过其中内容现在看来颇为青涩, 便将其置为隐藏, 以免对其他初学者产生误导.</p>
+<p>比赛方面, 这一学年似乎就报了两个比赛, 一个是 <em>人文社科知识竞赛</em>, 差不多类似于 <em>千分题</em>, 是文科类型的知识竞赛, 而文史又恰是我所长, 最终获得了江苏省的优秀奖(具体成绩是前 3%, 更具体的就没有显示了). 另一个是和陆君及王君参加的暑期数学建模培训, 最终赛题是 “垃圾短信分类”, 虽然我的看家功夫”爬虫”没有爬上用场, 不过其伴生的”数据收集”能力确实大放异彩, 而 python 亦是作为主力的编程语言助力良多, 最终这个比赛获得的是校赛的一等奖(应该是唯一的?).</p>
+<h3 id="大二"><a href="#大二" class="headerlink" title="大二"></a>大二</h3><p>大二出现了这段平静生活的第一个转折点, 那就是本科导师. 严格来说我并没有达到选择本导的要求, 由于大一下沉迷各种奇技淫巧, 成绩自然也有所下滑(当然体育成绩被记了 0 分才是大头= =, 不过比起撞钟的老师和水课的学生, 还是将时间投入到自己的爱好上更有意义). 不过大一上过杨涛老师的网络基础课, 于是尝试性的发了一个申请 ,我更愿意称之为是一个巧合, 这个申请作为众多申请中仅有的一例通过了.</p>
+<p>进入杨老师的工作室之后, 原有的生活节奏自然也被打乱了. 由于每周都有一次汇报, 技术的学习终归是有了一个比较明确的方向, 还记得我的第一次汇报就是网络爬虫, 似乎还和小汪学姐的汇报撞车了(笑. 后来, 为了获得更多的空余时间, 我辞去了网路中心学生助理一职, 只留了图书馆的兼职, 毕竟这个职位附赠一个图书馆工位, 座位资源在图书馆旺季还是很珍贵的.</p>
+<p>也是这个学年, 我学习了 Python 的 Web 开发技术, 三脚猫的功夫, 却被误认为是”大佬”, 因此开始了生活节奏极度混乱的大二第二学期. 这一学期先是报了学校举办的软信大赛, 然后成功突围参加了蓝桥杯程序设计大赛. 而后又被许君和唐君拉去参加了大学生计算机设计大赛, 还有大创(大创我也就前期改了改文档, 而真正的技术方面, 反而是没有起到太大的帮助), 整个大二下几乎就是围绕着”大学生计算机设计大赛”在转, 我们的选题是”药方拍立得”, 从确定选题的 3 月 14 日起, 花了一周的时间开发出了一个移动应用和配套的后端, 怎么说呢, deadline 是人类的第一生产力, 全心全力扑在技术上的结果就是, 校赛突围, 并且对整个 Python 的开发体系有了长足而深刻的认识.</p>
+<p>之后是省赛, 省赛并没有添加什么新的功能, 只是将原有的功能进行了优化, 而这个省赛的时间点又与”蓝桥杯”省赛的时间点重合, 自然又是一阵昏天黑地的忙碌. 省赛最后是在徐州举办, 实打实的享受了一趟”公款旅行”, 这个倾注了我前前后后两个月心血的作品最终也不负众望地从省赛突围.</p>
+<p>省赛之后就要开始准备各科的期末了, 又是一段疲于奔命的时光, 这里就不细表了. 期间抽空与高君前往鸡鸣寺赏樱, 却是错过了花期, 转又往玄武湖一游, 颇得王徽之”乘兴而来, 兴尽而返”之远意.</p>
+<p>再后来是暑期工作室集训, 我有幸被杨老师任命为 17 级的领头人, 负责协助他对同学们进行技术方面的培训. 教学相长, 这一过程中我对于项目管理\实施等书本上的纯粹理论进行了实践, 亦有所收获. 并且这也使我与工作室其他诸君愈发熟稔.</p>
+<p>大二下的句号划在了安徽芜湖, 这里是国赛的举办地, 在这里我获得了大学阶段的第一个国奖.</p>
+<p>大二所读之书多集中于技术方面, 小说读有米泽穗信的&lt;冰菓&gt;, 文学类读有余秋雨的几篇名作, 社科类则是读了吴军的&lt;文明之光&gt;和 Yuval Noah Harari 的&lt;人类简史&gt;, 俱是佳作, 其余诸书不表.</p>
+<p>大二所获之奖甚多, 包括人奖在内, 诸多奖项也算是不负这一年来的忙碌.</p>
+<h3 id="大三"><a href="#大三" class="headerlink" title="大三"></a>大三</h3><p>大三之初, 中秋节, 被陶君与于君拉过去参加数学建模, 这是我大学来的第一次通宵, 其演算的结果也颇令我与指导老师沈老师满意, 而最终比赛成绩名落孙山, 着实是一个很大的打击.</p>
+<p>而后十月份, 又被杨老师委派去参加在安徽中医药大学举办的”全国中医药人工智能大赛”, 比起最终的奖项, 与工作室诸君的回忆, 沿途安徽地区的人文景观, 还算不错的伙食, 这些才是更大的收获.年末,与陶君确认恋人关系至今. 元旦又与徐君一道, 去尝试了价格较为昂贵的”虹料理”, 一顿差不多是我勤工助学两个月的收入, 不过吃得也的确尽兴.</p>
+<p>大三就没有再去参加多少比赛了, 转而开始找工作. 通过了阿里的笔试, 败于面试. 在 LeetCode 上面刷了不少的题目, 参加了一些的线上比赛. 后来又投了三份简历, 一份是医学图像岗, 一份是数据技术岗, 一份是后端开发岗, 最终数据技术岗和后端开发岗进入最终轮面试, 而由于数据技术岗公司更加成熟,规模更大, 于是放弃了薪资更高的后端开发岗.</p>
+<p>由于疫情的原因, 大三的寒假得以好好地在家里沉淀过往之所学, 期间产出博客数篇, 俱无问津者.</p>
+<h3 id="大四"><a href="#大四" class="headerlink" title="大四"></a>大四</h3><p>大四的大部分时间都是在启信宝苏州部进行实习, 期间发生趣事多为社会之事, 与本篇主旨无关, 故不表.而与学习生活相关的, 在这段时间, 我对技术进行了深化, 并且以此为基开始了我的毕业设计.</p>
+<p>而后大四下学期, 四月份中旬, 返回学校, 开始正式完善毕业设计的算法模块, 这是一个完成度比较高的毕业设计, 也是整个大学以来我最满意的独立项目. 最终这个毕设的综合评分是 94 分, 我不知道这个成绩排名如何, 想来也是不错的.</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大学这四年, 大一如春之深林, 大二如秋之硕果, 大三如冬之莽原, 大四如夏之虫鸣, 俱是佳季, 各有风骚.</p>
+<p>这四年来, 干过一些年少轻狂的事情, 也写过一些无病呻吟的文字, 但总的来说, 印证了那句老话, “不因虚度度年华而悔恨，也不因碌碌无为而羞愧”, 谨以此篇, 以作激励, 希望在大学之后的生活, 同样能够活出自己的精彩.</p>
+<p>2021.6 于南京中医药大学</p>
 ]]></content>
       <categories>
-        <category>源流清泉</category>
+        <category>起居杂录</category>
       </categories>
       <tags>
-        <tag>美化</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -13692,6 +13592,113 @@ call generate_data_auto_increment()<span aria-hidden="true" class="line-numbers-
       </categories>
       <tags>
         <tag>DataBase</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows下的终端优化方案</title>
+    <url>/windows-terminal-beautify/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 Mac 上面安装了 <a href="https://www.iterm2.com/">iTerm2</a> 之后，逐渐难以忍受 <em>Windows</em> 上面简陋的终端界面，<strong>CMD</strong> 就不谈了，即使了 Windows10 加入的 <strong>PowerShell</strong> ，也依旧差强人意。</p>
+<p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p>
+<p>所以这次按照 <a href="https://docs.microsoft.com/zh-cn/windows/terminal/">Windows Terminal Docs</a> , DIY 一个美观的 Terminal。</p>
+<a id="more"></a>
+
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面" loading="lazy"></p>
+<center> <u>Figure1</u>:  我所期待的终端界面</center>
+
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204803738.png" alt="image-20200719204803738" loading="lazy"></p>
+<center> <u>Figure2</u>:  PowerShell所展示的终端界面</center>
+
+<p>这实在是令人难受。</p>
+<p>那么，本篇所解决的问题，就是如何在 Windows 中搞一个花哨的命令行界面。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="解决外观问题"><a href="#解决外观问题" class="headerlink" title="解决外观问题"></a>解决外观问题</h3><h4 id="cmder"><a href="#cmder" class="headerlink" title="cmder"></a>cmder</h4><p>一开始我选择使用 <a href="https://cmder.net/">cmder</a> 来做一个基于 PowerShell 的终端界面。</p>
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719205641389.png" alt="image-20200719205641389" loading="lazy"></p>
+<center> <u>Figure3</u>:  cmder所展示的终端界面</center>
+
+<blockquote>
+<p>Cmder is a software package created out of pure frustration over the absence of nice console emulators on Windows. It is based on amazing software, and spiced up with the Monokai color scheme and a custom prompt layout, looking sexy from the start.</p>
+</blockquote>
+<p>但是在我进行一些 DIY 的时候，总是会一些奇奇怪怪的 UI 错误，所以在经历了几次令人迷惑的 bug 之后，我开始寻找其它的替代方案。</p>
+<h4 id="Windows-Terminal"><a href="#Windows-Terminal" class="headerlink" title="Windows Terminal"></a>Windows Terminal</h4><p><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab#">Windows Terminal</a> 是一个官方的 ui 壳子，他所展示的界面如下。</p>
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210053548.png" alt="image-20200719210053548" loading="lazy"></p>
+<center> <u>Figure4</u>:  Windows Terminal所展示的终端界面</center>
+
+<blockquote>
+<p>Windows 终端程序是一款新式、快速、高效、强大且高效的终端应用程序，适用于命令行工具和命令提示符，PowerShell 和 WSL 等 Shell 用户。主要功能包括多个选项卡、窗格、Unicode、和 UTF-8 字符支持，GPU 加速文本渲染引擎以及自定义主题、样式和配置。</p>
+</blockquote>
+<p>在界面上，与 cmder 所展示的极简风格相比，官网这个以基佬紫为基调，模糊透明背景的案例深得我心。于是果断下载下来。</p>
+<p>使用的第一体验就是，非常地流畅，软件的本体只有 7M 不到，想要实现案例 UI，似乎是要另外使用一个 colorTool 来完成。这种插件式的构建方式很灵活，但是也很费时间。在大概地折腾了两下之后，它在我心中已经是一个合格 的 cmder 的替代方案了……如果没有遇到下面这位的话。</p>
+<h4 id="Terminus"><a href="#Terminus" class="headerlink" title="Terminus"></a>Terminus</h4><p>这是我在 github 上面冲浪的时候无意中发现的一个界面，使用 JavaScript 开发。</p>
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210434085.png" alt="image-20200719210434085" loading="lazy"></p>
+<center> <u>Figure4</u>:  Terminus所展示的终端界面</center>
+
+<blockquote>
+<p><strong>Terminus</strong> is a highly configurable terminal emulator for Windows, macOS and Linux</p>
+<ul>
+<li>Integrated SSH client and connection manager</li>
+<li>Theming and color schemes</li>
+<li>Fully configurable shortcuts</li>
+<li>Split panes</li>
+<li>Remembers your tabs</li>
+<li>PowerShell (and PS Core), WSL, Git-Bash, Cygwin, Cmder and CMD support</li>
+<li>Direct file transfer from/to SSH sessions via Zmodem</li>
+<li>Full Unicode support including double-width characters</li>
+<li>Doesn’t choke on fast-flowing outputs</li>
+<li>Proper shell experience on Windows including tab completion (via Clink)</li>
+</ul>
+</blockquote>
+<p>类似 cmder，这是一个一体化的软件，减少了很多用户可以配置的项目，而添加了一些成熟的配置方案供用户选择。另外，自带 SSH，大概地试了一下，感觉 xshell 也可以雪藏了。</p>
+<p>总的来说，Windows Terminal 和 Termius 都能够实现我们的美化 UI 的需求，但是拓展功能方面有很大的差别。</p>
+<h3 id="拓展命令行"><a href="#拓展命令行" class="headerlink" title="拓展命令行"></a>拓展命令行</h3><p>虽然 PowerShell 拓展了 windows 的命令行，使其更加接近 Linux，但是终究还是有所差距的。上文所以到的 Terminus 和 Windows Terminal，只是实现了 UI 上的强化，并没有完成命令行的拓展。</p>
+<p>本来打算用过 <strong>git bash</strong> 来搞定，但是在 Windows 上依赖 git 附加的 bash，总感觉有点不伦不类的。于是使用 WSL 来搞一点炫酷的事情。</p>
+<p>在新的 Windows 正式版本中，已经可以直接使用 WSL 了，记得年前安装 WSL 的时候，只能使用 Windows 先行版本，还为因此出现的各种 bug 头疼了好久。</p>
+<p>根据官网的文档，几条命令，再重启一下电脑，就能够使用 wsl2 了。</p>
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719212747796.png" alt="image-20200719212747796" loading="lazy"></p>
+<center> <u>Figure5</u>:  Terminus + WSL2 所展示的终端界面</center>
+
+<p>emmmm，有点 Server 的味道了啊。</p>
+<p>到这一步，已经实现了 <strong>UI 美化、命令行强化</strong> 的目标。</p>
+<p>当然，UI 还能够进一步美化，那就是从内部美化。</p>
+<p>这里我选择使用 zsh + ohmyzsh 套餐。</p>
+<h3 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h3><p>首先，使用如下命令来安装 zsh。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">zsh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后，在 <a href="https://ohmyz.sh/#install">oh-my-zsh</a> 官网的文档上的命令完成安装。</p>
+<blockquote>
+<p>补充说明：</p>
+<ol>
+<li>安装过程中会使用到 <em>git</em> ，不过 git 默认安装在 wsl2 的 Ubuntu 中，所以就不用手动再装了。</li>
+<li>在下载.sh 文件时，可能会遇到无法连通 github 的情况，可以修改 host，更懒人的办法是，直接把.sh 文件手动 copy 到本地，然后用 sh 命令运行即可</li>
+</ol>
+</blockquote>
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719214701704.png" alt="image-20200719214701704" loading="lazy"></p>
+<center> <u>Figure6</u>:  Terminus + WSL2 + oh-my-zsh 所展示的终端界面</center>
+
+<p>清爽多了，不过比起这个默认的样式，我更习惯使用 <strong>agnoster</strong> 这个样式。</p>
+<blockquote>
+<p>更多的样式可以在<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">文档</a>中寻到。</p>
+</blockquote>
+<p>使用如下命令打开 zsh 的配置文件。(*rc 文件，有兴趣的可以了解一下)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后将 ZSH_THEME 修改成所需要的样式的名称即可。</p>
+<p>最后执行如下命令，重载 zsh。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> ~/.zshrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719220527894.png" alt="image-20200719220527894" loading="lazy"></p>
+<center> <u>Figure6</u>:  最终的终端界面</center>
+
+<p>差不多就是这个味道了。后续还会做一些配色方面的 DIY。</p>
+<blockquote>
+<p>关于 oh-my-zsh 的补充：</p>
+<p>目前的一些教程会让下载其他的 oh-my-zsh 插件，但是有一些插件现在已经在 oh-my-zsh 之中了，不必下载，只需要在配置文件中把名字加上就可以使用。</p>
+<p>详情可以查阅<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">文档</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+      <tags>
+        <tag>美化</tag>
       </tags>
   </entry>
   <entry>
@@ -14329,7 +14336,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
