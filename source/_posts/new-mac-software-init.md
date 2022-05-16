@@ -64,6 +64,16 @@ J社全家桶虽然是收费软件, 不过可以通过学生优惠、开发者�
 
 ### 通用
 
+#### iterm2
+
+[iterm2](https://iterm2.com/)
+
+iterm2 可以用来作为自带的终端工具 __Terminal__ 的替代品. 拥有更丰富的功能和更美观的界面.
+
+##### oh-my-zsh
+
+oh-my-zsh 是zsh的增强组件, 具体安装及配置可见于[ubuntu初始化](https://blog.harumonia.moe/ubuntu-initial/) 的 oh-my-zsh 一节.
+
 #### *Dash
 
 [dash](https://kapeli.com/dash)
@@ -108,3 +118,8 @@ Maccy 能够记录剪切板的历史, 可以包含文字\图片等内容. 它有
 ### *alfred
 
 [Alfred](https://www.alfredapp.com/) 自动化管理工具, 功能十分强大齐备, 可以取代 __聚焦__ \ __Maccy__ 等软件. 通过 _apple script_ 可以和很多的 Mac 软件进行 "梦幻联动" .
+
+#### 联动指南
+
+- [iterm2](https://github.com/vitorgalvao/custom-alfred-iterm-scripts)
+- [1password](https://github.com/alfredapp/1password-workflow#readme)
