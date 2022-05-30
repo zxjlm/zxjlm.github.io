@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/pycharm-docker-compose-mode/
 https://blog.harumonia.moe/new-mac-software-init/
 https://blog.harumonia.moe/docker-image-smaller/
 https://blog.harumonia.moe/doccano-use/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/2022-2/
 https://blog.harumonia.moe/django-shell-inject-script/
 https://blog.harumonia.moe/ubuntu-initial/
 https://blog.harumonia.moe/my-2021/
-https://blog.harumonia.moe/clean-logs/
