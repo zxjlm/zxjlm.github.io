@@ -12816,7 +12816,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
       </tags>
   </entry>
   <entry>
-    <title>Pycharm 和 VSCode 的docker compose 开发模式</title>
+    <title>Pycharm 和 VSCode 的 docker compose 开发模式</title>
     <url>/pycharm-docker-compose-mode/</url>
     <content><![CDATA[<p>本篇是关于如何在 Pycharm 和 VSCode 中使用 Docker Compose 的. 开篇比较啰嗦, 大抵是踩过的一些坑和问题的解决过程, 实际的配置内容自 <a href="#%E8%BD%AC">转</a> 这一节开始.</p>
 <a id="more"></a>
@@ -12899,6 +12899,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
 <li><p>使用 override config 来升格 docker-compose.dev.yml.<br>Docker Compose 是支持在构建时使用两份 yml 文件的, 详见 <a href="https://docs.docker.com/compose/extends/">Share Compose configurations between files and projects</a>, 所以我们可以将 dev 环境的 compose 作为一个 override 配置来使用, 从而避免污染项目目录.</p>
 </li>
 </ol>
+<h3 id="20220604内容增补"><a href="#20220604内容增补" class="headerlink" title="20220604内容增补"></a>20220604内容增补</h3><p>上述目录结构中的 <code>dev.Dockerfile</code> 文件其实也并非必要, 在 <a href="https://docs.docker.com/compose/compose-file/compose-versioning/#version-34">docker compose 3.4</a> 的版本更新中加入了 <strong>target</strong> 参数, 用来指定构建 <em>Dockerfile</em> 中的哪一个区块, 至此, <em>prod</em> 和 <em>dev</em> 的构建指令就可以合并到一份文件中了.</p>
 <h2 id="合"><a href="#合" class="headerlink" title="合"></a>合</h2><p>至此, 对 <strong>pycharm 运行 docker-compose 下的 django</strong> 的探索告一段落. 不过过程中产生的一些疑惑与问题还需要更多的深入研究来解开.</p>
 <h3 id="基于-docker-compose-的开发策略"><a href="#基于-docker-compose-的开发策略" class="headerlink" title="基于 docker compose 的开发策略"></a>基于 docker compose 的开发策略</h3><p>看起来, 如果纠结于使用 pycharm 的话, 在项目的结构上就有了比较严格的约束. 那么这到底是是 docker 的开发模式的问题, 还是 pycharm 的设计问题呢?</p>
 <p>在详细地查阅了相关的文档之后发现, vscode 的其实提供了 <a href="https://code.visualstudio.com/docs/remote/containers#_working-with-containers">两种基于 contaniner 的开发方案</a>. 其中, <a href="https://code.visualstudio.com/docs/remote/create-dev-container#_use-docker-compose">使用 docker-compose</a> 的开发方案中提供了详尽的外装开发模式的配置策略. 基于这个文档策略, 甚至可以对 PyCharm 文档中给出的 compose 开发方案进行进一步的优化… (不愧是宇宙第一开发工具😰)</p>
@@ -12995,7 +12996,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#109;">&#x7a;&#120;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#64;&#49;&#54;&#51;&#46;&#x63;&#111;&#109;</a></p>
+<p>email:<a href="mailto:&#122;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#109;">&#122;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -14455,7 +14456,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
