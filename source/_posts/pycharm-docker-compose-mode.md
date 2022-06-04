@@ -1,5 +1,5 @@
 ---
-title: Pycharm 和 VSCode 的docker compose 开发模式
+title: Pycharm 和 VSCode 的 docker compose 开发模式
 status: publish
 author: harumonia
 noThumbInfoStyle: default
@@ -139,6 +139,10 @@ pycharm 在官方文档中有 [docker-compose](https://www.jetbrains.com/help/py
 
 3. 使用 override config 来升格 docker-compose.dev.yml.  
 Docker Compose 是支持在构建时使用两份 yml 文件的, 详见 [Share Compose configurations between files and projects](https://docs.docker.com/compose/extends/), 所以我们可以将 dev 环境的 compose 作为一个 override 配置来使用, 从而避免污染项目目录.
+
+### 20220604内容增补
+
+上述目录结构中的 `dev.Dockerfile` 文件其实也并非必要, 在 [docker compose 3.4](https://docs.docker.com/compose/compose-file/compose-versioning/#version-34) 的版本更新中加入了 __target__ 参数, 用来指定构建 _Dockerfile_ 中的哪一个区块, 至此, _prod_ 和 _dev_ 的构建指令就可以合并到一份文件中了.
 
 ## 合
 
