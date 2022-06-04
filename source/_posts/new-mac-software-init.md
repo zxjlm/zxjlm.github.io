@@ -12,7 +12,11 @@ email: zxjlm233@gmail.com
 date: 2022-05-14 15:35:54
 updated:
 categories:
+  - 源流清泉
+  - Mac
 tags:
+  - Mac
+  - software
 customSummary:
 thumb:
 thumbDesc:
