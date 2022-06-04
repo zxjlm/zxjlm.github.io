@@ -3728,7 +3728,7 @@ file_metadata <span class="token operator">=</span> <span class="token punctuati
     <content><![CDATA[<p>记录在实际操作过程中遇到遇到的一些有意思的使用法.</p>
 <a id="more"></a>
 
-<h1 id="pandas"><a href="#pandas" class="headerlink" title="pandas"></a>pandas</h1><h2 id="Serise"><a href="#Serise" class="headerlink" title="Serise"></a>Serise</h2><h3 id="获取最小值的-index"><a href="#获取最小值的-index" class="headerlink" title="获取最小值的 index"></a>获取最小值的 index</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">Serise<span class="token punctuation">.</span>idxmin<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h2 id="Serise"><a href="#Serise" class="headerlink" title="Serise"></a>Serise</h2><h3 id="获取最小值的-index"><a href="#获取最小值的-index" class="headerlink" title="获取最小值的 index"></a>获取最小值的 index</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">Serise<span class="token punctuation">.</span>idxmin<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h2><h3 id="csv-读取扩充"><a href="#csv-读取扩充" class="headerlink" title="csv 读取扩充"></a>csv 读取扩充</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 读取unix log</span>
@@ -3775,16 +3775,7 @@ is_snowing <span class="token operator">=</span> weather_description<span class=
 na_values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'NO CLUE'</span><span class="token punctuation">,</span> <span class="token string">'N/A'</span><span class="token punctuation">,</span> <span class="token string">'0'</span><span class="token punctuation">]</span>
 requests <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'../data/311-service-requests.csv'</span><span class="token punctuation">,</span> na_values<span class="token operator">=</span>na_values<span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">'Incident Zip'</span><span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="numpy"><a href="#numpy" class="headerlink" title="numpy"></a>numpy</h1><h1 id="matplotlib"><a href="#matplotlib" class="headerlink" title="matplotlib"></a>matplotlib</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># seaborn</span>
-<span class="token comment"># 将Dataframe中的指定列(复数级)两两绘制图像</span>
-sns<span class="token punctuation">.</span>pairplot<span class="token punctuation">(</span>train_dataset<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">"MPG"</span><span class="token punctuation">,</span> <span class="token string">"Cylinders"</span><span class="token punctuation">,</span> <span class="token string">"Displacement"</span><span class="token punctuation">,</span> <span class="token string">"Weight"</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> diag_kind<span class="token operator">=</span><span class="token string">"kde"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li><strong>Trends</strong> - A trend is defined as a pattern of change.<br>sns.lineplot - Line charts are best to show trends over a period of time, and multiple lines can be used to show trends in more than one group.</li>
-<li><strong>Relationship</strong> - There are many different chart types that you can use to understand relationships between variables in your data.<br><em>sns.barplot</em> - Bar charts are useful for comparing quantities corresponding to different groups.<br><em>sns.heatmap</em> - Heatmaps can be used to find color-coded patterns in tables of numbers.<br><em>sns.scatterplot</em> - Scatter plots show the relationship between two continuous variables; if color-coded, we can also show the relationship with a third categorical variable.<br><em>sns.regplot</em> - Including a regression line in the scatter plot makes it easier to see any linear relationship between two variables.<br><em>sns.lmplot</em> - This command is useful for drawing multiple regression lines, if the scatter plot contains multiple, color-coded groups.<br><em>sns.swarmplot</em> - Categorical scatter plots show the relationship between a continuous variable and a categorical variable.</li>
-<li><strong>Distribution</strong> - We visualize distributions to show the possible values that we can expect to see in a variable, along with how likely they are.<br><em>sns.distplot</em> - Histograms show the distribution of a single numerical variable.<br><em>sns.kdeplot</em> - KDE plots (or 2D KDE plots) show an estimated, smooth distribution of a single numerical variable (or two numerical variables).<br><em>sns.jointplot</em> - This command is useful for simultaneously displaying a 2D KDE plot with the corresponding KDE plots for each individual variable.</li>
-</ul>
-<h2 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h2><h3 id="X-轴日期合并"><a href="#X-轴日期合并" class="headerlink" title="X 轴日期合并"></a>X 轴日期合并</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>由于 x 轴上的日期太过密集(年-月),所以显示很不好看<br><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p255" alt="a54db97987cc85a6a735eaf5772e969d.png" loading="lazy"></p>
+<h2 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h2><h3 id="X-轴日期合并"><a href="#X-轴日期合并" class="headerlink" title="X 轴日期合并"></a>X 轴日期合并</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>由于 x 轴上的日期太过密集(年-月),所以显示很不好看</p>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>将日期再分类,以年为单位</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime
 
@@ -3802,8 +3793,6 @@ g<span class="token punctuation">.</span>set_xticklabels<span class="token punct
 g<span class="token punctuation">.</span>set_xlabel<span class="token punctuation">(</span><span class="token string">'Date'</span><span class="token punctuation">)</span>
 <span class="token comment"># Add title</span>
 plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Monthly Visitors to Los Angeles City Museums"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p256" alt="d87feeba601ddcacb482cb2c62f206b6.png" loading="lazy"></p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -12516,6 +12505,14 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
 <li><a href="https://github.com/alfredapp/1password-workflow#readme">1password</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>software</tag>
+      </tags>
   </entry>
   <entry>
     <title>pdfplumber内存泄露问题解决方案(施工中)</title>
@@ -12934,6 +12931,14 @@ socket<span class="token punctuation">.</span><span class="token function">close
 <li><a href="https://code.visualstudio.com/docs/remote/create-dev-container">Create a development container</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>爬虫监控服务的数据库选择-bitmap应用</title>
@@ -12996,7 +13001,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#109;">&#122;&#120;&#106;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#106;&#108;&#109;&#50;&#51;&#x33;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;">&#x7a;&#120;&#106;&#108;&#109;&#50;&#51;&#x33;&#x40;&#49;&#x36;&#x33;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -14178,7 +14183,6 @@ L2 <span class="token operator">=</span> <span class="token builtin">sorted</spa
 <p>只有以双下划线开头的”__job”不能直接被外部访问。</p>
 <p>但是，如果一个属性以”__xxx__“的形式定义，那它又可以被外部访问了，以”__xxx__“定义的属性在 Python 的类中被称为特殊属性，有很多预定义的特殊属性可以使用，通常我们不要把普通属性用”__xxx__“定义。</p>
 <p>以单下划线开头的属性”_xxx”虽然也可以被外部访问，但是，按照习惯，他们不应该被外部访问。</p>
-<h2 id="init-内外定义区别"><a href="#init-内外定义区别" class="headerlink" title="__init__ 内外定义区别"></a>__init__ 内外定义区别</h2><p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135" alt="e48d9f5d14a056cc9f6c8ab0112dda2d.png" loading="lazy"></p>
 <h2 id="类属性和实例属性名字冲突怎么办"><a href="#类属性和实例属性名字冲突怎么办" class="headerlink" title="类属性和实例属性名字冲突怎么办"></a>类属性和实例属性名字冲突怎么办</h2><p>当实例属性和类属性重名时，实例属性优先级高，它将屏蔽掉对类属性的访问。</p>
 <h2 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h2><p>和属性类似，方法也分实例方法和类方法。</p>
 <p>在 class 中定义的全部是实例方法，实例方法第一个参数 self 是实例本身。</p>
@@ -14359,7 +14363,7 @@ My friend <span class="token keyword">is</span> Tim<span class="token punctuatio
     <content><![CDATA[<p>参考 《第一本 docker 书》《docker 深入浅出》</p>
 <a id="more"></a>
 
-<h1 id="第一本-docker"><a href="#第一本-docker" class="headerlink" title="第一本 docker"></a>第一本 docker</h1><h2 id="docker-容器"><a href="#docker-容器" class="headerlink" title="docker 容器"></a>docker 容器</h2><p>首先，我们告诉 Docker 执行 docker run 命令，并指定了-i 和-t 两个命令行参数。-i 标志保证容器中 STDIN 是开启的，尽管我们并没有附着到容器中。持久的标准输入是交互式 shell 的“半边天”，-t 标志则是另外“半边天”，它告诉 Docker 为要创建的容器分配一个伪 tty 终端。这样，新创建的容器才能提供一个交互式 shell。首先，我们告诉 Docker 执行 docker run 命令，并指定了-i 和-t 两个命令行参数。-i 标志保证容器中 STDIN 是开启的，尽管我们并没有附着到容器中。持久的标准输入是交互式 shell 的“半边天”，-t 标志则是另外“半边天”，它告诉 Docker 为要创建的容器分配一个伪 tty 终端。这样，新创建的容器才能提供一个交互式 shell。</p>
+<h2 id="docker-容器"><a href="#docker-容器" class="headerlink" title="docker 容器"></a>docker 容器</h2><p>首先，我们告诉 Docker 执行 docker run 命令，并指定了-i 和-t 两个命令行参数。-i 标志保证容器中 STDIN 是开启的，尽管我们并没有附着到容器中。持久的标准输入是交互式 shell 的“半边天”，-t 标志则是另外“半边天”，它告诉 Docker 为要创建的容器分配一个伪 tty 终端。这样，新创建的容器才能提供一个交互式 shell。首先，我们告诉 Docker 执行 docker run 命令，并指定了-i 和-t 两个命令行参数。-i 标志保证容器中 STDIN 是开启的，尽管我们并没有附着到容器中。持久的标准输入是交互式 shell 的“半边天”，-t 标志则是另外“半边天”，它告诉 Docker 为要创建的容器分配一个伪 tty 终端。这样，新创建的容器才能提供一个交互式 shell。</p>
 <h3 id="带名字"><a href="#带名字" class="headerlink" title="带名字"></a>带名字</h3><p>sudo docker run –name bob_the_container -i -t ubuntu /bin/bash</p>
 <h3 id="重新启动"><a href="#重新启动" class="headerlink" title="重新启动"></a>重新启动</h3><p>sudo docker start bob_the_container<br>or<br>sudo docker start aa3f365f0f4e</p>
 <h3 id="创建守护式程序"><a href="#创建守护式程序" class="headerlink" title="创建守护式程序"></a>创建守护式程序</h3><p>除了这些交互式运行的容器（interactive container），也可以创建长期运行的容器。守护式容器（daemonized container）没有交互式会话，非常适合运行应用程序和服务。大多数时候我们都需要以守护式来运行我们的容器。</p>
@@ -14373,7 +14377,7 @@ My friend <span class="token keyword">is</span> Tim<span class="token punctuatio
 <li>-f 实时跟踪</li>
 <li>-ft 加上时间戳</li>
 </ul>
-<p>我们也可以跟踪容器日志的某一片段，和之前类似，只需要在 tail 命令后加入-f –tail 标志即可。例如，可以用 _docker logs –tail 10 daemon_dave_ 获取日志的最后 10 行内容。另外，也可以用<em>docker logs –tail 0 -f daemon_dave</em> 命令来跟踪某个容器的最新日志而不必读取整个日志文件。</p>
+<p>我们也可以跟踪容器日志的某一片段，和之前类似，只需要在 tail 命令后加入-f –tail 标志即可。例如，可以用 <em>docker logs –tail 10 daemon_dave_ 获取日志的最后 10 行内容。另外，也可以用_docker logs –tail 0 -f daemon_dave</em> 命令来跟踪某个容器的最新日志而不必读取整个日志文件。</p>
 <h3 id="日志驱动"><a href="#日志驱动" class="headerlink" title="日志驱动"></a>日志驱动</h3><p>将日志输出到指定的文件</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> docker run --log-driver<span class="token operator">=</span><span class="token string">"syslog"</span> --name daemon_dwayne -d ubuntu /bin/sh -c <span class="token string">"while true; do echo hello world; sleep 1;done"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -14456,7 +14460,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -14516,7 +14520,7 @@ ENTRYPOINT <span class="token punctuation">[</span> <span class="token string">"
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">代码清单4-69　使用ADD 指令
 ADD software.lic /opt/application/software.lic<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><strong>指向源文件的可以是一个 URL</strong></p>
+<p>指向源文件的可以是一个 URL</p>
 <blockquote>
 <p>ADD 指令会使得构建缓存变得无效，这一点也非常重要。如果通过 ADD 指令向镜像添加一个文件或者目录，那么这将使 Dockerfile 中的后续指令都不能继续使用之前的构建缓存。</p>
 </blockquote>
@@ -14605,8 +14609,6 @@ jamtur01/nginx nginx<span aria-hidden="true" class="line-numbers-rows"><span></s
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><h2 id="网站链接"><a href="#网站链接" class="headerlink" title="网站链接"></a>网站链接</h2><p><a href="https://docs.docker.com/get-started/">Docker Doc</a><br><a href="https://hijiangtao.github.io/2018/04/17/Docker-in-Action/">Docker 学习新手笔记：从入门到放弃</a></p>
 <h2 id="摘录"><a href="#摘录" class="headerlink" title="摘录"></a>摘录</h2><h3 id="术语定义"><a href="#术语定义" class="headerlink" title="术语定义"></a>术语定义</h3><p><strong>images</strong> :An image is an executable package that includes everything needed to run an application–the code, a runtime, libraries, environment variables, and configuration files.</p>
 <p><strong>container</strong> :A container is a runtime instance of an image–what the image becomes in memory when executed (that is, an image with state, or a user process). You can see a list of your running containers with the command, docker ps, just as you would in Linux.</p>
-<p><code>container和VM的区别</code></p>
-<p><img src="evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p199" alt="5c3f63cdcb67e40b1e9a3f1676b17868.png" loading="lazy"></p>
 <h3 id="常用命令集"><a href="#常用命令集" class="headerlink" title="常用命令集"></a>常用命令集</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker container <span class="token function">ls</span>
 docker container <span class="token function">ls</span> --all
 docker container <span class="token function">ls</span> -aq

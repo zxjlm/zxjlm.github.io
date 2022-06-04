@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.harumonia.moe/categories/index.html</loc>
+    
+    <lastmod>2022-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.harumonia.moe/schedule/index.html</loc>
+    
+    <lastmod>2022-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.harumonia.moe/tags/index.html</loc>
+    
+    <lastmod>2022-06-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.harumonia.moe/chengdu-seven-day/</loc>
     
     <lastmod>2022-06-04</lastmod>
@@ -66,27 +87,6 @@
   
   <url>
     <loc>https://blog.harumonia.moe/upon-graduation/</loc>
-    
-    <lastmod>2022-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.harumonia.moe/categories/index.html</loc>
-    
-    <lastmod>2022-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.harumonia.moe/schedule/index.html</loc>
-    
-    <lastmod>2022-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.harumonia.moe/tags/index.html</loc>
     
     <lastmod>2022-06-04</lastmod>
     
@@ -1383,6 +1383,20 @@
   </url>
   
   <url>
+    <loc>https://blog.harumonia.moe/tags/Mac/</loc>
+    <lastmod>2022-06-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.harumonia.moe/tags/software/</loc>
+    <lastmod>2022-06-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.harumonia.moe/tags/solution/</loc>
     <lastmod>2022-06-04</lastmod>
     <changefreq>daily</changefreq>
@@ -1533,6 +1547,13 @@
   
   <url>
     <loc>https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Docker/</loc>
+    <lastmod>2022-06-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Mac/</loc>
     <lastmod>2022-06-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
