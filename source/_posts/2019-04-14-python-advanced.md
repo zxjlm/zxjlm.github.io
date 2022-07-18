@@ -473,10 +473,6 @@ Python 对属性权限的控制是通过属性名来实现的，如果一个属�
 
 以单下划线开头的属性"\_xxx"虽然也可以被外部访问，但是，按照习惯，他们不应该被外部访问。
 
-## \_\_init\_\_ 内外定义区别
-
-![e48d9f5d14a056cc9f6c8ab0112dda2d.png](evernotecid://633A359B-908B-4B09-BD14-4B8DC1F44EF5/appyinxiangcom/18822571/ENResource/p135)
-
 ## 类属性和实例属性名字冲突怎么办
 
 当实例属性和类属性重名时，实例属性优先级高，它将屏蔽掉对类属性的访问。
@@ -605,10 +601,10 @@ AttributeError: 'Student' object has no attribute 'age'
 
 # 特殊函数
 
-\_\_str** 用户 默认输出
-\_\_repr** 开发者 默认输出
+\_\_str\*\* 用户 默认输出
+\_\_repr\*\* 开发者 默认输出
 
-### \_\_cmp\_\_
+## \_\_cmp\_\_
 
 对 int、str 等内置数据类型排序时，Python 的 sorted() 按照默认的比较函数 cmp 排序，但是，如果对一组 Student 类的实例排序时，就必须提供我们自己的特殊方法 \_\_cmp\_\_()：
 
@@ -632,10 +628,10 @@ class Student(object):
 
 ### 数学运算
 
-\_\_add** 加
-\_\_sub** 减
-\_\_mul** 乘
-\_\_div** 除
+\_\_add\*\* 加
+\_\_sub\*\* 减
+\_\_mul\*\* 乘
+\_\_div\*\* 除
 
 ### property
 

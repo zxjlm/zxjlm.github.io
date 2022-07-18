@@ -28,7 +28,7 @@ hidden: false
 selenium 虽然是新手友好型的爬虫工具，但是个人觉得绝对不是适合新手入门的爬虫。
 推荐在了解了 **requests 体系** 的爬虫，有了爬虫的一些常识之后，再来看 selenium。
 
-**事实上，requests 体系的爬虫已经足够满足现阶段大多数网站的爬虫需求**
+事实上，requests 体系的爬虫已经足够满足现阶段大多数网站的爬虫需求
 
 <!-- more -->
 
@@ -108,6 +108,7 @@ for item in search_results:
 driver.close()
 ```
 
+```plain_text
     /usr/local/Caskroom/miniconda/base/envs/scikit/lib/python3.7/site-packages/ipykernel_launcher.py:13: DeprecationWarning: use options instead of chrome_options
       del sys.path[0]
 
@@ -127,6 +128,7 @@ driver.close()
     英特尔_Python_发行版
     唤境_不懂编程不会美术_也能轻松制作游戏
     免费全能的宝塔Linux面板_一键管理服务器
+```
 
 ### 页面交互方法
 
@@ -281,7 +283,6 @@ continue_link = driver.find_element_by_partial_link_text('Conti')
 
 推荐使用 [katalon](https://www.katalon.com/) ，该软件开启之后，可以记录浏览器的点击记录，进而一键生成 selenium 模拟点击的代码
 
-<hr>
 同时，通过浏览器的元素审查功能，在要定位的元素上右键，大部分浏览器都有直接复制xpath的功能
 
 ## 个人使用体会

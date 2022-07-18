@@ -269,6 +269,16 @@ echo $(awk)
 docker rmi $(docker images |awk '$1=="<none>" {print $3}')
 ```
 
+### 批量在k8s服务器集群执行命令
+
+以列出所有服务器时间为例:
+
+```shell
+kubectl get nodes | awk '(NR>2) {print $1}' | xargs -I {1} ssh {1} "date"
+```
+
+需要确保 host 文件中配置过服务器host, 否则需要修改 `print $1` 为ip值.
+
 ## 总结
 
 将以上的脚本整合,然后设置一个定时执行,就可以每天整合一次网站访问记录.配合 echarts,可以将网站访问以漂亮的图表的形式输出.

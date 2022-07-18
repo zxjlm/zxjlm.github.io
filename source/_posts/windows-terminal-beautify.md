@@ -2,6 +2,7 @@
 layout: post
 cid: 230
 title: Windows下的终端优化方案
+notion: false
 slug: 230
 date: 2020/07/19 22:13:08
 updated: 2020/07/19 22:13:08

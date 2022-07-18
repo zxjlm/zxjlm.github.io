@@ -52,7 +52,7 @@ hidden: false
 > 内存消耗 :
 > 9.7 MB, 在所有 cpp 提交中击败了 49.44%的用户
 
-```cpp
+```c++
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
@@ -71,7 +71,7 @@ public:
 > 内存消耗 :
 > 9.8 MB, 在所有 cpp 提交中击败了 11.11%的用户
 
-```cpp
+```c++
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
@@ -90,7 +90,7 @@ public:
 > 执行用时 :12 ms, 在所有 cpp 提交中击败了 82.45%的用户
 > 内存消耗 :9.6 MB, 在所有 cpp 提交中击败了 60.86%的用户
 
-```cpp
+```c++
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {

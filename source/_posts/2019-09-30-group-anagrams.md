@@ -27,7 +27,7 @@ hidden: false
 
 [No.49 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
 
-**难度:中等**
+难度:**中等**
 
 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
 
@@ -62,7 +62,7 @@ hidden: false
 
 ## 代码
 
-```cpp
+```c++
 vector<vector<string>> groupAnagrams(vector<string>& strs) {
         map<string,vector<string> > ma;
         vector<vector<string>> res;

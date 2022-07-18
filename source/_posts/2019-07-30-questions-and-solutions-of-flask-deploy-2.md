@@ -75,10 +75,13 @@ Q:setuptools pkg_resources pip wheel failed with error code 1
 
 S:
 vi /root/.pip/pip.conf 修改如下:
+
+```plain_text
 [global]
 index-url = https://pypi.python.org/simple/
 [install]
 trusted-host=mirrors.aliyun.com trusted-host=pypi.python.org
+```
 
 Q:json 类的报错问题
 S:具体的原因我还没有搞明白，Linux 默认的 python3 是 3.5 版本的，但是在进行 jinja2 渲染的时候，常常会出现 json 的报错，两种解决办法。

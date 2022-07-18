@@ -71,9 +71,7 @@ article_titles = tree.xpath('//div[@class="title-box"]/a/text()')
 print(article_titles)
 ```
 
-    ['总书记来过我们家，脱贫了还要好好干', '北京2020年初雪已进城！您那儿下起来了吗？', '论萌娃写作业时，求生欲有多强：爸爸我给你鼓掌', '秦平：弘扬黄河文化，凝聚追梦中国精神力量', '苏莱曼尼之死，全世界到底在怕什么？', '观景平台，“零距离”看飞机', '浙江一企业保险箱被撬，120万现金仅被偷走27万！小偷：当时想起一句“名言”……', '划重点2020双闰年 网友：鼠年要多上一个月的班', '若美伊全面开战，中国将再获20年发展机遇期？']
-
-### 总结
+>['总书记来过我们家，脱贫了还要好好干', '北京2020年初雪已进城！您那儿下起来了吗？', '论萌娃写作业时，求生欲有多强：爸爸我给你鼓掌', '秦平：弘扬黄河文化，凝聚追梦中国精神力量', '苏莱曼尼之死，全世界到底在怕什么？', '观景平台，“零距离”看飞机', '浙江一企业保险箱被撬，120万现金仅被偷走27万！小偷：当时想起一句“名言”……', '划重点2020双闰年 网友：鼠年要多上一个月的班', '若美伊全面开战，中国将再获20年发展机遇期？']
 
 如果没有渲染，那么得到的结果就是一个空的数组，只有进行了 js 渲染才能得到我们想要的结果。
 
@@ -202,6 +200,7 @@ for year in range(1991,2019):
 df.info()
 ```
 
+```plain_text
     <class 'pandas.core.frame.DataFrame'>
     Int64Index: 7426 entries, 3 to 8817
     Data columns (total 6 columns):
@@ -213,6 +212,7 @@ df.info()
     tv_type          7426 non-null object
     dtypes: float64(1), object(5)
     memory usage: 726.1+ KB
+```
 
 嗯，1990 年-2018 年一共获取了 7426 条数据，似乎没啥问题。
 
@@ -245,6 +245,7 @@ df_final = df_final.sort_index().reset_index().drop(columns=['index'])
 df_final.head()
 ```
 
+```html
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -278,7 +279,7 @@ df_final.head()
       <td>1991</td>
       <td>9.4</td>
       <td>101919</td>
-      <td>东京爱情故事 東京ラブストーリー‎ (1991)</td>
+      <td>东京爱情故事 東京ラブストーリー (1991)</td>
       <td>日本</td>
       <td>爱情</td>
     </tr>
@@ -287,7 +288,7 @@ df_final.head()
       <td>1991</td>
       <td>9.6</td>
       <td>4490</td>
-      <td>成长的烦恼  第七季 Growing Pains Season 7‎ (1991)</td>
+      <td>成长的烦恼  第七季 Growing Pains Season 7 (1991)</td>
       <td>美国</td>
       <td>喜剧,家庭</td>
     </tr>
@@ -296,7 +297,7 @@ df_final.head()
       <td>1991</td>
       <td>9.2</td>
       <td>1509</td>
-      <td>宋飞正传 第三季 Seinfeld Season 3‎ (1991)</td>
+      <td>宋飞正传 第三季 Seinfeld Season 3 (1991)</td>
       <td>美国</td>
       <td>喜剧</td>
     </tr>
@@ -305,7 +306,7 @@ df_final.head()
       <td>1991</td>
       <td>7.4</td>
       <td>4598</td>
-      <td>外来妹‎ (1991)</td>
+      <td>外来妹 (1991)</td>
       <td>中国大陆</td>
       <td>剧情,爱情</td>
     </tr>
@@ -314,13 +315,14 @@ df_final.head()
       <td>1991</td>
       <td>8.9</td>
       <td>2140</td>
-      <td>宋飞正传 第二季 Seinfeld Season 2‎ (1991)</td>
+      <td>宋飞正传 第二季 Seinfeld Season 2 (1991)</td>
       <td>美国</td>
       <td>喜剧</td>
     </tr>
   </tbody>
 </table>
 </div>
+```
 
 ### 开始分析
 
@@ -329,6 +331,7 @@ df_year_rate = df_final[['rating_nums','year','country']].groupby(['year','count
 df_year_rate.head()
 ```
 
+```html
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -387,6 +390,7 @@ df_year_rate.head()
   </tbody>
 </table>
 </div>
+```
 
 ```python
 plt.figure(figsize=(50,20))
@@ -394,8 +398,10 @@ sns.lineplot(x=df_year_rate.year,y=df_year_rate.rating_nums,hue=df_year_rate.cou
 plt.xticks(rotation=90)
 ```
 
+```plain_text
     (array([1985., 1990., 1995., 2000., 2005., 2010., 2015., 2020.]),
      <a list of 8 Text xticklabel objects>)
+```
 
 ![output_11_1.png](https://i.loli.net/2020/01/13/rTLHkQO4gmvX5yf.png)
 
@@ -419,6 +425,7 @@ for index,five in enumerate(five_list):
 df_five_type
 ```
 
+```html
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -593,17 +600,20 @@ df_five_type
   </tbody>
 </table>
 </div>
+```
 
 ```python
 plt.figure(figsize=(20,10))
 sns.heatmap(data=df_five_type, annot=True, fmt="d", linewidths=.5)
 ```
 
+```plain_text
     <matplotlib.axes._subplots.AxesSubplot at 0x1a2ffe5be0>
+```
 
 ![output_14_1.png](https://i.loli.net/2020/01/13/NAVtujdBlREgF5M.png)
 
-### 总结
+## 总结
 
 大概地总结一下吧，这里一定程度上真实地反映了人们观念的变化对电视剧市场造成的自然选择以及历史的必然趋势。
 

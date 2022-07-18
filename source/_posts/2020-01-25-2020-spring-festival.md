@@ -46,7 +46,7 @@ hidden: true
 
 新浪微博(各地的官方微博)
 
-**以上的数据源到 2020 年 1 月 25 日，丁香医生和百度播报的统计数量达成了一致，但是私以为最接近真实情况的还是各地卫生部门官方微博的信息**
+以上的数据源到 2020 年 1 月 25 日，丁香医生和百度播报的统计数量达成了一致，但是私以为最接近真实情况的还是各地卫生部门官方微博的信息
 
 这里以丁香医生为例。
 
@@ -87,32 +87,32 @@ soup = get_info('https://3g.dxy.cn/newh5/view/pneumonia')
 
 ```json
 [{
-	"provinceName": "湖北省",
-	"provinceShortName": "湖北",
-	"confirmedCount": 729,
-	"suspectedCount": 0,
-	"curedCount": 32,
-	"deadCount": 39,
-	"comment": "",
-	"cities": [{
-		"cityName": "武汉",
-		"confirmedCount": 572,
-		"suspectedCount": 0,
-		"curedCount": 32,
-		"deadCount": 38
-	}, {
-		"cityName": "黄冈",
-		"confirmedCount": 64,
-		"suspectedCount": 0,
-		"curedCount": 0,
-		"deadCount": 0
-	}, {
-		"cityName": "孝感",
-		"confirmedCount": 26,
-		"suspectedCount": 0,
-		"curedCount": 0,
-		"deadCount": 0
-	}, {
+    "provinceName": "湖北省",
+    "provinceShortName": "湖北",
+    "confirmedCount": 729,
+    "suspectedCount": 0,
+    "curedCount": 32,
+    "deadCount": 39,
+    "comment": "",
+    "cities": [{
+        "cityName": "武汉",
+        "confirmedCount": 572,
+        "suspectedCount": 0,
+        "curedCount": 32,
+        "deadCount": 38
+    }, {
+        "cityName": "黄冈",
+        "confirmedCount": 64,
+        "suspectedCount": 0,
+        "curedCount": 0,
+        "deadCount": 0
+    }, {
+        "cityName": "孝感",
+        "confirmedCount": 26,
+        "suspectedCount": 0,
+        "curedCount": 0,
+        "deadCount": 0
+    }, {
         .............
 ```
 
@@ -138,13 +138,13 @@ soup = get_info('https://3g.dxy.cn/newh5/view/pneumonia')
 @main.route('/api/{}/query_by_province'.format(api_level), methods=["POST"])
 def query_by_province():
     '''
-		通过省份的名字进行查询
+        通过省份的名字进行查询
     :return:
     '''
     try:
       provinceName = provrequest.get_json()
       res = Province.query.filter_by(provinceName = provinceName).first()
-    	return jsonify({'code':1,'res':res.to_json()})
+        return jsonify({'code':1,'res':res.to_json()})
     except Expection as e:
       print(e)
       return jsonify({'code':-1})

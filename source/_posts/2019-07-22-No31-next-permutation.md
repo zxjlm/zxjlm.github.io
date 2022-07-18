@@ -57,7 +57,7 @@ hidden: false
 
 # 代码
 
-```c++
+    ```c++
 
 class Solution {
 public:
@@ -89,7 +89,7 @@ public:
         nums[index2] = temp;
     }
 };
-```
+    ```
 
 # 执行结果
 

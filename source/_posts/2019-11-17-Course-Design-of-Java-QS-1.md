@@ -47,7 +47,7 @@ Ps.界面设计全靠手绘...
 
 ```java
 Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/TCM_DICT","root","root");
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/TCM_DICT","root","root");
 ```
 
 目前网络上主流的连接方式为上述语句
@@ -56,7 +56,7 @@ Class.forName("com.mysql.jdbc.Driver");
 
 ```java
 Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/TCM_DICT?useSSL=false","root","root");
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/TCM_DICT?useSSL=false","root","root");
 ```
 
 加上 **useSSL=false** ,取消验证即可.
@@ -73,7 +73,7 @@ Class.forName("com.mysql.jdbc.Driver");
 
 ### maven
 
-_注意:搜索排行第一页,有几篇文章(知乎\csdn)不要看,巨坑无比_
+注意:搜索排行第一页,有几篇文章(知乎\csdn)不要看,巨坑无比
 
 maven 其实不只是一个包管理工具啦.
 具体的 maven 说明和安装使用,可以查阅[菜鸟教程的 maven 介绍](https://www.runoob.com/maven/maven-tutorial.html)
@@ -84,7 +84,7 @@ maven 其实不只是一个包管理工具啦.
 - maven 项目建立
 - maven 坐标如何导入
 
-**最终,能够通过几行 xml,完成 jar 包的导入**
+最终,能够通过几行 xml,完成 jar 包的导入
 
 下述示例为导入 fastjson 包,是否比自己下载要方便很多呢?
 
@@ -111,34 +111,34 @@ Demo 的代码比较少,所以就直接列出来了.
 
 ```Java
  class labelControl1 extends Thread{
-	 public JLabel matrixLoder;
+    public JLabel matrixLoder;
 
-	 public labelControl1(JLabel matrixLoder) {
-		 this.matrixLoder = matrixLoder;
-	 }
+    public labelControl1(JLabel matrixLoder) {
+        this.matrixLoder = matrixLoder;
+    }
 
-	@Override
-	public void run() {
-		String str = "Waiting " ;
-		while(true) {
-			if(global_bool.laberFlag1) {
-				matrixLoder.setText("success");
-				break;
-			}
-			System.out.println("111111");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+    @Override
+    public void run() {
+        String str = "Waiting " ;
+        while(true) {
+    if(global_bool.laberFlag1) {
+        matrixLoder.setText("success");
+        break;
+    }
+    System.out.println("111111");
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
 
-			if(str.equals("Waiting ......")) {
-				str = "Waiting ";
-			}
-			str += ".";
-			matrixLoder.setText(str);
-		}
-	}
+    if(str.equals("Waiting ......")) {
+        str = "Waiting ";
+    }
+    str += ".";
+    matrixLoder.setText(str);
+        }
+    }
 
 }
 ```
@@ -151,7 +151,7 @@ Demo 的代码比较少,所以就直接列出来了.
 
 ```Java
 public static String json_str(String path) throws Exception {
-    	File input = new File(path);
+        File input = new File(path);
 
         CsvSchema csvSchema = CsvSchema.builder().setUseHeader(true).build();
         CsvMapper csvMapper = new CsvMapper();
@@ -182,10 +182,10 @@ StringEntity entity = new StringEntity(js,Charset.forName("UTF-8"));
 
 ```Java
 public static String sendPost(String js,String url) throws Exception {
-    	Map<String, Object> paramMap = new HashMap<String, Object>();
-    	paramMap.put("data",js);
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("data",js);
 
-    	CloseableHttpClient httpClient = null;
+        CloseableHttpClient httpClient = null;
         CloseableHttpResponse httpResponse = null;
         String result = "";
         // 创建httpClient实例
@@ -213,7 +213,7 @@ public static String sendPost(String js,String url) throws Exception {
                 nvps.add(new BasicNameValuePair(mapEntry.getKey(), mapEntry.getValue().toString()));
             }
             StringEntity entity = new StringEntity(js,Charset.forName("UTF-8"));
-			httpPost.setEntity(entity);
+    httpPost.setEntity(entity);
         }
         try {
             // httpClient对象执行post请求,并返回响应参数对象
@@ -261,13 +261,13 @@ Java 的全局变量机制与 C#类似,都是访问类的静态成员变量.
 package haru.utils;
 
 public class global_bool {
-	public static boolean laberFlag1,labelFlag2,labelFlag3;
-	public static String url1 = "http://127.0.0.1:5000/admin/api/java_homework_01_matrix";
-	public static String url2 = "http://127.0.0.1:5000/admin/api/java_homework_content";
-	public static String url3 = "http://127.0.0.1:5000/admin/api/java_homework_pro";
+    public static boolean laberFlag1,labelFlag2,labelFlag3;
+    public static String url1 = "http://127.0.0.1:5000/admin/api/java_homework_01_matrix";
+    public static String url2 = "http://127.0.0.1:5000/admin/api/java_homework_content";
+    public static String url3 = "http://127.0.0.1:5000/admin/api/java_homework_pro";
 
-	public static String url4 = "http://127.0.0.1:5000/admin/get_excel_recipe_html_java";
-	public static String url5 = "http://127.0.0.1:5000/admin/get_truely_network_graph";
+    public static String url4 = "http://127.0.0.1:5000/admin/get_excel_recipe_html_java";
+    public static String url5 = "http://127.0.0.1:5000/admin/get_truely_network_graph";
 }
 
 ```
@@ -315,49 +315,49 @@ import com.alibaba.fastjson.JSONObject;
 
 
 public class json2table extends JFrame{
-	JTable tb;
-	Object a[][],b[];
+    JTable tb;
+    Object a[][],b[];
 
 
-	public json2table(String s1,String name) {
-		JSONObject js = new JSONObject();
-		js = JSON.parseObject(s1);
+    public json2table(String s1,String name) {
+        JSONObject js = new JSONObject();
+        js = JSON.parseObject(s1);
 
 
-		HashSet<String> row =new HashSet<String>();
-		List<String> cols = new ArrayList<>(js.keySet());
-		List<String> rows = new ArrayList<>(js.getJSONObject(cols.get(0)).keySet());
+        HashSet<String> row =new HashSet<String>();
+        List<String> cols = new ArrayList<>(js.keySet());
+        List<String> rows = new ArrayList<>(js.getJSONObject(cols.get(0)).keySet());
 
 
 
-		a = new Object[rows.size()][cols.size()];
+        a = new Object[rows.size()][cols.size()];
 
-		for (int i = 0; i < cols.size(); i++) {
-			JSONObject eachcol = js.getJSONObject(cols.get(i));
-			for (int j = 0; j < rows.size(); j++) {
-//				System.out.println(eachcol.getString(rows.get(j)));
-				a[j][i] = eachcol.getString(rows.get(j));
-			}
-		}
+        for (int i = 0; i < cols.size(); i++) {
+    JSONObject eachcol = js.getJSONObject(cols.get(i));
+    for (int j = 0; j < rows.size(); j++) {
+//        System.out.println(eachcol.getString(rows.get(j)));
+        a[j][i] = eachcol.getString(rows.get(j));
+    }
+        }
 
-		tb = new JTable(a,cols.toArray());
+        tb = new JTable(a,cols.toArray());
 
-		System.out.println(rows);
-		System.out.println(cols);
+        System.out.println(rows);
+        System.out.println(cols);
 
-		Container con = getContentPane();
+        Container con = getContentPane();
 
-		getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
+        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
 
-		tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-		setTitle(name);
-		setSize(10000,10000);
-		setVisible(true);
-		validate();
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
+        setTitle(name);
+        setSize(10000,10000);
+        setVisible(true);
+        validate();
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
 
-	}
+    }
 
 }
 ```

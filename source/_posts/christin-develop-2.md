@@ -62,7 +62,7 @@ email: zxjlm233@gmail.com
 
 最终的 nginx 配置文件核心配置如下.
 
-```nginx
+```plain_text
 server {
     listen       80;
     server_name  localhost;

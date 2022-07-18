@@ -17,7 +17,7 @@ thumbStyle: default
 hidden: false
 ---
 
-```cpp
+```c++
 #include <iostream>
 
 

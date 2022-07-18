@@ -19,7 +19,7 @@ hidden: false
 
 先使用 CVS 来打个人生的 tag 吧
 
-**milestone 3.1**
+milestone 3.1
 
 ## 个人体会
 

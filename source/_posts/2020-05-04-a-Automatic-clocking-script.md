@@ -2,6 +2,7 @@
 layout: post
 cid: 225
 title: 自动化的每日打卡工具v1.1
+no2notin: true
 slug: 225
 date: 2020/05/04 15:52:00
 updated: 2020/05/18 20:54:42
@@ -84,7 +85,7 @@ def test_job():
 
 ## 如何使用
 
-已经部署好啦 http://daka.harumonia.top:5008/
+已经部署好啦 "http://daka.harumonia.top:5008/"
 
 ![图片.png](https://i.loli.net/2020/05/04/x2MHB96ivYkwufV.png)
 
@@ -104,7 +105,7 @@ curl 例子: curl 'https://pdc.njucm.edu.cn/pdc/formDesignApi/dataFormSave?wid=*
 
 第二个选项是选择打卡的时间,if 输入 3,就是每天 3 点进行打卡.
 
-**默认一次录入一条,如果一天中需要多次打卡的,多次录入即可**
+默认一次录入一条,如果一天中需要多次打卡的,多次录入即可
 
 ### S3 检查
 
