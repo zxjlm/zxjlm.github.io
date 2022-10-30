@@ -4452,6 +4452,11 @@
     "open" "^7.0.0"
     "serve-static" "^1.14.1"
 
+"hexo-theme-yun@^1.10.9":
+  "integrity" "sha512-wUc7HpqEG8r/laEMX9nDIbM/sNXUkTBtL4SBRGgujozyTsGVsrKxojHNuv3rg2y7RXrVZDInrgaIfdgjeDNQbQ=="
+  "resolved" "https://registry.npmmirror.com/hexo-theme-yun/-/hexo-theme-yun-1.10.9.tgz"
+  "version" "1.10.9"
+
 "hexo-util@^0.6.3":
   "integrity" "sha512-zPxaqCWZz3/25SAB4FlrRtWktJ+Pr+vBiv/nyHpXKgXPt1m70liViKlRwWLqDmRjJ72x6/k4qCEeXHajvcGHUw=="
   "resolved" "https://registry.npmjs.org/hexo-util/-/hexo-util-0.6.3.tgz"
