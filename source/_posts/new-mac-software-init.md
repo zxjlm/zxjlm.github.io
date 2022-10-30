@@ -12,11 +12,7 @@ email: zxjlm233@gmail.com
 date: 2022-05-14 15:35:54
 updated:
 categories:
-  - 源流清泉
-  - Mac
 tags:
-  - Mac
-  - software
 customSummary:
 thumb:
 thumbDesc:
@@ -56,6 +52,8 @@ J社全家桶虽然是收费软件, 不过可以通过学生优惠、开发者�
 
 另外还推荐J社的 __Datagrip__ 作为数据库GUI工具, Navicat虽然好用, 不过破解版前不久有过后台丑闻, 所以破解版在笔者这里已经是下下之选了.
 
+![toolbox](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.12.45.png)
+
 [vscode](https://code.visualstudio.com/download)
 
 宇宙第一编辑器, 搭配各种插件, 能够应付绝大多数的开发情境.
@@ -66,6 +64,8 @@ J社全家桶虽然是收费软件, 不过可以通过学生优惠、开发者�
 
 [nvm install](https://github.com/nvm-sh/nvm#install--update-script)
 
+nvm 是用来管理不同版本的 node 的工具. 能够通过命令行直接安装 \ 切换 \ 删除不同版本的 node
+
 ### 通用
 
 #### iterm2
@@ -73,6 +73,8 @@ J社全家桶虽然是收费软件, 不过可以通过学生优惠、开发者�
 [iterm2](https://iterm2.com/)
 
 iterm2 可以用来作为自带的终端工具 __Terminal__ 的替代品. 拥有更丰富的功能和更美观的界面.
+
+![iterm2](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.47.01.png)
 
 ##### oh-my-zsh
 
@@ -84,7 +86,9 @@ oh-my-zsh 是zsh的增强组件, 具体安装及配置可见于[ubuntu初始化]
 
 文档管理工具  _dash_ 能够方便地管理各种类型的文档, 其官方维护了很多的文档, 并且对于 _Go_ 之类自带文档的, 或者文档在Github上面的, 都有很好的支持.
 
-将dash管理的文档是在本地的, 所以即使断网了也不影响开发工作.
+将dash管理的文档是在 __本地__ 的, 所以即使断网了也不影响开发工作.
+
+![dash](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.50.56.png)
 
 ## 办公
 
@@ -103,6 +107,10 @@ oh-my-zsh 是zsh的增强组件, 具体安装及配置可见于[ubuntu初始化]
 
 Maccy 能够记录剪切板的历史, 可以包含文字\图片等内容. 它有收费版(appstore) 和 [开源版](https://github.com/p0deje/Maccy), 使用开源版即可.
 
+在配置来快捷键之后, 可以快速地呼出历史记录面板, 该面板支持搜索功能.
+
+![maccy](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.52.11.png)
+
 ### Command One
 
 [command one](https://apps.apple.com/us/app/commander-one-file-manager/id1035236694?mt=12) 是文件管理工具, 支持ftp等远程文件传输管理.
@@ -111,13 +119,19 @@ Maccy 能够记录剪切板的历史, 可以包含文字\图片等内容. 它有
 
 [istat menus](https://bjango.com/mac/istatmenus/) 一款菜单栏上的系统监视器, 能够展示CPU\内存\显存\风扇\磁盘用量等非常多的系统参数, 它的缺点就是会占用很大一片菜单栏的位置, 笔者使用的16寸Mac依然无法显示全貌, 再没有更大的显示屏幕的情况下, 需要配合 Dozer \ hidden bar 等软件使用.
 
-#### hidden bar
+![memus](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.54.51.png)
 
-[hidden bar](https://apps.apple.com/cn/app/hidden-bar/id1452453066?mt=12) 可以让菜单栏折叠, 把不常用的一些软件, 如 Docker Desktop \ 剪切板 等隐藏起来, 为其他的软件腾出空间.
+#### bartender 4
+
+[bartender 4](https://www.macbartender.com/Bartender4/) 可以让菜单栏折叠, 把不常用的一些软件, 如 Docker Desktop \ 剪切板 等隐藏起来, 为其他的软件腾出空间.
+
+![bartender](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.55.25.png)
 
 ### switch hosts
 
 [switch hosts](https://github.com/oldj/SwitchHosts/releases) 是用来切换hosts文件配置的. 对于需要mock host或者其他host频繁切换的情境非常适合.
+
+![switch hosts](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.57.34.png)
 
 ### *alfred
 
@@ -127,3 +141,13 @@ Maccy 能够记录剪切板的历史, 可以包含文字\图片等内容. 它有
 
 - [iterm2](https://github.com/vitorgalvao/custom-alfred-iterm-scripts)
 - [1password](https://github.com/alfredapp/1password-workflow#readme)
+
+### picgo
+
+[picgo](https://github.com/Molunerfinn/PicGo) 是一款开源的聚合图床管理软件. 支持 github \ 各家的 oss \ sm.ms 等图床 \ oss平台 . 并且有众多的开发者提供多样化的插件服务.
+
+![picgo](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.58.51.png)
+
+### OmniDiskSweeper
+
+[OmniDiskSweeper](https://www.omnigroup.com/more)
