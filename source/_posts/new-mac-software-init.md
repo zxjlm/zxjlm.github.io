@@ -133,6 +133,10 @@ Maccy 能够记录剪切板的历史, 可以包含文字\图片等内容. 它有
 
 ![switch hosts](https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.57.34.png)
 
+#### 推荐几个 hosts 源
+
+[github host (日更)](https://github.com/ineo6/hosts)
+
 ### *alfred
 
 [Alfred](https://www.alfredapp.com/) 自动化管理工具, 功能十分强大齐备, 可以取代 __聚焦__ \ __Maccy__ 等软件. 通过 _apple script_ 可以和很多的 Mac 软件进行 "梦幻联动" .
