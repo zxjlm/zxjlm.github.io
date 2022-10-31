@@ -99,7 +99,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yun-haru
+theme: yun
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -209,3 +209,62 @@ baidu_url_submit:
   host: blog.harumonia.moe ## 百度站长平台中注册的域名
   token: aesafYLAzNwdRiYd ## 准入秘钥
   path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
+bangumi: # 追番设置
+  enable: true
+  source: bgm
+  bgmInfoSource: 'bgmApi'
+  path:
+  vmid: 441346
+  title: '追番列表'
+  quote: '异世界的星辰大海'
+  show: 1
+  lazyload: true
+  srcValue: '__image__'
+  lazyloadAttrName: 'data-src=__image__'
+  loading:
+  showMyComment: false
+  pagination: false
+  metaColor:
+  color:
+  webp:
+  progress:
+  extraOrder:
+  # proxy:
+  #   host: '代理host'
+  #   port: '代理端口'
+  extra_options:
+    key: value
+
+# cinema: # 追剧设置
+#   enable: true
+#   path:
+#   vmid:
+#   title: '追剧列表'
+#   quote: '生命不息，追剧不止！'
+#   show: 1
+#   lazyload: true
+#   srcValue: '__image__'
+#   lazyloadAttrName: 'data-src=__image__'
+#   loading:
+#   metaColor:
+#   color:
+#   webp:
+#   progress:
+#   extraOrder:
+#   extra_options:
+#     key: value
