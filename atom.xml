@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zaxon</title>
+  <icon>https://blog.harumonia.moe/icon.png</icon>
+  <subtitle>Find the key of soul</subtitle>
+  <link href="https://blog.harumonia.moe/atom.xml" rel="self"/>
+  
+  <link href="https://blog.harumonia.moe/"/>
+  <updated>2022-10-31T08:07:07.884Z</updated>
+  <id>https://blog.harumonia.moe/</id>
+  
+  <author>
+    <name>harumonia</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022.4~.7 生活小结</title>
+    <link href="https://blog.harumonia.moe/2022-4-7/"/>
+    <id>https://blog.harumonia.moe/2022-4-7/</id>
+    <published>2022-07-17T21:17:19.000Z</published>
+    <updated>2022-10-31T08:07:07.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2022-4-7&quot;&gt;&lt;a href=&quot;#2022-4-7&quot; class=&quot;headerlink&quot; title=&quot;2022 4~7&quot;&gt;&lt;/a&gt;2022 4~7&lt;/h1&gt;&lt;h2 id=&quot;猫咪&quot;&gt;&lt;a href=&quot;#猫咪&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="起居杂录" scheme="https://blog.harumonia.moe/categories/%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>开发人员的Mac软件推荐列表(持续更新)</title>
+    <link href="https://blog.harumonia.moe/new-mac-software-init/"/>
+    <id>https://blog.harumonia.moe/new-mac-software-init/</id>
+    <published>2022-05-14T15:35:54.000Z</published>
+    <updated>2022-10-31T08:07:07.888Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;开发者新Mac配置推荐. 本列表以开源免费的软件为主, 以及部分实用的收费软件. 不会包含盗版软件获取途径与软件破解方法, 取而代之的是,</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker 镜像优化实践</title>
+    <link href="https://blog.harumonia.moe/docker-image-smaller/"/>
+    <id>https://blog.harumonia.moe/docker-image-smaller/</id>
+    <published>2022-04-15T16:30:50.000Z</published>
+    <updated>2022-10-31T08:07:07.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇主要的内容是如何对 Docker 镜像进行优化.&lt;/p&gt;
+&lt;p&gt;优化总共分为以下几步:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于项目优化&lt;ul&gt;
+&lt;li&gt;缩减依赖包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基于Docker优化&lt;ul&gt;
+&lt;li&gt;目录结构优化&lt;/li&gt;
+&lt;li&gt;构建文件优化&lt;/li&gt;
+&lt;li&gt;使用 &lt;strong&gt;dive&lt;/strong&gt; 进行镜像分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以及部分 &lt;strong&gt;Multi-stage build&lt;/strong&gt; 的内容.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Docker" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://blog.harumonia.moe/tags/Docker/"/>
+    
+    <category term="optimization" scheme="https://blog.harumonia.moe/tags/optimization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>doccano的使用注意</title>
+    <link href="https://blog.harumonia.moe/doccano-use/"/>
+    <id>https://blog.harumonia.moe/doccano-use/</id>
+    <published>2022-04-12T20:58:22.000Z</published>
+    <updated>2022-04-12T20:58:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本篇完成于 2022-04-12, 对应的 doccano 版本为 1.6.2.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/doccano/doccano&quot;&gt;doccano&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="NLP" scheme="https://blog.harumonia.moe/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>API设计个人经验小结(施工中)</title>
+    <link href="https://blog.harumonia.moe/design-better-api/"/>
+    <id>https://blog.harumonia.moe/design-better-api/</id>
+    <published>2022-03-29T09:50:04.000Z</published>
+    <updated>2022-03-29T10:37:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>github同步代码片段的自动化脚本</title>
+    <link href="https://blog.harumonia.moe/sync-code-snippet/"/>
+    <id>https://blog.harumonia.moe/sync-code-snippet/</id>
+    <published>2022-03-19T11:56:55.000Z</published>
+    <updated>2022-04-01T11:10:55.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;工作快一年了, 积累了很多的 代码片段(&lt;code&gt;code snippet&lt;/code&gt;), 所以需要一个小工具来实现公司\家庭\开发\私人服务器等地方的代码片段的同步.&lt;/p&gt;
+&lt;p&gt;同步的方法有很多, 我试过onedriver \ codemass \ gist 等手段, 但是各有各的缺点(后文补充), 所以最后还是选择了一个相对折中的方案, GitHub.&lt;/p&gt;
+&lt;p&gt;本文主要介绍的就是如何通过自动化脚本实现GitHub代码片段的同步.&lt;/p&gt;
+&lt;p&gt;代码环境:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;macos&lt;/li&gt;
+&lt;li&gt;ubuntu&lt;/li&gt;
+&lt;li&gt;centos&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Shell" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Shell/"/>
+    
+    
+    <category term="Trick" scheme="https://blog.harumonia.moe/tags/Trick/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022-2 莎翁与王尔德</title>
+    <link href="https://blog.harumonia.moe/2022-2/"/>
+    <id>https://blog.harumonia.moe/2022-2/</id>
+    <published>2022-03-01T21:38:45.000Z</published>
+    <updated>2022-03-01T21:38:45.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;日常生活.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>django-shell-inject-script</title>
+    <link href="https://blog.harumonia.moe/django-shell-inject-script/"/>
+    <id>https://blog.harumonia.moe/django-shell-inject-script/</id>
+    <published>2022-02-17T16:23:41.000Z</published>
+    <updated>2022-02-17T16:23:41.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.&lt;/p&gt;
+&lt;p&gt;本篇会介绍一个注入脚本, 可以方便地在 python 的交互式 shell 中进行调试.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一曲新词酒一杯</title>
+    <link href="https://blog.harumonia.moe/a-love-affair-gone-by/"/>
+    <id>https://blog.harumonia.moe/a-love-affair-gone-by/</id>
+    <published>2022-02-04T22:14:39.000Z</published>
+    <updated>2022-02-07T10:25:34.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;不胜人间一醉.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu初始环境配置(持续更新中)</title>
+    <link href="https://blog.harumonia.moe/ubuntu-initial/"/>
+    <id>https://blog.harumonia.moe/ubuntu-initial/</id>
+    <published>2022-01-05T10:19:25.000Z</published>
+    <updated>2022-01-07T10:14:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本想改造一下公司电脑的 Windows,后来干脆直接给电脑刷了个 Windows, 于是, 风扇不再是噪声源, 电脑不再是暖手宝, 一切都变得清爽了起来.&lt;/p&gt;
+&lt;p&gt;唯一美中不足的是 ubuntu 上的软件和 Windows 还是有些差异的, 所以就有了本篇, 将各个常用的软件(从程序员的角度)的安装和坑点列出来.&lt;/p&gt;
+&lt;p&gt;另附一个开发中的 &lt;a href=&quot;https://github.com/zxjlm/ubuntu-dev-setup-especially-for-cn&quot;&gt;Ubuntu 初始化脚本&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021</title>
+    <link href="https://blog.harumonia.moe/my-2021/"/>
+    <id>https://blog.harumonia.moe/my-2021/</id>
+    <published>2022-01-01T19:00:08.000Z</published>
+    <updated>2022-01-02T01:03:44.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.&lt;/p&gt;
+&lt;p&gt;不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>bash脚本 - 过期日志文件清理</title>
+    <link href="https://blog.harumonia.moe/clean-logs/"/>
+    <id>https://blog.harumonia.moe/clean-logs/</id>
+    <published>2021-09-17T22:03:57.000Z</published>
+    <updated>2021-09-17T11:08:02.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;公司服务器上的日志文件多年积压, 已经占用了很大一部分不必要的内存空间. 所以本篇将完成一个功能性脚本, 其内容是扫描过期的日志文件, 并对文件进行对应的操作.&lt;/p&gt;
+&lt;p&gt;好久没有写过 bash 脚本了, 本篇也算是对这项技能的一个温习吧.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Shell" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Shell/"/>
+    
+    
+    <category term="实用小工具" scheme="https://blog.harumonia.moe/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="脚本" scheme="https://blog.harumonia.moe/tags/%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pdfplumber内存泄露问题解决方案(施工中)</title>
+    <link href="https://blog.harumonia.moe/pdfplumber-memory-leak/"/>
+    <id>https://blog.harumonia.moe/pdfplumber-memory-leak/</id>
+    <published>2021-09-14T10:47:01.000Z</published>
+    <updated>2021-09-14T10:47:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在使用 &lt;strong&gt;pdfplumber&lt;/strong&gt; 时会出现内存递增的情况, 最终导致内存的爆炸, 这一点在高频率地调用时尤为明显.&lt;br&gt;本篇主要解决的就是 &lt;strong&gt;pdfplumber&lt;/strong&gt; 这个依赖包所导致的内存泄露问题.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="solution" scheme="https://blog.harumonia.moe/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Poirot 开发记录(2) - 字体抽取和OCR的优化方案</title>
+    <link href="https://blog.harumonia.moe/poirot-development-2/"/>
+    <id>https://blog.harumonia.moe/poirot-development-2/</id>
+    <published>2021-08-25T21:27:55.000Z</published>
+    <updated>2022-10-31T08:07:07.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;承接前面两篇, &lt;a href=&quot;https://blog.harumonia.moe/font-antispider-cracker/&quot;&gt;字体反爬虫解决方案&lt;/a&gt; 和 &lt;a href=&quot;https://blog.harumonia.moe/poirot-development-progressbar/&quot;&gt;进度条方案&lt;/a&gt;, 本篇是对旧版本的 Poirot 部分内容的性能优化.&lt;/p&gt;
+&lt;p&gt;主要优化内容为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;Pillow&lt;/code&gt; 从字体文件中抽取出字形图片&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;Tesseract&lt;/code&gt; 进行 OCR 识别&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;del&gt;当然还有一些细枝末节的优化, 如 socketio 的版本升级等, 这其中又遇到了一些小问题, 会在文末一并总结.&lt;/del&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="spider" scheme="https://blog.harumonia.moe/tags/spider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kex_exchange_identification问题及解决</title>
+    <link href="https://blog.harumonia.moe/github-kex-exchange-identification-solution/"/>
+    <id>https://blog.harumonia.moe/github-kex-exchange-identification-solution/</id>
+    <published>2021-07-18T20:30:19.000Z</published>
+    <updated>2021-07-18T20:41:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;简单地记述了一下在使用 &lt;em&gt;github&lt;/em&gt; 时遇到的 &lt;strong&gt;kex_exchange_identification&lt;/strong&gt; 错误.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>毕业旅行</title>
+    <link href="https://blog.harumonia.moe/chengdu-seven-day/"/>
+    <id>https://blog.harumonia.moe/chengdu-seven-day/</id>
+    <published>2021-06-28T21:09:20.000Z</published>
+    <updated>2022-10-31T08:07:07.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇又是一个日常记述, 主要内容是博主毕业旅行的二三事.&lt;/p&gt;
+&lt;p&gt;目的地定在 &lt;em&gt;成都&lt;/em&gt; , 来回耗时 &lt;em&gt;7&lt;/em&gt; 天, 包括交通费在内的人均总开销 &lt;em&gt;3985.51RMB&lt;/em&gt;. 乘兴而来, 兴尽而归, 总的来说世一趟很不错的旅行.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="起居杂录" scheme="https://blog.harumonia.moe/categories/%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95/"/>
+    
+    
+    <category term="旅行" scheme="https://blog.harumonia.moe/tags/%E6%97%85%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Christin开发记录(2) - nginx和前后端分离</title>
+    <link href="https://blog.harumonia.moe/christin-develop-2/"/>
+    <id>https://blog.harumonia.moe/christin-develop-2/</id>
+    <published>2021-06-12T18:05:28.000Z</published>
+    <updated>2021-06-15T09:57:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在&lt;a href=&quot;https://blog.harumonia.moe/christin-develop-1/&quot;&gt;Christin 开发记录(1)&lt;/a&gt;中， 我们讲过了这个项目的大体的设计思路，本篇以及之后的几篇将会详细地阐述各个技术要点的具体实现方案。&lt;/p&gt;
+&lt;p&gt;本篇主要的内容是 nginx 在 &lt;em&gt;前后端分离&lt;/em&gt; 和 &lt;em&gt;多语言开发&lt;/em&gt; 的代理作用.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大学生活阶段性小结</title>
+    <link href="https://blog.harumonia.moe/upon-graduation/"/>
+    <id>https://blog.harumonia.moe/upon-graduation/</id>
+    <published>2021-06-11T10:35:44.000Z</published>
+    <updated>2022-10-31T08:07:07.888Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;醉花阴 - 满船清梦&lt;/p&gt;
+&lt;p&gt;红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.&lt;br&gt;杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.&lt;/p&gt;
+&lt;p&gt;– harumonia, 二〇二一年六月, 于南京中医药大学&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="起居杂录" scheme="https://blog.harumonia.moe/categories/%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95/"/>
+    
+    
+    <category term="生活" scheme="https://blog.harumonia.moe/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>fastNLP和spaCy的使用</title>
+    <link href="https://blog.harumonia.moe/fastnlp-and-spacy/"/>
+    <id>https://blog.harumonia.moe/fastnlp-and-spacy/</id>
+    <published>2021-06-06T18:05:42.000Z</published>
+    <updated>2022-10-31T08:07:07.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;fastNLP 和 spaCy 都是自然语言处理常用的算法包,本篇将会应用的角度,分别使用这两个算法包训练一个可用的命名实体识别模型.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="自然语言处理" scheme="https://blog.harumonia.moe/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Christin开发记录(1)</title>
+    <link href="https://blog.harumonia.moe/christin-develop-1/"/>
+    <id>https://blog.harumonia.moe/christin-develop-1/</id>
+    <published>2021-05-21T20:46:07.000Z</published>
+    <updated>2022-10-31T08:07:07.884Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;关于-Christin&quot;&gt;&lt;a href=&quot;#关于-Christin&quot; class=&quot;headerlink&quot; title=&quot;关于 Christin&quot;&gt;&lt;/a&gt;关于 Christin&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Christin&lt;/code&gt; 是笔者本科毕业设计的伴生项目, 笔者本科毕业设计的课题叫做 &lt;strong&gt;基于多元异构数据的中医药知识图谱构建及应用&lt;/strong&gt; , 作为其实践产物的平台,我将其命名为 &lt;strong&gt;Christin&lt;/strong&gt; , 选名自我所以喜爱的 ARPG 游戏系列 &lt;em&gt;&amp;lt;伊苏&amp;gt;&lt;/em&gt; 的主角 &lt;em&gt;亚特鲁-克里斯汀( Adol Christin )&lt;/em&gt; 以及我第二喜欢的小说家 &lt;em&gt;Dame Agatha Mary Clarissa Christie&lt;/em&gt;. 当然, 其对外的平台名称叫做 &lt;strong&gt;中医药知识图谱构建平台&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;本系列将主要介绍这个项目开发的 &lt;strong&gt;思路&lt;/strong&gt; / &lt;strong&gt;完善过程&lt;/strong&gt; 与 &lt;strong&gt;技术栈&lt;/strong&gt; . (截止到毕设答辩前夕)&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+</feed>
