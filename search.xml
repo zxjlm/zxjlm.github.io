@@ -957,17 +957,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>关于Mac Xcode上使用c++读取txt文件</title>
-    <url>/2018-12-15-read-txt-file-via-cpp-on-Xcode/</url>
-    <content><![CDATA[<h1 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h1><p>Product -&gt;Scheme -&gt;Edit Scheme-&gt;左边选择 Run 选择-&gt;选择 Option-&gt;在 Working Dictionary 选项里面，打钩 Using cusom working dictionary<br>这样就解决了 Xcode 读取路径的问题</p>
-<h1 id="txt-文件"><a href="#txt-文件" class="headerlink" title="txt 文件"></a>txt 文件</h1><p>一般使用文本编辑创建后默认是 rtf 文件，将 rtf 文件保存为纯文本文件就可以了</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Algorithm \ Data Structure</category>
-      </categories>
-  </entry>
-  <entry>
     <title>蓝桥杯二三事（第一阶段施工完毕）</title>
     <url>/2018-12-19-sth-of-blue-bridge/</url>
     <content><![CDATA[<p>这里将会记载做蓝桥杯的题目时的一些感悟以及灵感（还有一些无聊的吐槽啦。</p>
@@ -1002,58 +991,15 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>我的第一只爬虫= =</title>
-    <url>/2018-12-26-my-first-spider/</url>
-    <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
-<span id="more"></span>
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#用于爬取typecho框架下handsome主题的主标题信息</span>
-<span class="token comment">#Author：harumonia</span>
-
-<span class="token keyword">import</span> requests
-<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-
-<span class="token keyword">def</span> <span class="token function">get_movies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    headers <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-    <span class="token string">'user-agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>
-    <span class="token punctuation">&#125;</span>
-    movie_list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token comment">#movie_list2 = []</span>
-
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        link <span class="token operator">=</span> <span class="token string">'https://www.moerats.com/page/'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'/'</span>
-        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>link<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span> timeout<span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"页响应状态码:"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
-
-        soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">,</span> <span class="token string">"lxml"</span><span class="token punctuation">)</span>
-        div_list1 <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> class_<span class="token operator">=</span><span class="token string">'post-meta wrapper-lg'</span><span class="token punctuation">)</span>
-        <span class="token comment">#div_list2 = soup.find_all('div', class_='bd')</span>
-
-        <span class="token keyword">for</span> each <span class="token keyword">in</span> div_list1<span class="token punctuation">:</span>
-            movie <span class="token operator">=</span> each<span class="token punctuation">.</span>h2<span class="token punctuation">.</span>a<span class="token punctuation">.</span>text<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token comment">#print(each.a.span.next_sibling.next_sibling.text)</span>
-            movie_list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>movie<span class="token punctuation">)</span>
-        <span class="token triple-quoted-string string">'''
-        for each in div_list2:
-            director=each.p.text.strip()
-            movie_list2.append(director)
-        '''</span>
-    <span class="token keyword">return</span> movie_list1
-
-movies <span class="token operator">=</span> get_movies<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> movies<span class="token punctuation">:</span>
-    <span class="token keyword">print</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
-<span class="token comment">#print (movies2)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <title>关于Mac Xcode上使用c++读取txt文件</title>
+    <url>/2018-12-15-read-txt-file-via-cpp-on-Xcode/</url>
+    <content><![CDATA[<h1 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h1><p>Product -&gt;Scheme -&gt;Edit Scheme-&gt;左边选择 Run 选择-&gt;选择 Option-&gt;在 Working Dictionary 选项里面，打钩 Using cusom working dictionary<br>这样就解决了 Xcode 读取路径的问题</p>
+<h1 id="txt-文件"><a href="#txt-文件" class="headerlink" title="txt 文件"></a>txt 文件</h1><p>一般使用文本编辑创建后默认是 rtf 文件，将 rtf 文件保存为纯文本文件就可以了</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
-        <category>Python</category>
+        <category>Algorithm \ Data Structure</category>
       </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-        <tag>入门</tag>
-      </tags>
   </entry>
   <entry>
     <title>P站爬虫v2.0</title>
@@ -1310,6 +1256,60 @@ driver<span class="token punctuation">.</span>close<span class="token punctuatio
       <tags>
         <tag>爬虫</tag>
         <tag>pixiv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一只爬虫= =</title>
+    <url>/2018-12-26-my-first-spider/</url>
+    <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#用于爬取typecho框架下handsome主题的主标题信息</span>
+<span class="token comment">#Author：harumonia</span>
+
+<span class="token keyword">import</span> requests
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+
+<span class="token keyword">def</span> <span class="token function">get_movies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    headers <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">'user-agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>
+    <span class="token punctuation">&#125;</span>
+    movie_list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment">#movie_list2 = []</span>
+
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        link <span class="token operator">=</span> <span class="token string">'https://www.moerats.com/page/'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'/'</span>
+        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>link<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span> timeout<span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"页响应状态码:"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>status_code<span class="token punctuation">)</span>
+
+        soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">,</span> <span class="token string">"lxml"</span><span class="token punctuation">)</span>
+        div_list1 <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> class_<span class="token operator">=</span><span class="token string">'post-meta wrapper-lg'</span><span class="token punctuation">)</span>
+        <span class="token comment">#div_list2 = soup.find_all('div', class_='bd')</span>
+
+        <span class="token keyword">for</span> each <span class="token keyword">in</span> div_list1<span class="token punctuation">:</span>
+            movie <span class="token operator">=</span> each<span class="token punctuation">.</span>h2<span class="token punctuation">.</span>a<span class="token punctuation">.</span>text<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token comment">#print(each.a.span.next_sibling.next_sibling.text)</span>
+            movie_list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>movie<span class="token punctuation">)</span>
+        <span class="token triple-quoted-string string">'''
+        for each in div_list2:
+            director=each.p.text.strip()
+            movie_list2.append(director)
+        '''</span>
+    <span class="token keyword">return</span> movie_list1
+
+movies <span class="token operator">=</span> get_movies<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> movies<span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>i<span class="token punctuation">,</span>end<span class="token operator">=</span><span class="token string">'\n'</span><span class="token punctuation">)</span>
+<span class="token comment">#print (movies2)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>爬虫</tag>
+        <tag>Python</tag>
+        <tag>入门</tag>
       </tags>
   </entry>
   <entry>
@@ -1576,6 +1576,24 @@ bool exist(vector&lt;vector&lt;char&gt;&gt;&amp; board, string word) &#123;
       </tags>
   </entry>
   <entry>
+    <title>flask 开发心得 part 1</title>
+    <url>/2019-07-16-flask-experience-part/</url>
+    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
+<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
+<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
+<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
+<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
+<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 数据挖掘基础</title>
     <url>/2019-07-16-Python-basic-of-DM/</url>
     <content><![CDATA[<p>本篇记载了如何在 python 中使用数据挖掘的相关的模块。<br>都是基础级的东西了。</p>
@@ -1671,24 +1689,6 @@ sns<span class="token punctuation">.</span>set_style<span class="token punctuati
       </categories>
       <tags>
         <tag>datasci</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>flask 开发心得 part 1</title>
-    <url>/2019-07-16-flask-experience-part/</url>
-    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
-<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
-<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
-<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
-<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
-<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2693,6 +2693,38 @@ pic_new<span class="token punctuation">.</span>save<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>工作室异闻录(1)</title>
+    <url>/2019-08-06-Anecdote-of-studio/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VENI VIDI VICI。 –凯撒</p>
+</blockquote>
+<p>我将这句话写在了大二篇章的中叶。</p>
+<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
+<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
+<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
+<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
+<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
+<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg" loading="lazy"></a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>sklearn应用性学习(2)</title>
     <url>/2019-08-05-learning-sklearn-via-practice-2/</url>
     <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
@@ -2727,38 +2759,6 @@ pic_new<span class="token punctuation">.</span>save<span class="token punctuatio
       <tags>
         <tag>sklearn</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>工作室异闻录(1)</title>
-    <url>/2019-08-06-Anecdote-of-studio/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>VENI VIDI VICI。 –凯撒</p>
-</blockquote>
-<p>我将这句话写在了大二篇章的中叶。</p>
-<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
-<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
-<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
-<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
-<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
-<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg" loading="lazy"></a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
   </entry>
   <entry>
     <title>Be a better pythonista(1)</title>
@@ -3026,6 +3026,44 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </categories>
   </entry>
   <entry>
+    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
+    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
+    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
+<p>因为台风过境,大部分的动车班次都被停运.</p>
+<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
+<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
+<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
+
+<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
+<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
+<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
+<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
+<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
+
+<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
+<p>一条长江,分开了两个世界.</p>
+<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
+<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
+<!--
+[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
+
+<p>对比,就是这么鲜明.</p>
+<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
+<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
+<p>没错,它的特色,就是没有特色.</p>
+<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
+<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
+<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
+<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
+</ul>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（1）</title>
     <url>/2019-08-09-jsjds-travel-notes-of-wuhu-1/</url>
     <content><![CDATA[<p>一个很粗糙的作品，莫名其妙的就通过了省赛，然后莫名其妙地就到了国赛。。。算了，就好好享受一下吧，至少是要不 gong 虚 fei 此 chi 行 he，哈哈。</p>
@@ -3104,41 +3142,23 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
-    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
-    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
-<p>因为台风过境,大部分的动车班次都被停运.</p>
-<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
-<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
-<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
-
-<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
-<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
-<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
-<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
-<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
-
-<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
-<p>一条长江,分开了两个世界.</p>
-<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
-<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
-<!--
-[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
-
-<p>对比,就是这么鲜明.</p>
-<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
-<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
-<p>没错,它的特色,就是没有特色.</p>
-<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
-<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
-<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
-<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
-</ul>
+    <title>scikit-learn 入门建议</title>
+    <url>/2019-08-12-scikit-learn-suggestion/</url>
+    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
+<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
+<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
+<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
+<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
+<p><a href="https://www.datacamp.com/">datacamp</a></p>
+<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
+<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
+<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
+<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
+<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
+<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
 ]]></content>
       <categories>
-        <category>起居杂录</category>
+        <category>源流清泉</category>
       </categories>
   </entry>
   <entry>
@@ -3230,26 +3250,6 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
 ]]></content>
       <categories>
         <category>桂苑酌记</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>scikit-learn 入门建议</title>
-    <url>/2019-08-12-scikit-learn-suggestion/</url>
-    <content><![CDATA[<p>在七月中旬,我曾经问过涛哥,sklearn 的学习侧重,他给的建议是先学习应用.这与我重应用,补理论的观点不谋而合.</p>
-<p>这是针对零基础的入门方法.对于数学功底一般(如果没有,那就还是先补一补数学吧…)的人,先看应用,在应用的过程中理解理论知识,这是比较稳妥的办法,也可以避免但看理论的枯燥,避开中期乏力的问题.</p>
-<p>而如果数学\统计学底子好的,可以由理论入实践,这样会更快.</p>
-<p>以下是一些资源:<br><a href="https://www.icourse163.org/learn/BIT-1001872001?tid=1001965001">python 机器学习应用</a></p>
-<p>这是涛哥推荐的应用型学习网站,我已经全都看完,并且对其中的一些代码进行了优化,这里的优化是指性能优化,并不是说原来的不好,原来的为了照顾新人,所以有些地方写得太难看了.当然,原来的代码有些地方是有问题的,如果遇到了,可以问我.</p>
-<p><a href="https://www.datacamp.com/">datacamp</a></p>
-<p>datacamp,不知道你能不能连上去,这里面的课程是收费的,不过你可以蹭一节 sklearn 的应用先导课,这门可的第一节免费的,可以通过这个知道一下 sklearn 的入门方式.这是我目前看到的最好的实践教学网站(穷穷不说话).</p>
-<p><a href="https://www.datacamp.com/courses/supervised-learning-with-scikit-learn/continue">这是我所说的那门课程</a></p>
-<p><a href="https://sklearn.apachecn.org/">sklearn 的中文翻译</a><br>sklearn 的中文翻译对数学底子不好的新手实在过于不友好了.作为低配的官方文档使用.</p>
-<p><a href="https://scikit-learn.org/stable/">sklearn 官方文档</a><br>sklearn 的官方文档是我少见的良心文档之一,只把它作为”工具书”来用实在过于屈才,但是如果只靠它来学习 sklearn(反正我是撑不下去…)</p>
-<p>以上是主要的资源,以前发给你们的电子书,那本&lt;数据挖掘导论&gt;可以看一下,毕竟是导论嘛.我这里是有书后习题的答案的,当时好像没有给你们.</p>
-<p>其余的一些不是很重要的资源,等我想到了再做补充吧~</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
       </categories>
   </entry>
   <entry>
@@ -3811,6 +3811,191 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
       </categories>
   </entry>
   <entry>
+    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
+    <url>/2019-09-01-Titanic-solution-via-RF/</url>
+    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
+<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
+<span id="more"></span>
+
+<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
+<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
+<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
+Survived -  Survived (1) or died (0)
+Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
+Name -  Passenger&#39;s name
+Sex - Passenger&#39;s sex
+Age -  Passenger&#39;s age
+SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
+Parch -  Number of parents&#x2F;children aboard the Titanic
+Ticket -  Ticket number
+FareFare -  paid for ticket
+Cabin - Cabin number
+Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
+<p>这里先列一下最终的目标:</p>
+<ul>
+<li>数值化,随机森林不支持非数值的数据</li>
+<li>消除残缺值</li>
+</ul>
+<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 12 columns):
+PassengerId    891 non-null int64
+Survived       891 non-null int64
+Pclass         891 non-null int64
+Name           891 non-null object
+Sex            891 non-null object
+Age            714 non-null float64
+SibSp          891 non-null int64
+Parch          891 non-null int64
+Ticket         891 non-null object
+Fare           891 non-null float64
+Cabin          204 non-null object
+Embarked       889 non-null object
+dtypes: float64(2), int64(5), object(5)
+memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
+<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
+<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
+<ul>
+<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
+<li>填补</li>
+</ul>
+<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
+<p>这里我选择去填补(修正残缺值).</p>
+<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
+Age         0.198653
+Embarked    0.002245
+Fare        0.000000
+Parch       0.000000
+SibSp       0.000000
+Sex         0.000000
+Pclass      0.000000
+Survived    0.000000
+dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我准备先从残缺值比低的开始修正(又是废话….</p>
+<p>目前我所掌握的两种方法:</p>
+<ul>
+<li>人工分析</li>
+<li>随机森林填补</li>
+</ul>
+<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
+<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
+<table>
+<thead>
+<tr>
+<th>PassengerId</th>
+<th>Survived</th>
+<th>Pclass</th>
+<th>Sex</th>
+<th>Age</th>
+<th>SibSp</th>
+<th>Parch</th>
+<th>Fare</th>
+<th>Cabin</th>
+<th>Embarked</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>62</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>38.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>830</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>62.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+</tbody></table>
+<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
+<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
+<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
+G     14.205000
+F     18.079367
+N     19.132707
+T     35.500000
+A     41.244314
+D     53.007339
+E     54.564634
+C    107.926598
+B    122.383078
+Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
+    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
+
+df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
+<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
+<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
+<table>
+<thead>
+<tr>
+<th>训练均分</th>
+<th>测试均分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.9909744528907043</td>
+<td>0.7901017214397495</td>
+</tr>
+</tbody></table>
+<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
+param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>优化之后,test 分数变为 0.8207282913165266</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Data Mining</category>
+      </categories>
+      <tags>
+        <tag>随机森林</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Be a better pythonista(3)</title>
     <url>/2019-08-28-Be_a_better_pythonista-3/</url>
     <content><![CDATA[<p>本节主要是函数和类的一些技巧操作.</p>
@@ -4120,191 +4305,6 @@ Got<span class="token punctuation">:</span> helloworld
       </categories>
       <tags>
         <tag>pythonista</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
-    <url>/2019-09-01-Titanic-solution-via-RF/</url>
-    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
-<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
-<span id="more"></span>
-
-<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
-<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
-<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
-<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
-Survived -  Survived (1) or died (0)
-Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
-Name -  Passenger&#39;s name
-Sex - Passenger&#39;s sex
-Age -  Passenger&#39;s age
-SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
-Parch -  Number of parents&#x2F;children aboard the Titanic
-Ticket -  Ticket number
-FareFare -  paid for ticket
-Cabin - Cabin number
-Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
-<p>这里先列一下最终的目标:</p>
-<ul>
-<li>数值化,随机森林不支持非数值的数据</li>
-<li>消除残缺值</li>
-</ul>
-<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 12 columns):
-PassengerId    891 non-null int64
-Survived       891 non-null int64
-Pclass         891 non-null int64
-Name           891 non-null object
-Sex            891 non-null object
-Age            714 non-null float64
-SibSp          891 non-null int64
-Parch          891 non-null int64
-Ticket         891 non-null object
-Fare           891 non-null float64
-Cabin          204 non-null object
-Embarked       889 non-null object
-dtypes: float64(2), int64(5), object(5)
-memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
-<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
-<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
-<ul>
-<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
-<li>填补</li>
-</ul>
-<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
-<p>这里我选择去填补(修正残缺值).</p>
-<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
-Age         0.198653
-Embarked    0.002245
-Fare        0.000000
-Parch       0.000000
-SibSp       0.000000
-Sex         0.000000
-Pclass      0.000000
-Survived    0.000000
-dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>我准备先从残缺值比低的开始修正(又是废话….</p>
-<p>目前我所掌握的两种方法:</p>
-<ul>
-<li>人工分析</li>
-<li>随机森林填补</li>
-</ul>
-<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
-<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
-<table>
-<thead>
-<tr>
-<th>PassengerId</th>
-<th>Survived</th>
-<th>Pclass</th>
-<th>Sex</th>
-<th>Age</th>
-<th>SibSp</th>
-<th>Parch</th>
-<th>Fare</th>
-<th>Cabin</th>
-<th>Embarked</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>62</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>38.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>830</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>62.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-</tbody></table>
-<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
-<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
-<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
-G     14.205000
-F     18.079367
-N     19.132707
-T     35.500000
-A     41.244314
-D     53.007339
-E     54.564634
-C    107.926598
-B    122.383078
-Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
-    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
-
-df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
-<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
-<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
-<table>
-<thead>
-<tr>
-<th>训练均分</th>
-<th>测试均分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0.9909744528907043</td>
-<td>0.7901017214397495</td>
-</tr>
-</tbody></table>
-<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
-param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>优化之后,test 分数变为 0.8207282913165266</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Data Mining</category>
-      </categories>
-      <tags>
-        <tag>随机森林</tag>
       </tags>
   </entry>
   <entry>
@@ -4638,6 +4638,64 @@ public:
       </tags>
   </entry>
   <entry>
+    <title>No.64 最小路径和:动态规划</title>
+    <url>/2019-10-10-minimum-path-sum/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
+<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
+
+示例:
+
+输入:
+
+    [
+        [1,3,1],
+        [1,5,1],
+        [4,2,1]
+    ]
+
+输出: 7
+
+解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
+        int n &#x3D; grid.size();
+        int m &#x3D; grid[0].size();
+        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
+            return 0;
+        for(int i &#x3D; 1; i &lt; n; i++)
+            grid[i][0] +&#x3D; grid[i-1][0];
+        for(int i &#x3D; 1; i &lt; m; i++)
+            grid[0][i] +&#x3D; grid[0][i-1];
+        for(int i &#x3D; 1;i &lt; n; i++)
+            for(int j &#x3D; 1; j &lt; m; j++)
+                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
+        return grid[n-1][m-1];
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>周赛157</title>
     <url>/2019-10-06-week-157/</url>
     <content><![CDATA[<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1437205549.png?Expires=1602302340&" alt="res" loading="lazy"></p>
@@ -4803,64 +4861,6 @@ public:
         <tag>算法</tag>
         <tag>LeetCode</tag>
         <tag>周赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>No.64 最小路径和:动态规划</title>
-    <url>/2019-10-10-minimum-path-sum/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
-<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
-<span id="more"></span>
-
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
-
-示例:
-
-输入:
-
-    [
-        [1,3,1],
-        [1,5,1],
-        [4,2,1]
-    ]
-
-输出: 7
-
-解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
-        int n &#x3D; grid.size();
-        int m &#x3D; grid[0].size();
-        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
-            return 0;
-        for(int i &#x3D; 1; i &lt; n; i++)
-            grid[i][0] +&#x3D; grid[i-1][0];
-        for(int i &#x3D; 1; i &lt; m; i++)
-            grid[0][i] +&#x3D; grid[0][i-1];
-        for(int i &#x3D; 1;i &lt; n; i++)
-            for(int j &#x3D; 1; j &lt; m; j++)
-                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
-        return grid[n-1][m-1];
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
-        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -5089,6 +5089,82 @@ public:
       </tags>
   </entry>
   <entry>
+    <title>No.71 简化路径:shashasha</title>
+    <url>/2019-10-14-simplify-path/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
+<p>以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。</p>
+<p>在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..）  表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径</p>
+<p>请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。</p>
+<span id="more"></span>
+
+<p>示例 1：</p>
+<p>输入：”/home/“<br>输出：”/home”<br>解释：注意，最后一个目录名后面没有斜杠。</p>
+<p>示例 2：</p>
+<p>输入：”/../“<br>输出：”/“<br>解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。</p>
+<p>示例 3：</p>
+<p>输入：”/home//foo/“<br>输出：”/home/foo”<br>解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。</p>
+<p>示例 4：</p>
+<p>输入：”/a/./b/../../c/“<br>输出：”/c”</p>
+<p>示例 5：</p>
+<p>输入：”/a/../../b/../c//.//“<br>输出：”/c”</p>
+<p>示例 6：</p>
+<p>输入：”/a//b////c/d//././/..”<br>输出：”/a/b/c”</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>放在诸多的字符串题目中，这一题可以说平平无奇。<br>不过在优化答案的过程中，有了一些很有意思的感想，所以就把它单独列为一篇 blog 吧。</p>
+<p>我们应该俯视问题，而不是仰视问题。同样推广到人生之中也是在这样，眼界决定境界，布局决定结局。 by. 日常犯二的 zxj</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经典的栈使用法。<br>关键是思路要正确。<br>如果选择每次校验是”.” 还是”..”还是”///“,那么恭喜你，掉进坑里了。<br>所以，我选择每次去找两个”/“之间的字符串，注意，是所有字符串，然后对比已知的特殊情况”..”和”.”。<br>实际上这是非常巧妙的一种方法，这里建议自己先做一遍在看下面的代码。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    string simplifyPath(string path) &#123;
+        stack&lt;string&gt; st;
+        string res &#x3D; &quot;&quot;;
+        int n &#x3D; path.size();
+
+        while(path[--n] &#x3D;&#x3D; &#39;&#x2F;&#39;)
+            continue;
+        path &#x3D; path.substr(0,n+1) +&quot;&#x2F;&quot;;
+
+        for(int i &#x3D; 0; i &lt;&#x3D; n; i++)&#123;
+            if(path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;)&#123;
+                while(i &lt;&#x3D; n &amp;&amp; path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;) i++;
+                int left &#x3D; i;
+                while(i &lt;&#x3D; n &amp;&amp; path[i] !&#x3D; &#39;&#x2F;&#39;) i++;
+
+                string tmp &#x3D; path.substr(left,i-left);
+                if(tmp &#x3D;&#x3D; &quot;..&quot;) &#123;
+                    if(!st.empty())
+                        st.pop();
+                &#125;
+                else if(tmp &#x3D;&#x3D; &quot;.&quot;) tmp &#x3D; &quot;wakaka,woshicaidan&quot;;
+                else st.push(tmp);
+                i--;
+            &#125;
+        &#125;
+
+        while(!st.empty())&#123;
+            res &#x3D; &quot;&#x2F;&quot; + st.top() + res;
+            st.pop();
+        &#125;
+        if(res &#x3D;&#x3D; &quot;&quot;) return &quot;&#x2F;&quot;;
+        return res;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>很麻烦的一道题目，从结果的那种图片可以看出，我做了几次优化，最后时间从击败 44%升到 91% ，很有成就感。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>周赛158</title>
     <url>/2019-10-13-week-158/</url>
     <content><![CDATA[<h2 id="分割平衡字符串"><a href="#分割平衡字符串" class="headerlink" title="分割平衡字符串"></a>分割平衡字符串</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><a href="https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/">传送门</a></p>
@@ -5241,82 +5317,6 @@ public:
       </categories>
   </entry>
   <entry>
-    <title>No.71 简化路径:shashasha</title>
-    <url>/2019-10-14-simplify-path/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/simplify-path/">No.71 简化路径</a></p>
-<p>以 Unix 风格给出一个文件的绝对路径，你需要简化它。或者换句话说，将其转换为规范路径。</p>
-<p>在 Unix 风格的文件系统中，一个点（.）表示当前目录本身；此外，两个点 （..）  表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。更多信息请参阅：Linux / Unix 中的绝对路径 vs 相对路径</p>
-<p>请注意，返回的规范路径必须始终以斜杠 / 开头，并且两个目录名之间必须只有一个斜杠 /。最后一个目录名（如果存在）不能以 / 结尾。此外，规范路径必须是表示绝对路径的最短字符串。</p>
-<span id="more"></span>
-
-<p>示例 1：</p>
-<p>输入：”/home/“<br>输出：”/home”<br>解释：注意，最后一个目录名后面没有斜杠。</p>
-<p>示例 2：</p>
-<p>输入：”/../“<br>输出：”/“<br>解释：从根目录向上一级是不可行的，因为根是你可以到达的最高级。</p>
-<p>示例 3：</p>
-<p>输入：”/home//foo/“<br>输出：”/home/foo”<br>解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。</p>
-<p>示例 4：</p>
-<p>输入：”/a/./b/../../c/“<br>输出：”/c”</p>
-<p>示例 5：</p>
-<p>输入：”/a/../../b/../c//.//“<br>输出：”/c”</p>
-<p>示例 6：</p>
-<p>输入：”/a//b////c/d//././/..”<br>输出：”/a/b/c”</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>放在诸多的字符串题目中，这一题可以说平平无奇。<br>不过在优化答案的过程中，有了一些很有意思的感想，所以就把它单独列为一篇 blog 吧。</p>
-<p>我们应该俯视问题，而不是仰视问题。同样推广到人生之中也是在这样，眼界决定境界，布局决定结局。 by. 日常犯二的 zxj</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3050857160.png?Expires=1602312305&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>经典的栈使用法。<br>关键是思路要正确。<br>如果选择每次校验是”.” 还是”..”还是”///“,那么恭喜你，掉进坑里了。<br>所以，我选择每次去找两个”/“之间的字符串，注意，是所有字符串，然后对比已知的特殊情况”..”和”.”。<br>实际上这是非常巧妙的一种方法，这里建议自己先做一遍在看下面的代码。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    string simplifyPath(string path) &#123;
-        stack&lt;string&gt; st;
-        string res &#x3D; &quot;&quot;;
-        int n &#x3D; path.size();
-
-        while(path[--n] &#x3D;&#x3D; &#39;&#x2F;&#39;)
-            continue;
-        path &#x3D; path.substr(0,n+1) +&quot;&#x2F;&quot;;
-
-        for(int i &#x3D; 0; i &lt;&#x3D; n; i++)&#123;
-            if(path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;)&#123;
-                while(i &lt;&#x3D; n &amp;&amp; path[i] &#x3D;&#x3D; &#39;&#x2F;&#39;) i++;
-                int left &#x3D; i;
-                while(i &lt;&#x3D; n &amp;&amp; path[i] !&#x3D; &#39;&#x2F;&#39;) i++;
-
-                string tmp &#x3D; path.substr(left,i-left);
-                if(tmp &#x3D;&#x3D; &quot;..&quot;) &#123;
-                    if(!st.empty())
-                        st.pop();
-                &#125;
-                else if(tmp &#x3D;&#x3D; &quot;.&quot;) tmp &#x3D; &quot;wakaka,woshicaidan&quot;;
-                else st.push(tmp);
-                i--;
-            &#125;
-        &#125;
-
-        while(!st.empty())&#123;
-            res &#x3D; &quot;&#x2F;&quot; + st.top() + res;
-            st.pop();
-        &#125;
-        if(res &#x3D;&#x3D; &quot;&quot;) return &quot;&#x2F;&quot;;
-        return res;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>很麻烦的一道题目，从结果的那种图片可以看出，我做了几次优化，最后时间从击败 44%升到 91% ，很有成就感。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
-        <tag>字符串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>No.72 编辑距离:动态规划</title>
     <url>/2019-10-17-edit-distance/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/edit-distance/">No.72 编辑距离</a></p>
@@ -5437,71 +5437,6 @@ public:
       </categories>
   </entry>
   <entry>
-    <title>No.84 柱状图中最大的矩形:多解法</title>
-    <url>/2019-10-24-largest-rectangle-in-histogram/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/">No.84 柱状图中最大的矩形</a></p>
-<p>难度：<strong>困难</strong></p>
-<p>给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
-<p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram.png" alt="p1" loading="lazy"></p>
-<p>以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram_area.png" alt="p2" loading="lazy"></p>
-<p>图中阴影部分为所能勾勒出的最大矩形面积，其面积为 10 个单位。</p>
-<span id="more"></span>
-
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>法一:</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1045205236.png?Expires=1602312740&" alt="截屏2019-10-24下午8.23.47.png" loading="lazy"></p>
-<p>法二:</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/230613868.png?Expires=1602312752&" alt="截屏2019-10-24下午8.29.24.png" loading="lazy"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2144508509.png?Expires=1602312838&" alt="84.png" loading="lazy"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>解法一：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
-        int n &#x3D; heights.size(),res &#x3D; 0;
-        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
-            int left &#x3D; i,right &#x3D; i;
-            while(left &gt;&#x3D; 0 &amp;&amp; heights[left] &gt;&#x3D; heights[i]) left--;
-            while(right &lt; n &amp;&amp; heights[right] &gt;&#x3D; heights[i]) right++;
-            res &#x3D; (right - left - 1) * heights[i] &gt; res ? (right - left - 1) * heights[i] : res;
-        &#125;
-        return res;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>解法二：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
-        if(heights.size() &#x3D;&#x3D; 0) return 0;
-        int n &#x3D; heights.size(),res &#x3D; heights[0],record;
-        stack&lt;int&gt; st;
-        st.push(-1);
-        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
-            while(st.top()!&#x3D;-1 &amp;&amp; heights[i] &lt; heights[st.top()])&#123;
-                int tmp &#x3D; st.top();
-                st.pop();
-                res &#x3D; max(heights[tmp] * (i - st.top() - 1),res);
-            &#125;
-            st.push(i);
-        &#125;
-        while(st.top()!&#x3D;-1)&#123;
-            int tmp &#x3D; st.top();
-            st.pop();
-            res &#x3D; max(heights[tmp] * (n - st.top() - 1),res);
-        &#125;
-        return res;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>She was still too young to know that life never gives anything for nothing， and that a price is always exacted for what fate bestows。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>No.85 最大矩形</title>
     <url>/2019-10-25-maximal-rectangle/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/maximal-rectangle/">No.85 最大矩形</a></p>
@@ -5575,55 +5510,64 @@ public:
       </categories>
   </entry>
   <entry>
-    <title>No.77 组合:回溯法</title>
-    <url>/2019-10-26-combinations/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/combinations/">No.77 组合</a></p>
-<p>给定两个整数 n 和 k，返回 1 … n 中所有可能的 k 个数的组合。</p>
+    <title>No.84 柱状图中最大的矩形:多解法</title>
+    <url>/2019-10-24-largest-rectangle-in-histogram/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/">No.84 柱状图中最大的矩形</a></p>
+<p>难度：<strong>困难</strong></p>
+<p>给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。</p>
+<p>求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram.png" alt="p1" loading="lazy"></p>
+<p>以上是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 [2,1,5,6,2,3]。</p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/12/histogram_area.png" alt="p2" loading="lazy"></p>
+<p>图中阴影部分为所能勾勒出的最大矩形面积，其面积为 10 个单位。</p>
 <span id="more"></span>
 
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例:
-
-输入:n &#x3D; 4, k &#x3D; 2
-输出:
-
-    [
-    [2,4],
-    [3,4],
-    [2,3],
-    [1,2],
-    [1,3],
-    [1,4],
-    ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
-<p>执行用时 :636 ms, 在所有 cpp 提交中击败了 15.29%的用户<br>内存消耗 :167.7 MB, 在所有 cpp 提交中击败了 8.43%的用户</p>
-</blockquote>
-<p>时间消耗和空间消耗有点高，不过在使用回溯法的前提下，这是最优解吧。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="http://harumonia.top/usr/uploads/2019/10/892638645.png" alt="77.png" loading="lazy"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p>法一:</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1045205236.png?Expires=1602312740&" alt="截屏2019-10-24下午8.23.47.png" loading="lazy"></p>
+<p>法二:</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/230613868.png?Expires=1602312752&" alt="截屏2019-10-24下午8.29.24.png" loading="lazy"></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2144508509.png?Expires=1602312838&" alt="84.png" loading="lazy"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>解法一：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
 public:
-    vector&lt;vector&lt;int&gt;&gt; ret;
-    vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) &#123;
-        backtracking(1,n,k,vector&lt;int&gt;());
-
-        return ret;
-    &#125;
-
-    void backtracking(int start,int n,int k,vector&lt;int&gt; tmp)&#123;
-        if(tmp.size() &#x3D;&#x3D; k)&#123;
-            ret.push_back(tmp);
-            return;
+    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
+        int n &#x3D; heights.size(),res &#x3D; 0;
+        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
+            int left &#x3D; i,right &#x3D; i;
+            while(left &gt;&#x3D; 0 &amp;&amp; heights[left] &gt;&#x3D; heights[i]) left--;
+            while(right &lt; n &amp;&amp; heights[right] &gt;&#x3D; heights[i]) right++;
+            res &#x3D; (right - left - 1) * heights[i] &gt; res ? (right - left - 1) * heights[i] : res;
         &#125;
-
-        for (; start&lt;&#x3D;n ;start++)&#123;
-            tmp.push_back(start);
-            backtracking(start+1,n,k,tmp);
-            tmp.pop_back();
-        &#125;
+        return res;
     &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>呼儿将出换美酒，与尔同销万古愁。</p>
+<p>解法二：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
+        if(heights.size() &#x3D;&#x3D; 0) return 0;
+        int n &#x3D; heights.size(),res &#x3D; heights[0],record;
+        stack&lt;int&gt; st;
+        st.push(-1);
+        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
+            while(st.top()!&#x3D;-1 &amp;&amp; heights[i] &lt; heights[st.top()])&#123;
+                int tmp &#x3D; st.top();
+                st.pop();
+                res &#x3D; max(heights[tmp] * (i - st.top() - 1),res);
+            &#125;
+            st.push(i);
+        &#125;
+        while(st.top()!&#x3D;-1)&#123;
+            int tmp &#x3D; st.top();
+            st.pop();
+            res &#x3D; max(heights[tmp] * (n - st.top() - 1),res);
+        &#125;
+        return res;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>She was still too young to know that life never gives anything for nothing， and that a price is always exacted for what fate bestows。</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -5766,6 +5710,62 @@ public:
 &#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>梦到了老年的 zxj。<br>在一个本应该光怪陆离的世界里，他这样就坐在门前的台阶上，捧着一盏白雾蒸腾的茶，在不知道是夕阳还是朝阳的辉光里，眺望。<br>没有什么鸟语花香，也没有什么秋风萧瑟。渐渐地，一切的背景都在淡化，最终归于虚无。<br>甚至有一瞬间，<br>我感觉，<br>不是我梦到了他，<br>而是，<br>他在追忆我。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>No.77 组合:回溯法</title>
+    <url>/2019-10-26-combinations/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/combinations/">No.77 组合</a></p>
+<p>给定两个整数 n 和 k，返回 1 … n 中所有可能的 k 个数的组合。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例:
+
+输入:n &#x3D; 4, k &#x3D; 2
+输出:
+
+    [
+    [2,4],
+    [3,4],
+    [2,3],
+    [1,2],
+    [1,3],
+    [1,4],
+    ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
+<p>执行用时 :636 ms, 在所有 cpp 提交中击败了 15.29%的用户<br>内存消耗 :167.7 MB, 在所有 cpp 提交中击败了 8.43%的用户</p>
+</blockquote>
+<p>时间消耗和空间消耗有点高，不过在使用回溯法的前提下，这是最优解吧。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><img src="http://harumonia.top/usr/uploads/2019/10/892638645.png" alt="77.png" loading="lazy"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    vector&lt;vector&lt;int&gt;&gt; ret;
+    vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) &#123;
+        backtracking(1,n,k,vector&lt;int&gt;());
+
+        return ret;
+    &#125;
+
+    void backtracking(int start,int n,int k,vector&lt;int&gt; tmp)&#123;
+        if(tmp.size() &#x3D;&#x3D; k)&#123;
+            ret.push_back(tmp);
+            return;
+        &#125;
+
+        for (; start&lt;&#x3D;n ;start++)&#123;
+            tmp.push_back(start);
+            backtracking(start+1,n,k,tmp);
+            tmp.pop_back();
+        &#125;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>呼儿将出换美酒，与尔同销万古愁。</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -6002,6 +6002,216 @@ public:
         <category>源流清泉</category>
         <category>leetcodeの解题日志</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Java课设中的问题以及解决方案(二)</title>
+    <url>/2019-11-21-Course-Design-of-Java-QS-2/</url>
+    <content><![CDATA[<h2 id="windowbuilder-安装和使用"><a href="#windowbuilder-安装和使用" class="headerlink" title="windowbuilder 安装和使用"></a>windowbuilder 安装和使用</h2><p>类比于在 VS stdio 上开发 c#,eclipse 有对应的 GUI 开发工具,也就是 windowbuilder.<br>当然同类型的工具也有 NetBeans 等.编程虽然有趣,但是本身是一件很麻烦的事情,所以我就只选择了普遍评价较高的 windowbuilder 作尝试.<br><a href="https://download.eclipse.org/windowbuilder/latest/">windowbuilder 主页</a></p>
+<p>S1:安装插件(install new software)(这里注意活用 help 功能)<br>S2:将 “<a href="https://download.eclipse.org/windowbuilder/latest/&quot;">https://download.eclipse.org/windowbuilder/latest/&quot;</a> 复制到 work with 一栏中<br>S3:一路点击 next 全选安装即可</p>
+<p>安装完毕会提示重启,重启完成,在 new-&gt;other-&gt;windowbuilder-&gt;swing Designer-&gt;Application Window 中创建项目.</p>
+<p>可以在代码文件的左下角发现,多了一个 Desgin 选项,至此,windowbuilder 安装完成.</p>
+<h2 id="多线程进阶"><a href="#多线程进阶" class="headerlink" title="多线程进阶"></a>多线程进阶</h2><p>在<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a>中有提到的一个问题.<br>当时虽然成功创建了进度条,不过发现主窗体的线程钳制了分线程的运行(也就是说,主窗体线程运行完毕之前,分线程不会共享主线程的资源)</p>
+<p>纠结了半个晚上,于是今天突发奇想,将分线程对主线程资源的操作转移到备胎线程之中,这样本质上大家都是分线程,也就不会出现次序问题了.</p>
+<p>多说无益,上代码</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">button.addActionListener(new ActionListener() &#123;
+    public void actionPerformed(ActionEvent e) &#123;
+        new labelControl1(matrixLoder).start();
+        new labelControl2(contentLoder).start();
+        new labelControl3(probilityLoder).start();
+        resultOf01Button.setEnabled(false);
+        resultOfcontentButton.setEnabled(false);
+        resultOfprobilityButton.setEnabled(false);
+        chartsOfcontentButton.setEnabled(false);
+        chartsOfProbilityButton.setEnabled(false);
+        visable_init(true);
+
+        new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
+    &#125;
+            &#x2F;&#x2F;将post命令放在新的线程中并发执行
+        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif" loading="lazy"></p>
+<h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
+<h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
+<ul>
+<li>JTable()</li>
+<li>JTable(int a,int b) //a 行 b 列</li>
+<li>JTable(Object a[][],Object b[]) //a 存放数据表,b 存放列名</li>
+</ul>
+<p>一般我采用的是 new jtable(Object a[][],Object b[])这样的初始化方式.</p>
+<h4 id="json2jtable"><a href="#json2jtable" class="headerlink" title="json2jtable"></a>json2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">JSONObject js &#x3D; new JSONObject();
+        js &#x3D; JSON.parseObject(s1);
+
+
+        HashSet&lt;String&gt; row &#x3D;new HashSet&lt;String&gt;();
+        List&lt;String&gt; cols &#x3D; new ArrayList&lt;&gt;(js.keySet());
+        List&lt;String&gt; rows &#x3D; new ArrayList&lt;&gt;(js.getJSONObject(cols.get(0)).keySet());
+
+
+
+        a &#x3D; new Object[rows.size()][cols.size()];
+
+        for (int i &#x3D; 0; i &lt; cols.size(); i++) &#123;
+    JSONObject eachcol &#x3D; js.getJSONObject(cols.get(i));
+    for (int j &#x3D; 0; j &lt; rows.size(); j++) &#123;
+&#x2F;&#x2F;        System.out.println(eachcol.getString(rows.get(j)));
+        a[j][i] &#x3D; eachcol.getString(rows.get(j));
+    &#125;
+        &#125;
+
+        tb &#x3D; new JTable(a,cols.toArray());
+
+        Container con &#x3D; getContentPane();
+
+        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
+
+        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+        setTitle(name);
+        setSize(10000,10000);
+        setVisible(true);
+        validate();
+        setDefaultCloseOperation(HIDE_ON_CLOSE);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="csv2jtable"><a href="#csv2jtable" class="headerlink" title="csv2jtable"></a>csv2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Object[] columnnames;
+        CSVReader CSVFileReader &#x3D; null;
+        try &#123;
+    CSVFileReader &#x3D; new CSVReader(new FileReader(filepath));
+        &#125; catch (FileNotFoundException e) &#123;
+    &#x2F;&#x2F; TODO Auto-generated catch block
+    e.printStackTrace();
+        &#125;
+        List myEntries &#x3D; null;
+        try &#123;
+    myEntries &#x3D; CSVFileReader.readAll();
+        &#125; catch (IOException | CsvException e) &#123;
+    &#x2F;&#x2F; TODO Auto-generated catch block
+    e.printStackTrace();
+        &#125;
+        columnnames &#x3D; (String[]) myEntries.get(0);
+        DefaultTableModel tableModel &#x3D; new DefaultTableModel(columnnames, myEntries.size()-1);
+        int rowcount &#x3D; tableModel.getRowCount();
+        for (int x &#x3D; 0; x&lt;rowcount+1; x++)
+        &#123;
+            int columnnumber &#x3D; 0;
+            &#x2F;&#x2F; if x &#x3D; 0 this is the first row...skip it... data used for columnnames
+            if (x&gt;0)
+            &#123;
+                for (String thiscellvalue : (String[])myEntries.get(x))
+                &#123;
+&#x2F;&#x2F;                    System.out.println(thiscellvalue);
+                    tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
+                    columnnumber++;
+                &#125;
+            &#125;
+        &#125;
+        System.out.println(tableModel);
+        return tableModel;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="jtextarea2jtable"><a href="#jtextarea2jtable" class="headerlink" title="jtextarea2jtable"></a>jtextarea2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
+            Document doc &#x3D; e.getDocument();
+            String str &#x3D; null;
+            try &#123;
+        str &#x3D; doc.getText(0, doc.getLength());
+            &#125; catch (BadLocationException e1) &#123;
+        &#x2F;&#x2F; TODO Auto-generated catch block
+        e1.printStackTrace();
+            &#125;
+            arr &#x3D; str.split(&quot;\\s+&quot;);
+
+            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
+        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
+        Object a[][];
+
+        a &#x3D; new Object[arr.length&#x2F;2][2];
+
+        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
+            a[j&#x2F;2][j%2] &#x3D; arr[j];
+        &#125;
+
+        table_1 &#x3D; new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            &#125;
+
+        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="一些属性"><a href="#一些属性" class="headerlink" title="一些属性"></a>一些属性</h3><p>Q:如何添加滚动条?<br>A:见<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a></p>
+<p>Q:表格想变为不可选?<br>A: JTable.setEnabled(false);</p>
+<p>Q:表格变为只读?<br>A: 重载 JTable.isCellEditable(row, column), 令其始终返回 false.</p>
+<h2 id="监听设置"><a href="#监听设置" class="headerlink" title="监听设置"></a>监听设置</h2><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>监听 textarea 中输入的值,并在下方生成对应的数据表</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">textPane.getDocument().addDocumentListener(new DocumentListener() &#123;
+
+    @Override
+    public void removeUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+
+    &#125;
+
+    @Override
+    public void insertUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+        if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
+            Document doc &#x3D; e.getDocument();
+            String str &#x3D; null;
+            try &#123;
+        str &#x3D; doc.getText(0, doc.getLength());
+            &#125; catch (BadLocationException e1) &#123;
+        &#x2F;&#x2F; TODO Auto-generated catch block
+        e1.printStackTrace();
+            &#125;
+            arr &#x3D; str.split(&quot;\\s+&quot;);
+
+            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
+        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
+        Object a[][];
+
+        a &#x3D; new Object[arr.length&#x2F;2][2];
+
+        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
+            a[j&#x2F;2][j%2] &#x3D; arr[j];
+        &#125;
+
+        table_1 &#x3D; new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            &#125;
+
+        &#125;
+    &#125;
+
+    @Override
+    public void changedUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+
+    &#125;
+        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><ul>
+<li>removeUpdate 当删除发生时</li>
+<li>insertUpdate 当插入发生时</li>
+<li>changedUpdate 当发生变化时</li>
+</ul>
+<p>处于性能考虑,一般选择只使用 insert</p>
+<p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
+<p>处于性能考虑,我选择再上传时统一进行正则化.</p>
+<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif" loading="lazy"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
+</blockquote>
+<p>– 茨威格&lt;人类群星闪耀时&gt;</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java课程设计</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(一)</title>
@@ -6266,216 +6476,6 @@ public class json2table extends JFrame&#123;
 <ul>
 <li>最后,谢谢^_^</li>
 </ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java课程设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java课设中的问题以及解决方案(二)</title>
-    <url>/2019-11-21-Course-Design-of-Java-QS-2/</url>
-    <content><![CDATA[<h2 id="windowbuilder-安装和使用"><a href="#windowbuilder-安装和使用" class="headerlink" title="windowbuilder 安装和使用"></a>windowbuilder 安装和使用</h2><p>类比于在 VS stdio 上开发 c#,eclipse 有对应的 GUI 开发工具,也就是 windowbuilder.<br>当然同类型的工具也有 NetBeans 等.编程虽然有趣,但是本身是一件很麻烦的事情,所以我就只选择了普遍评价较高的 windowbuilder 作尝试.<br><a href="https://download.eclipse.org/windowbuilder/latest/">windowbuilder 主页</a></p>
-<p>S1:安装插件(install new software)(这里注意活用 help 功能)<br>S2:将 “<a href="https://download.eclipse.org/windowbuilder/latest/&quot;">https://download.eclipse.org/windowbuilder/latest/&quot;</a> 复制到 work with 一栏中<br>S3:一路点击 next 全选安装即可</p>
-<p>安装完毕会提示重启,重启完成,在 new-&gt;other-&gt;windowbuilder-&gt;swing Designer-&gt;Application Window 中创建项目.</p>
-<p>可以在代码文件的左下角发现,多了一个 Desgin 选项,至此,windowbuilder 安装完成.</p>
-<h2 id="多线程进阶"><a href="#多线程进阶" class="headerlink" title="多线程进阶"></a>多线程进阶</h2><p>在<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a>中有提到的一个问题.<br>当时虽然成功创建了进度条,不过发现主窗体的线程钳制了分线程的运行(也就是说,主窗体线程运行完毕之前,分线程不会共享主线程的资源)</p>
-<p>纠结了半个晚上,于是今天突发奇想,将分线程对主线程资源的操作转移到备胎线程之中,这样本质上大家都是分线程,也就不会出现次序问题了.</p>
-<p>多说无益,上代码</p>
-<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">button.addActionListener(new ActionListener() &#123;
-    public void actionPerformed(ActionEvent e) &#123;
-        new labelControl1(matrixLoder).start();
-        new labelControl2(contentLoder).start();
-        new labelControl3(probilityLoder).start();
-        resultOf01Button.setEnabled(false);
-        resultOfcontentButton.setEnabled(false);
-        resultOfprobilityButton.setEnabled(false);
-        chartsOfcontentButton.setEnabled(false);
-        chartsOfProbilityButton.setEnabled(false);
-        visable_init(true);
-
-        new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
-    &#125;
-            &#x2F;&#x2F;将post命令放在新的线程中并发执行
-        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif" loading="lazy"></p>
-<h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
-<h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
-<ul>
-<li>JTable()</li>
-<li>JTable(int a,int b) //a 行 b 列</li>
-<li>JTable(Object a[][],Object b[]) //a 存放数据表,b 存放列名</li>
-</ul>
-<p>一般我采用的是 new jtable(Object a[][],Object b[])这样的初始化方式.</p>
-<h4 id="json2jtable"><a href="#json2jtable" class="headerlink" title="json2jtable"></a>json2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">JSONObject js &#x3D; new JSONObject();
-        js &#x3D; JSON.parseObject(s1);
-
-
-        HashSet&lt;String&gt; row &#x3D;new HashSet&lt;String&gt;();
-        List&lt;String&gt; cols &#x3D; new ArrayList&lt;&gt;(js.keySet());
-        List&lt;String&gt; rows &#x3D; new ArrayList&lt;&gt;(js.getJSONObject(cols.get(0)).keySet());
-
-
-
-        a &#x3D; new Object[rows.size()][cols.size()];
-
-        for (int i &#x3D; 0; i &lt; cols.size(); i++) &#123;
-    JSONObject eachcol &#x3D; js.getJSONObject(cols.get(i));
-    for (int j &#x3D; 0; j &lt; rows.size(); j++) &#123;
-&#x2F;&#x2F;        System.out.println(eachcol.getString(rows.get(j)));
-        a[j][i] &#x3D; eachcol.getString(rows.get(j));
-    &#125;
-        &#125;
-
-        tb &#x3D; new JTable(a,cols.toArray());
-
-        Container con &#x3D; getContentPane();
-
-        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
-
-        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-
-        setTitle(name);
-        setSize(10000,10000);
-        setVisible(true);
-        validate();
-        setDefaultCloseOperation(HIDE_ON_CLOSE);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="csv2jtable"><a href="#csv2jtable" class="headerlink" title="csv2jtable"></a>csv2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Object[] columnnames;
-        CSVReader CSVFileReader &#x3D; null;
-        try &#123;
-    CSVFileReader &#x3D; new CSVReader(new FileReader(filepath));
-        &#125; catch (FileNotFoundException e) &#123;
-    &#x2F;&#x2F; TODO Auto-generated catch block
-    e.printStackTrace();
-        &#125;
-        List myEntries &#x3D; null;
-        try &#123;
-    myEntries &#x3D; CSVFileReader.readAll();
-        &#125; catch (IOException | CsvException e) &#123;
-    &#x2F;&#x2F; TODO Auto-generated catch block
-    e.printStackTrace();
-        &#125;
-        columnnames &#x3D; (String[]) myEntries.get(0);
-        DefaultTableModel tableModel &#x3D; new DefaultTableModel(columnnames, myEntries.size()-1);
-        int rowcount &#x3D; tableModel.getRowCount();
-        for (int x &#x3D; 0; x&lt;rowcount+1; x++)
-        &#123;
-            int columnnumber &#x3D; 0;
-            &#x2F;&#x2F; if x &#x3D; 0 this is the first row...skip it... data used for columnnames
-            if (x&gt;0)
-            &#123;
-                for (String thiscellvalue : (String[])myEntries.get(x))
-                &#123;
-&#x2F;&#x2F;                    System.out.println(thiscellvalue);
-                    tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
-                    columnnumber++;
-                &#125;
-            &#125;
-        &#125;
-        System.out.println(tableModel);
-        return tableModel;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="jtextarea2jtable"><a href="#jtextarea2jtable" class="headerlink" title="jtextarea2jtable"></a>jtextarea2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
-            Document doc &#x3D; e.getDocument();
-            String str &#x3D; null;
-            try &#123;
-        str &#x3D; doc.getText(0, doc.getLength());
-            &#125; catch (BadLocationException e1) &#123;
-        &#x2F;&#x2F; TODO Auto-generated catch block
-        e1.printStackTrace();
-            &#125;
-            arr &#x3D; str.split(&quot;\\s+&quot;);
-
-            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
-        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
-        Object a[][];
-
-        a &#x3D; new Object[arr.length&#x2F;2][2];
-
-        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
-            a[j&#x2F;2][j%2] &#x3D; arr[j];
-        &#125;
-
-        table_1 &#x3D; new JTable(a,columnnames);
-        table_1.setBounds(86, 285, 678, 251);
-        table_1.setEnabled(false);
-        jContentPane.add(table_1);
-        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-            &#125;
-
-        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="一些属性"><a href="#一些属性" class="headerlink" title="一些属性"></a>一些属性</h3><p>Q:如何添加滚动条?<br>A:见<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a></p>
-<p>Q:表格想变为不可选?<br>A: JTable.setEnabled(false);</p>
-<p>Q:表格变为只读?<br>A: 重载 JTable.isCellEditable(row, column), 令其始终返回 false.</p>
-<h2 id="监听设置"><a href="#监听设置" class="headerlink" title="监听设置"></a>监听设置</h2><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>监听 textarea 中输入的值,并在下方生成对应的数据表</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">textPane.getDocument().addDocumentListener(new DocumentListener() &#123;
-
-    @Override
-    public void removeUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-
-    &#125;
-
-    @Override
-    public void insertUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-        if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
-            Document doc &#x3D; e.getDocument();
-            String str &#x3D; null;
-            try &#123;
-        str &#x3D; doc.getText(0, doc.getLength());
-            &#125; catch (BadLocationException e1) &#123;
-        &#x2F;&#x2F; TODO Auto-generated catch block
-        e1.printStackTrace();
-            &#125;
-            arr &#x3D; str.split(&quot;\\s+&quot;);
-
-            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
-        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
-        Object a[][];
-
-        a &#x3D; new Object[arr.length&#x2F;2][2];
-
-        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
-            a[j&#x2F;2][j%2] &#x3D; arr[j];
-        &#125;
-
-        table_1 &#x3D; new JTable(a,columnnames);
-        table_1.setBounds(86, 285, 678, 251);
-        table_1.setEnabled(false);
-        jContentPane.add(table_1);
-        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-            &#125;
-
-        &#125;
-    &#125;
-
-    @Override
-    public void changedUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-
-    &#125;
-        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><ul>
-<li>removeUpdate 当删除发生时</li>
-<li>insertUpdate 当插入发生时</li>
-<li>changedUpdate 当发生变化时</li>
-</ul>
-<p>处于性能考虑,一般选择只使用 insert</p>
-<p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
-<p>处于性能考虑,我选择再上传时统一进行正则化.</p>
-<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif" loading="lazy"></p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
-<p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
-</blockquote>
-<p>– 茨威格&lt;人类群星闪耀时&gt;</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -6839,6 +6839,43 @@ String date &#x3D; String.format(&quot;%tF%n&quot;, date)+&quot; &quot;+String.f
       </tags>
   </entry>
   <entry>
+    <title>浅谈Linux的使用与应用</title>
+    <url>/2019-12-24-some-discussion-of-Linux/</url>
+    <content><![CDATA[<p>这是 Linux 课程的大作业…</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/410079949.jpg?Expires=1602316585&" alt="head" loading="lazy"></p>
+<span id="more"></span>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>自大一开始接触 Linux，从最早的 centOS 到现在常用的 Ubuntu，如今对 Linux 的使用与应用，也算是有一点自己的小小的体会，所以本篇主要就是讲述我个人对于 Linux 使用与应用的一些心得和看法。</p>
+<p>我对于 Linux 的使用主要集中在两个方面，一个是网站的部署，另一个就是数据挖掘和机器学习。<br>先谈谈网站部署吧。</p>
+<p>大一时，租了一台阿里云的学生机，使用 LNMP 体系和 Typecho 框架，准备部署个人博客。作为 Linux 初学者，这无疑是很有挑战性的，事实也是如此，弯弯绕绕一个星期，终于把网站跑起来了。</p>
+<p>于是这里引出第一个问题，像 CentOS 这类的 Linux 操作系统与 Windows 使用风格迥异，对于初学者来说，尤其是使用目标很低的初学者，学习成本太高了，如何降低这样的学习成本呢？</p>
+<p>一种途径是图形化操作。以最近比较热门的 Debian、Ubuntu 为例，他们的操作界面都在向图形化较为成功的类 Unix 系统—macOS 上靠拢，建立一套学习成本低、使用亲民的图形化操作体系。</p>
+<p>另一种途径是建立一个托管型的后端平台。这一方面做得比较好的是宝塔，在进行第二次的个人网站部署的时候，我所选择的就是宝塔，他的使用难度介乎于 macOS 和 CentOS 之间，往往需要与 Terminal 配合操作。</p>
+<p>以上两者各有千秋，但是都有一个很明显的问题，那就是系统资源占用，尤其是对于一个使用着 1 核 2G 的学生机的学生来说，安装了图形化或者宝塔，那么就意味着大部分的性能将用来维护这些辅助的功能，而只能分出一小部分系统资源来运行个人网站。这无疑是本末倒置了。</p>
+<p>后来，随着对 CentOS 的熟练度逐渐提高，我开始放弃宝塔，改为全终端操作，将服务器所有的资源都释放出来，来运行网站或者进行云计算。</p>
+<p>上述所说的个人网站部署是基于 Typecho 的，外框架都提供好了，问题的重点只在于内容的填充，所以这时的部署只是不知底层的很浅显的部署。后来参加计算机设计大赛，开始使用 python 的 flask 来从零开始开发网页，这里主要讲一下开发完成之后的部署的问题。</p>
+<p>最初的部署是使用 Nginx 和 uWsgi，需要更改很多的配置文件，对于新手，很容易就一不小心损坏了配置文件，这无疑是很不友好的。不过所幸第一次选择的是这种部署方式，使得我对于 Ubuntu 的底层有了一些更为深刻的理解。</p>
+<p>第二次部署使用得是 Gunicorn，这是一个自动化程度比较高的部署方式，唯一所需要的只是很多的配置文件而已，不过这些配置文件独立于系统配置文件，基本上不会对系统造成损害。</p>
+<p>再后来，开始接触 Docker。它是云服务技术上的一次创新，让应用程序布署在软件容器下的工作可以自动化进行，借此在 Linux 操作系统上，提供一个额外的软件抽象层，以及操作系统层虚拟化的自动管理机制。</p>
+<p>这无疑比 Gunicorn 多出更多的好处，当然，两者本就不是同一个体量事物。</p>
+<p>我的主要开发环境大抵是两个，一个是 Windows，一个是 macOS，Ubuntu 虽然也在用，不过不是作为主要的开发环境，而是作为一个单纯的部署环境使用的。这就引出一个问题，那就是系统不同导致 Python 代码上有一些细微的区别，虽然代码使用 git 同步时，可以避免掉一些问题，但是需要设置很多的东西，非常麻烦。有了 Docker 之后，所有的平台实现了真正的同步，这一点虚拟机也可以做到，但是虚拟机占用了更多的系统资源，并且响应速度极慢，很多情境下不能满足使用需求。<br>关于 Docker，由于最近还在进行更深入的研究，所以就只谈这么多。</p>
+<p>再谈一谈数据挖掘和机器学习。最近也有在研究这方面的内容，不过自己的机器性能有限，并且很多时候不能把所有的性能都解放出来来进行计算，毕竟日常生活还是要用到电脑的。于是这就使得数据挖掘的进度非常地缓。后来，使用了学校的服务器，终于实际体会到了，云计算在当下如此热门的原因。</p>
+<p>CentOS 这类的类 Unix 系统将大部分的硬件计算能力调动起来，并且熟练之后，比起 Windows 有着更为方便快捷的操作（脚本操作），Unix 这样一个与数据挖掘关联不大的东西，很可能可以作为一个区分数据挖掘能力的分水岭。</p>
+<p>使用 Linux 已经有 3 年的时间了，选修了张老师的网络操作系统，这学期又选修了胡老师的嵌入式，获益良多。虽然大多时候它都只是一个辅助的操作系统，但也有了很多深刻的体会，Linux 是一个与程序员耦合度极高的系统，并且有着与其学习成本相称的价值。</p>
+<p>– harumonia 2019 年 12 月 24 日</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>在书写的过程中,顺带着回顾了一下三年来的课外学习成果.</p>
+<p>对技术的热爱贯穿了整个大学的课外学习生活,这样的感觉真的很棒.</p>
+<p>最初,我觉得这样喜欢什么就学什么的学习方式,最大的问题在于不成体系.很多技术可能一时炫酷,以后可能就都用不到了.也曾迷茫过,不过我的个人性格比较跳脱,学习技术的核心不是为了提升自己这种冠冕堂皇的东西,而是单纯的追求炫酷的技术,以及在这种追求过程中的满足与快乐.</p>
+<p>不过后来证明,学习的东西虽然零散,但是每一种技术(爬虫\运维\网页开发\机器学习等),都有其应用的场景,并且也给我带来了很多的回报,这也许就是所谓的无心插柳柳成荫吧(笑</p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理复习</title>
     <url>/2019-12-14-principles-of-computer-composition-review/</url>
     <content><![CDATA[<h1 id="一轮"><a href="#一轮" class="headerlink" title="一轮"></a>一轮</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="选择1"><a href="#选择1" class="headerlink" title="选择1"></a>选择1</h3><ol>
@@ -7007,43 +7044,6 @@ String date &#x3D; String.format(&quot;%tF%n&quot;, date)+&quot; &quot;+String.f
       <tags>
         <tag>复习</tag>
         <tag>计算机组成原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅谈Linux的使用与应用</title>
-    <url>/2019-12-24-some-discussion-of-Linux/</url>
-    <content><![CDATA[<p>这是 Linux 课程的大作业…</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/410079949.jpg?Expires=1602316585&" alt="head" loading="lazy"></p>
-<span id="more"></span>
-
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>自大一开始接触 Linux，从最早的 centOS 到现在常用的 Ubuntu，如今对 Linux 的使用与应用，也算是有一点自己的小小的体会，所以本篇主要就是讲述我个人对于 Linux 使用与应用的一些心得和看法。</p>
-<p>我对于 Linux 的使用主要集中在两个方面，一个是网站的部署，另一个就是数据挖掘和机器学习。<br>先谈谈网站部署吧。</p>
-<p>大一时，租了一台阿里云的学生机，使用 LNMP 体系和 Typecho 框架，准备部署个人博客。作为 Linux 初学者，这无疑是很有挑战性的，事实也是如此，弯弯绕绕一个星期，终于把网站跑起来了。</p>
-<p>于是这里引出第一个问题，像 CentOS 这类的 Linux 操作系统与 Windows 使用风格迥异，对于初学者来说，尤其是使用目标很低的初学者，学习成本太高了，如何降低这样的学习成本呢？</p>
-<p>一种途径是图形化操作。以最近比较热门的 Debian、Ubuntu 为例，他们的操作界面都在向图形化较为成功的类 Unix 系统—macOS 上靠拢，建立一套学习成本低、使用亲民的图形化操作体系。</p>
-<p>另一种途径是建立一个托管型的后端平台。这一方面做得比较好的是宝塔，在进行第二次的个人网站部署的时候，我所选择的就是宝塔，他的使用难度介乎于 macOS 和 CentOS 之间，往往需要与 Terminal 配合操作。</p>
-<p>以上两者各有千秋，但是都有一个很明显的问题，那就是系统资源占用，尤其是对于一个使用着 1 核 2G 的学生机的学生来说，安装了图形化或者宝塔，那么就意味着大部分的性能将用来维护这些辅助的功能，而只能分出一小部分系统资源来运行个人网站。这无疑是本末倒置了。</p>
-<p>后来，随着对 CentOS 的熟练度逐渐提高，我开始放弃宝塔，改为全终端操作，将服务器所有的资源都释放出来，来运行网站或者进行云计算。</p>
-<p>上述所说的个人网站部署是基于 Typecho 的，外框架都提供好了，问题的重点只在于内容的填充，所以这时的部署只是不知底层的很浅显的部署。后来参加计算机设计大赛，开始使用 python 的 flask 来从零开始开发网页，这里主要讲一下开发完成之后的部署的问题。</p>
-<p>最初的部署是使用 Nginx 和 uWsgi，需要更改很多的配置文件，对于新手，很容易就一不小心损坏了配置文件，这无疑是很不友好的。不过所幸第一次选择的是这种部署方式，使得我对于 Ubuntu 的底层有了一些更为深刻的理解。</p>
-<p>第二次部署使用得是 Gunicorn，这是一个自动化程度比较高的部署方式，唯一所需要的只是很多的配置文件而已，不过这些配置文件独立于系统配置文件，基本上不会对系统造成损害。</p>
-<p>再后来，开始接触 Docker。它是云服务技术上的一次创新，让应用程序布署在软件容器下的工作可以自动化进行，借此在 Linux 操作系统上，提供一个额外的软件抽象层，以及操作系统层虚拟化的自动管理机制。</p>
-<p>这无疑比 Gunicorn 多出更多的好处，当然，两者本就不是同一个体量事物。</p>
-<p>我的主要开发环境大抵是两个，一个是 Windows，一个是 macOS，Ubuntu 虽然也在用，不过不是作为主要的开发环境，而是作为一个单纯的部署环境使用的。这就引出一个问题，那就是系统不同导致 Python 代码上有一些细微的区别，虽然代码使用 git 同步时，可以避免掉一些问题，但是需要设置很多的东西，非常麻烦。有了 Docker 之后，所有的平台实现了真正的同步，这一点虚拟机也可以做到，但是虚拟机占用了更多的系统资源，并且响应速度极慢，很多情境下不能满足使用需求。<br>关于 Docker，由于最近还在进行更深入的研究，所以就只谈这么多。</p>
-<p>再谈一谈数据挖掘和机器学习。最近也有在研究这方面的内容，不过自己的机器性能有限，并且很多时候不能把所有的性能都解放出来来进行计算，毕竟日常生活还是要用到电脑的。于是这就使得数据挖掘的进度非常地缓。后来，使用了学校的服务器，终于实际体会到了，云计算在当下如此热门的原因。</p>
-<p>CentOS 这类的类 Unix 系统将大部分的硬件计算能力调动起来，并且熟练之后，比起 Windows 有着更为方便快捷的操作（脚本操作），Unix 这样一个与数据挖掘关联不大的东西，很可能可以作为一个区分数据挖掘能力的分水岭。</p>
-<p>使用 Linux 已经有 3 年的时间了，选修了张老师的网络操作系统，这学期又选修了胡老师的嵌入式，获益良多。虽然大多时候它都只是一个辅助的操作系统，但也有了很多深刻的体会，Linux 是一个与程序员耦合度极高的系统，并且有着与其学习成本相称的价值。</p>
-<p>– harumonia 2019 年 12 月 24 日</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>在书写的过程中,顺带着回顾了一下三年来的课外学习成果.</p>
-<p>对技术的热爱贯穿了整个大学的课外学习生活,这样的感觉真的很棒.</p>
-<p>最初,我觉得这样喜欢什么就学什么的学习方式,最大的问题在于不成体系.很多技术可能一时炫酷,以后可能就都用不到了.也曾迷茫过,不过我的个人性格比较跳脱,学习技术的核心不是为了提升自己这种冠冕堂皇的东西,而是单纯的追求炫酷的技术,以及在这种追求过程中的满足与快乐.</p>
-<p>不过后来证明,学习的东西虽然零散,但是每一种技术(爬虫\运维\网页开发\机器学习等),都有其应用的场景,并且也给我带来了很多的回报,这也许就是所谓的无心插柳柳成荫吧(笑</p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -10693,38 +10693,6 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
       </tags>
   </entry>
   <entry>
-    <title>桂苑酌记小纲</title>
-    <url>/drink-with-reading/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
-</blockquote>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
-<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
-<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
-<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
-<p>至于“记”。</p>
-<blockquote>
-<p>记者,书也。 ——《广雅》</p>
-</blockquote>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
-<p>专业书和非专业书。</p>
-<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
-<p>不过，这一节并不准备留给这些“专业书”。</p>
-<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
-<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
-<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
-<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
-<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
-<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker 镜像优化实践</title>
     <url>/docker-image-smaller/</url>
     <content><![CDATA[<p>本篇主要的内容是如何对 Docker 镜像进行优化.</p>
@@ -10908,6 +10876,38 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
       <tags>
         <tag>Docker</tag>
         <tag>optimization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>桂苑酌记小纲</title>
+    <url>/drink-with-reading/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
+</blockquote>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
+<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
+<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
+<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
+<p>至于“记”。</p>
+<blockquote>
+<p>记者,书也。 ——《广雅》</p>
+</blockquote>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
+<p>专业书和非专业书。</p>
+<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
+<p>不过，这一节并不准备留给这些“专业书”。</p>
+<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
+<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
+<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
+<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
+<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
+<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
       </tags>
   </entry>
   <entry>
@@ -12531,6 +12531,31 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
       </tags>
   </entry>
   <entry>
+    <title>pdfplumber内存泄露问题解决方案(施工中)</title>
+    <url>/pdfplumber-memory-leak/</url>
+    <content><![CDATA[<p>在使用 <strong>pdfplumber</strong> 时会出现内存递增的情况, 最终导致内存的爆炸, 这一点在高频率地调用时尤为明显.<br>本篇主要解决的就是 <strong>pdfplumber</strong> 这个依赖包所导致的内存泄露问题.</p>
+<span id="more"></span>
+
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>解决方案在官方的issue中有提到, <a href="https://github.com/jsvine/pdfplumber/issues/193">Memory issues on very large PDFs</a> 和 <a href="https://github.com/CodeForManaus/vacina-manaus-backend/issues/70">Alto uso de memória/memory leak</a>, 添加如下的代码即可.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> pdfplumber<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data/my.pdf"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> pdf<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> page <span class="token keyword">in</span> pdf<span class="token punctuation">.</span>pages<span class="token punctuation">:</span>
+        run_my_code<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        page<span class="token punctuation">.</span>flush_cache<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>另外, 在Stack Overflow的一篇中有提到, 使用 <code>del pdf</code> 来手动清理pdf的残留.</p>
+<p>结合以上两种方法, 在实际使用中确实解决了内存不断增加的问题.</p>
+<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>现在知道了如何解决这个问题, 但是这个问题又是如何产生的呢? 这是本篇真正需要探索的.</p>
+<p><strong>施工中</strong></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>solution</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开发人员的Mac软件推荐列表(持续更新)</title>
     <url>/new-mac-software-init/</url>
     <content><![CDATA[<p>开发者新Mac配置推荐. 本列表以开源免费的软件为主, 以及部分实用的收费软件. 不会包含盗版软件获取途径与软件破解方法, 取而代之的是, 会提供一些优惠获取途径.</p>
@@ -12585,31 +12610,6 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
 <p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/%E6%88%AA%E5%B1%8F2022-05-30%20%E4%B8%8B%E5%8D%885.58.51.png" alt="picgo" loading="lazy"></p>
 <h3 id="OmniDiskSweeper"><a href="#OmniDiskSweeper" class="headerlink" title="OmniDiskSweeper"></a>OmniDiskSweeper</h3><p><a href="https://www.omnigroup.com/more">OmniDiskSweeper</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>pdfplumber内存泄露问题解决方案(施工中)</title>
-    <url>/pdfplumber-memory-leak/</url>
-    <content><![CDATA[<p>在使用 <strong>pdfplumber</strong> 时会出现内存递增的情况, 最终导致内存的爆炸, 这一点在高频率地调用时尤为明显.<br>本篇主要解决的就是 <strong>pdfplumber</strong> 这个依赖包所导致的内存泄露问题.</p>
-<span id="more"></span>
-
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>解决方案在官方的issue中有提到, <a href="https://github.com/jsvine/pdfplumber/issues/193">Memory issues on very large PDFs</a> 和 <a href="https://github.com/CodeForManaus/vacina-manaus-backend/issues/70">Alto uso de memória/memory leak</a>, 添加如下的代码即可.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> pdfplumber<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data/my.pdf"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> pdf<span class="token punctuation">:</span>
-    <span class="token keyword">for</span> page <span class="token keyword">in</span> pdf<span class="token punctuation">.</span>pages<span class="token punctuation">:</span>
-        run_my_code<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        page<span class="token punctuation">.</span>flush_cache<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>另外, 在Stack Overflow的一篇中有提到, 使用 <code>del pdf</code> 来手动清理pdf的残留.</p>
-<p>结合以上两种方法, 在实际使用中确实解决了内存不断增加的问题.</p>
-<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>现在知道了如何解决这个问题, 但是这个问题又是如何产生的呢? 这是本篇真正需要探索的.</p>
-<p><strong>施工中</strong></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>solution</tag>
-      </tags>
   </entry>
   <entry>
     <title>Poirot 开发记录(2) - 字体抽取和OCR的优化方案</title>
@@ -12945,7 +12945,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#120;&#x6a;&#x6c;&#109;&#50;&#x33;&#51;&#64;&#49;&#54;&#x33;&#46;&#x63;&#111;&#x6d;">&#x7a;&#120;&#x6a;&#x6c;&#109;&#50;&#x33;&#51;&#64;&#49;&#54;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
+<p>email:<a href="mailto:&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;">&#122;&#x78;&#106;&#x6c;&#109;&#x32;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -13193,6 +13193,104 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
       </tags>
   </entry>
   <entry>
+    <title>github同步代码片段的自动化脚本</title>
+    <url>/sync-code-snippet/</url>
+    <content><![CDATA[<p>工作快一年了, 积累了很多的 代码片段(<code>code snippet</code>), 所以需要一个小工具来实现公司\家庭\开发\私人服务器等地方的代码片段的同步.</p>
+<p>同步的方法有很多, 我试过onedriver \ codemass \ gist 等手段, 但是各有各的缺点(后文补充), 所以最后还是选择了一个相对折中的方案, GitHub.</p>
+<p>本文主要介绍的就是如何通过自动化脚本实现GitHub代码片段的同步.</p>
+<p>代码环境:</p>
+<ul>
+<li>macos</li>
+<li>ubuntu</li>
+<li>centos</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="常见方案"><a href="#常见方案" class="headerlink" title="常见方案"></a>常见方案</h2><h3 id="mass-code"><a href="#mass-code" class="headerlink" title="mass code"></a>mass code</h3><p><a href="https://masscode.io/">mass code</a>是一款开源的代码片段同步工具, 但是其本身不具备代码片段同步的功能, 官方给出的一个方案是<a href="https://masscode.io/documentation/essentials/sync.html">使用第三方网盘</a>来实现同步的功能.</p>
+<p>笔者惯用的是Onedrive, 但是在Ubuntu上, 并没有官方的Onedrive程序, 而第三方的<a href="https://github.com/abraunegg/onedrive">onedrive</a>同步工具在使用过程中总有各种奇怪的问题, 导致代码片段在同步的过程中出现丢失的现象. 这是笔者选择放弃 <code>masscode</code> 的主要原因.</p>
+<h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><p>在尝试了masscode之后, 再使用gist总是有很多的不习惯, 最主要的是, masscode能够根据代码的 <strong>种类</strong> \ <strong>用途</strong> 进行分类管理, 而gist则不能这么做.</p>
+<h2 id="使用git仓库"><a href="#使用git仓库" class="headerlink" title="使用git仓库"></a>使用git仓库</h2><p>在GitHub中有不少代码片段的仓库, 其中不乏一些高星的仓库. 不过我们的代码片段是私人性质的, 因为其中还有 token \ smtp 等敏感信息.</p>
+<p>使用git来管理代码片段, 本身并没有什么难度, 按照正常的git使用流程来即可.</p>
+<p>接下来主要的内容是, 如何实现自动化的代码片段同步功能, 以及一些让使用更加人性化的技巧.</p>
+<p>核心的思路是: <strong>一个自动同步代码仓库的脚本</strong> + <strong>定时任务</strong>, 由于代码片段的使用是个人性质的, 所以使用的流程基本上是线性流程, 在设计过程中不需要考虑代码冲突的问题.</p>
+<h2 id="crontab定时任务"><a href="#crontab定时任务" class="headerlink" title="crontab定时任务"></a>crontab定时任务</h2><p>crontab 是Linux系统的定时任务程序, 在Ubuntu \ Centos\ MacOS上都可以直接使用. 这里给出一个<a href="https://crontab.guru/">生成网站</a>, 用来快速生成一个crontab配置.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 每隔10分钟执行一次同步脚本</span>
+*/10 * * * * <span class="token punctuation">[</span>path-to-your-script<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="notification同步成功通知"><a href="#notification同步成功通知" class="headerlink" title="notification同步成功通知"></a>notification同步成功通知</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">os_type</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>
+<span class="token comment"># validate os is ubuntu or mac</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Darwin"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># mac os</span>
+    <span class="token assign-left variable">notification</span><span class="token operator">=</span><span class="token string">"display notification <span class="token entity" title="\&quot;">\"</span><span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done<span class="token entity" title="\&quot;">\"</span>"</span>
+    osascript -e <span class="token string">"<span class="token variable">$notification</span>"</span>
+<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Linux"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># ubuntu os</span>
+    <span class="token function">notify-send</span> CrontabTask <span class="token string">"<span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done"</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"unknown os <span class="token variable">$&#123;os_type&#125;</span>"</span>
+<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="检查是否是git目录"><a href="#检查是否是git目录" class="headerlink" title="检查是否是git目录"></a>检查是否是git目录</h3><p><strong>crontab</strong> 执行时, 通过文件路径的方式执行的话, 启动的路径并不是在我们的代码片段仓库的根目录下, 所以需要检查一下是否是 git 目录.</p>
+<p>笔者的同步脚本存放在仓库的 <em>shell/</em> 目录下, 所以就有了如下的检查代码.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>   <span class="token comment"># 得到脚本所在目录 /shell/</span>
+<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$dir_of_path</span>"</span><span class="token variable">)</span></span>  <span class="token comment"># 得到脚本所在根目录 /</span>
+<span class="token builtin class-name">cd</span> <span class="token variable">$dir_of_path</span>
+<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>
+
+<span class="token comment"># 检查是否是git目录</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span><span class="token variable"><span class="token variable">$(</span><span class="token function">git</span> status<span class="token variable">)</span></span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> is not a git repository"</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>这里给出完整的脚本代码</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment"># */10 * * * * [script-path]</span>
+
+<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$dir_of_path</span>"</span><span class="token variable">)</span></span>
+<span class="token assign-left variable">now_date</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span>
+
+<span class="token builtin class-name">cd</span> <span class="token variable">$dir_of_path</span>
+<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span><span class="token variable"><span class="token variable">$(</span><span class="token function">git</span> status<span class="token variable">)</span></span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> is not a git repository"</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"auto-commit: <span class="token variable">$now_date</span>"</span>
+
+<span class="token function">git</span> pull
+<span class="token function">git</span> push
+
+<span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span><span class="token variable">)</span></span> git sync done"</span> <span class="token operator">>></span>/tmp/git-auto-pull.log
+
+<span class="token assign-left variable">os_type</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>
+<span class="token comment"># validate os is ubuntu or mac</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Darwin"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># mac os</span>
+    <span class="token assign-left variable">notification</span><span class="token operator">=</span><span class="token string">"display notification <span class="token entity" title="\&quot;">\"</span><span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done<span class="token entity" title="\&quot;">\"</span>"</span>
+    osascript -e <span class="token string">"<span class="token variable">$notification</span>"</span>
+<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Linux"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token comment"># linux os</span>
+    <span class="token function">notify-send</span> CrontabTask <span class="token string">"<span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done"</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"unknown os <span class="token variable">$&#123;os_type&#125;</span>"</span>
+<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://wangdoc.com/bash/index.html">Bash脚本</a><br><a href="https://crontab.guru/">Crontab生成网站</a></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>Trick</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu初始环境配置(持续更新中)</title>
     <url>/ubuntu-initial/</url>
     <content><![CDATA[<p>本想改造一下公司电脑的 Windows,后来干脆直接给电脑刷了个 Windows, 于是, 风扇不再是噪声源, 电脑不再是暖手宝, 一切都变得清爽了起来.</p>
@@ -13345,104 +13443,6 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
 <span class="token function">sudo</span> dpkg -i <span class="token string">"<span class="token variable">$TEMP_DEB</span>"</span>
 <span class="token function">rm</span> -f <span class="token string">"<span class="token variable">$TEMP_DEB</span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
-  </entry>
-  <entry>
-    <title>github同步代码片段的自动化脚本</title>
-    <url>/sync-code-snippet/</url>
-    <content><![CDATA[<p>工作快一年了, 积累了很多的 代码片段(<code>code snippet</code>), 所以需要一个小工具来实现公司\家庭\开发\私人服务器等地方的代码片段的同步.</p>
-<p>同步的方法有很多, 我试过onedriver \ codemass \ gist 等手段, 但是各有各的缺点(后文补充), 所以最后还是选择了一个相对折中的方案, GitHub.</p>
-<p>本文主要介绍的就是如何通过自动化脚本实现GitHub代码片段的同步.</p>
-<p>代码环境:</p>
-<ul>
-<li>macos</li>
-<li>ubuntu</li>
-<li>centos</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="常见方案"><a href="#常见方案" class="headerlink" title="常见方案"></a>常见方案</h2><h3 id="mass-code"><a href="#mass-code" class="headerlink" title="mass code"></a>mass code</h3><p><a href="https://masscode.io/">mass code</a>是一款开源的代码片段同步工具, 但是其本身不具备代码片段同步的功能, 官方给出的一个方案是<a href="https://masscode.io/documentation/essentials/sync.html">使用第三方网盘</a>来实现同步的功能.</p>
-<p>笔者惯用的是Onedrive, 但是在Ubuntu上, 并没有官方的Onedrive程序, 而第三方的<a href="https://github.com/abraunegg/onedrive">onedrive</a>同步工具在使用过程中总有各种奇怪的问题, 导致代码片段在同步的过程中出现丢失的现象. 这是笔者选择放弃 <code>masscode</code> 的主要原因.</p>
-<h3 id="gist"><a href="#gist" class="headerlink" title="gist"></a>gist</h3><p>在尝试了masscode之后, 再使用gist总是有很多的不习惯, 最主要的是, masscode能够根据代码的 <strong>种类</strong> \ <strong>用途</strong> 进行分类管理, 而gist则不能这么做.</p>
-<h2 id="使用git仓库"><a href="#使用git仓库" class="headerlink" title="使用git仓库"></a>使用git仓库</h2><p>在GitHub中有不少代码片段的仓库, 其中不乏一些高星的仓库. 不过我们的代码片段是私人性质的, 因为其中还有 token \ smtp 等敏感信息.</p>
-<p>使用git来管理代码片段, 本身并没有什么难度, 按照正常的git使用流程来即可.</p>
-<p>接下来主要的内容是, 如何实现自动化的代码片段同步功能, 以及一些让使用更加人性化的技巧.</p>
-<p>核心的思路是: <strong>一个自动同步代码仓库的脚本</strong> + <strong>定时任务</strong>, 由于代码片段的使用是个人性质的, 所以使用的流程基本上是线性流程, 在设计过程中不需要考虑代码冲突的问题.</p>
-<h2 id="crontab定时任务"><a href="#crontab定时任务" class="headerlink" title="crontab定时任务"></a>crontab定时任务</h2><p>crontab 是Linux系统的定时任务程序, 在Ubuntu \ Centos\ MacOS上都可以直接使用. 这里给出一个<a href="https://crontab.guru/">生成网站</a>, 用来快速生成一个crontab配置.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 每隔10分钟执行一次同步脚本</span>
-*/10 * * * * <span class="token punctuation">[</span>path-to-your-script<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h2 id="notification同步成功通知"><a href="#notification同步成功通知" class="headerlink" title="notification同步成功通知"></a>notification同步成功通知</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">os_type</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>
-<span class="token comment"># validate os is ubuntu or mac</span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Darwin"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token comment"># mac os</span>
-    <span class="token assign-left variable">notification</span><span class="token operator">=</span><span class="token string">"display notification <span class="token entity" title="\&quot;">\"</span><span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done<span class="token entity" title="\&quot;">\"</span>"</span>
-    osascript -e <span class="token string">"<span class="token variable">$notification</span>"</span>
-<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Linux"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token comment"># ubuntu os</span>
-    <span class="token function">notify-send</span> CrontabTask <span class="token string">"<span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done"</span>
-<span class="token keyword">else</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"unknown os <span class="token variable">$&#123;os_type&#125;</span>"</span>
-<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="检查是否是git目录"><a href="#检查是否是git目录" class="headerlink" title="检查是否是git目录"></a>检查是否是git目录</h3><p><strong>crontab</strong> 执行时, 通过文件路径的方式执行的话, 启动的路径并不是在我们的代码片段仓库的根目录下, 所以需要检查一下是否是 git 目录.</p>
-<p>笔者的同步脚本存放在仓库的 <em>shell/</em> 目录下, 所以就有了如下的检查代码.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>   <span class="token comment"># 得到脚本所在目录 /shell/</span>
-<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$dir_of_path</span>"</span><span class="token variable">)</span></span>  <span class="token comment"># 得到脚本所在根目录 /</span>
-<span class="token builtin class-name">cd</span> <span class="token variable">$dir_of_path</span>
-<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>
-
-<span class="token comment"># 检查是否是git目录</span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span><span class="token variable"><span class="token variable">$(</span><span class="token function">git</span> status<span class="token variable">)</span></span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> is not a git repository"</span>
-    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
-<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>这里给出完整的脚本代码</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-<span class="token comment"># */10 * * * * [script-path]</span>
-
-<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$0</span>"</span><span class="token variable">)</span></span>
-<span class="token assign-left variable">dir_of_path</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> <span class="token string">"<span class="token variable">$dir_of_path</span>"</span><span class="token variable">)</span></span>
-<span class="token assign-left variable">now_date</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">date</span> +%Y-%m-%d<span class="token variable">)</span></span>
-
-<span class="token builtin class-name">cd</span> <span class="token variable">$dir_of_path</span>
-<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span>
-
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span><span class="token variable"><span class="token variable">$(</span><span class="token function">git</span> status<span class="token variable">)</span></span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">pwd</span><span class="token variable">)</span></span> is not a git repository"</span>
-    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
-<span class="token keyword">fi</span>
-
-<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-<span class="token function">git</span> commit -m <span class="token string">"auto-commit: <span class="token variable">$now_date</span>"</span>
-
-<span class="token function">git</span> pull
-<span class="token function">git</span> push
-
-<span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">date</span><span class="token variable">)</span></span> git sync done"</span> <span class="token operator">>></span>/tmp/git-auto-pull.log
-
-<span class="token assign-left variable">os_type</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>
-<span class="token comment"># validate os is ubuntu or mac</span>
-<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Darwin"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token comment"># mac os</span>
-    <span class="token assign-left variable">notification</span><span class="token operator">=</span><span class="token string">"display notification <span class="token entity" title="\&quot;">\"</span><span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done<span class="token entity" title="\&quot;">\"</span>"</span>
-    osascript -e <span class="token string">"<span class="token variable">$notification</span>"</span>
-<span class="token keyword">elif</span> <span class="token punctuation">[</span> <span class="token string">"<span class="token variable">$&#123;os_type&#125;</span>"</span> <span class="token operator">=</span> <span class="token string">"Linux"</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
-    <span class="token comment"># linux os</span>
-    <span class="token function">notify-send</span> CrontabTask <span class="token string">"<span class="token variable">$&#123;now_date&#125;</span> code snippet git sync done"</span>
-<span class="token keyword">else</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"unknown os <span class="token variable">$&#123;os_type&#125;</span>"</span>
-<span class="token keyword">fi</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://wangdoc.com/bash/index.html">Bash脚本</a><br><a href="https://crontab.guru/">Crontab生成网站</a></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Shell</category>
-      </categories>
-      <tags>
-        <tag>Trick</tag>
-      </tags>
   </entry>
   <entry>
     <title>大学生活阶段性小结</title>
@@ -14405,7 +14405,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
