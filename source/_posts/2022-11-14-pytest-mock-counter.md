@@ -12,7 +12,11 @@ email: zxjlm233@gmail.com
 date: 2022-11-15 11:20:44
 updated:
 categories:
+  - 源流清泉
+  - Python
 tags:
+  - Python
+  - Test
 customSummary:
 thumb:
 thumbDesc:
@@ -35,7 +39,6 @@ thumbSmall:
 
 2. 注入流程的设计
     注入流程应该尽量简单, 改动较小. 目的是能够通过在现有代码上添加装饰器的方法, 实现最小限度的更改(实际上这也是比较科学的更改).
-
 
 ## 开发阶段
 
