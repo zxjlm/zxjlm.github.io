@@ -1,6 +1,6 @@
 ---
 title: Django 生成 swagger 描述文件
-date: 2021-06-24 21:04:18
+date: 2022-06-24 21:04:18
 tags:
 ---
 
@@ -14,9 +14,9 @@ tags:
 之前接触过 [drf](https://www.django-rest-framework.org/), 一个基于 Django 的 rest 框架. 由于深渡契合 rest, 有着严格的项目结构约束, 所以能够直接从代码文件生成出对应的 `swagger` 描述文件. 但是这套代码是无法直接移殖到 Django 上面的, 因为后者的结构比较松散, 没有一种万金油的生成策略.
 
 所以, 本篇所提供的生成方案具有以下约束:
+
 1. 需要封装一层装饰器, 并应用与所有需要生成文档的视图函数.
 2. 依赖 pydantic (或者平替 cattrs \ schema 等)
-
 
 <!-- more -->
 
@@ -63,9 +63,7 @@ tags:
 
 > 如果不希望引入额外的依赖, 也可以参考实现一个 `Basemodel` 结构, 然后直接 copy `model_schema` 的代码就行.
 
-
 ## 代码
-
 
 ### Step1: CMD
 
@@ -159,7 +157,6 @@ def parse_params(
 > 为什么要动态加载?
 >
 > 动态加载的核心目标是, 在项目的业务代码完成之前就能够生成出对应的 swagger 文件. 在前后端并行工作的时候, 这一点是非常重要的, 我们只需要定义好对应的参数模型, 就能够将其转换为对应的 swagger 文本, 而不需要经过任何业务代码逻辑.
-
 
 然后, 装饰器的解析函数如下.
 
@@ -292,7 +289,7 @@ class DataSchema(BaseModel):
 
 这样, 脚本通过解析器中 `response_data = re.search(r"response_data=([\w\.]+)", source)` 这样的代码, 解析出了装饰器的参数 `DataSchema`, 然后动态加载这个类, 并通过 `model_schema` 方法将其转换为模型对应的 __swagger__ 文档格式.
 
-### Step4: 生成 swagger 
+### Step4: 生成 swagger
 
 通过第三步, 我们得到了所有的数据模型和路由的 __swagger__ 对象, 将其整合便可以得到一份完整的 swagger 文档了.
 
@@ -320,4 +317,4 @@ class StateEnum(DocIntEnum):
     completed = 1, "已完成"
 ```
 
-通过继承这个新定义的 `DocIntEnum` , 能够将枚举值的描述信息注入到字段模型的说明中. 它的代价是微乎其微的, 因为原生的 `IntEnum.value()` 并不会关注我们加上去的这个说明信息. 
+通过继承这个新定义的 `DocIntEnum` , 能够将枚举值的描述信息注入到字段模型的说明中. 它的代价是微乎其微的, 因为原生的 `IntEnum.value()` 并不会关注我们加上去的这个说明信息.
