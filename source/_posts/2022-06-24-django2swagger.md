@@ -1,8 +1,28 @@
 ---
 title: Django 生成 swagger 描述文件
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: 'no'
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 date: 2022-06-24 21:04:18
+updated:
+categories:
+  - 源流清泉
+  - Python
 tags:
+  - Python
+  - Django
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
+
 
 
 本篇主要是讲如何从 Django Api 生成出 swagger 描述文件. 它具有如下的特性:
