@@ -1,10 +1,10 @@
+https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/
+https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/
+https://blog.harumonia.moe/2022-10-10-C3-Storage-and-Retrieval/
 https://blog.harumonia.moe/2022-4-7/
+https://blog.harumonia.moe/2022-06-24-django2swagger/
+https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/
 https://blog.harumonia.moe/new-mac-software-init/
 https://blog.harumonia.moe/docker-image-smaller/
 https://blog.harumonia.moe/doccano-use/
 https://blog.harumonia.moe/design-better-api/
-https://blog.harumonia.moe/sync-code-snippet/
-https://blog.harumonia.moe/2022-2/
-https://blog.harumonia.moe/django-shell-inject-script/
-https://blog.harumonia.moe/a-love-affair-gone-by/
-https://blog.harumonia.moe/ubuntu-initial/

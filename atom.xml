@@ -6,7 +6,7 @@
   <link href="https://blog.harumonia.moe/atom.xml" rel="self"/>
   
   <link href="https://blog.harumonia.moe/"/>
-  <updated>2022-11-14T10:01:30.820Z</updated>
+  <updated>2022-11-16T09:57:43.997Z</updated>
   <id>https://blog.harumonia.moe/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>alfred 工作流开发</title>
+    <link href="https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/"/>
+    <id>https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/</id>
+    <published>2022-11-15T15:12:24.000Z</published>
+    <updated>2022-11-16T09:57:43.997Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com/alfred-5-whats-new/&quot;&gt;Alfred&lt;/a&gt; 是一款 &lt;em&gt;MacOS&lt;/em&gt; 上用户基数较大的软件, 笔者主要是用它来取代原生的 &lt;em&gt;聚焦搜索&lt;/em&gt;, 除此之外, 最近开始研究它的 &lt;strong&gt;工作流(workflow)&lt;/strong&gt; 相关的功能.&lt;/p&gt;
+&lt;p&gt;本篇就是实际展示一下如何开发一个 workflow. 使用的脚本语言是 &lt;em&gt;Python&lt;/em&gt; , 不过实际上任何脚本语言都可以完成开发工作.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022-11-14-pytest_mock_counter</title>
+    <link href="https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/"/>
+    <id>https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/</id>
+    <published>2022-11-15T11:20:44.000Z</published>
+    <updated>2022-11-16T09:57:43.997Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本篇的目的是在 &lt;code&gt;Python&lt;/code&gt; 的 Test 框架中添加一个 &lt;strong&gt;mock 函数使用计数器&lt;/strong&gt; 的逻辑. 该计数器的目的是, 在调用第三方api接口时, 计算某一个流程中的调用次数是否合理. 在流程(或调用关系)比较复杂的时候实用性较高.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/tags/Python/"/>
+    
+    <category term="Test" scheme="https://blog.harumonia.moe/tags/Test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C3. Storage and Retrieval</title>
+    <link href="https://blog.harumonia.moe/2022-10-10-C3-Storage-and-Retrieval/"/>
+    <id>https://blog.harumonia.moe/2022-10-10-C3-Storage-and-Retrieval/</id>
+    <published>2022-10-10T17:22:24.000Z</published>
+    <updated>2022-11-16T09:57:43.997Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Data-Structure-That-Power-Your-Database&quot;&gt;&lt;a href=&quot;#Data-Structure-That-Power-Your-Database&quot; class=&quot;headerlink&quot; title=&quot;Data Structure That Power Your Database&quot;&gt;&lt;/a&gt;Data Structure That Power Your Database&lt;/h2&gt;&lt;p&gt;最简单的数据库是什么样子的?&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash &lt;/span&gt;
+&lt;span class=&quot;token function-name function&quot;&gt;db_set&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;     
+ &lt;span class=&quot;token builtin class-name&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$1&lt;/span&gt;,&lt;span class=&quot;token variable&quot;&gt;$2&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; database 
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; 
+
+&lt;span class=&quot;token function-name function&quot;&gt;db_get&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;     
+ &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;^&lt;span class=&quot;token variable&quot;&gt;$1&lt;/span&gt;,&quot;&lt;/span&gt; database &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sed&lt;/span&gt; -e &lt;span class=&quot;token string&quot;&gt;&quot;s/^&lt;span class=&quot;token variable&quot;&gt;$1&lt;/span&gt;,//&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;tail&lt;/span&gt; -n &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如上所示, 我们完成了一个最简单的 &lt;strong&gt;kv 数据库&lt;/strong&gt;. 它的工作原理是: &lt;em&gt;db_set&lt;/em&gt; 在文件末尾追加一个 kv 对; 如果对某一个 key 进行更新, 那么新的记录会继续追加写入文件, 而非覆盖; &lt;em&gt;db_get&lt;/em&gt; 查询到最后(即最新)一条 key , 然后返回 value.&lt;/p&gt;
+&lt;p&gt;这个数据库的&lt;strong&gt;写&lt;/strong&gt;效率极高 [ $O(1)$ ], 因为它单纯的就是向文件的末尾进行 &lt;code&gt;append&lt;/code&gt; 操作. 但是代价是它的&lt;strong&gt;读&lt;/strong&gt;效率非常低 [ $O(n)$ ].&lt;/p&gt;
+&lt;p&gt;为了解决读效率低的问题, 可以使用 &lt;code&gt;索引&lt;/code&gt; , 索引本质上是一个依附于主体数据的额外的数据结构. 它可以作为一个整体地被添加或者删除. 但是索引又会引发一个新的问题, 索引的变化依托于 &lt;strong&gt;写(write)&lt;/strong&gt; 操作, 这意味着每次写都需要额外的一部分性能来更新这个数据结构, 如果数据结构过于复杂, 则会拖慢影响写的效率.&lt;/p&gt;
+&lt;p&gt;本节主要就是围绕这些索引结构及其演进来展开.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hash Index&lt;/li&gt;
+&lt;li&gt;SSTable&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>2022.4~.7 生活小结</title>
     <link href="https://blog.harumonia.moe/2022-4-7/"/>
     <id>https://blog.harumonia.moe/2022-4-7/</id>
     <published>2022-07-17T21:17:19.000Z</published>
-    <updated>2022-11-14T10:01:30.820Z</updated>
+    <updated>2022-11-16T09:57:43.997Z</updated>
     
     
       
@@ -40,11 +112,68 @@
   </entry>
   
   <entry>
+    <title>Django 生成 swagger 描述文件</title>
+    <link href="https://blog.harumonia.moe/2022-06-24-django2swagger/"/>
+    <id>https://blog.harumonia.moe/2022-06-24-django2swagger/</id>
+    <published>2022-06-24T21:04:18.000Z</published>
+    <updated>2022-11-16T09:57:43.997Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇主要是讲如何从 Django Api 生成出 swagger 描述文件. 它具有如下的特性:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于 inspect \ (ast) 采用静态分析的思路, 不依赖业务代码, 能够文档先于项目&lt;/li&gt;
+&lt;li&gt;嵌入 Django CMD&lt;/li&gt;
+&lt;li&gt;生成所用到的代码不会影响生产环境性能&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;之前接触过 &lt;a href=&quot;https://www.django-rest-framework.org/&quot;&gt;drf&lt;/a&gt;, 一个基于 Django 的 rest 框架. 由于深渡契合 rest, 有着严格的项目结构约束, 所以能够直接从代码文件生成出对应的 &lt;code&gt;swagger&lt;/code&gt; 描述文件. 但是这套代码是无法直接移殖到 Django 上面的, 因为后者的结构比较松散, 没有一种万金油的生成策略.&lt;/p&gt;
+&lt;p&gt;所以, 本篇所提供的生成方案具有以下约束:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需要封装一层装饰器, 并应用与所有需要生成文档的视图函数.&lt;/li&gt;
+&lt;li&gt;依赖 pydantic (或者平替 cattrs \ schema 等)&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/tags/Python/"/>
+    
+    <category term="Django" scheme="https://blog.harumonia.moe/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pycharm 和 VSCode 的 docker compose 开发模式</title>
+    <link href="https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/"/>
+    <id>https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/</id>
+    <published>2022-05-28T17:53:00.000Z</published>
+    <updated>2022-11-16T09:57:43.997Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本篇是关于如何在 Pycharm 和 VSCode 中使用 Docker Compose 的. 开篇比较啰嗦, 大抵是踩过的一些坑和问题的解决过程, 实际的配置内容自 &lt;a href=&quot;#%E8%BD%AC&quot;&gt;转&lt;/a&gt; 这一节开始.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
+    
+    
+    <category term="Python" scheme="https://blog.harumonia.moe/tags/Python/"/>
+    
+    <category term="Docker" scheme="https://blog.harumonia.moe/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>开发人员的Mac软件推荐列表(持续更新)</title>
     <link href="https://blog.harumonia.moe/new-mac-software-init/"/>
     <id>https://blog.harumonia.moe/new-mac-software-init/</id>
     <published>2022-05-14T15:35:54.000Z</published>
-    <updated>2022-11-14T10:01:30.824Z</updated>
+    <updated>2022-11-16T09:57:44.001Z</updated>
     
     
       
@@ -65,7 +194,7 @@
     <link href="https://blog.harumonia.moe/docker-image-smaller/"/>
     <id>https://blog.harumonia.moe/docker-image-smaller/</id>
     <published>2022-04-15T16:30:50.000Z</published>
-    <updated>2022-11-14T10:01:30.820Z</updated>
+    <updated>2022-11-16T09:57:43.997Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要的内容是如何对 Docker 镜像进行优化.&lt;/p&gt;
@@ -300,7 +429,7 @@
     <link href="https://blog.harumonia.moe/poirot-development-2/"/>
     <id>https://blog.harumonia.moe/poirot-development-2/</id>
     <published>2021-08-25T21:27:55.000Z</published>
-    <updated>2022-11-14T10:01:30.824Z</updated>
+    <updated>2022-11-16T09:57:44.001Z</updated>
     
     
     <summary type="html">&lt;p&gt;承接前面两篇, &lt;a href=&quot;https://blog.harumonia.moe/font-antispider-cracker/&quot;&gt;字体反爬虫解决方案&lt;/a&gt; 和 &lt;a href=&quot;https://blog.harumonia.moe/poirot-development-progressbar/&quot;&gt;进度条方案&lt;/a&gt;, 本篇是对旧版本的 Poirot 部分内容的性能优化.&lt;/p&gt;
@@ -334,114 +463,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>毕业旅行</title>
-    <link href="https://blog.harumonia.moe/chengdu-seven-day/"/>
-    <id>https://blog.harumonia.moe/chengdu-seven-day/</id>
-    <published>2021-06-28T21:09:20.000Z</published>
-    <updated>2022-11-14T10:01:30.820Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本篇又是一个日常记述, 主要内容是博主毕业旅行的二三事.&lt;/p&gt;
-&lt;p&gt;目的地定在 &lt;em&gt;成都&lt;/em&gt; , 来回耗时 &lt;em&gt;7&lt;/em&gt; 天, 包括交通费在内的人均总开销 &lt;em&gt;3985.51RMB&lt;/em&gt;. 乘兴而来, 兴尽而归, 总的来说世一趟很不错的旅行.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="起居杂录" scheme="https://blog.harumonia.moe/categories/%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95/"/>
-    
-    
-    <category term="旅行" scheme="https://blog.harumonia.moe/tags/%E6%97%85%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Christin开发记录(2) - nginx和前后端分离</title>
-    <link href="https://blog.harumonia.moe/christin-develop-2/"/>
-    <id>https://blog.harumonia.moe/christin-develop-2/</id>
-    <published>2021-06-12T18:05:28.000Z</published>
-    <updated>2021-06-15T09:57:56.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在&lt;a href=&quot;https://blog.harumonia.moe/christin-develop-1/&quot;&gt;Christin 开发记录(1)&lt;/a&gt;中， 我们讲过了这个项目的大体的设计思路，本篇以及之后的几篇将会详细地阐述各个技术要点的具体实现方案。&lt;/p&gt;
-&lt;p&gt;本篇主要的内容是 nginx 在 &lt;em&gt;前后端分离&lt;/em&gt; 和 &lt;em&gt;多语言开发&lt;/em&gt; 的代理作用.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
-    
-    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
-    
-    
-    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大学生活阶段性小结</title>
-    <link href="https://blog.harumonia.moe/upon-graduation/"/>
-    <id>https://blog.harumonia.moe/upon-graduation/</id>
-    <published>2021-06-11T10:35:44.000Z</published>
-    <updated>2022-11-14T10:01:30.824Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;醉花阴 - 满船清梦&lt;/p&gt;
-&lt;p&gt;红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.&lt;br&gt;杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.&lt;/p&gt;
-&lt;p&gt;– harumonia, 二〇二一年六月, 于南京中医药大学&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="起居杂录" scheme="https://blog.harumonia.moe/categories/%E8%B5%B7%E5%B1%85%E6%9D%82%E5%BD%95/"/>
-    
-    
-    <category term="生活" scheme="https://blog.harumonia.moe/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fastNLP和spaCy的使用</title>
-    <link href="https://blog.harumonia.moe/fastnlp-and-spacy/"/>
-    <id>https://blog.harumonia.moe/fastnlp-and-spacy/</id>
-    <published>2021-06-06T18:05:42.000Z</published>
-    <updated>2022-11-14T10:01:30.820Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;fastNLP 和 spaCy 都是自然语言处理常用的算法包,本篇将会应用的角度,分别使用这两个算法包训练一个可用的命名实体识别模型.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
-    
-    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
-    
-    
-    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="自然语言处理" scheme="https://blog.harumonia.moe/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Christin开发记录(1)</title>
-    <link href="https://blog.harumonia.moe/christin-develop-1/"/>
-    <id>https://blog.harumonia.moe/christin-develop-1/</id>
-    <published>2021-05-21T20:46:07.000Z</published>
-    <updated>2022-11-14T10:01:30.820Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;关于-Christin&quot;&gt;&lt;a href=&quot;#关于-Christin&quot; class=&quot;headerlink&quot; title=&quot;关于 Christin&quot;&gt;&lt;/a&gt;关于 Christin&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Christin&lt;/code&gt; 是笔者本科毕业设计的伴生项目, 笔者本科毕业设计的课题叫做 &lt;strong&gt;基于多元异构数据的中医药知识图谱构建及应用&lt;/strong&gt; , 作为其实践产物的平台,我将其命名为 &lt;strong&gt;Christin&lt;/strong&gt; , 选名自我所以喜爱的 ARPG 游戏系列 &lt;em&gt;&amp;lt;伊苏&amp;gt;&lt;/em&gt; 的主角 &lt;em&gt;亚特鲁-克里斯汀( Adol Christin )&lt;/em&gt; 以及我第二喜欢的小说家 &lt;em&gt;Dame Agatha Mary Clarissa Christie&lt;/em&gt;. 当然, 其对外的平台名称叫做 &lt;strong&gt;中医药知识图谱构建平台&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;本系列将主要介绍这个项目开发的 &lt;strong&gt;思路&lt;/strong&gt; / &lt;strong&gt;完善过程&lt;/strong&gt; 与 &lt;strong&gt;技术栈&lt;/strong&gt; . (截止到毕设答辩前夕)&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
-    
-    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
-    
-    
-    <category term="毕业设计" scheme="https://blog.harumonia.moe/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
