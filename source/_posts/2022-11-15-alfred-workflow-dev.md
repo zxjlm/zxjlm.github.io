@@ -1,8 +1,24 @@
 ---
 title: alfred 工作流开发
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: 'no'
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 date: 2022-11-15 15:12:24
+updated:
+categories:
 tags:
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
+
 
 ## 前言
 
