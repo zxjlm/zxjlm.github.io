@@ -1,8 +1,24 @@
 ---
 title: C3. Storage and Retrieval
+status: publish
+author: harumonia
+noThumbInfoStyle: default
+outdatedNotice: 'no'
+reprint: standard
+thumbChoice: default
+thumbStyle: default
+hidden: false
+email: zxjlm233@gmail.com
 date: 2022-10-10 17:22:24
+updated:
+categories:
 tags:
+customSummary:
+thumb:
+thumbDesc:
+thumbSmall:
 ---
+
 
 
 ## Data Structure That Power Your Database
