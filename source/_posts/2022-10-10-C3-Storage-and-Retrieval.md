@@ -1,5 +1,5 @@
 ---
-title: C3. Storage and Retrieval
+title: C3. Storage and Retrieval (更新中)
 status: publish
 author: harumonia
 noThumbInfoStyle: default
