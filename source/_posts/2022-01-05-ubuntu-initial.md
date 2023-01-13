@@ -283,6 +283,18 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 
 一般也用不到繁体, 使用 `esc` 键禁掉即可.
 
+## 屏幕截图
+
+[flameshot](https://flameshot.org/)
+
+可以按照 [相关的文档](https://github.com/flameshot-org/flameshot#on-ubuntu-tested-on-1804-2004-2204) 替换掉 ubuntu 默认的截图快捷键, 或者自定义一个快捷键.
+
+## 剪切板历史
+
+[copyq](https://hluk.github.io/CopyQ/)
+
+copyq 支持图片 \ 富文本 等多种形式的剪切记录.
+
 ## 扩展功能
 
 ### 搭建 smb 服务
