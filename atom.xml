@@ -6,7 +6,7 @@
   <link href="https://blog.harumonia.moe/atom.xml" rel="self"/>
   
   <link href="https://blog.harumonia.moe/"/>
-  <updated>2023-01-31T13:36:43.413Z</updated>
+  <updated>2023-01-31T13:50:15.674Z</updated>
   <id>https://blog.harumonia.moe/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>扁舟一叶向孤城, 浊酒半壶见死生</title>
+    <link href="https://blog.harumonia.moe/my-2022/"/>
+    <id>https://blog.harumonia.moe/my-2022/</id>
+    <published>2023-01-31T20:07:31.000Z</published>
+    <updated>2023-01-31T13:50:15.674Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;不知不觉有长了一岁, 在不想变成庸庸碌碌的大众的情绪下逐渐融入其中, 这大概就是去岁的一个侧面吧.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>alfred 工作流开发</title>
     <link href="https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/"/>
     <id>https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/</id>
     <published>2022-11-15T15:12:24.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.670Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com/alfred-5-whats-new/&quot;&gt;Alfred&lt;/a&gt; 是一款 &lt;em&gt;MacOS&lt;/em&gt; 上用户基数较大的软件, 笔者主要是用它来取代原生的 &lt;em&gt;聚焦搜索&lt;/em&gt;, 除此之外, 最近开始研究它的 &lt;strong&gt;工作流(workflow)&lt;/strong&gt; 相关的功能.&lt;/p&gt;
@@ -37,7 +52,7 @@
     <link href="https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/"/>
     <id>https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/</id>
     <published>2022-11-15T11:20:44.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.670Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本篇的目的是在 &lt;code&gt;Python&lt;/code&gt; 的 Test 框架中添加一个 &lt;strong&gt;mock 函数使用计数器&lt;/strong&gt; 的逻辑. 该计数器的目的是, 在调用第三方api接口时, 计算某一个流程中的调用次数是否合理. 在流程(或调用关系)比较复杂的时候实用性较高.&lt;/p&gt;</summary>
@@ -93,7 +108,7 @@
     <link href="https://blog.harumonia.moe/2022-4-7/"/>
     <id>https://blog.harumonia.moe/2022-4-7/</id>
     <published>2022-07-17T21:17:19.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.670Z</updated>
     
     
       
@@ -116,7 +131,7 @@
     <link href="https://blog.harumonia.moe/2022-06-24-django2swagger/"/>
     <id>https://blog.harumonia.moe/2022-06-24-django2swagger/</id>
     <published>2022-06-24T21:04:18.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.670Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要是讲如何从 Django Api 生成出 swagger 描述文件. 它具有如下的特性:&lt;/p&gt;
@@ -150,7 +165,7 @@
     <link href="https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/"/>
     <id>https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/</id>
     <published>2022-05-28T17:53:00.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.670Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇是关于如何在 Pycharm 和 VSCode 中使用 Docker Compose 的. 开篇比较啰嗦, 大抵是踩过的一些坑和问题的解决过程, 实际的配置内容自 &lt;a href=&quot;#%E8%BD%AC&quot;&gt;转&lt;/a&gt; 这一节开始.&lt;/p&gt;</summary>
@@ -173,7 +188,7 @@
     <link href="https://blog.harumonia.moe/new-mac-software-init/"/>
     <id>https://blog.harumonia.moe/new-mac-software-init/</id>
     <published>2022-05-14T15:35:54.000Z</published>
-    <updated>2023-01-31T13:36:43.417Z</updated>
+    <updated>2023-01-31T13:50:15.674Z</updated>
     
     
       
@@ -194,7 +209,7 @@
     <link href="https://blog.harumonia.moe/docker-image-smaller/"/>
     <id>https://blog.harumonia.moe/docker-image-smaller/</id>
     <published>2022-04-15T16:30:50.000Z</published>
-    <updated>2023-01-31T13:36:43.413Z</updated>
+    <updated>2023-01-31T13:50:15.674Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要的内容是如何对 Docker 镜像进行优化.&lt;/p&gt;
@@ -347,21 +362,6 @@
   </entry>
   
   <entry>
-    <title>扁舟一叶向孤城, 浊酒半壶见死生</title>
-    <link href="https://blog.harumonia.moe/my-2022/"/>
-    <id>https://blog.harumonia.moe/my-2022/</id>
-    <published>2022-01-31T20:07:31.000Z</published>
-    <updated>2023-01-31T13:36:43.417Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;不知不觉有长了一岁, 在不想变成庸庸碌碌的大众的情绪下逐渐融入其中, 这大概就是去岁的一个侧面吧.&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Ubuntu初始环境配置(持续更新中)</title>
     <link href="https://blog.harumonia.moe/2022-01-05-ubuntu-initial/"/>
     <id>https://blog.harumonia.moe/2022-01-05-ubuntu-initial/</id>
@@ -444,7 +444,7 @@
     <link href="https://blog.harumonia.moe/poirot-development-2/"/>
     <id>https://blog.harumonia.moe/poirot-development-2/</id>
     <published>2021-08-25T21:27:55.000Z</published>
-    <updated>2023-01-31T13:36:43.417Z</updated>
+    <updated>2023-01-31T13:50:15.674Z</updated>
     
     
     <summary type="html">&lt;p&gt;承接前面两篇, &lt;a href=&quot;https://blog.harumonia.moe/font-antispider-cracker/&quot;&gt;字体反爬虫解决方案&lt;/a&gt; 和 &lt;a href=&quot;https://blog.harumonia.moe/poirot-development-progressbar/&quot;&gt;进度条方案&lt;/a&gt;, 本篇是对旧版本的 Poirot 部分内容的性能优化.&lt;/p&gt;

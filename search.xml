@@ -497,86 +497,6 @@ auto bba&#x3D;a.begin();
       </tags>
   </entry>
   <entry>
-    <title>鬼畜的回形数</title>
-    <url>/2018-12-02-number-of-rounds/</url>
-    <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
-
-
-using namespace std;
-
-int judge(int n,int m)
-&#123;
-    if (n%2&#x3D;&#x3D;0) &#123;
-        return n&#x2F;2+1;
-    &#125;
-    else&#123;
-        return n&#x2F;2;
-    &#125;
-&#125;
-
-int main()
-&#123;
-    int q[200][200];
-    int n,m;
-    cin &gt;&gt; n&gt;&gt;m;
-    &#x2F;*int **q;
-    q&#x3D;new int*[n];
-    for (int i&#x3D;0; i&lt;n; i++) &#123;
-        q[i]&#x3D;new int[m];
-    &#125;*&#x2F;
-    for (int i&#x3D;0; i&lt;n; i++) &#123;
-        for (int j&#x3D;0; j&lt;m; j++) &#123;
-            cin&gt;&gt;q[i][j];
-        &#125;
-    &#125;
-    &#x2F;&#x2F;cout &lt;&lt; q[0][0]&lt;&lt;endl;
-
-    int right&#x3D;m-1,left&#x3D;0,up&#x3D;0,down&#x3D;n-1;
-    while (1)&#123;
-        for (int i&#x3D;up; i&lt;&#x3D;down; i++) &#123;
-            cout &lt;&lt; q[i][left]&lt;&lt;&quot; &quot;;
-        &#125;
-        left++;
-        for (int i&#x3D;left; i&lt;&#x3D;right; i++) &#123;
-            cout &lt;&lt; q[down][i]&lt;&lt;&quot; &quot;;
-        &#125;
-        down--;
-        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
-            break;
-        &#125;
-        for (int i&#x3D;down; i&gt;&#x3D;up; i--) &#123;
-            cout &lt;&lt; q[i][right]&lt;&lt;&quot; &quot;;
-        &#125;
-        right--;
-        for (int i&#x3D;right; i&gt;&#x3D;left; i--) &#123;
-            cout &lt;&lt; q[up][i]&lt;&lt;&quot; &quot;;
-        &#125;
-        up++;
-        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
-            break;
-        &#125;
-       &#x2F;&#x2F; cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;
-        &#x2F;&#x2F;cout &lt;&lt; m&#x2F;2+2 &lt;&lt; &quot; &quot;&lt;&lt;n&#x2F;2+2&lt;&lt;endl;
-    &#125;
-    cout &lt;&lt;endl;
-
-
-
-    return 0;
-&#125;
-
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Algorithm \ Data Structure</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c++实现字典（初步）</title>
     <url>/2018-11-21-cpp-dictionary/</url>
     <content><![CDATA[<p>这个字典程序算是最近学习 c++的一个成果集合了，就这样吧。（2018 年 11 月 21 日 13:47:00。）</p>
@@ -907,6 +827,86 @@ RIZHI
       </tags>
   </entry>
   <entry>
+    <title>鬼畜的回形数</title>
+    <url>/2018-12-02-number-of-rounds/</url>
+    <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+
+
+using namespace std;
+
+int judge(int n,int m)
+&#123;
+    if (n%2&#x3D;&#x3D;0) &#123;
+        return n&#x2F;2+1;
+    &#125;
+    else&#123;
+        return n&#x2F;2;
+    &#125;
+&#125;
+
+int main()
+&#123;
+    int q[200][200];
+    int n,m;
+    cin &gt;&gt; n&gt;&gt;m;
+    &#x2F;*int **q;
+    q&#x3D;new int*[n];
+    for (int i&#x3D;0; i&lt;n; i++) &#123;
+        q[i]&#x3D;new int[m];
+    &#125;*&#x2F;
+    for (int i&#x3D;0; i&lt;n; i++) &#123;
+        for (int j&#x3D;0; j&lt;m; j++) &#123;
+            cin&gt;&gt;q[i][j];
+        &#125;
+    &#125;
+    &#x2F;&#x2F;cout &lt;&lt; q[0][0]&lt;&lt;endl;
+
+    int right&#x3D;m-1,left&#x3D;0,up&#x3D;0,down&#x3D;n-1;
+    while (1)&#123;
+        for (int i&#x3D;up; i&lt;&#x3D;down; i++) &#123;
+            cout &lt;&lt; q[i][left]&lt;&lt;&quot; &quot;;
+        &#125;
+        left++;
+        for (int i&#x3D;left; i&lt;&#x3D;right; i++) &#123;
+            cout &lt;&lt; q[down][i]&lt;&lt;&quot; &quot;;
+        &#125;
+        down--;
+        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
+            break;
+        &#125;
+        for (int i&#x3D;down; i&gt;&#x3D;up; i--) &#123;
+            cout &lt;&lt; q[i][right]&lt;&lt;&quot; &quot;;
+        &#125;
+        right--;
+        for (int i&#x3D;right; i&gt;&#x3D;left; i--) &#123;
+            cout &lt;&lt; q[up][i]&lt;&lt;&quot; &quot;;
+        &#125;
+        up++;
+        if (right+1&#x3D;&#x3D;left||up&#x3D;&#x3D;down+1) &#123;
+            break;
+        &#125;
+       &#x2F;&#x2F; cout &lt;&lt;endl&lt;&lt; up&lt;&lt;&quot; &quot;&lt;&lt;left&lt;&lt;endl;
+        &#x2F;&#x2F;cout &lt;&lt; m&#x2F;2+2 &lt;&lt; &quot; &quot;&lt;&lt;n&#x2F;2+2&lt;&lt;endl;
+    &#125;
+    cout &lt;&lt;endl;
+
+
+
+    return 0;
+&#125;
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Algorithm \ Data Structure</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>杂物</title>
     <url>/2018-12-02-others/</url>
     <content><![CDATA[<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;*报时
@@ -1053,78 +1053,6 @@ movies <span class="token operator">=</span> get_movies<span class="token punctu
         <tag>Python</tag>
         <tag>爬虫</tag>
         <tag>入门</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>flask部署的问题及解决</title>
-    <url>/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
-    <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
-</a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
-<span id="more"></span>
-
-<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><h3 id="端口被占用"><a href="#端口被占用" class="headerlink" title="端口被占用"></a>端口被占用</h3><p>查看所有的服务端口（ESTABLISHED</p>
-<blockquote>
-<p>netstat -a</p>
-</blockquote>
-<p>查看所有的服务端口，显示 pid 号（LISTEN，ESTABLISHED）</p>
-<blockquote>
-<p>netstat -ap</p>
-</blockquote>
-<p>查看某一（**）端口，则可以结合 grep 命令：</p>
-<blockquote>
-<p>netstat -ap | grep **</p>
-</blockquote>
-<p>如查看**端口，也可以在终端中输入：</p>
-<blockquote>
-<p>lsof -i:**</p>
-</blockquote>
-<p>若要停止使用这个端口的程序，使用 kill +对应的 pid</p>
-<blockquote>
-<p>kill pid</p>
-</blockquote>
-<p>还有一个比较好用的命令，查看**端口：</p>
-<blockquote>
-<p>sudo netstat -lnp | grep **</p>
-</blockquote>
-<p>查看端口号和运行程序：</p>
-<blockquote>
-<p>netstat -atunp | more</p>
-</blockquote>
-<p>查看进程所用端口：</p>
-<blockquote>
-<p>netstat -tlnp|grep **</p>
-</blockquote>
-<p>以上的命令对排查该类问题有很好的帮助。<br>同时，如果安装了宝塔 Linux 的 LMNP 群的话，就不用再另行</p>
-<blockquote>
-<p>sudo apt-get install nginx</p>
-</blockquote>
-<p>了，不然宝塔的 Nginx 会占用 80 端口而导致失败。</p>
-<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><h3 id="uwsgi-的配置问题"><a href="#uwsgi-的配置问题" class="headerlink" title="uwsgi 的配置问题"></a>uwsgi 的配置问题</h3><p>uwsgi 的配置文件需要在 ray 所提供的样例之上进行适应性调整。<br>另，评论中指出的</p>
-<blockquote>
-<p>config.ini 文件<br>chdir = /home/www/ 要改成 chdir = /home/www/my_flask</p>
-</blockquote>
-<p>供参考</p>
-<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><h3 id="502-提示"><a href="#502-提示" class="headerlink" title="502 提示"></a>502 提示</h3><p>部署完成之后遇到了 502 提示，在网上查找了许多的解决方案都没有用，后来才发现，uwsgi 所占用的 8001 端口并没有处于运行状态，<strong>手动运行 uwsgi</strong>后网站恢复运行，进而考虑到是<code>Supervisor</code>出现问题，使用</p>
-<blockquote>
-<p>sudo service supervisor start</p>
-</blockquote>
-<p>查找出错误并解决之（似乎是配置文件中指定的 log 文件夹要自己创建，它并不会自动创建这样子）。</p>
-<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><h3 id="个人的调试办法"><a href="#个人的调试办法" class="headerlink" title="个人的调试办法"></a>个人的调试办法</h3><p>在网站第一次全部部署完成之后，出现了很多的小问题，这里我将项目拆解开来进行一步一步的测试</p>
-<h4 id="S1-检测文件本身是否有问题"><a href="#S1-检测文件本身是否有问题" class="headerlink" title="S1 检测文件本身是否有问题"></a>S1 检测文件本身是否有问题</h4><p>方法是直接运行 manage.py</p>
-<blockquote>
-<p>这里注意，要用过外网访问 localhost：5000 的话，要使用 python manage.py runserver –host 0.0.0.0</p>
-</blockquote>
-<p>记得要给 5000 端口放行</p>
-<h4 id="S2-检测-uwsgi-有无问题"><a href="#S2-检测-uwsgi-有无问题" class="headerlink" title="S2 检测 uwsgi 有无问题"></a>S2 检测 uwsgi 有无问题</h4><p>uwsgi 成功运行之后了，网站再次变为可访问状态，使用 Ctrl+C 之后，网站再次不可访问，然后配置使用<strong>Supervisor</strong> 将 uwsgi 变为保持开启状态。<br>操作完成之后，网站变为可访问（依旧是 5000 端口）</p>
-<h3 id="S3-检测-Nginx"><a href="#S3-检测-Nginx" class="headerlink" title="S3 检测 Nginx"></a>S3 检测 Nginx</h3><p>不出意外的话，这就是最后一步了，表面上是 Nginx 一直在报错，然而实际上 Nginx 配置并没有什么问题，完成了上述两步的调试之后，Nginx 也就不报错了，这时可以直接使用域名访问网站。</p>
-<h2 id="关于-flask-制作网站的后续"><a href="#关于-flask-制作网站的后续" class="headerlink" title="关于 flask 制作网站的后续"></a>关于 flask 制作网站的后续</h2><p>后面准备给网站加上域名（应该不是这个模拟网站，而是工作室的网站吧）<br>掌握对网站维护的技巧<br>以上。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -1385,6 +1313,78 @@ driver<span class="token punctuation">.</span>close<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>flask部署的问题及解决</title>
+    <url>/2019-03-11-questions-and-solutions-of-flask-deploy-1/</url>
+    <content><![CDATA[<p>基于 Ray 的<a href="https://www.cnblogs.com/Ray-liang/p/4173923.html">阿里云部署 Flask + WSGI + Nginx 详解
+</a>对我所做的选课模拟系统进行了服务器端的部署。<br>环境：flask uwsgi Ubuntu Nginx</p>
+<span id="more"></span>
+
+<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><h3 id="端口被占用"><a href="#端口被占用" class="headerlink" title="端口被占用"></a>端口被占用</h3><p>查看所有的服务端口（ESTABLISHED</p>
+<blockquote>
+<p>netstat -a</p>
+</blockquote>
+<p>查看所有的服务端口，显示 pid 号（LISTEN，ESTABLISHED）</p>
+<blockquote>
+<p>netstat -ap</p>
+</blockquote>
+<p>查看某一（**）端口，则可以结合 grep 命令：</p>
+<blockquote>
+<p>netstat -ap | grep **</p>
+</blockquote>
+<p>如查看**端口，也可以在终端中输入：</p>
+<blockquote>
+<p>lsof -i:**</p>
+</blockquote>
+<p>若要停止使用这个端口的程序，使用 kill +对应的 pid</p>
+<blockquote>
+<p>kill pid</p>
+</blockquote>
+<p>还有一个比较好用的命令，查看**端口：</p>
+<blockquote>
+<p>sudo netstat -lnp | grep **</p>
+</blockquote>
+<p>查看端口号和运行程序：</p>
+<blockquote>
+<p>netstat -atunp | more</p>
+</blockquote>
+<p>查看进程所用端口：</p>
+<blockquote>
+<p>netstat -tlnp|grep **</p>
+</blockquote>
+<p>以上的命令对排查该类问题有很好的帮助。<br>同时，如果安装了宝塔 Linux 的 LMNP 群的话，就不用再另行</p>
+<blockquote>
+<p>sudo apt-get install nginx</p>
+</blockquote>
+<p>了，不然宝塔的 Nginx 会占用 80 端口而导致失败。</p>
+<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><h3 id="uwsgi-的配置问题"><a href="#uwsgi-的配置问题" class="headerlink" title="uwsgi 的配置问题"></a>uwsgi 的配置问题</h3><p>uwsgi 的配置文件需要在 ray 所提供的样例之上进行适应性调整。<br>另，评论中指出的</p>
+<blockquote>
+<p>config.ini 文件<br>chdir = /home/www/ 要改成 chdir = /home/www/my_flask</p>
+</blockquote>
+<p>供参考</p>
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><h3 id="502-提示"><a href="#502-提示" class="headerlink" title="502 提示"></a>502 提示</h3><p>部署完成之后遇到了 502 提示，在网上查找了许多的解决方案都没有用，后来才发现，uwsgi 所占用的 8001 端口并没有处于运行状态，<strong>手动运行 uwsgi</strong>后网站恢复运行，进而考虑到是<code>Supervisor</code>出现问题，使用</p>
+<blockquote>
+<p>sudo service supervisor start</p>
+</blockquote>
+<p>查找出错误并解决之（似乎是配置文件中指定的 log 文件夹要自己创建，它并不会自动创建这样子）。</p>
+<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><h3 id="个人的调试办法"><a href="#个人的调试办法" class="headerlink" title="个人的调试办法"></a>个人的调试办法</h3><p>在网站第一次全部部署完成之后，出现了很多的小问题，这里我将项目拆解开来进行一步一步的测试</p>
+<h4 id="S1-检测文件本身是否有问题"><a href="#S1-检测文件本身是否有问题" class="headerlink" title="S1 检测文件本身是否有问题"></a>S1 检测文件本身是否有问题</h4><p>方法是直接运行 manage.py</p>
+<blockquote>
+<p>这里注意，要用过外网访问 localhost：5000 的话，要使用 python manage.py runserver –host 0.0.0.0</p>
+</blockquote>
+<p>记得要给 5000 端口放行</p>
+<h4 id="S2-检测-uwsgi-有无问题"><a href="#S2-检测-uwsgi-有无问题" class="headerlink" title="S2 检测 uwsgi 有无问题"></a>S2 检测 uwsgi 有无问题</h4><p>uwsgi 成功运行之后了，网站再次变为可访问状态，使用 Ctrl+C 之后，网站再次不可访问，然后配置使用<strong>Supervisor</strong> 将 uwsgi 变为保持开启状态。<br>操作完成之后，网站变为可访问（依旧是 5000 端口）</p>
+<h3 id="S3-检测-Nginx"><a href="#S3-检测-Nginx" class="headerlink" title="S3 检测 Nginx"></a>S3 检测 Nginx</h3><p>不出意外的话，这就是最后一步了，表面上是 Nginx 一直在报错，然而实际上 Nginx 配置并没有什么问题，完成了上述两步的调试之后，Nginx 也就不报错了，这时可以直接使用域名访问网站。</p>
+<h2 id="关于-flask-制作网站的后续"><a href="#关于-flask-制作网站的后续" class="headerlink" title="关于 flask 制作网站的后续"></a>关于 flask 制作网站的后续</h2><p>后面准备给网站加上域名（应该不是这个模拟网站，而是工作室的网站吧）<br>掌握对网站维护的技巧<br>以上。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>N皇后问题</title>
     <url>/2019-06-11-NQueen/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/n-queens/">No.51 N 皇后问题</a></p>
@@ -1576,24 +1576,6 @@ bool exist(vector&lt;vector&lt;char&gt;&gt;&amp; board, string word) &#123;
       </tags>
   </entry>
   <entry>
-    <title>flask 开发心得 part 1</title>
-    <url>/2019-07-16-flask-experience-part/</url>
-    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
-<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
-<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
-<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
-<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
-<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>flask</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 数据挖掘基础</title>
     <url>/2019-07-16-Python-basic-of-DM/</url>
     <content><![CDATA[<p>本篇记载了如何在 python 中使用数据挖掘的相关的模块。<br>都是基础级的东西了。</p>
@@ -1689,6 +1671,24 @@ sns<span class="token punctuation">.</span>set_style<span class="token punctuati
       </categories>
       <tags>
         <tag>datasci</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>flask 开发心得 part 1</title>
+    <url>/2019-07-16-flask-experience-part/</url>
+    <content><![CDATA[<p>这个心得是我在进行“中医基础数据管理”系统的开发过程中所遇到的一些问题以及其解决方法。</p>
+<p>截止到 2019 年 07 月 16 日 17:22:33，项目的第一阶段开始进入后期，所以在这里写下第一阶段的 QA。</p>
+<h1 id="安全性小结"><a href="#安全性小结" class="headerlink" title="安全性小结"></a>安全性小结</h1><h2 id="开启前后端双重验证"><a href="#开启前后端双重验证" class="headerlink" title="开启前后端双重验证"></a>开启前后端双重验证</h2><p>起因:在完成了表单之后,为了方便直接使用 postman 进行数据的交互,结果 post 错误数据的时候,后端崩了…..<br>反思:前端的校验可以减轻服务器端的压力,但是如果只依赖前端的校验,后端不加防备,无疑是十分不安全的,来自前端的伪装攻击很容易就可以摧垮服务器端的程序.</p>
+<h2 id="开启数据加密"><a href="#开启数据加密" class="headerlink" title="开启数据加密"></a>开启数据加密</h2><p>密码等需要加密的数据进行明文的交互无疑是非常不安全的.</p>
+<h2 id="使用-rollback-来保证数据库的安全性"><a href="#使用-rollback-来保证数据库的安全性" class="headerlink" title="使用 rollback 来保证数据库的安全性"></a>使用 rollback 来保证数据库的安全性</h2><p>如题</p>
+<h1 id="性能小结"><a href="#性能小结" class="headerlink" title="性能小结"></a>性能小结</h1><h2 id="mysql-的性能"><a href="#mysql-的性能" class="headerlink" title="mysql 的性能"></a>mysql 的性能</h2><p>课上讲到了 SQL 联合查找时的性能问题,就去查了一下.<br>主流的观点认为,视图的使用会提高数据库的压力,联合语句的使用会提高后端的服务器性能消耗,所以应该手动分成各个小部分来执行</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2303,103 +2303,6 @@ trusted-host&#x3D;mirrors.aliyun.com trusted-host&#x3D;pypi.python.org<span aria
       </tags>
   </entry>
   <entry>
-    <title>sklearn应用性学习(1)</title>
-    <url>/2019-08-04-learning-sklearn-via-practice-1/</url>
-    <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
-<p>本篇主要针对无监督学习进行浅尝。</p>
-<span id="more"></span>
-
-<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><p>Definition:根据数据的相似性将数据分为多类的过程.</p>
-<h3 id="sklearn-cluster"><a href="#sklearn-cluster" class="headerlink" title="sklearn.cluster"></a>sklearn.cluster</h3><p>sklearn.cluster 模块提供的各聚类算法函数可以使用不同的数据形式作为 输入:<br>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。<br>相似性矩阵输入格式:即由[样本数目，样本数目]定义的矩阵形式，矩阵中 的每一个元素为两个样本的相似度，如 DBSCAN， AffinityPropagation(近邻传 播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为 1. 矩阵中每 个元素的取值范围为[0,1]。</p>
-<h2 id="降维"><a href="#降维" class="headerlink" title="降维"></a>降维</h2><p>降维是指在某些限定条件下，降低随机变量个数，得到一组“不相关”主变量的过程。 降维可进一步细分为变量选择和特征提取两大方法。</p>
-<h1 id="聚类-1"><a href="#聚类-1" class="headerlink" title="聚类"></a>聚类</h1><h2 id="kMeans"><a href="#kMeans" class="headerlink" title="kMeans"></a>kMeans</h2><p>k-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似 度，而簇间的相似度较低。<br>其处理过程如下: 1.随机选择 k 个点作为初始的聚类中心; 2.对于剩下的点，根据其与聚类中心的距离，将其归入最近的簇 3.对每个簇，计算所有点的均值作为新的聚类中心 4.重复 2、3 直到聚类中心不再发生改变</p>
-<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>调用 KMeans 方法所需参数:<br>• <strong>n_clusters</strong>:用于指定聚类中心的个数<br>• <strong>init</strong>:初始聚类中心的初始化方法<br>• <strong>max_iter</strong>:最大的迭代次数<br>• 一般调用时只用给出 n_clusters 即可，init<br>默认是 k-means++，max_iter 默认是 300<br>其它参数:<br>• <strong>data</strong>:加载的数据<br>• <strong>label</strong>:聚类后各数据所属的标签<br>• <strong>axis</strong>: 按行求和<br>• <strong>fit_predict()</strong>:计算簇中心以及为簇分配序号</p>
-<blockquote>
-<p>MacOS 在执行 open 命令时,添加 <em>encoding=’gbk’</em>,避免编码错误</p>
-</blockquote>
-<h3 id="扩展和改进"><a href="#扩展和改进" class="headerlink" title="扩展和改进"></a>扩展和改进</h3><p>计算两条数据相似性时，Sklearn 的 K-Means 默认用的是欧式距离。虽然还有余弦相<br>似度，马氏距离等多种方法，但没有设定计算距离方法的参数。</p>
-<p>更改 <a href="https://github.com/scikit-learn/scikit-learn/blob/581b0e1d73414f47ef6cde6cd282667b7e767a36/sklearn/metrics/pairwise.py#L163"><strong>euclidean_distances</strong></a> 的源码<br>建 议 使 用 scipy.spatial.distance.cdist 方 法</p>
-<blockquote>
-<p>Considering the rows of X (and Y=X) as vectors, compute the</p>
-</blockquote>
-<pre><code>distance matrix between each pair of vectors.
-For efficiency reasons, the euclidean distance between a pair of row
-vector x and y is computed as::
-    dist(x, y) = sqrt(dot(x, x) - 2 * dot(x, y) + dot(y, y))
-This formulation has two advantages over other ways of computing distances.
-First, it is computationally efficient when dealing with sparse data.
-Second, if one argument varies but the other remains unchanged, then
-`dot(x, x)` and/or `dot(y, y)` can be pre-computed.
-However, this is not the most precise way of doing this computation, and
-the distance matrix returned by this function may not be exactly
-symmetric as required by, e.g., ``scipy.spatial.distance`` functions.
-Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
-<h2 id="DBSCAN-密度聚类"><a href="#DBSCAN-密度聚类" class="headerlink" title="DBSCAN 密度聚类"></a>DBSCAN 密度聚类</h2><p>DBSCAN 算法是一种基于密度的聚类算法:<br>• 聚类的时候不需要预先指定簇的个数<br>• 最终的簇的个数不定</p>
-<p>DBSCAN 算法将数据点分为三类:<br>• 核心点:在半径 Eps 内含有超过 MinPts 数目的点<br>• 边界点:在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内<br>• 噪音点:既不是核心点也不是边界点的点</p>
-<h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p>1.将所有点标记为核心点、边界点或噪声点; 2.删除噪声点; 3.为距离在 Eps 之内的所有核心点之间赋予一条边; 4.每组连通的核心点形成一个簇; 5.将每个边界点指派到一个与之关联的核心点的簇中(哪一个核心点的半径范围之内)。</p>
-<h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><p>DBSCAN 主要参数:<br>eps: 两个样本被看作邻居节点的最大距离  min_samples: 簇的样本数<br>metric:距离计算方式</p>
-<h2 id="降维-1"><a href="#降维-1" class="headerlink" title="降维"></a>降维</h2><h3 id="pca"><a href="#pca" class="headerlink" title="pca"></a>pca</h3><ul>
-<li><p>主成分分析(Principal Component Analysis，PCA)是最常用的 一种降维方法，通常用于高维数据集的探索与可视化，还可以用作数 据压缩和预处理等。</p>
-</li>
-<li><p>PCA 可以把具有相关性的高维变量合成为线性无关的低维变量，称为 主成分。主成分能够尽可能保留原始数据的信息。</p>
-</li>
-</ul>
-<h4 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
-<li>n_components:指定主成分的个数，即降维后数据的维度</li>
-<li>svd_solver :设置特征值分解的方法，默认为‘auto’,其他可选有<br>‘full’, ‘arpack’, ‘randomized’。</li>
-</ul>
-<h3 id="非负矩阵分解"><a href="#非负矩阵分解" class="headerlink" title="非负矩阵分解"></a>非负矩阵分解</h3><p><a href="https://blog.csdn.net/acdreamers/article/details/44663421/">原理参考</a><br>非负矩阵分解(Non-negative Matrix Factorization ，NMF) 是在矩阵中所有元素均为非负数约束条件之下的矩阵分解方法。<br>基本思想:给定一个非负矩阵 V，NMF 能够找到一个非负矩阵 W 和一个 非负矩阵 H，使得矩阵 W 和 H 的乘积近似等于矩阵 V 中的值。</p>
-<ul>
-<li>W 矩阵:基础图像矩阵，相当于从原 矩阵 V 中抽取出来的特征</li>
-<li>H 矩阵:系数矩阵。</li>
-<li>NMF 能够广泛应用于图像分析、文本<br>挖掘和语音处理等领域。</li>
-</ul>
-<h4 id="主要参数-1"><a href="#主要参数-1" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
-<li>n_components:用于指定分解后矩阵的单个维度 k;</li>
-<li>init:W 矩阵和 H 矩阵的初始化方式，默认为‘nndsvdar’。</li>
-</ul>
-<h2 id="实战-图像分割"><a href="#实战-图像分割" class="headerlink" title="(实战)图像分割"></a>(实战)图像分割</h2><p>图像分割常用方法:</p>
-<ol>
-<li>阈值分割:对图像灰度值进行度量，设置不同类别的阈值，达到分割的目的。</li>
-<li>边缘分割:对图像边缘进行检测，即检测图像中灰度值发生跳变的地方，则为一片<br>区域的边缘。</li>
-<li>直方图法:对图像的颜色建立直方图，而直方图的波峰波谷能够表示一块区域的颜<br>色值的范围，来达到分割的目的。</li>
-<li>特定理论:基于聚类分析、小波变换等理论完成图像分割。</li>
-</ol>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> PIL<span class="token punctuation">.</span>Image <span class="token keyword">as</span> image
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
-
-<span class="token keyword">def</span> <span class="token function">loadData</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span>
-    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    img <span class="token operator">=</span> image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
-    m<span class="token punctuation">,</span>n <span class="token operator">=</span> img<span class="token punctuation">.</span>size
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> img<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
-            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>y<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>z<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token punctuation">,</span>n
-
-imgData<span class="token punctuation">,</span>row<span class="token punctuation">,</span>col <span class="token operator">=</span> loadData<span class="token punctuation">(</span><span class="token string">'课程数据/基于聚类的整图分割/bull.jpg'</span><span class="token punctuation">)</span>
-label <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>imgData<span class="token punctuation">)</span>
-
-label <span class="token operator">=</span> label<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span>col<span class="token punctuation">]</span><span class="token punctuation">)</span>
-pic_new <span class="token operator">=</span> image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"L"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> col<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>col<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        pic_new<span class="token punctuation">.</span>putpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token operator">/</span><span class="token punctuation">(</span>label<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-pic_new<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"result-bull-4.jpg"</span><span class="token punctuation">,</span> <span class="token string">"JPEG"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>sklearn</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>sklearn构造性学习(1)</title>
     <url>/2019-08-02-learning-sklearn-via-theory-1/</url>
     <content><![CDATA[<p>构造性学习中，以理论为主，并结合一定的例子</p>
@@ -2693,36 +2596,101 @@ grid_search<span class="token punctuation">.</span>fit<span class="token punctua
       </tags>
   </entry>
   <entry>
-    <title>工作室异闻录(1)</title>
-    <url>/2019-08-06-Anecdote-of-studio/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>VENI VIDI VICI。 –凯撒</p>
+    <title>sklearn应用性学习(1)</title>
+    <url>/2019-08-04-learning-sklearn-via-practice-1/</url>
+    <content><![CDATA[<p>应用性学习置于构造性学习之后，在理解 sklearn 的构造，各种参数的理论依据的基础上，进行实践性的学习。</p>
+<p>本篇主要针对无监督学习进行浅尝。</p>
+<span id="more"></span>
+
+<h1 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h1><h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><p>Definition:根据数据的相似性将数据分为多类的过程.</p>
+<h3 id="sklearn-cluster"><a href="#sklearn-cluster" class="headerlink" title="sklearn.cluster"></a>sklearn.cluster</h3><p>sklearn.cluster 模块提供的各聚类算法函数可以使用不同的数据形式作为 输入:<br>标准数据输入格式:[样本个数，特征个数]定义的矩阵形式。<br>相似性矩阵输入格式:即由[样本数目，样本数目]定义的矩阵形式，矩阵中 的每一个元素为两个样本的相似度，如 DBSCAN， AffinityPropagation(近邻传 播算法)接受这种输入。如果以余弦相似度为例，则对角线元素全为 1. 矩阵中每 个元素的取值范围为[0,1]。</p>
+<h2 id="降维"><a href="#降维" class="headerlink" title="降维"></a>降维</h2><p>降维是指在某些限定条件下，降低随机变量个数，得到一组“不相关”主变量的过程。 降维可进一步细分为变量选择和特征提取两大方法。</p>
+<h1 id="聚类-1"><a href="#聚类-1" class="headerlink" title="聚类"></a>聚类</h1><h2 id="kMeans"><a href="#kMeans" class="headerlink" title="kMeans"></a>kMeans</h2><p>k-means 算法以 k 为参数，把 n 个对象分成 k 个簇，使簇内具有较高的相似 度，而簇间的相似度较低。<br>其处理过程如下: 1.随机选择 k 个点作为初始的聚类中心; 2.对于剩下的点，根据其与聚类中心的距离，将其归入最近的簇 3.对每个簇，计算所有点的均值作为新的聚类中心 4.重复 2、3 直到聚类中心不再发生改变</p>
+<h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>调用 KMeans 方法所需参数:<br>• <strong>n_clusters</strong>:用于指定聚类中心的个数<br>• <strong>init</strong>:初始聚类中心的初始化方法<br>• <strong>max_iter</strong>:最大的迭代次数<br>• 一般调用时只用给出 n_clusters 即可，init<br>默认是 k-means++，max_iter 默认是 300<br>其它参数:<br>• <strong>data</strong>:加载的数据<br>• <strong>label</strong>:聚类后各数据所属的标签<br>• <strong>axis</strong>: 按行求和<br>• <strong>fit_predict()</strong>:计算簇中心以及为簇分配序号</p>
+<blockquote>
+<p>MacOS 在执行 open 命令时,添加 <em>encoding=’gbk’</em>,避免编码错误</p>
 </blockquote>
-<p>我将这句话写在了大二篇章的中叶。</p>
-<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
-<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
-<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
-<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
-<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
-<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg" loading="lazy"></a></p>
+<h3 id="扩展和改进"><a href="#扩展和改进" class="headerlink" title="扩展和改进"></a>扩展和改进</h3><p>计算两条数据相似性时，Sklearn 的 K-Means 默认用的是欧式距离。虽然还有余弦相<br>似度，马氏距离等多种方法，但没有设定计算距离方法的参数。</p>
+<p>更改 <a href="https://github.com/scikit-learn/scikit-learn/blob/581b0e1d73414f47ef6cde6cd282667b7e767a36/sklearn/metrics/pairwise.py#L163"><strong>euclidean_distances</strong></a> 的源码<br>建 议 使 用 scipy.spatial.distance.cdist 方 法</p>
+<blockquote>
+<p>Considering the rows of X (and Y=X) as vectors, compute the</p>
+</blockquote>
+<pre><code>distance matrix between each pair of vectors.
+For efficiency reasons, the euclidean distance between a pair of row
+vector x and y is computed as::
+    dist(x, y) = sqrt(dot(x, x) - 2 * dot(x, y) + dot(y, y))
+This formulation has two advantages over other ways of computing distances.
+First, it is computationally efficient when dealing with sparse data.
+Second, if one argument varies but the other remains unchanged, then
+`dot(x, x)` and/or `dot(y, y)` can be pre-computed.
+However, this is not the most precise way of doing this computation, and
+the distance matrix returned by this function may not be exactly
+symmetric as required by, e.g., ``scipy.spatial.distance`` functions.
+Read more in the:`User Guide &lt;metrics&gt;`.</code></pre>
+<h2 id="DBSCAN-密度聚类"><a href="#DBSCAN-密度聚类" class="headerlink" title="DBSCAN 密度聚类"></a>DBSCAN 密度聚类</h2><p>DBSCAN 算法是一种基于密度的聚类算法:<br>• 聚类的时候不需要预先指定簇的个数<br>• 最终的簇的个数不定</p>
+<p>DBSCAN 算法将数据点分为三类:<br>• 核心点:在半径 Eps 内含有超过 MinPts 数目的点<br>• 边界点:在半径 Eps 内点的数量小于 MinPts，但是落在核心点的邻域内<br>• 噪音点:既不是核心点也不是边界点的点</p>
+<h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p>1.将所有点标记为核心点、边界点或噪声点; 2.删除噪声点; 3.为距离在 Eps 之内的所有核心点之间赋予一条边; 4.每组连通的核心点形成一个簇; 5.将每个边界点指派到一个与之关联的核心点的簇中(哪一个核心点的半径范围之内)。</p>
+<h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><p>DBSCAN 主要参数:<br>eps: 两个样本被看作邻居节点的最大距离  min_samples: 簇的样本数<br>metric:距离计算方式</p>
+<h2 id="降维-1"><a href="#降维-1" class="headerlink" title="降维"></a>降维</h2><h3 id="pca"><a href="#pca" class="headerlink" title="pca"></a>pca</h3><ul>
+<li><p>主成分分析(Principal Component Analysis，PCA)是最常用的 一种降维方法，通常用于高维数据集的探索与可视化，还可以用作数 据压缩和预处理等。</p>
 </li>
-<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg" loading="lazy"></a></p>
-</li>
-<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg" loading="lazy"></a></p>
+<li><p>PCA 可以把具有相关性的高维变量合成为线性无关的低维变量，称为 主成分。主成分能够尽可能保留原始数据的信息。</p>
 </li>
 </ul>
+<h4 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
+<li>n_components:指定主成分的个数，即降维后数据的维度</li>
+<li>svd_solver :设置特征值分解的方法，默认为‘auto’,其他可选有<br>‘full’, ‘arpack’, ‘randomized’。</li>
+</ul>
+<h3 id="非负矩阵分解"><a href="#非负矩阵分解" class="headerlink" title="非负矩阵分解"></a>非负矩阵分解</h3><p><a href="https://blog.csdn.net/acdreamers/article/details/44663421/">原理参考</a><br>非负矩阵分解(Non-negative Matrix Factorization ，NMF) 是在矩阵中所有元素均为非负数约束条件之下的矩阵分解方法。<br>基本思想:给定一个非负矩阵 V，NMF 能够找到一个非负矩阵 W 和一个 非负矩阵 H，使得矩阵 W 和 H 的乘积近似等于矩阵 V 中的值。</p>
+<ul>
+<li>W 矩阵:基础图像矩阵，相当于从原 矩阵 V 中抽取出来的特征</li>
+<li>H 矩阵:系数矩阵。</li>
+<li>NMF 能够广泛应用于图像分析、文本<br>挖掘和语音处理等领域。</li>
+</ul>
+<h4 id="主要参数-1"><a href="#主要参数-1" class="headerlink" title="主要参数"></a>主要参数</h4><ul>
+<li>n_components:用于指定分解后矩阵的单个维度 k;</li>
+<li>init:W 矩阵和 H 矩阵的初始化方式，默认为‘nndsvdar’。</li>
+</ul>
+<h2 id="实战-图像分割"><a href="#实战-图像分割" class="headerlink" title="(实战)图像分割"></a>(实战)图像分割</h2><p>图像分割常用方法:</p>
+<ol>
+<li>阈值分割:对图像灰度值进行度量，设置不同类别的阈值，达到分割的目的。</li>
+<li>边缘分割:对图像边缘进行检测，即检测图像中灰度值发生跳变的地方，则为一片<br>区域的边缘。</li>
+<li>直方图法:对图像的颜色建立直方图，而直方图的波峰波谷能够表示一块区域的颜<br>色值的范围，来达到分割的目的。</li>
+<li>特定理论:基于聚类分析、小波变换等理论完成图像分割。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> PIL<span class="token punctuation">.</span>Image <span class="token keyword">as</span> image
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+
+<span class="token keyword">def</span> <span class="token function">loadData</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span><span class="token string">'rb'</span><span class="token punctuation">)</span>
+    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    img <span class="token operator">=</span> image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+    m<span class="token punctuation">,</span>n <span class="token operator">=</span> img<span class="token punctuation">.</span>size
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> img<span class="token punctuation">.</span>getpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            data<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>y<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">,</span>z<span class="token operator">/</span><span class="token number">256.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>mat<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token punctuation">,</span>n
+
+imgData<span class="token punctuation">,</span>row<span class="token punctuation">,</span>col <span class="token operator">=</span> loadData<span class="token punctuation">(</span><span class="token string">'课程数据/基于聚类的整图分割/bull.jpg'</span><span class="token punctuation">)</span>
+label <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>imgData<span class="token punctuation">)</span>
+
+label <span class="token operator">=</span> label<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span>col<span class="token punctuation">]</span><span class="token punctuation">)</span>
+pic_new <span class="token operator">=</span> image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">"L"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> col<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>col<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        pic_new<span class="token punctuation">.</span>putpixel<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">256</span><span class="token operator">/</span><span class="token punctuation">(</span>label<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+pic_new<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"result-bull-4.jpg"</span><span class="token punctuation">,</span> <span class="token string">"JPEG"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <categories>
-        <category>起居杂录</category>
+        <category>源流清泉</category>
+        <category>Python</category>
       </categories>
+      <tags>
+        <tag>sklearn</tag>
+      </tags>
   </entry>
   <entry>
     <title>sklearn应用性学习(2)</title>
@@ -2759,6 +2727,38 @@ grid_search<span class="token punctuation">.</span>fit<span class="token punctua
       <tags>
         <tag>sklearn</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>工作室异闻录(1)</title>
+    <url>/2019-08-06-Anecdote-of-studio/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>VENI VIDI VICI。 –凯撒</p>
+</blockquote>
+<p>我将这句话写在了大二篇章的中叶。</p>
+<p>在此之前，我是浮萍，在图书馆，在教学楼，在静谧的树林，徘徊游荡。<br>在此之后，我是一壶酒，悠然地感受岁月的安静与绵长。</p>
+<p>不知不觉，我已经在这个位置上坐了小半年了，感性之人的通病就在于，会在一些奇怪的地方倾注自己的感情。比如我，比如这里。</p>
+<p>在这里，我完成了我的第一个比赛作品，第一个项目，两件排名第一的课设。<br>在这里，我干掉了两箱可乐，五罐不同品牌的啤酒，难以计数的酸奶。<br>在这里，我认识了很多的人，萍水相逢者有之，志同道合者有之。</p>
+<p>暑假将尽，就以此系列，来记录我的工作室时光，一段值得追忆的时光。</p>
+<h1 id="贴图啦"><a href="#贴图啦" class="headerlink" title="贴图啦"></a>贴图啦</h1><ul>
+<li><p>技术宅的快乐时光<br><a href="http://www.harumonia.top/image/IIl"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2478.md.jpg" alt="IMG_2478.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>哦，my mac，my varmilo，my benQ<br><a href="http://www.harumonia.top/image/Rfo"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2480.md.jpg" alt="IMG_2480.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>唯一能见证我曾经的整洁桌面的置物架<br><a href="http://www.harumonia.top/image/Pwc"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2481.md.jpg" alt="IMG_2481.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>鲨雕头盔<br><a href="http://www.harumonia.top/image/i02"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2470.md.jpg" alt="IMG_2470.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>你为什么戴着剑哥的耳机？<br><a href="http://www.harumonia.top/image/5hQ"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2469.md.jpg" alt="IMG_2469.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>bug 改不出来辣，算了，豁酒<br><a href="http://www.harumonia.top/image/nOX"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2471.md.jpg" alt="IMG_2471.md.jpg" loading="lazy"></a></p>
+</li>
+<li><p>我也曾挥斥方遒（然后现在在工作时间摸鱼啊%&gt;_&lt;%）(这个人怎么闭着眼睛说话？)<br><a href="http://www.harumonia.top/image/gos"><img src="http://www.harumonia.top/images/2019/08/06/IMG_2482.th.jpg" alt="IMG_2482.th.jpg" loading="lazy"></a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
   </entry>
   <entry>
     <title>Be a better pythonista(1)</title>
@@ -3026,44 +3026,6 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
-    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
-    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
-<p>因为台风过境,大部分的动车班次都被停运.</p>
-<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
-<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
-<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
-
-<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
-<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
-<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
-<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
-<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
-
-<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
-<p>一条长江,分开了两个世界.</p>
-<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
-<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
-<!--
-[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
-
-<p>对比,就是这么鲜明.</p>
-<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
-<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
-<p>没错,它的特色,就是没有特色.</p>
-<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
-<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
-<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
-<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
-</ul>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-  </entry>
-  <entry>
     <title>计算机设计大赛国赛 and 芜湖游记（1）</title>
     <url>/2019-08-09-jsjds-travel-notes-of-wuhu-1/</url>
     <content><![CDATA[<p>一个很粗糙的作品，莫名其妙的就通过了省赛，然后莫名其妙地就到了国赛。。。算了，就好好享受一下吧，至少是要不 gong 虚 fei 此 chi 行 he，哈哈。</p>
@@ -3136,6 +3098,44 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这两天经历了很多，听到了很多的道理，我不知道我真正明白了多少。</p>
 <p>果然，我还是喜欢与人交流，与上一代的人交流，与上上一代的人交流，这是了解历史，了解人文的最好的、最方便的途径。</p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机设计大赛国赛 and 芜湖游记（2）</title>
+    <url>/2019-08-10-jsjds-travel-notes-of-wuhu-2/</url>
+    <content><![CDATA[<h1 id="第三日"><a href="#第三日" class="headerlink" title="第三日"></a>第三日</h1><p>没有想到这会是我在芜湖的最后一天.</p>
+<p>因为台风过境,大部分的动车班次都被停运.</p>
+<p>我还没有知道比赛的结果如何,我还没有去参观芜湖的人文景致,却就要回去了.</p>
+<p>正巧读到余秋雨所写的王朝更迭与自然变化的那一段,感触愈深.</p>
+<h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><!-- [![IMG_2527.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2527.md.jpg)](http://www.harumonia.top/image/Vlx) -->
+
+<p>18 级的台风是何等的伟力?这之前无人知道,只不过,仅仅是它的先锋,就已经扼住了这个古老的城市的咽喉,处处都是萧索,处处都是愁容.</p>
+<p>我是极不愿意出门的,但是无奈已经答应了给他们带一些纪念品,便只得拎着雨伞出门了.</p>
+<p>涛哥听说我要买纪念品,显得十分热心,当即就开始查一些芜湖的资料了,倒也省去了我不少的功夫.</p>
+<p>风雨里的芜湖别有一番滋味,我只能苦中作乐地这样去说.</p>
+<!-- [![IMG_2530.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2530.md.jpg)](http://www.harumonia.top/image/JsxO) -->
+
+<p>芜湖的发展是极不均衡的,这一点当我第一次从 27 楼眺望时就已经发现了.</p>
+<p>一条长江,分开了两个世界.</p>
+<p>新城区的高楼大厦与旧城区的破败棚户形成了极鲜明的对比.中山桥从物理的层面将两边关联,但是很显然,它无法从精神层面让这两者达成统一,无论是从当事人的角度,还是从旁观者的角度.</p>
+<p>新百以南,新百以北,城中村.<br>新百以东,新百以西,沿中山桥画一条线,这是这个城市真正的中心,汇集了这个城市大部分的财富.</p>
+<!--
+[![IMG_2529.md.jpg](http://www.harumonia.top/images/2019/08/10/IMG_2529.md.jpg)](http://www.harumonia.top/image/J7oL) -->
+
+<p>对比,就是这么鲜明.</p>
+<p>我没有买到特产,却也得到了特产.这是我在其他的城市所没有过的体悟,这是这个城市为数不多的让我感到特殊的地方.</p>
+<p>这个城市被称为美食之城,被称为半山半水,但是很可惜,它在南京的旁边,它在合肥的旁边,这样的映衬下,它所谓的特色显得那么地单薄,那么地无力.若它有灵,想必也会像千年之前在此地点将的那位一样,发出”既生瑜,何生亮”之叹吧.</p>
+<p>没错,它的特色,就是没有特色.</p>
+<p>一座城市不能没有特色,虚无点说,这是一座城市的灵魂,现实点说,这是一个城市服务业发展的必然需求.就像听到如皋,第一个想到的便是长寿;提到南通,第一个想到的便是近代第一城.</p>
+<p>查找它的城市名人,却是”赵薇”&quot;成龙之父”&quot;大司马”之流,着实可怜而又可悲,并不是说这些人有什么不好,只是,戏子自己尚且无法恒久,又如何让城市恒久?戏子自身尚且不够高格,又如何让城市高格?如果想将城市的文化内涵底蕴寄托于这些人,呵呵.</p>
+<p>其实不仅仅是这座城市,近代化以来,中国的城市同质化十分严重,南京的古城墙,如皋的古城区,城市化的滚滚车轮下,没有谁能够幸免,等到大家醒悟过来,站在废墟前忏悔,将废墟重建,只是,形似,而神,十不存一.</p>
+<p>这个城市充满了矛盾,我见识浅薄,无法对于这个现象给出什么根本的解决办法,但它毕竟是我所走过的城市,就只能去祝愿它迎来一位真正能够将它风采挖掘出的领导者吧.</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>真正的问题还是没有解决…我总不能带着这篇文章去跟他们说”这是我带回来的纪念品,你们看看吧”,</li>
+</ul>
 ]]></content>
       <categories>
         <category>起居杂录</category>
@@ -3811,191 +3811,6 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
-    <url>/2019-09-01-Titanic-solution-via-RF/</url>
-    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
-<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
-<span id="more"></span>
-
-<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
-<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
-<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
-<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
-Survived -  Survived (1) or died (0)
-Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
-Name -  Passenger&#39;s name
-Sex - Passenger&#39;s sex
-Age -  Passenger&#39;s age
-SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
-Parch -  Number of parents&#x2F;children aboard the Titanic
-Ticket -  Ticket number
-FareFare -  paid for ticket
-Cabin - Cabin number
-Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
-<p>这里先列一下最终的目标:</p>
-<ul>
-<li>数值化,随机森林不支持非数值的数据</li>
-<li>消除残缺值</li>
-</ul>
-<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 12 columns):
-PassengerId    891 non-null int64
-Survived       891 non-null int64
-Pclass         891 non-null int64
-Name           891 non-null object
-Sex            891 non-null object
-Age            714 non-null float64
-SibSp          891 non-null int64
-Parch          891 non-null int64
-Ticket         891 non-null object
-Fare           891 non-null float64
-Cabin          204 non-null object
-Embarked       889 non-null object
-dtypes: float64(2), int64(5), object(5)
-memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
-<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
-<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
-<ul>
-<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
-<li>填补</li>
-</ul>
-<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
-<p>这里我选择去填补(修正残缺值).</p>
-<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
-Age         0.198653
-Embarked    0.002245
-Fare        0.000000
-Parch       0.000000
-SibSp       0.000000
-Sex         0.000000
-Pclass      0.000000
-Survived    0.000000
-dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>我准备先从残缺值比低的开始修正(又是废话….</p>
-<p>目前我所掌握的两种方法:</p>
-<ul>
-<li>人工分析</li>
-<li>随机森林填补</li>
-</ul>
-<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
-<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
-<table>
-<thead>
-<tr>
-<th>PassengerId</th>
-<th>Survived</th>
-<th>Pclass</th>
-<th>Sex</th>
-<th>Age</th>
-<th>SibSp</th>
-<th>Parch</th>
-<th>Fare</th>
-<th>Cabin</th>
-<th>Embarked</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>62</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>38.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>830</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>62.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-</tbody></table>
-<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
-<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
-<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
-G     14.205000
-F     18.079367
-N     19.132707
-T     35.500000
-A     41.244314
-D     53.007339
-E     54.564634
-C    107.926598
-B    122.383078
-Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
-    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
-
-df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
-<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
-<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
-<table>
-<thead>
-<tr>
-<th>训练均分</th>
-<th>测试均分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0.9909744528907043</td>
-<td>0.7901017214397495</td>
-</tr>
-</tbody></table>
-<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
-param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>优化之后,test 分数变为 0.8207282913165266</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Data Mining</category>
-      </categories>
-      <tags>
-        <tag>随机森林</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Be a better pythonista(3)</title>
     <url>/2019-08-28-Be_a_better_pythonista-3/</url>
     <content><![CDATA[<p>本节主要是函数和类的一些技巧操作.</p>
@@ -4308,6 +4123,191 @@ Got<span class="token punctuation">:</span> helloworld
       </tags>
   </entry>
   <entry>
+    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
+    <url>/2019-09-01-Titanic-solution-via-RF/</url>
+    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
+<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
+<span id="more"></span>
+
+<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
+<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
+<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
+Survived -  Survived (1) or died (0)
+Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
+Name -  Passenger&#39;s name
+Sex - Passenger&#39;s sex
+Age -  Passenger&#39;s age
+SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
+Parch -  Number of parents&#x2F;children aboard the Titanic
+Ticket -  Ticket number
+FareFare -  paid for ticket
+Cabin - Cabin number
+Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
+<p>这里先列一下最终的目标:</p>
+<ul>
+<li>数值化,随机森林不支持非数值的数据</li>
+<li>消除残缺值</li>
+</ul>
+<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 12 columns):
+PassengerId    891 non-null int64
+Survived       891 non-null int64
+Pclass         891 non-null int64
+Name           891 non-null object
+Sex            891 non-null object
+Age            714 non-null float64
+SibSp          891 non-null int64
+Parch          891 non-null int64
+Ticket         891 non-null object
+Fare           891 non-null float64
+Cabin          204 non-null object
+Embarked       889 non-null object
+dtypes: float64(2), int64(5), object(5)
+memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
+<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
+<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
+<ul>
+<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
+<li>填补</li>
+</ul>
+<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
+<p>这里我选择去填补(修正残缺值).</p>
+<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
+Age         0.198653
+Embarked    0.002245
+Fare        0.000000
+Parch       0.000000
+SibSp       0.000000
+Sex         0.000000
+Pclass      0.000000
+Survived    0.000000
+dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我准备先从残缺值比低的开始修正(又是废话….</p>
+<p>目前我所掌握的两种方法:</p>
+<ul>
+<li>人工分析</li>
+<li>随机森林填补</li>
+</ul>
+<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
+<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
+<table>
+<thead>
+<tr>
+<th>PassengerId</th>
+<th>Survived</th>
+<th>Pclass</th>
+<th>Sex</th>
+<th>Age</th>
+<th>SibSp</th>
+<th>Parch</th>
+<th>Fare</th>
+<th>Cabin</th>
+<th>Embarked</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>62</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>38.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>830</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>62.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+</tbody></table>
+<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
+<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
+<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
+G     14.205000
+F     18.079367
+N     19.132707
+T     35.500000
+A     41.244314
+D     53.007339
+E     54.564634
+C    107.926598
+B    122.383078
+Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
+    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
+
+df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
+<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
+<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
+<table>
+<thead>
+<tr>
+<th>训练均分</th>
+<th>测试均分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.9909744528907043</td>
+<td>0.7901017214397495</td>
+</tr>
+</tbody></table>
+<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
+param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>优化之后,test 分数变为 0.8207282913165266</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Data Mining</category>
+      </categories>
+      <tags>
+        <tag>随机森林</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浅谈特征工程 Feature  Engineering</title>
     <url>/2019-09-08-Feature-Engineering/</url>
     <content><![CDATA[<p>至此,看过了很多的机器学习的文章,发现大多是重于算法的讲解,但是机器学习是 <em>对数据集进行算法处理</em> ,数据集的重要地位不言而喻.<br>个人认为,优质的数据集可以极大地提高模型精度和运算效率.一个很好的例子就是 sklearn 的 dataset,处理起来顺滑无比,但是在对上一篇文章所讲的泰坦尼克数据集进行机器学习时,如果也像在鸢尾花集上那样,结果自然是惨不忍睹.<br>所以这里单开一篇讲一下特征工程.</p>
@@ -4495,70 +4495,6 @@ public:
       </tags>
   </entry>
   <entry>
-    <title>No.56 合并区间:双迭代器 &amp;&amp; 国庆快乐</title>
-    <url>/2019-10-01-merge-intervals/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/merge-intervals/">No.56 合并区间</a></p>
-<p>难度：<strong>中等</strong></p>
-<p>给出一个区间的集合，请合并所有重叠的区间。</p>
-<span id="more"></span>
-
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例 1:
-
-输入: intervals &#x3D; [[1,3],[2,6],[8,10],[15,18]]
-输出: [[1,6],[8,10],[15,18]]
-解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
-
-示例 2:
-
-输入: intervals &#x3D; [[1,4],[4,5]]
-输出: [[1,5]]
-解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="国庆快乐"><a href="#国庆快乐" class="headerlink" title="国庆快乐~"></a>国庆快乐~</h2><p>我有什么办法，国庆节又没人一起出去玩，只能做做题目杀杀时间这个样子。(碎碎念)</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为实在是闲的，所以就有了这个效率奇低的代码（能这么慢也是一种本事好不好）。</p>
-<p>那么问题来了，凭什么他的效率能这么低呢？</p>
-<p>答案是 <strong>使用了 erase()</strong></p>
-<p>在看到这个题目的时候，我就有了使用双迭代器解决这个问题的构想。(双迭代器的解法堪称炫技,没有一定的基础不要轻易尝试。)<br>为什么不直接使用索引呢？因为使用索引必然会引入新的 vector 来装载。而使用双迭代器，一切都在原始的 vector 上完成，这几乎完全避免了开辟新空间所造成的消耗。<br>理论上是这样，不过在实际使用 erase 的时候，我发现似乎每一次 erase 都会造成数组的重排。这和我想象中的似乎不太一样，但是仔细一想，确实如此，这就是 <strong>数组</strong> 和 <strong>链表</strong> 的区别所在。<br>于是，引出这一题最佳的解法，链表+双迭代器解法。但是由于 LeetCode 给出的本身就是 vector，所以使用链表还是需要额外开辟空间，这岂不是与初衷背道而驰了（%&gt;_&lt;%）。</p>
-<p>所以就这样咯，下面的代码看个乐呵就行了，可以作为链表法的结构模板。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;vector&lt;int&gt;&gt; merge(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) &#123;
-        if(intervals.size() &#x3D;&#x3D; 0) return intervals;
-
-        sort(intervals.begin(),intervals.end(),cmp1);
-
-        auto j &#x3D; intervals.begin();
-        auto i &#x3D; j++;
-
-        while(j!&#x3D;intervals.end())&#123;
-            if((*i)[1] &lt; (*j)[0])&#123;
-                i++;
-                j++;
-            &#125;else&#123;
-                if((*i)[1]&lt;(*j)[1]) (*i)[1] &#x3D; (*j)[1];
-                intervals.erase(j);
-            &#125;
-        &#125;
-        return intervals;
-    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
-<li>烟花也没看成，国庆的安排了很多，结果又是窝在工作室敲代码= =</li>
-<li>唉</li>
-<li>《攀登者》体验一般般，不过吴京和章子怡的感情戏看得快哭了。。。完美戳中我的痛点。。。</li>
-<li>胡歌天下第一！！！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
-        <tag>鲨雕青年欢乐多</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>No.48 旋转图像:数学</title>
     <url>/2019-10-04-rotate-image/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/rotate-image/">No.48 旋转图像</a></p>
@@ -4638,52 +4574,58 @@ public:
       </tags>
   </entry>
   <entry>
-    <title>No.64 最小路径和:动态规划</title>
-    <url>/2019-10-10-minimum-path-sum/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
-<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+    <title>No.56 合并区间:双迭代器 &amp;&amp; 国庆快乐</title>
+    <url>/2019-10-01-merge-intervals/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/merge-intervals/">No.56 合并区间</a></p>
+<p>难度：<strong>中等</strong></p>
+<p>给出一个区间的集合，请合并所有重叠的区间。</p>
 <span id="more"></span>
 
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例 1:
 
-示例:
+输入: intervals &#x3D; [[1,3],[2,6],[8,10],[15,18]]
+输出: [[1,6],[8,10],[15,18]]
+解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
 
-输入:
+示例 2:
 
-    [
-        [1,3,1],
-        [1,5,1],
-        [4,2,1]
-    ]
+输入: intervals &#x3D; [[1,4],[4,5]]
+输出: [[1,5]]
+解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-输出: 7
+<h2 id="国庆快乐"><a href="#国庆快乐" class="headerlink" title="国庆快乐~"></a>国庆快乐~</h2><p>我有什么办法，国庆节又没人一起出去玩，只能做做题目杀杀时间这个样子。(碎碎念)</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3185598335.png?Expires=1602302257&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>因为实在是闲的，所以就有了这个效率奇低的代码（能这么慢也是一种本事好不好）。</p>
+<p>那么问题来了，凭什么他的效率能这么低呢？</p>
+<p>答案是 <strong>使用了 erase()</strong></p>
+<p>在看到这个题目的时候，我就有了使用双迭代器解决这个问题的构想。(双迭代器的解法堪称炫技,没有一定的基础不要轻易尝试。)<br>为什么不直接使用索引呢？因为使用索引必然会引入新的 vector 来装载。而使用双迭代器，一切都在原始的 vector 上完成，这几乎完全避免了开辟新空间所造成的消耗。<br>理论上是这样，不过在实际使用 erase 的时候，我发现似乎每一次 erase 都会造成数组的重排。这和我想象中的似乎不太一样，但是仔细一想，确实如此，这就是 <strong>数组</strong> 和 <strong>链表</strong> 的区别所在。<br>于是，引出这一题最佳的解法，链表+双迭代器解法。但是由于 LeetCode 给出的本身就是 vector，所以使用链表还是需要额外开辟空间，这岂不是与初衷背道而驰了（%&gt;_&lt;%）。</p>
+<p>所以就这样咯，下面的代码看个乐呵就行了，可以作为链表法的结构模板。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">vector&lt;vector&lt;int&gt;&gt; merge(vector&lt;vector&lt;int&gt;&gt;&amp; intervals) &#123;
+        if(intervals.size() &#x3D;&#x3D; 0) return intervals;
 
-解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        sort(intervals.begin(),intervals.end(),cmp1);
 
-<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
-        int n &#x3D; grid.size();
-        int m &#x3D; grid[0].size();
-        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
-            return 0;
-        for(int i &#x3D; 1; i &lt; n; i++)
-            grid[i][0] +&#x3D; grid[i-1][0];
-        for(int i &#x3D; 1; i &lt; m; i++)
-            grid[0][i] +&#x3D; grid[0][i-1];
-        for(int i &#x3D; 1;i &lt; n; i++)
-            for(int j &#x3D; 1; j &lt; m; j++)
-                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
-        return grid[n-1][m-1];
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        auto j &#x3D; intervals.begin();
+        auto i &#x3D; j++;
 
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
+        while(j!&#x3D;intervals.end())&#123;
+            if((*i)[1] &lt; (*j)[0])&#123;
+                i++;
+                j++;
+            &#125;else&#123;
+                if((*i)[1]&lt;(*j)[1]) (*i)[1] &#x3D; (*j)[1];
+                intervals.erase(j);
+            &#125;
+        &#125;
+        return intervals;
+    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul>
+<li>烟花也没看成，国庆的安排了很多，结果又是窝在工作室敲代码= =</li>
+<li>唉</li>
+<li>《攀登者》体验一般般，不过吴京和章子怡的感情戏看得快哭了。。。完美戳中我的痛点。。。</li>
+<li>胡歌天下第一！！！</li>
+</ul>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -4692,7 +4634,7 @@ public:
       <tags>
         <tag>算法</tag>
         <tag>LeetCode</tag>
-        <tag>动态规划</tag>
+        <tag>鲨雕青年欢乐多</tag>
       </tags>
   </entry>
   <entry>
@@ -4861,6 +4803,64 @@ public:
         <tag>算法</tag>
         <tag>LeetCode</tag>
         <tag>周赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>No.64 最小路径和:动态规划</title>
+    <url>/2019-10-10-minimum-path-sum/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
+<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
+
+示例:
+
+输入:
+
+    [
+        [1,3,1],
+        [1,5,1],
+        [4,2,1]
+    ]
+
+输出: 7
+
+解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
+        int n &#x3D; grid.size();
+        int m &#x3D; grid[0].size();
+        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
+            return 0;
+        for(int i &#x3D; 1; i &lt; n; i++)
+            grid[i][0] +&#x3D; grid[i-1][0];
+        for(int i &#x3D; 1; i &lt; m; i++)
+            grid[0][i] +&#x3D; grid[0][i-1];
+        for(int i &#x3D; 1;i &lt; n; i++)
+            for(int j &#x3D; 1; j &lt; m; j++)
+                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
+        return grid[n-1][m-1];
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -5502,6 +5502,79 @@ public:
       </categories>
   </entry>
   <entry>
+    <title>No.85 最大矩形</title>
+    <url>/2019-10-25-maximal-rectangle/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/maximal-rectangle/">No.85 最大矩形</a></p>
+<p>难度：<strong>困难</strong></p>
+<p>给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例:
+
+输入:
+
+    [
+        [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
+        [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
+        [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
+        [&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;]
+    ]
+
+输出: 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
+<p>执行用时 :<br>24 ms, 在所有 cpp 提交中击败了 85.19%的用户<br>内存消耗 :<br>11.9 MB, 在所有 cpp 提交中击败了 28.90%的用户</p>
+</blockquote>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这也是一个多解法问题，先写一篇占个坑吧。<br>目前的这个解法相当于是动态规划和 No.84 的缝合怪。。。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int maximalRectangle(vector&lt;vector&lt;char&gt;&gt;&amp; matrix) &#123;
+        if(matrix.size() &#x3D;&#x3D; 0 || matrix[0].size() &#x3D;&#x3D; 0) return 0;
+        int n &#x3D; matrix.size(), m &#x3D; matrix[0].size(),res&#x3D;0;
+        vector&lt;vector&lt;int&gt; &gt; vec(n,vector&lt;int&gt;(m,0));
+        for(int i &#x3D; 0; i &lt; m; ++i)
+            if(matrix[0][i] &#x3D;&#x3D; &#39;1&#39;) vec[0][i] &#x3D; 1;
+        for(int i &#x3D; 0; i &lt; m; ++i)
+            for(int j &#x3D; 1; j &lt; n; ++j)
+                if(matrix[j][i] &#x3D;&#x3D; &#39;1&#39;)
+                    vec[j][i] &#x3D; vec[j-1][i] + 1;
+        for(int i &#x3D; 0; i &lt; n; ++i)
+            res &#x3D; max(largestRectangleArea(vec[i]),res);
+        return res;
+
+    &#125;
+
+
+    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
+        if(heights.size() &#x3D;&#x3D; 0) return 0;
+        int n &#x3D; heights.size(),res &#x3D; heights[0],record;
+        stack&lt;int&gt; st;
+        st.push(-1);
+        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
+            while(st.top()!&#x3D;-1 &amp;&amp; heights[i] &lt; heights[st.top()])&#123;
+                int tmp &#x3D; st.top();
+                st.pop();
+                res &#x3D; max(heights[tmp] * (i - st.top() - 1),res);
+            &#125;
+            st.push(i);
+        &#125;
+        while(st.top()!&#x3D;-1)&#123;
+            int tmp &#x3D; st.top();
+            st.pop();
+            res &#x3D; max(heights[tmp] * (n - st.top() - 1),res);
+        &#125;
+        return res;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>有些话，说出来就好了。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+  </entry>
+  <entry>
     <title>No.77 组合:回溯法</title>
     <url>/2019-10-26-combinations/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/combinations/">No.77 组合</a></p>
@@ -5626,79 +5699,6 @@ public:
       </categories>
   </entry>
   <entry>
-    <title>No.85 最大矩形</title>
-    <url>/2019-10-25-maximal-rectangle/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/maximal-rectangle/">No.85 最大矩形</a></p>
-<p>难度：<strong>困难</strong></p>
-<p>给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。</p>
-<span id="more"></span>
-
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">示例:
-
-输入:
-
-    [
-        [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
-        [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
-        [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],
-        [&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;]
-    ]
-
-输出: 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
-<p>执行用时 :<br>24 ms, 在所有 cpp 提交中击败了 85.19%的用户<br>内存消耗 :<br>11.9 MB, 在所有 cpp 提交中击败了 28.90%的用户</p>
-</blockquote>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这也是一个多解法问题，先写一篇占个坑吧。<br>目前的这个解法相当于是动态规划和 No.84 的缝合怪。。。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int maximalRectangle(vector&lt;vector&lt;char&gt;&gt;&amp; matrix) &#123;
-        if(matrix.size() &#x3D;&#x3D; 0 || matrix[0].size() &#x3D;&#x3D; 0) return 0;
-        int n &#x3D; matrix.size(), m &#x3D; matrix[0].size(),res&#x3D;0;
-        vector&lt;vector&lt;int&gt; &gt; vec(n,vector&lt;int&gt;(m,0));
-        for(int i &#x3D; 0; i &lt; m; ++i)
-            if(matrix[0][i] &#x3D;&#x3D; &#39;1&#39;) vec[0][i] &#x3D; 1;
-        for(int i &#x3D; 0; i &lt; m; ++i)
-            for(int j &#x3D; 1; j &lt; n; ++j)
-                if(matrix[j][i] &#x3D;&#x3D; &#39;1&#39;)
-                    vec[j][i] &#x3D; vec[j-1][i] + 1;
-        for(int i &#x3D; 0; i &lt; n; ++i)
-            res &#x3D; max(largestRectangleArea(vec[i]),res);
-        return res;
-
-    &#125;
-
-
-    int largestRectangleArea(vector&lt;int&gt;&amp; heights) &#123;
-        if(heights.size() &#x3D;&#x3D; 0) return 0;
-        int n &#x3D; heights.size(),res &#x3D; heights[0],record;
-        stack&lt;int&gt; st;
-        st.push(-1);
-        for(int i &#x3D; 0; i &lt; n; ++i)&#123;
-            while(st.top()!&#x3D;-1 &amp;&amp; heights[i] &lt; heights[st.top()])&#123;
-                int tmp &#x3D; st.top();
-                st.pop();
-                res &#x3D; max(heights[tmp] * (i - st.top() - 1),res);
-            &#125;
-            st.push(i);
-        &#125;
-        while(st.top()!&#x3D;-1)&#123;
-            int tmp &#x3D; st.top();
-            st.pop();
-            res &#x3D; max(heights[tmp] * (n - st.top() - 1),res);
-        &#125;
-        return res;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>有些话，说出来就好了。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>136-137 出现的数字问题:位运算</title>
     <url>/2019-11-06-single-number/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/single-number/">No. 136 出现的数字问题(简单)</a></p>
@@ -5801,6 +5801,207 @@ public:
       <tags>
         <tag>漫谈</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>周赛162</title>
+    <url>/2019-11-10-week-162/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="题目-amp-amp-分析"><a href="#题目-amp-amp-分析" class="headerlink" title="题目 &amp;&amp; 分析"></a>题目 &amp;&amp; 分析</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。<br>另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和 ci 分别表示指定的行和列（从 0 开始编号）。<br>你需要将每对 [ri, ci] 指定的行和列上的所有单元格的值加 1。<br>请你在执行完所有 indices 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。</p>
+<h3 id="分析1"><a href="#分析1" class="headerlink" title="分析1"></a>分析1</h3><p>可能存在数学的解法，不过当时想了几分钟没啥头绪，就暴力了。<br>按照题目的意思构建一个 m*n 的矩阵<br>然后进行矩阵的填充<br>最后统计奇数的个数</p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>给你一个 2 行 n 列的二进制数组：</p>
+<ul>
+<li>矩阵是一个二进制矩阵，这意味着矩阵中的每个元素不是 0 就是 1。</li>
+<li>第 0 行的元素之和为 upper。</li>
+<li>第 1 行的元素之和为 lower。</li>
+<li>第 i 列（从 0 开始编号）的元素之和为 colsum[i]，colsum 是一个长度为 n 的整数数组。</li>
+</ul>
+<p>你需要利用 upper，lower 和 colsum 来重构这个矩阵，并以二维整数数组的形式返回它。<br>如果有多个不同的答案，那么任意一个都可以通过本题。<br>如果不存在符合要求的答案，就请返回一个空的二维数组。</p>
+<h3 id="分析2"><a href="#分析2" class="headerlink" title="分析2"></a>分析2</h3><p>S1: 判断是否存在符合要求的答案: - upper 和 lower 的和必须等于 colsum 的和 - colsum 的 size 减去 colsum 中 0 的个数，这个值必须同时大于 upper 和 lower 的任意一个<br>S2: 初始化 2 行 size 列的矩阵，该矩阵初始化为全零矩阵<br>S3: - 当 colsum[i]==2 时，结果矩阵的两列必然全为 1 - 当 colsum[i]==1 时，先填充 0 行，同时 upper–，直至 upper 等于 0 时，开始填充第 1 行<br>S4: 返回结果矩阵</p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>有一个二维矩阵 grid ，每个位置要么是陆地（记号为 0 ）要么是水域（记号为 1 ）。<br>我们从一块陆地出发，每次可以往上下左右 4 个方向相邻区域走，能走到的所有陆地区域，我们将其称为一座「岛屿」。<br>如果一座岛屿 完全 由水域包围，即陆地边缘上下左右所有相邻区域都是水域，那么我们将其称为 「封闭岛屿」。<br>请返回封闭岛屿的数目。</p>
+<p><a href="https://leetcode-cn.com/contest/weekly-contest-162/problems/number-of-closed-islands/">传送门</a></p>
+<h3 id="分析3"><a href="#分析3" class="headerlink" title="分析3"></a>分析3</h3><p>标准的深搜题，类比 No.200</p>
+<p>本题关键的一个隐藏条件:<br><strong>如果岛屿靠近矩阵边缘，就不算封闭岛屿</strong></p>
+<p>两种处理办法: - 在回溯矩阵前，将所有边缘陆地变为海洋 - 在回溯矩阵时，如果遇到边缘，记录下来，不添加到结果中</p>
+<p>在实际的操作中，两种解法的思路是一样的，只是处理条件的顺序不一样而已，取舍看个人</p>
+<h3 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h3><p>你将会得到一份单词表 words，一个字母表 letters （可能会有重复字母），以及每个字母对应的得分情况表 score。</p>
+<p>请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 letters 里的字母拼写出的 任意 属于 words 单词子集中，分数最高的单词集合的得分。</p>
+<p>单词拼写游戏的规则概述如下：</p>
+<p>玩家需要用字母表 letters 里的字母来拼写单词表 words 中的单词。<br>可以只使用字母表 letters 中的部分字母，但是每个字母最多被使用一次。<br>单词表 words 中每个单词只能计分（使用）一次。<br>根据字母得分情况表 score，字母 ‘a’, ‘b’, ‘c’, … , ‘z’ 对应的得分分别为 score[0], score[1], …, score[25]。<br>本场游戏的「得分」是指：玩家所拼写出的单词集合里包含的所有字母的得分之和。</p>
+<h3 id="分析4"><a href="#分析4" class="headerlink" title="分析4"></a>分析4</h3><p>枚举。<br>枚举 words 子集总共 2^15 种情况，对于每个子集，统计一下这个子集每个字母用了多少次，是不是 letters 的子集，如果是，计算得分</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; Q1：
+
+class Solution &#123;
+public:
+    int oddCells(int n, int m, vector&lt;vector&lt;int&gt;&gt;&amp; indices) &#123;
+        vector&lt;vector&lt;int&gt; &gt; vec &#x3D; vector(n,vector(m,0));
+
+        for(auto i:indices)&#123;
+            for(int j &#x3D; 0;j &lt; m; j++)
+                vec[i[0]][j]++;
+            for(int j &#x3D; 0;j &lt; n; ++j)
+                vec[j][i[1]]++;
+        &#125;
+
+        int count &#x3D; 0;
+        for(auto i:vec)
+            for(auto j:i)
+                if(j%2 &#x3D;&#x3D; 1)
+                    count++;
+
+        return count;
+
+    &#125;
+&#125;;
+
+
+&#x2F;&#x2F; Q2:
+
+class Solution &#123;
+public:
+    vector&lt;vector&lt;int&gt;&gt; reconstructMatrix(int upper, int lower, vector&lt;int&gt;&amp; colsum) &#123;
+        int sum_res &#x3D; 0,count2 &#x3D; 0,count0 &#x3D; 0;
+        for(auto i:colsum)&#123;
+            sum_res+&#x3D;i;
+            if(i &#x3D;&#x3D; 2) count2++;
+            if(i &#x3D;&#x3D; 0) count0++;
+        &#125;
+
+        if(sum_res!&#x3D;(upper+lower) || (((colsum.size()-count0)&lt;upper &amp;&amp; (colsum.size()-count0)&gt;lower) || ((colsum.size()-count0)&gt;upper &amp;&amp; (colsum.size()-count0)&lt;lower)) )
+            return &#123;&#125;;
+
+        vector&lt;vector&lt;int&gt;&gt; res(2,vector(colsum.size(),0));
+
+        upper -&#x3D; count2;
+        lower -&#x3D; count2;
+
+        for(int i &#x3D; 0 ; i&lt; colsum.size() ; ++i)&#123;
+            if(colsum[i] &#x3D;&#x3D; 2)&#123;
+                res[0][i] &#x3D; 1;
+                res[1][i] &#x3D; 1;
+            &#125;else if(colsum[i] &#x3D;&#x3D; 1)&#123;
+                if(upper)&#123;
+                    res[0][i] &#x3D; 1;
+                    upper--;
+                &#125;else&#123;
+                    res[1][i] &#x3D; 1;
+                &#125;
+            &#125;else&#123;
+                continue;
+            &#125;
+        &#125;
+
+        return res;
+
+    &#125;
+&#125;;
+
+
+
+&#x2F;&#x2F; Q3:
+
+class Solution &#123;
+public:
+    int d[4][2]&#x3D;&#123;&#123;0,1&#125;,&#123;0,-1&#125;,&#123;1,0&#125;,&#123;-1,0&#125;&#125;,m,n;
+    vector&lt;vector&lt;bool&gt;&gt; visited;
+    bool flag;
+
+    int closedIsland(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
+        m&#x3D;grid.size();
+        if(m&#x3D;&#x3D;0)&#123;
+            return 0;
+        &#125;
+        n&#x3D;grid[0].size();
+
+        int res &#x3D; 0;
+        visited&#x3D;vector&lt;vector&lt;bool&gt;&gt;(m,vector&lt;bool&gt;(n,false));
+
+        for(int i&#x3D;1;i&lt;m-1;i++)&#123;
+            for (int j&#x3D;1;j&lt;n-1;j++)&#123;
+                if(grid[i][j]&#x3D;&#x3D;0 &amp;&amp; !visited[i][j])&#123;
+                    flag &#x3D; false;
+                    res++;
+                    recursion(grid,i,j);
+                    if(flag)
+                        res--;
+                &#125;
+            &#125;
+        &#125;
+
+        return res;
+    &#125;
+
+    void recursion(vector&lt;vector&lt;int&gt;&gt;&amp; grid,int startx,int starty)&#123;
+
+        visited[startx][starty]&#x3D;true;
+
+        for(int i&#x3D;0;i&lt;4;i++)&#123;
+            int newx&#x3D;startx+d[i][0];
+            int newy&#x3D;starty+d[i][1];
+            if(!judge(newx,newy)) flag &#x3D; true;
+            if(judge(newx,newy) &amp;&amp; grid[newx][newy]&#x3D;&#x3D;0 &amp;&amp; !visited[newx][newy])&#123;
+                recursion(grid,newx,newy);
+            &#125;
+        &#125;
+
+        return;
+    &#125;
+
+    bool judge(int x,int y)&#123;
+        return x&gt;&#x3D;0 &amp;&amp; y&gt;&#x3D;0 &amp;&amp; x&lt;m &amp;&amp; y&lt;n;
+    &#125;
+&#125;;
+
+
+&#x2F;&#x2F;Q4:
+
+class Solution &#123;
+public:
+    int maxScoreWords(vector&lt;string&gt;&amp; words, vector&lt;char&gt;&amp; letters, vector&lt;int&gt;&amp; score) &#123;
+        vector&lt;int&gt; stat(26, 0);
+        for (char&amp; c: letters) &#123;
+            stat[c - &#39;a&#39;]++;
+        &#125;
+
+        int ret &#x3D; 0;
+        for (int i &#x3D; 1;i &lt; (1 &lt;&lt; words.size());i++) &#123;
+            vector&lt;int&gt; g &#x3D; group(words, i);
+            int temp &#x3D; 0;
+            for (int j &#x3D; 0;j &lt; 26;j++) &#123;
+                if (g[j] &gt; stat[j]) &#123;
+                    temp &#x3D; -1;
+                    break;
+                &#125; else &#123;
+                    temp +&#x3D; g[j] * score[j];
+                &#125;
+            &#125;
+            if (temp !&#x3D; -1) &#123;
+                ret &#x3D; max(ret, temp);
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+
+
+    vector&lt;int&gt; group(vector&lt;string&gt;&amp; words, int bit) &#123;
+        vector&lt;int&gt; ret(26, 0);
+        for (int i &#x3D; 0;i &lt; words.size();i++) &#123;
+            if (bit &amp; (1 &lt;&lt; i)) &#123;
+                for (int j &#x3D; 0;j &lt; words[i].size();j++) &#123;
+                    ret[words[i][j] - &#39;a&#39;]++;
+                &#125;
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>也许吧(⊙o⊙)…</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(一)</title>
@@ -6073,207 +6274,6 @@ public class json2table extends JFrame&#123;
       <tags>
         <tag>Java课程设计</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>周赛162</title>
-    <url>/2019-11-10-week-162/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="题目-amp-amp-分析"><a href="#题目-amp-amp-分析" class="headerlink" title="题目 &amp;&amp; 分析"></a>题目 &amp;&amp; 分析</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。<br>另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和 ci 分别表示指定的行和列（从 0 开始编号）。<br>你需要将每对 [ri, ci] 指定的行和列上的所有单元格的值加 1。<br>请你在执行完所有 indices 指定的增量操作后，返回矩阵中 「奇数值单元格」 的数目。</p>
-<h3 id="分析1"><a href="#分析1" class="headerlink" title="分析1"></a>分析1</h3><p>可能存在数学的解法，不过当时想了几分钟没啥头绪，就暴力了。<br>按照题目的意思构建一个 m*n 的矩阵<br>然后进行矩阵的填充<br>最后统计奇数的个数</p>
-<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>给你一个 2 行 n 列的二进制数组：</p>
-<ul>
-<li>矩阵是一个二进制矩阵，这意味着矩阵中的每个元素不是 0 就是 1。</li>
-<li>第 0 行的元素之和为 upper。</li>
-<li>第 1 行的元素之和为 lower。</li>
-<li>第 i 列（从 0 开始编号）的元素之和为 colsum[i]，colsum 是一个长度为 n 的整数数组。</li>
-</ul>
-<p>你需要利用 upper，lower 和 colsum 来重构这个矩阵，并以二维整数数组的形式返回它。<br>如果有多个不同的答案，那么任意一个都可以通过本题。<br>如果不存在符合要求的答案，就请返回一个空的二维数组。</p>
-<h3 id="分析2"><a href="#分析2" class="headerlink" title="分析2"></a>分析2</h3><p>S1: 判断是否存在符合要求的答案: - upper 和 lower 的和必须等于 colsum 的和 - colsum 的 size 减去 colsum 中 0 的个数，这个值必须同时大于 upper 和 lower 的任意一个<br>S2: 初始化 2 行 size 列的矩阵，该矩阵初始化为全零矩阵<br>S3: - 当 colsum[i]==2 时，结果矩阵的两列必然全为 1 - 当 colsum[i]==1 时，先填充 0 行，同时 upper–，直至 upper 等于 0 时，开始填充第 1 行<br>S4: 返回结果矩阵</p>
-<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>有一个二维矩阵 grid ，每个位置要么是陆地（记号为 0 ）要么是水域（记号为 1 ）。<br>我们从一块陆地出发，每次可以往上下左右 4 个方向相邻区域走，能走到的所有陆地区域，我们将其称为一座「岛屿」。<br>如果一座岛屿 完全 由水域包围，即陆地边缘上下左右所有相邻区域都是水域，那么我们将其称为 「封闭岛屿」。<br>请返回封闭岛屿的数目。</p>
-<p><a href="https://leetcode-cn.com/contest/weekly-contest-162/problems/number-of-closed-islands/">传送门</a></p>
-<h3 id="分析3"><a href="#分析3" class="headerlink" title="分析3"></a>分析3</h3><p>标准的深搜题，类比 No.200</p>
-<p>本题关键的一个隐藏条件:<br><strong>如果岛屿靠近矩阵边缘，就不算封闭岛屿</strong></p>
-<p>两种处理办法: - 在回溯矩阵前，将所有边缘陆地变为海洋 - 在回溯矩阵时，如果遇到边缘，记录下来，不添加到结果中</p>
-<p>在实际的操作中，两种解法的思路是一样的，只是处理条件的顺序不一样而已，取舍看个人</p>
-<h3 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h3><p>你将会得到一份单词表 words，一个字母表 letters （可能会有重复字母），以及每个字母对应的得分情况表 score。</p>
-<p>请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 letters 里的字母拼写出的 任意 属于 words 单词子集中，分数最高的单词集合的得分。</p>
-<p>单词拼写游戏的规则概述如下：</p>
-<p>玩家需要用字母表 letters 里的字母来拼写单词表 words 中的单词。<br>可以只使用字母表 letters 中的部分字母，但是每个字母最多被使用一次。<br>单词表 words 中每个单词只能计分（使用）一次。<br>根据字母得分情况表 score，字母 ‘a’, ‘b’, ‘c’, … , ‘z’ 对应的得分分别为 score[0], score[1], …, score[25]。<br>本场游戏的「得分」是指：玩家所拼写出的单词集合里包含的所有字母的得分之和。</p>
-<h3 id="分析4"><a href="#分析4" class="headerlink" title="分析4"></a>分析4</h3><p>枚举。<br>枚举 words 子集总共 2^15 种情况，对于每个子集，统计一下这个子集每个字母用了多少次，是不是 letters 的子集，如果是，计算得分</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; Q1：
-
-class Solution &#123;
-public:
-    int oddCells(int n, int m, vector&lt;vector&lt;int&gt;&gt;&amp; indices) &#123;
-        vector&lt;vector&lt;int&gt; &gt; vec &#x3D; vector(n,vector(m,0));
-
-        for(auto i:indices)&#123;
-            for(int j &#x3D; 0;j &lt; m; j++)
-                vec[i[0]][j]++;
-            for(int j &#x3D; 0;j &lt; n; ++j)
-                vec[j][i[1]]++;
-        &#125;
-
-        int count &#x3D; 0;
-        for(auto i:vec)
-            for(auto j:i)
-                if(j%2 &#x3D;&#x3D; 1)
-                    count++;
-
-        return count;
-
-    &#125;
-&#125;;
-
-
-&#x2F;&#x2F; Q2:
-
-class Solution &#123;
-public:
-    vector&lt;vector&lt;int&gt;&gt; reconstructMatrix(int upper, int lower, vector&lt;int&gt;&amp; colsum) &#123;
-        int sum_res &#x3D; 0,count2 &#x3D; 0,count0 &#x3D; 0;
-        for(auto i:colsum)&#123;
-            sum_res+&#x3D;i;
-            if(i &#x3D;&#x3D; 2) count2++;
-            if(i &#x3D;&#x3D; 0) count0++;
-        &#125;
-
-        if(sum_res!&#x3D;(upper+lower) || (((colsum.size()-count0)&lt;upper &amp;&amp; (colsum.size()-count0)&gt;lower) || ((colsum.size()-count0)&gt;upper &amp;&amp; (colsum.size()-count0)&lt;lower)) )
-            return &#123;&#125;;
-
-        vector&lt;vector&lt;int&gt;&gt; res(2,vector(colsum.size(),0));
-
-        upper -&#x3D; count2;
-        lower -&#x3D; count2;
-
-        for(int i &#x3D; 0 ; i&lt; colsum.size() ; ++i)&#123;
-            if(colsum[i] &#x3D;&#x3D; 2)&#123;
-                res[0][i] &#x3D; 1;
-                res[1][i] &#x3D; 1;
-            &#125;else if(colsum[i] &#x3D;&#x3D; 1)&#123;
-                if(upper)&#123;
-                    res[0][i] &#x3D; 1;
-                    upper--;
-                &#125;else&#123;
-                    res[1][i] &#x3D; 1;
-                &#125;
-            &#125;else&#123;
-                continue;
-            &#125;
-        &#125;
-
-        return res;
-
-    &#125;
-&#125;;
-
-
-
-&#x2F;&#x2F; Q3:
-
-class Solution &#123;
-public:
-    int d[4][2]&#x3D;&#123;&#123;0,1&#125;,&#123;0,-1&#125;,&#123;1,0&#125;,&#123;-1,0&#125;&#125;,m,n;
-    vector&lt;vector&lt;bool&gt;&gt; visited;
-    bool flag;
-
-    int closedIsland(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
-        m&#x3D;grid.size();
-        if(m&#x3D;&#x3D;0)&#123;
-            return 0;
-        &#125;
-        n&#x3D;grid[0].size();
-
-        int res &#x3D; 0;
-        visited&#x3D;vector&lt;vector&lt;bool&gt;&gt;(m,vector&lt;bool&gt;(n,false));
-
-        for(int i&#x3D;1;i&lt;m-1;i++)&#123;
-            for (int j&#x3D;1;j&lt;n-1;j++)&#123;
-                if(grid[i][j]&#x3D;&#x3D;0 &amp;&amp; !visited[i][j])&#123;
-                    flag &#x3D; false;
-                    res++;
-                    recursion(grid,i,j);
-                    if(flag)
-                        res--;
-                &#125;
-            &#125;
-        &#125;
-
-        return res;
-    &#125;
-
-    void recursion(vector&lt;vector&lt;int&gt;&gt;&amp; grid,int startx,int starty)&#123;
-
-        visited[startx][starty]&#x3D;true;
-
-        for(int i&#x3D;0;i&lt;4;i++)&#123;
-            int newx&#x3D;startx+d[i][0];
-            int newy&#x3D;starty+d[i][1];
-            if(!judge(newx,newy)) flag &#x3D; true;
-            if(judge(newx,newy) &amp;&amp; grid[newx][newy]&#x3D;&#x3D;0 &amp;&amp; !visited[newx][newy])&#123;
-                recursion(grid,newx,newy);
-            &#125;
-        &#125;
-
-        return;
-    &#125;
-
-    bool judge(int x,int y)&#123;
-        return x&gt;&#x3D;0 &amp;&amp; y&gt;&#x3D;0 &amp;&amp; x&lt;m &amp;&amp; y&lt;n;
-    &#125;
-&#125;;
-
-
-&#x2F;&#x2F;Q4:
-
-class Solution &#123;
-public:
-    int maxScoreWords(vector&lt;string&gt;&amp; words, vector&lt;char&gt;&amp; letters, vector&lt;int&gt;&amp; score) &#123;
-        vector&lt;int&gt; stat(26, 0);
-        for (char&amp; c: letters) &#123;
-            stat[c - &#39;a&#39;]++;
-        &#125;
-
-        int ret &#x3D; 0;
-        for (int i &#x3D; 1;i &lt; (1 &lt;&lt; words.size());i++) &#123;
-            vector&lt;int&gt; g &#x3D; group(words, i);
-            int temp &#x3D; 0;
-            for (int j &#x3D; 0;j &lt; 26;j++) &#123;
-                if (g[j] &gt; stat[j]) &#123;
-                    temp &#x3D; -1;
-                    break;
-                &#125; else &#123;
-                    temp +&#x3D; g[j] * score[j];
-                &#125;
-            &#125;
-            if (temp !&#x3D; -1) &#123;
-                ret &#x3D; max(ret, temp);
-            &#125;
-        &#125;
-        return ret;
-    &#125;
-
-
-    vector&lt;int&gt; group(vector&lt;string&gt;&amp; words, int bit) &#123;
-        vector&lt;int&gt; ret(26, 0);
-        for (int i &#x3D; 0;i &lt; words.size();i++) &#123;
-            if (bit &amp; (1 &lt;&lt; i)) &#123;
-                for (int j &#x3D; 0;j &lt; words[i].size();j++) &#123;
-                    ret[words[i][j] - &#39;a&#39;]++;
-                &#125;
-            &#125;
-        &#125;
-        return ret;
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>也许吧(⊙o⊙)…</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
   </entry>
   <entry>
     <title>Java课设中的问题以及解决方案(二)</title>
@@ -10367,132 +10367,6 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
       </tags>
   </entry>
   <entry>
-    <title>C3. Storage and Retrieval (更新中)</title>
-    <url>/2022-10-10-C3-Storage-and-Retrieval/</url>
-    <content><![CDATA[<h2 id="Data-Structure-That-Power-Your-Database"><a href="#Data-Structure-That-Power-Your-Database" class="headerlink" title="Data Structure That Power Your Database"></a>Data Structure That Power Your Database</h2><p>最简单的数据库是什么样子的?</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash </span>
-<span class="token function-name function">db_set</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>     
- <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$1</span>,<span class="token variable">$2</span>"</span> <span class="token operator">>></span> database 
-<span class="token punctuation">&#125;</span> 
-
-<span class="token function-name function">db_get</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>     
- <span class="token function">grep</span> <span class="token string">"^<span class="token variable">$1</span>,"</span> database <span class="token operator">|</span> <span class="token function">sed</span> -e <span class="token string">"s/^<span class="token variable">$1</span>,//"</span> <span class="token operator">|</span> <span class="token function">tail</span> -n <span class="token number">1</span> 
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>如上所示, 我们完成了一个最简单的 <strong>kv 数据库</strong>. 它的工作原理是: <em>db_set</em> 在文件末尾追加一个 kv 对; 如果对某一个 key 进行更新, 那么新的记录会继续追加写入文件, 而非覆盖; <em>db_get</em> 查询到最后(即最新)一条 key , 然后返回 value.</p>
-<p>这个数据库的<strong>写</strong>效率极高 [ $O(1)$ ], 因为它单纯的就是向文件的末尾进行 <code>append</code> 操作. 但是代价是它的<strong>读</strong>效率非常低 [ $O(n)$ ].</p>
-<p>为了解决读效率低的问题, 可以使用 <code>索引</code> , 索引本质上是一个依附于主体数据的额外的数据结构. 它可以作为一个整体地被添加或者删除. 但是索引又会引发一个新的问题, 索引的变化依托于 <strong>写(write)</strong> 操作, 这意味着每次写都需要额外的一部分性能来更新这个数据结构, 如果数据结构过于复杂, 则会拖慢影响写的效率.</p>
-<p>本节主要就是围绕这些索引结构及其演进来展开.</p>
-<ul>
-<li>Hash Index</li>
-<li>SSTable</li>
-<li>…</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="Hash-Index"><a href="#Hash-Index" class="headerlink" title="Hash Index"></a><strong>Hash Index</strong></h2><p>Hash Index 的核心是维护一个 <strong>hash map</strong>, 这个数据结构广泛地存在于各个语言之中, 所以不在对其原理做过多的赘述.</p>
-<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220818141020.png" alt="Storing a log of key-value pairs in a CSV-like format, indexed with an inmemory hash map." loading="lazy"></p>
-<p>Storing a log of key-value pairs in a CSV-like format, indexed with an inmemory hash map.</p>
-<p>Hash map 为了保证查询效率, 一般是整个放在内存中.</p>
-<p>硬盘中的 log 与内存中的 hash index 组合起来, 就能够提供较高的读写性能 (仅当内存容量 &gt; hash map 大小时).</p>
-<ul>
-<li>写: 依然是文件追加写.</li>
-<li>读: 一次内存查询, 一次磁盘 seek; 如果数据已经被缓存, 则 seek 也可以省掉.</li>
-</ul>
-<h3 id="Compaction"><a href="#Compaction" class="headerlink" title="Compaction"></a><strong>Compaction</strong></h3><p>上文所述的这种通过 <strong>append</strong> 进行写操作的数据库, 这种结构一般称之为 <strong>log-structure.</strong> <em>log-structure</em> 类型的数据库面临的问题主要有二, 除了上文所述的 <strong>低效读</strong>, 另一个问题是, 每一次写操作都会计入 log 文件, 这样很容易让 log 文件过大. 尤其是对于 key 的数量较少且更新频繁的数据, 新数据会导致旧数据失去价值, 从而产生大量的空间浪费. 所以需要一套压缩(<em>Compaction</em>)方案来保证空间使用率.</p>
-<p>压缩的一个解决方案是将 log 文件按照一定的大小分段 (<em>Segment</em>), 当写满一个 segment 之后, 就将该 segment 分离出来进行压缩, 即, 丢弃该 segment 中重复的键, 相同的键仅保留最近一次写入的结果.</p>
-<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220818150445.png" alt="Compaction of a key-value update log (counting the number of times each cat video was played), retaining only the most recent value for each key" loading="lazy"></p>
-<p>Compaction of a key-value update log (counting the number of times each cat video was played), retaining only the most recent value for each key</p>
-<p>压缩之后, 旧的 segment 逻辑上占用的空间会大于或等于实际占用的空间, 所以对于这部分的 segment 可以进行合并(merge), 然后重复进行上述的压缩操作. 需要注意都是, 合并操作是在一个新的 segment 中进行的, 压缩之后, 虽然 segment 在实际上出现了空余空间, 但是在逻辑上已经锁定了(<strong>只读</strong>). 在完成合并之后, 旧的 segment 将会被删除.</p>
-<p>每个 segment 都有自己的 Hash Index, 在进行查询时, 会按照时间顺序来进行查询任务.</p>
-<p>log-structure 的数据库乍一看是十分简陋的, 即使有后面的压缩操作, 但依然会浪费很大的一部分空间. 但是对于原地更新型的数据库, 它具有如下的优点与不足:</p>
-<ul>
-<li>Advantages<ol>
-<li>append 操作的效率要高于 update. 因为省略了查询定位的操作. 此外, segment 的大小是固定的, 所以 update 造成的数据块大小的变化很可能会引起 segment 的重建, 造成不必要的开销. 另外, 对于 HDD 来说.</li>
-<li>程序崩溃出错之后能够很快地进行恢复.</li>
-<li>合并操作能够一定程度上避免碎片数据的产生.</li>
-</ol>
-</li>
-<li>Disadvantages<ol>
-<li>Hash index 必须存在于内存中, 如果数据量过大, 很容易内存溢出. (如果将 Hash index 维护于硬盘中, 则会降低索引的性能)</li>
-<li>由于 key 是无序的, 所以对于范围性的查询不友好. ( e.g: 0 &lt; key &lt; 100 )</li>
-</ol>
-</li>
-</ul>
-<h3 id="SSTables-and-LSM-Trees"><a href="#SSTables-and-LSM-Trees" class="headerlink" title="SSTables and LSM-Trees"></a>SSTables and LSM-Trees</h3><p>在之前的优化中, 每一个 segment 都是一个顺序的 kv 对, 它们的顺序只与被 append 的时间相关, 而 kv 本身的顺序无关紧要. 甚至乍一看, 排序操作会丧失顺序写带来的性能优势.</p>
-<p>以 key 为排序基准的结构, 一般被称为 SST (<em>Sorted String Table) .</em> 这种格式有如下的好处:</p>
-<ul>
-<li>合并 segment 变得更为高校, 即使文件比可用内存更大. (参考合并排序算法, 多个 segment 同时进行合并)</li>
-<li>不再需要将全部的 key 维护在内存中. 可以采用 offset 的思路对 key 进行压缩. (0,1,2,3,….  ⇒ 0, 10, 20, ….)</li>
-<li>由于读取请求无论如何都需要扫描所请求范围内的多个键值对，因此可以将这些记录分组到块中，并在将其写入硬盘之前对其进行压缩 (类似json的格式化?)</li>
-</ul>
-<h3 id="构建与维护-SSTables"><a href="#构建与维护-SSTables" class="headerlink" title="构建与维护  SSTables"></a>构建与维护  SSTables</h3><p>SSTables 在数据结构上更加接进 “树(Tree)”. 但是目前这棵树依然是<strong>仅存在于内存中</strong>的.</p>
-<p>维护这个数据结构包含以下的几个工作:</p>
-<ul>
-<li>插入数据时, 保证树结构的平衡(balance), 参考红黑树. 这棵接收数据的树是维护于内存中的(<em>memtable</em>).</li>
-<li>当 SSTable 的容量超过阈值时, 将其转移到硬盘中. 此时这个 SSTable 成为 <em>most recent segment</em>. 在这个转移过程中, 可以开辟一个新的内存空间来维护新的 SSTable.</li>
-<li>当读(read)请求进入时, 先查询内存中的 memtable, 然后是 <em>most recent segment,</em> 以此类推, 直到命中, 返回*.*</li>
-<li>硬盘中的 segments 在不停地进行合并压缩操作.</li>
-</ul>
-<p>当程序发生意外时, 硬盘中的数据不会受损, 但是内存中维护的 mamtable 会丢失, 为了避免这一情况, 最好是对 memtable 留存一份的 <em>append log</em>, 当数据写入硬盘时, 删除对应的 log.</p>
-<blockquote>
-<p>LSM-Trees (Log-Structured Merge-Tree)    consists of some memory components and some disk components. Basically <em>SSTable</em> is just a one implemention of disk component for LSM-tree.</p>
-</blockquote>
-<h4 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h4><ul>
-<li>对于不存在的 key, 在查询时会遍历完整个 SSTable, 所以可以使用布隆过滤器(<em>Bloom filters</em>)来<strong>降低</strong>这种查询带来的损耗.</li>
-<li>优化压缩策略: <em>size-tiered \ leveled</em> compaction. (压缩策略的优化实际上是”什么情况下压缩哪些内容”的细化, 这里不作深入)</li>
-</ul>
-<h3 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B-Tree"></a>B-Tree</h3><p>从结构上看, <strong>B-trees</strong> 与 <strong>SSTables</strong> 相类, 都是维护了一个以 <em>key</em> 排序的键值对, 以高效地进行查询的操作, 但是二者的设计逻辑是大相径庭的.</p>
-<p>如前文所述, log-structured indexes 将数据库分为大小不一的 segments (通常是 MB 或者更大), 并且按序写入硬盘. 与之相反的是, B-trees 将数据库分为大小固定的 blocks 或者 pages (通常是 4KB, 有时会更大),  并且每次读写以页为单位. 由于硬盘也是按照固定大小进行分配的, 所以这种设计更加贴合底层硬件. (有关 page 和 block 的问题可以看<a href="https://stackoverflow.com/questions/22137555/whats-the-difference-between-page-and-block-in-operating-system">这个回答</a>)</p>
-<p>每个 page 都有自己的 id , 用来进行逻辑上的引用, 其引用结构如下图所示.</p>
-<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220902161015.png" alt="Looking up a key using a B-tree index." loading="lazy"></p>
-<p>Looking up a key using a B-tree index.</p>
-<p>每个 page 包含的子页面的数量被称为<strong>分支因子</strong>(<em>branch factor</em>), 上图中的分支因子数量即为6. 通常, 分支因子的数量为几百个.</p>
-<p>该图展示了一个查询的实际过程. 本质上是一个二分查找, 从根节点出发, 查找对应的区间, 直到命中 叶子节点 (leaf page) .</p>
-<p>在对索引树进行修改时, 遵循如下的算法.</p>
-<p>在<strong>更新</strong>的时候, 数据库根据索引定位到叶子节点, 然后将对应的数据进行更新, 最后将页回写到硬盘. 而在<strong>插入</strong>新数据的时候, 会按照既定的顺序插入索引树. 当没有足够的空间来插入 key 的时候, 会将当前页对半分解为两个新页, 然后再进行更新.</p>
-<p>这套算法保证了索引树是一个平衡树, 也就是拥有 n 个 key 的 B-tree 深度为 $O(\log n)$. 大多数数据库的 B-tree 深度为 3 or 4 层.</p>
-<p>$StorageSize = BranchingFactor ^ {depth} * BlockSize$</p>
-<h4 id="让-B-Tree-更可靠"><a href="#让-B-Tree-更可靠" class="headerlink" title="让 B-Tree 更可靠"></a>让 B-Tree 更可靠</h4><p>B-Tree 的写操作是直接在硬盘上以 page 为单位进行覆盖. 某些操作(如需要分裂 page 的更新)会导致数个 page 进行级联变动, 如果在变动的过程中出现了程序崩溃, 那么索引树就会在结构上产生溃烂.</p>
-<p>为了保证B树能够具有这样的<strong>抗崩溃(anti-crash)能力</strong>, 通常会在硬盘上外置一个数据结构, <em>write-ahead log</em>(WAL, also known as a <em>redo log</em>). 顾名思义, 它会将所有的修改操作记录下来, 在程序发生中断时用来进行恢复.</p>
-<p>另一个需要考虑的是<strong>并发控制</strong>, 树结构通常使用 <em>latches</em> 来确保并发安全性. log-sturcture 在这方面要简单得多, 因为所有的合并操作都是在后台中进行, 不会受到查询的干扰.</p>
-<blockquote>
-<p><a href="https://dsf.berkeley.edu/jmh/cs262b/treeCCR.html">Latches vs. Locks</a>:</p>
-<ul>
-<li>Latches, like mutexes, are on physical memory addresses (in bufPool). Cheap to allocate and set. Locks are on externally visible data, and named in a lock table that has a lot of data structure support (hash at least by lockname and by xact). So expensive to allocated and set (10x latches).</li>
-<li>Latches, like mutexes, are held “as long as needed”. Locks are held to transaction boundaries.</li>
-</ul>
-</blockquote>
-<h4 id="优化-B-tree"><a href="#优化-B-tree" class="headerlink" title="优化 B-tree"></a>优化 B-tree</h4><ul>
-<li>取 WAL 代之, 使用 <strong>copy-on-write(COW)</strong> 方案. 即, 将修改页复制到另一个地址(location), 在这个新页面进行修改, 修改完毕之后, 将父页面的引用更新. 这个方案同样适用于并发控制. Q: 只保证了原始数据, 中断恢复如何进行?</li>
-<li>不直接存储完整的 key , 而是进行压缩. 特别是在 tree 的内部的页面中，key 只需要提供足够的信息来作为范围之间的边界. 压缩 key 意味着 tree 能够有更多的分支因子, 从而降低 tree 的高度(levels).</li>
-<li>pages 可以存放在硬盘的任何地方, 所以在进行范围查询的时候, 这种布局设计是非常低效的. 所以有些 B-Tree 会将叶子节点有序地存储在硬盘上, 由此能够进行高效的范围查询, 但是代价是维护成本会随着 tree 的生长愈发困难.</li>
-<li>为每个叶子节点添加兄弟指针, 这样可以避免遍历时需要到父节点查找下一个 page 的情况(回溯).</li>
-<li>借鉴 log-structure 的一些特性来进行优化, 由此衍生出一些 B-tree 的变种.</li>
-</ul>
-<h3 id="对比-B-Tree-和-LSM-Tree"><a href="#对比-B-Tree-和-LSM-Tree" class="headerlink" title="对比 B-Tree 和 LSM-Tree"></a>对比 B-Tree 和 LSM-Tree</h3><p>从经验上看, B-Trees 在读(read)方面更快, 而 LSM-trees 在写(write) 方面更快.</p>
-<p>但是, 基准(benchmarks) 往往是不确定的，对工作负载的细节很敏感. 你需要用特定工作负载(workload)来进行测试, 以便进行有效的比较。</p>
-<h4 id="LSM-Trees-的优势"><a href="#LSM-Trees-的优势" class="headerlink" title="LSM-Trees 的优势"></a>LSM-Trees 的优势</h4><p>一个 B-tree 索引的每段数据会至少写两遍: 一遍是 WAL, 一遍是 page.  每次更改数据都会复写整个 page, 部分引擎会复写多次. Log-Structure 索引由于 Compaction 和 merging of SSTables, 同样会重写多次.  这种入库生命周期内多次写入的行为, 被称为 “<em>write amplification</em>”. (SSD比较特殊, 由于它的磨损机制, 所以只能进行有限次数的重写.)</p>
-<p>在需要进行大量<strong>”写”操作</strong>的应用中, 性能瓶颈通常在数据库到对硬盘的写入速率. 所以 <em>write amplification</em> 越低的, 效率越高.</p>
-<p>LSM-Trees 的写入能力更高. 原因如下:</p>
-<ul>
-<li>拥有更低的 write amplification (尽管这取决于存储引擎的配置和工作负载)</li>
-<li>顺序写(sequential write)的机制更加符合磁盘的设计 (B-Tree是随机写, in place)</li>
-</ul>
-<p>此外, LSM-Trees 能够进行更好的压缩, 占用的空间更小. B-tree 由于分页机制, 如果 page 写不满, 从而形成碎片(fragmentation) , 造成空间浪费. LSM-Trees 则会对碎片进行整理与压缩.</p>
-<p>在许多的 SSD 上, 固件在内部使用了一种日志结构的算法, 在底层的存储芯片上将随机的写入转化为连续的写入, 所以存储引擎的写入模式的影响不太明显. 但是 <strong>较低的 write amplification</strong> 和 <strong>较少的碎片文件</strong> 仍然是有利的.</p>
-<h4 id="LSM-Trees-的劣势"><a href="#LSM-Trees-的劣势" class="headerlink" title="LSM-Trees 的劣势"></a>LSM-Trees 的劣势</h4><p>LSM-Tree 的压缩进程一直在后台进行读写操作, 占用了有限的系统资源, 有时这种操作会妨碍到服务的性能,尤其是在进行代价较大的压缩操作时, 甚至会阻塞正常的请求. 相比之下, B-Tree 的性能表现更加稳定.</p>
-<p>另一个压缩会引发的问题是, 在高写入量时, 磁盘有限的写入带宽需要在初始写入(logging和刷新memtable到硬盘)和在后台运行的压缩线程之间共享. 随着数据库的增加, 压缩线程占用的资源也会更多. 如果写入吞吐量很高, 并且压缩没有仔细配置, 压缩跟不上写入速率. 在这种情况下, 磁盘上未合并段的数量不断增加, 直到磁盘空间用完, 读取速度也会减慢, 因为它们需要检查更多段文件.</p>
-<p>B-Tree 的一个优点是每个键只存在于索引中的一个位置, 而日志结构化的存储引擎可能在不同的段中有相同键的多个副本. 这个方面使得 B-Tree 在想要提供强大的事务语义的数据库中很有吸引力: 在许多关系数据库中, 事务隔离是通过在键范围上使用锁来实现的, 在B树索引中, 这些锁可以直接连接到树.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li>Martin Kleppmann : “<em>Designing Data-Intensive Application”</em></li>
-<li>Rui Huang : “<a href="https://stackoverflow.com/questions/22137555/whats-the-difference-between-page-and-block-in-operating-system"><em>What’s the difference between page and block in operating system?</em></a><strong>”</strong></li>
-<li>木鸟杂记 <strong>: ”**<em>DDIA 读书笔记（三）：B-Tree 和 LSM-Tree</em></strong>”**</li>
-<li>berkeley - cs262b : “<em>Concurrency Control and Recovery for Search Trees</em>”</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>2022-11-14-pytest_mock_counter</title>
     <url>/2022-11-14-pytest-mock-counter/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇的目的是在 <code>Python</code> 的 Test 框架中添加一个 <strong>mock 函数使用计数器</strong> 的逻辑. 该计数器的目的是, 在调用第三方api接口时, 计算某一个流程中的调用次数是否合理. 在流程(或调用关系)比较复杂的时候实用性较高.</p>
@@ -10664,6 +10538,132 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
         <tag>Python</tag>
         <tag>Test</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>C3. Storage and Retrieval (更新中)</title>
+    <url>/2022-10-10-C3-Storage-and-Retrieval/</url>
+    <content><![CDATA[<h2 id="Data-Structure-That-Power-Your-Database"><a href="#Data-Structure-That-Power-Your-Database" class="headerlink" title="Data Structure That Power Your Database"></a>Data Structure That Power Your Database</h2><p>最简单的数据库是什么样子的?</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash </span>
+<span class="token function-name function">db_set</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>     
+ <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$1</span>,<span class="token variable">$2</span>"</span> <span class="token operator">>></span> database 
+<span class="token punctuation">&#125;</span> 
+
+<span class="token function-name function">db_get</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>     
+ <span class="token function">grep</span> <span class="token string">"^<span class="token variable">$1</span>,"</span> database <span class="token operator">|</span> <span class="token function">sed</span> -e <span class="token string">"s/^<span class="token variable">$1</span>,//"</span> <span class="token operator">|</span> <span class="token function">tail</span> -n <span class="token number">1</span> 
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如上所示, 我们完成了一个最简单的 <strong>kv 数据库</strong>. 它的工作原理是: <em>db_set</em> 在文件末尾追加一个 kv 对; 如果对某一个 key 进行更新, 那么新的记录会继续追加写入文件, 而非覆盖; <em>db_get</em> 查询到最后(即最新)一条 key , 然后返回 value.</p>
+<p>这个数据库的<strong>写</strong>效率极高 [ $O(1)$ ], 因为它单纯的就是向文件的末尾进行 <code>append</code> 操作. 但是代价是它的<strong>读</strong>效率非常低 [ $O(n)$ ].</p>
+<p>为了解决读效率低的问题, 可以使用 <code>索引</code> , 索引本质上是一个依附于主体数据的额外的数据结构. 它可以作为一个整体地被添加或者删除. 但是索引又会引发一个新的问题, 索引的变化依托于 <strong>写(write)</strong> 操作, 这意味着每次写都需要额外的一部分性能来更新这个数据结构, 如果数据结构过于复杂, 则会拖慢影响写的效率.</p>
+<p>本节主要就是围绕这些索引结构及其演进来展开.</p>
+<ul>
+<li>Hash Index</li>
+<li>SSTable</li>
+<li>…</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Hash-Index"><a href="#Hash-Index" class="headerlink" title="Hash Index"></a><strong>Hash Index</strong></h2><p>Hash Index 的核心是维护一个 <strong>hash map</strong>, 这个数据结构广泛地存在于各个语言之中, 所以不在对其原理做过多的赘述.</p>
+<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220818141020.png" alt="Storing a log of key-value pairs in a CSV-like format, indexed with an inmemory hash map." loading="lazy"></p>
+<p>Storing a log of key-value pairs in a CSV-like format, indexed with an inmemory hash map.</p>
+<p>Hash map 为了保证查询效率, 一般是整个放在内存中.</p>
+<p>硬盘中的 log 与内存中的 hash index 组合起来, 就能够提供较高的读写性能 (仅当内存容量 &gt; hash map 大小时).</p>
+<ul>
+<li>写: 依然是文件追加写.</li>
+<li>读: 一次内存查询, 一次磁盘 seek; 如果数据已经被缓存, 则 seek 也可以省掉.</li>
+</ul>
+<h3 id="Compaction"><a href="#Compaction" class="headerlink" title="Compaction"></a><strong>Compaction</strong></h3><p>上文所述的这种通过 <strong>append</strong> 进行写操作的数据库, 这种结构一般称之为 <strong>log-structure.</strong> <em>log-structure</em> 类型的数据库面临的问题主要有二, 除了上文所述的 <strong>低效读</strong>, 另一个问题是, 每一次写操作都会计入 log 文件, 这样很容易让 log 文件过大. 尤其是对于 key 的数量较少且更新频繁的数据, 新数据会导致旧数据失去价值, 从而产生大量的空间浪费. 所以需要一套压缩(<em>Compaction</em>)方案来保证空间使用率.</p>
+<p>压缩的一个解决方案是将 log 文件按照一定的大小分段 (<em>Segment</em>), 当写满一个 segment 之后, 就将该 segment 分离出来进行压缩, 即, 丢弃该 segment 中重复的键, 相同的键仅保留最近一次写入的结果.</p>
+<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220818150445.png" alt="Compaction of a key-value update log (counting the number of times each cat video was played), retaining only the most recent value for each key" loading="lazy"></p>
+<p>Compaction of a key-value update log (counting the number of times each cat video was played), retaining only the most recent value for each key</p>
+<p>压缩之后, 旧的 segment 逻辑上占用的空间会大于或等于实际占用的空间, 所以对于这部分的 segment 可以进行合并(merge), 然后重复进行上述的压缩操作. 需要注意都是, 合并操作是在一个新的 segment 中进行的, 压缩之后, 虽然 segment 在实际上出现了空余空间, 但是在逻辑上已经锁定了(<strong>只读</strong>). 在完成合并之后, 旧的 segment 将会被删除.</p>
+<p>每个 segment 都有自己的 Hash Index, 在进行查询时, 会按照时间顺序来进行查询任务.</p>
+<p>log-structure 的数据库乍一看是十分简陋的, 即使有后面的压缩操作, 但依然会浪费很大的一部分空间. 但是对于原地更新型的数据库, 它具有如下的优点与不足:</p>
+<ul>
+<li>Advantages<ol>
+<li>append 操作的效率要高于 update. 因为省略了查询定位的操作. 此外, segment 的大小是固定的, 所以 update 造成的数据块大小的变化很可能会引起 segment 的重建, 造成不必要的开销. 另外, 对于 HDD 来说.</li>
+<li>程序崩溃出错之后能够很快地进行恢复.</li>
+<li>合并操作能够一定程度上避免碎片数据的产生.</li>
+</ol>
+</li>
+<li>Disadvantages<ol>
+<li>Hash index 必须存在于内存中, 如果数据量过大, 很容易内存溢出. (如果将 Hash index 维护于硬盘中, 则会降低索引的性能)</li>
+<li>由于 key 是无序的, 所以对于范围性的查询不友好. ( e.g: 0 &lt; key &lt; 100 )</li>
+</ol>
+</li>
+</ul>
+<h3 id="SSTables-and-LSM-Trees"><a href="#SSTables-and-LSM-Trees" class="headerlink" title="SSTables and LSM-Trees"></a>SSTables and LSM-Trees</h3><p>在之前的优化中, 每一个 segment 都是一个顺序的 kv 对, 它们的顺序只与被 append 的时间相关, 而 kv 本身的顺序无关紧要. 甚至乍一看, 排序操作会丧失顺序写带来的性能优势.</p>
+<p>以 key 为排序基准的结构, 一般被称为 SST (<em>Sorted String Table) .</em> 这种格式有如下的好处:</p>
+<ul>
+<li>合并 segment 变得更为高校, 即使文件比可用内存更大. (参考合并排序算法, 多个 segment 同时进行合并)</li>
+<li>不再需要将全部的 key 维护在内存中. 可以采用 offset 的思路对 key 进行压缩. (0,1,2,3,….  ⇒ 0, 10, 20, ….)</li>
+<li>由于读取请求无论如何都需要扫描所请求范围内的多个键值对，因此可以将这些记录分组到块中，并在将其写入硬盘之前对其进行压缩 (类似json的格式化?)</li>
+</ul>
+<h3 id="构建与维护-SSTables"><a href="#构建与维护-SSTables" class="headerlink" title="构建与维护  SSTables"></a>构建与维护  SSTables</h3><p>SSTables 在数据结构上更加接进 “树(Tree)”. 但是目前这棵树依然是<strong>仅存在于内存中</strong>的.</p>
+<p>维护这个数据结构包含以下的几个工作:</p>
+<ul>
+<li>插入数据时, 保证树结构的平衡(balance), 参考红黑树. 这棵接收数据的树是维护于内存中的(<em>memtable</em>).</li>
+<li>当 SSTable 的容量超过阈值时, 将其转移到硬盘中. 此时这个 SSTable 成为 <em>most recent segment</em>. 在这个转移过程中, 可以开辟一个新的内存空间来维护新的 SSTable.</li>
+<li>当读(read)请求进入时, 先查询内存中的 memtable, 然后是 <em>most recent segment,</em> 以此类推, 直到命中, 返回*.*</li>
+<li>硬盘中的 segments 在不停地进行合并压缩操作.</li>
+</ul>
+<p>当程序发生意外时, 硬盘中的数据不会受损, 但是内存中维护的 mamtable 会丢失, 为了避免这一情况, 最好是对 memtable 留存一份的 <em>append log</em>, 当数据写入硬盘时, 删除对应的 log.</p>
+<blockquote>
+<p>LSM-Trees (Log-Structured Merge-Tree)    consists of some memory components and some disk components. Basically <em>SSTable</em> is just a one implemention of disk component for LSM-tree.</p>
+</blockquote>
+<h4 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h4><ul>
+<li>对于不存在的 key, 在查询时会遍历完整个 SSTable, 所以可以使用布隆过滤器(<em>Bloom filters</em>)来<strong>降低</strong>这种查询带来的损耗.</li>
+<li>优化压缩策略: <em>size-tiered \ leveled</em> compaction. (压缩策略的优化实际上是”什么情况下压缩哪些内容”的细化, 这里不作深入)</li>
+</ul>
+<h3 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B-Tree"></a>B-Tree</h3><p>从结构上看, <strong>B-trees</strong> 与 <strong>SSTables</strong> 相类, 都是维护了一个以 <em>key</em> 排序的键值对, 以高效地进行查询的操作, 但是二者的设计逻辑是大相径庭的.</p>
+<p>如前文所述, log-structured indexes 将数据库分为大小不一的 segments (通常是 MB 或者更大), 并且按序写入硬盘. 与之相反的是, B-trees 将数据库分为大小固定的 blocks 或者 pages (通常是 4KB, 有时会更大),  并且每次读写以页为单位. 由于硬盘也是按照固定大小进行分配的, 所以这种设计更加贴合底层硬件. (有关 page 和 block 的问题可以看<a href="https://stackoverflow.com/questions/22137555/whats-the-difference-between-page-and-block-in-operating-system">这个回答</a>)</p>
+<p>每个 page 都有自己的 id , 用来进行逻辑上的引用, 其引用结构如下图所示.</p>
+<p><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/20220902161015.png" alt="Looking up a key using a B-tree index." loading="lazy"></p>
+<p>Looking up a key using a B-tree index.</p>
+<p>每个 page 包含的子页面的数量被称为<strong>分支因子</strong>(<em>branch factor</em>), 上图中的分支因子数量即为6. 通常, 分支因子的数量为几百个.</p>
+<p>该图展示了一个查询的实际过程. 本质上是一个二分查找, 从根节点出发, 查找对应的区间, 直到命中 叶子节点 (leaf page) .</p>
+<p>在对索引树进行修改时, 遵循如下的算法.</p>
+<p>在<strong>更新</strong>的时候, 数据库根据索引定位到叶子节点, 然后将对应的数据进行更新, 最后将页回写到硬盘. 而在<strong>插入</strong>新数据的时候, 会按照既定的顺序插入索引树. 当没有足够的空间来插入 key 的时候, 会将当前页对半分解为两个新页, 然后再进行更新.</p>
+<p>这套算法保证了索引树是一个平衡树, 也就是拥有 n 个 key 的 B-tree 深度为 $O(\log n)$. 大多数数据库的 B-tree 深度为 3 or 4 层.</p>
+<p>$StorageSize = BranchingFactor ^ {depth} * BlockSize$</p>
+<h4 id="让-B-Tree-更可靠"><a href="#让-B-Tree-更可靠" class="headerlink" title="让 B-Tree 更可靠"></a>让 B-Tree 更可靠</h4><p>B-Tree 的写操作是直接在硬盘上以 page 为单位进行覆盖. 某些操作(如需要分裂 page 的更新)会导致数个 page 进行级联变动, 如果在变动的过程中出现了程序崩溃, 那么索引树就会在结构上产生溃烂.</p>
+<p>为了保证B树能够具有这样的<strong>抗崩溃(anti-crash)能力</strong>, 通常会在硬盘上外置一个数据结构, <em>write-ahead log</em>(WAL, also known as a <em>redo log</em>). 顾名思义, 它会将所有的修改操作记录下来, 在程序发生中断时用来进行恢复.</p>
+<p>另一个需要考虑的是<strong>并发控制</strong>, 树结构通常使用 <em>latches</em> 来确保并发安全性. log-sturcture 在这方面要简单得多, 因为所有的合并操作都是在后台中进行, 不会受到查询的干扰.</p>
+<blockquote>
+<p><a href="https://dsf.berkeley.edu/jmh/cs262b/treeCCR.html">Latches vs. Locks</a>:</p>
+<ul>
+<li>Latches, like mutexes, are on physical memory addresses (in bufPool). Cheap to allocate and set. Locks are on externally visible data, and named in a lock table that has a lot of data structure support (hash at least by lockname and by xact). So expensive to allocated and set (10x latches).</li>
+<li>Latches, like mutexes, are held “as long as needed”. Locks are held to transaction boundaries.</li>
+</ul>
+</blockquote>
+<h4 id="优化-B-tree"><a href="#优化-B-tree" class="headerlink" title="优化 B-tree"></a>优化 B-tree</h4><ul>
+<li>取 WAL 代之, 使用 <strong>copy-on-write(COW)</strong> 方案. 即, 将修改页复制到另一个地址(location), 在这个新页面进行修改, 修改完毕之后, 将父页面的引用更新. 这个方案同样适用于并发控制. Q: 只保证了原始数据, 中断恢复如何进行?</li>
+<li>不直接存储完整的 key , 而是进行压缩. 特别是在 tree 的内部的页面中，key 只需要提供足够的信息来作为范围之间的边界. 压缩 key 意味着 tree 能够有更多的分支因子, 从而降低 tree 的高度(levels).</li>
+<li>pages 可以存放在硬盘的任何地方, 所以在进行范围查询的时候, 这种布局设计是非常低效的. 所以有些 B-Tree 会将叶子节点有序地存储在硬盘上, 由此能够进行高效的范围查询, 但是代价是维护成本会随着 tree 的生长愈发困难.</li>
+<li>为每个叶子节点添加兄弟指针, 这样可以避免遍历时需要到父节点查找下一个 page 的情况(回溯).</li>
+<li>借鉴 log-structure 的一些特性来进行优化, 由此衍生出一些 B-tree 的变种.</li>
+</ul>
+<h3 id="对比-B-Tree-和-LSM-Tree"><a href="#对比-B-Tree-和-LSM-Tree" class="headerlink" title="对比 B-Tree 和 LSM-Tree"></a>对比 B-Tree 和 LSM-Tree</h3><p>从经验上看, B-Trees 在读(read)方面更快, 而 LSM-trees 在写(write) 方面更快.</p>
+<p>但是, 基准(benchmarks) 往往是不确定的，对工作负载的细节很敏感. 你需要用特定工作负载(workload)来进行测试, 以便进行有效的比较。</p>
+<h4 id="LSM-Trees-的优势"><a href="#LSM-Trees-的优势" class="headerlink" title="LSM-Trees 的优势"></a>LSM-Trees 的优势</h4><p>一个 B-tree 索引的每段数据会至少写两遍: 一遍是 WAL, 一遍是 page.  每次更改数据都会复写整个 page, 部分引擎会复写多次. Log-Structure 索引由于 Compaction 和 merging of SSTables, 同样会重写多次.  这种入库生命周期内多次写入的行为, 被称为 “<em>write amplification</em>”. (SSD比较特殊, 由于它的磨损机制, 所以只能进行有限次数的重写.)</p>
+<p>在需要进行大量<strong>”写”操作</strong>的应用中, 性能瓶颈通常在数据库到对硬盘的写入速率. 所以 <em>write amplification</em> 越低的, 效率越高.</p>
+<p>LSM-Trees 的写入能力更高. 原因如下:</p>
+<ul>
+<li>拥有更低的 write amplification (尽管这取决于存储引擎的配置和工作负载)</li>
+<li>顺序写(sequential write)的机制更加符合磁盘的设计 (B-Tree是随机写, in place)</li>
+</ul>
+<p>此外, LSM-Trees 能够进行更好的压缩, 占用的空间更小. B-tree 由于分页机制, 如果 page 写不满, 从而形成碎片(fragmentation) , 造成空间浪费. LSM-Trees 则会对碎片进行整理与压缩.</p>
+<p>在许多的 SSD 上, 固件在内部使用了一种日志结构的算法, 在底层的存储芯片上将随机的写入转化为连续的写入, 所以存储引擎的写入模式的影响不太明显. 但是 <strong>较低的 write amplification</strong> 和 <strong>较少的碎片文件</strong> 仍然是有利的.</p>
+<h4 id="LSM-Trees-的劣势"><a href="#LSM-Trees-的劣势" class="headerlink" title="LSM-Trees 的劣势"></a>LSM-Trees 的劣势</h4><p>LSM-Tree 的压缩进程一直在后台进行读写操作, 占用了有限的系统资源, 有时这种操作会妨碍到服务的性能,尤其是在进行代价较大的压缩操作时, 甚至会阻塞正常的请求. 相比之下, B-Tree 的性能表现更加稳定.</p>
+<p>另一个压缩会引发的问题是, 在高写入量时, 磁盘有限的写入带宽需要在初始写入(logging和刷新memtable到硬盘)和在后台运行的压缩线程之间共享. 随着数据库的增加, 压缩线程占用的资源也会更多. 如果写入吞吐量很高, 并且压缩没有仔细配置, 压缩跟不上写入速率. 在这种情况下, 磁盘上未合并段的数量不断增加, 直到磁盘空间用完, 读取速度也会减慢, 因为它们需要检查更多段文件.</p>
+<p>B-Tree 的一个优点是每个键只存在于索引中的一个位置, 而日志结构化的存储引擎可能在不同的段中有相同键的多个副本. 这个方面使得 B-Tree 在想要提供强大的事务语义的数据库中很有吸引力: 在许多关系数据库中, 事务隔离是通过在键范围上使用锁来实现的, 在B树索引中, 这些锁可以直接连接到树.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li>Martin Kleppmann : “<em>Designing Data-Intensive Application”</em></li>
+<li>Rui Huang : “<a href="https://stackoverflow.com/questions/22137555/whats-the-difference-between-page-and-block-in-operating-system"><em>What’s the difference between page and block in operating system?</em></a><strong>”</strong></li>
+<li>木鸟杂记 <strong>: ”**<em>DDIA 读书笔记（三）：B-Tree 和 LSM-Tree</em></strong>”**</li>
+<li>berkeley - cs262b : “<em>Concurrency Control and Recovery for Search Trees</em>”</li>
+</ol>
+]]></content>
   </entry>
   <entry>
     <title>alfred 工作流开发</title>
@@ -11089,33 +11089,6 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
       </tags>
   </entry>
   <entry>
-    <title>起居杂录小纲</title>
-    <url>/dailylife/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>正经人谁写日记啊？ –《邪不压正》</p>
-</blockquote>
-<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
-<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
-<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
-<p>那么,我为什么要写这样一组日记式的博客呢.</p>
-<p><strong>博客，是用来炫技的地方</strong>。</p>
-<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
-<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
-<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
-<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
-<hr>
-<p>写于 2019 年 07 月 19 日的结句.</p>
-<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>bash脚本 - 过期日志文件清理</title>
     <url>/clean-logs/</url>
     <content><![CDATA[<p>公司服务器上的日志文件多年积压, 已经占用了很大一部分不必要的内存空间. 所以本篇将完成一个功能性脚本, 其内容是扫描过期的日志文件, 并对文件进行对应的操作.</p>
@@ -11319,6 +11292,33 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
       <tags>
         <tag>实用小工具</tag>
         <tag>脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>起居杂录小纲</title>
+    <url>/dailylife/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>正经人谁写日记啊？ –《邪不压正》</p>
+</blockquote>
+<p><strong>纲者,维紘绳也.从糸冈声.<br>它将是整篇起居录的起点,也是结点.</strong></p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>如第一引言所述，话虽然是戏谑调侃,但我对这个观点是非常赞同的。</p>
+<p>私以为,少年人的日记,无病呻吟,不过抒发自己内心的愤懑与骚动,宣泄情感而已;步入社会之后,中青年人是不会有日记的,因为日记存在的唯一意义就是授人以柄,落人口实,弊大于利,即使是有,也不过是因为有利可图罢了,这种情境下的日记也已经称不上日记了.</p>
+<p>再说网络。网络从来不是表达感情的好地方，因为这是一个从不缺乏恶意的地方，所以自从中学之后，便鲜有在网络上流露自己真情实感，也不再相信会有成熟的人会在网络上推心置腹。这是一个暴力的地方，自它诞生起，这一属性就从未变过。</p>
+<p>那么,我为什么要写这样一组日记式的博客呢.</p>
+<p><strong>博客，是用来炫技的地方</strong>。</p>
+<p>本博客建立之初，我就是抱着将它打造成一个技术博客的想法，不过后来有所经历，有所感悟，于是壮志渐消,热血渐凉.</p>
+<p><em>我离开了一个秘密基地,然后又找到了一个秘密基地</em>. 这就是第二引言的含义.</p>
+<p>在这里,我在无聊的大学时光里第一次找回了追求技术,实现技术的兴奋,第一次进入这个页面,第一次发文章,第一次 diy 页面(虽然最后从高冷的极客风降格成了 qq 空间….)……太多的感动,太多的回忆沉淀在这里.</p>
+<p>所以,我想赋予它更深层次的意义.不仅仅是一个夸耀技术的地方,而是作为一处宝藏,可以是我的,也可以是很多人的……</p>
+<hr>
+<p>写于 2019 年 07 月 19 日的结句.</p>
+<p><strong>在破碎的地方埋藏梦想,将情感寄托于虚妄,悲悯于过去,彷徨于现在,最后在孤独之中书写未来.</strong></p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
       </tags>
   </entry>
   <entry>
@@ -11580,38 +11580,6 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
       </tags>
   </entry>
   <entry>
-    <title>桂苑酌记小纲</title>
-    <url>/drink-with-reading/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
-<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
-</blockquote>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
-<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
-<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
-<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
-<p>至于“记”。</p>
-<blockquote>
-<p>记者,书也。 ——《广雅》</p>
-</blockquote>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
-<p>专业书和非专业书。</p>
-<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
-<p>不过，这一节并不准备留给这些“专业书”。</p>
-<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
-<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
-<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
-<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
-<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
-<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
-]]></content>
-      <categories>
-        <category>桂苑酌记</category>
-      </categories>
-      <tags>
-        <tag>章节纲记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker 镜像优化实践</title>
     <url>/docker-image-smaller/</url>
     <content><![CDATA[<p>本篇主要的内容是如何对 Docker 镜像进行优化.</p>
@@ -11795,6 +11763,38 @@ set timeout         设置超时时间<span aria-hidden="true" class="line-numbe
       <tags>
         <tag>Docker</tag>
         <tag>optimization</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>桂苑酌记小纲</title>
+    <url>/drink-with-reading/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><blockquote>
+<p>花间一壶酒，独酌无相亲。举杯邀明月，对饮成三人。<br>——李白《月下独酌四首·其一》</p>
+</blockquote>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>先来解一下为什么要叫做桂苑酌记吧，这当然不是什么一拍脑门随手所书。</p>
+<p>之所以称之为桂，原因有三。<br>其一，桂者，草木之滋。胜者之冠。<br>其二，我所就读的大学与中医药密切相关，不过我又不是正统的医学出身，故而舍杏而取桂。<br>其三，佛曰：“不可说”，哈哈。</p>
+<p>苑者，取自汉·刘向的《说苑》。适时恰读冯友兰先生的《中国哲学简史》，至第一十七章，得“苑”字，取其雅意，另和于桂。</p>
+<p>酌者，对应了引言之中的月下独酌。南京很大，我很渺小，湮没在芸芸众生之中，我也不过是平凡者中的一位罢了。一个人看过日出，一个人看过日落，一个人游过花海，一个人登过栖霞。没错，与其说我取了一个酌字，不如说我取了一个独字，不过细细品味就会发现，酌本身就蕴含了独的意境，而又囊括了看淡世事的沉静。推敲再三，取第三字为酌。</p>
+<p>至于“记”。</p>
+<blockquote>
+<p>记者,书也。 ——《广雅》</p>
+</blockquote>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>大学，两种书。</p>
+<p>专业书和非专业书。</p>
+<p>先说专业书吧，大学有很多的专业课，自然也就有浩繁如烟海的专业类书籍，这些书会让我们在日后的职业生涯中的路<strong>更宽、更阔</strong> ，这一点毋庸置疑。</p>
+<p>不过，这一节并不准备留给这些“专业书”。</p>
+<p><strong>我还是喜欢看一些非专业书，因为他能让我的路走得更远。</strong></p>
+<p>高中毕业已经很久，与计算机相处久了，感觉自己已经说不出多少煽情的话了。</p>
+<p>不过，我还是享受。享受和阿加莎、柯南道尔一同解谜的时光，享受冯友兰、南怀瑾的说教，享受 kleon 的诡辩，享受马丁所创造的奇幻瑰丽的新世界……</p>
+<p>这些是过去的感动，曾经不只是我一个人而现在独属于我的感动；这些是现在的欢愉，哪怕是百年的孤独，也不必有所畏惧；这些是未来的回忆，是我曾走过的路……</p>
+<p>于此，我将专业书和非专业书割裂，也是将工作与生活割裂。我们谁也不是也不应该是只知道工作的生活的奴仆，而是生活的掌控者，是生活的享受者。</p>
+<p>Harumonia<br>初稿 2018.10.30<br>第一次修改 2019.7.20</p>
+]]></content>
+      <categories>
+        <category>桂苑酌记</category>
+      </categories>
+      <tags>
+        <tag>章节纲记</tag>
       </tags>
   </entry>
   <entry>
@@ -12787,6 +12787,44 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
       </tags>
   </entry>
   <entry>
+    <title>kex_exchange_identification问题及解决</title>
+    <url>/github-kex-exchange-identification-solution/</url>
+    <content><![CDATA[<p>简单地记述了一下在使用 <em>github</em> 时遇到的 <strong>kex_exchange_identification</strong> 错误.</p>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>毕业旅行的博客摸了很久, GitHub 也很有没有用过了, 然后在 <em>push</em> 的时候遇到了这个问题.</p>
+<p>系统环境如下:</p>
+<blockquote>
+<p>OS: MacOS<br>shell: zsh</p>
+</blockquote>
+<p>具体报错:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push
+
+<span class="token comment"># output:</span>
+<span class="token comment"># kex_exchange_identification: Connection closed by remote host</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li><p>确认 <em>github</em> 的 <strong>ssh</strong> 配置没有问题.</p>
+</li>
+<li><p>使用 <code>vim ~/.ssh/config</code> 命令, 打开 ssh 的配置文件.</p>
+</li>
+<li><p>添加 <code>IdentityFile ~/.ssh/id_ed25519</code> 至配置中, 而后配置变更为如下所示.</p>
+</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Host github.com
+   HostName github.com
+   User <span class="token function">git</span>
+   ProxyCommand <span class="token function">nc</span> -v -x <span class="token number">127.0</span>.0.1:7890 %h %p
+   IdentityFile ~/.ssh/id_ed25519<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中, <code>ProxyCommand</code> 是指定的 github 代理, 有没有这个字段无所谓, 根据自己的配置即可. 而 <code>id_ed25519</code> 为与 github 的 ssh 配置相关联的文件, 这里笔者配置 ssh 时是按照 github 的教程走的, 所以文件就是 <code>id_ed25519</code>.</p>
+<p>最后, 可以使用 <code>ssh -T git@github.com</code> 测试一下, 效果拔群~</p>
+<h2 id="补充解决方案"><a href="#补充解决方案" class="headerlink" title="补充解决方案"></a>补充解决方案</h2><p>当然， 这也有可能是代理失效的原因， 这就要把 <code>ProxyCommand</code> 这一行注释掉试试.</p>
+<p>总之还是先使用 <code>ssh -v git@github.com</code> 调试一下, 根据具体的输出具体分析吧.</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>还是搞不太清楚为啥会突然遇到这个问题, 大概是这段时间往 ssh 配置文件里面添加太多的 key 导致匹配规则混乱吧. 之后如果找到了更详细的问题原因再来更新咯.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>毕业设计过程中的一些有趣/有用的网站</title>
     <url>/interesting-website-in-graduation-design/</url>
     <content><![CDATA[<p>本篇将会介绍一些笔者在完成毕设的过程中所发现的一些有趣的网站或者工具.包括:</p>
@@ -12830,44 +12868,6 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
       <tags>
         <tag>毕业设计</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>kex_exchange_identification问题及解决</title>
-    <url>/github-kex-exchange-identification-solution/</url>
-    <content><![CDATA[<p>简单地记述了一下在使用 <em>github</em> 时遇到的 <strong>kex_exchange_identification</strong> 错误.</p>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>毕业旅行的博客摸了很久, GitHub 也很有没有用过了, 然后在 <em>push</em> 的时候遇到了这个问题.</p>
-<p>系统环境如下:</p>
-<blockquote>
-<p>OS: MacOS<br>shell: zsh</p>
-</blockquote>
-<p>具体报错:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push
-
-<span class="token comment"># output:</span>
-<span class="token comment"># kex_exchange_identification: Connection closed by remote host</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li><p>确认 <em>github</em> 的 <strong>ssh</strong> 配置没有问题.</p>
-</li>
-<li><p>使用 <code>vim ~/.ssh/config</code> 命令, 打开 ssh 的配置文件.</p>
-</li>
-<li><p>添加 <code>IdentityFile ~/.ssh/id_ed25519</code> 至配置中, 而后配置变更为如下所示.</p>
-</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Host github.com
-   HostName github.com
-   User <span class="token function">git</span>
-   ProxyCommand <span class="token function">nc</span> -v -x <span class="token number">127.0</span>.0.1:7890 %h %p
-   IdentityFile ~/.ssh/id_ed25519<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其中, <code>ProxyCommand</code> 是指定的 github 代理, 有没有这个字段无所谓, 根据自己的配置即可. 而 <code>id_ed25519</code> 为与 github 的 ssh 配置相关联的文件, 这里笔者配置 ssh 时是按照 github 的教程走的, 所以文件就是 <code>id_ed25519</code>.</p>
-<p>最后, 可以使用 <code>ssh -T git@github.com</code> 测试一下, 效果拔群~</p>
-<h2 id="补充解决方案"><a href="#补充解决方案" class="headerlink" title="补充解决方案"></a>补充解决方案</h2><p>当然， 这也有可能是代理失效的原因， 这就要把 <code>ProxyCommand</code> 这一行注释掉试试.</p>
-<p>总之还是先使用 <code>ssh -v git@github.com</code> 调试一下, 根据具体的输出具体分析吧.</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>还是搞不太清楚为啥会突然遇到这个问题, 大概是这段时间往 ssh 配置文件里面添加太多的 key 导致匹配规则混乱吧. 之后如果找到了更详细的问题原因再来更新咯.</p>
-]]></content>
   </entry>
   <entry>
     <title>awk 学习记录</title>
@@ -13794,10 +13794,67 @@ socket<span class="token punctuation">.</span><span class="token function">close
       </tags>
   </entry>
   <entry>
+    <title>爬虫监控服务的数据库选择-bitmap应用</title>
+    <url>/redis-log/</url>
+    <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
+<p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
+<p>笔者写爬虫时常用的数据有 <strong>MySQL</strong>、<strong>mongoDB</strong>、<strong>Redis</strong>，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 <strong>MySQL</strong>、<strong>SQLite</strong>。</p>
+<p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
+<span id="more"></span>
+
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>一切问题从需求出发。于是，我将服务的需求和可能出现的问题都列下来，从这些之中去发现解决思路。</p>
+<ol>
+<li>哪些公司完成了？哪些公司未完成？</li>
+<li>第一轮数据获取结束后，还会有第二轮、第三轮等数据更新。</li>
+<li>对爬虫进行时段监控，了解各个时段的爬虫效率如何？（这个时间精度不用很高，一般分析都是每 10 分钟、每半小时这样进行分析）</li>
+<li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
+</ol>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
+<p>a. <strong>冗余数据</strong>。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. <strong>纯粹无用数据</strong>。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. <strong>第 4 点需求的处理思路</strong>。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
+<p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
+<p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
+<p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
+<h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
+<p>思路很清晰明了，实现也十分地简单，维护代价几乎为 0 。</p>
+<p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
+<p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
+<p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
+<ol>
+<li>使用 json 来扩充数据维度。</li>
+<li>将字段名作为新的维度。</li>
+</ol>
+<p>使用 json 扩充维度会加大后续数据分析的难度，也会拖慢分析效率，因为要分出一部分性能用来展开多维数据。在锁定了数据最多只有三维的情况下，我选择了第二种思路。</p>
+<p>于是新的问题又出现了，选择什么样的数据结构来存储这些数据？</p>
+<p>在<a href="https://blog.harumonia.moe/2020/02/12/2020-02-12-Redis-note-2/">之前 Redis 的学习笔记中</a>，有通过 bitmap 来实现大量统计数据存储的案例。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>至此，路线逐渐成形：</p>
+<ol>
+<li>额外维护近似静态的公司名字典(只在每轮更新结束之后对该字典进行增改，注：不会删除)；将该字典的 index 作为 bitmap 的键，完成情况作为 bitmap 的值。</li>
+<li>将粗粒度的时间作为字段名，每半小时分离出新字段。</li>
+<li>设置一个额外线程，每半小时将本轮次的运行情况合并到以轮次为名称的 bitmap 字段中。</li>
+</ol>
+<p>空间用量：</p>
+<pre class="line-numbers language-math" data-language="math"><code class="language-math">400000 &#x2F; 1024 &#x2F; 1024 &#x2F; 8MB * 2 ≈ 0.1MB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>当然还会有一些不太容易量化的额外空间消耗(键消耗等)，这些空间消耗也许要比本身数据 0.1MB 要大，不过可以肯定的是，比起 MySQL 要轻量不少。同时，维护的成本很低，调用的性能很高，这一点在实际的使用中也有所体现。</p>
+<p>ps1. 需要说明的是，特殊字段的存储不在这个计算中，而是新开了 set，不将特殊字段的空间加入计算，因为本身特殊字段就是暂存字段，在实际作业中，第一轮进行到 34%左右时，特殊字段就已经全部被检测完毕，并且销毁掉了。</p>
+<p>ps2. 键的生成由代码决定而不是由定时任务决定，所以也避免了空键浪费存储空间的问题。</p>
+<p>结果如图所示。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/spider-stat.PNG" alt="result.png" loading="lazy"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>MySQL-&gt;关系型数据库的泛用性很高，但是非关系型数据库、NoSql 等的存在也并非没有理由，因地制宜地选取数据库，根据数据库的特性去进行压榨，”让专业的人做专业的事”。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>DataBase</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#x7a;&#x78;&#x6a;&#x6c;&#x6d;&#50;&#x33;&#51;&#x40;&#x31;&#x36;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>email:<a href="mailto:&#x7a;&#x78;&#x6a;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;">&#x7a;&#x78;&#x6a;&#108;&#x6d;&#x32;&#51;&#51;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -13856,63 +13913,6 @@ socket<span class="token punctuation">.</span><span class="token function">close
       <categories>
         <category>摸摸摸</category>
       </categories>
-  </entry>
-  <entry>
-    <title>爬虫监控服务的数据库选择-bitmap应用</title>
-    <url>/redis-log/</url>
-    <content><![CDATA[<p>在爬虫实习中遇到了这样一个情境：对一个给定的队列进行数据爬取(比如说是一个公司名称的队列，爬取对应的公司信息)，当然不是开发结束就算是完成了，代码无法保证能够应对所有的突发情况，而且我们也需要一个半透明的，甚至是透明的爬虫监控系统，了解爬虫的任务进度，以及过程中遇到的一些问题。</p>
-<p>这个监控系统并不难实现，使用 flask 写了一个服务平台，不过是几个小时的事情，但是我在实现过程中遇到一个很有趣的问题：用什么样的数据库来保存这些数据？</p>
-<p>笔者写爬虫时常用的数据有 <strong>MySQL</strong>、<strong>mongoDB</strong>、<strong>Redis</strong>，这三个各有长处，用来针对不同的业务需求；而在写 web 服务时，则常用 <strong>MySQL</strong>、<strong>SQLite</strong>。</p>
-<p>这些数据库在不同的情境下各有优劣，正巧最近有些闲工夫，就在这个问题上做了一些发散。</p>
-<span id="more"></span>
-
-<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>一切问题从需求出发。于是，我将服务的需求和可能出现的问题都列下来，从这些之中去发现解决思路。</p>
-<ol>
-<li>哪些公司完成了？哪些公司未完成？</li>
-<li>第一轮数据获取结束后，还会有第二轮、第三轮等数据更新。</li>
-<li>对爬虫进行时段监控，了解各个时段的爬虫效率如何？（这个时间精度不用很高，一般分析都是每 10 分钟、每半小时这样进行分析）</li>
-<li>对特殊字段进行检测（有些字段在网站上只有键，没有值。对于偏僻的键，寻找数据样例花费的时间代价太大，一般选择先让爬虫跑起来，检测到值再进行更新）</li>
-</ol>
-<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>到这里，基本上 mongoDB 同学就可以退场了。MySQL 可以完成我们需要的问题的，建立一张数据表，包含 id、公司名、完成时间、轮次这几个字段，基本上前 3 点需求就可以完成了。</p>
-<p>a. <strong>冗余数据</strong>。多轮数据会导致数据的存量变得很大。仅仅第一轮启动就会添加 40w+的数据，第二轮、第三轮，每一轮的更新必然会有新的公司名称加入进来，到时候数据的膨胀速度会变得很快。<br>b. <strong>纯粹无用数据</strong>。爬虫的时段监控从实际的角度来说，仅在本轮有较高的使用价值。对于第二轮的爬取来说，第一轮的时段监控基本上就是冗余数据了。<br>c. <strong>第 4 点需求的处理思路</strong>。如果我们将特殊字段作为数据表的字段添加进来，那么就会构成一个十分庞大的稀疏矩阵。这个矩阵是可以优化的，就是将大矩阵变成一个字段，不用布尔值存储，而是直接将特殊字段以字符串的形式存放在这个字段中。这是一个用处理时间来换取存储空间的思路，这样又引出一个新的问题，处理时间的代价如何衡量？同时，这个第 4 点需求，仅仅存在于 <strong>特殊字段未被检测到</strong> ，这样一个前提下，当字段检测到，我们有了足够的数据样例，那么这个存储空间就可以释放出来。</p>
-<p>问题 a 可以通过添加字典表来解决，因为最大的冗余就是公司名称的重复，将公司名称作字典表，就可以释放出作为大头的那一部分空间。</p>
-<p>问题 b 没有很好的解决方法，在解决了问题 a 之后，存储的这些时间值，成为了新的最占用空间的数据。放宽精度，将时间也做成一个字典表？</p>
-<p>对于问题 c，我纠结了很久，最后决定放弃 MySQL 的思路，因为数据库维护的代价相对 Redis 太大了。</p>
-<h3 id="Redis-如何解决这个问题"><a href="#Redis-如何解决这个问题" class="headerlink" title="Redis 如何解决这个问题"></a>Redis 如何解决这个问题</h3><p>首先，每一个特殊字段设置为一个 set 字段，每当检测到特殊字段，就将其推入 set 中；当特殊字段的样例获取足够，我们通过样例更新补全了代码，则销毁该 set 字段，释放空间。</p>
-<p>思路很清晰明了，实现也十分地简单，维护代价几乎为 0 。</p>
-<p>那么这就意味着，这样一个小的服务，却需要同时使用 MySQL、Redis 两个数据库？更直观地说，我需要写 MySQL 和 Redis 两套数据库的操作代码？</p>
-<p>能否用 Redis 来实现 MySQL 所负责的那部分需求呢？</p>
-<p>Redis 可以用来存储键值序列这样的二维数据，在我们引入了时间统计之后，这变成了一个三维的数据，有两个解决思路。</p>
-<ol>
-<li>使用 json 来扩充数据维度。</li>
-<li>将字段名作为新的维度。</li>
-</ol>
-<p>使用 json 扩充维度会加大后续数据分析的难度，也会拖慢分析效率，因为要分出一部分性能用来展开多维数据。在锁定了数据最多只有三维的情况下，我选择了第二种思路。</p>
-<p>于是新的问题又出现了，选择什么样的数据结构来存储这些数据？</p>
-<p>在<a href="https://blog.harumonia.moe/2020/02/12/2020-02-12-Redis-note-2/">之前 Redis 的学习笔记中</a>，有通过 bitmap 来实现大量统计数据存储的案例。</p>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>至此，路线逐渐成形：</p>
-<ol>
-<li>额外维护近似静态的公司名字典(只在每轮更新结束之后对该字典进行增改，注：不会删除)；将该字典的 index 作为 bitmap 的键，完成情况作为 bitmap 的值。</li>
-<li>将粗粒度的时间作为字段名，每半小时分离出新字段。</li>
-<li>设置一个额外线程，每半小时将本轮次的运行情况合并到以轮次为名称的 bitmap 字段中。</li>
-</ol>
-<p>空间用量：</p>
-<pre class="line-numbers language-math" data-language="math"><code class="language-math">400000 &#x2F; 1024 &#x2F; 1024 &#x2F; 8MB * 2 ≈ 0.1MB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>当然还会有一些不太容易量化的额外空间消耗(键消耗等)，这些空间消耗也许要比本身数据 0.1MB 要大，不过可以肯定的是，比起 MySQL 要轻量不少。同时，维护的成本很低，调用的性能很高，这一点在实际的使用中也有所体现。</p>
-<p>ps1. 需要说明的是，特殊字段的存储不在这个计算中，而是新开了 set，不将特殊字段的空间加入计算，因为本身特殊字段就是暂存字段，在实际作业中，第一轮进行到 34%左右时，特殊字段就已经全部被检测完毕，并且销毁掉了。</p>
-<p>ps2. 键的生成由代码决定而不是由定时任务决定，所以也避免了空键浪费存储空间的问题。</p>
-<p>结果如图所示。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/spider-stat.PNG" alt="result.png" loading="lazy"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>MySQL-&gt;关系型数据库的泛用性很高，但是非关系型数据库、NoSql 等的存在也并非没有理由，因地制宜地选取数据库，根据数据库的特性去进行压榨，”让专业的人做专业的事”。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>DataBase</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
   </entry>
   <entry>
     <title>wsl2上的jupyter配置</title>
@@ -15160,7 +15160,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>

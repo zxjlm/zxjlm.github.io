@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/my-2022/
 https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/
 https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/
 https://blog.harumonia.moe/2022-10-10-C3-Storage-and-Retrieval/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/
 https://blog.harumonia.moe/new-mac-software-init/
 https://blog.harumonia.moe/docker-image-smaller/
 https://blog.harumonia.moe/doccano-use/
-https://blog.harumonia.moe/design-better-api/
