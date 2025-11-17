@@ -6,7 +6,7 @@
   <link href="https://blog.harumonia.moe/atom.xml" rel="self"/>
   
   <link href="https://blog.harumonia.moe/"/>
-  <updated>2023-02-21T10:00:24.100Z</updated>
+  <updated>2025-11-17T13:43:11.822Z</updated>
   <id>https://blog.harumonia.moe/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kimi 砍价分享-如何用「混淆Prompt」把Kimi砍到自我怀疑</title>
+    <link href="https://blog.harumonia.moe/kimi-discount/"/>
+    <id>https://blog.harumonia.moe/kimi-discount/</id>
+    <published>2025-11-17T21:36:54.000Z</published>
+    <updated>2025-11-17T13:43:11.822Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;TL-DR&quot;&gt;&lt;a href=&quot;#TL-DR&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>C3. Storage and Retrieval (Part 2)</title>
     <link href="https://blog.harumonia.moe/2023-01-18-ddia-s3-p2/"/>
     <id>https://blog.harumonia.moe/2023-01-18-ddia-s3-p2/</id>
     <published>2023-02-15T15:56:39.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
       
@@ -42,7 +63,7 @@
     <link href="https://blog.harumonia.moe/my-2022/"/>
     <id>https://blog.harumonia.moe/my-2022/</id>
     <published>2023-01-31T20:07:31.000Z</published>
-    <updated>2023-02-21T10:00:24.104Z</updated>
+    <updated>2025-11-17T13:43:11.823Z</updated>
     
     
     <summary type="html">&lt;p&gt;不知不觉有长了一岁, 在不想变成庸庸碌碌的大众的情绪下逐渐融入其中, 这大概就是去岁的一个侧面吧.&lt;/p&gt;</summary>
@@ -57,7 +78,7 @@
     <link href="https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/"/>
     <id>https://blog.harumonia.moe/2022-11-15-alfred-workflow-dev/</id>
     <published>2022-11-15T15:12:24.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com/alfred-5-whats-new/&quot;&gt;Alfred&lt;/a&gt; 是一款 &lt;em&gt;MacOS&lt;/em&gt; 上用户基数较大的软件, 笔者主要是用它来取代原生的 &lt;em&gt;聚焦搜索&lt;/em&gt;, 除此之外, 最近开始研究它的 &lt;strong&gt;工作流(workflow)&lt;/strong&gt; 相关的功能.&lt;/p&gt;
@@ -73,7 +94,7 @@
     <link href="https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/"/>
     <id>https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/</id>
     <published>2022-11-15T11:20:44.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本篇的目的是在 &lt;code&gt;Python&lt;/code&gt; 的 Test 框架中添加一个 &lt;strong&gt;mock 函数使用计数器&lt;/strong&gt; 的逻辑. 该计数器的目的是, 在调用第三方api接口时, 计算某一个流程中的调用次数是否合理. 在流程(或调用关系)比较复杂的时候实用性较高.&lt;/p&gt;</summary>
@@ -129,7 +150,7 @@
     <link href="https://blog.harumonia.moe/2022-4-7/"/>
     <id>https://blog.harumonia.moe/2022-4-7/</id>
     <published>2022-07-17T21:17:19.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
       
@@ -152,7 +173,7 @@
     <link href="https://blog.harumonia.moe/2022-06-24-django2swagger/"/>
     <id>https://blog.harumonia.moe/2022-06-24-django2swagger/</id>
     <published>2022-06-24T21:04:18.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要是讲如何从 Django Api 生成出 swagger 描述文件. 它具有如下的特性:&lt;/p&gt;
@@ -186,7 +207,7 @@
     <link href="https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/"/>
     <id>https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/</id>
     <published>2022-05-28T17:53:00.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.821Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇是关于如何在 Pycharm 和 VSCode 中使用 Docker Compose 的. 开篇比较啰嗦, 大抵是踩过的一些坑和问题的解决过程, 实际的配置内容自 &lt;a href=&quot;#%E8%BD%AC&quot;&gt;转&lt;/a&gt; 这一节开始.&lt;/p&gt;</summary>
@@ -209,7 +230,7 @@
     <link href="https://blog.harumonia.moe/new-mac-software-init/"/>
     <id>https://blog.harumonia.moe/new-mac-software-init/</id>
     <published>2022-05-14T15:35:54.000Z</published>
-    <updated>2023-02-21T10:00:24.104Z</updated>
+    <updated>2025-11-17T13:43:11.823Z</updated>
     
     
       
@@ -230,7 +251,7 @@
     <link href="https://blog.harumonia.moe/docker-image-smaller/"/>
     <id>https://blog.harumonia.moe/docker-image-smaller/</id>
     <published>2022-04-15T16:30:50.000Z</published>
-    <updated>2023-02-21T10:00:24.100Z</updated>
+    <updated>2025-11-17T13:43:11.822Z</updated>
     
     
     <summary type="html">&lt;p&gt;本篇主要的内容是如何对 Docker 镜像进行优化.&lt;/p&gt;
@@ -436,27 +457,6 @@
     <category term="实用小工具" scheme="https://blog.harumonia.moe/tags/%E5%AE%9E%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     
     <category term="脚本" scheme="https://blog.harumonia.moe/tags/%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pdfplumber内存泄露问题解决方案(施工中)</title>
-    <link href="https://blog.harumonia.moe/pdfplumber-memory-leak/"/>
-    <id>https://blog.harumonia.moe/pdfplumber-memory-leak/</id>
-    <published>2021-09-14T10:47:01.000Z</published>
-    <updated>2021-09-14T10:47:01.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在使用 &lt;strong&gt;pdfplumber&lt;/strong&gt; 时会出现内存递增的情况, 最终导致内存的爆炸, 这一点在高频率地调用时尤为明显.&lt;br&gt;本篇主要解决的就是 &lt;strong&gt;pdfplumber&lt;/strong&gt; 这个依赖包所导致的内存泄露问题.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="源流清泉" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/"/>
-    
-    <category term="Python" scheme="https://blog.harumonia.moe/categories/%E6%BA%90%E6%B5%81%E6%B8%85%E6%B3%89/Python/"/>
-    
-    
-    <category term="solution" scheme="https://blog.harumonia.moe/tags/solution/"/>
     
   </entry>
   
