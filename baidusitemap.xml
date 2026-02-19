@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.harumonia.moe/my-2022/</loc>
-    <lastmod>2026-02-19</lastmod>
-  </url>
-  <url>
     <loc>https://blog.harumonia.moe/new-mac-software-init/</loc>
     <lastmod>2026-02-19</lastmod>
   </url>
@@ -37,6 +33,10 @@
     <lastmod>2026-02-19</lastmod>
   </url>
   <url>
+    <loc>https://blog.harumonia.moe/my-2022/</loc>
+    <lastmod>2026-02-19</lastmod>
+  </url>
+  <url>
     <loc>https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/</loc>
     <lastmod>2026-02-19</lastmod>
   </url>
@@ -45,11 +45,11 @@
     <lastmod>2026-02-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2022-4-7/</loc>
+    <loc>https://blog.harumonia.moe/2023-01-18-ddia-s3-p2/</loc>
     <lastmod>2026-02-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.harumonia.moe/2023-01-18-ddia-s3-p2/</loc>
+    <loc>https://blog.harumonia.moe/2022-4-7/</loc>
     <lastmod>2026-02-19</lastmod>
   </url>
   <url>
