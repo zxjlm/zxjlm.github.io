@@ -1032,40 +1032,6 @@ int main()
       </categories>
   </entry>
   <entry>
-    <title>蓝桥杯二三事（第一阶段施工完毕）</title>
-    <url>/2018-12-19-sth-of-blue-bridge/</url>
-    <content><![CDATA[<p>这里将会记载做蓝桥杯的题目时的一些感悟以及灵感（还有一些无聊的吐槽啦。</p>
-<span id="more"></span>
-
-<p>想起了当年一个人一条狗刷完南信 oj 程设题目的勤勉岁月</p>
-<h2 id="2018-11-08"><a href="#2018-11-08" class="headerlink" title="2018.11.08"></a>2018.11.08</h2><p>完成了入门四题。<br>斐波那契数列思路：余数相加求余、递归</p>
-<p>平时在机器上运行不感觉，但是这一秒的上限卡的确实有够难受。</p>
-<p>数列排序:STL 是个好东西，可惜我还不太会用。</p>
-<h2 id="2018-11-09"><a href="#2018-11-09" class="headerlink" title="2018.11.09"></a>2018.11.09</h2><p>十六进制转八进制：<br>暂时提供思路，十六进制转二进制，二转八。使用 vector 进行几次进出操作。</p>
-<h2 id="2018-11-10"><a href="#2018-11-10" class="headerlink" title="2018.11.10"></a>2018.11.10</h2><p>重新使用<strong>STL</strong>技术撸完了所有进制转换的代码之后，再看看上学期末写的南信 oj 上的任意进制转换的代码，感觉要简洁了很多。</p>
-<h2 id="2018-11-11"><a href="#2018-11-11" class="headerlink" title="2018.11.11"></a>2018.11.11</h2><p>今天估计是要鸽掉了= =，不得不吐槽一下，没想到我会这么早就在现实中见到 sb 策划。</p>
-<p>就写一下特回文数的思路吧，<strong>折半组合</strong>。<br>改进思路，全字符组合</p>
-<h2 id="2018-11-12"><a href="#2018-11-12" class="headerlink" title="2018.11.12"></a>2018.11.12</h2><p>今天碰到的题目都异常的简单，所以闲的无聊完成了从特回到 01 串的八条题目，并没有什么值得深入研究的东西，就这样。</p>
-<h2 id="2018-11-13"><a href="#2018-11-13" class="headerlink" title="2018.11.13"></a>2018.11.13</h2><p>完成了大阶乘的思路规划<br>然后点开了算法训练……法训练……训练……练……<br>真实自闭(｡ ́︿ ̀｡)</p>
-<h2 id="2018-11-14"><a href="#2018-11-14" class="headerlink" title="2018.11.14"></a>2018.11.14</h2><p>被算法打败的辣个男人，决定开一个新坑。<br>读完了 C++Primer 第九章顺序容器，相关的笔记暂存于印象笔记，等整理完成后会放在<strong>源流清泉</strong>类目下。<br>12:38:21 开始阅读第 10 章 <em>泛型算法</em> 。</p>
-<h2 id="2018-11-17"><a href="#2018-11-17" class="headerlink" title="2018.11.17"></a>2018.11.17</h2><p>断断续续地，终于读完了泛型算法。<br>lambda 这类借口，确实很好用。但是如果深入研究的话，反而会被弄得概念混乱= =。以后再找时间看看相关的源码吧。</p>
-<h2 id="2018-11-19"><a href="#2018-11-19" class="headerlink" title="2018.11.19"></a>2018.11.19</h2><p>读完了 c++primer 的第二部分，很多以前不会的和会的都有了新的理解= =</p>
-<h2 id="2018-12-02"><a href="#2018-12-02" class="headerlink" title="2018.12.02"></a>2018.12.02</h2><p>不知不觉就自个时候了，摸了好久的鱼，今天难得有空，完成了哈夫曼树、回形取数、报时的题目啊= =</p>
-<h2 id="2018-12-07"><a href="#2018-12-07" class="headerlink" title="2018.12.07"></a>2018.12.07</h2><p>前天结束了校选拔赛，8 题做了 7 题，这七题的完成度应该是很高的（算了，我还是先不立什么 flag 了= =）提前了半小时退场，没有坚持到最后是比较可惜的，一来二叉树的一些东西忘记了，空想也是无用，二来实在太困了，甚至直接把晚上的推拿课也给翘了。<br>看下周的结果怎么样吧，刷题也断断续续的，o(︶︿︶)o<br>不过最大的收获应该就是深刻认识到了自己与一些大牛的差距吧，只在自己学校称王称霸真的挺可笑的，葬爱家族式的无聊的狂妄。</p>
-<h2 id="2018-12-10"><a href="#2018-12-10" class="headerlink" title="2018.12.10"></a>2018.12.10</h2><p>成功地苟过了校赛啊</p>
-<h2 id="2018-12-19"><a href="#2018-12-19" class="headerlink" title="2018.12.19"></a>2018.12.19</h2><p>拿到了校赛的证书和奖品，至此，蓝桥杯第一阶段完成，接下来就等明年 3 月的省赛了。<br>校赛的水准怎么说呢，感觉就是很水，题目还是很简单的，虽然不咋知道为什么我的预估分数和实际分数差了一个百位……，继续努力吧，就这样。</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Algorithm \ Data Structure</category>
-      </categories>
-      <tags>
-        <tag>c++</tag>
-        <tag>竞赛</tag>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的第一只爬虫= =</title>
     <url>/2018-12-26-my-first-spider/</url>
     <content><![CDATA[<p>基于参考资料《Python 网络爬虫从入门到实践》改编而成的用于爬取 typecho 框架下 handsome 主题的主标题信息的爬虫代码。</p>
@@ -1117,6 +1083,40 @@ movies <span class="token operator">=</span> get_movies<span class="token punctu
         <tag>Python</tag>
         <tag>爬虫</tag>
         <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>蓝桥杯二三事（第一阶段施工完毕）</title>
+    <url>/2018-12-19-sth-of-blue-bridge/</url>
+    <content><![CDATA[<p>这里将会记载做蓝桥杯的题目时的一些感悟以及灵感（还有一些无聊的吐槽啦。</p>
+<span id="more"></span>
+
+<p>想起了当年一个人一条狗刷完南信 oj 程设题目的勤勉岁月</p>
+<h2 id="2018-11-08"><a href="#2018-11-08" class="headerlink" title="2018.11.08"></a>2018.11.08</h2><p>完成了入门四题。<br>斐波那契数列思路：余数相加求余、递归</p>
+<p>平时在机器上运行不感觉，但是这一秒的上限卡的确实有够难受。</p>
+<p>数列排序:STL 是个好东西，可惜我还不太会用。</p>
+<h2 id="2018-11-09"><a href="#2018-11-09" class="headerlink" title="2018.11.09"></a>2018.11.09</h2><p>十六进制转八进制：<br>暂时提供思路，十六进制转二进制，二转八。使用 vector 进行几次进出操作。</p>
+<h2 id="2018-11-10"><a href="#2018-11-10" class="headerlink" title="2018.11.10"></a>2018.11.10</h2><p>重新使用<strong>STL</strong>技术撸完了所有进制转换的代码之后，再看看上学期末写的南信 oj 上的任意进制转换的代码，感觉要简洁了很多。</p>
+<h2 id="2018-11-11"><a href="#2018-11-11" class="headerlink" title="2018.11.11"></a>2018.11.11</h2><p>今天估计是要鸽掉了= =，不得不吐槽一下，没想到我会这么早就在现实中见到 sb 策划。</p>
+<p>就写一下特回文数的思路吧，<strong>折半组合</strong>。<br>改进思路，全字符组合</p>
+<h2 id="2018-11-12"><a href="#2018-11-12" class="headerlink" title="2018.11.12"></a>2018.11.12</h2><p>今天碰到的题目都异常的简单，所以闲的无聊完成了从特回到 01 串的八条题目，并没有什么值得深入研究的东西，就这样。</p>
+<h2 id="2018-11-13"><a href="#2018-11-13" class="headerlink" title="2018.11.13"></a>2018.11.13</h2><p>完成了大阶乘的思路规划<br>然后点开了算法训练……法训练……训练……练……<br>真实自闭(｡ ́︿ ̀｡)</p>
+<h2 id="2018-11-14"><a href="#2018-11-14" class="headerlink" title="2018.11.14"></a>2018.11.14</h2><p>被算法打败的辣个男人，决定开一个新坑。<br>读完了 C++Primer 第九章顺序容器，相关的笔记暂存于印象笔记，等整理完成后会放在<strong>源流清泉</strong>类目下。<br>12:38:21 开始阅读第 10 章 <em>泛型算法</em> 。</p>
+<h2 id="2018-11-17"><a href="#2018-11-17" class="headerlink" title="2018.11.17"></a>2018.11.17</h2><p>断断续续地，终于读完了泛型算法。<br>lambda 这类借口，确实很好用。但是如果深入研究的话，反而会被弄得概念混乱= =。以后再找时间看看相关的源码吧。</p>
+<h2 id="2018-11-19"><a href="#2018-11-19" class="headerlink" title="2018.11.19"></a>2018.11.19</h2><p>读完了 c++primer 的第二部分，很多以前不会的和会的都有了新的理解= =</p>
+<h2 id="2018-12-02"><a href="#2018-12-02" class="headerlink" title="2018.12.02"></a>2018.12.02</h2><p>不知不觉就自个时候了，摸了好久的鱼，今天难得有空，完成了哈夫曼树、回形取数、报时的题目啊= =</p>
+<h2 id="2018-12-07"><a href="#2018-12-07" class="headerlink" title="2018.12.07"></a>2018.12.07</h2><p>前天结束了校选拔赛，8 题做了 7 题，这七题的完成度应该是很高的（算了，我还是先不立什么 flag 了= =）提前了半小时退场，没有坚持到最后是比较可惜的，一来二叉树的一些东西忘记了，空想也是无用，二来实在太困了，甚至直接把晚上的推拿课也给翘了。<br>看下周的结果怎么样吧，刷题也断断续续的，o(︶︿︶)o<br>不过最大的收获应该就是深刻认识到了自己与一些大牛的差距吧，只在自己学校称王称霸真的挺可笑的，葬爱家族式的无聊的狂妄。</p>
+<h2 id="2018-12-10"><a href="#2018-12-10" class="headerlink" title="2018.12.10"></a>2018.12.10</h2><p>成功地苟过了校赛啊</p>
+<h2 id="2018-12-19"><a href="#2018-12-19" class="headerlink" title="2018.12.19"></a>2018.12.19</h2><p>拿到了校赛的证书和奖品，至此，蓝桥杯第一阶段完成，接下来就等明年 3 月的省赛了。<br>校赛的水准怎么说呢，感觉就是很水，题目还是很简单的，虽然不咋知道为什么我的预估分数和实际分数差了一个百位……，继续努力吧，就这样。</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Algorithm \ Data Structure</category>
+      </categories>
+      <tags>
+        <tag>c++</tag>
+        <tag>竞赛</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -3480,6 +3480,84 @@ c <span class="token operator">=</span> ChainMap<span class="token punctuation">
       </tags>
   </entry>
   <entry>
+    <title>2019医学信息创新工作室暑期个人总结</title>
+    <url>/2019-08-08-2019summer-summary/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>探寻不到便猜测，猜测不到便想象。只有走在路上，才能摆脱局限，摆脱执着，让所有的选择、探寻、猜测、想象都生气勃勃。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>自 7 月 1 日而今,39 天.</p>
+<p>我收获了许多,知识\友情,还有更多不可名状的事物.</p>
+<p>然,天下无不散的筵席,这段时光,终究是走到了尽头.</p>
+<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><p>收获大致可以分为学习和生活两个方面吧.</p>
+<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>学习上的收获,说实话,在进行总结的时候,咋舌不已,原来在不知不觉之间,我已经学到了这么多的东西呢.</p>
+<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><ul>
+<li>layui 后台模板,非常的强大,非常的傻瓜</li>
+<li>echarts 百度的 api,非常亲民的绘图法</li>
+<li>cytoscape 非常强大的前端绘图工具,灵活到诡谲的语法着实让我头疼了很久</li>
+<li>animate 顾名思义这是一个动画 js,利用它可以制作出非常酷炫的动画效果</li>
+<li>…</li>
+</ul>
+<p>前端学到的东西着实太多,太杂,这里对一些细枝末节的东西变不做的赘述了.</p>
+<h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul>
+<li>flask 一个轻量级的网站制作工具</li>
+<li>python 语法 以高级语法为主,不在是停留在纸面,而是在真正的开发环境下去使用,获取良多.</li>
+</ul>
+<blockquote>
+<p>有些技术，只有实际在生产中运用之后，才算是掌握。</p>
+</blockquote>
+<ul>
+<li><p>逻辑</p>
+<p>后端收获最大的当属后端逻辑.这是一个项目的物理灵魂.逻辑结构的好坏直接决定了项目的各个方面的评估.</p>
+<ul>
+<li><p>项目结构逻辑<br>项目之初,采用的是 MVC 架构,后来听从杨老师的建议,在网上查阅了很多的资料,更换为了 MVVM 架构.</p>
+</li>
+<li><p>项目业务逻辑<br>项目业务逻辑又可以细分为前端业务逻辑和后端业务逻辑</p>
+<ul>
+<li>前端:遵从用户优先原则,界面设计符合 lazy &amp; stupid 原则</li>
+<li>后端:后端业务逻辑交叉于后端项目逻辑,同时,在考虑后端业务逻辑是,要以理解为核心,而不是一味地去搬前人旧例,要有自己的思考,联合自己的项目的实际情况.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h4><p>不知道这算不算是编外的知识,不过在项目的部署过程中,或多或少地学到了一些.</p>
+<ul>
+<li>linux:我并没有系统地学习过 linux 的相关知识,一直都是被迫式学习,即,要用到哪些,就去学哪些.</li>
+<li>docker:docker 仍旧是一直半截,不过其展露的片麟已经足够让我震撼.</li>
+<li>nginx:nginx 的理论知识学习了很多,等待后期的更多的实践操作.</li>
+</ul>
+<h4 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h4><ul>
+<li>数据分析</li>
+<li>sklearn</li>
+<li>TensorFlow</li>
+<li>etc.</li>
+</ul>
+<h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h4 id="一次宝贵的回忆"><a href="#一次宝贵的回忆" class="headerlink" title="一次宝贵的回忆"></a>一次宝贵的回忆</h4><blockquote>
+<p>如果一个人想要做一件真正有意义的事情，那么往往只能一个人独自去做。 –革命之路</p>
+</blockquote>
+<p>聚餐\工作\学习,我习惯去一个人做一些事情,但也很享受这种很多人一起做一件事情的氛围.</p>
+<h4 id="认识了一群不错的小伙伴"><a href="#认识了一群不错的小伙伴" class="headerlink" title="认识了一群不错的小伙伴"></a>认识了一群不错的小伙伴</h4><p>一开始,做这个项目的时候,footer 上只有一个名字,harumonia<br>后来,陆陆续续的加进来很多的人<br>后端组的冬瓜\flame\tsat<br>前端组的 diklios\九月\willin&amp;coco\猎人<br>大家的贡献有多有少,但对于每一个帮助过这个项目的人,我都要说一声,谢谢.</p>
+<h4 id="对自己有了一个更深刻的认识"><a href="#对自己有了一个更深刻的认识" class="headerlink" title="对自己有了一个更深刻的认识"></a>对自己有了一个更深刻的认识</h4><p>我坚信,人是丑恶的,包括我.<br>不过这次的认识并不以罪己为主.<br>我认识到了自己的才能,我在团队之中可以有一个怎样的定位,这些都是在以往没有多少概念的东西,不过这次,拨云见日.<br>我也认识到了自己的器量,我可以做什么,我做不到什么,我将这些记录在本子上,多年以后再来翻阅,不知道会哭,还是会笑.</p>
+<h4 id="看了两本书"><a href="#看了两本书" class="headerlink" title="看了两本书"></a>看了两本书</h4><ul>
+<li>娜塔莎之旅</li>
+<li>文化苦旅</li>
+</ul>
+<h2 id="遗憾"><a href="#遗憾" class="headerlink" title="遗憾"></a>遗憾</h2><p>也有很多的遗憾啊.</p>
+<ul>
+<li><p>我希望自己去做一个分布式的服务,不过最后证明,没那个本事呢.</p>
+</li>
+<li><p>我并不是一个很成功的项目经理,很多的事情,临阵磨枪,准备工作匮乏,过度以自己为中心,太多的缺点在这次的工作中暴露.</p>
+</li>
+<li><p>没能够去 cj,爽约了.</p>
+</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总而言之吧,这次的暑期实践的基调是非常欢快的,像是一曲 canon,周回婉转,连绵不断,平淡之中却又充满了惊喜.</p>
+<h1 id="结句"><a href="#结句" class="headerlink" title="结句"></a>结句</h1><p>“山河间的实际步履，使一切伟业变成了寻常风景，因此也使我们变得轻松。”</p>
+<p>摘录来自: 余秋雨. “文化苦旅（新版）。” Apple Books.</p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>docker (1)</title>
     <url>/2019-08-07-docker-1/</url>
     <content><![CDATA[<p>参考 《第一本 docker 书》《docker 深入浅出》</p>
@@ -3582,7 +3660,7 @@ Successfully built 22d47c8cb6e5
 </blockquote>
 <p>上面命令中最后的.告诉 Docker 到本地目录中去找 Dockerfile 文件。也可以指定一个 Git 仓库的源地址来指定 Dockerfile 的位置</p>
 <blockquote>
-<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>:jamtur01/docker-static_web</p>
+<p>sudo docker build -t=”jamtur01/static_web:v1” \　<a href="mailto:&#103;&#x69;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;</a>:jamtur01/docker-static_web</p>
 </blockquote>
 <h3 id="dockerfile-构建缓存"><a href="#dockerfile-构建缓存" class="headerlink" title="dockerfile 构建缓存"></a>dockerfile 构建缓存</h3><blockquote>
 <p>sudo docker build –no-cache -t=”jamtur01/static_web” .</p>
@@ -3744,84 +3822,6 @@ docker <span class="token function">rm</span> <span class="token variable"><span
       <categories>
         <category>源流清泉</category>
         <category>Docker</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>2019医学信息创新工作室暑期个人总结</title>
-    <url>/2019-08-08-2019summer-summary/</url>
-    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>探寻不到便猜测，猜测不到便想象。只有走在路上，才能摆脱局限，摆脱执着，让所有的选择、探寻、猜测、想象都生气勃勃。</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>自 7 月 1 日而今,39 天.</p>
-<p>我收获了许多,知识\友情,还有更多不可名状的事物.</p>
-<p>然,天下无不散的筵席,这段时光,终究是走到了尽头.</p>
-<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><p>收获大致可以分为学习和生活两个方面吧.</p>
-<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>学习上的收获,说实话,在进行总结的时候,咋舌不已,原来在不知不觉之间,我已经学到了这么多的东西呢.</p>
-<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><ul>
-<li>layui 后台模板,非常的强大,非常的傻瓜</li>
-<li>echarts 百度的 api,非常亲民的绘图法</li>
-<li>cytoscape 非常强大的前端绘图工具,灵活到诡谲的语法着实让我头疼了很久</li>
-<li>animate 顾名思义这是一个动画 js,利用它可以制作出非常酷炫的动画效果</li>
-<li>…</li>
-</ul>
-<p>前端学到的东西着实太多,太杂,这里对一些细枝末节的东西变不做的赘述了.</p>
-<h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul>
-<li>flask 一个轻量级的网站制作工具</li>
-<li>python 语法 以高级语法为主,不在是停留在纸面,而是在真正的开发环境下去使用,获取良多.</li>
-</ul>
-<blockquote>
-<p>有些技术，只有实际在生产中运用之后，才算是掌握。</p>
-</blockquote>
-<ul>
-<li><p>逻辑</p>
-<p>后端收获最大的当属后端逻辑.这是一个项目的物理灵魂.逻辑结构的好坏直接决定了项目的各个方面的评估.</p>
-<ul>
-<li><p>项目结构逻辑<br>项目之初,采用的是 MVC 架构,后来听从杨老师的建议,在网上查阅了很多的资料,更换为了 MVVM 架构.</p>
-</li>
-<li><p>项目业务逻辑<br>项目业务逻辑又可以细分为前端业务逻辑和后端业务逻辑</p>
-<ul>
-<li>前端:遵从用户优先原则,界面设计符合 lazy &amp; stupid 原则</li>
-<li>后端:后端业务逻辑交叉于后端项目逻辑,同时,在考虑后端业务逻辑是,要以理解为核心,而不是一味地去搬前人旧例,要有自己的思考,联合自己的项目的实际情况.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h4><p>不知道这算不算是编外的知识,不过在项目的部署过程中,或多或少地学到了一些.</p>
-<ul>
-<li>linux:我并没有系统地学习过 linux 的相关知识,一直都是被迫式学习,即,要用到哪些,就去学哪些.</li>
-<li>docker:docker 仍旧是一直半截,不过其展露的片麟已经足够让我震撼.</li>
-<li>nginx:nginx 的理论知识学习了很多,等待后期的更多的实践操作.</li>
-</ul>
-<h4 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h4><ul>
-<li>数据分析</li>
-<li>sklearn</li>
-<li>TensorFlow</li>
-<li>etc.</li>
-</ul>
-<h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><h4 id="一次宝贵的回忆"><a href="#一次宝贵的回忆" class="headerlink" title="一次宝贵的回忆"></a>一次宝贵的回忆</h4><blockquote>
-<p>如果一个人想要做一件真正有意义的事情，那么往往只能一个人独自去做。 –革命之路</p>
-</blockquote>
-<p>聚餐\工作\学习,我习惯去一个人做一些事情,但也很享受这种很多人一起做一件事情的氛围.</p>
-<h4 id="认识了一群不错的小伙伴"><a href="#认识了一群不错的小伙伴" class="headerlink" title="认识了一群不错的小伙伴"></a>认识了一群不错的小伙伴</h4><p>一开始,做这个项目的时候,footer 上只有一个名字,harumonia<br>后来,陆陆续续的加进来很多的人<br>后端组的冬瓜\flame\tsat<br>前端组的 diklios\九月\willin&amp;coco\猎人<br>大家的贡献有多有少,但对于每一个帮助过这个项目的人,我都要说一声,谢谢.</p>
-<h4 id="对自己有了一个更深刻的认识"><a href="#对自己有了一个更深刻的认识" class="headerlink" title="对自己有了一个更深刻的认识"></a>对自己有了一个更深刻的认识</h4><p>我坚信,人是丑恶的,包括我.<br>不过这次的认识并不以罪己为主.<br>我认识到了自己的才能,我在团队之中可以有一个怎样的定位,这些都是在以往没有多少概念的东西,不过这次,拨云见日.<br>我也认识到了自己的器量,我可以做什么,我做不到什么,我将这些记录在本子上,多年以后再来翻阅,不知道会哭,还是会笑.</p>
-<h4 id="看了两本书"><a href="#看了两本书" class="headerlink" title="看了两本书"></a>看了两本书</h4><ul>
-<li>娜塔莎之旅</li>
-<li>文化苦旅</li>
-</ul>
-<h2 id="遗憾"><a href="#遗憾" class="headerlink" title="遗憾"></a>遗憾</h2><p>也有很多的遗憾啊.</p>
-<ul>
-<li><p>我希望自己去做一个分布式的服务,不过最后证明,没那个本事呢.</p>
-</li>
-<li><p>我并不是一个很成功的项目经理,很多的事情,临阵磨枪,准备工作匮乏,过度以自己为中心,太多的缺点在这次的工作中暴露.</p>
-</li>
-<li><p>没能够去 cj,爽约了.</p>
-</li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总而言之吧,这次的暑期实践的基调是非常欢快的,像是一曲 canon,周回婉转,连绵不断,平淡之中却又充满了惊喜.</p>
-<h1 id="结句"><a href="#结句" class="headerlink" title="结句"></a>结句</h1><p>“山河间的实际步履，使一切伟业变成了寻常风景，因此也使我们变得轻松。”</p>
-<p>摘录来自: 余秋雨. “文化苦旅（新版）。” Apple Books.</p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
       </categories>
   </entry>
   <entry>
@@ -4610,191 +4610,6 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
       </categories>
   </entry>
   <entry>
-    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
-    <url>/2019-09-01-Titanic-solution-via-RF/</url>
-    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
-<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
-<span id="more"></span>
-
-<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
-<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
-<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
-<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
-Survived -  Survived (1) or died (0)
-Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
-Name -  Passenger&#39;s name
-Sex - Passenger&#39;s sex
-Age -  Passenger&#39;s age
-SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
-Parch -  Number of parents&#x2F;children aboard the Titanic
-Ticket -  Ticket number
-FareFare -  paid for ticket
-Cabin - Cabin number
-Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
-<p>这里先列一下最终的目标:</p>
-<ul>
-<li>数值化,随机森林不支持非数值的数据</li>
-<li>消除残缺值</li>
-</ul>
-<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 12 columns):
-PassengerId    891 non-null int64
-Survived       891 non-null int64
-Pclass         891 non-null int64
-Name           891 non-null object
-Sex            891 non-null object
-Age            714 non-null float64
-SibSp          891 non-null int64
-Parch          891 non-null int64
-Ticket         891 non-null object
-Fare           891 non-null float64
-Cabin          204 non-null object
-Embarked       889 non-null object
-dtypes: float64(2), int64(5), object(5)
-memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
-<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
-df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
-<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
-<ul>
-<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
-<li>填补</li>
-</ul>
-<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
-<p>这里我选择去填补(修正残缺值).</p>
-<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
-Age         0.198653
-Embarked    0.002245
-Fare        0.000000
-Parch       0.000000
-SibSp       0.000000
-Sex         0.000000
-Pclass      0.000000
-Survived    0.000000
-dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>我准备先从残缺值比低的开始修正(又是废话….</p>
-<p>目前我所掌握的两种方法:</p>
-<ul>
-<li>人工分析</li>
-<li>随机森林填补</li>
-</ul>
-<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
-<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
-<table>
-<thead>
-<tr>
-<th>PassengerId</th>
-<th>Survived</th>
-<th>Pclass</th>
-<th>Sex</th>
-<th>Age</th>
-<th>SibSp</th>
-<th>Parch</th>
-<th>Fare</th>
-<th>Cabin</th>
-<th>Embarked</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>62</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>38.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>830</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>62.0</td>
-<td>0</td>
-<td>0</td>
-<td>80.0</td>
-<td>B28</td>
-<td>NaN</td>
-</tr>
-</tbody></table>
-<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
-<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
-<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
-G     14.205000
-F     18.079367
-N     19.132707
-T     35.500000
-A     41.244314
-D     53.007339
-E     54.564634
-C    107.926598
-B    122.383078
-Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
-    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
-
-df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
-<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
-<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
-<table>
-<thead>
-<tr>
-<th>训练均分</th>
-<th>测试均分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0.9909744528907043</td>
-<td>0.7901017214397495</td>
-</tr>
-</tbody></table>
-<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
-param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>优化之后,test 分数变为 0.8207282913165266</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Data Mining</category>
-      </categories>
-      <tags>
-        <tag>随机森林</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Be a better pythonista(3)</title>
     <url>/2019-08-28-Be_a_better_pythonista-3/</url>
     <content><![CDATA[<p>本节主要是函数和类的一些技巧操作.</p>
@@ -5104,6 +4919,191 @@ Got<span class="token punctuation">:</span> helloworld
       </categories>
       <tags>
         <tag>pythonista</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用随机森林解决&quot;泰坦尼克幸存&quot;问题(1)——小试牛刀</title>
+    <url>/2019-09-01-Titanic-solution-via-RF/</url>
+    <content><![CDATA[<p>The sinking of the RMS Titanic is one of the most infamous shipwrecks in history. On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. This sensational tragedy shocked the international community and led to better safety regulations for ships.</p>
+<p>One of the reasons that the shipwreck led to such loss of life was that there were not enough lifeboats for the passengers and crew. Although there was some element of luck involved in surviving the sinking, some groups of people were more likely to survive than others, such as women, children, and the upper-class.</p>
+<span id="more"></span>
+
+<h2 id="渣翻译"><a href="#渣翻译" class="headerlink" title="渣翻译"></a>渣翻译</h2><p>RMS 泰坦尼克号沉没是历史上最惨重的海难之一。 1912 年 4 月 15 日，在它的第一次航行中，泰坦尼克号与冰山相撞后沉没，2224 名乘客和机组人员中有 1502 人死亡。这场耸人听闻的悲剧震惊了国际社会，同时,也促进了更好的船只安全规定的制定。</p>
+<p>造成海难失事的原因之一是乘客和机组人员没有足够的救生艇。尽管幸存有一些运气因素，但有些人比其他人更容易生存，例如妇女，儿童和上流社会。</p>
+<h1 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h1><p>先进行数据集的处理,然后进行分类学习.</p>
+<h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>泰坦尼克问题是 <em>类实际问题</em> ,与 sklearn 中的 dataset 的数据不同,存在缺失值等干扰项,所以第一步是要对数据集进行预处理.</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>存在以下的 12 个属性,其中,Survived 是 <strong>结果</strong>.</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">PassengerId -  Unique ID of the passenger
+Survived -  Survived (1) or died (0)
+Pclass -  Passenger&#39;s class (1st, 2nd, or 3rd)
+Name -  Passenger&#39;s name
+Sex - Passenger&#39;s sex
+Age -  Passenger&#39;s age
+SibSp -  Number of siblings&#x2F;spouses aboard the Titanic
+Parch -  Number of parents&#x2F;children aboard the Titanic
+Ticket -  Ticket number
+FareFare -  paid for ticket
+Cabin - Cabin number
+Embarked -  Where the passenger got on the ship (C - Cherbourg, S - Southampton, Q &#x3D; Queenstown)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="处理思路"><a href="#处理思路" class="headerlink" title="处理思路"></a>处理思路</h2><p>在了解了属性的具体含义之后就可以进行数据集的处理了.</p>
+<p>这里先列一下最终的目标:</p>
+<ul>
+<li>数值化,随机森林不支持非数值的数据</li>
+<li>消除残缺值</li>
+</ul>
+<h3 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h3><p>输出 <em>Dataframe.info()</em></p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 12 columns):
+PassengerId    891 non-null int64
+Survived       891 non-null int64
+Pclass         891 non-null int64
+Name           891 non-null object
+Sex            891 non-null object
+Age            714 non-null float64
+SibSp          891 non-null int64
+Parch          891 non-null int64
+Ticket         891 non-null object
+Fare           891 non-null float64
+Cabin          204 non-null object
+Embarked       889 non-null object
+dtypes: float64(2), int64(5), object(5)
+memory usage: 83.6+ KB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看出,要处理的是 <em>name</em> \ <em>Sex</em> \ <em>Ticket</em> \ <em>Cabin</em> \ <em>Embarked</em> 这几项.</p>
+<p>根据常识, <em>name</em> 对是否幸存并没有决定性影响</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后,对 sex\Embarked 这类有限数量的数据进行数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'male'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Sex'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'female'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'S'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+df1<span class="token punctuation">[</span><span class="token string">'Embarked'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'Q'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注:由于 <em>Embarked</em> 存在残缺值,所以数据类型为 float</p>
+<p>这里对 <em>Ticket</em> 的处理有点犹豫,暂缺同 <em>name</em> 进行处理</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">df1<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Ticket'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>最后,到最关键的 cabin 处理</strong><br>有两种方法</p>
+<ul>
+<li>直接删除,因为 cabin 的缺失值太多(这在后面的缺失值处理中会介绍,缺失率为 77%)</li>
+<li>填补</li>
+</ul>
+<p>直接删除的好处在于方便(废话<br>填补是一项巨大的工程,并且依据方法的不同,出错的概率很高.</p>
+<p>这里我选择去填补(修正残缺值).</p>
+<h1 id="修正残缺值"><a href="#修正残缺值" class="headerlink" title="修正残缺值"></a>修正残缺值</h1><p>查看各属性的残缺值比例,并按照降序排列</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin       0.771044
+Age         0.198653
+Embarked    0.002245
+Fare        0.000000
+Parch       0.000000
+SibSp       0.000000
+Sex         0.000000
+Pclass      0.000000
+Survived    0.000000
+dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我准备先从残缺值比低的开始修正(又是废话….</p>
+<p>目前我所掌握的两种方法:</p>
+<ul>
+<li>人工分析</li>
+<li>随机森林填补</li>
+</ul>
+<h2 id="人工分析"><a href="#人工分析" class="headerlink" title="人工分析"></a>人工分析</h2><p>人工分析的好处在于准确度相对较高.<br>缺点当然就是费时.</p>
+<h3 id="修正-Embarked"><a href="#修正-Embarked" class="headerlink" title="修正 Embarked"></a>修正 Embarked</h3><p>先列出残缺值的具体行,得到数据</p>
+<table>
+<thead>
+<tr>
+<th>PassengerId</th>
+<th>Survived</th>
+<th>Pclass</th>
+<th>Sex</th>
+<th>Age</th>
+<th>SibSp</th>
+<th>Parch</th>
+<th>Fare</th>
+<th>Cabin</th>
+<th>Embarked</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>62</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>38.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>830</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>62.0</td>
+<td>0</td>
+<td>0</td>
+<td>80.0</td>
+<td>B28</td>
+<td>NaN</td>
+</tr>
+</tbody></table>
+<p>再从数据表中摘出可能会影响该值的因素 – Pclass(阶层)\Fare(票价)</p>
+<p>然后绘制箱线图,发现极大概率落在 C 域内,所以两者赋值为<br><a href="http://www.harumonia.top/image/lSbU"><img src="http://www.harumonia.top/images/2019/08/31/image.png" alt="image.png" loading="lazy"></a></p>
+<p>聚类得出各个水平的 Cabin 的平均值,并划分区间</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">Cabin
+G     14.205000
+F     18.079367
+N     19.132707
+T     35.500000
+A     41.244314
+D     53.007339
+E     54.564634
+C    107.926598
+B    122.383078
+Name: Fare, dtype: float64<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后使用自定义的换算函数,将 Fare 依据其所在的区间换算为对应的大写字母,然后数值化.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cabin_to_num</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#&#123;'G': 0, 'C': 1, 'E': 2, 'F': 3, 'T': 4, 'D': 5, 'A': 6, 'B': 7&#125;</span>
+    dic <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">*</span><span class="token builtin">zip</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">,</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>Cabin_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> dic<span class="token punctuation">[</span>a<span class="token punctuation">]</span>
+
+df_manutal_1<span class="token punctuation">.</span>Cabin <span class="token operator">=</span> df_manutal_1<span class="token punctuation">.</span>Cabin<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>cabin_to_num<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后剩下的空值是年龄,但是凭借主观经验判断,年龄对是否生存具有十分重要的影响,不应该使用一些粗糙的方法(如上)去填充(人工分析的严谨性),所以暂时先删除.</p>
+<p>到这里,人工分析的数据集的处理就可以告一段落了.然后进行模型的建立和评估.</p>
+<p>这里由于 <em>结果不太好</em> ,就不单独列一节了.<br>使用十折交叉验证法,最后得出</p>
+<table>
+<thead>
+<tr>
+<th>训练均分</th>
+<th>测试均分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.9909744528907043</td>
+<td>0.7901017214397495</td>
+</tr>
+</tbody></table>
+<p>(没错,过拟合了,树模型是非常容易过拟合的,出现这种情况之后就要调参,来优化模型</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 调参选择(渐进优化)</span>
+param <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'max_depth'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'min_samples_leaf'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"min_samples_split"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'max_features'</span><span class="token punctuation">:</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'criterion'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'gini'</span><span class="token punctuation">,</span><span class="token string">'entropy'</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>优化之后,test 分数变为 0.8207282913165266</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Data Mining</category>
+      </categories>
+      <tags>
+        <tag>随机森林</tag>
       </tags>
   </entry>
   <entry>
@@ -5934,64 +5934,6 @@ public:
       </tags>
   </entry>
   <entry>
-    <title>No.64 最小路径和:动态规划</title>
-    <url>/2019-10-10-minimum-path-sum/</url>
-    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
-<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
-<span id="more"></span>
-
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
-
-示例:
-
-输入:
-
-    [
-        [1,3,1],
-        [1,5,1],
-        [4,2,1]
-    ]
-
-输出: 7
-
-解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
-public:
-    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
-        int n &#x3D; grid.size();
-        int m &#x3D; grid[0].size();
-        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
-            return 0;
-        for(int i &#x3D; 1; i &lt; n; i++)
-            grid[i][0] +&#x3D; grid[i-1][0];
-        for(int i &#x3D; 1; i &lt; m; i++)
-            grid[0][i] +&#x3D; grid[0][i-1];
-        for(int i &#x3D; 1;i &lt; n; i++)
-            for(int j &#x3D; 1; j &lt; m; j++)
-                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
-        return grid[n-1][m-1];
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>LeetCode</tag>
-        <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>No.65 有效数字</title>
     <url>/2019-10-12-valid-number/</url>
     <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/valid-number/">No.65 有效数字</a></p>
@@ -6071,6 +6013,64 @@ public:
       <tags>
         <tag>算法</tag>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>No.64 最小路径和:动态规划</title>
+    <url>/2019-10-10-minimum-path-sum/</url>
+    <content><![CDATA[<p><a href="https://leetcode-cn.com/problems/minimum-path-sum/">No.64 最小路径和</a></p>
+<p>给定一个包含非负整数的 mxn 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。</p>
+<span id="more"></span>
+
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">说明：每次只能向下或者向右移动一步。
+
+示例:
+
+输入:
+
+    [
+        [1,3,1],
+        [1,5,1],
+        [4,2,1]
+    ]
+
+输出: 7
+
+解释: 因为路径 1→3→1→1→1 的总和最小。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>偶然做到这一篇，发现这题极适合动态规划的入门。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2569288342.png?Expires=1602310753&" alt="res" loading="lazy"></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/3301511821.jpg?Expires=1602310771&" alt="p1" loading="lazy"></p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/455756629.jpg?Expires=1602310780&" alt="p2" loading="lazy"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
+public:
+    int minPathSum(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;
+        int n &#x3D; grid.size();
+        int m &#x3D; grid[0].size();
+        if(n &#x3D;&#x3D; 0 || m &#x3D;&#x3D; 0)
+            return 0;
+        for(int i &#x3D; 1; i &lt; n; i++)
+            grid[i][0] +&#x3D; grid[i-1][0];
+        for(int i &#x3D; 1; i &lt; m; i++)
+            grid[0][i] +&#x3D; grid[0][i-1];
+        for(int i &#x3D; 1;i &lt; n; i++)
+            for(int j &#x3D; 1; j &lt; m; j++)
+                grid[i][j] +&#x3D; min(grid[i-1][j] , grid[i][j-1]);
+        return grid[n-1][m-1];
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>慢慢来吧，饭后甜点。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/847507095.png?Expires=1602310797&" alt="p3" loading="lazy"></p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>LeetCode</tag>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -7132,6 +7132,216 @@ public:
       </categories>
   </entry>
   <entry>
+    <title>Java课设中的问题以及解决方案(二)</title>
+    <url>/2019-11-21-Course-Design-of-Java-QS-2/</url>
+    <content><![CDATA[<h2 id="windowbuilder-安装和使用"><a href="#windowbuilder-安装和使用" class="headerlink" title="windowbuilder 安装和使用"></a>windowbuilder 安装和使用</h2><p>类比于在 VS stdio 上开发 c#,eclipse 有对应的 GUI 开发工具,也就是 windowbuilder.<br>当然同类型的工具也有 NetBeans 等.编程虽然有趣,但是本身是一件很麻烦的事情,所以我就只选择了普遍评价较高的 windowbuilder 作尝试.<br><a href="https://download.eclipse.org/windowbuilder/latest/">windowbuilder 主页</a></p>
+<p>S1:安装插件(install new software)(这里注意活用 help 功能)<br>S2:将 “<a href="https://download.eclipse.org/windowbuilder/latest/&quot;">https://download.eclipse.org/windowbuilder/latest/&quot;</a> 复制到 work with 一栏中<br>S3:一路点击 next 全选安装即可</p>
+<p>安装完毕会提示重启,重启完成,在 new-&gt;other-&gt;windowbuilder-&gt;swing Designer-&gt;Application Window 中创建项目.</p>
+<p>可以在代码文件的左下角发现,多了一个 Desgin 选项,至此,windowbuilder 安装完成.</p>
+<h2 id="多线程进阶"><a href="#多线程进阶" class="headerlink" title="多线程进阶"></a>多线程进阶</h2><p>在<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a>中有提到的一个问题.<br>当时虽然成功创建了进度条,不过发现主窗体的线程钳制了分线程的运行(也就是说,主窗体线程运行完毕之前,分线程不会共享主线程的资源)</p>
+<p>纠结了半个晚上,于是今天突发奇想,将分线程对主线程资源的操作转移到备胎线程之中,这样本质上大家都是分线程,也就不会出现次序问题了.</p>
+<p>多说无益,上代码</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">button.addActionListener(new ActionListener() &#123;
+    public void actionPerformed(ActionEvent e) &#123;
+        new labelControl1(matrixLoder).start();
+        new labelControl2(contentLoder).start();
+        new labelControl3(probilityLoder).start();
+        resultOf01Button.setEnabled(false);
+        resultOfcontentButton.setEnabled(false);
+        resultOfprobilityButton.setEnabled(false);
+        chartsOfcontentButton.setEnabled(false);
+        chartsOfProbilityButton.setEnabled(false);
+        visable_init(true);
+
+        new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
+    &#125;
+            &#x2F;&#x2F;将post命令放在新的线程中并发执行
+        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif" loading="lazy"></p>
+<h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
+<h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
+<ul>
+<li>JTable()</li>
+<li>JTable(int a,int b) //a 行 b 列</li>
+<li>JTable(Object a[][],Object b[]) //a 存放数据表,b 存放列名</li>
+</ul>
+<p>一般我采用的是 new jtable(Object a[][],Object b[])这样的初始化方式.</p>
+<h4 id="json2jtable"><a href="#json2jtable" class="headerlink" title="json2jtable"></a>json2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">JSONObject js &#x3D; new JSONObject();
+        js &#x3D; JSON.parseObject(s1);
+
+
+        HashSet&lt;String&gt; row &#x3D;new HashSet&lt;String&gt;();
+        List&lt;String&gt; cols &#x3D; new ArrayList&lt;&gt;(js.keySet());
+        List&lt;String&gt; rows &#x3D; new ArrayList&lt;&gt;(js.getJSONObject(cols.get(0)).keySet());
+
+
+
+        a &#x3D; new Object[rows.size()][cols.size()];
+
+        for (int i &#x3D; 0; i &lt; cols.size(); i++) &#123;
+    JSONObject eachcol &#x3D; js.getJSONObject(cols.get(i));
+    for (int j &#x3D; 0; j &lt; rows.size(); j++) &#123;
+&#x2F;&#x2F;        System.out.println(eachcol.getString(rows.get(j)));
+        a[j][i] &#x3D; eachcol.getString(rows.get(j));
+    &#125;
+        &#125;
+
+        tb &#x3D; new JTable(a,cols.toArray());
+
+        Container con &#x3D; getContentPane();
+
+        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
+
+        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
+        setTitle(name);
+        setSize(10000,10000);
+        setVisible(true);
+        validate();
+        setDefaultCloseOperation(HIDE_ON_CLOSE);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="csv2jtable"><a href="#csv2jtable" class="headerlink" title="csv2jtable"></a>csv2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Object[] columnnames;
+        CSVReader CSVFileReader &#x3D; null;
+        try &#123;
+    CSVFileReader &#x3D; new CSVReader(new FileReader(filepath));
+        &#125; catch (FileNotFoundException e) &#123;
+    &#x2F;&#x2F; TODO Auto-generated catch block
+    e.printStackTrace();
+        &#125;
+        List myEntries &#x3D; null;
+        try &#123;
+    myEntries &#x3D; CSVFileReader.readAll();
+        &#125; catch (IOException | CsvException e) &#123;
+    &#x2F;&#x2F; TODO Auto-generated catch block
+    e.printStackTrace();
+        &#125;
+        columnnames &#x3D; (String[]) myEntries.get(0);
+        DefaultTableModel tableModel &#x3D; new DefaultTableModel(columnnames, myEntries.size()-1);
+        int rowcount &#x3D; tableModel.getRowCount();
+        for (int x &#x3D; 0; x&lt;rowcount+1; x++)
+        &#123;
+            int columnnumber &#x3D; 0;
+            &#x2F;&#x2F; if x &#x3D; 0 this is the first row...skip it... data used for columnnames
+            if (x&gt;0)
+            &#123;
+                for (String thiscellvalue : (String[])myEntries.get(x))
+                &#123;
+&#x2F;&#x2F;                    System.out.println(thiscellvalue);
+                    tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
+                    columnnumber++;
+                &#125;
+            &#125;
+        &#125;
+        System.out.println(tableModel);
+        return tableModel;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="jtextarea2jtable"><a href="#jtextarea2jtable" class="headerlink" title="jtextarea2jtable"></a>jtextarea2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
+            Document doc &#x3D; e.getDocument();
+            String str &#x3D; null;
+            try &#123;
+        str &#x3D; doc.getText(0, doc.getLength());
+            &#125; catch (BadLocationException e1) &#123;
+        &#x2F;&#x2F; TODO Auto-generated catch block
+        e1.printStackTrace();
+            &#125;
+            arr &#x3D; str.split(&quot;\\s+&quot;);
+
+            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
+        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
+        Object a[][];
+
+        a &#x3D; new Object[arr.length&#x2F;2][2];
+
+        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
+            a[j&#x2F;2][j%2] &#x3D; arr[j];
+        &#125;
+
+        table_1 &#x3D; new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            &#125;
+
+        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="一些属性"><a href="#一些属性" class="headerlink" title="一些属性"></a>一些属性</h3><p>Q:如何添加滚动条?<br>A:见<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a></p>
+<p>Q:表格想变为不可选?<br>A: JTable.setEnabled(false);</p>
+<p>Q:表格变为只读?<br>A: 重载 JTable.isCellEditable(row, column), 令其始终返回 false.</p>
+<h2 id="监听设置"><a href="#监听设置" class="headerlink" title="监听设置"></a>监听设置</h2><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>监听 textarea 中输入的值,并在下方生成对应的数据表</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">textPane.getDocument().addDocumentListener(new DocumentListener() &#123;
+
+    @Override
+    public void removeUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+
+    &#125;
+
+    @Override
+    public void insertUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+        if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
+            Document doc &#x3D; e.getDocument();
+            String str &#x3D; null;
+            try &#123;
+        str &#x3D; doc.getText(0, doc.getLength());
+            &#125; catch (BadLocationException e1) &#123;
+        &#x2F;&#x2F; TODO Auto-generated catch block
+        e1.printStackTrace();
+            &#125;
+            arr &#x3D; str.split(&quot;\\s+&quot;);
+
+            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
+        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
+        Object a[][];
+
+        a &#x3D; new Object[arr.length&#x2F;2][2];
+
+        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
+            a[j&#x2F;2][j%2] &#x3D; arr[j];
+        &#125;
+
+        table_1 &#x3D; new JTable(a,columnnames);
+        table_1.setBounds(86, 285, 678, 251);
+        table_1.setEnabled(false);
+        jContentPane.add(table_1);
+        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+            &#125;
+
+        &#125;
+    &#125;
+
+    @Override
+    public void changedUpdate(DocumentEvent e) &#123;
+        &#x2F;&#x2F; TODO Auto-generated method stub
+
+    &#125;
+        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><ul>
+<li>removeUpdate 当删除发生时</li>
+<li>insertUpdate 当插入发生时</li>
+<li>changedUpdate 当发生变化时</li>
+</ul>
+<p>处于性能考虑,一般选择只使用 insert</p>
+<p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
+<p>处于性能考虑,我选择再上传时统一进行正则化.</p>
+<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif" loading="lazy"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
+<p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
+</blockquote>
+<p>– 茨威格&lt;人类群星闪耀时&gt;</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java课程设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java课设中的问题以及解决方案(一)</title>
     <url>/2019-11-17-Course-Design-of-Java-QS-1/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><ul>
@@ -7394,216 +7604,6 @@ public class json2table extends JFrame&#123;
 <ul>
 <li>最后,谢谢^_^</li>
 </ul>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java课程设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java课设中的问题以及解决方案(二)</title>
-    <url>/2019-11-21-Course-Design-of-Java-QS-2/</url>
-    <content><![CDATA[<h2 id="windowbuilder-安装和使用"><a href="#windowbuilder-安装和使用" class="headerlink" title="windowbuilder 安装和使用"></a>windowbuilder 安装和使用</h2><p>类比于在 VS stdio 上开发 c#,eclipse 有对应的 GUI 开发工具,也就是 windowbuilder.<br>当然同类型的工具也有 NetBeans 等.编程虽然有趣,但是本身是一件很麻烦的事情,所以我就只选择了普遍评价较高的 windowbuilder 作尝试.<br><a href="https://download.eclipse.org/windowbuilder/latest/">windowbuilder 主页</a></p>
-<p>S1:安装插件(install new software)(这里注意活用 help 功能)<br>S2:将 “<a href="https://download.eclipse.org/windowbuilder/latest/&quot;">https://download.eclipse.org/windowbuilder/latest/&quot;</a> 复制到 work with 一栏中<br>S3:一路点击 next 全选安装即可</p>
-<p>安装完毕会提示重启,重启完成,在 new-&gt;other-&gt;windowbuilder-&gt;swing Designer-&gt;Application Window 中创建项目.</p>
-<p>可以在代码文件的左下角发现,多了一个 Desgin 选项,至此,windowbuilder 安装完成.</p>
-<h2 id="多线程进阶"><a href="#多线程进阶" class="headerlink" title="多线程进阶"></a>多线程进阶</h2><p>在<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a>中有提到的一个问题.<br>当时虽然成功创建了进度条,不过发现主窗体的线程钳制了分线程的运行(也就是说,主窗体线程运行完毕之前,分线程不会共享主线程的资源)</p>
-<p>纠结了半个晚上,于是今天突发奇想,将分线程对主线程资源的操作转移到备胎线程之中,这样本质上大家都是分线程,也就不会出现次序问题了.</p>
-<p>多说无益,上代码</p>
-<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">button.addActionListener(new ActionListener() &#123;
-    public void actionPerformed(ActionEvent e) &#123;
-        new labelControl1(matrixLoder).start();
-        new labelControl2(contentLoder).start();
-        new labelControl3(probilityLoder).start();
-        resultOf01Button.setEnabled(false);
-        resultOfcontentButton.setEnabled(false);
-        resultOfprobilityButton.setEnabled(false);
-        chartsOfcontentButton.setEnabled(false);
-        chartsOfProbilityButton.setEnabled(false);
-        visable_init(true);
-
-        new PostThread( file_load_res, inputString, arr, resultOf01Button, resultOfcontentButton, chartsOfcontentButton, chartsOfProbilityButton, resultOfprobilityButton).start();
-    &#125;
-            &#x2F;&#x2F;将post命令放在新的线程中并发执行
-        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="效果图展示"><a href="#效果图展示" class="headerlink" title="效果图展示"></a>效果图展示</h3><p><img src="https://i.loli.net/2019/11/21/IhHWwKyQV2z9eCS.gif" alt="Kapture 2019-11-21 at 18.41.26.gif" loading="lazy"></p>
-<h2 id="jtable-小结"><a href="#jtable-小结" class="headerlink" title="jtable 小结"></a>jtable 小结</h2><p>在一种大概地提到过 JTable 这个组件.<br>本次的课程设计中,有非常多的表格需要展示,有的是从服务器接收到的 json 数据转 jtable,也有将本地的 csv 文件转化为 jtable,还有将 textarea 中的输入文本转化为 jtable,所以目前对于这个组件略有心得(笑</p>
-<h3 id="jtable-的初始化"><a href="#jtable-的初始化" class="headerlink" title="jtable 的初始化"></a>jtable 的初始化</h3><p>常用的三种初始化方式:</p>
-<ul>
-<li>JTable()</li>
-<li>JTable(int a,int b) //a 行 b 列</li>
-<li>JTable(Object a[][],Object b[]) //a 存放数据表,b 存放列名</li>
-</ul>
-<p>一般我采用的是 new jtable(Object a[][],Object b[])这样的初始化方式.</p>
-<h4 id="json2jtable"><a href="#json2jtable" class="headerlink" title="json2jtable"></a>json2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">JSONObject js &#x3D; new JSONObject();
-        js &#x3D; JSON.parseObject(s1);
-
-
-        HashSet&lt;String&gt; row &#x3D;new HashSet&lt;String&gt;();
-        List&lt;String&gt; cols &#x3D; new ArrayList&lt;&gt;(js.keySet());
-        List&lt;String&gt; rows &#x3D; new ArrayList&lt;&gt;(js.getJSONObject(cols.get(0)).keySet());
-
-
-
-        a &#x3D; new Object[rows.size()][cols.size()];
-
-        for (int i &#x3D; 0; i &lt; cols.size(); i++) &#123;
-    JSONObject eachcol &#x3D; js.getJSONObject(cols.get(i));
-    for (int j &#x3D; 0; j &lt; rows.size(); j++) &#123;
-&#x2F;&#x2F;        System.out.println(eachcol.getString(rows.get(j)));
-        a[j][i] &#x3D; eachcol.getString(rows.get(j));
-    &#125;
-        &#125;
-
-        tb &#x3D; new JTable(a,cols.toArray());
-
-        Container con &#x3D; getContentPane();
-
-        getContentPane().add(new JScrollPane(tb),BorderLayout.CENTER);
-
-        tb.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-
-        setTitle(name);
-        setSize(10000,10000);
-        setVisible(true);
-        validate();
-        setDefaultCloseOperation(HIDE_ON_CLOSE);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="csv2jtable"><a href="#csv2jtable" class="headerlink" title="csv2jtable"></a>csv2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">Object[] columnnames;
-        CSVReader CSVFileReader &#x3D; null;
-        try &#123;
-    CSVFileReader &#x3D; new CSVReader(new FileReader(filepath));
-        &#125; catch (FileNotFoundException e) &#123;
-    &#x2F;&#x2F; TODO Auto-generated catch block
-    e.printStackTrace();
-        &#125;
-        List myEntries &#x3D; null;
-        try &#123;
-    myEntries &#x3D; CSVFileReader.readAll();
-        &#125; catch (IOException | CsvException e) &#123;
-    &#x2F;&#x2F; TODO Auto-generated catch block
-    e.printStackTrace();
-        &#125;
-        columnnames &#x3D; (String[]) myEntries.get(0);
-        DefaultTableModel tableModel &#x3D; new DefaultTableModel(columnnames, myEntries.size()-1);
-        int rowcount &#x3D; tableModel.getRowCount();
-        for (int x &#x3D; 0; x&lt;rowcount+1; x++)
-        &#123;
-            int columnnumber &#x3D; 0;
-            &#x2F;&#x2F; if x &#x3D; 0 this is the first row...skip it... data used for columnnames
-            if (x&gt;0)
-            &#123;
-                for (String thiscellvalue : (String[])myEntries.get(x))
-                &#123;
-&#x2F;&#x2F;                    System.out.println(thiscellvalue);
-                    tableModel.setValueAt(thiscellvalue, x-1, columnnumber);
-                    columnnumber++;
-                &#125;
-            &#125;
-        &#125;
-        System.out.println(tableModel);
-        return tableModel;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="jtextarea2jtable"><a href="#jtextarea2jtable" class="headerlink" title="jtextarea2jtable"></a>jtextarea2jtable</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
-            Document doc &#x3D; e.getDocument();
-            String str &#x3D; null;
-            try &#123;
-        str &#x3D; doc.getText(0, doc.getLength());
-            &#125; catch (BadLocationException e1) &#123;
-        &#x2F;&#x2F; TODO Auto-generated catch block
-        e1.printStackTrace();
-            &#125;
-            arr &#x3D; str.split(&quot;\\s+&quot;);
-
-            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
-        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
-        Object a[][];
-
-        a &#x3D; new Object[arr.length&#x2F;2][2];
-
-        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
-            a[j&#x2F;2][j%2] &#x3D; arr[j];
-        &#125;
-
-        table_1 &#x3D; new JTable(a,columnnames);
-        table_1.setBounds(86, 285, 678, 251);
-        table_1.setEnabled(false);
-        jContentPane.add(table_1);
-        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-            &#125;
-
-        &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="一些属性"><a href="#一些属性" class="headerlink" title="一些属性"></a>一些属性</h3><p>Q:如何添加滚动条?<br>A:见<a href="http://www.harumonia.top/index.php/archives/164/">(一)</a></p>
-<p>Q:表格想变为不可选?<br>A: JTable.setEnabled(false);</p>
-<p>Q:表格变为只读?<br>A: 重载 JTable.isCellEditable(row, column), 令其始终返回 false.</p>
-<h2 id="监听设置"><a href="#监听设置" class="headerlink" title="监听设置"></a>监听设置</h2><h3 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h3><p>监听 textarea 中输入的值,并在下方生成对应的数据表</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">textPane.getDocument().addDocumentListener(new DocumentListener() &#123;
-
-    @Override
-    public void removeUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-
-    &#125;
-
-    @Override
-    public void insertUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-        if (e.getDocument() &#x3D;&#x3D; textPane.getDocument()) &#123;
-            Document doc &#x3D; e.getDocument();
-            String str &#x3D; null;
-            try &#123;
-        str &#x3D; doc.getText(0, doc.getLength());
-            &#125; catch (BadLocationException e1) &#123;
-        &#x2F;&#x2F; TODO Auto-generated catch block
-        e1.printStackTrace();
-            &#125;
-            arr &#x3D; str.split(&quot;\\s+&quot;);
-
-            if (arr.length %2 &#x3D;&#x3D; 0) &#123;
-        Object [] columnnames &#x3D; &#123;&quot;处方名&quot;,&quot;药名&quot;&#125;;
-        Object a[][];
-
-        a &#x3D; new Object[arr.length&#x2F;2][2];
-
-        for (int j &#x3D; 0; j &lt; arr.length; j++) &#123;
-            a[j&#x2F;2][j%2] &#x3D; arr[j];
-        &#125;
-
-        table_1 &#x3D; new JTable(a,columnnames);
-        table_1.setBounds(86, 285, 678, 251);
-        table_1.setEnabled(false);
-        jContentPane.add(table_1);
-        table_1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-            &#125;
-
-        &#125;
-    &#125;
-
-    @Override
-    public void changedUpdate(DocumentEvent e) &#123;
-        &#x2F;&#x2F; TODO Auto-generated method stub
-
-    &#125;
-        &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h3><ul>
-<li>removeUpdate 当删除发生时</li>
-<li>insertUpdate 当插入发生时</li>
-<li>changedUpdate 当发生变化时</li>
-</ul>
-<p>处于性能考虑,一般选择只使用 insert</p>
-<p><strong>这里涉及到一个问题,就是正则化是在监听时完成还是在上传时完成.</strong></p>
-<p>处于性能考虑,我选择再上传时统一进行正则化.</p>
-<p><img src="https://i.loli.net/2019/11/21/PGYbzCSKhE3yLrQ.gif" alt="Kapture 2019-11-21 at 18.57.08.gif" loading="lazy"></p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><blockquote>
-<p>就这样，看似徒劳的事，最终却结出了果实，一件失败的事情会变成对人类的大声疾呼，要求人类将精力集中到还未完成的事业当中去；在卓越的对抗中，壮烈的死亡可以生出新的生命，一次毁灭也可以生出攀登高峰的奋起意志。因为在偶然的成就和轻易获得的成功中，只有雄心壮志才能点燃火热的心，一个人虽然在与不可战胜的、占据优势的命运的斗争中毁灭了自己，但他的心灵却变得无比高尚。这些在所有时代都最最伟大的悲剧，作家可能只会偶尔创作，但现实生活却早已将其演绎了千百遍。</p>
-</blockquote>
-<p>– 茨威格&lt;人类群星闪耀时&gt;</p>
 ]]></content>
       <categories>
         <category>源流清泉</category>
@@ -8504,37 +8504,6 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
       </tags>
   </entry>
   <entry>
-    <title>项目中遇到的问题及解决方案(200103-1)</title>
-    <url>/2020-01-03-QS-in-project-200103-1/</url>
-    <content><![CDATA[<h2 id="echarts-节点点击事件"><a href="#echarts-节点点击事件" class="headerlink" title="echarts 节点点击事件"></a>echarts 节点点击事件</h2><p>由于项目需要在点击 echarts 的 items 或者 labels 的时候,修改 DOM 树,所以要做一个 echarts 的点击事件.</p>
-<p>在网上找了很久,大多是没有解答的空问题.<br>然后试图用 js 的原生方法来解决问题,发现确实有点麻烦,因为 echarts 在初期构建的时候,滤掉了冗余的信息,最后只给出了一个精简的绘图结果.</p>
-<p>思考:echarts 原生的点击是如何实现的?</p>
-<span id="more"></span>
-
-<p>于是我根据 drag 属性去看源码(我承认这有点作死的感觉),然后仔细一想,这 drag 我也用不到啊,就把它给掏空了,装入了自己的代码<del>~</del></p>
-<p>通过修改 echarts 源代码中的 Draggable()实现</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function-variable function">_dragStart</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>target <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>hoverStyle<span class="token punctuation">.</span>text<span class="token punctuation">)</span>         <span class="token punctuation">&#123;</span>
- <span class="token function">alert</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>hoverStyle<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>以上是一个测试案例,最终,点击了节点之后,会形成相应的点击反馈</p>
-<h2 id="将-JS-图表固化"><a href="#将-JS-图表固化" class="headerlink" title="将 JS 图表固化"></a>将 JS 图表固化</h2><p>JS 是动态渲染的,虽然因此对出很多花哨的特效,但是不像传统的 python 分析图一样,可以导出成为图像文件.<br>我一度很纠结,这之中如何做出取舍,难道每次都要手动地去截图吗,如果遇到没办法截图的情况岂不是麻瓜了?<br>等等,截图…<br>这个时候我忽然想到了写爬虫的时候,使用 selenium 去模拟浏览器的经历,于是自然而然想到了解决方案,既然只能截图,那就截图呗~~<br>使用 selenium 模拟后台浏览器,然后使用 snapshot 模拟截图动作,就得到了一张需要的图像文件咯.</p>
-<p>附上螺旋丸一张<br><img src="https://i.loli.net/2020/01/03/pOxWMTjgdCfroqY.png" alt="截屏2020-01-03下午8.50.38.png" loading="lazy"></p>
-<h2 id="沟通与交流"><a href="#沟通与交流" class="headerlink" title="沟通与交流"></a>沟通与交流</h2><p>在 David Scott 的 &lt;修改软件的艺术&gt; 一书中读到过这一方面的内容,但是没有想到这么快就得到了实践的验证.<br>不同人的思维回路是不同的,分歧无时无刻不在产生,如果不及时地进行有效的沟通,最终的结果就是,开发的产品与设计的思路大相径庭.</p>
-<h2 id="删除注释"><a href="#删除注释" class="headerlink" title="删除注释"></a>删除注释</h2><p>源码之中的注释可以极大地提高代码的维护效率,但是有些时候我们并不想注释流出,给其他人看见.<br>结合很多代码编辑器的正则查找替换功能,这里给出一个一键剔除注释的方案.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span><span class="token punctuation">[</span>\s\S<span class="token punctuation">]</span><span class="token operator">*</span> 运用正则快速删除注释<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>鲨套不在的第一天,有点想她.</p>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-      </categories>
-      <tags>
-        <tag>echarts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>人类群星闪耀时(笔记)</title>
     <url>/2019-12-25-Sternstunden-der-Menschheit-note/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>星空浩瀚.熠熠繁星,哪一颗会是我,亦或是哪一颗都不会是我.<br>一瞬之间,思绪漾开,仿佛脚尖所点过的每一处,摇曳生莲.</p>
@@ -8598,6 +8567,37 @@ ps.进程是分配资源的基本单位,线程是CPU调度的基本单位</code>
       </categories>
       <tags>
         <tag>群星</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目中遇到的问题及解决方案(200103-1)</title>
+    <url>/2020-01-03-QS-in-project-200103-1/</url>
+    <content><![CDATA[<h2 id="echarts-节点点击事件"><a href="#echarts-节点点击事件" class="headerlink" title="echarts 节点点击事件"></a>echarts 节点点击事件</h2><p>由于项目需要在点击 echarts 的 items 或者 labels 的时候,修改 DOM 树,所以要做一个 echarts 的点击事件.</p>
+<p>在网上找了很久,大多是没有解答的空问题.<br>然后试图用 js 的原生方法来解决问题,发现确实有点麻烦,因为 echarts 在初期构建的时候,滤掉了冗余的信息,最后只给出了一个精简的绘图结果.</p>
+<p>思考:echarts 原生的点击是如何实现的?</p>
+<span id="more"></span>
+
+<p>于是我根据 drag 属性去看源码(我承认这有点作死的感觉),然后仔细一想,这 drag 我也用不到啊,就把它给掏空了,装入了自己的代码<del>~</del></p>
+<p>通过修改 echarts 源代码中的 Draggable()实现</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function-variable function">_dragStart</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>target <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>hoverStyle<span class="token punctuation">.</span>text<span class="token punctuation">)</span>         <span class="token punctuation">&#123;</span>
+ <span class="token function">alert</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>hoverStyle<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上是一个测试案例,最终,点击了节点之后,会形成相应的点击反馈</p>
+<h2 id="将-JS-图表固化"><a href="#将-JS-图表固化" class="headerlink" title="将 JS 图表固化"></a>将 JS 图表固化</h2><p>JS 是动态渲染的,虽然因此对出很多花哨的特效,但是不像传统的 python 分析图一样,可以导出成为图像文件.<br>我一度很纠结,这之中如何做出取舍,难道每次都要手动地去截图吗,如果遇到没办法截图的情况岂不是麻瓜了?<br>等等,截图…<br>这个时候我忽然想到了写爬虫的时候,使用 selenium 去模拟浏览器的经历,于是自然而然想到了解决方案,既然只能截图,那就截图呗~~<br>使用 selenium 模拟后台浏览器,然后使用 snapshot 模拟截图动作,就得到了一张需要的图像文件咯.</p>
+<p>附上螺旋丸一张<br><img src="https://i.loli.net/2020/01/03/pOxWMTjgdCfroqY.png" alt="截屏2020-01-03下午8.50.38.png" loading="lazy"></p>
+<h2 id="沟通与交流"><a href="#沟通与交流" class="headerlink" title="沟通与交流"></a>沟通与交流</h2><p>在 David Scott 的 &lt;修改软件的艺术&gt; 一书中读到过这一方面的内容,但是没有想到这么快就得到了实践的验证.<br>不同人的思维回路是不同的,分歧无时无刻不在产生,如果不及时地进行有效的沟通,最终的结果就是,开发的产品与设计的思路大相径庭.</p>
+<h2 id="删除注释"><a href="#删除注释" class="headerlink" title="删除注释"></a>删除注释</h2><p>源码之中的注释可以极大地提高代码的维护效率,但是有些时候我们并不想注释流出,给其他人看见.<br>结合很多代码编辑器的正则查找替换功能,这里给出一个一键剔除注释的方案.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span><span class="token punctuation">[</span>\s\S<span class="token punctuation">]</span><span class="token operator">*</span> 运用正则快速删除注释<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>鲨套不在的第一天,有点想她.</p>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+      </categories>
+      <tags>
+        <tag>echarts</tag>
       </tags>
   </entry>
   <entry>
@@ -11738,58 +11738,6 @@ col_name [(length)] [ASC | DESC]<span aria-hidden="true" class="line-numbers-row
       </tags>
   </entry>
   <entry>
-    <title>(打卡)接雨水</title>
-    <url>/2020-04-04-catch-rain/</url>
-    <content><![CDATA[<blockquote>
-<p>难得遇到一道困难的打卡题，就在这里写一下过程吧（虽然并不是很困难。。。）</p>
-</blockquote>
-<p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1" loading="lazy"></p>
-<p>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）</p>
-<span id="more"></span>
-
-<p>示例:</p>
-<blockquote>
-<p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
-</blockquote>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1989192964.png?Expires=1602313313&" alt="p2" loading="lazy"></p>
-<h2 id="解"><a href="#解" class="headerlink" title="解"></a>解</h2><p>首先想到的应该就是暴力法。不过暴力法没有多少分析的价值，所以略过不谈。</p>
-<p>个人认为，无论何时，暴力法都应该作为一个最后的保命手段来用比较好的。如果条件允许，还是去追求一些高效率的解法，这样每日的打卡才有意义。</p>
-<p>这里用分解子问题的思路，将这个问题进行拆分。</p>
-<p>两根柱子之间可以存放多少水？</p>
-<ol>
-<li>由范围内第二高的柱子决定</li>
-<li>去掉范围内的柱子占有的空间</li>
-</ol>
-<p>如此一来，子问题的条件就集齐了。同时，这个问题具有迭代性质。</p>
-<p>思路部分到这里就结束了。</p>
-<p>以下为代码，这里首次尝试了全迭代器的写法，感觉还不错，有复健的感觉了。</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int trap(vector&lt;int&gt;&amp; height) &#123;
-        int res&#x3D;0;
-        if(size(height) &#x3D;&#x3D; 1 or size(height) &#x3D;&#x3D; 0) return 0;
-        auto maxPosition &#x3D; max_element(height.begin(), height.end());
-        auto left &#x3D; maxPosition;
-        auto right &#x3D; max_element(maxPosition+1,height.end());
-        while(left !&#x3D; height.begin())&#123;
-            left &#x3D; max_element(height.begin(),maxPosition);
-            res+&#x3D; (distance(left,maxPosition)-1)**left - accumulate(left+1,maxPosition,0);
-            maxPosition &#x3D; left;
-        &#125;
-        maxPosition &#x3D; max_element(height.begin(), height.end());
-        while(right !&#x3D; height.end())&#123;
-            res+&#x3D; (distance(maxPosition,right)-1)**right - accumulate(maxPosition+1,right,0);
-            maxPosition &#x3D; right;
-            right &#x3D; max_element(maxPosition+1,height.end());
-        &#125;
-        return res;
-    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>leetcodeの解题日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C1.背叛者</title>
     <url>/2020-03-07-C1-The-Betrayer/</url>
     <content><![CDATA[<p>德黑兰王国西部边境，少年兵团营地，夜。</p>
@@ -11862,6 +11810,58 @@ col_name [(length)] [ASC | DESC]<span aria-hidden="true" class="line-numbers-row
 ]]></content>
       <categories>
         <category>摸摸摸</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>(打卡)接雨水</title>
+    <url>/2020-04-04-catch-rain/</url>
+    <content><![CDATA[<blockquote>
+<p>难得遇到一道困难的打卡题，就在这里写一下过程吧（虽然并不是很困难。。。）</p>
+</blockquote>
+<p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/2824310140.png?Expires=1602313299&" alt="p1" loading="lazy"></p>
+<p>上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）</p>
+<span id="more"></span>
+
+<p>示例:</p>
+<blockquote>
+<p>输入: [0,1,0,2,1,0,1,3,2,1,2,1]<br>输出: 6</p>
+</blockquote>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/old_articles/1989192964.png?Expires=1602313313&" alt="p2" loading="lazy"></p>
+<h2 id="解"><a href="#解" class="headerlink" title="解"></a>解</h2><p>首先想到的应该就是暴力法。不过暴力法没有多少分析的价值，所以略过不谈。</p>
+<p>个人认为，无论何时，暴力法都应该作为一个最后的保命手段来用比较好的。如果条件允许，还是去追求一些高效率的解法，这样每日的打卡才有意义。</p>
+<p>这里用分解子问题的思路，将这个问题进行拆分。</p>
+<p>两根柱子之间可以存放多少水？</p>
+<ol>
+<li>由范围内第二高的柱子决定</li>
+<li>去掉范围内的柱子占有的空间</li>
+</ol>
+<p>如此一来，子问题的条件就集齐了。同时，这个问题具有迭代性质。</p>
+<p>思路部分到这里就结束了。</p>
+<p>以下为代码，这里首次尝试了全迭代器的写法，感觉还不错，有复健的感觉了。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int trap(vector&lt;int&gt;&amp; height) &#123;
+        int res&#x3D;0;
+        if(size(height) &#x3D;&#x3D; 1 or size(height) &#x3D;&#x3D; 0) return 0;
+        auto maxPosition &#x3D; max_element(height.begin(), height.end());
+        auto left &#x3D; maxPosition;
+        auto right &#x3D; max_element(maxPosition+1,height.end());
+        while(left !&#x3D; height.begin())&#123;
+            left &#x3D; max_element(height.begin(),maxPosition);
+            res+&#x3D; (distance(left,maxPosition)-1)**left - accumulate(left+1,maxPosition,0);
+            maxPosition &#x3D; left;
+        &#125;
+        maxPosition &#x3D; max_element(height.begin(), height.end());
+        while(right !&#x3D; height.end())&#123;
+            res+&#x3D; (distance(maxPosition,right)-1)**right - accumulate(maxPosition+1,right,0);
+            maxPosition &#x3D; right;
+            right &#x3D; max_element(maxPosition+1,height.end());
+        &#125;
+        return res;
+    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>leetcodeの解题日志</category>
       </categories>
   </entry>
   <entry>
@@ -13721,46 +13721,6 @@ gsettings <span class="token builtin class-name">set</span> org.gnome.desktop.wm
       </tags>
   </entry>
   <entry>
-    <title>django-shell-inject-script</title>
-    <url>/django-shell-inject-script/</url>
-    <content><![CDATA[<p>在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.</p>
-<p>本篇会介绍一个注入脚本, 可以方便地在 python 的交互式 shell 中进行调试.</p>
-<span id="more"></span>
-
-<h2 id="Django-Shell-注入脚本"><a href="#Django-Shell-注入脚本" class="headerlink" title="Django Shell 注入脚本"></a>Django Shell 注入脚本</h2><p>如下一个查询缓存的注入脚本.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-
-/usr/bin/expect <span class="token operator">&lt;&lt;</span><span class="token string">EOF
-spawn python3 manage.py shell
-expect ">>>"
-send "from django.core.cache import cache<span class="token entity" title="\r">\r</span>"
-expect ">>>"
-send "cache.keys('*')<span class="token entity" title="\r">\r</span>"
-expect ">>>"
-send "exit()<span class="token entity" title="\r">\r</span>"
-expect eof
-EOF</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>expect是一个自动化交互套件，主要应用于执行命令和程序时，系统以交互形式要求输入指定字符串，实现交互通信。</p>
-<p>expect自动交互流程：</p>
-<p>spawn启动指定进程—expect获取指定关键字—send向指定程序发送指定字符—执行完成退出.</p>
-<p>注意该脚本能够执行的前提是安装了expect.</p>
-<p>expect 常用命令总结:</p>
-<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">spawn               交互程序开始后面跟命令或者指定程序
-expect              获取匹配信息匹配成功则执行expect后面的程序动作
-send exp_send       用于发送指定的字符串信息
-exp_continue        在expect中多次匹配就需要用到
-send_user           用来打印输出 相当于shell中的echo
-exit                退出expect脚本
-eof                 expect执行结束 退出
-set                 定义变量
-puts                输出变量
-set timeout         设置超时时间<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="基于kubernetes的django-shell注入"><a href="#基于kubernetes的django-shell注入" class="headerlink" title="基于kubernetes的django shell注入"></a>基于kubernetes的django shell注入</h2><p>待补充</p>
-]]></content>
-  </entry>
-  <entry>
     <title>API设计个人经验小结(施工中)</title>
     <url>/design-better-api/</url>
     <content><![CDATA[<p>本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.</p>
@@ -13909,6 +13869,46 @@ https:&#x2F;&#x2F;api.averagecompany.com&#x2F;health?api_version&#x3D;1.0<span a
 
 <p>而笔者见过的比较高端一点的版本控制策略，是在 _request_body_ 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。</p>
 <h2 id="采用API-KEY的认证"><a href="#采用API-KEY的认证" class="headerlink" title="采用API KEY的认证"></a>采用API KEY的认证</h2><p>todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>django-shell-inject-script</title>
+    <url>/django-shell-inject-script/</url>
+    <content><![CDATA[<p>在 django, 或者其他的 python 交互式 shell 中, 有时候需要进入到 shell 中进行调试工作, 但是当调试的代码量较大， 或者调试十分地频繁的时候, 这种操作会变得十分地痛苦, 在线上环境中的调试尤甚.</p>
+<p>本篇会介绍一个注入脚本, 可以方便地在 python 的交互式 shell 中进行调试.</p>
+<span id="more"></span>
+
+<h2 id="Django-Shell-注入脚本"><a href="#Django-Shell-注入脚本" class="headerlink" title="Django Shell 注入脚本"></a>Django Shell 注入脚本</h2><p>如下一个查询缓存的注入脚本.</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+/usr/bin/expect <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+spawn python3 manage.py shell
+expect ">>>"
+send "from django.core.cache import cache<span class="token entity" title="\r">\r</span>"
+expect ">>>"
+send "cache.keys('*')<span class="token entity" title="\r">\r</span>"
+expect ">>>"
+send "exit()<span class="token entity" title="\r">\r</span>"
+expect eof
+EOF</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>expect是一个自动化交互套件，主要应用于执行命令和程序时，系统以交互形式要求输入指定字符串，实现交互通信。</p>
+<p>expect自动交互流程：</p>
+<p>spawn启动指定进程—expect获取指定关键字—send向指定程序发送指定字符—执行完成退出.</p>
+<p>注意该脚本能够执行的前提是安装了expect.</p>
+<p>expect 常用命令总结:</p>
+<pre class="line-numbers language-plain_text" data-language="plain_text"><code class="language-plain_text">spawn               交互程序开始后面跟命令或者指定程序
+expect              获取匹配信息匹配成功则执行expect后面的程序动作
+send exp_send       用于发送指定的字符串信息
+exp_continue        在expect中多次匹配就需要用到
+send_user           用来打印输出 相当于shell中的echo
+exit                退出expect脚本
+eof                 expect执行结束 退出
+set                 定义变量
+puts                输出变量
+set timeout         设置超时时间<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="基于kubernetes的django-shell注入"><a href="#基于kubernetes的django-shell注入" class="headerlink" title="基于kubernetes的django shell注入"></a>基于kubernetes的django shell注入</h2><p>待补充</p>
 ]]></content>
   </entry>
   <entry>
@@ -15130,6 +15130,44 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
       </tags>
   </entry>
   <entry>
+    <title>kex_exchange_identification问题及解决</title>
+    <url>/github-kex-exchange-identification-solution/</url>
+    <content><![CDATA[<p>简单地记述了一下在使用 <em>github</em> 时遇到的 <strong>kex_exchange_identification</strong> 错误.</p>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>毕业旅行的博客摸了很久, GitHub 也很有没有用过了, 然后在 <em>push</em> 的时候遇到了这个问题.</p>
+<p>系统环境如下:</p>
+<blockquote>
+<p>OS: MacOS<br>shell: zsh</p>
+</blockquote>
+<p>具体报错:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push
+
+<span class="token comment"># output:</span>
+<span class="token comment"># kex_exchange_identification: Connection closed by remote host</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li><p>确认 <em>github</em> 的 <strong>ssh</strong> 配置没有问题.</p>
+</li>
+<li><p>使用 <code>vim ~/.ssh/config</code> 命令, 打开 ssh 的配置文件.</p>
+</li>
+<li><p>添加 <code>IdentityFile ~/.ssh/id_ed25519</code> 至配置中, 而后配置变更为如下所示.</p>
+</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Host github.com
+   HostName github.com
+   User <span class="token function">git</span>
+   ProxyCommand <span class="token function">nc</span> -v -x <span class="token number">127.0</span>.0.1:7890 %h %p
+   IdentityFile ~/.ssh/id_ed25519<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中, <code>ProxyCommand</code> 是指定的 github 代理, 有没有这个字段无所谓, 根据自己的配置即可. 而 <code>id_ed25519</code> 为与 github 的 ssh 配置相关联的文件, 这里笔者配置 ssh 时是按照 github 的教程走的, 所以文件就是 <code>id_ed25519</code>.</p>
+<p>最后, 可以使用 <code>ssh -T git@github.com</code> 测试一下, 效果拔群~</p>
+<h2 id="补充解决方案"><a href="#补充解决方案" class="headerlink" title="补充解决方案"></a>补充解决方案</h2><p>当然， 这也有可能是代理失效的原因， 这就要把 <code>ProxyCommand</code> 这一行注释掉试试.</p>
+<p>总之还是先使用 <code>ssh -v git@github.com</code> 调试一下, 根据具体的输出具体分析吧.</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>还是搞不太清楚为啥会突然遇到这个问题, 大概是这段时间往 ssh 配置文件里面添加太多的 key 导致匹配规则混乱吧. 之后如果找到了更详细的问题原因再来更新咯.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>极客大赛与赛后反思</title>
     <url>/geek-contest/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>极客大赛是我司举办的一个内部的挑战比赛，大致的内容就是拟定一道比赛题目，然后根据最后的完成度进行得分排名。比赛的时间为一天，大抵就是上班到下班这么长的时间。</p>
@@ -15184,44 +15222,6 @@ res_str_basic <span class="token operator">=</span> <span class="token punctuati
       <tags>
         <tag>比赛</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>kex_exchange_identification问题及解决</title>
-    <url>/github-kex-exchange-identification-solution/</url>
-    <content><![CDATA[<p>简单地记述了一下在使用 <em>github</em> 时遇到的 <strong>kex_exchange_identification</strong> 错误.</p>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>毕业旅行的博客摸了很久, GitHub 也很有没有用过了, 然后在 <em>push</em> 的时候遇到了这个问题.</p>
-<p>系统环境如下:</p>
-<blockquote>
-<p>OS: MacOS<br>shell: zsh</p>
-</blockquote>
-<p>具体报错:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push
-
-<span class="token comment"># output:</span>
-<span class="token comment"># kex_exchange_identification: Connection closed by remote host</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
-<li><p>确认 <em>github</em> 的 <strong>ssh</strong> 配置没有问题.</p>
-</li>
-<li><p>使用 <code>vim ~/.ssh/config</code> 命令, 打开 ssh 的配置文件.</p>
-</li>
-<li><p>添加 <code>IdentityFile ~/.ssh/id_ed25519</code> 至配置中, 而后配置变更为如下所示.</p>
-</li>
-</ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Host github.com
-   HostName github.com
-   User <span class="token function">git</span>
-   ProxyCommand <span class="token function">nc</span> -v -x <span class="token number">127.0</span>.0.1:7890 %h %p
-   IdentityFile ~/.ssh/id_ed25519<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>其中, <code>ProxyCommand</code> 是指定的 github 代理, 有没有这个字段无所谓, 根据自己的配置即可. 而 <code>id_ed25519</code> 为与 github 的 ssh 配置相关联的文件, 这里笔者配置 ssh 时是按照 github 的教程走的, 所以文件就是 <code>id_ed25519</code>.</p>
-<p>最后, 可以使用 <code>ssh -T git@github.com</code> 测试一下, 效果拔群~</p>
-<h2 id="补充解决方案"><a href="#补充解决方案" class="headerlink" title="补充解决方案"></a>补充解决方案</h2><p>当然， 这也有可能是代理失效的原因， 这就要把 <code>ProxyCommand</code> 这一行注释掉试试.</p>
-<p>总之还是先使用 <code>ssh -v git@github.com</code> 调试一下, 根据具体的输出具体分析吧.</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>还是搞不太清楚为啥会突然遇到这个问题, 大概是这段时间往 ssh 配置文件里面添加太多的 key 导致匹配规则混乱吧. 之后如果找到了更详细的问题原因再来更新咯.</p>
-]]></content>
   </entry>
   <entry>
     <title>毕业设计过程中的一些有趣/有用的网站</title>
@@ -15578,150 +15578,22 @@ Change: <span class="token number">2020</span>-11-25 <span class="token number">
       </tags>
   </entry>
   <entry>
-    <title>Mori Kokoro 开发过程中遇到的问题(2) 以及使用代码收集</title>
-    <url>/mori-question-and-code-collection/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>距离 Mori v0.1 成形已经过了一周.这一周里面对这个代码进行了进一步的优化.</p>
-<p>在 <a href="https://blog.harumonia.moe/mori-kokoro/">Mori Kokoro 开发记录</a> 中已经对上个阶段开发中遇到的问题进行了一次汇总.本篇是对本阶段的问题的汇总.</p>
-<p>另外.将一些实用的代码摘出.并进行注释说明.</p>
-<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori.gif" alt="mori" loading="lazy"></p>
-<span id="more"></span>
-
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="关于-requests-的-hooks"><a href="#关于-requests-的-hooks" class="headerlink" title="关于 requests 的 hooks"></a>关于 requests 的 hooks</h3><p>Mori 中使用 hook 主要是用来进行时间统计.</p>
-<p>在 requests 的 response 中已经存在的请求时间统计.代码如下.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Start time (approximately) of the request</span>
-start <span class="token operator">=</span> preferred_clock<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-<span class="token comment"># Send the request</span>
-r <span class="token operator">=</span> adapter<span class="token punctuation">.</span>send<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
-
-<span class="token comment"># Total elapsed time of the request (approximately)</span>
-elapsed <span class="token operator">=</span> preferred_clock<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start
-r<span class="token punctuation">.</span>elapsed <span class="token operator">=</span> timedelta<span class="token punctuation">(</span>seconds<span class="token operator">=</span>elapsed<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>可以发现.这里仅仅统计了请求所花费的时间.但是我们需要的不仅仅是这个时间.而是从开始处理(包括 post-data 的渲染等)到请求结束的时间.</p>
-<h4 id="为什么使用-hooks"><a href="#为什么使用-hooks" class="headerlink" title="为什么使用 hooks"></a>为什么使用 hooks</h4><p>在 <a href="https://2.python-requests.org/en/master/user/advanced/#id8">Event Hooks</a> 中.给出将 hooks 应用于 requests.get()以及 Session()两种示例.这两种情况不能一概而论.get()是一次性的.而 Session()是持续的.实际上就是 <em>是否需要对请求的每一个 url 使用 hooks 处理</em> 的这样一个问题.不过文档并没有解决我们的问题–为什么(或者说.什么情况下)使用 hooks?</p>
-<p>而在 StackOverflow 的<a href="https://stackoverflow.com/questions/17773028/python-requests-hook-or-no-hook">Python Requests: Hook or no Hook?</a>中给出了很具有参考价值的回答.</p>
-<blockquote>
-<p>Hooks should really therefore only be used to drive behaviours that will make things more predictable, not less. For example, Requests uses them internally to handle 401 responses for various kinds of authentication.</p>
-</blockquote>
-<p>同样.在阅读了源码之后.我个人对于 hooks 的用法作出了一些简单的总结.</p>
-<ul>
-<li>仅仅对请求成功的 response 进行处理</li>
-<li>从设计的角度来看.这个处理是隐式的</li>
-<li>可以将 hooks 与 session 绑定.来实现不同情况下的 response 处理</li>
-<li>hooks 如果存在返回值.那么这个返回值将会取代 response &gt; hooks.py line 32~33</li>
-</ul>
-<h3 id="关于脚本中的重试"><a href="#关于脚本中的重试" class="headerlink" title="关于脚本中的重试"></a>关于脚本中的重试</h3><p>这是问题实际上是要在重试次数和高效爬取之间做出一个取舍.</p>
-<p>从实际的情况出发.</p>
-<p>如果在爬虫的代码中.考虑到了网站的不稳定性.从而进行了多段重试.那么.在 api 的检测中最好也要进行多段的重试.否则就会出现爬虫获取到了数据.但是检测脚本报 api 失效的情况.当然.这种情况是概率性的.如果服务端不稳定.那么无论如何增加重试次数.都会有不一致的情况出现.</p>
-<p>而如果代码中就没有进行重试.那么脚本的重试就显得画蛇添足了.</p>
-<h3 id="xlwt-的列宽问题"><a href="#xlwt-的列宽问题" class="headerlink" title="xlwt 的列宽问题"></a>xlwt 的列宽问题</h3><p>这里的列宽与在 excel 右击 column 所显示的列宽不同.</p>
-<p>在<a href="https://buxty.com/b/2011/10/widths-heights-with-xlwt-python/">Widths &amp; Heights with xlwt + Python</a> 找到了解答.</p>
-<blockquote>
-<p>Columns have a property for setting the width. The value is an integer specifying the size measured in 1/256 of the width of the character ‘0’ as it appears in the sheet’s default font. xlwt creates columns with a default width of 2962, roughly equivalent to 11 characters wide.</p>
-</blockquote>
-<p>也就是说：xlwt 中列宽的值表示方法：默认字体 ‘0’ 的 1/256 为衡量单位.默认宽度值是 2960.大约是 11 个字符的宽度.</p>
-<p>在实际的使用中.我是用的是 256*40+180 这种计算方法.得到的更接近于 40 个字符的宽度.</p>
-<h2 id="摘出常用代码"><a href="#摘出常用代码" class="headerlink" title="摘出常用代码"></a>摘出常用代码</h2><h3 id="邮件发送"><a href="#邮件发送" class="headerlink" title="邮件发送"></a>邮件发送</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">send_mail</span><span class="token punctuation">(</span>receivers<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> file_content<span class="token punctuation">,</span> html<span class="token punctuation">,</span> subject<span class="token punctuation">,</span> mail_host<span class="token punctuation">,</span> mail_user<span class="token punctuation">,</span> mail_pass<span class="token punctuation">,</span> mail_port<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    发送邮件
-    配置信息见README
-    """</span>
-    <span class="token keyword">import</span> smtplib
-    <span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>text <span class="token keyword">import</span> MIMEText
-    <span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>multipart <span class="token keyword">import</span> MIMEMultipart
-
-    sender <span class="token operator">=</span> mail_user
-    message <span class="token operator">=</span> MIMEMultipart<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    message<span class="token punctuation">[</span><span class="token string">'From'</span><span class="token punctuation">]</span> <span class="token operator">=</span> sender
-    message<span class="token punctuation">[</span><span class="token string">'To'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>receivers<span class="token punctuation">)</span>
-    message<span class="token punctuation">[</span><span class="token string">'Subject'</span><span class="token punctuation">]</span> <span class="token operator">=</span> subject
-
-    <span class="token keyword">if</span> html<span class="token punctuation">:</span>
-        message<span class="token punctuation">.</span>attach<span class="token punctuation">(</span>MIMEText<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-    part <span class="token operator">=</span> MIMEText<span class="token punctuation">(</span>file_content<span class="token punctuation">.</span>getvalue<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"vnd.ms-excel"</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span>
-    part<span class="token punctuation">.</span>add_header<span class="token punctuation">(</span><span class="token string">'Content-Disposition'</span><span class="token punctuation">,</span> <span class="token string">'attachment'</span><span class="token punctuation">,</span>
-                    filename<span class="token operator">=</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>subject<span class="token punctuation">&#125;</span></span><span class="token string">.xls'</span></span><span class="token punctuation">)</span>
-    message<span class="token punctuation">.</span>attach<span class="token punctuation">(</span>part<span class="token punctuation">)</span>
-
-    <span class="token keyword">for</span> count <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">try</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> mail_port <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                smtp <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP<span class="token punctuation">(</span><span class="token punctuation">)</span>
-                smtp<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>mail_host<span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                smtp <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP_SSL<span class="token punctuation">(</span>mail_host<span class="token punctuation">,</span> mail_port<span class="token punctuation">)</span>
-            smtp<span class="token punctuation">.</span>ehlo<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            smtp<span class="token punctuation">.</span>login<span class="token punctuation">(</span>mail_user<span class="token punctuation">,</span> mail_pass<span class="token punctuation">)</span>
-            smtp<span class="token punctuation">.</span>sendmail<span class="token punctuation">(</span>sender<span class="token punctuation">,</span> receivers<span class="token punctuation">,</span> message<span class="token punctuation">.</span>as_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-            smtp<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token keyword">break</span>
-        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> _e<span class="token punctuation">:</span>
-            <span class="token keyword">print</span><span class="token punctuation">(</span>_e<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> count <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
-                <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'failed to send email'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="将二维数组变成-html-table"><a href="#将二维数组变成-html-table" class="headerlink" title="将二维数组变成 html-table"></a>将二维数组变成 html-table</h3><p>在发送邮件时.邮件的内容可以是 html.所以将报表的结果变为 html-table.更方便查看.</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">generate_table</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    th <span class="token operator">=</span> <span class="token string">''</span>
-    <span class="token keyword">for</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>headers<span class="token punctuation">:</span>
-        th <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;th style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>value<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/th>'</span></span>
-    thead <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'&lt;thead style="background-color:gray;"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>th<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/thead>'</span></span> <span class="token comment"># 表头的底色变为灰色</span>
-    tbody <span class="token operator">=</span> <span class="token string">''</span>
-    <span class="token keyword">for</span> result <span class="token keyword">in</span> self<span class="token punctuation">.</span>results<span class="token punctuation">:</span>
-        tr <span class="token operator">=</span> <span class="token string">''</span>
-        <span class="token keyword">for</span> header <span class="token keyword">in</span> self<span class="token punctuation">.</span>headers<span class="token punctuation">:</span>
-            tr <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;td style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>result<span class="token punctuation">[</span>header<span class="token punctuation">]</span><span class="token punctuation">&#125;</span></span><span class="token string">&lt;/td>'</span></span>
-        <span class="token keyword">if</span> result<span class="token punctuation">[</span><span class="token string">'check_result'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">"OK"</span><span class="token punctuation">:</span>    <span class="token comment"># 判断结果是否是'OK',如果不是,则该行变为红色</span>
-            tbody <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;tr style="color:red"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tr<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/tr>'</span></span>
-        <span class="token keyword">else</span><span class="token punctuation">:</span>
-            tbody <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;tr></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tr<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/tr>'</span></span>
-    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f'&lt;p>Mori Result&lt;/p>&lt;table style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>thead<span class="token punctuation">&#125;</span></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tbody<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/table>'</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>源流清泉</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>diyTools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2021</title>
-    <url>/my-2021/</url>
-    <content><![CDATA[<p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p>
-<p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p>
-<span id="more"></span>
-
-<h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度"><a href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" class="headerlink" title="以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度"></a>以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度</h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ …… – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p>
-<p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p>
-<p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p>
-<p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么”伟大”, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p>
-<p>这种满足感应该是 <strong>过程</strong>, 也就是作为”学习”这个行为的催化剂, 而非是 <strong>结果</strong>.</p>
-<h2 id="更优化的学习方式和碎片化的生活"><a href="#更优化的学习方式和碎片化的生活" class="headerlink" title="更优化的学习方式和碎片化的生活"></a>更优化的学习方式和碎片化的生活</h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p>
-<p>列一下过去一年中的书单吧.</p>
-<ol>
-<li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li>
-<li>&lt;知识图谱: 概念与技术&gt;</li>
-<li>&lt;20 世纪简史&gt;</li>
-<li>&lt;修改软件的艺术&gt;</li>
-<li>&lt;希望之线&gt;</li>
-</ol>
-<p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p>
-<p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p>
-<p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然”用推理悬疑类来调剂”这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p>
-<p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, “这些时间如何被利用起来”, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 “起点” \ “bilibili” 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p>
-<p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做”上下文切换的开销大”, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有”村上春树工作法”, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对”碎片化时间”还是没有一个很好的解决.</p>
-<p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的”番茄钟”, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p>
-<h2 id="小小目标"><a href="#小小目标" class="headerlink" title="小小目标"></a>小小目标</h2><p>对于 2022 年, 先定几个小小的目标吧.</p>
-<ol>
-<li>Apple Watch 的闭环率达到 90%, 健健康康.</li>
-<li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li>
-<li>完成一次旅行(根据实际疫情而定).</li>
-<li>加薪 50% 以上.</li>
-</ol>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 “消费行为” , 而理性考虑与现实行动才是 “生产行为” , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p>
+    <title>luna-horse-1-3</title>
+    <url>/luna-horse-1-3/</url>
+    <content><![CDATA[<h2 id="人生如梦-一尊还酹江月"><a href="#人生如梦-一尊还酹江月" class="headerlink" title="人生如梦, 一尊还酹江月"></a>人生如梦, 一尊还酹江月</h2><p>久违的小结, 小酌数瓶, 感觉并不是很影响思路.</p>
+<p>2025年做的最大的一件事情就是买了辆车, 一直到前年我都很抗拒买车, 因为我觉得一年的工资换取这种资产并不值得. 但是前年的某天, 母亲忽然打电话让我回去见外婆”最后一面”,  但是还是欲速则不达的道理, 我把车票, 打车, 这些时间点都算得太过严密, 最后导致折腾了大半天才到家, 路上的每时每刻都让我觉得十分地煎熬, 不可避免的, 让我希望有一个更快的方案, 比如一辆车. 年岁渐长，我察觉自己的社会属性正在畸形化。矫正这畸形的方案直观得近乎残忍：缩短构成我社会属性的本源——我的亲族。我无法压缩空间上的距离，只能寄望于一辆车，来吞噬时间上的距离。</p>
+<p>有了一辆车的一个意外收获是, 我更加热衷于 “外出” . 樱花季我去了无锡的鼋头渚, 那是我第一次开车离开苏州, 最后那天开高速, 找车位, 问路 所带来的新鲜感与正反馈, 远超在人挤人的鼋头渚看凋零败落的樱花树. 五一节我和同学王君前往舟山, 那是我第一次去海边, 一天堵车开了10个小时, 但是在抵达海岸线的时候, 海风吹拂, 我竟感觉不到一丝的疲惫. 其他诸如市内的,  如虎丘, 各个园林等, 生活上的愉悦, 不知凡几.</p>
+<p>如果算账的话, 买车在经济上绝对是亏中亏的, 但是很多时候并不是单纯的物质能够计量的.</p>
+<p>工作上的事情我并不想在此多谈, 或者说这些都已经在其他的技术类型的博客中有所提及. 但是关于 ai 的事情我还是想要在这里多表一些. 作为一个程序员, 迄今为止,  我用过 gpt3.5 到 claude 4.6 的几乎所有国外的模型, 我毫不怀疑 ai 会是这个行业的未来, 但是我怀疑的是我在这个浪潮中会得到什么,  更多的是怀疑我在这个浪潮中会失去什么, 我不知道除了呆板地输出代码, 我还能做哪些事情, 工作了接近五年, 我深刻地感受到我不再像刚出校园时候那样对未来充满希望, 不再充满创造的欲望, 不再觉得自己是改变世界的一分子. 这种让我局地十分地迷茫与沮丧.</p>
+<p>情感是我一直在逃避的话题, 毋宁说自 2013 年我”病愈” 之后一直的痛苦, 直至今日, 这份痛苦已经成为了常态,  我竟已经开始习惯这种痛苦. 于是这几年来我在否定一切的情感相关的问题, 并且以 “未来” 来作为镇痛的药, 说服自己一切的选择都是有所根据, 说服自己不为过去而后悔, 久而久之, 这是真的还是假的,  我自己也无从分辨. 如果是真的, 那么我会是一个”坚强” 的人, 如果是假的, 那么我会是一个 “失败” 的人, 但是无论如何, 时至今日, 我已经注定不会是一个 “成功” 的人.</p>
+<p>写到这里, 我觉得我有点悲观了, 所以我开始习惯性地去找一些宏大叙事来麻痹一下自己.</p>
+<p>今天晚上, 年初三.  我与表兄弟四人, 聚会于镇上的小饭店, 饮酒四瓶, 自觉微醺, 实际可能比较严重. 两个老大哥谈论了我们每个人的 “未来” , 此二君长余十岁, 孤身在大城市打拼, 成长阅历我心甚是敬服. 他们对我的感情问题有诸多的指点.  但是我不听.</p>
+<p>我大抵是没有喝醉, 又可能只是自觉没有喝醉. 自2013年至今, 我遇到过很多的人, 我尽量将每个人都平等地作为我过客, 我不想某天我可能再次躺在那个该死的病床上的时候有人因为我而伤心落泪.  但是人的社会性是不可避免的, 所以我依然是”招惹”了很多的人. 这不能草率的归咎于”命运”, 因为这是对我过去十数年一切行为的否定, 因为他们对我而言是我这三十年的灵魂的重要组成. 我也无法将其归咎于旁人, 这是显而易见的.  可是我又不想归咎于自己, 我在”死亡”的阴影中度过了接近十年, 所以我想要对自己好一点,  在不伤害到其他的人的情况下.</p>
+<p>我太少喝酒了,  酒会消磨我的理性, 放大我的感性,  但是我要约束我的感性. 我大抵是有些心理疾病的, 毕竟我也只是一个普通的人.</p>
+<p>自 2021 年毕业至今, 我自诩挣了一些钱, 够我活一段时间了.  这话有些铜臭味, 但是钱是这个社会立身的根本. 自 T 君离开之后,  我更多感觉的是迷茫, 无关乎快乐与悲伤, 世界上的事情也很难用这两极来衡量取舍.</p>
+<p>我手上的这听酒, 它在变浅.</p>
+<p>感性的时光是伤感的,  也是快乐的.  在留下这些文字的时候,  我感觉我有点清醒了,  因为我感觉我有点乏了. 如果这是一篇命题作文, 那么它毫无疑问是失败的, 因为我这是正好在喝酒,  我的头上正好是月亮, 我正好想到了这句词.</p>
+<p>最后的酒, 敬与江月. 我无法向古人那般洒脱,  明明我也无拘无束.  我不知道我还能失去什么,  只是有些不舍.</p>
 ]]></content>
   </entry>
   <entry>
@@ -15809,25 +15681,40 @@ workbook<span class="token punctuation">.</span>save<span class="token punctuati
       </tags>
   </entry>
   <entry>
-    <title>扁舟一叶向孤城, 浊酒半壶见死生</title>
-    <url>/my-2022/</url>
-    <content><![CDATA[<p>不知不觉有长了一岁, 在不想变成庸庸碌碌的大众的情绪下逐渐融入其中, 这大概就是去岁的一个侧面吧.</p>
+    <title>2021</title>
+    <url>/my-2021/</url>
+    <content><![CDATA[<p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p>
+<p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p>
 <span id="more"></span>
 
-<h2 id="孤帆遥望海天清"><a href="#孤帆遥望海天清" class="headerlink" title="孤帆遥望海天清"></a>孤帆遥望海天清</h2><p>久违地又回归了单身的生活, 虽然对这个结果早有准备, 不过从生活中剜去一块的痛楚与一份感情无处寄托安放的迷茫, 以及淡淡的后悔与怀念, 复杂的情感杂糅在一起, 长久无法平息.  </p>
-<p>所幸生活并没有被疫情的封控压成一潭死水, 在我厌倦了在 A 司的高强度工作之后 – 说到底去 A 司也只是想去南京工作而已 – , 正好收到了 G 司的 offer, 于是欣然起行, 前往苏州. 这一岁七成的时光是在苏州度过的.  </p>
-<p>在苏州的生活非常地休闲, 这本身也是一个节奏比较慢的城市, G 司的企业氛围也非常的放松. 于是就有了更多的个人时间, 去游览观光庙宇 \ 景区 \ 商圈. 在苏州大半的美好回忆是和各种各样的朋友度过的, 和当地的朋友(M 君, G 君, Z 君)与来游玩的朋友(W 君, T 君, X 寻等)一起约饭, 在烟雾蒸腾间觥筹交错, 在湖光月影中畅谈过去现在与未来, 这是我最接近理想生活的时刻.  </p>
-<p>在这里我整租了一套, 一直以来都是合租, 合租固然便宜, 但是谁又愿意自己的生活空间里有一群陌生人呢. 在这里我还养了两只猫, 一只高冷的银渐层叫 mimi, 一只长得像大老鼠的蓝猫叫 nini, 从一开始的手忙脚乱, 到后来每次回家都会看到两只蹲在门口的充实, 养宠物确实能显著地提高生活的质量~  </p>
-<p>等到了年底, G 司风云突变陷入无休止的裁员风波, 最后辗转又来到了 X 司. 选择 X 司是因为这里的主管算是我的老学长, 虽然并不熟悉, 但是有一种天然的亲切感, 我本身也是感情凌驾于利益的那种, 所以便欣然接受了 offer .  </p>
-<p>在人际关系方面, 还有一点是值得记录的, 那就是公司的同事. 在初入职场的时候, 我所秉持的应该是早些年 &lt;厚黑学&gt; 的那一套观念, 但是在工作后对我职场观念影响较大的应该就是 &lt;半泽直树&gt; 了, 并不是说像半泽君那样怼天怼地, 而是那份对待 “人” 的态度, 以真心换真心, 事实证明工作确实没有那么多的勾心斗角, 两位 ZC 君 \ P 君 \ X 君 等, 即使是在离职之后, 仍然会保持一定的联系, 他们对我的评价甚至会让我有点受宠若惊的欣喜.  </p>
-<p>不知不觉之间我也成为了为时代所驱策的, 疲于奔命的普罗大众. 这并无什么不好, 今年所发生的种种不免让人有点心灰意冷, 苦难会开出花朵, 但是同样也会化为他人手中的利刃. 我其实很憧憬那种不以物喜不以己悲的淡泊心态, 在与 H 君渐行渐远后的很长的一段时间内, 我也是以此为目标来进行修行的, 只是感性一点也并没有什么不好的, 飞鸟游鱼以旷达胸怀, 落花流水以寄托哀思, 酒以消愁, 书以养志, 如此而已.</p>
-<p>我仍然会羡慕并追求那种陶然的生活状态, 哪怕是渐行渐远.</p>
-<h2 id="水色流光溢三州"><a href="#水色流光溢三州" class="headerlink" title="水色流光溢三州"></a>水色流光溢三州</h2><p>这一年并没有看多少书, 或者说主要看的都是些闲杂的小说. 正儿八经的, 一本旧书, <em>瓦尔登湖</em>, 两本新书, 一本 <em>置身事内</em>, 另一本是 <em>DDIA</em>. 这里倒有一个趣事, 离开南京前和同样在此地工作的老同学 W 君在老门东的先锋书店, 买了一个图书盲盒, 被坑得比较惨, 漏发了一个帆布包不说, 里面的书也是些不感兴趣的鸡汤与呻吟语.  </p>
-<p>当然, 如果视觉小说也算书的话, 还应该再算上 &lt;逆转裁判1~3&gt; 部. 逆转裁判其实很多地方逻辑上难以推敲(也是毕竟都引入灵异了), 但是当玩家扮演成步堂时一步一步解开真相的面纱, 故事背后的故事引人入胜, 而通关的成就感会成为一段故事的结句和继续开启下一步故事的动力.  </p>
-<p>受疫情所累这一年基本上没有出去玩过, 本来约好了国庆去徐州吃吃喝喝的, 后来正好遇上疫情爆发, 只得搁置. 不过更换工作, 从南京到苏州, 期间也见识到不少有趣的风物. 疫情是一面镜子, 它放大了一些人心中的恶(还记得第一次踏足苏州的时候, 就被无良的出租车司机给大坑了一笔, 后来又被房东给坑了一笔等等, 不过这一部分的记忆没有必要保留, 所以就不多做赘述了), 同时也让一些善意显得弥足珍贵, 比如常去的早餐店和楼下的拉面店, 比如熟络后每次都会送我一些小菜的摊主.</p>
-<p>这一年听得最多的依然是 falcom jdk, 不过在年底, 邓紫棋的 &lt;*启示录*&gt; 算是给了我一个比较大的惊喜, 里面的几首歌都能引起内心强烈的共鸣.</p>
-<h2 id="料峭春风吹酒醒"><a href="#料峭春风吹酒醒" class="headerlink" title="料峭春风吹酒醒"></a>料峭春风吹酒醒</h2><p>回忆总会有一个终点, 我希望它能够定格在一些更有意义的画面上, 我依然是不胜酒力, 尤其是在想要醉的时候. 我会想起很多的人, 他们都是我生命中流光溢彩的珠玉, 虽然很大一部分都已经成为了过客, 这是无所谓的伤感, 因为只是我还在继续向前, 我就会迎来更多的过客; 但是有些人, 哪怕已经不可望亦不可及, 但是仍然会在魂梦之间萦绕, 这些错过都不过是我的过错, 我很清楚这一点, 但是陷得越深就越是自卑, 即使是深刻的苦难所铸就的铁石堡垒, 它的内心依然是空空如也.</p>
-<p>丧气话就到这里吧, 只是这新的一岁我又该何去何从呢? 所有的文人里我最喜欢的就是苏轼, 他与我一样都遭受过将人生冲击得支离破碎的苦难, 但是仍然能够以豪放的姿态行走于世间. 而我最羡慕的则是陶渊明, 归去来兮, 即使时隔千年, 仍不减其中洒然风味. 只希望走出接下来这一年, 我仍然是那个热衷于捣鼓没啥用的东西的技术死宅吧~  </p>
+<h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度"><a href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" class="headerlink" title="以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度"></a>以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度</h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ …… – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p>
+<p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p>
+<p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p>
+<p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么”伟大”, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p>
+<p>这种满足感应该是 <strong>过程</strong>, 也就是作为”学习”这个行为的催化剂, 而非是 <strong>结果</strong>.</p>
+<h2 id="更优化的学习方式和碎片化的生活"><a href="#更优化的学习方式和碎片化的生活" class="headerlink" title="更优化的学习方式和碎片化的生活"></a>更优化的学习方式和碎片化的生活</h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p>
+<p>列一下过去一年中的书单吧.</p>
+<ol>
+<li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li>
+<li>&lt;知识图谱: 概念与技术&gt;</li>
+<li>&lt;20 世纪简史&gt;</li>
+<li>&lt;修改软件的艺术&gt;</li>
+<li>&lt;希望之线&gt;</li>
+</ol>
+<p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p>
+<p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p>
+<p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然”用推理悬疑类来调剂”这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p>
+<p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, “这些时间如何被利用起来”, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 “起点” \ “bilibili” 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p>
+<p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做”上下文切换的开销大”, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有”村上春树工作法”, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对”碎片化时间”还是没有一个很好的解决.</p>
+<p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的”番茄钟”, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p>
+<h2 id="小小目标"><a href="#小小目标" class="headerlink" title="小小目标"></a>小小目标</h2><p>对于 2022 年, 先定几个小小的目标吧.</p>
+<ol>
+<li>Apple Watch 的闭环率达到 90%, 健健康康.</li>
+<li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li>
+<li>完成一次旅行(根据实际疫情而定).</li>
+<li>加薪 50% 以上.</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 “消费行为” , 而理性考虑与现实行动才是 “生产行为” , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p>
 ]]></content>
   </entry>
   <entry>
@@ -16049,6 +15936,138 @@ Color<span class="token punctuation">(</span><span class="token operator">**</sp
       </categories>
       <tags>
         <tag>pythonista</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>扁舟一叶向孤城, 浊酒半壶见死生</title>
+    <url>/my-2022/</url>
+    <content><![CDATA[<p>不知不觉有长了一岁, 在不想变成庸庸碌碌的大众的情绪下逐渐融入其中, 这大概就是去岁的一个侧面吧.</p>
+<span id="more"></span>
+
+<h2 id="孤帆遥望海天清"><a href="#孤帆遥望海天清" class="headerlink" title="孤帆遥望海天清"></a>孤帆遥望海天清</h2><p>久违地又回归了单身的生活, 虽然对这个结果早有准备, 不过从生活中剜去一块的痛楚与一份感情无处寄托安放的迷茫, 以及淡淡的后悔与怀念, 复杂的情感杂糅在一起, 长久无法平息.  </p>
+<p>所幸生活并没有被疫情的封控压成一潭死水, 在我厌倦了在 A 司的高强度工作之后 – 说到底去 A 司也只是想去南京工作而已 – , 正好收到了 G 司的 offer, 于是欣然起行, 前往苏州. 这一岁七成的时光是在苏州度过的.  </p>
+<p>在苏州的生活非常地休闲, 这本身也是一个节奏比较慢的城市, G 司的企业氛围也非常的放松. 于是就有了更多的个人时间, 去游览观光庙宇 \ 景区 \ 商圈. 在苏州大半的美好回忆是和各种各样的朋友度过的, 和当地的朋友(M 君, G 君, Z 君)与来游玩的朋友(W 君, T 君, X 寻等)一起约饭, 在烟雾蒸腾间觥筹交错, 在湖光月影中畅谈过去现在与未来, 这是我最接近理想生活的时刻.  </p>
+<p>在这里我整租了一套, 一直以来都是合租, 合租固然便宜, 但是谁又愿意自己的生活空间里有一群陌生人呢. 在这里我还养了两只猫, 一只高冷的银渐层叫 mimi, 一只长得像大老鼠的蓝猫叫 nini, 从一开始的手忙脚乱, 到后来每次回家都会看到两只蹲在门口的充实, 养宠物确实能显著地提高生活的质量~  </p>
+<p>等到了年底, G 司风云突变陷入无休止的裁员风波, 最后辗转又来到了 X 司. 选择 X 司是因为这里的主管算是我的老学长, 虽然并不熟悉, 但是有一种天然的亲切感, 我本身也是感情凌驾于利益的那种, 所以便欣然接受了 offer .  </p>
+<p>在人际关系方面, 还有一点是值得记录的, 那就是公司的同事. 在初入职场的时候, 我所秉持的应该是早些年 &lt;厚黑学&gt; 的那一套观念, 但是在工作后对我职场观念影响较大的应该就是 &lt;半泽直树&gt; 了, 并不是说像半泽君那样怼天怼地, 而是那份对待 “人” 的态度, 以真心换真心, 事实证明工作确实没有那么多的勾心斗角, 两位 ZC 君 \ P 君 \ X 君 等, 即使是在离职之后, 仍然会保持一定的联系, 他们对我的评价甚至会让我有点受宠若惊的欣喜.  </p>
+<p>不知不觉之间我也成为了为时代所驱策的, 疲于奔命的普罗大众. 这并无什么不好, 今年所发生的种种不免让人有点心灰意冷, 苦难会开出花朵, 但是同样也会化为他人手中的利刃. 我其实很憧憬那种不以物喜不以己悲的淡泊心态, 在与 H 君渐行渐远后的很长的一段时间内, 我也是以此为目标来进行修行的, 只是感性一点也并没有什么不好的, 飞鸟游鱼以旷达胸怀, 落花流水以寄托哀思, 酒以消愁, 书以养志, 如此而已.</p>
+<p>我仍然会羡慕并追求那种陶然的生活状态, 哪怕是渐行渐远.</p>
+<h2 id="水色流光溢三州"><a href="#水色流光溢三州" class="headerlink" title="水色流光溢三州"></a>水色流光溢三州</h2><p>这一年并没有看多少书, 或者说主要看的都是些闲杂的小说. 正儿八经的, 一本旧书, <em>瓦尔登湖</em>, 两本新书, 一本 <em>置身事内</em>, 另一本是 <em>DDIA</em>. 这里倒有一个趣事, 离开南京前和同样在此地工作的老同学 W 君在老门东的先锋书店, 买了一个图书盲盒, 被坑得比较惨, 漏发了一个帆布包不说, 里面的书也是些不感兴趣的鸡汤与呻吟语.  </p>
+<p>当然, 如果视觉小说也算书的话, 还应该再算上 &lt;逆转裁判1~3&gt; 部. 逆转裁判其实很多地方逻辑上难以推敲(也是毕竟都引入灵异了), 但是当玩家扮演成步堂时一步一步解开真相的面纱, 故事背后的故事引人入胜, 而通关的成就感会成为一段故事的结句和继续开启下一步故事的动力.  </p>
+<p>受疫情所累这一年基本上没有出去玩过, 本来约好了国庆去徐州吃吃喝喝的, 后来正好遇上疫情爆发, 只得搁置. 不过更换工作, 从南京到苏州, 期间也见识到不少有趣的风物. 疫情是一面镜子, 它放大了一些人心中的恶(还记得第一次踏足苏州的时候, 就被无良的出租车司机给大坑了一笔, 后来又被房东给坑了一笔等等, 不过这一部分的记忆没有必要保留, 所以就不多做赘述了), 同时也让一些善意显得弥足珍贵, 比如常去的早餐店和楼下的拉面店, 比如熟络后每次都会送我一些小菜的摊主.</p>
+<p>这一年听得最多的依然是 falcom jdk, 不过在年底, 邓紫棋的 &lt;*启示录*&gt; 算是给了我一个比较大的惊喜, 里面的几首歌都能引起内心强烈的共鸣.</p>
+<h2 id="料峭春风吹酒醒"><a href="#料峭春风吹酒醒" class="headerlink" title="料峭春风吹酒醒"></a>料峭春风吹酒醒</h2><p>回忆总会有一个终点, 我希望它能够定格在一些更有意义的画面上, 我依然是不胜酒力, 尤其是在想要醉的时候. 我会想起很多的人, 他们都是我生命中流光溢彩的珠玉, 虽然很大一部分都已经成为了过客, 这是无所谓的伤感, 因为只是我还在继续向前, 我就会迎来更多的过客; 但是有些人, 哪怕已经不可望亦不可及, 但是仍然会在魂梦之间萦绕, 这些错过都不过是我的过错, 我很清楚这一点, 但是陷得越深就越是自卑, 即使是深刻的苦难所铸就的铁石堡垒, 它的内心依然是空空如也.</p>
+<p>丧气话就到这里吧, 只是这新的一岁我又该何去何从呢? 所有的文人里我最喜欢的就是苏轼, 他与我一样都遭受过将人生冲击得支离破碎的苦难, 但是仍然能够以豪放的姿态行走于世间. 而我最羡慕的则是陶渊明, 归去来兮, 即使时隔千年, 仍不减其中洒然风味. 只希望走出接下来这一年, 我仍然是那个热衷于捣鼓没啥用的东西的技术死宅吧~  </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Mori Kokoro 开发过程中遇到的问题(2) 以及使用代码收集</title>
+    <url>/mori-question-and-code-collection/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>距离 Mori v0.1 成形已经过了一周.这一周里面对这个代码进行了进一步的优化.</p>
+<p>在 <a href="https://blog.harumonia.moe/mori-kokoro/">Mori Kokoro 开发记录</a> 中已经对上个阶段开发中遇到的问题进行了一次汇总.本篇是对本阶段的问题的汇总.</p>
+<p>另外.将一些实用的代码摘出.并进行注释说明.</p>
+<p><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/mori.gif" alt="mori" loading="lazy"></p>
+<span id="more"></span>
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="关于-requests-的-hooks"><a href="#关于-requests-的-hooks" class="headerlink" title="关于 requests 的 hooks"></a>关于 requests 的 hooks</h3><p>Mori 中使用 hook 主要是用来进行时间统计.</p>
+<p>在 requests 的 response 中已经存在的请求时间统计.代码如下.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Start time (approximately) of the request</span>
+start <span class="token operator">=</span> preferred_clock<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Send the request</span>
+r <span class="token operator">=</span> adapter<span class="token punctuation">.</span>send<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+<span class="token comment"># Total elapsed time of the request (approximately)</span>
+elapsed <span class="token operator">=</span> preferred_clock<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start
+r<span class="token punctuation">.</span>elapsed <span class="token operator">=</span> timedelta<span class="token punctuation">(</span>seconds<span class="token operator">=</span>elapsed<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以发现.这里仅仅统计了请求所花费的时间.但是我们需要的不仅仅是这个时间.而是从开始处理(包括 post-data 的渲染等)到请求结束的时间.</p>
+<h4 id="为什么使用-hooks"><a href="#为什么使用-hooks" class="headerlink" title="为什么使用 hooks"></a>为什么使用 hooks</h4><p>在 <a href="https://2.python-requests.org/en/master/user/advanced/#id8">Event Hooks</a> 中.给出将 hooks 应用于 requests.get()以及 Session()两种示例.这两种情况不能一概而论.get()是一次性的.而 Session()是持续的.实际上就是 <em>是否需要对请求的每一个 url 使用 hooks 处理</em> 的这样一个问题.不过文档并没有解决我们的问题–为什么(或者说.什么情况下)使用 hooks?</p>
+<p>而在 StackOverflow 的<a href="https://stackoverflow.com/questions/17773028/python-requests-hook-or-no-hook">Python Requests: Hook or no Hook?</a>中给出了很具有参考价值的回答.</p>
+<blockquote>
+<p>Hooks should really therefore only be used to drive behaviours that will make things more predictable, not less. For example, Requests uses them internally to handle 401 responses for various kinds of authentication.</p>
+</blockquote>
+<p>同样.在阅读了源码之后.我个人对于 hooks 的用法作出了一些简单的总结.</p>
+<ul>
+<li>仅仅对请求成功的 response 进行处理</li>
+<li>从设计的角度来看.这个处理是隐式的</li>
+<li>可以将 hooks 与 session 绑定.来实现不同情况下的 response 处理</li>
+<li>hooks 如果存在返回值.那么这个返回值将会取代 response &gt; hooks.py line 32~33</li>
+</ul>
+<h3 id="关于脚本中的重试"><a href="#关于脚本中的重试" class="headerlink" title="关于脚本中的重试"></a>关于脚本中的重试</h3><p>这是问题实际上是要在重试次数和高效爬取之间做出一个取舍.</p>
+<p>从实际的情况出发.</p>
+<p>如果在爬虫的代码中.考虑到了网站的不稳定性.从而进行了多段重试.那么.在 api 的检测中最好也要进行多段的重试.否则就会出现爬虫获取到了数据.但是检测脚本报 api 失效的情况.当然.这种情况是概率性的.如果服务端不稳定.那么无论如何增加重试次数.都会有不一致的情况出现.</p>
+<p>而如果代码中就没有进行重试.那么脚本的重试就显得画蛇添足了.</p>
+<h3 id="xlwt-的列宽问题"><a href="#xlwt-的列宽问题" class="headerlink" title="xlwt 的列宽问题"></a>xlwt 的列宽问题</h3><p>这里的列宽与在 excel 右击 column 所显示的列宽不同.</p>
+<p>在<a href="https://buxty.com/b/2011/10/widths-heights-with-xlwt-python/">Widths &amp; Heights with xlwt + Python</a> 找到了解答.</p>
+<blockquote>
+<p>Columns have a property for setting the width. The value is an integer specifying the size measured in 1/256 of the width of the character ‘0’ as it appears in the sheet’s default font. xlwt creates columns with a default width of 2962, roughly equivalent to 11 characters wide.</p>
+</blockquote>
+<p>也就是说：xlwt 中列宽的值表示方法：默认字体 ‘0’ 的 1/256 为衡量单位.默认宽度值是 2960.大约是 11 个字符的宽度.</p>
+<p>在实际的使用中.我是用的是 256*40+180 这种计算方法.得到的更接近于 40 个字符的宽度.</p>
+<h2 id="摘出常用代码"><a href="#摘出常用代码" class="headerlink" title="摘出常用代码"></a>摘出常用代码</h2><h3 id="邮件发送"><a href="#邮件发送" class="headerlink" title="邮件发送"></a>邮件发送</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">send_mail</span><span class="token punctuation">(</span>receivers<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">,</span> file_content<span class="token punctuation">,</span> html<span class="token punctuation">,</span> subject<span class="token punctuation">,</span> mail_host<span class="token punctuation">,</span> mail_user<span class="token punctuation">,</span> mail_pass<span class="token punctuation">,</span> mail_port<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    发送邮件
+    配置信息见README
+    """</span>
+    <span class="token keyword">import</span> smtplib
+    <span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>text <span class="token keyword">import</span> MIMEText
+    <span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>multipart <span class="token keyword">import</span> MIMEMultipart
+
+    sender <span class="token operator">=</span> mail_user
+    message <span class="token operator">=</span> MIMEMultipart<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    message<span class="token punctuation">[</span><span class="token string">'From'</span><span class="token punctuation">]</span> <span class="token operator">=</span> sender
+    message<span class="token punctuation">[</span><span class="token string">'To'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>receivers<span class="token punctuation">)</span>
+    message<span class="token punctuation">[</span><span class="token string">'Subject'</span><span class="token punctuation">]</span> <span class="token operator">=</span> subject
+
+    <span class="token keyword">if</span> html<span class="token punctuation">:</span>
+        message<span class="token punctuation">.</span>attach<span class="token punctuation">(</span>MIMEText<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    part <span class="token operator">=</span> MIMEText<span class="token punctuation">(</span>file_content<span class="token punctuation">.</span>getvalue<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"vnd.ms-excel"</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    part<span class="token punctuation">.</span>add_header<span class="token punctuation">(</span><span class="token string">'Content-Disposition'</span><span class="token punctuation">,</span> <span class="token string">'attachment'</span><span class="token punctuation">,</span>
+                    filename<span class="token operator">=</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">&#123;</span>subject<span class="token punctuation">&#125;</span></span><span class="token string">.xls'</span></span><span class="token punctuation">)</span>
+    message<span class="token punctuation">.</span>attach<span class="token punctuation">(</span>part<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> count <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> mail_port <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                smtp <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                smtp<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>mail_host<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                smtp <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP_SSL<span class="token punctuation">(</span>mail_host<span class="token punctuation">,</span> mail_port<span class="token punctuation">)</span>
+            smtp<span class="token punctuation">.</span>ehlo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            smtp<span class="token punctuation">.</span>login<span class="token punctuation">(</span>mail_user<span class="token punctuation">,</span> mail_pass<span class="token punctuation">)</span>
+            smtp<span class="token punctuation">.</span>sendmail<span class="token punctuation">(</span>sender<span class="token punctuation">,</span> receivers<span class="token punctuation">,</span> message<span class="token punctuation">.</span>as_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            smtp<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> _e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>_e<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> count <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'failed to send email'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="将二维数组变成-html-table"><a href="#将二维数组变成-html-table" class="headerlink" title="将二维数组变成 html-table"></a>将二维数组变成 html-table</h3><p>在发送邮件时.邮件的内容可以是 html.所以将报表的结果变为 html-table.更方便查看.</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">generate_table</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    th <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token keyword">for</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>headers<span class="token punctuation">:</span>
+        th <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;th style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>value<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/th>'</span></span>
+    thead <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'&lt;thead style="background-color:gray;"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>th<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/thead>'</span></span> <span class="token comment"># 表头的底色变为灰色</span>
+    tbody <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token keyword">for</span> result <span class="token keyword">in</span> self<span class="token punctuation">.</span>results<span class="token punctuation">:</span>
+        tr <span class="token operator">=</span> <span class="token string">''</span>
+        <span class="token keyword">for</span> header <span class="token keyword">in</span> self<span class="token punctuation">.</span>headers<span class="token punctuation">:</span>
+            tr <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;td style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>result<span class="token punctuation">[</span>header<span class="token punctuation">]</span><span class="token punctuation">&#125;</span></span><span class="token string">&lt;/td>'</span></span>
+        <span class="token keyword">if</span> result<span class="token punctuation">[</span><span class="token string">'check_result'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">"OK"</span><span class="token punctuation">:</span>    <span class="token comment"># 判断结果是否是'OK',如果不是,则该行变为红色</span>
+            tbody <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;tr style="color:red"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tr<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/tr>'</span></span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            tbody <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'&lt;tr></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tr<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/tr>'</span></span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f'&lt;p>Mori Result&lt;/p>&lt;table style="border:1px solid"></span><span class="token interpolation"><span class="token punctuation">&#123;</span>thead<span class="token punctuation">&#125;</span></span><span class="token interpolation"><span class="token punctuation">&#123;</span>tbody<span class="token punctuation">&#125;</span></span><span class="token string">&lt;/table>'</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>源流清泉</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>diyTools</tag>
       </tags>
   </entry>
   <entry>
@@ -16466,7 +16485,7 @@ socket<span class="token punctuation">.</span><span class="token function">close
     <title>个人简历(备用)</title>
     <url>/resume/</url>
     <content><![CDATA[<h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>now：大三在读(2021 毕业)</p>
-<p>email:<a href="mailto:&#122;&#x78;&#106;&#108;&#109;&#50;&#51;&#x33;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;">&#122;&#x78;&#106;&#108;&#109;&#50;&#51;&#x33;&#x40;&#x31;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></p>
+<p>email:<a href="mailto:&#x7a;&#120;&#106;&#x6c;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#54;&#51;&#46;&#99;&#111;&#109;">&#x7a;&#120;&#106;&#x6c;&#x6d;&#x32;&#51;&#51;&#x40;&#x31;&#54;&#51;&#46;&#99;&#111;&#109;</a></p>
 <p>base:南京</p>
 <p>求职意向：后端开发、测试</p>
 <p>个人总结：</p>
@@ -16714,6 +16733,49 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
       </tags>
   </entry>
   <entry>
+    <title>大学生活阶段性小结</title>
+    <url>/upon-graduation/</url>
+    <content><![CDATA[<p>醉花阴 - 满船清梦</p>
+<p>红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.<br>杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.</p>
+<p>– harumonia, 二〇二一年六月, 于南京中医药大学</p>
+<span id="more"></span>
+
+<h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><p>“我的大学”, 这是一段很漫长的故事了, 从 2017 年 9 月一个人背着沉重的行李, 怀揣满身的失意来到这里, 到现在我安安静静地坐在这里写下这段文字, 中间已经过去了 4 年. 再回首, 不免又生出”往事已矣”之嗟叹, 而历历往事, 其中的苦乐, 又仿佛是在昨日.</p>
+<h3 id="军训"><a href="#军训" class="headerlink" title="军训"></a>军训</h3><p>军训作为这段生活的第一页, 还是有很多有趣的回忆的.</p>
+<p>自初中 <em>CGL</em> 病愈之后, 我一直体弱, 对于这种重体力的活动, 我一向是敬而远之的. 而大学, 也许是为了翻开人生的新篇, 又或许是对过去与未来的自弃, 我跟着新同学们军训了一段时间. 理所当然的, 后来申请了免训, 这毕竟不是什么热血少年漫, 终究是要以生命安全为第一要务.</p>
+<p>在此之后, 当然也没有闲着, 除了应付每日的通讯稿额度, 剩下大把的时间还是用来做我最喜欢的事情 – 看书. 在这期间, 我看完了两本书, 一本是延续了中学时期的惯性所选择的东野圭吾的&lt;白夜行&gt;, 另一本则是出于纯粹的兴趣爱好所选择的&lt;计算机组装与维修&gt;(事实证明这本书最终并没有在我的大学生涯中起到任何作用= =).</p>
+<p>军训期间另一个值得一说的, 我找了第一份兼职工作 – 在学校网络中心担任学生助理. 找兼职的原因很纯粹, 贫穷. 彼时的我沉迷于 <em>FGO</em> – 当然现在也是 – 并且常有氪金, 而这种娱乐性质的开销又羞于向父母开口, 所以便自己自力更生.</p>
+<h3 id="大一"><a href="#大一" class="headerlink" title="大一"></a>大一</h3><p>大一唯一值得称道的大概就是我利用周末的时间广游了南京一地的人文胜地. 中山陵及其周边 \ 总统府 \ 栖霞山 \ 灵谷寺 \ 牛首山等, 这些大多是一个人的旅行, 少数是与高中的几位好友邀约, 个中趣味, 不足为外人道哉. 这其中的一个有趣的插曲就是, 2018 年的元旦, 与徐君等人的紫金山跨年,虽然最后没有看到日出(阴天去看日出?), 却也是一大乐事.</p>
+<p>除去上述, 我的大一与寻常学生并无二致, 就是宿舍\食堂\教学楼, 三点之间来回周转. 这段时间课业较轻,一鼓作气冲完了四六级之余尚有闲暇, 所以又找了一份图书馆的兼职(逐渐化身打工战士), 而在图书馆中,我读完了 <em>Ken Follett</em> 的 <strong>世纪三部曲</strong> 中的 &lt;巨人的陨落&gt; 与 &lt;世界的凛冬&gt;, 黄仁宇的&lt;万历十五年&gt;, 亦有东野圭吾的&lt;假面山庄&gt;等小说若干, 当然, 由于工作地点是医学库, 所以也读了很多医学类的书籍, 其中有得知何君患病后, 读&lt;内科学&gt;等著作, 不甚了了, 而后转读&lt;内经&gt;等, 深感医学之博大. 至于哲学方面, 则是读了南怀瑾的&lt;禅宗与道家&gt;, 其内容与冯友兰的&lt;中国哲学简史&gt;中相互印证之处, 读之有 “恺之食甘蔗” 之妙.</p>
+<p>至于专业, 说来有趣, 我在课余所接触到的第一门语言便是 Python, 而这契机便是想从 <em>Pixiv</em> 上面爬取一些漂亮的图片, 当时用 <em>selenium</em> 做了很笨重的一个爬虫, 不过效果确实不错, 而为了访问 <em>Pixiv</em>, 我又租了国外的 VPS 若干, 其中又被迫掌握了 Linux 的常规使用技巧和养成了用 <em>Google</em> 搜索的习惯. 这段历史也有几篇博客留存, 不过其中内容现在看来颇为青涩, 便将其置为隐藏, 以免对其他初学者产生误导.</p>
+<p>比赛方面, 这一学年似乎就报了两个比赛, 一个是 <em>人文社科知识竞赛</em>, 差不多类似于 <em>千分题</em>, 是文科类型的知识竞赛, 而文史又恰是我所长, 最终获得了江苏省的优秀奖(具体成绩是前 3%, 更具体的就没有显示了). 另一个是和陆君及王君参加的暑期数学建模培训, 最终赛题是 “垃圾短信分类”, 虽然我的看家功夫”爬虫”没有爬上用场, 不过其伴生的”数据收集”能力确实大放异彩, 而 python 亦是作为主力的编程语言助力良多, 最终这个比赛获得的是校赛的一等奖(应该是唯一的?).</p>
+<h3 id="大二"><a href="#大二" class="headerlink" title="大二"></a>大二</h3><p>大二出现了这段平静生活的第一个转折点, 那就是本科导师. 严格来说我并没有达到选择本导的要求, 由于大一下沉迷各种奇技淫巧, 成绩自然也有所下滑(当然体育成绩被记了 0 分才是大头= =, 不过比起撞钟的老师和水课的学生, 还是将时间投入到自己的爱好上更有意义). 不过大一上过杨涛老师的网络基础课, 于是尝试性的发了一个申请 ,我更愿意称之为是一个巧合, 这个申请作为众多申请中仅有的一例通过了.</p>
+<p>进入杨老师的工作室之后, 原有的生活节奏自然也被打乱了. 由于每周都有一次汇报, 技术的学习终归是有了一个比较明确的方向, 还记得我的第一次汇报就是网络爬虫, 似乎还和小汪学姐的汇报撞车了(笑. 后来, 为了获得更多的空余时间, 我辞去了网路中心学生助理一职, 只留了图书馆的兼职, 毕竟这个职位附赠一个图书馆工位, 座位资源在图书馆旺季还是很珍贵的.</p>
+<p>也是这个学年, 我学习了 Python 的 Web 开发技术, 三脚猫的功夫, 却被误认为是”大佬”, 因此开始了生活节奏极度混乱的大二第二学期. 这一学期先是报了学校举办的软信大赛, 然后成功突围参加了蓝桥杯程序设计大赛. 而后又被许君和唐君拉去参加了大学生计算机设计大赛, 还有大创(大创我也就前期改了改文档, 而真正的技术方面, 反而是没有起到太大的帮助), 整个大二下几乎就是围绕着”大学生计算机设计大赛”在转, 我们的选题是”药方拍立得”, 从确定选题的 3 月 14 日起, 花了一周的时间开发出了一个移动应用和配套的后端, 怎么说呢, deadline 是人类的第一生产力, 全心全力扑在技术上的结果就是, 校赛突围, 并且对整个 Python 的开发体系有了长足而深刻的认识.</p>
+<p>之后是省赛, 省赛并没有添加什么新的功能, 只是将原有的功能进行了优化, 而这个省赛的时间点又与”蓝桥杯”省赛的时间点重合, 自然又是一阵昏天黑地的忙碌. 省赛最后是在徐州举办, 实打实的享受了一趟”公款旅行”, 这个倾注了我前前后后两个月心血的作品最终也不负众望地从省赛突围.</p>
+<p>省赛之后就要开始准备各科的期末了, 又是一段疲于奔命的时光, 这里就不细表了. 期间抽空与高君前往鸡鸣寺赏樱, 却是错过了花期, 转又往玄武湖一游, 颇得王徽之”乘兴而来, 兴尽而返”之远意.</p>
+<p>再后来是暑期工作室集训, 我有幸被杨老师任命为 17 级的领头人, 负责协助他对同学们进行技术方面的培训. 教学相长, 这一过程中我对于项目管理\实施等书本上的纯粹理论进行了实践, 亦有所收获. 并且这也使我与工作室其他诸君愈发熟稔.</p>
+<p>大二下的句号划在了安徽芜湖, 这里是国赛的举办地, 在这里我获得了大学阶段的第一个国奖.</p>
+<p>大二所读之书多集中于技术方面, 小说读有米泽穗信的&lt;冰菓&gt;, 文学类读有余秋雨的几篇名作, 社科类则是读了吴军的&lt;文明之光&gt;和 Yuval Noah Harari 的&lt;人类简史&gt;, 俱是佳作, 其余诸书不表.</p>
+<p>大二所获之奖甚多, 包括人奖在内, 诸多奖项也算是不负这一年来的忙碌.</p>
+<h3 id="大三"><a href="#大三" class="headerlink" title="大三"></a>大三</h3><p>大三之初, 中秋节, 被陶君与于君拉过去参加数学建模, 这是我大学来的第一次通宵, 其演算的结果也颇令我与指导老师沈老师满意, 而最终比赛成绩名落孙山, 着实是一个很大的打击.</p>
+<p>而后十月份, 又被杨老师委派去参加在安徽中医药大学举办的”全国中医药人工智能大赛”, 比起最终的奖项, 与工作室诸君的回忆, 沿途安徽地区的人文景观, 还算不错的伙食, 这些才是更大的收获.年末,与陶君确认恋人关系至今. 元旦又与徐君一道, 去尝试了价格较为昂贵的”虹料理”, 一顿差不多是我勤工助学两个月的收入, 不过吃得也的确尽兴.</p>
+<p>大三就没有再去参加多少比赛了, 转而开始找工作. 通过了阿里的笔试, 败于面试. 在 LeetCode 上面刷了不少的题目, 参加了一些的线上比赛. 后来又投了三份简历, 一份是医学图像岗, 一份是数据技术岗, 一份是后端开发岗, 最终数据技术岗和后端开发岗进入最终轮面试, 而由于数据技术岗公司更加成熟,规模更大, 于是放弃了薪资更高的后端开发岗.</p>
+<p>由于疫情的原因, 大三的寒假得以好好地在家里沉淀过往之所学, 期间产出博客数篇, 俱无问津者.</p>
+<h3 id="大四"><a href="#大四" class="headerlink" title="大四"></a>大四</h3><p>大四的大部分时间都是在启信宝苏州部进行实习, 期间发生趣事多为社会之事, 与本篇主旨无关, 故不表.而与学习生活相关的, 在这段时间, 我对技术进行了深化, 并且以此为基开始了我的毕业设计.</p>
+<p>而后大四下学期, 四月份中旬, 返回学校, 开始正式完善毕业设计的算法模块, 这是一个完成度比较高的毕业设计, 也是整个大学以来我最满意的独立项目. 最终这个毕设的综合评分是 94 分, 我不知道这个成绩排名如何, 想来也是不错的.</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大学这四年, 大一如春之深林, 大二如秋之硕果, 大三如冬之莽原, 大四如夏之虫鸣, 俱是佳季, 各有风骚.</p>
+<p>这四年来, 干过一些年少轻狂的事情, 也写过一些无病呻吟的文字, 但总的来说, 印证了那句老话, “不因虚度度年华而悔恨，也不因碌碌无为而羞愧”, 谨以此篇, 以作激励, 希望在大学之后的生活, 同样能够活出自己的精彩.</p>
+<p>2021.6 于南京中医药大学</p>
+]]></content>
+      <categories>
+        <category>起居杂录</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>github同步代码片段的自动化脚本</title>
     <url>/sync-code-snippet/</url>
     <content><![CDATA[<p>工作快一年了, 积累了很多的 代码片段(<code>code snippet</code>), 所以需要一个小工具来实现公司\家庭\开发\私人服务器等地方的代码片段的同步.</p>
@@ -16809,49 +16871,6 @@ mysqld: Can<span class="token string">'t change permissions of the file '</span>
       </categories>
       <tags>
         <tag>Trick</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大学生活阶段性小结</title>
-    <url>/upon-graduation/</url>
-    <content><![CDATA[<p>醉花阴 - 满船清梦</p>
-<p>红山微雨凉初透, 孤帆见重楼. 金陵一樽酒, 栏干拍遍, 难解少年愁.<br>杏坛归离芒种后, 三尺决九州. 还酹江天月, 醉里挑灯, 共此韶华旧.</p>
-<p>– harumonia, 二〇二一年六月, 于南京中医药大学</p>
-<span id="more"></span>
-
-<h2 id="大学"><a href="#大学" class="headerlink" title="大学"></a>大学</h2><p>“我的大学”, 这是一段很漫长的故事了, 从 2017 年 9 月一个人背着沉重的行李, 怀揣满身的失意来到这里, 到现在我安安静静地坐在这里写下这段文字, 中间已经过去了 4 年. 再回首, 不免又生出”往事已矣”之嗟叹, 而历历往事, 其中的苦乐, 又仿佛是在昨日.</p>
-<h3 id="军训"><a href="#军训" class="headerlink" title="军训"></a>军训</h3><p>军训作为这段生活的第一页, 还是有很多有趣的回忆的.</p>
-<p>自初中 <em>CGL</em> 病愈之后, 我一直体弱, 对于这种重体力的活动, 我一向是敬而远之的. 而大学, 也许是为了翻开人生的新篇, 又或许是对过去与未来的自弃, 我跟着新同学们军训了一段时间. 理所当然的, 后来申请了免训, 这毕竟不是什么热血少年漫, 终究是要以生命安全为第一要务.</p>
-<p>在此之后, 当然也没有闲着, 除了应付每日的通讯稿额度, 剩下大把的时间还是用来做我最喜欢的事情 – 看书. 在这期间, 我看完了两本书, 一本是延续了中学时期的惯性所选择的东野圭吾的&lt;白夜行&gt;, 另一本则是出于纯粹的兴趣爱好所选择的&lt;计算机组装与维修&gt;(事实证明这本书最终并没有在我的大学生涯中起到任何作用= =).</p>
-<p>军训期间另一个值得一说的, 我找了第一份兼职工作 – 在学校网络中心担任学生助理. 找兼职的原因很纯粹, 贫穷. 彼时的我沉迷于 <em>FGO</em> – 当然现在也是 – 并且常有氪金, 而这种娱乐性质的开销又羞于向父母开口, 所以便自己自力更生.</p>
-<h3 id="大一"><a href="#大一" class="headerlink" title="大一"></a>大一</h3><p>大一唯一值得称道的大概就是我利用周末的时间广游了南京一地的人文胜地. 中山陵及其周边 \ 总统府 \ 栖霞山 \ 灵谷寺 \ 牛首山等, 这些大多是一个人的旅行, 少数是与高中的几位好友邀约, 个中趣味, 不足为外人道哉. 这其中的一个有趣的插曲就是, 2018 年的元旦, 与徐君等人的紫金山跨年,虽然最后没有看到日出(阴天去看日出?), 却也是一大乐事.</p>
-<p>除去上述, 我的大一与寻常学生并无二致, 就是宿舍\食堂\教学楼, 三点之间来回周转. 这段时间课业较轻,一鼓作气冲完了四六级之余尚有闲暇, 所以又找了一份图书馆的兼职(逐渐化身打工战士), 而在图书馆中,我读完了 <em>Ken Follett</em> 的 <strong>世纪三部曲</strong> 中的 &lt;巨人的陨落&gt; 与 &lt;世界的凛冬&gt;, 黄仁宇的&lt;万历十五年&gt;, 亦有东野圭吾的&lt;假面山庄&gt;等小说若干, 当然, 由于工作地点是医学库, 所以也读了很多医学类的书籍, 其中有得知何君患病后, 读&lt;内科学&gt;等著作, 不甚了了, 而后转读&lt;内经&gt;等, 深感医学之博大. 至于哲学方面, 则是读了南怀瑾的&lt;禅宗与道家&gt;, 其内容与冯友兰的&lt;中国哲学简史&gt;中相互印证之处, 读之有 “恺之食甘蔗” 之妙.</p>
-<p>至于专业, 说来有趣, 我在课余所接触到的第一门语言便是 Python, 而这契机便是想从 <em>Pixiv</em> 上面爬取一些漂亮的图片, 当时用 <em>selenium</em> 做了很笨重的一个爬虫, 不过效果确实不错, 而为了访问 <em>Pixiv</em>, 我又租了国外的 VPS 若干, 其中又被迫掌握了 Linux 的常规使用技巧和养成了用 <em>Google</em> 搜索的习惯. 这段历史也有几篇博客留存, 不过其中内容现在看来颇为青涩, 便将其置为隐藏, 以免对其他初学者产生误导.</p>
-<p>比赛方面, 这一学年似乎就报了两个比赛, 一个是 <em>人文社科知识竞赛</em>, 差不多类似于 <em>千分题</em>, 是文科类型的知识竞赛, 而文史又恰是我所长, 最终获得了江苏省的优秀奖(具体成绩是前 3%, 更具体的就没有显示了). 另一个是和陆君及王君参加的暑期数学建模培训, 最终赛题是 “垃圾短信分类”, 虽然我的看家功夫”爬虫”没有爬上用场, 不过其伴生的”数据收集”能力确实大放异彩, 而 python 亦是作为主力的编程语言助力良多, 最终这个比赛获得的是校赛的一等奖(应该是唯一的?).</p>
-<h3 id="大二"><a href="#大二" class="headerlink" title="大二"></a>大二</h3><p>大二出现了这段平静生活的第一个转折点, 那就是本科导师. 严格来说我并没有达到选择本导的要求, 由于大一下沉迷各种奇技淫巧, 成绩自然也有所下滑(当然体育成绩被记了 0 分才是大头= =, 不过比起撞钟的老师和水课的学生, 还是将时间投入到自己的爱好上更有意义). 不过大一上过杨涛老师的网络基础课, 于是尝试性的发了一个申请 ,我更愿意称之为是一个巧合, 这个申请作为众多申请中仅有的一例通过了.</p>
-<p>进入杨老师的工作室之后, 原有的生活节奏自然也被打乱了. 由于每周都有一次汇报, 技术的学习终归是有了一个比较明确的方向, 还记得我的第一次汇报就是网络爬虫, 似乎还和小汪学姐的汇报撞车了(笑. 后来, 为了获得更多的空余时间, 我辞去了网路中心学生助理一职, 只留了图书馆的兼职, 毕竟这个职位附赠一个图书馆工位, 座位资源在图书馆旺季还是很珍贵的.</p>
-<p>也是这个学年, 我学习了 Python 的 Web 开发技术, 三脚猫的功夫, 却被误认为是”大佬”, 因此开始了生活节奏极度混乱的大二第二学期. 这一学期先是报了学校举办的软信大赛, 然后成功突围参加了蓝桥杯程序设计大赛. 而后又被许君和唐君拉去参加了大学生计算机设计大赛, 还有大创(大创我也就前期改了改文档, 而真正的技术方面, 反而是没有起到太大的帮助), 整个大二下几乎就是围绕着”大学生计算机设计大赛”在转, 我们的选题是”药方拍立得”, 从确定选题的 3 月 14 日起, 花了一周的时间开发出了一个移动应用和配套的后端, 怎么说呢, deadline 是人类的第一生产力, 全心全力扑在技术上的结果就是, 校赛突围, 并且对整个 Python 的开发体系有了长足而深刻的认识.</p>
-<p>之后是省赛, 省赛并没有添加什么新的功能, 只是将原有的功能进行了优化, 而这个省赛的时间点又与”蓝桥杯”省赛的时间点重合, 自然又是一阵昏天黑地的忙碌. 省赛最后是在徐州举办, 实打实的享受了一趟”公款旅行”, 这个倾注了我前前后后两个月心血的作品最终也不负众望地从省赛突围.</p>
-<p>省赛之后就要开始准备各科的期末了, 又是一段疲于奔命的时光, 这里就不细表了. 期间抽空与高君前往鸡鸣寺赏樱, 却是错过了花期, 转又往玄武湖一游, 颇得王徽之”乘兴而来, 兴尽而返”之远意.</p>
-<p>再后来是暑期工作室集训, 我有幸被杨老师任命为 17 级的领头人, 负责协助他对同学们进行技术方面的培训. 教学相长, 这一过程中我对于项目管理\实施等书本上的纯粹理论进行了实践, 亦有所收获. 并且这也使我与工作室其他诸君愈发熟稔.</p>
-<p>大二下的句号划在了安徽芜湖, 这里是国赛的举办地, 在这里我获得了大学阶段的第一个国奖.</p>
-<p>大二所读之书多集中于技术方面, 小说读有米泽穗信的&lt;冰菓&gt;, 文学类读有余秋雨的几篇名作, 社科类则是读了吴军的&lt;文明之光&gt;和 Yuval Noah Harari 的&lt;人类简史&gt;, 俱是佳作, 其余诸书不表.</p>
-<p>大二所获之奖甚多, 包括人奖在内, 诸多奖项也算是不负这一年来的忙碌.</p>
-<h3 id="大三"><a href="#大三" class="headerlink" title="大三"></a>大三</h3><p>大三之初, 中秋节, 被陶君与于君拉过去参加数学建模, 这是我大学来的第一次通宵, 其演算的结果也颇令我与指导老师沈老师满意, 而最终比赛成绩名落孙山, 着实是一个很大的打击.</p>
-<p>而后十月份, 又被杨老师委派去参加在安徽中医药大学举办的”全国中医药人工智能大赛”, 比起最终的奖项, 与工作室诸君的回忆, 沿途安徽地区的人文景观, 还算不错的伙食, 这些才是更大的收获.年末,与陶君确认恋人关系至今. 元旦又与徐君一道, 去尝试了价格较为昂贵的”虹料理”, 一顿差不多是我勤工助学两个月的收入, 不过吃得也的确尽兴.</p>
-<p>大三就没有再去参加多少比赛了, 转而开始找工作. 通过了阿里的笔试, 败于面试. 在 LeetCode 上面刷了不少的题目, 参加了一些的线上比赛. 后来又投了三份简历, 一份是医学图像岗, 一份是数据技术岗, 一份是后端开发岗, 最终数据技术岗和后端开发岗进入最终轮面试, 而由于数据技术岗公司更加成熟,规模更大, 于是放弃了薪资更高的后端开发岗.</p>
-<p>由于疫情的原因, 大三的寒假得以好好地在家里沉淀过往之所学, 期间产出博客数篇, 俱无问津者.</p>
-<h3 id="大四"><a href="#大四" class="headerlink" title="大四"></a>大四</h3><p>大四的大部分时间都是在启信宝苏州部进行实习, 期间发生趣事多为社会之事, 与本篇主旨无关, 故不表.而与学习生活相关的, 在这段时间, 我对技术进行了深化, 并且以此为基开始了我的毕业设计.</p>
-<p>而后大四下学期, 四月份中旬, 返回学校, 开始正式完善毕业设计的算法模块, 这是一个完成度比较高的毕业设计, 也是整个大学以来我最满意的独立项目. 最终这个毕设的综合评分是 94 分, 我不知道这个成绩排名如何, 想来也是不错的.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大学这四年, 大一如春之深林, 大二如秋之硕果, 大三如冬之莽原, 大四如夏之虫鸣, 俱是佳季, 各有风骚.</p>
-<p>这四年来, 干过一些年少轻狂的事情, 也写过一些无病呻吟的文字, 但总的来说, 印证了那句老话, “不因虚度度年华而悔恨，也不因碌碌无为而羞愧”, 谨以此篇, 以作激励, 希望在大学之后的生活, 同样能够活出自己的精彩.</p>
-<p>2021.6 于南京中医药大学</p>
-]]></content>
-      <categories>
-        <category>起居杂录</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
