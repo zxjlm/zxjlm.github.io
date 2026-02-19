@@ -1,5 +1,5 @@
 ---
-title: luna-horse-1-3
+title: 人生如梦, 一尊还酹江月 - 2026
 status: publish
 author: harumonia
 noThumbInfoStyle: default
