@@ -1,3 +1,4 @@
+https://blog.harumonia.moe/vibe-coding-1/
 https://blog.harumonia.moe/luna-horse-1-3/
 https://blog.harumonia.moe/kimi-discount/
 https://blog.harumonia.moe/2023-01-18-ddia-s3-p2/
@@ -7,4 +8,3 @@ https://blog.harumonia.moe/2022-11-14-pytest-mock-counter/
 https://blog.harumonia.moe/2022-10-10-C3-Storage-and-Retrieval/
 https://blog.harumonia.moe/2022-4-7/
 https://blog.harumonia.moe/2022-06-24-django2swagger/
-https://blog.harumonia.moe/2022-09-10-pycharm-docker-compose-dev/
