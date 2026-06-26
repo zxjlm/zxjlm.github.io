@@ -23,12 +23,6 @@ export default defineSiteConfig({
       color: 'orange',
     },
     {
-      name: 'QQ',
-      link: 'https://qm.qq.com/cgi-bin/qm/qr?k=DSmoEtSKHITcV9pghYqqmSQ80-SPnPjm&noverify=0',
-      icon: 'i-ri-qq-line',
-      color: '#12B7F5',
-    },
-    {
       name: 'GitHub',
       link: 'https://github.com/zxjlm',
       icon: 'i-ri-github-line',
@@ -39,12 +33,6 @@ export default defineSiteConfig({
       link: 'https://space.bilibili.com/1801214',
       icon: 'i-ri-bilibili-line',
       color: '#FF8EB3',
-    },
-    {
-      name: 'Twitter',
-      link: 'https://twitter.com/Harumonia1996',
-      icon: 'i-ri-twitter-x-fill',
-      color: '#1da1f2',
     },
     {
       name: 'E-Mail',
