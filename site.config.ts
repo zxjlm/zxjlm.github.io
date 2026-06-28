@@ -14,7 +14,7 @@ export default defineSiteConfig({
     },
   },
   description: 'lazy',
-  favicon: '/yun.svg',
+  favicon: '/favicon.svg',
   social: [
     {
       name: 'RSS',
