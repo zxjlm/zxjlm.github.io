@@ -14,49 +14,43 @@ hidden: false
 
 ## 关于博主
 
-博主是一个大学狗，专业是医学信息工程。
+博主是 21 年毕业的本科生，毕业后先后在 garena 、合合信息 工作。
 
-爱好玩游戏，pc、主机、手游，都玩。文明 6 偶尔杀杀时间，工作室系列攻略中，fgo、AL 持续签到中。
+爱好玩游戏，pc、主机、手游，都玩。文明 6 偶尔杀杀时间，fgo、AL 持续签到中，偏好 JRPG 。
 
 爱好旅游，尤好了解各地的风物。
 
-爱好看书，文学类、社科类、历史类为主，网络小说也看啦，爽文可是缓解压力的利器呢。
+爱好看书，以前喜欢看文学类、社科类、历史类，
+现在则是喜欢看 推理类（业余推理爱好者）、社科类（你不关心政治，政治就会关心你）、技术类。
 
 ### 技能树
 
-主攻后端，目前爬虫。
+主攻后端，目前后端架构，ai 时代也会干干全栈。
 
-- HTML5
-- JavaScript
-
-  - 各种的模板 如 layui、easyui、etc.
-  - 各种的插件 如 echarts、cytoscape、animate、etc.
-
-- Python
-  - spider
-  - flask：能够使用 flask 独立开发一个前后端兼备的项目，具体的可以参看项目页面。
-  - 数据分析
+- Vibe Coding
+  - ide: Cursor、Codex，美区付费；Claude Code （主力使用，公司提供 token）
+  - SDD、Openspec，在实际业务中深度实践 SDD 理论
+- 后端：Python 为主
+  - 目前工作使用 fastapi， 过去也在实际业务上使用过 flask 和 django
   - sklearn、TensorFlow 等框架，略懂，能够初步在生产环境下使用。
-  - etc.
-- C++
-  C++目前的主要应用就是刷刷刷算法。
-- C#
-  C#没有实际在生产环境中使用过，不过课设倒是拿了个第一名，很多的初学者的问题都能解决就是了。
-
+  - spider 爬虫业务，基础的反爬虫策略
+  - 异步框架优化与使用
+- 后端架构
+  - k8s、docker
+  - sentry、grafana、es
+  - celery
 - DB
-  - mysql
-  - MSSQL
-  - sqlite
-  - MongoDB
+  - mysql，业务开发主要技术栈
+  - postgres，个人项目会使用
+  - MongoDB，业务开发主要技术栈
   - Redis
-
-mysql 是目前做后端开发时所使用的主力，而 Redis 与 MongoDB 则是在做爬虫开发时所使用的主力。
-MSSQL 是在进行课程学习时所教授的数据库系统。鄙人的数据库课设也是第一(哦嚯嚯~)
+- 前端
+  - 本来是有这一块的技能的，但是现在优化掉了(˘³˘)
+  - Vibe 时代会使用 vue、react 来做一些全栈项目，但是现在，从 UI 设计到编码实现，基本上完全托管给 AI 了
+  - 省下来的精力不如多研究研究 Vibe Coding 的一些理论
 
 - Other
-  - linux
-  - docker
-  - etc.
+  - linux、macos
 
 ## 关于本博客
 
