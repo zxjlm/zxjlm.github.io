@@ -11,6 +11,8 @@ email: zxjlm233@gmail.com
 date: 2022-02-04 22:14:39
 updated: 2022-02-07 10:25:34
 hidden: true
+categories:
+  - 起居杂录
 tags:
 ---
 

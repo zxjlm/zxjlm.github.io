@@ -11,11 +11,17 @@ export default defineValaxyConfig<ThemeConfig>({
 
     nav: [
       { text: '首页', link: '/' },
+      { text: '生活', link: '/notes/' },
       { text: '归档', link: '/archives/' },
       { text: '分类', link: '/categories/' },
       { text: '标签', link: '/tags/' },
       { text: '关于', link: '/about/' },
     ],
+
+    content: {
+      lifeCategories: ['起居杂录', '桂苑酌记', '见闻录'],
+      devCategories: ['源流清泉'],
+    },
 
     footer: {
       since: 2018,
