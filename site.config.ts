@@ -14,7 +14,7 @@ export default defineSiteConfig({
     },
   },
   description: 'lazy',
-  favicon: '/favicon.ico',
+  favicon: 'https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico',
   social: [
     {
       name: 'RSS',
