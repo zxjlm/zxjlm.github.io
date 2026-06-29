@@ -9,8 +9,10 @@
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
+    "new": "node scripts/new-post.mjs",
     "rss": "valaxy rss",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "node --test scripts/*.test.mjs"
   },
   "dependencies": {
     "valaxy": "0.28.11",
