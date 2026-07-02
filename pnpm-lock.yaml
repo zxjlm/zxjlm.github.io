@@ -12,8 +12,8 @@ importers:
         specifier: 0.28.11
         version: 0.28.11(@babel/parser@7.29.7)(@nuxt/kit@3.21.8(magicast@0.5.3))(@types/markdown-it@14.1.2)(@types/node@26.0.0)(@vue/compiler-dom@3.5.38)(axios@1.18.0)(eslint@10.5.0(jiti@2.7.0))(typescript@5.9.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.38)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.38(typescript@5.9.3)))(vite@8.0.16(@types/node@26.0.0)(jiti@2.7.0)(sass@1.101.0)(yaml@2.9.0))(vue@3.5.38(typescript@5.9.3)))(vue@3.5.38(typescript@5.9.3))(yaml@2.9.0)
       valaxy-theme-zaxon:
-        specifier: 0.1.5
-        version: 0.1.5
+        specifier: 0.1.7
+        version: 0.1.7
     devDependencies:
       typescript:
         specifier: ^5.9.3
@@ -3263,8 +3263,8 @@ packages:
     resolution: {integrity: sha512-6ZxzVpzDXDa3bJWaHilVayA+BH/1zmxCJoVgvmqJnid/gPoKHxUrS/aC/T6LGQtNHT+XHG9fXPJB4d+IrU30Ew==}
     hasBin: true
 
-  valaxy-theme-zaxon@0.1.5:
-    resolution: {integrity: sha512-FRZl3ld7owNJEaV7MFzPmbSmmX5CMxg2wSz+HM9/e1Rng4Umvm1WwWlFHVV0zlozp4zgfnmRcMNL/a4ss4rTGg==}
+  valaxy-theme-zaxon@0.1.7:
+    resolution: {integrity: sha512-3Jebf19YYQHaU40L+T+dqwwutHSPyPj2bj23J5bXSKdCbNVZYyPF3QLne834sPeT9Cpa1Idpf2HbSYGo8x/7xQ==}
 
   valaxy@0.28.11:
     resolution: {integrity: sha512-opghpJAV/f8xb3SVjiblTq8VRR4xhb8VdBn5X/LxACrxmzvEDY1xC9sMPoETsh7QU2V2w6rBWBRYMcvglz48mA==}
@@ -6861,7 +6861,7 @@ snapshots:
 
   uuid@14.0.1: {}
 
-  valaxy-theme-zaxon@0.1.5:
+  valaxy-theme-zaxon@0.1.7:
     dependencies:
       '@iconify-json/ant-design': 1.2.5
       '@iconify-json/simple-icons': 1.2.87
