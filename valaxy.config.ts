@@ -12,6 +12,7 @@ export default defineValaxyConfig<ThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       { text: '生活', link: '/notes/' },
+      { text: '相册', link: '/albums/' },
       { text: '归档', link: '/archives/' },
       { text: '分类', link: '/categories/' },
       { text: '标签', link: '/tags/' },

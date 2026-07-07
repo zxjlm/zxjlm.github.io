@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-07T13:38:43.101212Z",
+  "albums": [
+    {
+      "id": "fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6",
+      "slug": "fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6",
+      "title": "杭州",
+      "description": null,
+      "cover": "https://github.com/zxjlm/my-pics/raw/main/photos/1eaeb13a-5f47-449d-b3b3-396bc016e415/thumbnail/ec75c58c-cf8e-4520-9907-d30eb8f8c96d.jpg",
+      "photo_count": 11,
+      "updated_at": "2026-06-07T07:42:07.529897Z",
+      "published_at": "2026-06-07T07:42:07.529897Z",
+      "sort_order": 0,
+      "manifest_path": "/albums/fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6/album.json"
+    }
+  ]
+}
