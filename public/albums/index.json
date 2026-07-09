@@ -1,7 +1,43 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-09T14:59:47.790254Z",
+  "generated_at": "2026-07-09T15:41:02.562316Z",
   "albums": [
+    {
+      "id": "7ce239de-a92b-4bd1-bbc7-a9fa2ed62074",
+      "slug": "7ce239de-a92b-4bd1-bbc7-a9fa2ed62074",
+      "title": "地平线",
+      "description": null,
+      "cover": "https://pic.harumonia.moe/blog/photos/35996f37-9dfb-433f-b6e7-041a64ddb75a/thumbnail/25a54b2b-566b-46e0-b3bf-af37eade62e8.jpg",
+      "photo_count": 8,
+      "updated_at": "2026-07-09T14:48:09.212791Z",
+      "published_at": "2026-07-09T14:48:09.212791Z",
+      "sort_order": 0,
+      "manifest_path": "/albums/7ce239de-a92b-4bd1-bbc7-a9fa2ed62074/album.json"
+    },
+    {
+      "id": "7f2bcfa0-b82a-4b0b-9d69-29f0bed00282",
+      "slug": "7f2bcfa0-b82a-4b0b-9d69-29f0bed00282",
+      "title": "宝山寺",
+      "description": null,
+      "cover": "https://pic.harumonia.moe/blog/photos/4ba15edd-8a6a-4665-8916-078ad51c1438/thumbnail/a57f514e-eaf6-410f-908e-5d663fb69bc8.jpg",
+      "photo_count": 3,
+      "updated_at": "2026-07-09T14:42:15.800873Z",
+      "published_at": "2026-07-09T14:42:15.800873Z",
+      "sort_order": 1,
+      "manifest_path": "/albums/7f2bcfa0-b82a-4b0b-9d69-29f0bed00282/album.json"
+    },
+    {
+      "id": "5eeec356-a656-4244-8058-0061445d074e",
+      "slug": "5eeec356-a656-4244-8058-0061445d074e",
+      "title": "苏州-拙政园",
+      "description": null,
+      "cover": "https://pic.harumonia.moe/blog/photos/52b21fb3-9663-416a-9a5b-02780a4654dd/thumbnail/d027b0d3-3d56-452e-a066-c3c70680255d.jpg",
+      "photo_count": 9,
+      "updated_at": "2026-07-09T14:07:40.515187Z",
+      "published_at": "2026-07-09T14:07:40.515187Z",
+      "sort_order": 2,
+      "manifest_path": "/albums/5eeec356-a656-4244-8058-0061445d074e/album.json"
+    },
     {
       "id": "fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6",
       "slug": "fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6",
@@ -11,7 +47,7 @@
       "photo_count": 12,
       "updated_at": "2026-07-08T14:41:49.527754Z",
       "published_at": "2026-07-08T14:41:49.527754Z",
-      "sort_order": 0,
+      "sort_order": 3,
       "manifest_path": "/albums/fb3cfb09-924d-4e32-b9b9-7b6d5d7187d6/album.json"
     }
   ]
