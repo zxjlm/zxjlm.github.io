@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2022-07-17-2022-4-7.Dwt5o3tw.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2022.4~.7 生活小结 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="2022.4~.7 生活小结">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">2022.4~.7 生活小结</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2022-07-17">2022-07-17</time></dd></dl><span>[
+  &quot;起居杂录&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><h1 id="_2022-4-7" tabindex="-1">2022 4~7 <a class="header-anchor" href="#_2022-4-7" aria-label="Permalink to &quot;2022 4~7&quot;">​</a></h1><h2 id="猫咪" tabindex="-1">猫咪 <a class="header-anchor" href="#猫咪" aria-label="Permalink to &quot;猫咪&quot;">​</a></h2><p>第一次选择整租一套房子,60多平的空间住一个人,让习惯了10平左右狭小居室的的我感到无比的空旷,于是在某一天的冲动之下,我入手了一只银渐层.</p><p>老实说我感觉我是被宰了一笔,但是怎奈这个猫咪实在是有眼缘,于是便忍痛掏了腰包.</p><p>与这个小家伙相处的时候,自然而然地会卸下在外与人相处的一些”伪装”,从而发现一些细微的问题.我总是强令自己以一副淡泊的姿态来对待生活中的人与事,久而久之,我会有种”平淡如水就是我的本性”的错觉,但是,在我试图用这暴力手段来教化这个幼小的活物的时候,在它的哀嚎声中我才意识到,潜意识里的暴力因子并没有因为平日的伪装而消除,与其说消除,不如说收敛更贴切一点.</p><p>更进一步地想一想,我所谓的“淡泊“是从什么时候开始的呢？或者说,这“淡泊“的出发点是什么呢？是初读上善若水时对先贤的见贤思齐？亦或是品鉴瓦尔登湖时对这种生活状态的向往？还是在被看到社会的种种怪现象之后的摆烂心态？应该是都有吧.幼时的憧憬是埋下了一颗正确的种子,但是这枚种子却得到了错误的浇灌.我对心性的洗炼,压抑多余修行,见贤而思齐,但是一味地模仿,而忽视了过程中的体悟,心性从来都不是能速成的,一味地压抑,追求表面上的淡泊宁静,但是内在却还是丑恶暴躁的.</p><p>以人为镜,可以明得失.其实任何的东西都是可以作为“镜子”,格物而致知,唯愿秉持自省,时时拂拭.</p><h2 id="置物" tabindex="-1">置物 <a class="header-anchor" href="#置物" aria-label="Permalink to &quot;置物&quot;">​</a></h2><h3 id="marginnote-3-¥194-25" tabindex="-1">marginnote 3 <strong><strong>￥194.25</strong></strong> <a class="header-anchor" href="#marginnote-3-¥194-25" aria-label="Permalink to &quot;marginnote 3   ****￥194.25****&quot;">​</a></h3><p>在上大学的时候,我就购买了这款软件的 IPad 版,总的来说使用体验还是非常不错的,不过当时阅读的第一选择是 epub 格式的书,所以只有在阅读一些 pdf 文献资料的时候才会使用.</p><p>后来工作之后,理所当然地开始接触很多英文原典,而 epub 阅读器寡淡的功能显然不足以支撑起一个英文苦手的阅读体验,所以阅读的重心又转回了 marginnote.</p><p>新公司配发了16寸的MacBook Pro,无疑是让阅读的体验更上一层楼,恰逢618大促,所以最终以194的价格买到了两个激活码.</p><h3 id="石头扫地机器人-t8-¥2999" tabindex="-1">石头扫地机器人 T8 <strong>￥2999</strong> <a class="header-anchor" href="#石头扫地机器人-t8-¥2999" aria-label="Permalink to &quot;石头扫地机器人 T8  **￥2999**&quot;">​</a></h3><p>扫地机器人一直让我处于后悔与不后悔的叠加态上.每次开机都会觉得很方便,懒人神器,但是每次跑完,又会觉得就这么大点地方(实际需要清扫的面积估计只有30平),买个扫地机是在是不值得.</p><p>不过总体上还是不后悔的,因为哪个男生能够拒绝一个科技感十足的机械产物呢？</p><h3 id="优衣库联名t-¥99-59" tabindex="-1">优衣库联名T ￥99+59 <a class="header-anchor" href="#优衣库联名t-¥99-59" aria-label="Permalink to &quot;优衣库联名T  ￥99+59&quot;">​</a></h3><p>夏天到了,T恤基本上是一天换一件,为了避免频繁的用洗衣机,我一般备个5~6件.</p><p>这次购买的是间谍过家家和鬼灭之刃的T恤,其中一款正好促销,所以59元捡了个漏~</p><h3 id="光明鲜牛奶-n-¥19-20" tabindex="-1">光明鲜牛奶 * N * ￥19~20 <a class="header-anchor" href="#光明鲜牛奶-n-¥19-20" aria-label="Permalink to &quot;光明鲜牛奶 * N * ￥19~20&quot;">​</a></h3><p>我因为某人的原因,一直对光明这个品牌青眼有加.以前一直都是莫斯利安,在有了自己的冰箱之后,开始尝试保质期更短的鲜牛奶.结果一发不可收拾,一连数月全是它了.</p><p>鲜牛奶的口感比起酸奶,更加地清淡,也更醇厚.同时,有着更广的适用面,用来做菜、做拿铁,我现在已经完全是鲜牛奶党了~</p><h3 id="双心叶黄素片-¥123" tabindex="-1">双心叶黄素片 ￥123 <a class="header-anchor" href="#双心叶黄素片-¥123" aria-label="Permalink to &quot;双心叶黄素片 ￥123&quot;">​</a></h3><p>这是被朋友安利的,主要是用来缓解眼疲劳、眼干涩的症状.老实说目前并没有这样的症状,不过确实是蔬菜吃得少了（做起来也麻烦,保质期短）.所以为了补充定量的叶黄素,就在狗东上买了一盒.</p><h2 id="生活" tabindex="-1">生活 <a class="header-anchor" href="#生活" aria-label="Permalink to &quot;生活&quot;">​</a></h2><h3 id="做菜" tabindex="-1">做菜 <a class="header-anchor" href="#做菜" aria-label="Permalink to &quot;做菜&quot;">​</a></h3><p>整租的另一个好处便是厨房,我不习惯和陌生人共用厨房,一来我的口味偏辣,所以做起菜来满屋都是呛人的辣味(不要对合租房的油烟机有啥期待),另一个就是冰箱调料等和人共用,我个人做事情比较迷糊,不喜欢去记这些琐事,所以万一用重了,难免又是不必要的麻烦.</p><p>来苏州之后,我看了很多的美食教程,其中尝试过的菜谱记录于 <a href="https://www.notion.so/240ab5e8eb284d99a7e03dfcceeacf8c" target="_blank" rel="noreferrer">笔记</a> 中,不错根据个人口味(重口味)对菜谱进行了一些微调.</p><h3 id="美食" tabindex="-1">美食 <a class="header-anchor" href="#美食" aria-label="Permalink to &quot;美食&quot;">​</a></h3><p>来苏州之后下了几次馆子,基本上都是烧烤、小龙虾之类的,这类美食自己做不了,吃起来一个人又吃不完,所以都是在好友问起“吃啥”的时候,夹带私货地提一下.</p><p>由于疫情的原因,四月\五月,苏州这边禁止了堂食,所以这两个月过的相当得”荒漠”.解封之后约了德贵兄,他推荐去姑苏区的朋友烧烤,相当物美价廉的一家店,以至于后来王尼玛过来出差,我也带他去吃了一顿,不过这家店上菜的速度实在是慢.</p><p>后来又和堂哥去他家附近的烧烤店吃了一顿,我记得大三来苏州实习的时候,我们就是吃的这家店,当时喝得酩酊大醉,两人几乎是搀扶着晃回了家.这次有嫂子看着,喝得有所收敛,不过还是相当得尽兴.</p><p>再后来解封久了,跟同伴约得比较频繁了,相对应的也就没有什么印象深刻的店了.</p><h2 id="阅读" tabindex="-1">阅读 <a class="header-anchor" href="#阅读" aria-label="Permalink to &quot;阅读&quot;">​</a></h2><h3 id="瓦尔登湖" tabindex="-1">瓦尔登湖 <a class="header-anchor" href="#瓦尔登湖" aria-label="Permalink to &quot;瓦尔登湖&quot;">​</a></h3><p>没错, 我又看了一遍瓦尔登湖.严格来说,这本书是从我来苏州之前就开始看了,实际上它也在一定程度上促使了我辞职的决定.</p><p>上一份工作的末尾,我在这种疲于奔命的生活产生了浓烈的自我怀疑.我所有的工作上的追求,本质上是对技术的追求,而非是简单的工资的多少.这种毫无规律的工作状态无疑是竭泽而渔,再加上一些生活上的原因,让我感觉到精神上的浓烈的干涸感.</p><p>彼时彼刻,我对一场精神上的甘霖的渴望达到了一个极点,这就是我再一次捧起这本书的契机.</p><p>在不同的人生节点,阅读这本书,所带来的感受是完全不同的.</p><p>年少懵懂时,是对这种隐逸的生活的向往,但是这种隐逸并非必然是梭罗式的,它也可以是陶渊明式,甚至可以是李白式.</p><p>但是随着阅历的增广,逐渐开始明白,不同的社会环境,这种生活模式所要付出的代价是截然不同的.最显然的例子,无主且干净的水源,温室效应带来的升温,等等,如果克服不了这些问题,避世不如直接躺在棺材里面更为务实.</p><p>我无法像梭罗那样,在这个社会上寻一个静处过隐于林间的生活.但是对崇高的追随从来都不是物质上的一致,而是精神上的共鸣与趋同.</p><p>to be continue…</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2022-07-17-2022-4-7.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2022-10-10-C3-Storage-and-Retrieval" class="">C3. Storage and Retrieval (更新中)</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2022-06-24-django2swagger" class="">Django 生成 swagger 描述文件</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","datePublished":"2022-07-17T21:17:19.000Z","inLanguage":"zh-CN","name":"2022.4~.7 生活小结","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"2022.4~.7 生活小结","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

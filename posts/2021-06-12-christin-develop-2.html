@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2021-06-12-christin-develop-2.BgTtfqBu.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christin开发记录(2) - nginx和前后端分离 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="Christin开发记录(2) - nginx和前后端分离">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">Christin开发记录(2) - nginx和前后端分离</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2021-06-12">2021-06-12</time></dd></dl><span>[
+  &quot;源流清泉&quot;,
+  &quot;Python&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>在<a href="https://blog.harumonia.moe/christin-develop-1/" target="_blank" rel="noreferrer">Christin 开发记录(1)</a>中， 我们讲过了这个项目的大体的设计思路，本篇以及之后的几篇将会详细地阐述各个技术要点的具体实现方案。</p><p>本篇主要的内容是 nginx 在 <em>前后端分离</em> 和 <em>多语言开发</em> 的代理作用.</p><!-- more --><p>在网站的开发过程中, 前端和后端该如何协调, 常见的有两种方式, 服务器渲染和前后端分离.</p><p>在过去, 笔者最常使用的就是服务器渲染为主, 前后端分离为辅的开发方式. 这样做的一个坏处就是很容易造成前后端的开发逻辑混乱, 什么时候用服务器渲染, 什么时候用 api. 最常见的, 在渲染列表时该如何选择, 使用 jinja 进行服务器渲染能够进行朴素循环, 而使用 JavaScrip 同样可以实现基于朴素循环的 DOM 操作, 而根据所使用的 JavaScript 库的不同, 同一种列表可能会分别采用两种不同的操作方式(开发速度优先的话), 这无疑会给后续的维护带来不必要的困扰.</p><p>所以, 这次的毕设笔者采用了 <strong>完全前后端分离</strong> 的开发思路, 彻底抛弃服务器端渲染.</p><h2 id="分离式开发" tabindex="-1">分离式开发 <a class="header-anchor" href="#分离式开发" aria-label="Permalink to &quot;分离式开发&quot;">​</a></h2><p>在过去笔者也尝试过类似的分离式开发, 其中遇到的首要问题就是, 前端应用的端口和后端应用的端口不同(不同源), 那么前端后端的数据交互就是跨域的, 因此就需要在 flask 的应用中配置 <strong>CORS</strong> 来允许来自前端的跨域请求.</p><p>而在 <a href="https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project" target="_blank" rel="noreferrer">How To Create a React + Flask Project</a> 一文中, <em>miguelgrinberg</em> 介绍了如何进行 react+flask 前后端分离式的开发. 通过前端规定代理接口的地址来实现 <strong>同源请求</strong> , 这就避免了在 flask 中去配置跨域许可(毕竟泛滥的跨域许可也给网站的安全性带来了不利的影响).</p><p>这解决了网站开发时出现的问题, 但是又引出了一个新的问题, 这一份前端的代码应该如何使用?</p><p>如果没有引入前端路由体系, 那么打包为静态文件之后只需要进行一些简单的配置, 即可让它成为 flask 项目组的一部分.</p><blockquote><p>当然, 从它成为 flask 的一部分的时候起, 整个前后端交互也就重新回到了 <em>混合式</em> 了.</p></blockquote><p>但是, 实际情况是, 由于项目结构比较复杂, 所以在前端使用了 react 自带的路由体系, 毫无疑问, 如果就这样打包放入 flask 模板文件下, 势必会造成路由逻辑的冲突. 所以在部署时就出现了两种思路.</p><ol><li>分离式部署, 即, 按照项目开发时的逻辑进行部署.</li><li>使用 nginx 进行代理, 统合部署.</li></ol><h3 id="分离式部署" tabindex="-1">分离式部署 <a class="header-anchor" href="#分离式部署" aria-label="Permalink to &quot;分离式部署&quot;">​</a></h3><p>这种部署方式最终会占用两个端口, React 一个端口, flask 一个端口, 显然, 这两个端口是违背了 <strong>同源策略</strong> 的, 所以还是会回到上文所述的跨域问题.</p><p>另外, 这种部署方式所引出的另一个问题, react 的服务端本质上是 node 的服务端, 需要考虑的是 <strong>同时启动多个服务端对服务器产生的性能压力</strong> .</p><h3 id="nginx-代理" tabindex="-1">nginx 代理 <a class="header-anchor" href="#nginx-代理" aria-label="Permalink to &quot;nginx 代理&quot;">​</a></h3><p>这是我最终选择的一个方案.</p><p>将文件打包, nginx 作为 web 服务器来管理这些静态文件. 而至于 flask 的 api 接口, 则通过 nginx 进行代理, 从而实现端口的统一.</p><p>最终的 nginx 配置文件核心配置如下.</p><div class="language-plain_text"><button title="Copy code" class="copy"></button><span class="lang">plain_text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>server {</span></span>
+<span class="line"><span>    listen       80;</span></span>
+<span class="line"><span>    server_name  localhost;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    location / {</span></span>
+<span class="line"><span>        root   /var/www/html;</span></span>
+<span class="line"><span>        index  index.html;</span></span>
+<span class="line"><span>        try_files $uri /index.html;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 代理api接口</span></span>
+<span class="line"><span>    location /api {</span></span>
+<span class="line"><span>      proxy_pass  http://backend/api;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    ......</span></span>
+<span class="line"><span>}</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>其中, <code>try_files $uri /index.html;</code> 适配了 react 本身的路由.</p><h2 id="多语言开发" tabindex="-1">多语言开发 <a class="header-anchor" href="#多语言开发" aria-label="Permalink to &quot;多语言开发&quot;">​</a></h2><p>在概述所提到的另一个重点就是多语言开发, 实际上这是项目在后续演进过程中才会关注的问题, 不过在 <a href="#%E5%88%86%E7%A6%BB%E5%BC%8F%E9%83%A8%E7%BD%B2">分离式部署</a> 这个废案中进行过一次简单的尝试.</p><p>上面我们通过 nginx 的代理功能将 flask 后端的 api 接口摘出, 作为唯一 api 服务提供. 而之后我们可能会进行 Go \ Node 等语言的 api 开发,这时候只要对路由进行前缀定义, 比如 <code>/go/api</code> , 然后在 nginx 配置文件中作出相关的代理配置即可.</p><h2 id="总结" tabindex="-1">总结 <a class="header-anchor" href="#总结" aria-label="Permalink to &quot;总结&quot;">​</a></h2><p>本篇介绍了 nginx 如何成为前后端分离式开发的桥梁, 当然, 想要达成这一目的, 方法并不是唯一的, 只是笔者基于自身现有的技术栈而想到的一个方法, 如果有更好更先进的策略, 欢迎赐教.</p><h2 id="篇外" tabindex="-1">篇外 <a class="header-anchor" href="#篇外" aria-label="Permalink to &quot;篇外&quot;">​</a></h2><p>如果看了 Christin 的源码, 不难发现项目存在 v1 和 v2 两个 api 版本, 前者是采用混合式开发思路, 而在开发过程中愈发觉得这种思路的混乱与难以维护, 所以就有了 v2 版本.</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2021-06-12-christin-develop-2.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2021-06-28-chengdu-seven-day" class="">毕业旅行</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2021-06-11-upon-graduation" class="">大学生活阶段性小结</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2021-06-15T09:57:56.000Z","datePublished":"2021-06-12T18:05:28.000Z","inLanguage":"zh-CN","name":"Christin开发记录(2) - nginx和前后端分离","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"Christin开发记录(2) - nginx和前后端分离","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

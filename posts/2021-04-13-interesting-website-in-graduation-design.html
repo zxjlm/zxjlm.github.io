@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2021-04-13-interesting-website-in-graduation-design.BKx-5SjM.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>毕业设计过程中的一些有趣&#x2F;有用的网站 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="毕业设计过程中的一些有趣/有用的网站">
+<meta property="og:image" content="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/code-highlight-website.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">毕业设计过程中的一些有趣/有用的网站</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2021-04-13">2021-04-13</time></dd></dl><span>[
+  &quot;见闻录&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>本篇将会介绍一些笔者在完成毕设的过程中所发现的一些有趣的网站或者工具.包括:</p><ul><li>代码着色网站</li><li>流程图\架构图等工程图片的绘图网站</li><li>公式识别工具</li><li>数据库文档</li><li>翻译工具</li><li>免费的论文查重</li></ul><!-- more --><h2 id="代码着色" tabindex="-1">代码着色 <a class="header-anchor" href="#代码着色" aria-label="Permalink to &quot;代码着色&quot;">​</a></h2><p><a href="https://highlightcode.com/" target="_blank" rel="noreferrer">代码着色网站</a>能够将代码直接转变为包含行号的高亮代码.</p><p>其最终的结果如下图所示.</p><figure><img src="https://harumona-blog.oss-cn-beijing.aliyuncs.com/new_articles/code-highlight-website.png" alt="code-highlist" loading="lazy" decoding="async"></figure><h2 id="图片绘制" tabindex="-1">图片绘制 <a class="header-anchor" href="#图片绘制" aria-label="Permalink to &quot;图片绘制&quot;">​</a></h2><p>图片绘制网站主要有两个, 一个是国内的 <a href="https://www.processon.com/" target="_blank" rel="noreferrer">process on</a>, 另外一个是国外的<a href="https://app.diagrams.net/" target="_blank" rel="noreferrer">diagrams.net</a>,也就是大家所熟悉的 <em>draw.io</em> .</p><p><strong>process on</strong> 拥有中文界面, 并且国内网络环境能够直接访问, 它所提供的大部分功能足够毕设绘图所需, 它的缺点在于, 非会员只能画 9 张图, 这在图片很多时就很难受了. 某个<a href="https://space.bilibili.com/167679424/" target="_blank" rel="noreferrer">憨憨</a>的解决方案是利用 <strong>画布不限制大小</strong> 的特性去按需截取.</p><p>于是这次毕设我又找了一个替代方案,就是 <strong>draw.io</strong>, 它的唯一缺点也许就是需要科学上网方案了. 这里来说一下它的优点吧.</p><ul><li>文件可以存放于 <em>OneDriver</em> \ <em>Google Driver</em> 等网盘中, 还可以存放于 <em>GitHub</em> \ <em>GitLab</em> 这样的平台上.</li><li>存放于 GitHub 上面时通过版本控制方法来管理.</li><li>不限制画布的数量</li><li>多元化的绘图组件(甚至能使用 <strong>LaTeX</strong>)</li></ul><h2 id="公式识别" tabindex="-1">公式识别 <a class="header-anchor" href="#公式识别" aria-label="Permalink to &quot;公式识别&quot;">​</a></h2><p>公式识别强推<a href="https://mathpix.com/ocr/" target="_blank" rel="noreferrer">mathpix</a>, 它每个月有 50 次的免费使用次数, 对于毕业论文这种体量的文章还是够用了的.</p><p>对于识别的结果, 它支持 <em>MathML</em>/<em>AsciiMath</em>/<em>SVG</em> 等多种的导出形式, 并且针对 word 文档还有 (MS Word) 专门的配置.</p><p>对于原始的图片, 它会将其上传到 cdn 上, 用户可以直接使用 cdn 连接进行图片的访问, 这一点在写算法性质的技术博客时也十分有用.</p><p>同时, 软件可以把识别的结果放到网上进行针对性搜索, 找到同样适用这个公式的网页/文章.</p><h2 id="数据库文档" tabindex="-1">数据库文档 <a class="header-anchor" href="#数据库文档" aria-label="Permalink to &quot;数据库文档&quot;">​</a></h2><p><a href="https://github.com/alicfeng/mysql_markdown" target="_blank" rel="noreferrer">数据库文档生成</a> 这款工具通过链接数据库然后获取数据表配置信息.</p><p>比起其它的工具, 它的优势在于能够直接在 Windows\macOS\Linux 上面运行而不需要安装对于的编译环境, 并且转换为 markdown 之后也可以进一步转为 word 等文档形式.</p><p>缺点也很明显, 那就是格式损坏, 不是标准的 word 数据库设计规范格式, 需要进行手动的调整.</p><p>另外, 它默认输出的是 名称/描述/类型/键/为空/额外/默认值 等字段属性,如果需要增加其它的属性或者删掉一些属性, 可以直接进入代码文件进行修改, 整体的代码量并不是很大.</p><h2 id="摘要翻译工具" tabindex="-1">摘要翻译工具 <a class="header-anchor" href="#摘要翻译工具" aria-label="Permalink to &quot;摘要翻译工具&quot;">​</a></h2><p><a href="https://www.deepl.com/translator" target="_blank" rel="noreferrer">deepl</a> 在结合上下文语境的翻译上表现很棒, 应该算是我所使用过的最赞的工具了, 摘要翻译完之后基本上不需要做过多的修改. 当然, 一些领域专业名词还是要注意一下的 😁.</p><h2 id="论文查重网站" tabindex="-1">论文查重网站 <a class="header-anchor" href="#论文查重网站" aria-label="Permalink to &quot;论文查重网站&quot;">​</a></h2><p><a href="https://www.bigan.net/" target="_blank" rel="noreferrer">笔杆</a>和<a href="http://dsa.dayainfo.com/" target="_blank" rel="noreferrer">大雅</a>是我目前使用的两个查重网站, 通过学校的 ip 登录之后就能获得免费的查重次数, 笔杆是每天每个微信号两次, 基本上就足够使用了, 并且导师也说笔杆的查重结果相对比较接近知网.</p><p>吐槽氵, 技术概念类的查重</p><h2 id="待续" tabindex="-1">待续 <a class="header-anchor" href="#待续" aria-label="Permalink to &quot;待续&quot;">​</a></h2><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2021-04-13-interesting-website-in-graduation-design.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2021-05-21-christin-develop-1" class="">Christin开发记录(1)</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2021-03-30-why-mongo-use-object-id" class="">为什么 mongodb 使用 ObjectId,  而 Mysql 使用自增 id</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2021-04-13T08:19:19.000Z","datePublished":"2021-04-13T08:19:19.000Z","inLanguage":"zh-CN","name":"毕业设计过程中的一些有趣/有用的网站","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"毕业设计过程中的一些有趣/有用的网站","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

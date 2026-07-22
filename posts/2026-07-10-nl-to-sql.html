@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2026-07-10-nl-to-sql.C-ybMKDr.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大量数据表下通过 dify + 简单 LLM 进行取数 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="大量数据表下通过 dify + 简单 LLM 进行取数">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">大量数据表下通过 dify + 简单 LLM 进行取数</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2026-07-09">2026-07-09</time></dd></dl><span>[
+  &quot;AI&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>本篇主要是分享一下在 大量数据表 下通过 dify + 简单 LLM , 实现 自然语言 -&gt; SQL 查询的一个实现思路.</p><p>这个思路的实现门槛较低, 我们所有需要做的只是：</p><ol><li>配置一个通用的LLM（比如 qwen3.7-plus）</li><li>维护一套知识库, 用于 RAG 检索（比如 dify）</li><li>开发一组 MCP 工具, 用于暴露 权限围栏 与 LLM 需要使用的 Tools .</li></ol><!-- more --><blockquote><p>本文中的凭证、内部服务地址、内部模型名、人名等均已脱敏,业务示例保留了通用的业务语义. 这个方案并不与特定的业务绑定, 可以视为一种简单的通用方案.</p></blockquote><hr><h2 id="一、需求背景" tabindex="-1">一、需求背景 <a class="header-anchor" href="#一、需求背景" aria-label="Permalink to &quot;一、需求背景&quot;">​</a></h2><p>我们接管了<strong>大量数据表</strong>,并且这些表的信息(表结构、字段含义、枚举定义)<strong>每天都在维护、变化</strong>. 围绕这批表,业务侧和下游的诉求很朴素:</p><ul><li>我想知道&quot;某个字段有哪些关联的表&quot;,而不是去翻几百张数据字典;</li><li>我想知道&quot;某给表的某给状态码是什么意思&quot;,而不是去追着表负责人问;</li><li>最终,我希望用一句自然语言,就能定位到正确的表和字段,进而组装出可执行的 SQL.</li></ul><p>传统做法的痛点很清楚:</p><ol><li><strong>人肉翻字典</strong>:表一多,靠人记不住、找不全;</li><li><strong>依赖数仓同学</strong>:每次问数都要转一手,慢;</li><li><strong>字典易过时</strong>:表天天变,任何&quot;固化&quot;下来的知识第二天就可能失效.</li></ol><p>所以我们要的不是一个一次性的问答玩具,而是一套<strong>能跟上每日变更、可长期维护</strong> 的自然语言找数能力.</p><p>它的完整目标是 <strong>NL → SQL</strong>;本文展示的&quot;案例A&quot;是这套底座上已经跑通的一个中间案例,用来证明 <strong>「自然语言 → 定位到表 → 问答」</strong> 这条链路是可行的.</p><hr><h2 id="二、实现方案与对比" tabindex="-1">二、实现方案与对比 <a class="header-anchor" href="#二、实现方案与对比" aria-label="Permalink to &quot;二、实现方案与对比&quot;">​</a></h2><p>最初我们打算毕全功于一役, 制定这样的一套 workflow , 这套工作流简单点描述如下：</p><ol><li>将 表的元信息 与 用户的查询诉求 放在同一套上下文中, 这样直接在一轮对话中就能够完成表的过滤</li><li>根据表再取到更深层的字段与样例数据信息, 然后进一步组织 SQL</li></ol><p>在小样本的测试上这套 workflow 表现很好, 但是随着将正式环境的数千张数据表导入进来, 随着上下文体积的膨胀, 幻觉也愈发严重.</p><p>于是我们开始探索一些更加深入的方案.</p><h3 id="方案-a-微调模型-概念对比" tabindex="-1">方案 A:微调模型(概念对比) <a class="header-anchor" href="#方案-a-微调模型-概念对比" aria-label="Permalink to &quot;方案 A:微调模型(概念对比)&quot;">​</a></h3><p>把库表 schema、字段含义、枚举知识,通过微调固化进模型权重,让模型&quot;记住&quot;你的数据资产,直接生成 SQL.</p><ul><li>优点:推理时不需要外部检索,端到端简洁.</li><li>致命问题(对我们的场景): <ul><li><strong>表规模大</strong>:全量 schema 塞进训练样本,成本高、覆盖难;</li><li><strong>每日变更</strong>:表信息天天变,微调是&quot;批处理式&quot;的知识固化,追不上日更节奏——今天微调好,明天字段一改就又过时;</li><li><strong>训练/维护成本高</strong>:每次数据资产变化都要重新准备样本、重训、评估、上线;</li><li><strong>幻觉不可控</strong>:模型&quot;记&quot;错了字段名或枚举值,你很难定位和纠正.</li></ul></li></ul><h3 id="方案-b-本方案-大量数据表-简单-prompt-dify-agent-定时任务" tabindex="-1">方案 B(本方案):大量数据表 + 简单 Prompt + Dify Agent + 定时任务 <a class="header-anchor" href="#方案-b-本方案-大量数据表-简单-prompt-dify-agent-定时任务" aria-label="Permalink to &quot;方案 B(本方案):大量数据表 + 简单 Prompt + Dify Agent + 定时任务&quot;">​</a></h3><p>不把知识塞进模型权重,而是把知识<strong>留在外部知识库里</strong>,让模型在推理时&quot;现查现用&quot;:</p><ul><li><strong>定时任务</strong>每天把最新的表/字段元数据同步进 Dify 知识库;</li><li><strong>Dify Agent</strong> 用简单的 Prompt 做意图识别、问题改写、RAG 检索缩候选;</li><li><strong>MCP 工具</strong>按需补全表/字段/关联的详情,并提供权限数据;</li><li>下游模型基于这些<strong>授权范围内</strong>的准确信息组装 SQL.</li></ul><h3 id="对比" tabindex="-1">对比 <a class="header-anchor" href="#对比" aria-label="Permalink to &quot;对比&quot;">​</a></h3><table><thead><tr><th>维度</th><th>微调模型(A)</th><th>本方案(B)</th></tr></thead><tbody><tr><td>大表规模适配</td><td>样本准备成本高</td><td>知识库天然可扩,增量同步</td></tr><tr><td>每日变更跟随</td><td>差,需重训</td><td><strong>好,定时同步即跟上</strong></td></tr><tr><td>训练/维护成本</td><td>高(每次变更重训)</td><td><strong>低(改文档 / 跑同步)</strong></td></tr><tr><td>可复现性</td><td>依赖训练资源与经验</td><td><strong>高,一套工程即可搭起</strong></td></tr><tr><td>可迁移性</td><td>换数据域需重训</td><td><strong>高,换知识库内容即可</strong></td></tr><tr><td>幻觉可控性</td><td>难定位</td><td>检索命中可溯源,权限可卡</td></tr></tbody></table><p><strong>结论</strong>:因为我们的表又多、又天天变,微调在成本和时效上都追不上. 本方案更灵活、成本更低、且可以被轻松复现和迁移,这是我们选它的核心原因.</p><hr><h2 id="三、技术结构" tabindex="-1">三、技术结构 <a class="header-anchor" href="#三、技术结构" aria-label="Permalink to &quot;三、技术结构&quot;">​</a></h2><h3 id="_3-1-整体架构" tabindex="-1">3.1 整体架构 <a class="header-anchor" href="#_3-1-整体架构" aria-label="Permalink to &quot;3.1 整体架构&quot;">​</a></h3><div class="mermaid"></div><p>一句话:<strong>用户提问 → Dify RAG 缩候选 → MCP 补全详情 &amp; 提供权限数据 → workflow 卡围栏 → 下游模型组装 SQL</strong>.</p><h3 id="_3-2-mcp-工具清单" tabindex="-1">3.2 MCP 工具清单 <a class="header-anchor" href="#_3-2-mcp-工具清单" aria-label="Permalink to &quot;3.2 MCP 工具清单&quot;">​</a></h3><p>我们用 FastAPI 写普通的 HTTP 端点,再通过 <code>FastApiMCP</code> 一键挂载为 MCP 工具(走 SSE),这样任何支持 MCP 的客户端(包括写 SQL 的 AI 助手、Dify Agent)都能调用. 工具围绕&quot;查表 / 查字段 / 查关系 / 查权限&quot;四类:</p><table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>get_all_table_and_name</code></td><td>按用户问题(可选带字段名)召回候选表的 (库名, 表名, 表备注)</td></tr><tr><td><code>get_all_field_and_remark</code></td><td>查指定表的所有字段名/中文名/备注/字段知识</td></tr><tr><td><code>get_multi_table_field_and_remark</code></td><td>一次查多张表的字段信息</td></tr><tr><td><code>filter_tables_by_user_id</code></td><td>过滤出用户有权限的那部分表</td></tr><tr><td><code>get_all_tables_by_user_id</code></td><td>拉取用户全部授权表</td></tr></tbody></table><h4 id="关于-权限-与-安全" tabindex="-1">关于 权限 与 安全 <a class="header-anchor" href="#关于-权限-与-安全" aria-label="Permalink to &quot;关于 权限 与 安全&quot;">​</a></h4><p>我们需要解决的另一个问题就是, 不同的用户拥有的表不同.</p><p>从用户的角度来说, 有些用户可能只在特定的业务维度上有表, 有些用户则可能跨维度拥有很多的表.</p><p>从表的角度来说, 我们维护的业务表保密等级不同. 有些表虽然用户没有权限, 但是能够知道要找的数据在这些表里, 继而去申请权限；但是还有些保密等级较高的表, 如果用户没有权限, 则半点信息都不能透露给他.</p><p>为此我们做了如下的设计：</p><p><strong>关于权限</strong>:MCP 侧负责&quot;<strong>查</strong>&quot;——把用户被授权的表清单作为数据返回;真正的&quot;<strong>卡</strong>&quot;(围栏限制)放在调用方的确定性逻辑里(见 3.5). 这是刻意的安全设计:<strong>权限判断不交给 Agent/LLM,避免被 prompt 注入绕过</strong>. 凡是返回数据的工具,都会先与&quot;该用户的授权表&quot;取交集,再返回.</p><p>此外通过双循环权限判定流程, 保证 LLM 工作效果不会因为权限限制而出现过多的损失.</p><blockquote><p>附带一个小设计:传入的 <code>user_id</code> 是对称加密后的字符串,由一个装饰器在进入业务逻辑前统一解密还原成整型 id,避免明文 id 在链路上裸奔.</p></blockquote><h3 id="_3-3-知识库如何管理" tabindex="-1">3.3 知识库如何管理 <a class="header-anchor" href="#_3-3-知识库如何管理" aria-label="Permalink to &quot;3.3 知识库如何管理&quot;">​</a></h3><p>知识库由一个 <strong>Celery 定时任务</strong> 维护,每天凌晨同步一次:</p><ol><li>从元数据库读出全部表 + 每张表的字段;</li><li><strong>一张表 = 一篇文档</strong>,文档名用表 id 补零(比如我们目前维护了数千张表, 所以就使用 <code>0042</code> 这样的四位 id ), 相比自增id, 寻址更加稳定;</li><li><strong>增量更新</strong>:同步前先取回 Dify 里已有文档的分块内容做比对,内容没变就跳过,只对变化的表做&quot;删除 + 重建&quot;, 这一步大大提高了更新效率, 并且节省了很多的 embedding 成本;</li><li>批量执行时做限速, 这一点主要是出于 dify 与 跟下层的 embedding 接口 吞吐量考虑.</li></ol><p>这样&quot;表天天变&quot;就变成了&quot;知识库每天自动跟上&quot;,维护成本几乎为零.</p><h3 id="_3-4-知识文档如何组成" tabindex="-1">3.4 知识文档如何组成 <a class="header-anchor" href="#_3-4-知识文档如何组成" aria-label="Permalink to &quot;3.4 知识文档如何组成&quot;">​</a></h3><p>每篇文档分两部分:</p><p><strong>(1) 元数据 —— 供 Dify 过滤检索用</strong></p><p>同步时给每篇文档写入三个元数据字段:</p><ul><li><code>security_level</code>(安全级别)</li><li><code>table_schema</code>(库名)</li><li><code>table_name</code>(表名)</li></ul><p>Dify 检索时可以基于这些字段做<strong>元数据过滤</strong>,让召回更精准、也为后续权限归类提供结构化依据.</p><p><strong>(2) 正文 —— 双来源自动补全,人工优先</strong></p><p>正文是给模型看的、可读的 Markdown. 它由两个来源共同维护,并按优先级合并:</p><ul><li><strong>a. 人工维护</strong>:表负责人在<strong>数据管理中心</strong>手动填写/校准字段中文名、备注、枚举定义等业务语义;</li><li><strong>b. 自动更新</strong>:系统通过<strong>建表 DDL、ETL 代码、抽样数据</strong>自动解析并回填表/字段信息,解决覆盖率与冷启动问题.</li></ul><p><strong>优先级规则</strong>:同一字段若被人工维护过,则人工内容优先级更高,自动更新不覆盖人工结果;人工未覆盖的部分由自动更新兜底. 这样既保留了人工标注的准确性,又用自动化补齐了长尾.</p><blockquote><p>这条&quot;读代码 / 读数据自动补全 + 人工优先&quot;的机制,与业界头部数据 Agent 的做法一致(用离线任务读取生成表的流水线代码来丰富表描述). 它把&quot;靠人肉全量维护字典&quot;降级为&quot;人工只做审校&quot;,从根本上解决了覆盖率与新表冷启动问题——这也是本方案当前<strong>已经具备</strong>的能力,而非规划项.</p></blockquote><p>正文示例:</p><div class="language-markdown"><button title="Copy code" class="copy"></button><span class="lang">markdown</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 表信息</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">数据库名 (Schema): &lt;schema&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">表名: &lt;table_name&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">表中文名: &lt;中文名&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 字段信息</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">1.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 字段名 (英文): status</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   字段名 (中文): 状态</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   字段备注: 上市状态</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">   枚举配置: 正常上市: 0; 暂停上市: 1</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">2.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ...</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>字段的中文名、备注、枚举定义,正是自然语言找数最依赖的&quot;语义桥梁&quot;——业务问&quot;暂停上市的企业&quot;,模型能靠枚举配置对上 <code>status = 1</code>.</p><h3 id="_3-5-dify-agent-工作流-以「案例-a」为例" tabindex="-1">3.5 Dify Agent 工作流(以「案例 A」为例) <a class="header-anchor" href="#_3-5-dify-agent-工作流-以「案例-a」为例" aria-label="Permalink to &quot;3.5 Dify Agent 工作流(以「案例 A」为例)&quot;">​</a></h3><p>节点编排:</p><div class="mermaid"></div><p>关键节点与 <strong>Prompt 节选</strong>(已脱敏):</p><p><strong>① 意图分类</strong>(判断是否属于&quot;元数据查询&quot;,结构化输出 JSON):</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>## Role</span></span>
+<span class="line"><span>元数据意图识别专家</span></span>
+<span class="line"><span>## Core Task</span></span>
+<span class="line"><span>精准判断用户查询是否属于&quot;元数据查询&quot;(metadata_query)...</span></span>
+<span class="line"><span>## Output Format</span></span>
+<span class="line"><span>{ &quot;main_intent&quot;: &quot;metadata_query/other&quot;, &quot;confidence&quot;: 0.0-1.0, &quot;explanation&quot;: &quot;...&quot; }</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p><strong>② 问题改写</strong>(把简短问题扩成 3 个不同角度,提升 RAG 召回质量):</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>## 角色</span></span>
+<span class="line"><span>数据库查询优化专家,将简短查询扩充为 3 个不同角度的完整查询,</span></span>
+<span class="line"><span>匹配知识库维度(库名、表中英文、字段中英文、字段备注、枚举值). </span></span>
+<span class="line"><span>## 核心规则</span></span>
+<span class="line"><span>1. 提取核心实体(表/字段/术语/枚举值),3 个问题角度不重复</span></span>
+<span class="line"><span>2. 每个问题含:核心实体 + 至少 1 个知识库维度 + 业务场景</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p><strong>③ 知识检索</strong>:对接同步好的知识库,<code>top_k</code> 召回 + rerank(混合检索,关键词 + 向量各占权重).</p><p><strong>④ 权限管控(code 节点,确定性逻辑)</strong>:这是围栏真正落地的地方.</p><ul><li>输入 1:知识检索命中的文档(含元数据里的 <code>table_schema</code> / <code>table_name</code>);</li><li>输入 2:MCP 工具返回并标准化后的&quot;用户授权表清单&quot;(<code>库名.表名</code> 列表);</li><li>逻辑:把召回文档的 <code>库名.表名</code> 与授权清单做匹配,分成<strong>有权限 / 无权限</strong>两类,只把有权限的内容交给下游作答,无权限的仅提示&quot;存在但无访问权限,请联系负责人申请&quot;.</li></ul><blockquote><p>再次强调设计取舍:<strong>MCP 提供权限数据,workflow 的 code 节点做实际围栏,不依赖 Agent 判断</strong>. 因为 LLM 可能被诱导&quot;放行&quot;,而确定性代码不会.</p></blockquote><p><strong>⑤ 检索回复</strong>(把有/无权限结果整理成固定格式回答):</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span># role:严谨的业务查询专家</span></span>
+<span class="line"><span># goal:基于 RAG 检索结果,精准归纳&quot;有权限&quot;&quot;无权限&quot;两类信息,</span></span>
+<span class="line"><span>        字段(英文名+中文名)整体加粗,字段与枚举值对应清晰. </span></span>
+<span class="line"><span># constraints:</span></span>
+<span class="line"><span>1. 不编造任何信息,不回答与提问无关的内容. </span></span>
+<span class="line"><span>2. 字段与枚举值严格绑定,不单独罗列枚举值.</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h3 id="_3-6-反馈截流-为后续训练积累素材" tabindex="-1">3.6 反馈截流(为后续训练积累素材) <a class="header-anchor" href="#_3-6-反馈截流-为后续训练积累素材" aria-label="Permalink to &quot;3.6 反馈截流(为后续训练积累素材)&quot;">​</a></h3><p>根据用户对每一轮问答的使用体验,我们把被<strong>点赞</strong>的对话轮次截流保存下来,作为后续的训练/优化材料:</p><ul><li>点赞代表&quot;这一轮的问题 → 命中表/字段 → 回答&quot;是一条可信链路;</li><li>这些高质量样本沉淀为语料,可用于后续的少样本示例、检索质量评估,乃至进一步的模型优化;</li><li>相比把全部历史对话一股脑喂进去,<strong>只保留点赞样本</strong>能有效过滤噪声,保证素材质量.</li></ul><hr><h2 id="四、效果" tabindex="-1">四、效果 <a class="header-anchor" href="#四、效果" aria-label="Permalink to &quot;四、效果&quot;">​</a></h2><p>我们跑通了 <strong>「自然语言 → 定位到表 → 问答」</strong> 这条链路:</p><ul><li>业务能直接用自然语言问&quot;某个表的某个状态码是什么意思, 并横向比对其他的表&quot;,拿到<strong>带权限过滤</strong>的、可溯源的表/字段/枚举答案;</li><li>知识库靠定时任务每天自动跟上表的变更,<strong>无需重训、几乎零维护成本</strong>;</li><li>权限在确定性节点强约束,<strong>不会因为模型被诱导而越权</strong>.</li></ul><p>更重要的是,它验证了整套 <strong>NL → SQL 能力底座</strong>的可行性:同样的&quot;大量数据表 + 简单 Prompt + Dify Agent + 定时任务&quot;路径,不依赖昂贵的微调,<strong>可以低成本复现,并迁移到任意数据域</strong>——换掉知识库内容和权限源,这套方案就能服务另一批表、另一个业务.</p><hr><h2 id="五、后续考虑发展的方向" tabindex="-1">五、后续考虑发展的方向 <a class="header-anchor" href="#五、后续考虑发展的方向" aria-label="Permalink to &quot;五、后续考虑发展的方向&quot;">​</a></h2><p>在跑通&quot;自然语言 → 定位到表 → 问答&quot;之后,我们规划了几条继续演进的方向:</p><ul><li><strong>Memory(记忆层)</strong>:目前每次问答是无状态的,每轮都从零开始. 后续引入 Memory,把用户在对话中的<strong>纠正与偏好</strong>(如&quot;这个口径应该用那张表&quot;&quot;某枚举的业务含义&quot;)保存下来,并叠加到检索结果之上,让 Agent 从更准确的基线出发,而不是重复过去的错误. 可按<strong>全局 / 个人</strong>两级生效.</li><li><strong>可信查询排序</strong>:把历史 SQL 按可信度排序(高频看板 / 数据科学家编写的查询优先,一次性探索查询降权),只将高质量查询作为检索素材与 few-shot 范例,提升下游组装 SQL 的质量.</li><li><strong>执行 + 自检闭环</strong>:从&quot;定位表 + 问答&quot;进一步推进到 <strong>NL → SQL</strong> 主线——由 Agent 生成 SQL、执行、检查结果并自动修正,最终返回经过验证的答案.</li></ul><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2026-07-10-nl-to-sql.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2026-07-14-vps-proxy" class="">用一台美区 VPS 提高机场订阅的稳定性</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2026-06-28-migrate-github-to-cloudflare-pages" class="">从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","datePublished":"2026-07-09T20:52:47.000Z","inLanguage":"zh-CN","name":"大量数据表下通过 dify + 简单 LLM 进行取数","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"大量数据表下通过 dify + 简单 LLM 进行取数","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

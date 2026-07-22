@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2026-06-10-codex-notion-network-failure-solution.BhDGg7TR.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex 调用 Notion 失败：从 wham&#x2F;apps 报错定位网络链路 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="Codex 调用 Notion 失败：从 wham/apps 报错定位网络链路">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">Codex 调用 Notion 失败：从 wham/apps 报错定位网络链路</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2026-06-10">2026-06-10</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>最近在 Codex 里调用 Notion 插件时遇到一个容易误判的问题：Notion 搜索失败，报错指向的却不是页面权限、数据库或查询语法，而是 Codex App 与插件 worker 之间的传输链路。</p><p>典型错误如下：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>HTTP request failed: https://chatgpt.com/backend-api/wham/apps</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这个报错看起来像 Notion 不可用，但从失败地址判断，请求很可能还没有进入 Notion 查询逻辑，而是卡在了 Codex / ChatGPT 的插件通道上。</p><!-- more --><h2 id="问题背景" tabindex="-1">问题背景 <a class="header-anchor" href="#问题背景" aria-label="Permalink to &quot;问题背景&quot;">​</a></h2><p>当时的任务很简单：让 Codex 随机搜索一篇 Notion 笔记。连续尝试 3 次后，失败点都落在同一个地址：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>https://chatgpt.com/backend-api/wham/apps</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这时还不能判断 Notion 连接已经损坏。更准确的描述是：Codex 启动或访问 Notion 插件时，调用 <code>wham/apps</code> 接口失败了。</p><p>因此排查目标从“为什么 Notion 没有搜到内容”变成了：</p><ol><li><code>chatgpt.com</code> 是否可达？</li><li><code>wham/apps</code> 接口是否在线？</li><li>Codex shell、本机终端、Codex App 插件 worker 是否使用同一套网络？</li><li>如果使用 Clash TUN / fake-ip，代理配置是否会影响 ChatGPT 插件通道？</li><li>如果网络可达，是否还存在登录态或插件会话问题？</li></ol><h2 id="第一层判断-区分沙箱网络和本机网络" tabindex="-1">第一层判断：区分沙箱网络和本机网络 <a class="header-anchor" href="#第一层判断-区分沙箱网络和本机网络" aria-label="Permalink to &quot;第一层判断：区分沙箱网络和本机网络&quot;">​</a></h2><p>在 Codex 的普通 shell 里直接访问：</p><div class="language-bash"><button title="Copy code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -I</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --max-time</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 10</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> https://chatgpt.com/backend-api/wham/apps</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>得到的是：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>curl: (6) Could not resolve host: chatgpt.com</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这个结果只能说明当前 Codex shell 处在禁网或受限网络上下文中，不能说明本机网络一定不通。继续用本机终端探测同一个地址，结果返回：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>HTTP/2 405</span></span>
+<span class="line"><span>allow: POST</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里的 <code>405 Method Not Allowed</code> 不是坏信号。因为 <code>curl -I</code> 发的是 <code>HEAD</code> 请求，而 <code>wham/apps</code> 要求的是 <code>POST</code>。它能返回 <code>405</code> 并带上 <code>allow: POST</code>，至少说明几件事：</p><ul><li>DNS 能解析到入口。</li><li>TLS 握手成功。</li><li>Cloudflare / OpenAI 网关可达。</li><li>失败不是纯粹的公网断连。</li></ul><p>这一步把排查范围从“本机无法访问 ChatGPT”缩小到了 Codex App 的插件 worker、登录态或代理链路。</p><h2 id="第二层判断-接口在线-但需要正确方法和登录态" tabindex="-1">第二层判断：接口在线，但需要正确方法和登录态 <a class="header-anchor" href="#第二层判断-接口在线-但需要正确方法和登录态" aria-label="Permalink to &quot;第二层判断：接口在线，但需要正确方法和登录态&quot;">​</a></h2><p>继续测试 <code>GET /backend-api/wham/apps</code>，也会看到类似结果：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>HTTP/2 405</span></span>
+<span class="line"><span>{&quot;detail&quot;:&quot;Method Not Allowed&quot;}</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>接口存在，但不接受 GET。再用匿名 POST 测试时，接口会进入另一类结果：未携带有效会话时会返回未授权，而不是 DNS 或连接层错误。</p><p>不同响应对应不同的排查方向：</p><ul><li><code>405 + allow: POST</code>：接口在线，方法不对。</li><li><code>401 Unauthorized</code>：接口在线，但没有有效登录态。</li><li><code>HTTP request failed</code> 或握手超时：继续检查插件 worker 和传输链路。</li><li>Notion 查询结果为空：这是进入 Notion 之后的业务结果，和上面三类不是一层问题。</li></ul><h2 id="第三层判断-clash-tun-与-fake-ip-的影响" tabindex="-1">第三层判断：Clash TUN 与 fake-ip 的影响 <a class="header-anchor" href="#第三层判断-clash-tun-与-fake-ip-的影响" aria-label="Permalink to &quot;第三层判断：Clash TUN 与 fake-ip 的影响&quot;">​</a></h2><p>排查过程中还看到一个现象：<code>chatgpt.com</code> 被解析到了 <code>198.18.0.18</code>。</p><p>乍看这个 IP 很奇怪，但后来确认它来自 Clash 的 TUN + fake-ip 模式。<code>198.18.0.18</code> 本身不一定是错误，它可能只是 Clash 用来接管连接的 fake-ip 地址。</p><p>浏览器、桌面客户端、WebView 和 MCP worker 的代理、Cookie、挑战页面与跳转处理方式可能不同。浏览器能访问 ChatGPT，并不能证明插件 worker 使用的链路也正常。</p><p>当时建议重点检查三处配置。</p><h3 id="_1-给-openai-域名加-fake-ip-filter" tabindex="-1">1. 给 OpenAI 域名加 fake-ip-filter <a class="header-anchor" href="#_1-给-openai-域名加-fake-ip-filter" aria-label="Permalink to &quot;1. 给 OpenAI 域名加 fake-ip-filter&quot;">​</a></h3><p>如果 Clash 配置启用了：</p><div class="language-yaml"><button title="Copy code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">dns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  enhanced-mode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">fake-ip</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>可以尝试给 OpenAI / ChatGPT 相关域名增加豁免，排除 fake-ip 映射对插件链路的影响：</p><p>在 <code>dns:</code> 下增加：</p><div class="language-yaml"><button title="Copy code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  fake-ip-filter</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;chatgpt.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;*.chatgpt.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;openai.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;*.openai.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;oaistatic.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;*.oaistatic.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;auth.openai.com&quot;</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h3 id="_2-给-openai-域名单独配置境外-dns" tabindex="-1">2. 给 OpenAI 域名单独配置境外 DNS <a class="header-anchor" href="#_2-给-openai-域名单独配置境外-dns" aria-label="Permalink to &quot;2. 给 OpenAI 域名单独配置境外 DNS&quot;">​</a></h3><p>如果通用 <code>nameserver</code> 优先使用国内 DNS，再通过 fallback 补救，可以尝试让 OpenAI 相关域名直接走境外 DNS，减少解析链路反复切换：</p><p>在 <code>nameserver-policy</code> 中增加：</p><div class="language-yaml"><button title="Copy code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;chatgpt.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;+.chatgpt.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;openai.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;+.openai.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;oaistatic.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &#39;+.oaistatic.com&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://1.1.1.1:853</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">tls://8.8.8.8:853</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里同时写根域和 <code>+.</code> 通配，避免只命中根域却漏掉子域。不同 Clash 或 Mihomo 客户端支持的配置格式可能不同，修改前需要对照当前客户端文档。</p><h3 id="_3-显式把-openai-域名钉到代理" tabindex="-1">3. 显式把 OpenAI 域名钉到代理 <a class="header-anchor" href="#_3-显式把-openai-域名钉到代理" aria-label="Permalink to &quot;3. 显式把 OpenAI 域名钉到代理&quot;">​</a></h3><p>如果规则里只是最后用：</p><div class="language-yaml"><button title="Copy code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">- </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">GEOIP,CN,DIRECT</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">- </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">MATCH,PROXY</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>理论上 OpenAI 域名最终会走 <code>PROXY</code>，但结果仍然依赖 DNS、GEOIP 和代理组当前选择。如果 <code>PROXY</code> 组被手工切成了 <code>DIRECT</code>，插件链路仍可能失败。</p><p>可以在 <code>GEOIP,CN,DIRECT</code> 之前增加：</p><div class="language-yaml"><button title="Copy code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">DOMAIN-SUFFIX,chatgpt.com,PROXY</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">DOMAIN-SUFFIX,openai.com,PROXY</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">DOMAIN-SUFFIX,oaistatic.com,PROXY</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>同时检查 Clash UI 里 <code>PROXY</code> 组当前是否误选成了 <code>DIRECT</code>。</p><h2 id="实际恢复路径" tabindex="-1">实际恢复路径 <a class="header-anchor" href="#实际恢复路径" aria-label="Permalink to &quot;实际恢复路径&quot;">​</a></h2><p>这次没有修改代码，确认网络层可达后重试插件调用，Notion 搜索恢复正常。</p><p>排查链路可以整理成下面这个顺序：</p><ol><li>在 Codex shell 里测试，确认是否是沙箱网络不可用。</li><li>在本机终端里测试 <code>https://chatgpt.com/backend-api/wham/apps</code>。</li><li>如果返回 <code>405 Allow: POST</code>，说明入口在线。</li><li>如果匿名 POST 返回 <code>401</code>，说明接口在线但需要有效登录态。</li><li>回到 Codex 重试 Notion 插件调用。</li><li>如果重试成功，前一次失败大概率来自插件启动或传输通道短暂不可用。</li><li>如果持续失败，再检查 Clash 的 <code>fake-ip-filter</code>、<code>nameserver-policy</code> 和 OpenAI 代理规则。</li><li>如果网络配置确认无误但仍失败，重新登录 ChatGPT / Codex，或者刷新 Notion 插件授权。</li></ol><h2 id="经验总结" tabindex="-1">经验总结 <a class="header-anchor" href="#经验总结" aria-label="Permalink to &quot;经验总结&quot;">​</a></h2><p>遇到 Notion 插件调用失败时，可以把链路分成四层：</p><ul><li>Codex shell 网络：可能被沙箱禁网，<code>curl</code> 直接 DNS 失败。</li><li>本机终端网络：可能能访问 <code>chatgpt.com</code>，但不代表 Codex App 插件 worker 同样可用。</li><li>ChatGPT 插件通道：报错指向 <code>wham/apps</code> 时，应先排查这一层。</li><li>Notion 业务查询：只有插件通道成功后，才谈得上页面权限、数据库 schema、搜索结果为空等问题。</li></ul><p>以后再遇到：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>HTTP request failed: https://chatgpt.com/backend-api/wham/apps</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>可以按下面的顺序处理：</p><ul><li>先不要改 Notion 查询逻辑。</li><li>先看 <code>wham/apps</code> 是网络不可达、方法不对、未授权，还是插件 worker 临时失败。</li><li>对临时失败，重试 Notion MCP 调用，连续失败后再深入检查网络配置。</li><li>如果连续失败，把任务标记为环境阻塞，保留已生成内容和目标上下文，等连通性恢复后再继续。</li><li>如果本机使用 Clash TUN/fake-ip，优先检查 OpenAI 域名的 fake-ip 豁免、境外 DNS 和显式代理规则。</li></ul><p><code>curl</code> 只是探针，排查目标是确认哪个进程、哪套网络、哪个协议阶段或登录态在失败。</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2026-06-10-codex-notion-network-failure-solution.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2026-06-15-sdd-in-practice" class="">关于 SDD 的一些分享</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2026-05-20-sentry-skills-troubleshooting" class="">用 Sentry Skills 完成一次线上错误排查</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2026-06-15T10:30:00.000Z","datePublished":"2026-06-10T16:05:00.000Z","inLanguage":"zh-CN","name":"Codex 调用 Notion 失败：从 wham/apps 报错定位网络链路","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"Codex 调用 Notion 失败：从 wham/apps 报错定位网络链路","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

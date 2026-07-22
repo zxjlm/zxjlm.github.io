@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2022-04-15-docker-image-smaller.ZgddQW27.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docker 镜像优化实践 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="Docker 镜像优化实践">
+<meta property="og:image" content="<a href=&quot;https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/%E6%88%AA%E5%B1%8F2022-04-15&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/截屏2022-04-15</a> 21.44.48.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">Docker 镜像优化实践</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2022-04-15">2022-04-15</time></dd></dl><span>[
+  &quot;源流清泉&quot;,
+  &quot;Docker&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>本篇主要的内容是如何对 Docker 镜像进行优化.</p><p>优化总共分为以下几步:</p><ol><li>基于项目优化 <ul><li>缩减依赖包</li></ul></li><li>基于Docker优化 <ul><li>目录结构优化</li><li>构建文件优化</li><li>使用 <strong>dive</strong> 进行镜像分析</li></ul></li></ol><p>以及部分 <strong>Multi-stage build</strong> 的内容.</p><!-- more --><p>最初的镜像大小为2.3G, 造成这个离谱的镜像大小的原因很多, 接下来将一层一层地抽丝剥茧.</p><h2 id="基于项目优化" tabindex="-1">基于项目优化 <a class="header-anchor" href="#基于项目优化" aria-label="Permalink to &quot;基于项目优化&quot;">​</a></h2><h3 id="缩减依赖包大小" tabindex="-1">缩减依赖包大小 <a class="header-anchor" href="#缩减依赖包大小" aria-label="Permalink to &quot;缩减依赖包大小&quot;">​</a></h3><p>项目的一个遗留问题就是, 在项目开始的时候使用了之前项目的 Python 虚拟环境. 所以在导出 <em>requirements.txt</em> 的时候混进了一些不必要的依赖内容.</p><p>笔者使用的是 <strong>Poetry</strong> 进行项目包管理, 它会自动地生成一份 <em>poetry.lock</em> 文件, 能够较快的在新的环境中实现依赖的安装. 同时, 它也会剪去不必要的依赖.</p><p>另外一个缩减依赖包的方法, 是查找较大的依赖包, 并且优化掉一些可以使用本地代码替代的依赖内容.</p><p>使用如下的命令列出当前项目中使用到的依赖的大小.</p><div class="language-shell"><button title="Copy code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> list</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> +3</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;{print $1}&#39;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> xargs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> pip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> show</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -E</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;Location:|Name:&#39;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> cut</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39; &#39;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> paste</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39; &#39;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> -</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;{print $2 &quot;/&quot; tolower($1)}&#39;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> xargs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> du</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -sh</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> 2&gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> /dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> sort</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -hr</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>笔者在这一步找到了 <code>pandas</code> , 之前为了省事使用了 <strong>DataFrame</strong> 的数据聚合功能, 但是为此引入 100M+ 的 Pandas + Numpy 依赖组合, 显然是不值得的.</p><p>使用综上的两种缩减依赖的思路之后, 将镜像的大小压缩到了 <strong>1.8G</strong> 左右.</p><h2 id="基于docker的优化" tabindex="-1">基于Docker的优化 <a class="header-anchor" href="#基于docker的优化" aria-label="Permalink to &quot;基于Docker的优化&quot;">​</a></h2><h3 id="目录结构优化" tabindex="-1">目录结构优化 <a class="header-anchor" href="#目录结构优化" aria-label="Permalink to &quot;目录结构优化&quot;">​</a></h3><h4 id="dockerignore" tabindex="-1">dockerignore <a class="header-anchor" href="#dockerignore" aria-label="Permalink to &quot;dockerignore&quot;">​</a></h4><p>Docker 在构建镜像时, 会以指定的文件夹(context)为基础, 然后执行 <em>Dockerfile</em> . 所以对于前后端分离的项目, 只需要将 context 指定到对应的 <em>前端\后端</em> 项目目录即可, 不需要直接覆盖整个项目目录.</p><p>此外, 正如 git 支持通过 gitignore 来忽略掉不需要的文件, Docker 也可以使用 <a href="https://docs.docker.com/engine/reference/builder/#dockerignore-file" target="_blank" rel="noreferrer">dockerignore</a> 来剪掉非必要的文件.</p><p>这里笔者把剪掉的一些文件列出来, 以供参考.</p><ul><li>.git</li><li>.idea</li><li>pytorch模型文件</li></ul><h3 id="构建文件优化" tabindex="-1">构建文件优化 <a class="header-anchor" href="#构建文件优化" aria-label="Permalink to &quot;构建文件优化&quot;">​</a></h3><h4 id="基础镜像" tabindex="-1">基础镜像 <a class="header-anchor" href="#基础镜像" aria-label="Permalink to &quot;基础镜像&quot;">​</a></h4><p>以 Python 为例, 官方给出了很多的镜像版本, 其中, <em>python:latest</em> 这类的镜像体积最大, 其中包含了很多未被过滤的不必要的包, 一般用于编译等功用. 而 <em>python:alpine</em> 则是基于 <strong>alpine</strong> 系统的, 拥有目前而言最精简的体积.</p><p>以 <em>linux/amd64</em> 架构为例, 前者的镜像大小是后者的 <strong>19</strong> 倍.</p><table><thead><tr><th>python</th><th>python-alpine</th></tr></thead><tbody><tr><td>334.72 MB</td><td>17.74 MB</td></tr></tbody></table><blockquote><p>需要注意的是, alpine的精简是建立在移除很多编译所需的包的基础上的, 所以在安装包的时候, 需要使用 <code>apk</code> 加入一些必要的系统级依赖.</p><p>!!! WARNING !!!</p><p>使用 alpine 需要对各个依赖有较为清晰的认识, 不然很可能会陷入不断安装依赖的泥潭中. 如果没有, 或者想要避免这部分的麻烦, 可以使用 slim 版本或者原版.</p></blockquote><p>此外, 对于 <em>flask</em> 项目来说, 一般会引入 <em>gunicorn</em> 提高运行效率, 这里笔者一开始图省事, 选用的是 <a href="https://hub.docker.com/r/tiangolo/meinheld-gunicorn/" target="_blank" rel="noreferrer">meinheld-gunicorn</a> 这个镜像, 但是深入研究(见于后文的 <em>镜像分析</em> )之后发现, 这个镜像本质上是基于对 <em>python:alpine</em> 的一层封装, 所以最终还是继续使用 <em>python:alpine</em> 作为基础镜像.</p><h4 id="删除cache" tabindex="-1">删除cache <a class="header-anchor" href="#删除cache" aria-label="Permalink to &quot;删除cache&quot;">​</a></h4><p>在poetry \ pip \ yarn 这类包管理系统安装依赖包的时候, 会使用 <em>缓存</em> 来减少之后重复安装所带来的损耗, 当然, 在使用 Docker 打包镜像的时候, 完全不需要考虑重复安装的问题, 所以完全可以将这些缓存文件删除, 或者使用类似 <code>--no-cache</code> 这类的参数约束包管理器跳过缓存.</p><h3 id="使用dive进行镜像分析" tabindex="-1">使用dive进行镜像分析 <a class="header-anchor" href="#使用dive进行镜像分析" aria-label="Permalink to &quot;使用dive进行镜像分析&quot;">​</a></h3><p>到这一步, 我们根据表层信息能做的优化基本上到了一个瓶颈, 如果需要更深入的优化, 则需要将镜像包解开, 看看镜像内部的&quot;风景&quot;.</p><p>这里我们会用到 <a href="https://github.com/wagoodman/dive" target="_blank" rel="noreferrer">dive</a> 这个开源工具.</p><p>使用 <code>dive &lt;your-image-tag&gt;</code> 即可以进入镜像内部.</p><p>如下图所示, 是我们的最初的镜像.</p><figure><img src="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/opt2-before.png" alt="before-dive" loading="lazy" decoding="async"></figure><p>看懂这个图, 首先需要理解 docker 中的一个概念, 即 <strong>layer(层)</strong> . 详细的可以阅读相关的<a href="https://docs.docker.com/storage/storagedriver/#images-and-layers" target="_blank" rel="noreferrer">文档</a>.</p><blockquote><p>Each layer is only a set of differences from the layer before it. Note that both <em>adding</em>, and <em>removing</em> files will result in a new layer.</p></blockquote><p>一言以蔽之, layer是一个记录了与上一层layer差异的集合. 知道了这一点之后, 再看上面的dive分析图, 左侧可以选择不同的layer, 右侧则根据 git 的标色习惯列出了与上一层的变更内容.</p><p>所以我们在编写Dockerfile的时候, 需要尽可能地减少layer的数量, 因为即使你在下一层中删除了一些文件, 但是这些文件依然会存在于上一层镜像中, 甚至你会因为你的删除操作而导致镜像体积更大.</p><p>至此, 我们可以着手进行镜像的分析了. 为了更直观地解释, 这里贴出笔者的 Dockerfile.</p><div class="language-dockerfile"><button title="Copy code" class="copy"></button><span class="lang">dockerfile</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># pull official base image</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> tiangolo/meinheld-gunicorn:python3.8</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /FamousNER</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> root</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">...pass</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># install dependencies</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/pyproject.toml ./backend/poetry.lock /FamousNER/</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> apk add --no-cache --virtual .build-deps gcc libc-dev libffi-dev python3-dev musl-dev make build-base \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; pip install --upgrade pip setuptools wheel -i https://pypi.douban.com/simple \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; pip install </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;poetry==$POETRY_VERSION&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> -i https://pypi.douban.com/simple \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry config virtualenvs.create false \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry install --no-interaction --no-ansi --no-dev \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; apk del .build-deps gcc libc-dev libffi-dev musl-dev make build-base</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># copy project</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/ /FamousNER/</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>首先我们可以看到, 有一个 176M 的 layer, 占据了这整个image绝大的体积.</p><p>我们使用dive进入到这一层中, 可以很明显地看到, 在 /root 文件夹下有一些残留的缓存文件, 在 docker 构建中, 所有的缓存都是可以清除的, 所以我们可以在这一层的Dockerfile中加入 <code>rm -rf /root/.cache/</code> 用来手动删除依赖安装过程中产生的缓存信息.</p><p>然后一个迷惑的地方是, Dockerfile 中明明只执行了一次 RUN, 但是在镜像分析中却有着很多层的 RUN 命令.</p><p>这个是因为 <code>FROM tiangolo/meinheld-gunicorn:python3.8</code> 这一句, 引用了第三方的镜像, 而第三方的镜像构建命令也被dive分析展示出来了.</p><p>所以为了缩减layer, 我们将 <code>tiangolo/meinheld-gunicorn</code> 这个镜像中的一部分对我们有用的构建命令摘出来, 回归 alpine 作为基础镜像.</p><p>综上, 我们能够得到如下所示的镜像构建文件.</p><div class="language-dockerfile"><button title="Copy code" class="copy"></button><span class="lang">dockerfile</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># pull official base image</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python:3.8-alpine</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /FamousNER</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> root</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">...pass</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># install dependencies</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/pyproject.toml ./backend/poetry.lock /FamousNER/</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> apk add --no-cache --virtual .build-deps gcc libc-dev libffi-dev python3-dev musl-dev make build-base \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; pip install --upgrade pip setuptools wheel -i https://pypi.douban.com/simple \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; pip install </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;poetry==$POETRY_VERSION&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> -i https://pypi.douban.com/simple \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry config virtualenvs.create false \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry install --no-interaction --no-ansi --no-dev \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry add meinheld==1.0.2 \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; poetry add gunicorn==20.1.0 \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; yes | poetry cache clear . --all \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; apk del .build-deps gcc libc-dev libffi-dev musl-dev make build-base \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">     &amp;&amp; rm -rf /root/.cache/</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># copy project</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/ /FamousNER/</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>而通过这个构建文件, 我们最终将镜像的体积压缩到了 155.7MB . 而之前的镜像几乎是它的15倍.</p><p>![](<a href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/%E6%88%AA%E5%B1%8F2022-04-15" target="_blank" rel="noreferrer">https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/截屏2022-04-15</a> 21.44.48.png)</p><h2 id="multi-stage-build" tabindex="-1">Multi-stage build <a class="header-anchor" href="#multi-stage-build" aria-label="Permalink to &quot;Multi-stage build&quot;">​</a></h2><p>Multi-stage build 是 docker 官方文档中推荐的一种构建更轻量的镜像的方式. 可见于 <a href="https://docs.docker.com/develop/develop-images/multistage-build/" target="_blank" rel="noreferrer">官方文档</a> .</p><p>官方使用的是 <code>golang</code> 作为范例, 而事实上 Multi-stage 确实对于这种编译型语言有着很强的优化作用.</p><p>编译型语言一旦完成项目的编译, 语言本身就不重要了, 即使系统里没有安装 <code>golang</code> , 但是只要使用编译好的可执行文件, 就可以启动程序. 也就是, 这是编译和执行分离的一种构建方式.</p><p>在这里我同样也尝试了这样的构建方法.</p><div class="language-dockerfile"><button title="Copy code" class="copy"></button><span class="lang">dockerfile</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># `python-base` sets up all our shared environment variables</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python:3.8-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python-base</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># python</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> PYTHONUNBUFFERED=1 \</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # prevents python creating .pyc files</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    PYTHONDONTWRITEBYTECODE=1 \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    POETRY_VERSION=1.1.4 \</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # make poetry install to this location</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    POETRY_HOME=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/opt/poetry&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    POETRY_VIRTUALENVS_IN_PROJECT=true \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    POETRY_NO_INTERACTION=1 \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    \</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # paths</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    # this is where our requirements + virtual environment will live</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    PYSETUP_PATH=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/opt/pysetup&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    VENV_PATH=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/opt/pysetup/.venv&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># prepend poetry and venv to path</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> PATH=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;$POETRY_HOME/bin:$VENV_PATH/bin:$PATH&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># `builder-base` stage is used to build deps + create our virtual environment</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python-base </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> builder-base</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> sed -i </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;s/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /etc/apk/repositories \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; apk add --no-cache --virtual .build-deps gcc libc-dev libffi-dev python3-dev musl-dev make build-base \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; pip install --upgrade pip setuptools wheel -i https://pypi.douban.com/simple \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; pip install </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;poetry==$POETRY_VERSION&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> -i https://pypi.douban.com/simple</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># &amp;&amp; poetry config virtualenvs.create false</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># copy project requirement files here to ensure they will be cached.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> $PYSETUP_PATH</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/poetry.lock ./backend/pyproject.toml ./</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># install runtime deps - uses $POETRY_VIRTUALENVS_IN_PROJECT internally</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> poetry install --no-dev \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; poetry add meinheld==1.0.2 \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; poetry add gunicorn==20.1.0</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python-base </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> production</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> --from=builder-base $PYSETUP_PATH $PYSETUP_PATH</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ./backend/ /FamousNER/</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /FamousNER</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>可以看到, 本质上是将安装依赖等工作放到了另一个镜像里, 将依赖编译\安装之后, 直接将成果拷贝到主镜像文件中. 这样就不需要去考虑安装依赖过程中产生的各种缓存问题了.</p><p>对于 python 这类解释性语言来说, 即使在我们使用了之前的优化策略之后, multi-build 带来的提升依旧是巨大的. 如下图所示, 通过这种范式构建出来的镜像, 体积只有 105MB , 比之前的多重优化之后的镜像, 又缩减了近 1/3 .</p><p>![](<a href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/%E6%88%AA%E5%B1%8F2022-04-15" target="_blank" rel="noreferrer">https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/截屏2022-04-15</a> 22.10.12.png)</p><p>不过 multi-build 并非银弹, 本项目由于只是用了 python 的依赖内容, 所以只需要将前面几步得到的依赖文件(也就是虚拟环境)拷贝一下就行, 而面对复杂的项目, 存在很多的系统级的依赖, 哪些文件是需要拷贝的, 哪些是需要丢弃的, 可能会是一个较大的挑战.</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2022-04-15-docker-image-smaller.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2022-05-14-new-mac-software-init" class="">开发人员的Mac软件推荐列表(持续更新)</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2022-04-12-doccano-use" class="">doccano的使用注意</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","datePublished":"2022-04-15T16:30:50.000Z","inLanguage":"zh-CN","name":"Docker 镜像优化实践","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"Docker 镜像优化实践","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

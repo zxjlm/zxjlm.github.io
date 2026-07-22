@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2020-07-19-windows-terminal-beautify._S13UYUQ.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows下的终端优化方案 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="Windows下的终端优化方案">
+<meta property="og:image" content="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">Windows下的终端优化方案</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2020-07-19">2020-07-19</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><h2 id="前言" tabindex="-1">前言 <a class="header-anchor" href="#前言" aria-label="Permalink to &quot;前言&quot;">​</a></h2><p>在 Mac 上面安装了 <a href="https://www.iterm2.com/" target="_blank" rel="noreferrer">iTerm2</a> 之后，逐渐难以忍受 <em>Windows</em> 上面简陋的终端界面，<strong>CMD</strong> 就不谈了，即使了 Windows10 加入的 <strong>PowerShell</strong> ，也依旧差强人意。</p><p>PowerShell 强化了 Windows 命令，并且能够让电脑使用部分的 Linux 命令，这是一个重大的进步。其缺点依旧明显，Linux 命令并不完整，对于习惯了使用 Linux 命令行来实现一些骚操作的人来说，难免有点束手束脚。其次，PowerShell 的界面也不太令人满意。</p><p>所以这次按照 <a href="https://docs.microsoft.com/zh-cn/windows/terminal/" target="_blank" rel="noreferrer">Windows Terminal Docs</a> , DIY 一个美观的 Terminal。</p><!-- more --><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204740685.png" alt="图1. 我所期待的界面" loading="lazy" decoding="async"></figure><!----><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719204803738.png" alt="image-20200719204803738" loading="lazy" decoding="async"></figure><!----><p>这实在是令人难受。</p><p>那么，本篇所解决的问题，就是如何在 Windows 中搞一个花哨的命令行界面。</p><h2 id="正文" tabindex="-1">正文 <a class="header-anchor" href="#正文" aria-label="Permalink to &quot;正文&quot;">​</a></h2><h3 id="解决外观问题" tabindex="-1">解决外观问题 <a class="header-anchor" href="#解决外观问题" aria-label="Permalink to &quot;解决外观问题&quot;">​</a></h3><h4 id="cmder" tabindex="-1">cmder <a class="header-anchor" href="#cmder" aria-label="Permalink to &quot;cmder&quot;">​</a></h4><p>一开始我选择使用 <a href="https://cmder.net/" target="_blank" rel="noreferrer">cmder</a> 来做一个基于 PowerShell 的终端界面。</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719205641389.png" alt="image-20200719205641389" loading="lazy" decoding="async"></figure><!----><blockquote><p>Cmder is a software package created out of pure frustration over the absence of nice console emulators on Windows. It is based on amazing software, and spiced up with the Monokai color scheme and a custom prompt layout, looking sexy from the start.</p></blockquote><p>但是在我进行一些 DIY 的时候，总是会一些奇奇怪怪的 UI 错误，所以在经历了几次令人迷惑的 bug 之后，我开始寻找其它的替代方案。</p><h4 id="windows-terminal" tabindex="-1">Windows Terminal <a class="header-anchor" href="#windows-terminal" aria-label="Permalink to &quot;Windows Terminal&quot;">​</a></h4><p><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?rtc=1&amp;activetab=pivot:overviewtab#" target="_blank" rel="noreferrer">Windows Terminal</a> 是一个官方的 ui 壳子，他所展示的界面如下。</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210053548.png" alt="image-20200719210053548" loading="lazy" decoding="async"></figure><!----><blockquote><p>Windows 终端程序是一款新式、快速、高效、强大且高效的终端应用程序，适用于命令行工具和命令提示符，PowerShell 和 WSL 等 Shell 用户。主要功能包括多个选项卡、窗格、Unicode、和 UTF-8 字符支持，GPU 加速文本渲染引擎以及自定义主题、样式和配置。</p></blockquote><p>在界面上，与 cmder 所展示的极简风格相比，官网这个以基佬紫为基调，模糊透明背景的案例深得我心。于是果断下载下来。</p><p>使用的第一体验就是，非常地流畅，软件的本体只有 7M 不到，想要实现案例 UI，似乎是要另外使用一个 colorTool 来完成。这种插件式的构建方式很灵活，但是也很费时间。在大概地折腾了两下之后，它在我心中已经是一个合格 的 cmder 的替代方案了……如果没有遇到下面这位的话。</p><h4 id="terminus" tabindex="-1">Terminus <a class="header-anchor" href="#terminus" aria-label="Permalink to &quot;Terminus&quot;">​</a></h4><p>这是我在 github 上面冲浪的时候无意中发现的一个界面，使用 JavaScript 开发。</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719210434085.png" alt="image-20200719210434085" loading="lazy" decoding="async"></figure><!----><blockquote><p><strong>Terminus</strong> is a highly configurable terminal emulator for Windows, macOS and Linux</p><ul><li>Integrated SSH client and connection manager</li><li>Theming and color schemes</li><li>Fully configurable shortcuts</li><li>Split panes</li><li>Remembers your tabs</li><li>PowerShell (and PS Core), WSL, Git-Bash, Cygwin, Cmder and CMD support</li><li>Direct file transfer from/to SSH sessions via Zmodem</li><li>Full Unicode support including double-width characters</li><li>Doesn’t choke on fast-flowing outputs</li><li>Proper shell experience on Windows including tab completion (via Clink)</li></ul></blockquote><p>类似 cmder，这是一个一体化的软件，减少了很多用户可以配置的项目，而添加了一些成熟的配置方案供用户选择。另外，自带 SSH，大概地试了一下，感觉 xshell 也可以雪藏了。</p><p>总的来说，Windows Terminal 和 Termius 都能够实现我们的美化 UI 的需求，但是拓展功能方面有很大的差别。</p><h3 id="拓展命令行" tabindex="-1">拓展命令行 <a class="header-anchor" href="#拓展命令行" aria-label="Permalink to &quot;拓展命令行&quot;">​</a></h3><p>虽然 PowerShell 拓展了 windows 的命令行，使其更加接近 Linux，但是终究还是有所差距的。上文所以到的 Terminus 和 Windows Terminal，只是实现了 UI 上的强化，并没有完成命令行的拓展。</p><p>本来打算用过 <strong>git bash</strong> 来搞定，但是在 Windows 上依赖 git 附加的 bash，总感觉有点不伦不类的。于是使用 WSL 来搞一点炫酷的事情。</p><p>在新的 Windows 正式版本中，已经可以直接使用 WSL 了，记得年前安装 WSL 的时候，只能使用 Windows 先行版本，还为因此出现的各种 bug 头疼了好久。</p><p>根据官网的文档，几条命令，再重启一下电脑，就能够使用 wsl2 了。</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719212747796.png" alt="image-20200719212747796" loading="lazy" decoding="async"></figure><!----><p>emmmm，有点 Server 的味道了啊。</p><p>到这一步，已经实现了 <strong>UI 美化、命令行强化</strong> 的目标。</p><p>当然，UI 还能够进一步美化，那就是从内部美化。</p><p>这里我选择使用 zsh + ohmyzsh 套餐。</p><h3 id="oh-my-zsh" tabindex="-1">oh-my-zsh <a class="header-anchor" href="#oh-my-zsh" aria-label="Permalink to &quot;oh-my-zsh&quot;">​</a></h3><p>首先，使用如下命令来安装 zsh。</p><div class="language-bash"><button title="Copy code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> zsh</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>然后，在 <a href="https://ohmyz.sh/#install" target="_blank" rel="noreferrer">oh-my-zsh</a> 官网的文档上的命令完成安装。</p><blockquote><p>补充说明：</p><ol><li>安装过程中会使用到 <em>git</em> ，不过 git 默认安装在 wsl2 的 Ubuntu 中，所以就不用手动再装了。</li><li>在下载.sh 文件时，可能会遇到无法连通 github 的情况，可以修改 host，更懒人的办法是，直接把.sh 文件手动 copy 到本地，然后用 sh 命令运行即可</li></ol></blockquote><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719214701704.png" alt="image-20200719214701704" loading="lazy" decoding="async"></figure><!----><p>清爽多了，不过比起这个默认的样式，我更习惯使用 <strong>agnoster</strong> 这个样式。</p><blockquote><p>更多的样式可以在<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noreferrer">文档</a>中寻到。</p></blockquote><p>使用如下命令打开 zsh 的配置文件。(*rc 文件，有兴趣的可以了解一下)</p><div class="language-bash"><button title="Copy code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ~/.zshrc</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>然后将 ZSH_THEME 修改成所需要的样式的名称即可。</p><p>最后执行如下命令，重载 zsh。</p><div class="language-bash"><button title="Copy code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">source</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ~/.zshrc</span></span></code></pre><button class="code-block-unfold-btn"></button></div><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20200719220527894.png" alt="image-20200719220527894" loading="lazy" decoding="async"></figure><!----><p>差不多就是这个味道了。后续还会做一些配色方面的 DIY。</p><blockquote><p>关于 oh-my-zsh 的补充：</p><p>目前的一些教程会让下载其他的 oh-my-zsh 插件，但是有一些插件现在已经在 oh-my-zsh 之中了，不必下载，只需要在配置文件中把名字加上就可以使用。</p><p>详情可以查阅<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noreferrer">文档</a></p></blockquote><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2020-07-19-windows-terminal-beautify.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2020-08-05-geek-contest" class="">极客大赛与赛后反思</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2020-06-21-the-first-week-of-practice" class="">写在实习第一周</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2020-07-19T22:13:08.000Z","datePublished":"2020-07-19T22:13:08.000Z","inLanguage":"zh-CN","name":"Windows下的终端优化方案","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"Windows下的终端优化方案","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

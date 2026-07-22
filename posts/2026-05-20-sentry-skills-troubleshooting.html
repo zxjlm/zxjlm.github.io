@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2026-05-20-sentry-skills-troubleshooting.DVTPJDnY.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>用 Sentry Skills 完成一次线上错误排查 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="用 Sentry Skills 完成一次线上错误排查">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">用 Sentry Skills 完成一次线上错误排查</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2026-05-20">2026-05-20</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>后端服务接入 Sentry 或 GlitchTip 后，线上错误通常并不缺数据，真正缺的是一条稳定的排查路径：如何从 issue 进入，拿到事件详情、请求上下文、breadcrumbs 和异常栈，再回到代码里验证根因。</p><p>这次实验的重点不是 Grafana。关键证据全部来自 Sentry Skills 对 GlitchTip 事件的读取，因此这里记录一套通过 Sentry Skills 独立完成错误排查的方法。Grafana MCP 的使用可以参考 <a href="/posts/grafana-mcp-usage/">用 Grafana MCP 排查 Redis 配置问题与迭代监控</a>。</p><!-- more --><h2 id="案例背景" tabindex="-1">案例背景 <a class="header-anchor" href="#案例背景" aria-label="Permalink to &quot;案例背景&quot;">​</a></h2><p>这次要分析的是生产环境中的一个 GlitchTip issue：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>NoSuchKey: The specified key does not exist.</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>错误发生在一个内容抽取接口中：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>POST /api/content/field_extract</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>issue 在几分钟内出现了多次。页面上第一眼能看到的信息很有限：异常类型是对象存储 SDK 的 <code>NoSuchKey</code>，报错函数指向 <code>oss_download</code>。</p><p>如果只看标题，很容易把它判断成“对象被删了”或“上传链路失败”。但这类结论太粗，无法指导修复。我们真正需要知道的是：</p><ul><li>请求传入的到底是什么 URL 或对象 key。</li><li>代码为什么会把它当成对象存储文件下载。</li><li>这是正常业务对象缺失，还是输入校验放得太宽。</li><li>应该在调用对象存储前拦截，还是只处理 SDK 抛出的异常。</li></ul><h2 id="使用-sentry-skills-的排查流程" tabindex="-1">使用 Sentry Skills 的排查流程 <a class="header-anchor" href="#使用-sentry-skills-的排查流程" aria-label="Permalink to &quot;使用 Sentry Skills 的排查流程&quot;">​</a></h2><h3 id="_1-先确保能拿到-issue-信息" tabindex="-1">1. 先确保能拿到 issue 信息 <a class="header-anchor" href="#_1-先确保能拿到-issue-信息" aria-label="Permalink to &quot;1. 先确保能拿到 issue 信息&quot;">​</a></h3><p>Sentry Skills 的第一条原则是：如果取不到 issue 信息，就不要继续猜。</p><p>实际操作时，先从项目环境变量中读取 GlitchTip 或 Sentry 配置：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>SENTRY_BASE_URL</span></span>
+<span class="line"><span>SENTRY_ORG</span></span>
+<span class="line"><span>SENTRY_PROJECT</span></span>
+<span class="line"><span>SENTRY_AUTH_TOKEN</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里展示的只有变量名，token、组织名、项目名和内部域名都不应写入排查记录。</p><p>然后通过 skill 内置脚本验证项目是否存在，再读取 issue detail 和 event detail。这样可以避免两个常见问题：</p><ul><li>查错项目，比如 API 和异步任务使用了不同 project。</li><li>使用了 Sentry upstream 的 API 路径，但 GlitchTip 实际需要兼容路径。</li></ul><p>这一步可以拿到：</p><ul><li>issue id、short id、标题、状态和出现次数。</li><li>出错接口和环境标签。</li><li>事件 id 和接收时间。</li><li>异常类型、文件名和函数名。</li></ul><h3 id="_2-展开-event-entries-而不是只看-issue-标题" tabindex="-1">2. 展开 event entries，而不是只看 issue 标题 <a class="header-anchor" href="#_2-展开-event-entries-而不是只看-issue-标题" aria-label="Permalink to &quot;2. 展开 event entries，而不是只看 issue 标题&quot;">​</a></h3><p>issue 标题只能说明发生了什么异常，不能说明为什么发生。真正有价值的是 event entries 里的三类信息：</p><ul><li>exception stacktrace：异常从哪个业务函数一路抛出。</li><li>breadcrumbs：异常前发生过哪些日志、HTTP、Redis 或 SQL 操作。</li><li>request：请求方法、路径、请求体和必要的 header。</li></ul><p>这次事件里，breadcrumbs 直接给出了关键线索：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>do_field_extract: html=, url=uploads_prod/&lt;date&gt;/, raw_url=&lt;redacted&gt;</span></span>
+<span class="line"><span>oss get_object start: bucket=&lt;bucket&gt; key=uploads_prod/&lt;date&gt;/</span></span>
+<span class="line"><span>HTTP GET OSS object -&gt; 404 Not Found</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>同一个 issue 的其他事件里，还能看到类似输入：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>url=uploads_prod/../</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这说明问题不是一个正常文件偶然不存在，而是接口允许客户端传入目录路径或异常对象路径，然后后端直接拿它访问对象存储。</p><h3 id="_3-用-breadcrumbs-串起请求到异常的最短路径" tabindex="-1">3. 用 breadcrumbs 串起请求到异常的最短路径 <a class="header-anchor" href="#_3-用-breadcrumbs-串起请求到异常的最短路径" aria-label="Permalink to &quot;3. 用 breadcrumbs 串起请求到异常的最短路径&quot;">​</a></h3><p>这次排查中，最短路径非常清楚：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>/api/content/field_extract</span></span>
+<span class="line"><span>  -&gt; do_field_extract(req)</span></span>
+<span class="line"><span>  -&gt; req.url.startswith(&quot;uploads&quot;)</span></span>
+<span class="line"><span>  -&gt; resolve_file_url(req.url)</span></span>
+<span class="line"><span>  -&gt; oss_download(oss_url)</span></span>
+<span class="line"><span>  -&gt; bucket.get_object(key)</span></span>
+<span class="line"><span>  -&gt; OSS NoSuchKey</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这一步排除了几个容易误判的方向：</p><ul><li>不是模型抽取字段失败。</li><li>不是 HTML 转 Markdown 失败。</li><li>不是图片解析失败。</li><li>不是 quota 或 Redis 锁问题。</li><li>也不是对象存储鉴权失败。</li></ul><p>错误发生在真正进入字段抽取前，属于内容准备阶段的输入校验问题。</p><h3 id="_4-回到代码验证根因" tabindex="-1">4. 回到代码验证根因 <a class="header-anchor" href="#_4-回到代码验证根因" aria-label="Permalink to &quot;4. 回到代码验证根因&quot;">​</a></h3><p>对应代码有两个关键点。第一处根据 <code>uploads</code> 前缀决定是否访问对象存储：</p><div class="language-python"><button title="Copy code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> req.url.startswith(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;uploads&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    oss_url </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> resolve_file_url(req.url)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    raw_bytes </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> oss_download(oss_url)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    raw_bytes </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> file_download(req.url, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">required</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>第二处负责把相对路径转换成对象存储 URL：</p><div class="language-python"><button title="Copy code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> candidate.startswith(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/uploads&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;https://&lt;bucket-host&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">candidate</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">elif</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> candidate.startswith(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;uploads&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;https://&lt;bucket-host&gt;/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">candidate</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>问题就在这里：代码只校验了 <code>uploads</code> 前缀，却没有校验它是不是一个合法、具体的文件对象。于是下面这些输入都会被放行：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>uploads_prod/&lt;date&gt;/</span></span>
+<span class="line"><span>uploads_prod/../</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>它们满足前缀条件，但并不代表一个可下载文件。</p><h2 id="排查结论" tabindex="-1">排查结论 <a class="header-anchor" href="#排查结论" aria-label="Permalink to &quot;排查结论&quot;">​</a></h2><p>最终结论是：内容抽取接口对对象 key 的校验过宽。客户端传入了目录路径或异常路径，后端仅凭 <code>uploads</code> 前缀判断为对象存储文件，并调用 <code>oss_download()</code>。对象存储返回 <code>NoSuchKey</code> 后，该 SDK 异常没有被转换成业务错误，于是被 GlitchTip 记录为未处理异常。</p><p>这个问题的本质不是“对象存储中缺少某个应该存在的文件”，而是“接口输入没有在访问对象存储前被收紧”。</p><h2 id="解决方案" tabindex="-1">解决方案 <a class="header-anchor" href="#解决方案" aria-label="Permalink to &quot;解决方案&quot;">​</a></h2><h3 id="_1-收紧对象-key-校验" tabindex="-1">1. 收紧对象 key 校验 <a class="header-anchor" href="#_1-收紧对象-key-校验" aria-label="Permalink to &quot;1. 收紧对象 key 校验&quot;">​</a></h3><p>在 <code>resolve_file_url()</code> 中增加更严格的规则：</p><ul><li>只允许指定上传目录下的相对对象路径。</li><li>拒绝 <code>..</code> 路径穿越。</li><li>拒绝以 <code>/</code> 结尾的目录路径。</li><li>拒绝空 basename。</li><li>根据业务需要，要求 basename 带允许的扩展名，例如 <code>.html</code>、<code>.pdf</code> 或 <code>.docx</code>。</li></ul><p>这样非法输入会在访问对象存储前直接返回 400，并带上统一错误码：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>URL_VALIDATION_FAILED</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h3 id="_2-转换对象存储-sdk-异常" tabindex="-1">2. 转换对象存储 SDK 异常 <a class="header-anchor" href="#_2-转换对象存储-sdk-异常" aria-label="Permalink to &quot;2. 转换对象存储 SDK 异常&quot;">​</a></h3><p>即使前置校验增强了，仍然应该在 <code>oss_download()</code> 中捕获 SDK 的典型异常，例如 <code>NoSuchKey</code>，并转换成业务异常：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>NoSuchKey -&gt; 400 File does not exist / URL_VALIDATION_FAILED</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这样调用方能拿到可理解的错误，Sentry 或 GlitchTip 也不会把用户输入导致的 404 当成未处理服务端异常。</p><h3 id="_3-为异常输入补测试" tabindex="-1">3. 为异常输入补测试 <a class="header-anchor" href="#_3-为异常输入补测试" aria-label="Permalink to &quot;3. 为异常输入补测试&quot;">​</a></h3><p>至少补下面几类测试：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>uploads_prod/&lt;date&gt;/        -&gt; 400，不调用 oss_download</span></span>
+<span class="line"><span>uploads_prod/../            -&gt; 400，不调用 oss_download</span></span>
+<span class="line"><span>uploads_prod/&lt;date&gt;/a.html  -&gt; 正常进入 oss_download</span></span>
+<span class="line"><span>OSS NoSuchKey               -&gt; 转换为业务异常</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>测试重点不是覆盖模型或 schema，而是覆盖 serializer 层的业务分支，因为这里正是决策发生的位置。</p><h2 id="sentry-skills-的使用经验" tabindex="-1">Sentry Skills 的使用经验 <a class="header-anchor" href="#sentry-skills-的使用经验" aria-label="Permalink to &quot;Sentry Skills 的使用经验&quot;">​</a></h2><h3 id="不要只读-issue-要读-event" tabindex="-1">不要只读 issue，要读 event <a class="header-anchor" href="#不要只读-issue-要读-event" aria-label="Permalink to &quot;不要只读 issue，要读 event&quot;">​</a></h3><p>issue detail 通常只够定位异常类型。真正能分析根因的是 event detail，尤其是 entries 里的 stacktrace、breadcrumbs 和 request。</p><h3 id="breadcrumbs-往往比-stacktrace-更接近业务事实" tabindex="-1">breadcrumbs 往往比 stacktrace 更接近业务事实 <a class="header-anchor" href="#breadcrumbs-往往比-stacktrace-更接近业务事实" aria-label="Permalink to &quot;breadcrumbs 往往比 stacktrace 更接近业务事实&quot;">​</a></h3><p>stacktrace 告诉我们异常在哪里爆炸，breadcrumbs 告诉我们爆炸前发生了什么。这次就是 breadcrumbs 里的请求体和 <code>oss get_object start</code> 日志直接揭示了异常 key。</p><h3 id="同一个-issue-要看多条事件" tabindex="-1">同一个 issue 要看多条事件 <a class="header-anchor" href="#同一个-issue-要看多条事件" aria-label="Permalink to &quot;同一个 issue 要看多条事件&quot;">​</a></h3><p>单条事件可能只是一个样本。多看几条同 issue events，可以判断这是偶发文件缺失，还是一类异常输入在反复触发。这里多条事件都指向异常对象 key，因此根因更可信。</p><h3 id="敏感信息要在结论里主动收口" tabindex="-1">敏感信息要在结论里主动收口 <a class="header-anchor" href="#敏感信息要在结论里主动收口" aria-label="Permalink to &quot;敏感信息要在结论里主动收口&quot;">​</a></h3><p>Sentry 或 GlitchTip 事件可能包含用户标识、IP、header、临时凭证、请求参数、HTML 或 Markdown 大字段。分析时可以读取，但输出时只应保留诊断必要的信息，避免暴露：</p><ul><li>用户标识和 IP 地址。</li><li>Sentry token 和内部域名。</li><li>对象存储临时凭证。</li><li>完整请求 header。</li><li>大段原始 HTML、文件内容或 payload。</li></ul><h2 id="一个可复用的提示词" tabindex="-1">一个可复用的提示词 <a class="header-anchor" href="#一个可复用的提示词" aria-label="Permalink to &quot;一个可复用的提示词&quot;">​</a></h2><p>以后遇到线上错误，可以直接这样唤起：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>请使用 Sentry / GlitchTip skill 分析这个 issue 的原因，并给出解决方案。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>要求：</span></span>
+<span class="line"><span>1. 如果无法获取 issue 信息，直接终止并报错，不要猜。</span></span>
+<span class="line"><span>2. 先读取 issue detail，再读取 event detail 和同 issue 的其他 events。</span></span>
+<span class="line"><span>3. 重点分析 exception entries、breadcrumbs、request body、tags 和 runtime context。</span></span>
+<span class="line"><span>4. 回到代码中验证根因。</span></span>
+<span class="line"><span>5. 最终输出根因、证据链、修复方案和测试建议。</span></span>
+<span class="line"><span>6. 不要输出 token、IP、用户标识、临时凭证或大段原始 payload。</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h2 id="经验总结" tabindex="-1">经验总结 <a class="header-anchor" href="#经验总结" aria-label="Permalink to &quot;经验总结&quot;">​</a></h2><p>这次实验说明，在已经接入 Sentry 或 GlitchTip 的项目里，Sentry Skills 可以独立完成一次相当完整的错误排查闭环：</p><ol><li>从 issue 页面进入，确认异常类型和影响范围。</li><li>展开 event，提取请求上下文、breadcrumbs 和异常栈。</li><li>用多条事件验证问题模式。</li><li>回到代码确认真实决策点。</li><li>给出可以落地的修复方案和测试边界。</li></ol><p>Grafana MCP 更适合跨服务日志链路、监控指标和 dashboard 迭代；Sentry Skills 更适合从单个异常事件切入，快速拿到“一次请求为什么失败”的现场证据。两者可以互补，但这次案例里，Sentry Skills 已经足够完成定位。</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2026-05-20-sentry-skills-troubleshooting.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2026-06-10-codex-notion-network-failure-solution" class="">Codex 调用 Notion 失败：从 wham/apps 报错定位网络链路</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2026-05-20-grafana-mcp-usage" class="">用 Grafana MCP 排查 Redis 配置问题与迭代监控</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2026-05-20T17:00:00.000Z","datePublished":"2026-05-20T17:00:00.000Z","inLanguage":"zh-CN","name":"用 Sentry Skills 完成一次线上错误排查","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"用 Sentry Skills 完成一次线上错误排查","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

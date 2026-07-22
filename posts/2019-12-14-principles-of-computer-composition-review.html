@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2019-12-14-principles-of-computer-composition-review.BTMSVjAi.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>计算机组成原理复习 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="计算机组成原理复习">
+<meta property="og:image" content="https://i.loli.net/2019/12/06/Ga7gdQ1hAoMlWJm.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">计算机组成原理复习</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2019-12-14">2019-12-14</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><h1 id="一轮" tabindex="-1">一轮 <a class="header-anchor" href="#一轮" aria-label="Permalink to &quot;一轮&quot;">​</a></h1><h2 id="题目" tabindex="-1">题目 <a class="header-anchor" href="#题目" aria-label="Permalink to &quot;题目&quot;">​</a></h2><h3 id="选择1" tabindex="-1">选择1 <a class="header-anchor" href="#选择1" aria-label="Permalink to &quot;选择1&quot;">​</a></h3><ol><li><p>在 Cache 的地址映射中，若主存中的任意一块均可映射到 Cache 内的任意一快的位置上，则这种方法称为（ <strong>全相联映射</strong> ）</p></li><li><p>RAM 芯片字扩展时可以（ <strong>增加存储单元数量</strong> ）</p></li><li><p>RAM 和 ROM 的主要区别是（ <strong>断电后，RAM 内保存的信息会丢失，ROM 则可长期保存而不会丢失</strong> ）</p></li><li><p>采用虚拟存储器的主要目的是（ <strong>扩大主存储器的存储空间，并能进行自动管理和调度</strong> ）</p></li><li><p>某计算机字长 32 位，其存储容量为 4MB，若按半字编址，它的寻址范围是（ <strong>0~2M-1</strong> ） <a href="https://blog.csdn.net/u013058618/article/details/49407237" target="_blank" rel="noreferrer">类似题目</a></p><p>若按半字就是16位了 4MB=4<em>1024</em>1024*8位，所以4MB/16 = 2M；</p></li><li><p>对一个字，存储时先存放低字节，再存放高字节（即低字节占低地址，高字节占高地址）。这种存储方式是（ <strong>小端方式</strong> ）</p></li><li><p>设机器字长为 16 位，存储器按字编址，对于单字长指令而言， 读取该指令后，PC 值自动加 ( <strong>1</strong> )</p></li><li><p>ARM 微处理器为（ <strong>32 位的 RISC 架构</strong> ）</p></li><li><p>和指令字长无关的是（ <strong>数据总线宽度</strong> ）</p></li><li><p>设机器字长为 16 位，存储器按字节编址，CPU 读取一条单字 长指令后，PC 值自动加（ <strong>2</strong> ）</p><p>一条指令 16/8=2 个字节</p></li><li><p>（2011 年统考真题）偏移寻址通过将某个寄存器内容与一个形式地址相加而生成有效地址。下列寻址方式中，不属于偏移寻址方式的是（ <strong>间接寻址</strong> ）</p></li><li><p>下列关于 CISC 和 RISC 的叙述中，错误的是（ <strong>CISC 比 RISC 机器可以更好地支持高级语言</strong> ）</p></li><li><p>RISC 思想主要基于的是（ <strong>减少指令的平均执行周期</strong> ）</p></li><li><p>某指令系统有 200 条指令，对操作码采用固定长度二进制编码时，最少需要用（ <strong>8</strong> ）位</p></li><li><p>扩展操作码是一种优化技术，它使操作码的长度随地址码的减少而增加，不同地址的指令可以具有不同长度的操作码。这个说法（ <strong>正确</strong> ）。</p></li><li><p>指令周期是 ( <strong>CPU 从主存取出一条指令加上执行这条指令的时间</strong> )</p></li><li><p>CPU 响应中断的时间是（ <strong>一条指令执行结束</strong> ）</p></li><li><p>计算机操作的最小单位时间是( <strong>时钟周期</strong> )</p></li><li><p>计算机的主频的周期是指( <strong>时钟周期</strong> )</p></li><li><p>由于 CPU 内部操作的速度较快，而 CPU 访问一次存储器的时间较长，因此机器周期通常由（ <strong>存取周期</strong> ）来确定。</p></li><li><p>在 CPU 中跟踪指令后继地址的寄存器是 <strong>程序计数器_</strong> 。</p></li><li><p>在微程序控制器中，一条机器指令的功能通常由（ <strong>一段微程序实现</strong> ）。</p></li><li><p>CPU 响应中断的时间是 <strong>执行周期结束</strong> 。</p></li><li><p>一个 16K×32 位的存储器，其地址线和数据线的总和是 <strong>46</strong></p></li><li><p>在计算机术语中，将 <strong>运算器</strong> 和 <strong>控制器</strong> 合在一起称为 CPU，而将 CPU 和 <strong>存储器</strong> 合在一起称为主机</p></li></ol><h3 id="大题" tabindex="-1">大题 <a class="header-anchor" href="#大题" aria-label="Permalink to &quot;大题&quot;">​</a></h3><h3 id="操作码" tabindex="-1">操作码 <a class="header-anchor" href="#操作码" aria-label="Permalink to &quot;操作码&quot;">​</a></h3><figure><img src="https://i.loli.net/2019/12/06/Ga7gdQ1hAoMlWJm.png" alt="image.png" loading="lazy" decoding="async"></figure><figure><img src="https://i.loli.net/2019/12/06/rJ648EDn1s9ic53.png" alt="image.png" loading="lazy" decoding="async"></figure><figure><img src="https://i.loli.net/2019/12/06/ardZeYuIJEqk5V6.png" alt="image.png" loading="lazy" decoding="async"></figure><h3 id="寻址方式-1" tabindex="-1">寻址方式(1) <a class="header-anchor" href="#寻址方式-1" aria-label="Permalink to &quot;寻址方式(1)&quot;">​</a></h3><figure><img src="https://i.loli.net/2019/12/06/w6FOGXtxLunkKQ8.png" alt="截屏2019-12-06下午9.58.51.png" loading="lazy" decoding="async"></figure><figure><img src="https://i.loli.net/2019/12/06/MtzyqEUGBbso8J3.png" alt="截屏2019-12-06下午9.58.56.png" loading="lazy" decoding="async"></figure><figure><img src="https://i.loli.net/2019/12/06/jzmTuxYL138WKqi.png" alt="截屏2019-12-06下午9.59.00.png" loading="lazy" decoding="async"></figure><h3 id="寻址方式-2" tabindex="-1">寻址方式(2) <a class="header-anchor" href="#寻址方式-2" aria-label="Permalink to &quot;寻址方式(2)&quot;">​</a></h3><figure><img src="https://i.loli.net/2019/12/06/4G5fsaxOc7LXPAe.png" alt="截屏2019-12-06下午9.59.05.png" loading="lazy" decoding="async"></figure><h1 id="二轮" tabindex="-1">二轮 <a class="header-anchor" href="#二轮" aria-label="Permalink to &quot;二轮&quot;">​</a></h1><h2 id="选择2" tabindex="-1">选择2 <a class="header-anchor" href="#选择2" aria-label="Permalink to &quot;选择2&quot;">​</a></h2><ol><li><p>计算机主存储器读写的时间数量级为( <strong>ns</strong> )</p></li><li><p>指令系统采用不同寻址方式的目的是( <strong>缩短指令⻓度、扩大寻址空间</strong> )</p></li><li><p>指令操作所需的数据不会来自( <strong>控存</strong> )</p></li><li><p>关于机器指令的叙述不正确的是 ( <strong>系列计算机是指指令系统完全相同、基本体系结构相同的一系列计算机</strong> )</p></li><li><p>下列说法不正确的是( <strong>堆栈指针 SP 的内容表示当前堆栈内所存放的数据个数</strong> )</p></li><li><p>在相对寻址方式中，若指令中的地址码为 X，则操作数的地址为( <strong>PC + X</strong> )</p></li><li><p>程序控制类的指令的功能是( <strong>改变程序执行顺序</strong> )</p></li><li><p>设寄存器 R 的内容®=1000H，内存单元 1000H 的内容为 2000H，内存单元 2000H 的内容为 3000H，PC 的值为 4000H，采用相对寻址方式，形式地址为-2000H 的操作数是( <strong>3000H</strong> )</p><p>4000H -2000H = 2000H -&gt; 3000H</p></li><li><p>移位操作中移出的位存入( <strong>进位标志位</strong> )</p></li><li><p>为了缩短指令中某个地址段的位数，有效的方法是采取( <strong>寄存器寻址</strong> )</p></li><li><p>假设寄存器 R 中的数为 200，主存地址为 200 和 300 的存储单元中存放的内容分别是 300 和 400，若访问到的操作数为 200，则所采用的寻址方式为( <strong>立即寻址 200</strong> )</p><p>直接寻址200的操作数为300，寄存器间接寻址（R）的操作数300，存储器间接寻址（200）的操作数为400，寄存器寻址R的操作数为200</p></li><li><p>构成控制信号序列的最小单位是( C ) A)微程序 B) 微指令 C)微命令 D)机器指令</p><p>微命令(微操作) -&gt; 微指令 -&gt; 微程序</p></li><li><p>控制器同步控制方式是指( A ) A)由统一时序信号控制的方式。 B) 由握手信号控制的方式。 C)由中断控制的方式。 D)程序查询控制方式.</p></li><li><p>存储微程序的存储器称为(C ) A)主存 B) Cache C)控存 D)辅存</p></li><li><p>微程序存放在( C )。 A 主存中 B 堆栈中 C 只读存储器中 D 磁盘中</p></li><li><p>微指令中的微地址表示(D ) A 微操作的对象 B 存放微操作结果的地址 C 微操作数地址 D 后继微指令地址</p></li><li><p>在微程序控制中，把操作控制信号编成( A )。 A 微命令 B 微地址 C 操作码 D 程序</p></li><li><p>从一条指令的启动到下一条指令的启动的间隔时间称为( D )。 A 时钟周期 B 机器周期 C 工作周期 D 指令周期</p></li><li><p>直接转移指令的功能是将指令中的地址代码送入 ( C ) A.累加器 B.地址寄存器 C.PC D.存储器</p></li><li><p>状态寄存器用来存放 D A.算术运算结果 B.逻辑运算结果 C.运算类型 D.算术、逻辑运算及测试指令的结果状态</p></li><li><p>某一 RAM 芯片其容量为 512*8 位,除电源和接地端外该芯片引线的最少数目是(C ) 。 A. 21 B. 17 C. 19 D.20</p><p>log512 地址线 + 8 数据线 + 片选线 + 读写线</p></li><li><p>DMA 访问主存时，让 CPU 处于等待状态，等 DMA 的一批数据访问结束后，CPU 再恢 复工作，这种情况称作 <strong>A</strong> 。 A.停止 CPU 访问主存;B.周期挪用;C.DMA 与 CPU 交替访问;D.DMA。</p><p>cpu周期挪用:cpu暂停工作一个周期</p></li><li><p>中断向量可提供 <strong>C</strong> 。 A.被选中设备的地址; B.传送数据的起始地址; C.中断服务程序入口地址;D.主程序的断点地址。</p></li><li><p>响应中断请求的条件是 <strong>B</strong> 。 A.外设提出中断; B.外设工作完成和系统允许时; C.外设工作完成和中断标记触发器为“1”时。 D.CPU 提出中断。</p></li><li><p>将微程序存储在 EPROM 中的控制器是 <strong>A</strong> 控制器。 A.静态微程序; B.毫微程序; C.动态微程序; D.微程序。</p></li><li><p>CPU 响应中断的时间是 <strong>C</strong>。 A.中断源提出请求 B.取指周期结束 C.执行周期结束。</p></li><li><p>中断向量地址是 <strong>B</strong> 。 A.子程序入口地址 B.中断服务子程序入口地址 C.中断服务子程序出口地址 D.中 断返回地址</p></li><li><p>完整的指令周期包括取指、 <strong>间址</strong> 、 <strong>执行</strong> 、 <strong>中断</strong> 四个子周期，影响指令流水线性能的三种相关分别是 <strong>结构</strong> 相关、 <strong>数据</strong> 相关和控制相关。</p></li><li><p>没有外存储器的计算机初始引导程序可以放在 <strong>B</strong> 。 A.RAM B.ROM C.RAM 和 ROM D.CPU 30. 下列有关运算器的描述中 <strong>D</strong> 是正确的。 A.只作算术运算，不作逻辑运算 B.只作加法 C.能暂时存放运算结果 D.以上答案都不对</p></li><li><p>采用 DMA 方式传送数据时，每传送一个数据就要用一个 <strong>C</strong> 。 A.指令周期 B.数据周期 C.存储周期 D.总线周期</p></li><li><p>三种集中式总线控制中， <strong>A</strong> 方式对电路故障最敏感。 A.链式查询 B.计数器定时查询 C.独立请求</p></li><li><p>当采用 <strong>(A)</strong> 对设备进行编址情况下，不需要专门的 I/O 指令组。 A.统一编址法 B.单独编址法 C.两者都是 D.两者都不是</p></li><li><p>总线通信中的同步控制是 <strong>B</strong> 。 A.只适合于 CPU 控制的方式; B.由统一时序控制的方式; C.只适合于外围设备控制的方式; D.只适合于主存。</p></li><li><p>在中断周期中，将允许中断触发器置“0”的操作由 <strong>A</strong> 完成。 A.硬件; B.关中断指令; C.开中断指令; D.软件。</p></li><li><p>水平型微指令的特点是 <strong>A</strong> 。 A.一次可以完成多个操作; B.微指令的操作控制字段不进行编码; C.微指令的格式简短; D.微指令的格式较长。</p></li></ol><h2 id="填空" tabindex="-1">填空 <a class="header-anchor" href="#填空" aria-label="Permalink to &quot;填空&quot;">​</a></h2><ol><li>使用不同寻址方式的目的是 <strong>缩短指令⻓度，扩大寻址空间，提高编程灵活性</strong></li><li>程序控制类指令的功能是 <strong>控制程序执行顺序</strong></li><li>微程序入口地址是根据 指令操作码 通过 译码 产生的。</li><li>微程序控制器的核心部件是 <strong>控存</strong> ，它一般用 ROM 构成。</li></ol><h2 id="简答" tabindex="-1">简答 <a class="header-anchor" href="#简答" aria-label="Permalink to &quot;简答&quot;">​</a></h2><ol><li>什么叫指令?什么叫指令系统? 答:指令是计算机执行某种操作的命令，也就是常说的机器指令。一台机器中所有机器指令的 集合，称这台计算机的指令系统。</li><li>一次程序中断大致可分为哪几个阶段? 答:一次程序中断大致可分为五个阶段。中断请求(1 分)中断判优(1 分)中断响应(1 分)中断服务(1 分)中断返回(1 分)</li><li>一个较完善的指令系统应包括哪几类? 答:包括:数据传送指令、算术运算指令、逻辑运算指令、程序控制指令、输入输出指 令、堆栈指令、字符串指令、特权指令等。</li><li>什么是指令周期?什么是机器周期?什么是时钟周期?三者之间的关系如何? 答:指令周期是完成一条指令所需的时间。包括取指令、分析指令和执行指令所需的 全部时间。机器周期也称为 CPU 周期，是指被确定为指令执行过程中的归一化基 准时间，通常等于取指时间(或访存时间)。时钟周期是时钟频率的倒数，也可称 为节拍脉冲或 T 周期，是处理操作的最基本单位。一个指令周期由若干个机器周 期组成，每个机器周期又由若干个时钟周期组成。</li><li>简要描述外设进行 DMA 操作的过程及 DMA 方式的主要优点。 答: (1)外设发出 DMA 请求; (2)CPU 响应请求，DMA 控制器从 CPU 接管总线的控制; (3)由 DMA 控制器执行数据传送操作; (4)向 CPU 报告 DMA 操作结束。 主要优点是数据数据速度快</li></ol><h2 id="综合" tabindex="-1">综合 <a class="header-anchor" href="#综合" aria-label="Permalink to &quot;综合&quot;">​</a></h2><h3 id="指令格式问题" tabindex="-1">指令格式问题 <a class="header-anchor" href="#指令格式问题" aria-label="Permalink to &quot;指令格式问题&quot;">​</a></h3><ol><li><p>若某机要求:三地址指令 4 条，单地址指令 255 条，零地址指令 16 条。设指令字⻓为 12 位.每个地址码⻓为 3 位。问能否以扩展操作码为其编码?如果其中单地址指令为 254 条呢? 说明其理由。</p><p>答:1不能用扩展码为其编码。 ∵ 指令字⻓ 12 位，每个地址码占 3 位; ∴三地址指令最多是2^(12-3-3-3)=8条， 现三地址指令需4条, ∴ 可有 4 条编码作为扩展码， ∴ 单地址指令最多为 4×2^3×2^3=2^8=256 条， 现要求单地址指令255条，∴可有一条编码作扩展码 ∴ 零地址指令最多为 1×2^3 = 8 条 不满足题目要求 ∴ 不可能以扩展码为其编码。</p></li><li><p>某指令系统指令⻓为 16 位，每个操作数的地址码⻓ 6 位，指令分为无操作数、单操作数和双操作数三类。 (1)若双操作数为 15 条，无操作数为 64 条，问单操作数最多可以有多少条? (2)若若双操作数为 15 条，单操作数为 62 条，问无操作数最多可以有多少条?</p><p>解:(1)((24-15)26-x)26=64 x=63(条) (2) ((24-15)26-62)26=128 (条)</p></li></ol><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2019-12-14-principles-of-computer-composition-review.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2019-12-14-The-Nature-of-Software-Development-note" class="">软件开发本质论 笔记</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2019-12-05-some-question-of-OS-review" class="">操作系统复习(易错题&amp;amp;&amp;amp;概念题及部分解析)</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2019-12-14T15:49:42.000Z","datePublished":"2019-12-14T15:49:42.000Z","inLanguage":"zh-CN","name":"计算机组成原理复习","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"计算机组成原理复习","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2022-01-01-my-2021.9ftBV1Vr.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2021 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="2021">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">2021</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2022-01-01">2022-01-01</time></dd></dl><span>[
+  &quot;起居杂录&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>反思是为了更好的前进, 本篇主要是对已经过去的 2021 年的一些简单的思考与觉悟.</p><p>不过这些思考的内容大多是在年末所有感而发的. 以 2021 为标题确实有点言过其实了(笑.</p><!-- more --><h2 id="以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" tabindex="-1">以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度 <a class="header-anchor" href="#以学习和兴趣为目的的项目所存在的意义-以及对待这种项目应有的态度" aria-label="Permalink to &quot;以学习和兴趣为目的的项目所存在的意义, 以及对待这种项目应有的态度&quot;">​</a></h2><p>在 2021 年, 维护或者开坑了几个小项目, 这是纯粹爱好驱动的项目, 有游戏相关的脚本, 也有生活相关的一些小工具. 这些项目或多或少地, 占据了我 2021 年不少的空闲时间, 虽然说这些项目让我有所收获, 比如说云函数, 比如说 Python 一些更优雅的实践. 但是经常性的, 也会陷入一些比较矛盾的境地, 这些项目所创造出的价值 – 并不止是单纯的经济利益, 还有更具综合性考量的价值, 包括完成一个新技术所带来的的心理上的满足感 \ 为社会(其他人)所带来的贡献 \ … – 这些价值是否与付出相匹配? 如果将这些时间用来看几篇文章, 是否在宏观上更具意义?</p><p>这个问题直到最后也没有得到一个很好的解答, 不过也并非一无所获. 纯粹的爱好驱动的项目, 起于爱好, 终于爱好, 在过去的一年中, 类似的项目维护过大概 3 个, 它们都是与游戏相关的脚本, 我大概总结了一下, 这些项目的起始点都是源自于对游戏的热爱, 而 <strong>触发契机</strong> 则是新学到的某一项技术. 项目的终点并没有一个很明确的触发事件, 大抵都是后来因为某些事情搁置, 再后来就懒得再去维护了.</p><p>这些项目有价值吗? 当然是有的, 通过实际的编码设计, 能够更好地理解作为触发契机的技术, 但是性价比来看, 这无疑是收益非常低的途径, 这个技术大可以通过看书 \ 看视频的方式来学习, 而启动并迭代一个项目, 通常会花费数倍于前者的时间, 并且实际的思考深度和理解广度并不一定优于前者. 那么为什么还要去花费这个精力来干这件事情呢? 我得到的一个结论是 <strong>自我满足</strong>, 为实践技术而喜悦, 为分享技术而开心, 甚至于, 最后能够为这项技术本身做出微薄的贡献, 这种自我的满足感会成为继续学习的一个很好的动力来源.</p><p>但是这种满足感是一柄双刃剑, 因为这份快感从实际上来说并不具备价值 – 它花费了大量的时间, 却无法产出与时间相对应的收益 – 这柄双刃剑的弊端在于, 过度地沉湎于这种虚无的快感, 会更深地形成一种虚妄的自我感动, 错误地感觉这个项目会有多么&quot;伟大&quot;, 能够 便利 \ 造福 多少使用者, 但是事实是, 项目的社会价值应当由大众来判断, 而非开发者.</p><p>这种满足感应该是 <strong>过程</strong>, 也就是作为&quot;学习&quot;这个行为的催化剂, 而非是 <strong>结果</strong>.</p><h2 id="更优化的学习方式和碎片化的生活" tabindex="-1">更优化的学习方式和碎片化的生活 <a class="header-anchor" href="#更优化的学习方式和碎片化的生活" aria-label="Permalink to &quot;更优化的学习方式和碎片化的生活&quot;">​</a></h2><p>这一年里, 我逐渐习惯了以英文搜索, 也会去阅读一些英文的博客 \ 文章. 前者大多数情况下能够帮助我更快地去定位问题, 解决问题; 而后者, 差不多持续了小半年, 进步是显著的, 不过依然还是看得很吃力.</p><p>列一下过去一年中的书单吧.</p><ol><li>&lt;知识图谱: 方法 \ 实践 与应用&gt;</li><li>&lt;知识图谱: 概念与技术&gt;</li><li>&lt;20 世纪简史&gt;</li><li>&lt;修改软件的艺术&gt;</li><li>&lt;希望之线&gt;</li></ol><p>这一年里并没有完整地读完多少书, 两本知识图谱是面向毕业设计读书, 其中其实很多精要的地方都没有去深究, 而是只取自己所需, 浅尝辄止.</p><p>&lt;软件修改的艺术&gt; 和 &lt;20 世纪简史&gt; 则是我对软件工程和人文社科的探究求索, 如 2020 年总结中所说的那样, 再忙都不能丢掉人文社科类, 要增加它在书单中的比重, 很遗憾的, 比重虽然上去了, 但完全是因为整体的阅读量下降而已…</p><p>&lt;希望之线&gt;则是每年至少一本的东野圭吾小说, 算是在几本比较费脑子的书单中的一个调剂吧, 虽然&quot;用推理悬疑类来调剂&quot;这种说法比较奇妙, 但是幸亏东野大多时候并不是硬核的本格推理小说家吧.</p><p>从阅读的书单不难发现, 这一年是忙碌而浮躁的一年, 上半年忙着毕业设计和找工作, 下半年则是作为一个新晋社畜疲于奔命, 在社交和工作上都是比较累的一年, 所造成的连锁恶果就是, 产生了很多的碎片化的时间, &quot;这些时间如何被利用起来&quot;, 这是我在年关将至的时候所思考的主要问题之一, 因为从各个软件的使用年报来看, 大多被用在了 &quot;起点&quot; \ &quot;bilibili&quot; 之类的的网站上, 聚沙成塔, 最终形成了非常可观(怕)的一个数字.</p><p>碎片化的时间如何用来学习? 我试过用来看书, 用来做一些实践开发, 用来看一些教学资料, 但是效果其实都不好, 究其原因, 我本身做一件事情进入状态比较慢, 用术语来说, 叫做&quot;上下文切换的开销大&quot;, 往往可能需要七八分钟才能进入状态, 但是很快又会被另一件事情打断, 这是十分难受的. 不久前看文章的时候有&quot;村上春树工作法&quot;, 在 day1 留一部分工作给 day2, 让 day2 能够快速继承并恢复 day1 的工作状态. 这对上下文开销大是一个不错的解决思路, 但是对&quot;碎片化时间&quot;还是没有一个很好的解决.</p><p>回到问题的起因, 碎片化时间是如何产生的? <strong>社交和工作</strong>, 在大学阶段, 曾是尝试过一段时间的&quot;番茄钟&quot;, 也就是设置一段时间专门用来工作, 期间屏蔽一切的消息干扰, 这是非常有用的, 但是在进入社会之后, 这种做法偶尔会让我有所惶惑, 社交上的消息可以滞后处理, 但是工作上的消息是否应该屏蔽? 于是问题又演变为了工作态度的问题, 对工作负责还是对自己负责? 这二者并非完全冲突, 毕竟对工作负责是升职加薪的不可或缺的前提, 这本质上是一个权衡, 留给生活的时间, 给予工作和学习不同的权重, 计算之后得到的期望值, 哪个更高, 就选哪个, 这当然是很理想很朴素的一个计算方式, 对于刚进入工作环境的我来说, 大抵是后者收益更高吧.</p><h2 id="小小目标" tabindex="-1">小小目标 <a class="header-anchor" href="#小小目标" aria-label="Permalink to &quot;小小目标&quot;">​</a></h2><p>对于 2022 年, 先定几个小小的目标吧.</p><ol><li>Apple Watch 的闭环率达到 90%, 健健康康.</li><li>阅读至少三本技术类, 至少三本社科类, 两本杂类, 每个月阅读量应该一本(综合).</li><li>完成一次旅行(根据实际疫情而定).</li><li>加薪 50% 以上.</li></ol><h2 id="后记" tabindex="-1">后记 <a class="header-anchor" href="#后记" aria-label="Permalink to &quot;后记&quot;">​</a></h2><p>感觉在实际工作之后, 整个人的思想都变得现实 \ 功利了很多, 这是没有办法避免的, 毕竟追逐理想大多情况下是 &quot;消费行为&quot; , 而理性考虑与现实行动才是 &quot;生产行为&quot; , 我为这种变化感到遗憾, 却并不因此而感到耻辱.</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2022-01-01-my-2021.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2022-01-05-ubuntu-initial" class="">Ubuntu初始环境配置(持续更新中)</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2021-09-17-clean-logs" class="">bash脚本 - 过期日志文件清理</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2022-01-02T01:03:44.000Z","datePublished":"2022-01-01T19:00:08.000Z","inLanguage":"zh-CN","name":"2021","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"2021","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

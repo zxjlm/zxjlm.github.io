@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2018-10-28-art-of-math.Dkc4NHpW.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数学之美笔记 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="数学之美笔记">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">数学之美笔记</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2018-10-28">2018-10-28</time></dd></dl><span>[
+  &quot;桂苑酌记&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>大学读书笔记之一:数学之美</p><blockquote><p>数学，正确看待时，不仅具有真理，还具有至高的美-一种冷而严峻的美，一种屹立不摇的美，如雕塑一般，一种不为我们软弱天性所动摇的美。也不像绘画或音乐有富丽堂皇的装饰，而是纯粹地崇高、绝对地完美，是最伟大的艺术，然而这是极其纯净的美，只有这个最伟大的艺术才能显示出最严格的完美。数学中一定能找到最卓越的试金石——超越自我时之喜悦感，如同写诗。<br> – Bertrand Arthur William Russell</p></blockquote><!-- more --><h1 id="摘录" tabindex="-1">摘录 <a class="header-anchor" href="#摘录" aria-label="Permalink to &quot;摘录&quot;">​</a></h1><blockquote><p>文字是信息的载体，而非信息本身。</p></blockquote><h2 id="罗塞塔石碑带来的启示" tabindex="-1">罗塞塔石碑带来的启示 <a class="header-anchor" href="#罗塞塔石碑带来的启示" aria-label="Permalink to &quot;罗塞塔石碑带来的启示&quot;">​</a></h2><p>·信息的冗余是信息安全的保障。 ·语言的数据（语料），尤其是双语式或者多语的，对照语料对翻译至关重要，它是我们从事机器翻译研究的基础。</p><h3 id="基于统计的自然语言的处理方法-统计语言模型" tabindex="-1">基于统计的自然语言的处理方法：统计语言模型 <a class="header-anchor" href="#基于统计的自然语言的处理方法-统计语言模型" aria-label="Permalink to &quot;基于统计的自然语言的处理方法：统计语言模型&quot;">​</a></h3><h4 id="隐含马尔可夫模型" tabindex="-1">隐含马尔可夫模型 <a class="header-anchor" href="#隐含马尔可夫模型" aria-label="Permalink to &quot;隐含马尔可夫模型&quot;">​</a></h4><p>最初应用于通信领域，继而推广到语言和语音处理之中，成为连接自然语言处理和通信的桥梁。 同时，也 是机器学习的主要工具之一。需要一个训练算法（鲍姆—韦尔奇算法）和使用时的解码算法（维特比算法）。 <strong>马尔可夫链（Markov Chain）</strong></p><h2 id="信息熵-h-单位-bit" tabindex="-1">信息熵（H 单位：bit） <a class="header-anchor" href="#信息熵-h-单位-bit" aria-label="Permalink to &quot;信息熵（H 单位：bit）&quot;">​</a></h2><p>一条信息的信息量与其不确定性有着直接的关系。（信息量等于不确定性） 一本书重复的内容多，信息量就小，冗余度大。 互信息在解决二义性方面的作用</p><p>布尔代数不仅把逻辑和数学合二为一，而且给了我们一个看待世界的全新的视角。</p><blockquote><p>Truth is ever to be found in simplicity,and not in the multiplicity and confusion of things. -Newton</p></blockquote><h2 id="图论" tabindex="-1">图论 <a class="header-anchor" href="#图论" aria-label="Permalink to &quot;图论&quot;">​</a></h2><p>哥尼斯堡七桥问题 广度优先搜索（BFS） 深度优先搜索（DFS）</p><p>“握手”——下载服务器和网站的服务器建立通信的过程。</p><p>网络爬虫对网页遍历的次序不是简单地 BFS 或者 DFS，而是有一个相对复杂的下载优先级排序的方法。 在爬虫中 BFS 的成分多一点。</p><p>页面分析和 URL 提取问题（脚本语言编写的难提取）</p><h2 id="pagerank-算法——民主表决式网页排名技术" tabindex="-1">PageRank 算法——民主表决式网页排名技术 <a class="header-anchor" href="#pagerank-算法——民主表决式网页排名技术" aria-label="Permalink to &quot;PageRank 算法——民主表决式网页排名技术&quot;">​</a></h2><p>度量网页的质量</p><p>搜索引擎的质量 ·用户的点击数据 ·完备的索引 ·对网页质量的度量 ·用户偏好 ·确定一个网页和某个查询的相关性的方法</p><p>搜索关键词权重的科学度量 TF-IDF TF-IDF（Term Frequency/Inverse Document Frequency） 信息检索领域的重要发明 <strong>加权</strong></p><h3 id="动态规划-dynamic-programming-dp" tabindex="-1">动态规划（Dynamic Programming，DP） <a class="header-anchor" href="#动态规划-dynamic-programming-dp" aria-label="Permalink to &quot;动态规划（Dynamic Programming，DP）&quot;">​</a></h3><p>横切（非典型二分法）的应用</p><h3 id="余弦定理-自底向上-—-聚类算法——在大量数据的分类中的应用" tabindex="-1">余弦定理（自底向上）—&gt;聚类算法——在大量数据的分类中的应用 <a class="header-anchor" href="#余弦定理-自底向上-—-聚类算法——在大量数据的分类中的应用" aria-label="Permalink to &quot;余弦定理（自底向上）—&gt;聚类算法——在大量数据的分类中的应用&quot;">​</a></h3><p>根据每个网页的特征制作特征向量，进而计算余弦，比较余弦大小。 <strong>迭代</strong></p><h3 id="矩阵运算-文本和词汇的矩阵-—-奇异值分解-amn-xmm✘bmn✘ynn" tabindex="-1">矩阵运算（文本和词汇的矩阵）—&gt;奇异值分解（AMN=XMM✘BMN✘YNN） <a class="header-anchor" href="#矩阵运算-文本和词汇的矩阵-—-奇异值分解-amn-xmm✘bmn✘ynn" aria-label="Permalink to &quot;矩阵运算（文本和词汇的矩阵）—&gt;奇异值分解（AMN=XMM✘BMN✘YNN）&quot;">​</a></h3><p>（第十五章，有点意思）</p><blockquote><p>能较快的得出结果，但很粗糙，适合进行超大规模文本的粗分类</p></blockquote><p>上述两方法结合使用，节省时间，并获得很好的准确性。</p><p>信息指纹 可以简单理解为讲一段信息（文字、图片、音频、视频等）随机映射到一个多为二进制空间中的一个点（一个二进制数字）。（不同信息产生相同指纹的概率几乎为 0，10e19 量级）</p><blockquote><p>关键算法：伪随机数产生器算法（Pseudo-Random Number Generator ,PRNG）</p></blockquote><p>特征：<strong>不可逆性</strong></p><p>素相同，那么他们的指纹一定相同。</p><h3 id="相似哈希——排查重复网页" tabindex="-1">相似哈希——排查重复网页 <a class="header-anchor" href="#相似哈希——排查重复网页" aria-label="Permalink to &quot;相似哈希——排查重复网页&quot;">​</a></h3><p>如果两个网页的相似哈希差越小，这两个网页相似性就越高。</p><p>密码设计——加密函数不应该通过几个自变量和函数值就能推出函数本身</p><p>一般来讲，密码之间分布均匀且统计独立时，提供的信息量最小。均匀分布使敌方无从统计，而统计独立可保证敌人即使知道了加密算法，并且看到一段密码和明码后，也无法破译另一段密码。</p><h4 id="公开密钥好处" tabindex="-1">公开密钥好处 <a class="header-anchor" href="#公开密钥好处" aria-label="Permalink to &quot;公开密钥好处&quot;">​</a></h4><p>·简单，一些乘除而已 ·可靠。保证产生的密文是统计独立而分布均匀的（无法根据已知的密文和明文来破译下一份密文）。只有掌握密钥 D 的人才能解密，即使加密者自己都无法解密。 ·灵活，可以产生很多的公开密钥 E 和私钥 D 的组合给不同的加密者。</p><p>利用信息可以消除一个系统的不确定性</p><p>搜索引擎反作弊问题和搜索结果权威性问题</p><h2 id="数学模型" tabindex="-1">数学模型 <a class="header-anchor" href="#数学模型" aria-label="Permalink to &quot;数学模型&quot;">​</a></h2><ol><li>一个正确的数学模型应当在形式上是简单的。</li><li>一个正确的模型一开始可能还不如一个精雕细琢过的错误的模型来的准确，但是，如果我们认定大方向是对的，就应该坚持下去。</li><li>大量准确的数据对研发很重要。</li><li>准确的模型也可能受噪音干扰而显得不准确；这是不应该用一种凑合的修正方法加以弥补，而是要找到噪音的根源，这也许能通往重大的发现。</li></ol><blockquote><p>最大熵原理和最大熵模型（保留全部的不确定性，将风险降到最小）</p></blockquote><h3 id="布隆过滤器" tabindex="-1">布隆过滤器 <a class="header-anchor" href="#布隆过滤器" aria-label="Permalink to &quot;布隆过滤器&quot;">​</a></h3><blockquote><p>数学原理：两个完全随机的数字相冲突的概率很小，因此，可以在很小的误差识别率条件下，用很少的空间存储大量的信息。比较常见办法是再建立一个小的白名单，存储那些可能被误判的信息。</p></blockquote><p>马尔可夫链的扩展—&gt;贝叶斯网络（加权的有向图） 所有的因果关系都可以有一个量化的可信度（Belief），即用一个概率描述。也就是说，贝叶斯网络的弧上可以有附加权重。所以，贝叶斯网络也被称为信念网络（Belief Networks）。<br> 贝叶斯网络的拓扑结构比马尔可夫链灵活。可以将讲，马尔可夫链是贝叶斯网络的特例，而贝叶斯网络是马尔可夫链的推广。 使用贝叶斯网络必须先知确定这个网络的拓扑结构，然后还要知道各个状态之间相关的概率。得到拓扑结构和这些参数的过程分别叫做结构训练和参数训练，统称训练。 相比马尔可夫链。贝叶斯网络训练比较复杂，从理论上讲，他是一个 NP 完备问题（NP-Complete），即对于现在的计算机是不可计算的。但是，对于某些应用，这个训练过程可以简化，并在计算机上实现。</p><blockquote><p>从数学层面来讲，贝叶斯网络是一个加权的有向图，是马尔科夫链的扩展。<br> 从认识论的层面来看，贝叶斯网络克服了马尔科夫链那种机械的线性的约束，他可以把任何有关联的事件统一到它的框架下面。<br> 因此，贝叶斯网络有很多应用。贝叶斯网络的描述简单易懂，但导出的模型却十分复杂。</p></blockquote><p>条件随机场是一个非常灵活的用于预测的统计模型。</p><h3 id="期望最大化算法-expectation-maximization-algorithm" tabindex="-1">期望最大化算法（Expectation Maximization Algorithm） <a class="header-anchor" href="#期望最大化算法-expectation-maximization-algorithm" aria-label="Permalink to &quot;期望最大化算法（Expectation Maximization Algorithm）&quot;">​</a></h3><p>文本的自收敛分类</p><p>逻辑回归模型和搜索广告</p><p>大数据在现在和未来社会中的重要性。</p><p>2018 年 05 月 28 日 09:07:32，初次阅读，完。</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2018-10-28-art-of-math.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2018-10-28-game-change-the-world" class="">游戏改变世界 笔记</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2018-10-28-a-Year-of-No-Significance-The-Ming-Dynasty-in-Decline" class="">万历十五年</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2018-10-28T09:50:42.000Z","datePublished":"2018-10-28T09:47:00.000Z","inLanguage":"zh-CN","name":"数学之美笔记","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"数学之美笔记","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

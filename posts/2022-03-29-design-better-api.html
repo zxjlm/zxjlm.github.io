@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2022-03-29-design-better-api.BuS4x9zq.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API设计个人经验小结(施工中) - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="API设计个人经验小结(施工中)">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">API设计个人经验小结(施工中)</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2022-03-29">2022-03-29</time></dd></dl><!----></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>本篇基于笔者本人的实际工作经验, 总结了一些API的设计思路, 并提供了对应的参考资料以供深入研究.</p><!-- more --><h2 id="使用一致的接口逻辑" tabindex="-1">使用一致的接口逻辑 <a class="header-anchor" href="#使用一致的接口逻辑" aria-label="Permalink to &quot;使用一致的接口逻辑&quot;">​</a></h2><p>接口逻辑包括如下方面:</p><ol><li>命名逻辑</li><li>接口处理逻辑</li></ol><p>一致的接口逻辑有以下的几种好处:</p><p>对于开发者来说: 前端能够根据后端的接口逻辑来有规律地复用一些代码和异常处理逻辑. 对于使用者来说: 一致的接口逻辑能够很容易地推导出其他的资源的获取方式或者参数的使用方式, 属于用户友好型设计.</p><p>下面列出一些笔者常用的命名风格, 以供参考.</p><ul><li>资源、参数、字段名等采用相同的命名风格, 如匈牙利命名法(foo_bar) 、驼峰命名法(fooBar). (笔者常用匈牙利命名法)</li><li>资源统一设计为复数或者单数的形式. (笔者常用复数形式)</li></ul><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span># 综合</span></span>
+<span class="line"><span>/api/v1/name_spaces</span></span>
+<span class="line"><span>/api/v1/name_spaces/{id}</span></span></code></pre><button class="code-block-unfold-btn"></button></div><ul><li>采用统一的认证逻辑(这一点通常在使用web框架时就自动满足了)</li><li>接口返回的状态码符合标准规范</li><li>接口的使用方法(method)符合标准规范</li></ul><p>本质上还是 <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" rel="noreferrer">RESTFul</a> 的那一套, 关于 RESTFul 的具体实践见于下文.</p><h2 id="符合restful设计" tabindex="-1">符合RESTFul设计 <a class="header-anchor" href="#符合restful设计" aria-label="Permalink to &quot;符合RESTFul设计&quot;">​</a></h2><p>内容接<a href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E8%87%B4%E7%9A%84%E6%8E%A5%E5%8F%A3%E9%80%BB%E8%BE%91">使用一致的接口逻辑</a></p><h3 id="使用规范的http状态码" tabindex="-1">使用规范的HTTP状态码 <a class="header-anchor" href="#使用规范的http状态码" aria-label="Permalink to &quot;使用规范的HTTP状态码&quot;">​</a></h3><p>以下列出一些常用的状态码。</p><table><thead><tr><th>状态码</th><th>含义</th></tr></thead><tbody><tr><td>200</td><td>成功请求</td></tr><tr><td>201</td><td>成功创建</td></tr><tr><td>400</td><td>错误的请求</td></tr><tr><td>401</td><td>未认证的请求</td></tr><tr><td>403</td><td>权限不足</td></tr><tr><td>404</td><td>无此资源</td></tr><tr><td>429</td><td>流量超限</td></tr><tr><td>5xx</td><td>服务器内部错误</td></tr></tbody></table><p>其中, 服务器内部错误一般会进行一层封装处理，不会展示具体的错误细节。</p><p><s>HTTP状态码更形象的内容可以参考<a href="https://http.cat/" target="_blank" rel="noreferrer">http cat</a></s></p><p>HTTP状态码更详细的内容可以参考 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank" rel="noreferrer">MDN</a></p><h3 id="使用规范的http方法" tabindex="-1">使用规范的HTTP方法 <a class="header-anchor" href="#使用规范的http方法" aria-label="Permalink to &quot;使用规范的HTTP方法&quot;">​</a></h3><p>以下列出一些常用的方法。</p><ul><li>POST 创建资源 <ul><li>POST /users</li></ul></li><li>GET 请求资源 <ul><li>GET /users 请求列表资源 <ul><li>GET /users/{id} 请求单个资源</li></ul></li></ul></li><li>PATCH 部分更新资源 <ul><li id="">PATCH /users/</li></ul></li><li>PUT 全量更新资源 <ul><li id="">PUT /users/</li></ul></li><li>DELETE 删除资源 <ul><li id="">DELETE /users/</li></ul></li></ul><p>除了方法之外，在命名时还应该遵循 <em>self-explaining</em> 原则, 本质上，url路径是对资源的定位，查找与操作都是以资源为主体，这一点会体现在 <strong>path</strong> 的命名上。</p><p>HTTP方法更详细的内容可以参考<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" rel="noreferrer">MDN</a></p><p>RESTFul更详细的内容可以参考<a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" rel="noreferrer">restful - wiki</a></p><h2 id="使用标准的报错信息" tabindex="-1">使用标准的报错信息 <a class="header-anchor" href="#使用标准的报错信息" aria-label="Permalink to &quot;使用标准的报错信息&quot;">​</a></h2><p>包括统一的错误码、报错信息. 一般会采用如下的</p><div class="language-plain_text"><button title="Copy code" class="copy"></button><span class="lang">plain_text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>{</span></span>
+<span class="line"><span>    &#39;code&#39;: number</span></span>
+<span class="line"><span>    &#39;data&#39;: object</span></span>
+<span class="line"><span>    &#39;message&#39;: string</span></span>
+<span class="line"><span>}</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h2 id="返回创建的资源" tabindex="-1">返回创建的资源 <a class="header-anchor" href="#返回创建的资源" aria-label="Permalink to &quot;返回创建的资源&quot;">​</a></h2><p>对于创建资源的请求，最好在接口中返回创建之后的资源对象，方便后续数据的使用。如 <strong>ID</strong> 等由后端生成补全的数据，前端如果想要得到，则需要额外进行一次 GET 请求，返回创建资源能够避免这个损耗。</p><h2 id="更倾向于使用patch而非put" tabindex="-1">更倾向于使用PATCH而非PUT <a class="header-anchor" href="#更倾向于使用patch而非put" aria-label="Permalink to &quot;更倾向于使用PATCH而非PUT&quot;">​</a></h2><p>PATCH用于部分更新，PUT用于全量更新。 大部分业务情境下我们需要使用的是资源的部分更新，这时候如果使用PATCH，则只需要传回要修改的键值对以及一个资源标识符，而使用PUT，则需要传回全量的数据。</p><p>两者更详细的对比可以见于 <a href="https://www.baeldung.com/cs/http-put-vs-patch" target="_blank" rel="noreferrer">http-put-vs-patch</a></p><h2 id="使用分页" tabindex="-1">使用分页 <a class="header-anchor" href="#使用分页" aria-label="Permalink to &quot;使用分页&quot;">​</a></h2><p>使用分页有如下的好处。</p><ul><li>对前端友好。现在主流的表格组件都支持分页或者有对应的分页解决方案。</li><li>缓解后端的请求压力与数据库压力。本质上，分页的请求使用的是 offset 和 limit 的 SQL请求，拥有更少的IO损耗。</li></ul><h2 id="使用-iso-8601-utc-返回结果" tabindex="-1">使用 ISO 8601 UTC 返回结果 <a class="header-anchor" href="#使用-iso-8601-utc-返回结果" aria-label="Permalink to &quot;使用 ISO 8601 UTC 返回结果&quot;">​</a></h2><p>在解释这个问题之前, 首先需要了解一下数据库中的时间格式。</p><p>以MySQL为例，时间格式分为 DATE \ DATETIME \ TIMESTAMP 三种类型, 更详细的信息可以见于 <a href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" target="_blank" rel="noreferrer">官方对时间格式的说明文档</a></p><p>在ORM框架取出数据时，会对数据进行预处理，在返回数据(Response)时将该类格式的数据自动转为ISO格式的字符串。</p><p>以 Django 为例:</p><div class="language-python"><button title="Copy code" class="copy"></button><span class="lang">python</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> value_to_string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, obj):    </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    val </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.value_from_object(obj)   </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    return</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &#39;&#39;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> val </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">is</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> None</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> val.isoformat()</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>从前端的角度来说，ISO格式的时间能够被解析为 <code>Date</code> 对象，进而根据客户端配置的时区来展示为当地的时间.</p><div class="language-javascript"><button title="Copy code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// JavaScript</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">date </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Date</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;2022-03-16T22:00:09.254459+08:00&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">date.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">toLocaleString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span></code></pre><button class="code-block-unfold-btn"></button></div><h2 id="提供健康度检查的接口" tabindex="-1">提供健康度检查的接口 <a class="header-anchor" href="#提供健康度检查的接口" aria-label="Permalink to &quot;提供健康度检查的接口&quot;">​</a></h2><p><strong>Health Check</strong> 接口反馈的是API服务的运行状态.</p><p>check的条目可以包含以下的几点.</p><ul><li>下游API检查。服务可能依赖于(depend on)另一个服务, 检查时也同样需要去检查下游服务的可用性，但是这个不会通过下游的API Check去检查，因为这会触发链式调用，在服务依赖复杂的情况下会很危险。</li><li>数据库连通性检查。检查基础的数据库增删改查操作是否可用。</li><li>数据库响应时间检查。数据库的响应时间同样是衡量服务健康度的重要指标，如果响应时间过长，则需要进行详细的原因排查。</li><li>内存检查。服务应该具有一个估算好的内存用量，进行健康度检查时，需要检测内存占用率，用来预防内存溢出导致的恶性问题。</li><li>消息积压情况检查。对于使用了MQ的服务，还应当对MQ消息数量进行检查，以确认消息积压情况。</li></ul><p>本质上，这是将一部分预警机制注入到了接口之中。例如内存检查、消息积压情况这些，在大部分的运维平台都有对应的监控机制，可以取代API监控中的对应功能。</p><p><strong>API Health Check</strong> 的一个下位替代品是 <strong>API Ping</strong> ，它的作用是检查API是否 <em>可用</em> ，而忽略了API的 <em>可用性</em> 。当上述的 Check List 全都不需要时，可以使用单纯的 API Ping。</p><p>对于健康度的一个典型实践，可以参考 <strong>k8s的存活探针</strong> 相关的内容。</p><h2 id="声明api版本" tabindex="-1">声明API版本 <a class="header-anchor" href="#声明api版本" aria-label="Permalink to &quot;声明API版本&quot;">​</a></h2><p>API在演进过程中不可避免地存在功能的升级和退化，所以需要对不同版本的API进行管理，以保证服务能够被不同版本的对应的前端\客户端使用。</p><p>比较初级的API版本声明方式是在 <strong>params</strong> 中声明或者在 <strong>path</strong> 中声明. 如下所示。</p><div class="language-plain_text"><button title="Copy code" class="copy"></button><span class="lang">plain_text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>https://api.averagecompany.com/v1/health</span></span>
+<span class="line"><span>https://api.averagecompany.com/health?api_version=1.0</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>而笔者见过的比较高端一点的版本控制策略，是在 <em>request_body</em> 中指明 API 的方法名称、版本、返回值等参数以及常规的请求参数，然后在网关中对这些请求进行重组，并分发给对应的服务接口。这一部分没有做过实践，所以就大概地提一下，不做深入阐述。</p><h2 id="采用api-key的认证" tabindex="-1">采用API KEY的认证 <a class="header-anchor" href="#采用api-key的认证" aria-label="Permalink to &quot;采用API KEY的认证&quot;">​</a></h2><p>todo: 第三方接口鉴权方式 、 加密、 环境变量存放密钥</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2022-03-29-design-better-api.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2022-04-12-doccano-use" class="">doccano的使用注意</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2022-03-19-sync-code-snippet" class="">github同步代码片段的自动化脚本</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2022-03-29T10:37:56.000Z","datePublished":"2022-03-29T09:50:04.000Z","inLanguage":"zh-CN","name":"API设计个人经验小结(施工中)","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"API设计个人经验小结(施工中)","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

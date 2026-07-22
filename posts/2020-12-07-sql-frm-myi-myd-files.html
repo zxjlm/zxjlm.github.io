@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2020-12-07-sql-frm-myi-myd-files.KEcHfOfV.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据库中的.frm\.myi\.myd文件 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="数据库中的.frm\.myi\.myd文件">
+<meta property="og:image" content="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207214445489.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">数据库中的.frm\.myi\.myd文件</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2020-12-07">2020-12-07</time></dd></dl><span>[
+  &quot;源流清泉&quot;,
+  &quot;DataBase&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>最近在寻找一些毕设要用到的数据，医药相关的，恰好在某个网站上面找到了备份数据库(手段不太光彩，这里就不细说了)，省去了写爬虫的麻烦。</p><p>不过这些备份文件是 <em>.MYD / .MYI / .frm</em> 这样的后缀，emmmmm，对于用惯了 <em>.sql</em> 的我来说，还是很头大的。</p><p>本篇的主要内容就是如何使用 <em>.frm / .MYI / .MYD</em> 文件来恢复数据库，同时，做了一些关联的延申。</p><!-- more --><h2 id="恢复文件" tabindex="-1">恢复文件 <a class="header-anchor" href="#恢复文件" aria-label="Permalink to &quot;恢复文件&quot;">​</a></h2><p>直接先 po 出我恢复文件的方法。这里需要根据 mysql 的版本不同分一下情况。</p><h3 id="_5-x" tabindex="-1">5.x <a class="header-anchor" href="#_5-x" aria-label="Permalink to &quot;5.x&quot;">​</a></h3><p>对于 <strong>mysql5.x</strong> 来说，恢复文件就是直接把 <em>.MYD / .MYI / .frm</em> 文件放到 mysql 的 data\数据库 文件夹下面就行了。</p><p>这里提供一下默认情况下 mysql 的 data 文件夹路径:</p><ul><li>Windows : C:\ProgramData\MySQL\MySQL Server 8.0\Data\数据库名</li><li>Linux : /var/lib/mysql/数据库名</li><li>macos : 如果我的 mac 还在的话就不会知道 Windows 的路径了= =</li></ul><p>移动完文件之后刷新一下数据库就能看到了。</p><h3 id="_8-x" tabindex="-1">8.x <a class="header-anchor" href="#_8-x" aria-label="Permalink to &quot;8.x&quot;">​</a></h3><p>我的 Windows 上使用的就是 <strong>mysql8.0</strong>, 5.x 的恢复方法在 8.x 上面是行不通的，最简单粗暴的办法就是再装一个 5.x.</p><p>考虑到平时基本上不会用 5.x 版本的 mysql，所以选择使用 docker 部一个临时性质的 mysql。</p><div class="language-shell"><button title="Copy code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 获取5.7镜像</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> pull</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> mysql:5.7.16</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 运行</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># -e 指定 mysql 的密码</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 默认的 3306 端口被 mysql8.0 占用了，所以映射到 3308 端口</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --name=mysql1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --restart</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> on-failure</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 3308:3306</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> MYSQL_ROOT_PASSWORD=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">123456</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> mysql:5.7.16</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 将备份数据放入docker - container 数据库</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 备份数据</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> mysql1:/var/lib/mysql/数据库名/</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这样，通过 <em>mysql workbench</em> 或者 <em>navicat</em> 之类的 GUI 就可以看到数据了。之后是同步到 8.0 还是直接导出就自己选择了。</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207214445489.png" alt="image-20201207214445489" loading="lazy" decoding="async"></figure><h2 id="延申" tabindex="-1">延申 <a class="header-anchor" href="#延申" aria-label="Permalink to &quot;延申&quot;">​</a></h2><p>延申中主要了解了如下的内容.</p><p>mysql 的两大常用存储引擎 <strong>MyISAM</strong> 和 <strong>InnoDB</strong> 的区别在哪里？</p><p>为什么一定要在 5.x 版本的 MyISAM 中恢复？可不可以直接在 8.x 版本的 MyISAM 中恢复？</p><p>是否可以通过挂载数据盘来简化上述的 <em>8.0</em> 版本的操作?</p><h3 id="为什么是-myd-myi-frm" tabindex="-1">为什么是.MYD/.MYI/.frm <a class="header-anchor" href="#为什么是-myd-myi-frm" aria-label="Permalink to &quot;为什么是.MYD/.MYI/.frm&quot;">​</a></h3><p>数据库存在多种存储引擎，每个引擎有着不同的特性。<em>.MYD/.MYI/.frm</em> 对应的是 <strong>MyISAM</strong> 引擎.</p><p>每个文件的作用如下</p><ul><li>.frm（存储表定义）</li><li>.MYD（MYData，存储数据）</li><li>.MYI（MYIndex，存储索引）</li></ul><p>数据文件和索引文件可以放置在不同的目录，平均分布 IO，获得 <strong>更快的速度</strong> 。更快的访问速度，这就是 MyISAM 这个引擎的特点。</p><p>同样一个常见的存储引擎就是 <strong>InnoDB</strong> .InnoDB 存储引擎提供了具有提交、回滚和崩溃恢复能力的 <em>事务</em> 安全。但是对比 MyISAM 的存储引擎，InnoDB 写的处理效率差一些，并且会占用更多的磁盘空间以保留数据和索引。同时,MySQL 支持外键的存储引擎 <strong>只有</strong> InnoDB.</p><p>以上所说的不同就是课本上所讲的 <em>事务与完整性</em> , MyISAM 和 InnoDB 的另一个不同就是 <strong>并发(concurrency)</strong>.使用 MyISAM，DML 语句将在表上获得排他锁，并且在保持该锁的同时，没有其他会话可以在表上执行 SELECT 或 DML 操作。</p><p>更多的不同点，引用自<a href="https://stackoverflow.com/questions/12614541/whats-the-difference-between-myisam-and-innodb" target="_blank" rel="noreferrer">What’s the difference between MyISAM and InnoDB?</a></p><p>MYISAM:</p><ol><li>MYISAM supports Table-level Locking</li><li>MyISAM designed for need of speed</li><li>MyISAM does not support foreign keys hence we call MySQL with MYISAM is DBMS</li><li>MyISAM stores its tables, data and indexes in diskspace using separate three different files. (tablename.FRM, tablename.MYD, tablename.MYI)</li><li>MYISAM not supports transaction. You cannot commit and rollback with MYISAM. Once you issue a command it’s done.</li><li>MYISAM supports fulltext search</li><li>You can use MyISAM, if the table is more static with lots of select and less update and delete.</li></ol><p>INNODB:</p><ol><li>InnoDB supports Row-level Locking</li><li>InnoDB designed for maximum performance when processing high volume of data</li><li>InnoDB support foreign keys hence we call MySQL with InnoDB is RDBMS</li><li>InnoDB stores its tables and indexes in a tablespace</li><li>InnoDB supports transaction. You can commit and rollback with InnoDB</li></ol><h3 id="为什么不能在-8-x-版本的-myisam-中恢复" tabindex="-1">为什么不能在 8.x 版本的 MyISAM 中恢复 <a class="header-anchor" href="#为什么不能在-8-x-版本的-myisam-中恢复" aria-label="Permalink to &quot;为什么不能在 8.x 版本的 MyISAM 中恢复&quot;">​</a></h3><p>存储文件的差异不仅存在于不同的物理引擎之间，使用不同版本的 MySQL，即使是相同的存储引擎，也会有存储文件上的差异。</p><p>从<a href="https://dev.mysql.com/doc/refman/8.0/en/data-dictionary-file-removal.html" target="_blank" rel="noreferrer">Removal of File-based Metadata Storage</a>可以看到，作为存储表定义的 <em>.frm 文件</em> 已经遭到了废弃，这也是为什么我无法在 8.x 的 MyISAM 中直接恢复数据库。</p><p>这种备份实在是坑人坑己。大概一年之前，我大部分的开发都是无脑选择的 mysql5.6，最主要的原因就是引用参考的很多代码都是 5.6 的数据库，学校教的数据库也是老版本的。不过随着技术见闻日渐增长，也逐渐开始使用更新版本的 mysql8.0.如果我也是像这位网站管理一样使用这种备份方式，那么&quot;恢复以前那么多数据库&quot;这件事情的工作量就足够我放弃拥抱新技术，继续坐守 5.6 了。</p><h4 id="数据库备份法" tabindex="-1">数据库备份法 <a class="header-anchor" href="#数据库备份法" aria-label="Permalink to &quot;数据库备份法&quot;">​</a></h4><p>毫无疑问这种备份法不值得提倡。那么如何正确地备份数据库呢？</p><blockquote><p>If we had to avoid the command line always, we would never have made it to the moon. Either get another astronaut or train harder.</p></blockquote><p>在 <a href="https://dev.mysql.com/doc/refman/8.0/en/using-mysqldump.html" target="_blank" rel="noreferrer">7.4 Using mysqldump for Backups</a> 有提到的一种备份法,就是将数据库变成 sql 文件来保存。</p><div class="language-shell"><button title="Copy code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 将tcm_web数据库备份到tcm_web.sql文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">mysqldump</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> tcm_web</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> &gt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> tcm_web.sql</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这样做的最大的好处就是通用.上述的版本与物理引擎,都可以使用 sql 文件来恢复,并且恢复也就是一行命令的事情.</p><p>其次的一个好处就是,在一定程度上避免了考虑数据库的运行状态.这与其说是 mysqldump 的好处,不如说是直接复制文件的坏处.如果在删除数据库的地方发生了什么，或者在主数据库上执行了其他有害的 SQL，该怎么办？这些语句将复制到从属服务器并执行相同的操作，从而无法回滚到事件发生之前的某个时刻.</p><p>最后的一个好处就是简单方便.不需要去寻找数据库的 data 文件夹在哪里,也不需要复制粘贴各种调试,直接一行命令完成备份,一行命令完成恢复~</p><h3 id="cant-change-permissions-of-ca-key-pem-的解决方法" tabindex="-1">“cant change permissions of ca-key.pem”的解决方法 <a class="header-anchor" href="#cant-change-permissions-of-ca-key-pem-的解决方法" aria-label="Permalink to &quot;“cant change permissions of ca-key.pem”的解决方法&quot;">​</a></h3><p>在<a href="#8.x">8.x 的文件恢复</a> 中，我是用的是从 host 拷贝文件到 container 的方法。后来觉得这个方法太麻烦，而且以后如果想要从 container 中取出文件也要经过一堆的操作命令。</p><p>于是就用 docker 的 -v 参数，挂载 host 的文件夹到 container.</p><p>这里引发了一个 Windows 特有的错误。</p><div class="language-shell"><button title="Copy code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 运行的日志如下</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:27.056363Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">see</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> documentation</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> for</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> more</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> details</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">).</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:27.064426Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] Setting lower_case_table_names</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">2</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> because</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> system</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> for</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> /var/lib/mysql/</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> is</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> case</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> insensitive</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:32.266049Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] InnoDB: New log files created, LSN</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">45790</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:32.967320Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] InnoDB: Creating foreign key constraint system tables.</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:33.077801Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] No existing UUID has been found, so we assume that this is the first </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">time</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> that this server has been started. Generating a new UUID: bfe2230e-388c-11eb-93e3-0242ac110002.</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">2020-12-07T13:04:33.132017Z</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [Warning] Gtid table is not ready to be used. Table </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;mysql.gtid_executed&#39;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> cannot be opened.</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">mysqld:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Can&#39;t change permissions of the file &#39;ca-key.pem&#39; (Errcode: 1 - Operation not permitted)</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">2020-12-07T13:04:33.350597Z 0 [ERROR] Could not set file permission for ca-key.pem</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">2020-12-07T13:04:33.350619Z 0 [ERROR] Aborting</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>主要就是权限的问题，这里需要挂载到 Windows 上面的文件夹的读写权限，偏偏 windows 的授权策略还挺麻烦的。</p><p>最后我在 GitHub 上面找到了<a href="https://github.com/docker-library/mysql/issues/302" target="_blank" rel="noreferrer">解决方案</a>。</p><blockquote><p>I tried what you suggested <a href="https://github.com/yosifkit" target="_blank" rel="noreferrer">@yosifkit</a>, but no luck. Eventually, I changed the image version to <code>mysql:5.7.16</code> and now it is working fine. Sorry to disappoint you 😞</p></blockquote><p>于是将版本换成 5.7.16，成功运行。</p><p>此时，进入到挂载数据盘的文件夹，container 中的数据就可以直接在 host 里面访问到了。(tcm_web 就是我备份的数据库文件夹)</p><figure><img src="https://picgo-zxj.oss-cn-shanghai.aliyuncs.com/image-20201207215507998.png" alt="image-20201207215507998" loading="lazy" decoding="async"></figure><h2 id="后记" tabindex="-1">后记 <a class="header-anchor" href="#后记" aria-label="Permalink to &quot;后记&quot;">​</a></h2><p>本来只是想记录一下 mysql 文件恢复的解决方案,不过后来发散开来,又查阅了很多的资料,才有了这一篇博客.(还是闲的~)</p><p>其实还有一些坑没有填上,比如在实际操作的过程中,我发现<strong>5.7</strong>的 data 文件夹内容结构和<strong>5.7.16</strong>的内容有些差距,这种情况的成因是什么?</p><p>这样发散下去是没有止境的,我所掌握的永远都只在圆圈以内罢了.</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2020-12-07-sql-frm-myi-myd-files.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2020-12-11-some-config-of-jupyter-on-wsl2" class="">wsl2上的jupyter配置</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2020-12-01-font-antispider-cracker" class="">字体反爬虫解决方案-自动化通过字体文件生成映射字典</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2020-12-07T23:12:00.000Z","datePublished":"2020-12-07T17:44:26.000Z","inLanguage":"zh-CN","name":"数据库中的.frm\\.myi\\.myd文件","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"数据库中的.frm\\.myi\\.myd文件","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

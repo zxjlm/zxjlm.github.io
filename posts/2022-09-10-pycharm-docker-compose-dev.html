@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2022-09-10-pycharm-docker-compose-dev.De-MGuQO.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pycharm 和 VSCode 的 docker compose 开发模式 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="Pycharm 和 VSCode 的 docker compose 开发模式">
+<meta property="og:image" content="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/docker%E7%A9%BA%E8%BD%BD.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">Pycharm 和 VSCode 的 docker compose 开发模式</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2022-05-28">2022-05-28</time></dd></dl><span>[
+  &quot;源流清泉&quot;,
+  &quot;Python&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>本篇是关于如何在 Pycharm 和 VSCode 中使用 Docker Compose 的. 开篇比较啰嗦, 大抵是踩过的一些坑和问题的解决过程, 实际的配置内容自 <a href="#%E8%BD%AC">转</a> 这一节开始.</p><!-- more --><h2 id="起" tabindex="-1">起 <a class="header-anchor" href="#起" aria-label="Permalink to &quot;起&quot;">​</a></h2><p>公司的项目是通过 <code>docker compose</code> 进行管理, 包含 nginx \ sql \ backend 等几个部分, 后端开发的时候, 主要关注的是 backend 服务.</p><p>backend 具有如下的一个目录结构, 在开发时, 通用的一个方法是使用 <code>docker compose up -d</code> 开启集群服务, 然后使用 <code>vscode</code> 的 docker 相关的插件, <code>attach</code> 到对应的服务中, 进行开发. 由于使用了 -v 挂载目录, 所以不需要担心修改内容丢失的问题.</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>├── django_www</span></span>
+<span class="line"><span>    ├── ...</span></span>
+<span class="line"><span>    ├── manage.py</span></span>
+<span class="line"><span>    ├── poetry.lock</span></span>
+<span class="line"><span>    ├── poetry.toml</span></span>
+<span class="line"><span>    ├── pyproject.toml</span></span>
+<span class="line"><span>    └── pytest.ini</span></span>
+<span class="line"><span>├── docker-compose.yml</span></span>
+<span class="line"><span>├── frontend</span></span>
+<span class="line"><span>├── Dockerfile</span></span>
+<span class="line"><span>└── ...</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>笔者算是第一次用 vscode 进行项目级别的后端开发, 在配置玩 python 的各种插件之后, 终于是完成了 <strong>文本编辑器</strong> 到 _<strong>IDE</strong> 的蜕变.</p><p>不过作为一个3年 pycharm 用户, 闲暇之余, 自然是比较好奇项目在TL口中&quot;比较麻烦&quot;的 pycharm 是个什么样子.</p><h2 id="承" tabindex="-1">承 <a class="header-anchor" href="#承" aria-label="Permalink to &quot;承&quot;">​</a></h2><h3 id="vscode-中的开发模式" tabindex="-1">VSCode 中的开发模式 <a class="header-anchor" href="#vscode-中的开发模式" aria-label="Permalink to &quot;VSCode 中的开发模式&quot;">​</a></h3><p>想要在 PyCharm 中实现 docker compose dev , 最好是能够先了解这样的开发模式在 vscode 运作的核心流程 \ 原理.</p><p>在 VSCode 中选择 <strong>attach to a running container</strong> 之后, 首先会看到编辑器提示 <strong>start dev container…</strong>, 随后, 容器中会安装(如果是第一次 attach )并启动一系列的 <code>vscode-server</code> 进程. 这实际上与之前使用 <code>ssh</code> 连接远程服务器 (remote-server) 进行开发的过程是差不多的. (当然, 从命令的角度来看, attach 与 ssh 存在本质上的区别, exec 更加接进 ssh)</p><p>于是, 可以总结出基于 vscode 的开发流程如下:</p><ol><li>attach 到运行中的项目容器</li><li>安装 vscode-server &amp;&amp; 安装 vscode-extensions</li><li>完成开发的前置工作.</li></ol><h3 id="在-pycharm-中复刻" tabindex="-1">在 PyCharm 中复刻? <a class="header-anchor" href="#在-pycharm-中复刻" aria-label="Permalink to &quot;在 PyCharm 中复刻?&quot;">​</a></h3><p>pycharm 在官方文档中有 <a href="https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#summary" target="_blank" rel="noreferrer">docker-compose</a> 这样一篇配置教程. 按照这个流程走完之后, 就可以在pycharm中运行一个 demo 级的 docker-compose 结构的项目.</p><p>但是项目的运行却出现了问题. 项目的依赖使用 poetry 进行管理, Dockerfile 中只存在 <code>poetry install --no-dev</code> 这样的依赖安装流程, 这是因为这样的安装不会牵扯进 <em>开发级别</em> 的依赖, 如 <code>pytest</code> \ <code>mypy</code> 等ci相关的依赖. 所以在开发的时候, 还需要在容器中执行 <code>poetry install</code> 或者 <code>poetry update</code> 来将缺失的开发依赖加进来.</p><p>这样就引出了我们遇到的问题, container 一旦重启, 那就 <strong>需要重新执行一遍安装命令</strong> , 当开发依赖很多时, 这个过程就很痛苦了. 使用 <code>vscode -&gt; attach docker container</code> 的方法, 我们可以保证在不重启容器的情况下完成开发. 但是对于 pycharm 来说, 每一次启动, 都会对容器进行重建, 那我们之前安装的东西就全清空了.</p><p>自然地, 笔者开始寻找 pycharm 中有没有不重建容器的办法, 因为在 django 的运行配置中, 有 <code>docker compose</code> 一栏, 能够配置相关的命令和参数, 但是这里只能配置pycharm支持的命令和参数, <code>docker compose up --no-recreate</code> 之类的命令恰好是<a href="https://youtrack.jetbrains.com/issue/PY-47305" target="_blank" rel="noreferrer">不被支持</a>的.</p><p><code>inspect</code> 到 pycharm 创建的容器中, 可以发现, 它并没有按照 <code>docker-compose.yaml</code> 文件中的 <code>command</code> 执行, 而是启动了如下的命令.</p><div class="language-json"><button title="Copy code" class="copy"></button><span class="lang">json</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Args&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;-u&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;/opt/.pycharm_helpers/pydev/pydevd.py&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;--multiprocess&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;--qt-support=auto&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;--port&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;56286&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;--file&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;/var/www/src/django_www/manage.py&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;runserver&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;0.0.0.0:3001&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        ]</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>看来是 pycharm 用自带的命令组替换了我们之前用来锚定容器的 <code>tail</code> 命令. 再更深一步地看一下, PyCharm是怎样实现这种 <code>cmd</code> 替换的?</p><p>监控 PyCharm 的运行过程, 捕获到如下的指令:</p><div class="language-shell"><button title="Copy code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">/usr/local/bin/docker-compose</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> /Users/xinjian.zhang/Projects/Garena/WebSZ/kop-event/shipdoom.kop.kingdomofpirate.com/src/docker-compose.dev.yml</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> /Users/xinjian.zhang/Library/Caches/JetBrains/PyCharm2022.1/tmp/docker-compose.override.890.yml</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> up</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --exit-code-from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> web</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> --abort-on-container-exit</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> web</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>结合 <a href="https://docs.docker.com/compose/extends/" target="_blank" rel="noreferrer">官方文档中关于 multi file</a> 的说明, 得到 PyCharm 在 compose 中的 Debug 运行过程.</p><ol><li>使用自带的 override.yml 来追加 \ 覆盖原有的构建文件.</li><li>在 container 中开启一个调试器 (pydev debugger)</li><li>attach 到 container 中, 并连接 (connect) 上调试器</li></ol><p>到此, 基本上可以确定, 无法在 PyCharm 中复刻 vscode 的 <code>attach</code> 开发模式. 不过正如前文所说, vscode 的 <code>attach</code> 实际上是 <code>ssh</code> 的变种, 对于 PyCharm 来说, 实现 ssh remote 开发是完全没有问题的. 不过笔者并没有在 <code>ssh</code> 的路上继续走下去.</p><h2 id="转" tabindex="-1">转 <a class="header-anchor" href="#转" aria-label="Permalink to &quot;转&quot;">​</a></h2><p>总结一下目前的困境的成因, 主要还是每次启动程序都会 recreate 容器, 而更上一层的原因则是, <strong>开发环境与生产环境的割裂</strong> , 导致我们需要在生产环境的docker中, 将环境更新为开发环境. 那何不一开始就搭建一个开发环境呢? 这样任他重建多少次, 我都不需要在对容器环境上下其手, 开箱即用便是.</p><p>于是笔者对项目的目录结构稍作修改.</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>├── django_www</span></span>
+<span class="line"><span>    ├── ...</span></span>
+<span class="line"><span>    ├── manage.py</span></span>
+<span class="line"><span>    ├── poetry.lock</span></span>
+<span class="line"><span>    ├── poetry.toml</span></span>
+<span class="line"><span>    ├── pyproject.toml</span></span>
+<span class="line"><span>    └── pytest.ini</span></span>
+<span class="line"><span>├── docker-compose.yml</span></span>
+<span class="line"><span>├── docker-compose.dev.yml</span></span>
+<span class="line"><span>├── frontend</span></span>
+<span class="line"><span>├── Dockerfile</span></span>
+<span class="line"><span>├── dev.Dockerfile</span></span>
+<span class="line"><span>└── ...</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>然后在安装的时候再加入了一些小trick.</p><ol><li><p>生产环境使用的是私有源, 开发环境下这个源下载速度较慢.<br> 包含两种源, 分别是python和linux的源.<br> 解决python的源需要修改 poetry 的配置文件, 也就是 pyproject.toml 和 poetry.lock, 但是这两个文件是无法通过上述的方法去copy一个替代品的, 所以在安装的时候, 使用 <code>sed</code> 命令将其中的私有源替换为加速源.<br> 解决linux源的问题与python的方法无二, 修改 source.list 文件.</p></li><li><p>对于 pure(slim\apline) 镜像, 先将常用的软件安装齐备.<br> 生产环境的镜像为了瘦身, 往往会将很多软件剪除, 但是开发环境需要这些常用的工具用来调试与监测, 如 <code>ping</code> \ <code>top</code> \ <code>vim</code> 等.</p></li><li><p>使用 override config 来升格 docker-compose.dev.yml.<br> Docker Compose 是支持在构建时使用两份 yml 文件的, 详见 <a href="https://docs.docker.com/compose/extends/" target="_blank" rel="noreferrer">Share Compose configurations between files and projects</a>, 所以我们可以将 dev 环境的 compose 作为一个 override 配置来使用, 从而避免污染项目目录.</p></li></ol><h3 id="_20220604内容增补" tabindex="-1">20220604内容增补 <a class="header-anchor" href="#_20220604内容增补" aria-label="Permalink to &quot;20220604内容增补&quot;">​</a></h3><p>上述目录结构中的 <code>dev.Dockerfile</code> 文件其实也并非必要, 在 <a href="https://docs.docker.com/compose/compose-file/compose-versioning/#version-34" target="_blank" rel="noreferrer">docker compose 3.4</a> 的版本更新中加入了 <strong>target</strong> 参数, 用来指定构建 <em>Dockerfile</em> 中的哪一个区块, 至此, <em>prod</em> 和 <em>dev</em> 的构建指令就可以合并到一份文件中了.</p><h2 id="合" tabindex="-1">合 <a class="header-anchor" href="#合" aria-label="Permalink to &quot;合&quot;">​</a></h2><p>至此, 对 <strong>pycharm 运行 docker-compose 下的 django</strong> 的探索告一段落. 不过过程中产生的一些疑惑与问题还需要更多的深入研究来解开.</p><h3 id="基于-docker-compose-的开发策略" tabindex="-1">基于 docker compose 的开发策略 <a class="header-anchor" href="#基于-docker-compose-的开发策略" aria-label="Permalink to &quot;基于 docker compose 的开发策略&quot;">​</a></h3><p>看起来, 如果纠结于使用 pycharm 的话, 在项目的结构上就有了比较严格的约束. 那么这到底是是 docker 的开发模式的问题, 还是 pycharm 的设计问题呢?</p><p>在详细地查阅了相关的文档之后发现, vscode 的其实提供了 <a href="https://code.visualstudio.com/docs/remote/containers#_working-with-containers" target="_blank" rel="noreferrer">两种基于 contaniner 的开发方案</a>. 其中, <a href="https://code.visualstudio.com/docs/remote/create-dev-container#_use-docker-compose" target="_blank" rel="noreferrer">使用 docker-compose</a> 的开发方案中提供了详尽的外装开发模式的配置策略. 基于这个文档策略, 甚至可以对 PyCharm 文档中给出的 compose 开发方案进行进一步的优化… (不愧是宇宙第一开发工具😰)</p><p>vscode 所提供的两种配置, 目前看来都是基于 attach 的, 所以在性能上应该差距不大, 只不过配置 devcontainer 可以避免直接 attach 造成的 <em>重建</em> 相关的问题.</p><h3 id="docker-在开发中的使用" tabindex="-1">Docker 在开发中的使用 <a class="header-anchor" href="#docker-在开发中的使用" aria-label="Permalink to &quot;Docker 在开发中的使用&quot;">​</a></h3><p>基于 docker compose 的开发方案究竟是掣肘还是利器?</p><p>摆脱docker进行开发? — 我在doccano的二次开发中进行了这样的尝试.</p><h3 id="性能比较" tabindex="-1">性能比较 <a class="header-anchor" href="#性能比较" aria-label="Permalink to &quot;性能比较&quot;">​</a></h3><blockquote><p>以下的负载统计均为程序运行一段时间后趋于稳定的负载信息. 即使如此, 以下的统计依然过于粗略, 看个乐呵就行.</p></blockquote><p>总的来说, pycharm 看上去容器的负载会比 vscode 低一些, 不过推测是 IDE 将一部分插件的功能转嫁到程序本身, 而编辑器则是将这部份损耗通过 vscode-server 一并附加到了容器中.</p><h4 id="vscode" tabindex="-1">vscode <a class="header-anchor" href="#vscode" aria-label="Permalink to &quot;vscode&quot;">​</a></h4><figure><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/docker%E7%A9%BA%E8%BD%BD.png" alt="docker 空载" loading="lazy" decoding="async"></figure><p>图片解释: 由于预先安装了 vscode-server, 所以会存在部分 vscode 相关的程序.</p><p>server 端的 vscode 中安装的插件如下:</p><ul><li>batisteo.vscode-django-1.10.0</li><li>ms-python.python-2022.6.2</li><li>ms-python.vscode-pylance-2022.5.3</li><li>ms-toolsai.jupyter-2022.4.1021342353</li><li>ms-toolsai.jupyter-keymap-1.0.0</li><li>ms-toolsai.jupyter-renderers-1.0.7</li><li>ms-vscode.makefile-tools-0.5.0</li><li>njpwerner.autodocstring-0.6.1</li></ul><p>下图则是运行 django 之后的负载情况.</p><figure><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/docker-attach-django.png" alt="docker-djagno" loading="lazy" decoding="async"></figure><h4 id="pycharm" tabindex="-1">pycharm <a class="header-anchor" href="#pycharm" aria-label="Permalink to &quot;pycharm&quot;">​</a></h4><figure><img src="https://raw.githubusercontent.com/zxjlm/my-static-files/main/img/pycharm-compose.png" alt="pycharm-django" loading="lazy" decoding="async"></figure><h2 id="reference" tabindex="-1">Reference <a class="header-anchor" href="#reference" aria-label="Permalink to &quot;Reference&quot;">​</a></h2><ul><li><a href="https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html" target="_blank" rel="noreferrer">Configure an interpreter using Docker Compose</a></li><li><a href="https://www.freecodecamp.org/news/how-to-ssh-into-a-docker-container-secure-shell-vs-docker-attach/" target="_blank" rel="noreferrer">How to SSH into a Docker Container – Secure Shell vs Docker Attach</a></li><li><a href="https://docs.docker.com/engine/reference/commandline/attach/" target="_blank" rel="noreferrer">docker attach</a></li><li><a href="https://code.visualstudio.com/docs/remote/containers#_working-with-containers" target="_blank" rel="noreferrer">Developing inside a Container</a></li><li><a href="https://code.visualstudio.com/docs/remote/create-dev-container" target="_blank" rel="noreferrer">Create a development container</a></li></ul><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2022-09-10-pycharm-docker-compose-dev.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2022-06-24-django2swagger" class="">Django 生成 swagger 描述文件</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2022-05-14-new-mac-software-init" class="">开发人员的Mac软件推荐列表(持续更新)</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","datePublished":"2022-05-28T17:53:00.000Z","inLanguage":"zh-CN","name":"Pycharm 和 VSCode 的 docker compose 开发模式","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"Pycharm 和 VSCode 的 docker compose 开发模式","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

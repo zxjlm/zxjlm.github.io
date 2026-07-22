@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2019-12-05-some-question-of-OS-review.BpkRUtR1.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>操作系统复习(易错题&amp;amp;&amp;amp;概念题及部分解析) - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="操作系统复习(易错题&amp;&amp;概念题及部分解析)">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">操作系统复习(易错题&amp;amp;&amp;amp;概念题及部分解析)</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2019-12-05">2019-12-05</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><h2 id="选择" tabindex="-1">选择 <a class="header-anchor" href="#选择" aria-label="Permalink to &quot;选择&quot;">​</a></h2><p>1.单处理机计算机系统中，（A ）是并行操作的。</p><p>A.处理机操作和通道操作是并行的<br> B.程序与程序<br> C.主程序与子程序<br> D.用户程序与操作系统程序</p><pre><code>单处理机系统：只有1个运算器，运行状态最多一个
+单处理机操作：理解为cpu
+通道：有自己的处理器，能自己执行指令，无需cpu
+</code></pre><p>2.处理机的所有指令可以在（D ）中执行。</p><p>A.目态 B.浏览器中 C.任意时间 D.系统态</p><pre><code>Cpu工作状态分为：系统态和用户态（目态）
+
+引入两个状态的原因：
+
+为了避免用户程序错误的使用特权指令，保护os不被用户程序破坏，规定：cpu处于用户态时，不允许执行特权指令，当cpu处于系统态时，可以执行包括特权指令在内的一切机器指令
+</code></pre><p>3.下面六个系统中，必须是实时操作系统的有（C ）个。</p><p>(1)航空订票系统 (2)过程控制系统 (3)机器口语翻译系统 (4)计算机辅助系统 (5)办公自动化系统 (6)计算机激光照排系统</p><p>A.1 B.2 C.3 D.4</p><pre><code>1，2，3
+</code></pre><p>4.一般来说，为了实现多道程序设计，计算机最需要（ A）。</p><p>A.更大的内存<br> B.更多的外设<br> C.更快的 CPU<br> D.更先进的终端</p><pre><code>多道程序设计：在内存中同时存放几道互相独立的程序，使得他们在管理控制程序下相互穿插运行。
+
+多道程序设计按照一定的作业调度算法将作业队列中的作业调入到内存中，使他们共享cpu和各种资源，所以内存更大才能实现多道
+</code></pre><p>5.对进程间互斥的使用临界资源，进程可以（ D）。</p><p>A.互斥的进入临界区<br> B.互斥的进入各自的临界区<br> C.互斥的进入同一临界区<br> D.互斥的进入各自的同类资源临界区</p><pre><code>临界区：每个进程中访问临界资源的那段代码
+
+临界资源：一次只允许一个进程访问的共享资源，比如打印机
+
+题目的意思是进程间互斥，针对同类临界资源的，而对应的代码应该是独立的，所以各个进程只能访问各自的代码空间，所以互斥的进入各自同类临界区，从另一个方向解释，临界区是使用临界资源的代码，同类资源临界区则是使用同一临界资源的代码，临界资源由多种，使他们不一定互斥，而使用同一临界资源自然是互斥的
+
+A 不完整
+
+B 同样不完整
+
+C 应该是进入各自的临界区
+</code></pre><p>6.当一进程因在记录型信号量 S 上执行 P（S）操作而被阻塞后，S 的值为（B）。</p><p>A.＞ 0<br> B.＜ 0<br> C.≥0<br> D.≤0</p><pre><code>记录型信号量：包含一个代表资源数目的整型变量和一个进程链表（等待队列）
+
+整型信号量：只包含一个代表资源数目的整型变量
+
+对于记录型信号量，采取了让权等待策略，当s&lt;0，即不存在可用资源的时候，因为其存在进程链表等待队列，所以不会盲等，而是会阻塞
+
+对于整型信号量，没有采取让权等待策略，当s&lt;=0的时候，即也是不存在可用资源的时候，因为其没有进程等待队列，所以不会阻塞，而是会陷入盲等状态
+</code></pre><p>7.当一进程因在记录型信号量 S 上执行 V（S）操作而导致唤醒另一进程后，S 的值为（D）。</p><p>A.＞ 0<br> B.＜ 0<br> C.≥0<br> D.≤0</p><pre><code>唤醒另一进程，说明有进程可被唤醒，就是说有进程在等待进行临界区，若V操作前只有一个进程在等待，则V操作之后S=0，若V操作前有多个进程在等待，是V操作之后S&lt;0，所以，综合来说，S&lt;=0
+</code></pre><p>8.银行家算法中的数据结构包括有可利用资源向量 Available、最大需求矩阵 Max、分配矩阵 Allocation、需求矩阵 Need，下列选项中表述正确的是（B ）。</p><p>A.Max[i,j]= Allocation[i,j]+Need[i,j]</p><p>B.Need[i,j]= Max[i,j]- Allocation[i,j]</p><p>C.Max[i,j]= Allocation[i,j]-Need[i,j]</p><p>D.Need[i,j]= Max[i,j]+Allocation[i,j]</p><pre><code>Available:可利用资源向量，每一类元素代表可利用资源的数目，比如Available[j]=k,表示系统中R[j]类资源现在有k个
+
+Max:最大需求矩阵，定义了系统中n个进程中每一个进程对m类资源的最大需求，比如max[i,j]=k,表示进程i需要R[j]类资源k个
+
+Allocation:分配矩阵，定义了系统中每一类资源分配给每一进程的资源数，比如Allocation[i,j[=k,表示进程i当前已经得到的R[j]类资源数目为K
+
+Need：需求矩阵，表示每一个进程尚需的各类资源数，比如Need[i,j]=k,表示进程i还需要R[j]类资源k个才可以完成任务
+
+关系：Need[i,j]=Max[i,j]-Allocation[i,j]
+</code></pre><p>9.分页存储管理的存储保护是通过（A ）完成的。</p><p>A.页表（页表寄存器）<br> B.快表<br> C.存储键<br> D.索引动态重定</p><p>10.在存储管理中，采用覆盖与交换技术的目的是（A ）。</p><p>A.减少程序占用的主存空间</p><p>B.物理上扩充主存容量</p><p>C.提高 CPU 效率</p><p>D.代码在主存中共享</p><pre><code>覆盖技术：把程序划分为若干给功能上相对独立的程序段，按照其自身逻辑结构使那些不会同时运行的程序段共享同一块内存区，程序段先保存在磁盘，当程序的前一部分结束后，把后续段调入内存，覆盖前面的程序段(单一连续储存管理中使用)
+
+交换技术：在分时系统中，用户的进程比内存能容纳的数量更多，系统将哪些不再允许的进程或者某一部分调出内存，暂时存放在外存上的一个后备存储区，通常称为交换区，当需要允许这些进程的时候，再将他们装入内存
+</code></pre><p>11.能够装入内存任何位置的代码程序必须是（C ）。</p><p>A.可重入的</p><p>B.可定位的</p><p>C.可动态链接的</p><p>D.可静态链接的</p><pre><code>将用户源程序变为内存中可执行的程序，需要三个步骤
+
+1. 编译：由编译程序将用户源代码编译成若干个目标模块
+
+2. 链接：将编译形成后的一组目标模块以及所需的库函数链接在一起，形成一个完整的装入模块
+
+3. 装入：由装入程序将装入模块装入内存中运行
+
+链接的三种方式：
+
+1. 静态链接：在程序运行之前，先将各目标模块及他们所需的库函数链接成一个完整的可执行的程序，以后不再拆开
+
+2. 装入时动态链接：将编译得到的目标模块在装入内存时，采取边装入边链接的方式
+
+3. 运行时动态链接：对某些目标模块，是在程序执行中需要该目标模块时，才对它进行链接，其优点是便于修改和更新，便于实现对目标模块的共享
+
+
+
+ 可重入代码（又叫纯代码）：允许多个进程同时访问的代码，但不允许进程修改它
+
+可定位代码：即可重定位的代码
+
+排除AB，
+
+D：静态链接的话，以后是不允许拆开的，排除，
+
+选C
+</code></pre><p>12.下面（ B）内存管理方法不能实现扩大内存？</p><p>A.动态页式管理 B.静态页式管理</p><p>C.分段存储管理 D.段页式存储管理</p><pre><code>静态页式管理：在作业或者进程执行前，把作业或者进程全部装入内存
+
+动态页式管理：不会一次性全部装入，只装入反复被调用的部分，其余部分需要的时候再装入，无形中扩大了内存
+</code></pre><p>13.设从磁盘将一块数据传送到缓冲区所用实际为 80μs，将缓冲区中数据传送到用户区所用时间为 40μs，CPU 处理数据所用的时间为 30μs。则处理该数据，采用单缓冲传送磁盘数据，系统所用总时间为（A ）。</p><p>A.120μs B.110μs C.150μs D.70μs</p><p>80+max(40,30)=120</p><pre><code>缓冲区存在的意义：
+
+使用户输入输出数据的速度与cpu处理数据的速度协调
+
+因而用户输入数据和cpu处理数据的过程可以并行，所以二者取max即可
+
+max(80,30)+40=120
+</code></pre><p>14.假设就绪队列中有 10 个进程，以时间片轮转方式进行进程调度，时间片大小为 300ms，CPU 进行进程切换需要花费 10ms，则系统开销所占比率和进程数目增加到 30 个，其余条件不变时系统开销所占的比率相比，其结果是（ B ）。</p><p>A.大于 B.等于 C.小于 D.不能确定</p><pre><code>系统开销比率=调度耗时（进程切换耗时）/时间片长度
+
+所以不变
+</code></pre><p>15.某进程在运行过程中等待的事件已发生，例如，打印结束，此时该进程的状态将（ C. ）。</p><p>A.从就绪变为运行 B.从运行变为就绪</p><p>C.从运行变为阻塞 D.从阻塞变为就绪</p><pre><code>进程主要的三个状态：运行，就绪，阻塞，某进程在运行中等待的时间已经发生，注意是在运行中，运行中是可以等待OI来中断这个进程，此时开始打印，但是cpu就会去处理其他进程，这样这个进程就处于阻塞态
+</code></pre><p>16.现代操作系统的两个基本特征是（ C. ）和资源共享。</p><p>A.多道程序设计 B. 中断处理</p><p>C.程序的并发执行 D. 实现分时与实时处理</p><pre><code>并发和共享是操作系统最基本的两个特性，他们又是互为存在条件，一方面资源共享是以进程的并发性为执行条件的，若系统不允许并发，那么资源共享就没有任何意义，另一方面系统若不能对共享的资源实现有效的管理，则也必将影响进程的并发执行
+</code></pre><p>17.通道是一种特殊的处理机，具有（ A. ）能力。</p><p>A.执行 I/O 指令集。 B.执行 CPU 指令集。</p><p>C.传送 I/O 命令。 D.运行 I/O 进程。</p><pre><code>通道的目的是为了使得原来一些由cpu处理的IO任务交由通道来承担，从而解脱cpu，通道所能执行的命令局限于IO操作的指令，也就是IO指令集
+</code></pre><p>18.分时系统需要使用下面哪些成分?</p><p>(1)多道程序设计技术 (2)作业说明书</p><p>(3)终端命令解释程序 (4)中断处理</p><p>(5)优先级调度 (6)系统调用</p><pre><code>(1)、(3)、(4)、(6)
+</code></pre><p>19.能直接对系统中各类资源进行动态分配和管理，控制、协调各任务的并行执行且系统中主机无主次之分，并向用户提供统一的、有效的软件接口的系统是 。</p><p>A．分布式操作系统 B．实时操作系统</p><p>C．网络操作系统 D．批处理操作系统</p><pre><code>A
+</code></pre><p>20.用 P、V 操作可以解决 互斥问题。<br> A．一切 B．某些 C．正确 D．错误</p><pre><code>A
+</code></pre><p>21.多道程序环境下，操作系统分配资源以 为基本单位。<br> A．程序 B．指令 C. 进程 D．作业</p><pre><code>C
+</code></pre><p>22.在操作系统中，使计算机系统能实现进程并发执行，保证系统正常工作的机制是 。<br> A．中断 B．查询 C．同步 D．互斥</p><pre><code>A
+</code></pre><p>23.用户使用操作系统通常有三种手段，它们是终端命令、系统调用命令和 。<br> A．计算机高级指令 B．宏命令 C. 作业控制语言 D．汇编语言</p><pre><code>C
+</code></pre><p>24.作业调度算法的选择常考虑因素之一是使系统有最高的吞吐量，为此应 。<br> A. 不让处理机空闲 B．能够处理尽可能多的作业 C. 使各类用户都满意 D．不使系统过于复杂</p><pre><code>B
+</code></pre><p>25.—个作业的完成要经过若干加工步骤，这每个步骤称为 。<br> A. 作业流 B. 子程序 C. 子进程 D. 作业步</p><pre><code>D
+</code></pre><p>26.在批处理方式下，操作员把一批作业组织成 向系统成批输入。<br> A. 作业步 B. 作业流 C. 子程序 D.程序组</p><pre><code>B
+</code></pre><p>27.很好地解决了“零头”问题的存储管理方法是 。<br> A．页式存储管理 B．段式存储管理 C．多重分区管理 D．可变式分区管理</p><pre><code>A
+</code></pre><p>28.如果一个程序为多个进程所共享，那么该程序的代码在执行的过程中不能被修改，即程序应该是 。<br> A. 可执行码 B. 可重入码 C. 可改变码 D. 可再现码</p><pre><code>B
+</code></pre><p>29.在可变分区方式管理下收回主存空间时，若已判定“空闲区表第 j 栏开始地址＝归还的分区开始地址+长度”，则表示 。<br> A．归还区有上邻空闲区 B．归还区有下邻空闲区间 C. 归还区有上、下邻空闲区 D．归还区无相邻空闲区间</p><pre><code>B
+ps.上邻空闲区:第j栏开始地址+长度＝归还的分区开始地址
+</code></pre><p>30.在可变分区方式管理主存时、采用移动技术能提高主存的利用率，下列不能移动作业的情况是 。<br> A．正在取主存中的数据准备计算 B．正在计算一个表达式的值 C．正在把计算结果写入主存 D．正在等待外围设备传输消息</p><pre><code>C
+ps.某个作业在执行过程中正在等待 &lt;u&gt;外围设备传输信息&lt;/u&gt; ，则该作业不能移动。
+</code></pre><p>31.不可能产生系统抖动现象的存储管理是 。<br> A. 固定分区管理 B. 分页式虚拟存储管理 C. 段式虚拟存储管理 D. 以上都不对</p><pre><code>A
+</code></pre><p>32.缓冲技术中的缓冲池在 中。<br> A．主存 B．外存 C．ROM D．寄存器</p><pre><code>A
+</code></pre><p>33.中断发生后，应保留 。<br> A．缓冲区指针 B．关键寄存器内容 C. 被中断的程序 D．页表</p><pre><code>B
+</code></pre><p>34.是操作系统中采用的以空间换取时间的技术。</p><p>A．Spooling 技术 B．虚拟存储技术 C. 覆盖与交换技术 D．通道技术</p><pre><code>    A
+    ps,将独占设备转化为共享设备
+</code></pre><p>35.通道是一种 。<br> A. I/O 端口 B．数据通道 C. I/O 专用处理器 D．软件工具</p><pre><code>C
+</code></pre><p>36.为了解决不同用户文件的“命名冲突”问题，通常在文件系统中采用 。<br> A. 约定的方法 B. 多级目录 C. 路径 D. 索引</p><pre><code>B
+</code></pre><p>37.磁盘上的文件以 为单位读写。<br> A. 块 B. 记录 C. 柱面 D. 磁道</p><pre><code>A
+</code></pre><p>38.如果文件采用直接存取方式且文件大小不固定，则宜选择 文件结构。<br> A. 直接 B. 顺序 C. 随机 D. 索引</p><pre><code>D
+</code></pre><p>39.以下叙述中正确的是 。<br> A. 文件系统要负责文件存储空间的管理，但不能完成文件名到物理地址的转换。 B. 多级目录结构中，对文件的访问是通过路径名和用户目录名来进行的。 C. 文件被划分成大小相等的若干个物理块，一般物理块的大小是不固定的。 D. 逻辑记录是对文件进行存取操作的基本单位。</p><pre><code>D
+</code></pre><p>40.操作系统实现按名存取进行检索的关键在于解决 。<br> A. 文件逻辑地址到文件具体的物理地址的转换 B. 文件名称与文件具体的物理地址的转换 C. 文件逻辑地址到文件名称的转换 D. 文件名称到文件逻辑地址的转换</p><pre><code>B
+</code></pre><p>41.文件的逻辑结构是由 决定的。<br> A. 用户 B. 操作系统 C. 编译程序 D. 装入程序</p><pre><code>A
+ps/逻辑-用户
+</code></pre><p>42.记录的成组和分解提高了存储介质的利用率和减少启动设备的次数，但代价是 。<br> A. 要设立主存缓冲区 B. 操作系统增加成组和分解功能 C. A 和 B D. 没有额外系统开销</p><pre><code>C
+</code></pre><p>43.采取哪种文件存取方式，主要取决于 。<br> A. 用户的使用要求 B. 存储介质的特性 C. A 和 B D. 文件的逻辑结构</p><pre><code>C
+</code></pre><p>44.下面关于操作系统的叙述正确的是（ ）。<br> A、批处理作业必须具有作业控制信息 B、分时系统不一定都具有人机交互功能 C、从响应时间的角度看，实时系统与分时系统差不多 D、由于采用了分时技术，用户可以独占计算机的资源</p><pre><code>A
+</code></pre><p>45、 操作系统程序结构的主要特点是( )。<br> A、 一个程序模块 B、分层结构 C、 层次模块化 D、子程序结构</p><pre><code>答案-4：C
+</code></pre><p>46.系统调用的目的是（ ）。<br> A、请求系统服务 B、终止系统服务 C、申请系统资源 D、释放系统资源</p><pre><code>A
+</code></pre><p>47、 原语是（ ） 。<br> A、一条机器指令 B、 若干条机器指令组成 C、一条特定指令 D、 中途能打断的指令</p><pre><code>B（较难）
+</code></pre><p>48.在操作系统中，可以并行工作的基本单位是（）。<br> A.作业 B.程序 C.进程 D.过程</p><pre><code>C
+</code></pre><p>49.多道程序环境下，操作系统分配资源以（ ）为基本单位。<br> A、程序 B、指令 C、进程 D、作业</p><pre><code>C
+ps.进程是分配资源的基本单位,线程是CPU调度的基本单位
+</code></pre><p>50.当程序经过编译或者汇编以后，形成了一种由机器指令组成的集合，被称为（ ）。<br> A、源程序 B、目标程序 C、可执行程序 D、非执行程序</p><pre><code>    B
+    ps.当程序经过编译或者汇编以后，形成了一种由机器指令组成的集合，被称为目标程序。目标程序是机器语言程序，这种程序计算机可直接识别和执行。
+</code></pre><p>51.经过（ ），目标程序可以不经过任何改动而装入物理内存单元。<br> A、静态重定位 B、动态重定位 C、编译或汇编 D、存储扩充</p><pre><code>    A
+    ps.静态重定位在装入时生效,地址变换在程序中完成
+</code></pre><p>52.将信息加工形成具有保留价值的文件是（ ）。<br> A、库文件 B、档案文件 C、系统文件 D、临时文件</p><pre><code>    B
+</code></pre><p>53.一个含有 6 个盘片的双面硬盘，盘片每面有 100 条磁道，则该硬盘的柱面数为（ ）。<br> A、12 B、250 C、100 D、1 200</p><pre><code>    答案-2：C
+    柱面是所有盘面相同磁道的集合，也就是说柱面数和盘片数无关，只和每个盘面的磁道数有关
+</code></pre><p>54.下列有关通道的叙述中，不正确的是（ ）。<br> A、通道是处理输入、输出的软件<br> B、所有外围设备的启动工作都由设备管理负责处理<br> C、来自通道的 I/O 中断事件由设备管理负责处理<br> D、编制好的通道程序是存放在主存中的</p><pre><code>    答案-3：A
+</code></pre><h2 id="填空" tabindex="-1">填空 <a class="header-anchor" href="#填空" aria-label="Permalink to &quot;填空&quot;">​</a></h2><ol><li><p>实时操作系统与分时操作系统的主要区别是 <strong>及时性和高可靠性</strong> 。</p></li><li><p>在主机控制下进行的输入／输出操作称为 <strong>联机输入输出</strong> 操作。</p></li><li><p><strong>批处理</strong> 系统不允许用户随时干预自己程序的运行</p></li><li><p>多道程序设计的特点是多道、 <strong>宏观上的并行</strong> 和 <strong>微观上的串行</strong> 。</p></li><li><p>单道批处理系统是在解决 <strong>人机矛盾</strong> 和 <strong>CPU 和 I/O 设备之间速度不匹配</strong> 的矛盾中发展起来的。</p></li><li><p>对操作系统的总体设计目标来说，批处理操作系统应注重提高计算机的效率，尽量增加系统的 <strong>平均吞吐量</strong> ，分时操作系统应保证用户 <strong>所能忍受的响应时间</strong> ；而实时操作系统则应在保证及时响应和处理有关事件的前提下，再考虑 <strong>系统资源的利用率</strong> 。</p></li><li><p>实时系统按应用的不同分为 <strong>过程控制系统</strong> 和 <strong>数据处理系统</strong> 两种。</p></li><li><p>信号量的物理意义是当信号量值大于零时表示 ① ；当信号量值小于零时其绝对值表示 ② 。 答：① 可用资源的数目 ② 因请求该资源而被阻塞的进程数目</p></li><li><p>临界资源的概念是 ① ，而临界区是指 ② 。 答：① 一次仅允许一个进程访问的资源 ② 进程中访问临界资源的那段程序代码</p></li><li><p>进程主要由 ①、 ② 、 ③ 三部分内容组成，其中 ④ 是进程存在的唯一标志，而 ⑤ 部分也可以为其他进程共享。 答：① 程序段 ② 数据段 ③PCB ④PCB ⑤ 程序段</p></li><li><p>将进程的 <strong>PCB</strong> 链接在一起就形成了进程队列。</p></li><li><p>有 m 个进程共享同一临界资源，若使用信号量机制实现对临界资源的互斥访问，则信号量值的变化范围是 <strong>1 至－(m－1)</strong> 。</p></li><li><p>一个理想的作业调度算法应该是既能 <strong>提高系统效率</strong> ，又能使进入系统的作业 <strong>及时</strong> 得到计算结果.</p></li><li><p>解除死锁常用的方法有两种， <strong>资源剥夺法</strong> 是从其他进程那里剥夺足够数量的资源给 <strong>死锁</strong> 进程以解除死锁状态。</p></li><li><p>进程的切换是由 <strong>进程状态的变化</strong> 引起的，总是发生在 <strong>中断事件</strong> 发生之后。</p></li><li><p>主存的空间划分为 <strong>系统占用区</strong> 和用户占用区，其中用户区用来存放用户的 <strong>数据和程序</strong> 。</p></li><li><p>主存空间的共享是为了 <strong>提高主存空间的利用率</strong> ，主存空间的存储保护是为了 <strong>防止各存储区域中的程序相互干扰</strong> 。</p></li><li><p>我们把操作系统所占用的系统资源和所需的处理器时间称为 <strong>系统开销</strong> 。</p></li><li><p>分页是由 <strong>系统</strong> 自动完成的，而分段是由 <strong>用户</strong> 决定的。</p></li><li><p>虚拟存储器实际上是为 <strong>扩大主存容量</strong> 而采用的一种设计技巧，并非真正的存储器。</p></li><li><p>虚拟存储器不能无限大，它的容量由计算机的 <strong>地址结构</strong> 和 <strong>辅存的容量</strong> 决定，而与实际的主存容量无关。</p></li><li><p>分页式虚拟存储管理的页表增加标志位，指出对应页是否已经装入 <strong>主存</strong> ，若未装入，则产生 <strong>缺页</strong> 中断。</p></li><li><p>最近最少使用调度算法是基于程序执行的 <strong>局部性</strong> 理论，即程序一旦访问到某些位置的数据或指令，可能在一段时间里经常会访问它们。</p></li><li><p>操作系统目前有五大类型： <strong>批处理操作系统</strong> 、 <strong>分时操作系统</strong> 、 <strong>实时操作系统</strong> 、 <strong>网络操作系统</strong> 和 <strong>分布式操作系统</strong> 。</p></li><li><p>进程从运行态变成就绪态，主要原因是 <strong>运行时间到</strong> 和 <strong>出现更高优先权进程</strong> 。</p></li><li><p>PCB 的含义是 <strong>操作系统用于记录和刻画进程状态及有关信息数据结构</strong> 。(牢记)</p></li><li><p>并发进程执行时，执行结果与它执行的<em>初始条件</em>有关；进程的并发执行会破坏 <strong>封闭性</strong> 和 <strong>可再现性_</strong> 。</p></li><li><p>当并发进程存在竞争关系时必须 <strong>排它</strong> 地使用资源；当并发进程存在协作关系时必须 <strong>共享资源</strong> 。分别称为 <strong>进程的互斥</strong> 和 <strong>进程的同步</strong> 。</p></li><li><p>目前常用的高级通信方式有 <strong>共享存储器</strong> 、 <strong>消息传递通信机制</strong> 、 <strong>管道通信</strong> 等</p></li><li><p>可顺序存取的文件不一定能随机存取；但可随机存取的文件都可以顺序存取</p></li><li><p>按操作系统中文件的性质与用途分，文件分为： <strong>系统文件</strong> 、 <strong>文件库</strong> 和 <strong>用户文件</strong> 。</p></li><li><p>按保护级别分类，文件可分为 <strong>只读文件</strong> 、 <strong>读写文件</strong> 和 <strong>不保护文件</strong>.</p></li><li><p>按文件的逻辑存储结构分，文件分为有结构文件，又称为 <strong>记录式文件</strong> 和 <strong>无结构文件</strong> ，又称 <strong>流式文件</strong></p></li></ol><h2 id="是非" tabindex="-1">是非 <a class="header-anchor" href="#是非" aria-label="Permalink to &quot;是非&quot;">​</a></h2><ol><li><p>(×) V 操作是对信号量执行加 1 操作，意味着释放一个单位资源，加 1 后如果信号量的值等于零，则从等待队列中唤醒一个进程，现进程变为等待状态，否则现进程继续进行。</p><p><strong>根据课本:若+1 后认识 S-&gt;value≤0,则表示在该型号量链表中仍有等待该资源的进程被阻塞</strong></p></li><li><p>(x) 进程之间的同步，主要源于进程之间的资源竞争，是指对多个相关进程在执行次序上的协调。</p></li><li><p>(√) 实际上，进程互斥是进程同步的一种特例。</p></li><li><p>(x)一个作业由若干个作业步组成，在多道程序设计的系统中这些作业步可以并发执行。</p><p><strong>作业可以并发进行</strong></p></li><li><p>(x) 通用操作系统中，通常把终端作业称为后台作业，批处理作业称为前台作业。 <strong>在分时兼批处理的计算机系统中 √</strong></p></li><li><p>(x)作业控制语言是供用户编写程序以实现某项计算任务的语言。</p><p><strong>作业控制语言是对用户作业的进行组织和管理的各种控制命令的集合</strong></p></li><li><p>(x)虚拟存储空间实际上就是辅存空间。</p><p><strong>虚拟存储空间不是一个实际存在的存储空间，是操作系统对逻辑内存的扩充</strong></p></li><li><p>(X)只有引入通道后，CPU 计算与 I/O 操作才能并行执行。</p><p><strong>引入中断使 CPU 计算与 I/O 操作能够并行执行，引入通道后，CPU 计算与 I/O 操作的并行度大大提高了。</strong></p></li><li><p>(x)中断处理一般分为中断响应和中断处理两个步骤，前者由软件实施，后者由硬件实施。</p><p><strong>中断响应由硬件实施，中断处理由软件实施</strong></p></li></ol><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2019-12-05-some-question-of-OS-review.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2019-12-14-principles-of-computer-composition-review" class="">计算机组成原理复习</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2019-11-30-some-doc-of-OS-review" class="">操作系统一轮复习整理(文档部分)</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2019-12-14T15:49:58.000Z","datePublished":"2019-12-05T07:03:00.000Z","inLanguage":"zh-CN","name":"操作系统复习(易错题&amp;&amp;概念题及部分解析)","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"操作系统复习(易错题&amp;&amp;概念题及部分解析)","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

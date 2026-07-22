@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2026-06-28-migrate-github-to-cloudflare-pages.BFNZFM7i.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2026-06-28">2026-06-28</time></dd></dl><span>[
+  &quot;源流清泉&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><blockquote class="field-ai-disclosure"><p> 这个文章的内容主要由 AI 生成，人工进行校对认证。这类文章一般有两个产出的原因： </p><ol><!--[--><li>1. AI 强化类文章。笔者在实践某类功能时，发现 AI 踩了很多坑，所以提供一篇精准的文章，类似于 skill，旨在帮助其他 AI 在实现相同目标时有更好的效果。</li><li>2. 翻译类文章。笔者平时研究工作较多，在发现外网有比较好的文章时，会翻译为中文进行分享。过去是人工翻译，现在当然也是 AI 为主、人工校对。当然，这类文章占比会很少，因为本身在互联网大环境下属于重复类型的内容。</li><!--]--></ol></blockquote><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>这次把博客的部署链路从 GitHub Pages 迁到了 Cloudflare Pages。</p><p>说是从 GitHub 迁移到 Cloudflare，其实更准确的说法是：GitHub 继续作为代码仓库和触发源，真正负责构建、发布、域名接入、缓存和 TLS 的部分交给 Cloudflare Pages。这样一来，GitHub 不再承担静态站点托管的职责，而是回到它更擅长的位置：保存源码、记录变更、触发部署。</p><p>这篇记录一下迁移的背景、具体改动、部署时踩到的坑，以及迁移之后能得到什么好处。</p><!-- more --><h2 id="为什么要迁" tabindex="-1">为什么要迁 <a class="header-anchor" href="#为什么要迁" aria-label="Permalink to &quot;为什么要迁&quot;">​</a></h2><p>这个博客经历过几轮变化：早期是 Hexo，后来迁到 Valaxy，再从 <code>valaxy-theme-yun</code> 换到了现在的 <code>valaxy-theme-zaxon</code>。内容已经很稳定，部署形态也很简单，本质上就是一个纯静态站点：</p><div class="language-bash"><button title="Copy code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> build</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>构建完成后得到 <code>dist/</code>，把它丢到静态托管平台即可。</p><p>如果只是“能访问”，GitHub Pages 已经足够。但随着站点继续维护，会有几个更实际的问题冒出来。</p><p>一方面，域名、DNS、TLS、缓存最好能放在同一个地方管理。之前域名解析、静态托管、自定义域名绑定是分散的，遇到问题时需要在几个平台之间来回确认。Cloudflare 本来就在负责 DNS，把 Pages 也放进来之后，域名、证书、CDN、缓存规则就归到了一条链路里。</p><p>另一方面，博客里的历史图片来源比较复杂。仓库内的图片并不大，<code>public/images</code> 只有 1.3 MB 左右；真正麻烦的是旧文章里的外链图片，分散在 OSS、GitHub raw、jsDelivr、i.loli.net、旧域名等来源。迁移到 Cloudflare Pages 不能一步解决所有历史图片问题，但至少可以先把本站资源吃到 Cloudflare 的缓存策略，后面再把高风险外链逐步迁到 R2 或 Cloudflare Images。</p><p>还有一个好处是部署过程更接近现在的工程习惯。Cloudflare Pages 支持 Git 集成，push 到生产分支后自动构建，也能保留 preview deployment。对于静态博客来说，这比自己写 Worker、Wrangler 脚本或者维护额外 CI 流水线更轻。</p><h2 id="先确认项目形态" tabindex="-1">先确认项目形态 <a class="header-anchor" href="#先确认项目形态" aria-label="Permalink to &quot;先确认项目形态&quot;">​</a></h2><p>迁移前最重要的一步不是去 Cloudflare 点按钮，而是先确认项目到底需要什么。</p><p>这个项目是 Valaxy 静态博客，构建输出目录是 <code>dist/</code>，生产分支是 <code>source</code>。因此第一阶段不需要 Worker，不需要 KV，不需要 R2 绑定，也不需要 Wrangler 部署脚本。Pages Git 集成已经足够。</p><p>最终确定的 Pages 配置如下：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>Production branch: source</span></span>
+<span class="line"><span>Build command: pnpm run build</span></span>
+<span class="line"><span>Build output directory: dist</span></span>
+<span class="line"><span>Root directory: /</span></span>
+<span class="line"><span>NODE_VERSION=22.16.0</span></span>
+<span class="line"><span>PNPM_VERSION=10.17.1</span></span>
+<span class="line"><span>Custom domain: blog.harumonia.moe</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这里有一个差点误判的点：旧文档里还写着主题是本地 link 的 <code>../haru-theme/theme</code>，但实际 <code>package.json</code> 和 lockfile 里已经变成了 npm 包 <code>valaxy-theme-zaxon@0.1.2</code>。这对云端构建很关键。如果还是本地 link，Cloudflare 构建环境看不到本机旁边的 sibling 目录，部署一定会失败。确认实际依赖之后，这个风险就不存在了。</p><p>Node 版本也需要单独固定。当前 Valaxy 依赖要求较新的 Node，所以仓库里新增了 <code>.node-version</code>：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>22.16.0</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>同时在 Cloudflare Pages 里设置：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>NODE_VERSION=22.16.0</span></span>
+<span class="line"><span>PNPM_VERSION=10.17.1</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这一步看起来很普通，但它能避免“本地能跑，云端构建失败”的一大类问题。</p><h2 id="仓库侧做了哪些改动" tabindex="-1">仓库侧做了哪些改动 <a class="header-anchor" href="#仓库侧做了哪些改动" aria-label="Permalink to &quot;仓库侧做了哪些改动&quot;">​</a></h2><p>迁移时仓库里的改动不多，但每一项都和部署链路有关。</p><p>第一项是移除 <code>public/CNAME</code>。GitHub Pages 依赖这个文件来声明自定义域名，但迁到 Cloudflare Pages 后，自定义域名应该由 Pages Custom Domains 管理。继续保留 <code>CNAME</code> 反而会让部署职责变得混乱。</p><p>第二项是补充 <code>public/_headers</code>。Cloudflare Pages 会在构建后读取输出目录里的 <code>_headers</code>，而 Valaxy 会把 <code>public/</code> 原样复制到 <code>dist/</code>。因此缓存策略可以直接写在 <code>public/_headers</code> 里。</p><p>关键规则大致是：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>/assets/*</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=31536000, immutable</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/images/*</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=31536000, immutable</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/manifest.webmanifest</span></span>
+<span class="line"><span>  Content-Type: application/manifest+json</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=3600</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/atom.xml</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=1800</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/feed.xml</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=1800</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/feed.json</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=1800</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/robots.txt</span></span>
+<span class="line"><span>  Cache-Control: public, max-age=86400</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>静态构建产物里的 hashed assets 可以走一年 immutable；feed 更新频率更高，所以给 30 分钟；manifest 给 1 小时；robots 给 1 天。这个策略不复杂，但比全部交给默认缓存更可控。</p><p>第三项是更新部署文档。<code>README.md</code>、<code>AGENTS.md</code>、<code>CLAUDE.md</code> 和 <code>docs/cloudflare-pages.md</code> 都改成以 Cloudflare Pages 为主部署方式，Netlify、Vercel、Docker 则保留为 fallback 或历史方案。</p><p>第四项是整理图片治理清单。第一阶段不搬迁所有外链图片，只记录风险来源和后续顺序：</p><ul><li>旧的 <code>http://www.harumonia.top</code> 和 <code>http://harumonia.top</code>，优先级最高，因为有明文 HTTP 和失效风险。</li><li>带 <code>Expires=</code> 参数的 OSS 图片，需要检查是否仍然可用。</li><li><code>raw.githubusercontent.com</code> 和 jsDelivr 可以先保留，但它们不受本站缓存策略控制。</li><li><code>i.loli.net</code>、<code>tva1.sinaimg.cn</code> 等第三方图床需要抽样检查。</li></ul><p>这个决策比较务实。历史文章图片很多，如果一次性迁完，很容易变成一个没有边界的清理工程。先把站点迁好，再分批治理图片，更适合个人博客。</p><h2 id="cloudflare-侧的配置" tabindex="-1">Cloudflare 侧的配置 <a class="header-anchor" href="#cloudflare-侧的配置" aria-label="Permalink to &quot;Cloudflare 侧的配置&quot;">​</a></h2><p>Cloudflare 侧先创建 Pages 项目，项目名用了 <code>zxjlm-github-io</code>，对应仓库 <code>zxjlm/zxjlm.github.io</code>。Pages 项目名不能带点号，所以没有直接照搬仓库名。</p><p>理论上，创建 Pages 项目后连接 GitHub 仓库，选择生产分支 <code>source</code>，填入构建命令和输出目录，就可以等第一次部署。</p><p>实际过程没有这么顺。</p><p>一开始 Git 集成创建失败，Cloudflare API 返回的是：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>8000011: There is an internal issue with your Cloudflare Pages Git installation</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>这个错误不是项目配置导致的。即使用 GitHub numeric repo ID 和 owner ID 重试，返回仍然一样。最后需要到 Cloudflare Dashboard 里重新修复 Pages 的 GitHub integration，并授权仓库。</p><p>这也是迁移时比较值得注意的地方：如果 Pages 项目配置看起来都对，但 Git 集成报内部错误，不要一直在仓库里找问题。它可能就是 Cloudflare 账号和 GitHub App 的授权状态坏了。</p><p>GitHub integration 修好之后，又遇到了一次比较诡异的失败。Cloudflare 首次 deployment 实际拉取的是 <code>master</code> 上的一个 ad-hoc commit，里面没有 <code>package.json</code>，所以 <code>pnpm install</code> 直接报：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>ERR_PNPM_NO_PKG_MANIFEST</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>项目本身的生产分支配置是 <code>source</code>，仓库默认分支也对，但这次 deployment 的元数据里显示触发分支是 <code>master</code>。处理方式是手动从 <code>source</code> 分支触发一次新的 Pages deployment。新的 deployment 绑定到正确 commit 后，构建和部署都成功了。</p><p>这一步完成后，才切正式域名。</p><h2 id="dns-不要急着切" tabindex="-1">DNS 不要急着切 <a class="header-anchor" href="#dns-不要急着切" aria-label="Permalink to &quot;DNS 不要急着切&quot;">​</a></h2><p>迁移静态站点时，最容易犯的错是太早切 DNS。</p><p>这次在 Pages 项目还没有成功 deployment 前，没有把 <code>blog.harumonia.moe</code> 的 CNAME 从旧的 <code>zxjlm.github.io</code> 切走。这样即使 Cloudflare Pages 项目还在失败状态，线上访问也不会受到影响。</p><p>等 <code>source</code> 分支的 deployment 成功后，先验证 Pages deployment URL：</p><ul><li>首页能打开。</li><li><code>/archives/</code>、<code>/categories/</code>、<code>/tags/</code> 正常。</li><li><code>/atom.xml</code> 正常。</li><li><code>_headers</code> 里的缓存规则能生效。</li></ul><p>确认这些都没问题，再把 <code>blog.harumonia.moe</code> 的 CNAME 指向：</p><div class="language-text"><button title="Copy code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span>zxjlm-github-io.pages.dev</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>之后 Cloudflare Pages Custom Domain 状态从 pending 收敛到 active，正式域名也开始由 Pages 服务。</p><h2 id="上线后补掉的小缺口" tabindex="-1">上线后补掉的小缺口 <a class="header-anchor" href="#上线后补掉的小缺口" aria-label="Permalink to &quot;上线后补掉的小缺口&quot;">​</a></h2><p>部署成功后又做了一轮正式域名抽检，发现 <code>/manifest.webmanifest</code> 返回 404。这个文件不影响主站访问，但既然 <code>_headers</code> 里已经写了 manifest 的缓存规则，生产环境就不应该缺它。</p><p>于是补了一个最小可用的 <code>public/manifest.webmanifest</code>：</p><div class="language-json"><button title="Copy code" class="copy"></button><span class="lang">json</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code v-pre><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Zaxon&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;short_name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Zaxon&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;Find the key of soul&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;start_url&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;display&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;standalone&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;background_color&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;#ffffff&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;theme_color&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;#d15b7c&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  &quot;icons&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;src&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/pwa-192x192.png&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;sizes&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;192x192&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;image/png&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;src&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/pwa-512x512.png&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;sizes&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;512x512&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;image/png&quot;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre><button class="code-block-unfold-btn"></button></div><p>同时修了 <code>site.config.ts</code> 里的 favicon 路径。之前它指向 <code>/yun.svg</code>，但当前仓库里实际存在的是 <code>/favicon.svg</code>。</p><p>补完后再次 push，Cloudflare Pages 通过 <code>github:push</code> 自动触发新的生产部署，新的部署成功后，<code>/manifest.webmanifest</code> 和 <code>/favicon.svg</code> 都能正常返回，并且缓存头也符合预期。</p><h2 id="迁移后的收益" tabindex="-1">迁移后的收益 <a class="header-anchor" href="#迁移后的收益" aria-label="Permalink to &quot;迁移后的收益&quot;">​</a></h2><p>这次迁移最直接的收益，是部署职责变清楚了。</p><p>GitHub 负责源码，Cloudflare 负责发布。自定义域名、DNS、TLS、CDN、缓存头都在 Cloudflare 一侧收敛，排查时不用再跨多个平台拼链路。</p><p>第二个收益是缓存策略可控。以前静态资源能不能被长期缓存、feed 多久刷新，很容易依赖平台默认行为。迁到 Pages 后，<code>public/_headers</code> 进入仓库，缓存策略就变成了版本化配置。哪怕以后换机器、换账号、重新部署，也能从仓库里恢复同样的行为。</p><p>第三个收益是图片优化有了落点。第一阶段只是让 <code>/assets/*</code>、<code>/images/*</code>、favicon、PWA 图标这些本站资源走长期缓存。如果 Cloudflare 套餐支持 Polish，还可以进一步开启无损压缩和 WebP。历史外链图片则可以在第二阶段按优先级迁到 R2 或 Cloudflare Images，而不是继续散落在各种第三方图床里。</p><p>第四个收益是构建环境更明确。<code>.node-version</code>、<code>NODE_VERSION</code>、<code>PNPM_VERSION</code>、生产分支、构建命令、输出目录都写清楚之后，部署失败时更容易判断问题属于依赖、构建、分支，还是平台授权。</p><p>这次迁移也提醒我，个人博客这种项目不一定需要复杂的基础设施。它是静态站点，就让静态托管平台做静态托管；它需要图片治理，就先从缓存和清单开始；它需要可靠发布，就把构建和域名绑定放在同一条可验证的链路里。</p><h2 id="如果再做一次" tabindex="-1">如果再做一次 <a class="header-anchor" href="#如果再做一次" aria-label="Permalink to &quot;如果再做一次&quot;">​</a></h2><p>如果要复刻这次迁移，我会按下面的顺序来：</p><ol><li>先本地确认 <code>pnpm install --frozen-lockfile</code> 和 <code>pnpm run build</code> 能跑通。</li><li>固定 Node 和 pnpm 版本，避免云端构建环境漂移。</li><li>确认主题、插件、图片等依赖没有本地 link 或只存在于个人机器上的路径。</li><li>新增 <code>_headers</code>，把静态资源、feed、manifest、robots 的缓存策略写进仓库。</li><li>删除 GitHub Pages 专用的 <code>CNAME</code>，让 Cloudflare Pages 管理自定义域名。</li><li>在 Cloudflare Pages 创建 Git 集成项目，生产分支选择 <code>source</code>。</li><li>等 Pages deployment URL 验证通过后，再切正式域名 DNS。</li><li>切完后用正式域名抽检首页、集合页、feed、manifest、favicon 和静态资源缓存头。</li><li>最后再处理历史外链图片，不要把图片大迁移和部署迁移绑在同一天完成。</li></ol><p>现在 <code>blog.harumonia.moe</code> 已经跑在 Cloudflare Pages 上。迁移本身不算复杂，但里面有几个容易被忽略的细节：GitHub App 授权状态、生产分支、构建环境版本、DNS 切换时机、manifest 和 favicon 这种小资源。把这些都补齐之后，整个博客的发布链路就清爽了很多。</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2026-06-28-migrate-github-to-cloudflare-pages.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2026-07-10-nl-to-sql" class="">大量数据表下通过 dify + 简单 LLM 进行取数</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2026-06-15-sdd-in-practice" class="">关于 SDD 的一些分享</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2026-06-28T11:11:41.000Z","datePublished":"2026-06-28T11:11:41.000Z","inLanguage":"zh-CN","name":"从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"从 GitHub Pages 到 Cloudflare Pages：一次静态博客部署迁移","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

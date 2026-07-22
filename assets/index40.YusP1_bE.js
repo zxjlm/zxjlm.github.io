@@ -1,0 +1,1 @@
+import{H as e,M as t}from"./theme.Wmkaijgp.js";var n=t({defaults:{"@type":`SearchAction`,target:{"@type":`EntryPoint`},"query-input":{"@type":`PropertyValueSpecification`,valueRequired:!0,valueName:`search_term_string`}},resolve(t,n){return typeof t.target==`string`&&(t.target={"@type":`EntryPoint`,urlTemplate:e(n.meta.host,t.target)}),t}});export{n as searchActionResolver};

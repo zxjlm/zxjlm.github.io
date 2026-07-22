@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2020-03-07-C1-The-Betrayer.BwL8I5S4.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C1.背叛者 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="C1.背叛者">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">C1.背叛者</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2020-03-07">2020-03-07</time></dd></dl><span>[
+  &quot;摸摸摸&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>德黑兰王国西部边境，少年兵团营地，夜。</p><p>道恩静静地躺在床上，脑海中意识不断地翻腾汹涌，他虽然无法从中捕获到任何有用的信息，但是他清楚，这是自己的灵性在面对危机时的主动预警。而他也正是因为无条件地信任这种虚无缥缈的东西，现在才能以一个活人的身份躺在这里。</p><!-- more --><p>&quot;有危险？但是危险从何而来？&quot;。少年兵团的驻地虽然地处边境，但是前方有西境兵团驻扎，后方又是王国的腹地，按理说应该是十分安全才对。道恩的脑海中不断模拟一个个可能的危机，然后又一个个推翻，迟迟没有头绪，令他不由得有点烦躁。</p><p>&quot;道恩，你也睡不着吗&quot;，左边传来乔伊的询问声，他淡蓝色的眼睛在皎月的映照下闪烁着点点星辉。</p><p>道恩刚准备回答，克洛确是直接一个鲤鱼打挺跳了起来，&quot;什么嘛，原来你们也没睡啊&quot;。</p><p>少年兵团特别任务营，为了培养诸如暗杀、侦查、反侦察等人才而成立，是少年兵团中名副其实的精锐。由于执行任务的特殊性，通常以三人小组为单位。道恩、克洛、乔伊，正是特别任务营的一组。</p><p>&quot;嗯&quot;，道恩依旧没有任何的线索，索性暂时就不想了，&quot;我想出去走走&quot;。乔伊和克洛当即表示也要一起出去玩玩。</p><p>原则上，兵团夜里除了巡逻的人员，是不允许私自走动的；三人却对此习以为常，因为只要不被发现，那就不算是违反规定。</p><p>他们这次确实失算了，刚一出帐，迎面走过来一个面容阴骘的男人。罗德，兵团的副兵团长，欺软怕硬、笑里藏刀，一门心思扑在&quot;升迁&quot;两个字上，很多的行径都被兵团的少年们当做茶余饭后的笑料。</p><p>道恩一向与罗德很不对付，因为他能够从罗德的眼中看到那隐晦的厌恶。但是今日不同，他甚至捕捉到了一丝杀念。</p><p>&quot;夜里不要乱逛，回营帐，或者军法处置。&quot;罗德恶狠狠地说道，在目送道恩等人进帐之后，便带着一种巡夜士兵离去。</p><p>&quot;不太对劲&quot;，道恩仿佛抓到了那一直隐藏在迷雾这种的线索的尾巴，&quot;罗德今天显得太好应付了。&quot;</p><p>乔伊也在一旁附和，&quot;来这儿这么久，还是第一次看到罗德亲自巡夜呢。&quot;</p><p>&quot;我刚刚瞥了一眼&quot;，克洛补充道，&quot;驻地的灯火比以前要暗很多，说明巡夜的人手减少了。而且能够见到的走动的人，都是成年人。&quot;</p><p>&quot;罗德到底想干什么？&quot;，道恩心中疑惑，&quot;看来今天必须要出去逛一逛了呢。&quot;</p><hr><p>与此同时，少年兵团驻地的四周，一道道黑影俨然已经将这个地方围成了一个铁桶。</p><p>罗德结束巡视之后，径直出了驻地东门，一头扎入丛林，一直到一处空旷处。</p><p>那里站着一个棕色的短发男人。身着绘有蓝色花纹的银白色铠甲，这在黑兰德是王室才能穿着的配色。他见到罗德，眼睛微微眯起。</p><p>&quot;殿下，一切准备就绪。&quot;罗德单膝跪地，尽显卑微。</p><p>男人的脸上绽放出残忍的笑容，&quot;全军，目标少年兵团，不留活口。&quot;</p><hr><p>道恩等人眼看神色匆匆地罗德出了驻地，&quot;有阴谋&quot;，他们现在只能初步肯定这个猜想，但是对有什么阴谋依旧没有头绪。</p><p>&quot;算了，不管怎么说，他还能杀了我们不成。&quot;克洛无奈地撇撇嘴，只能以这句话来安慰同伴。</p><p>&quot;不，他能。&quot;乔伊忽然出声，他的目光越过丛林，看向了更远的地方。</p><p>那里是卡罗领，他们三人的家乡。</p><p>道恩一瞬间仿佛明白了什么，&quot;莫尼亚的军队绕过西境军团，本袭西部重镇卡罗领，少年兵团驻地紧邻卡罗，是无论如何都绕不过去的一关。&quot;道恩喃喃道。</p><p>&quot;罗德他竟然敢叛国！？&quot;克洛压低声音惊呼。</p><p>&quot;做好准备，是与不是，就看今夜了。&quot;道恩不由得又回想起罗德最后一瞥中那隐含的深刻而暴虐的杀意。</p><hr><p>&quot;莫尼亚的军队夜袭，全军向东撤往卡罗领。&quot;罗德的呼喝声响彻整个少年兵团的驻地，与之一道的，是利箭与空气摩擦而产生的尖锐的啸叫。</p><p>早在丛林中的军队开始行动时，道恩便已经察觉到了，随后便发出信号，让塔楼的克洛吹响军哨。</p><p>&quot;除了东面，都是莫尼亚的军队，我们被包围了。&quot;克洛一见到道恩，便惊呼道。&quot;快逃吧，我在上面只看到遍地都是黑影，只凭借少年兵团，根本不可能是对手&quot;。</p><p>&quot;除了东面？&quot;道恩一惊，&quot;不可能，罗德就是在东面与莫尼亚人接头的……对了，是围三厥一，他们想把少年兵团的人都赶往东面的包围圈里，然后全歼掉。&quot;电光火石之间，道恩已经做出了决断，&quot;前往西面，西境兵团不可能被悄无声息地吃掉，他们一定是绕过西境驻地过来的，我们向西突围，才能有一线生机。&quot;</p><p>与回营帐取武器的乔伊回合之后，确是又被罗德给遇上了。</p><p>&quot;你们在干什么，快点往东面突围。&quot;罗德表面上似乎是为道恩等人的安危而焦急，一步一步靠近道恩，却是缓缓地抽出了手中的长剑。</p><p>&quot;该死的叛国贼。&quot;眼见此事无法善了，道恩决定先发制人，三人当即围攻罗德。</p><p>道恩、乔伊、克洛，少年兵团特殊任务营第 23 期摘得&quot;铁三角&quot;荣誉的小组，几乎是一交锋，罗德便被压制，险象环生。</p><p>忽然，一柄长剑悍然突入战场，直接逼退了处于上风的三人。持剑的是一个棕发的男子，此刻身上穿着莫尼亚的制式军官铠甲，身上散发出惊人的威势，这种级别的&quot;势&quot;，三人只在西境军团长莫雷德将军身上感受过。</p><p>&quot;废物&quot;，棕发男子瞥了一眼罗德嗤笑一身，长剑直指道恩三人。</p><p>&quot;敢问阁下是莫尼亚哪支军队的&quot;，道恩出口询问，同时却又是一道暗器射出，直冲男人的面门。他当然不指望得到回答，只是用言谈来分散男人的注意力罢了。</p><p>&quot;四殿下小心。&quot;罗德惊呼。四殿下！？莫尼亚的殿下可没排到第四位的，倒是黑兰德，第四顺位继承人，差不多与眼前这个男人同岁。</p><p>乔伊神色一变再变，这在他这个一向沉稳的人身上相当罕见。男人的剑锋指向乔伊，&quot;聪明的小子，我这里正缺人才，不如你投靠我，可以保你一条性命。&quot;</p><p>&quot;没办法善了了，你们撤，我断后。&quot;乔伊一瞬间就有了决断，手上的纹章散发出熠熠的光辉。</p><p>道恩没有任何犹豫，拉起克洛便抽身而退。14 年的相处，他再了解乔伊不过，既然有了决断，就没有必要拖泥带水。</p><p>罗德眼看道恩就要遁逃，叫上一队人马便追赶上去。</p><hr><p>&quot;这是一个阴谋，彻头彻尾的阴谋！&quot;道恩恨声道，&quot;四皇子想以少年兵团为代价，以为少年兵团复仇为借口，发动对莫尼亚的战争，从而获得争夺皇位的功绩。&quot;</p><p>一瞬间想明白的不止是乔伊，道恩也在刹那间就想通了今晚发生的一切的前因后果。所以他不顾乔伊的生死，一定要将这个情报送到西境兵团。因为战争机器一旦启动，第一个吞噬的就是位于边境的卡罗领，他们的家乡。</p><p>克洛远没有道恩这样&quot;冷血&quot;，他只能默默地跟在道恩的后面。在过去，每当他迷茫时，只要无条件地信任这个人，就能够走出阴霾。所以，即使他对道恩的所作所为颇有怨念，但是依旧愿意跟随他行动。</p><p>&quot;话说回来，罗德真是愚蠢，竟然将这么重要的事情给暴露了。&quot;克洛许是为了活跃气氛，干巴巴地说道。</p><p>&quot;他不是蠢，如果我们不知道这件事情的真相，那我们就有一线生机，因为我们是’少年兵团的幸存者，目睹了莫尼亚军队暴虐行径的见证人’，他这是彻底断了我们的退路，现在根本没有什么回旋的余地了，四皇子一定会不惜代价地追杀我们。&quot;道恩对一切心如明镜。&quot;快要到了，前面就是断崖，现在各个路线都被罗德封死，那里将是我们的最后的生机所在。&quot;</p><hr><p>眼看着站在悬崖边上的道恩，罗德露出了畅快的笑容。</p><p>&quot;罗德，唯一让我想不明白的是，为什么你如此痛恨我，我跟你在进少年兵团之前应该没有任何交集才对。&quot;道恩疑惑地问道。</p><p>罗德显然心情十分愉悦，&quot;因为你那惹人生厌的黑发黑瞳，哼。&quot;</p><p>道恩忽然想起来，罗德的父母就是死在了 16 年前与东方帝国的战争之中，而他一直念叨的&quot;复兴祖上的荣光&quot;中的&quot;复兴&quot;，也是根源于此。</p><p>&quot;因为不敢与强大的东方帝国对抗，就将仇恨迁怒于自己的同胞吗？罗德，你可真是可笑啊。&quot;道恩嗤笑道，脸上表现出不屑与怜悯混杂的神色。</p><p>罗德可不会着了这拙劣的激将法，他明白，单打独斗，他可不是道恩的对手，于是后退到身后的队伍中，防止道恩临死反扑。</p><p>&quot;道恩，安心地死吧。我会把你投靠莫尼亚的’光辉事迹’好好宣扬的。&#39;叛国者&#39;，道恩·布莱特，哼哼，哈哈&quot;</p><p>道恩不屑一笑，&quot;罗德，你最好祈祷我会死在这里，不然，乔伊的仇，少年兵团袍泽的仇，我会一一让你偿还。&quot;</p><p>说罢，纵身跃入峡谷。</p><p>&quot;拦住他&quot;，罗德惊呼一声，却已经太迟，等到他跑到崖边，却只是隐约听到了两声沉闷的落水声，随后便被湍急的流水声所掩去。</p><hr><h2 id="后记" tabindex="-1">后记 <a class="header-anchor" href="#后记" aria-label="Permalink to &quot;后记&quot;">​</a></h2><p>闲着无聊，悄悄摸一章…………</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2020-03-07-C1-The-Betrayer.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2020-04-04-catch-rain" class="">(打卡)接雨水</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2020-03-02-database-development-1" class="">数据库开发（1）</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2020-05-30T09:54:46.000Z","datePublished":"2020-03-07T20:28:00.000Z","inLanguage":"zh-CN","name":"C1.背叛者","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"C1.背叛者","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>

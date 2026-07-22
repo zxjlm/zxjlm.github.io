@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+    <script>
+    ;(function () {
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('vueuse-color-scheme') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+    </script>
+  <style type="text/css">
+    :root { color-scheme: light dark; --va-c-bg: #fff; }
+    html.dark { --va-c-bg: #000; }
+    html { background-color: var(--va-c-bg); }
+  </style><style id="valaxy-fouc">body{opacity:0!important}</style><style>body{transition:opacity .15s ease}</style><noscript><style>body{opacity:1!important}</style></noscript><script>(function foucGuardScript(maxDuration) {
+  var done = 0;
+  function reveal() {
+    if (done) return;
+    done = 1;
+    var s = document.getElementById("valaxy-fouc");
+    if (s) s.remove();
+  }
+  function check() {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (!links[i].sheet) return;
+    }
+    reveal();
+  }
+  new MutationObserver(check).observe(document.head, {
+    childList: true,
+    attributes: true,
+    attributeFilter: ["media", "rel"]
+  });
+  addEventListener("load", reveal);
+  if (maxDuration)
+    setTimeout(reveal, maxDuration);
+})(5000)</script>
+    <script>
+    const locale = localStorage.getItem('valaxy-locale') || 'zh-CN';
+    document.documentElement.setAttribute('lang', locale);
+    </script>
+    
+  <script type="module" crossorigin src="/assets/index.CBydRH15.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime.QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/assets/framework.DlhRx4bQ.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-i18n.2w6-LfJI.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/dayjs.C8H7-T5G.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/pinia.-SbDzQ_2.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/vue-router.CmiELS9I.js">
+  <link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+  <link rel="modulepreload" crossorigin href="/assets/chunks/nprogress.DHGjGeo5.js">
+  <link rel="stylesheet" crossorigin href="/assets/style.CS1n8O2D.css">
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.BQhdFMY1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_AMS-Regular.DMm9YOAa.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Bold.BEiXGLvX.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Caligraphic-Regular.CTRA-rTL.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.CL6g_b3V.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Bold.BsDP51OF.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.CTYiF6lA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Fraktur-Regular.Dxdc4cR9.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Cx986IdX.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Bold.Jm3AIy58.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-BoldItalic.SpSLRI95.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.NWA7e6Wa.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Italic.BMLOBm91.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.B22Nviop.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Main-Regular.Dr94JaBh.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-BoldItalic.iY-2wyZ7.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.t53AETM-.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Math-Italic.DA0__PXp.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.D1sUS0GD.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Bold.DbIhKOiC.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.C3H0VqGB.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Italic.DN2j7dab.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_SansSerif-Regular.CS6fqUqJ.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D3wIWfF6.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Script-Regular.D5yQViql.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.mCD8mA8B.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size1-Regular.C195tn64.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.Dy4dx90m.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size2-Regular.oD1tc_U0.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size3-Regular.CTq5MqoE.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.Dl5lxZxV.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Size4-Regular.BF-4gkZK.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.CO6r4hn1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/KaTeX_Typewriter-Regular.C0xS9mPB.woff" as="font" type="font/woff" crossorigin>
+<link rel="modulepreload" crossorigin href="/assets/theme.Wmkaijgp.js">
+<link rel="preload" href="/assets/traveler-standing.DvVouyjZ.png" as="image">
+<link rel="preload" href="/assets/signpost-two.s4Nb5_P8.png" as="image">
+<link rel="preload" href="/assets/traveler-camera.CmRbhozb.png" as="image">
+<link rel="preload" href="/assets/icon-notebook.BQakR1sS.png" as="image">
+<link rel="preload" href="/assets/traveler-writing.pkXcdj58.png" as="image">
+<link rel="preload" href="/assets/decor-flower-a.DVZTP_Mm.png" as="image">
+<link rel="preload" href="/assets/decor-flower-b.BZ-5YbkV.png" as="image">
+<link rel="preload" href="/assets/decor-lantern.7tusGMUd.png" as="image">
+<link rel="preload" href="/assets/decor-stars.D0aJ1JeN.png" as="image">
+<link rel="preload" href="/assets/decor-rocks.CrY6IjBB.png" as="image">
+<link rel="preload" href="/assets/icon-camera.7HN1ED1l.png" as="image">
+<link rel="preload" href="/assets/icon-compass.CskJjgog.png" as="image">
+<link rel="preload" href="/assets/icon-dev.B2g-1OJp.png" as="image">
+<link rel="preload" href="/assets/icon-life.DUURc3Xe.png" as="image">
+<link rel="preload" href="/assets/badge-note.C9aY-8JA.png" as="image">
+<link rel="preload" href="/assets/badge-quote.DXQLbjaJ.png" as="image">
+<link rel="modulepreload" crossorigin href="/assets/2019-12-14-The-Nature-of-Software-Development-note.B5o5EfiI.js">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>软件开发本质论 笔记 - Zaxon</title>
+<meta property="og:locale:alternate" content="en">
+<meta name="description" content="lazy">
+<meta property="og:description" content="lazy">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="Zaxon">
+<meta property="og:title" content="软件开发本质论 笔记">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.harumonia.moe/">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/zxjlm/my-static-files@master/img/favicon.ico" type="image/png">
+<meta name="generator" content="Valaxy 0.28.11">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <div id="app"><!--[--><!--[--><!----><!--[--><!--]--><!----><!--]--><div class="field-shell antialiased"><a class="field-skip-link" href="#main-content">跳到正文</a><!----><header class="field-nav"><nav class="field-nav-frame" aria-label="Zaxon"><div class="field-nav__inner"><a href="/" class="field-brand" aria-label="Zaxon"><img class="field-brand__sprite" alt src="/assets/traveler-standing.DvVouyjZ.png"><span>Zaxon</span></a><div class="field-nav__links"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__more"><summary class="field-nav__link"> 其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div class="field-nav__more-menu"><!--[--><a href="/archives/" class="va-link field-nav__more-link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__more-link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__more-link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div><div class="field-nav__actions"><a class="field-icon-button" href="/feed.xml" aria-label="订阅 RSS 更新"><div i-ri-rss-line></div></a><a href="/archives/" class="field-icon-button field-nav__archive" aria-label="查看归档"><div i-ri-archive-line></div></a><button class="field-icon-button" type="button" aria-label="切换明暗主题"><div i-ri-moon-line></div></button><button class="field-icon-button field-nav__menu" type="button" aria-expanded="false" aria-controls="field-mobile-nav" aria-label="打开导航菜单"><div i-ri-menu-3-line></div></button></div></div><div id="field-mobile-nav" class="field-nav__mobile" data-open="false"><div class="field-nav__mobile-inner"><!--[--><a href="/" class="va-link field-nav__link" rel="noopener"><!--[-->首页<!--]--></a><a href="/tech/" class="va-link field-nav__link" rel="noopener"><!--[-->技术<!--]--></a><a href="/notes/" class="va-link field-nav__link" rel="noopener"><!--[-->生活<!--]--></a><a href="/albums/" class="va-link field-nav__link" rel="noopener"><!--[-->相册<!--]--></a><a href="/about/" class="va-link field-nav__link" rel="noopener"><!--[-->关于<!--]--></a><!--]--><details class="field-nav__mobile-more"><summary>其他 <span aria-hidden="true" i-ri-arrow-down-s-line></span></summary><div><!--[--><a href="/archives/" class="va-link field-nav__link" rel="noopener"><!--[-->归档<!--]--></a><a href="/categories/" class="va-link field-nav__link" rel="noopener"><!--[-->分类<!--]--></a><a href="/tags/" class="va-link field-nav__link" rel="noopener"><!--[-->标签<!--]--></a><!--]--></div></details></div></div></nav></header><main id="main-content" class="field-main field-main-frame"><!--[--><article class="field-post"><header class="field-post__header"><div class="field-post__sprite" aria-hidden="true"><img src="/assets/traveler-writing.pkXcdj58.png" alt=""></div><p class="field-kicker"> Field entry </p><h1 class="field-post__title">软件开发本质论 笔记</h1><div class="field-post__meta"><dl class="field-date"><dt class="sr-only"> Published on </dt><dd><time datetime="2019-12-14">2019-12-14</time></dd></dl><span>[
+  &quot;桂苑酌记&quot;
+]</span></div></header><div class="field-post__layout"><aside class="field-post__aside"><dl class="field-author"><dt class="sr-only"> Authors </dt><dd><ul><li><!----><dl><dt class="sr-only"> Name </dt><dd class="field-author__name">harumonia</dd><!----><!----></dl></li></ul></dd></dl><div class="field-post__toc-card"><img src="/assets/icon-notebook.BQakR1sS.png" alt="" loading="lazy"><span>阅读札记</span><p>正文保持安静，代码、引用和图片使用统一的手帐边界。</p></div></aside><div class="field-post__content"><!----><!--[--><main><div w="full" flex="~"><!--[--><div class="content" flex="~ col grow" w="full" p="l-4 lt-md:0"><!--[--><!--]--><!--[--><!--]--><!--[--><div class="markdown-body max-w-none pb-8 prose dark:prose-invert"><article class="markdown-body"><!--[--><!--[--><p>[美]Ron Jeffries</p><h2 id="价值" tabindex="-1">价值 <a class="header-anchor" href="#价值" aria-label="Permalink to &quot;价值&quot;">​</a></h2><p>80/20 法则:每个人想要的功能特性可能都不相同,但是没有人想要所有的功能特性.</p><p>首先推出能够产生价值的功能特性.</p><p>引导团队构建不仅对我们有意义,同时对用户也有意义的特性,即, <strong>最小可市场化功能特性</strong> 与最小可市场化功能特性相比,在更细的粒度上提供商业方向更能使我们受益.</p><p>价值的最大化在于频繁交付小的\以价值为中心的功能特性.</p><!-- more --><h3 id="价值是什么" tabindex="-1">价值是什么 <a class="header-anchor" href="#价值是什么" aria-label="Permalink to &quot;价值是什么&quot;">​</a></h3><p>简单地说,价值就是&quot;我们想要的东西&quot;. 所以,在不同的情境下,价值的侧重不同.</p><h3 id="如何衡量价值" tabindex="-1">如何衡量价值 <a class="header-anchor" href="#如何衡量价值" aria-label="Permalink to &quot;如何衡量价值&quot;">​</a></h3><p>价值的衡量具有一定的主观性,纯粹以数据衡量价值是不可取的.</p><ol><li>我们知道的并非真正的数据</li><li>大的差别很重要,小的差别则并不重要</li><li>不同类型的价值不具备可比性</li></ol><p>你的想法? &lt;==&gt; 数据? 团队协商,达成共识?</p><blockquote><p>Ron 认为,通过数值来表示价值可能会是我们滑入深渊.因为数值往往将多个衡量指标无序地混杂在一起. 同时,他指出 <strong>大多数与金钱相关的衡量指标在时间上都落后</strong> .</p></blockquote><p><em>所有的衡量指标的真正作用都是帮助产品推动人\项目干系人\以及团队成员理解什么是真正的价值.</em></p><h2 id="功能特性" tabindex="-1">功能特性 <a class="header-anchor" href="#功能特性" aria-label="Permalink to &quot;功能特性&quot;">​</a></h2><p>传统软件开发:分析-设计-编码-测试 根据功能特性开发:更加地灵活,更加地高效</p><blockquote><p>这有点类似于敏捷开发,不过以前跟某人交流的时候,他指出国内大部分的公司目前所谓的敏捷开发都只是有形而无实.</p></blockquote><h3 id="组建强大的团队" tabindex="-1">组建强大的团队 <a class="header-anchor" href="#组建强大的团队" aria-label="Permalink to &quot;组建强大的团队&quot;">​</a></h3><p>确保其团队成员知道要做什么,然后让他们自己去搞清楚怎么做</p><ul><li>目的来源于具体的业务:填鸭式地直接告知解决方法,而不是通过主动思考,整个团队将需要更长的时间获得明确的目标感.</li><li>自主能够给整个团队带来责任感</li><li>专精源自迭代过程</li></ul><p><strong>一言以蔽之,在自主的专精团队中,每个人都清楚团队的目的.</strong></p><blockquote><p>团队成员的能力波动值太大的话,是灾难性的.</p></blockquote><h3 id="自然开发的管理之道" tabindex="-1">自然开发的管理之道 <a class="header-anchor" href="#自然开发的管理之道" aria-label="Permalink to &quot;自然开发的管理之道&quot;">​</a></h3><p>跨职能团队拥有交付软件的每一个增量版本所需的全部技术与能力,团队成员能够自己进行测试,自己编写文档,所有与软件开发直接相关的事情都可以有他们去做.越是接近这样的理想状态,所需的协作配合就越少.</p><p>五大管理要素:</p><ul><li>计划</li><li>组织</li><li>人员配备</li><li>领导</li><li>控制</li></ul><p>制定计划: 无论是长期计划还是短期计划,核心都是从高价值的功能特性到低价值的功能特性. 管理人员要随时关注计划的进展,同时,高层计划者和管理者要十分清楚项目有哪些功能特性,同时要求产品推动人通过演示实际可用的软件来展现这些功能特性. <strong>计划的根本目的是为了取得更好地结果.so,随时关注价值的变化,并适当地对计划进行调整</strong></p><p>自然软件开发的方法倡导将权力授予实际完成工作的人.</p><blockquote><p>放权是一个很艰难的抉择,这需要建立在有足够的信任,或者自己有绝对的权利之上,即,相信他们能够做好,当然,如果最不好,我能有权利把你们开除了.缺一不可.</p></blockquote><h3 id="根据功能特性组织团队" tabindex="-1">根据功能特性组织团队 <a class="header-anchor" href="#根据功能特性组织团队" aria-label="Permalink to &quot;根据功能特性组织团队&quot;">​</a></h3><p>没有足够多的专家? -&gt; 组建实践社区,用现有的专家去培养专家</p><p>功能特性团队使得&quot;规模扩展&quot;很容易</p><blockquote><p>很明显再就是暑假时的项目管理模式,将培训与项目结合,并行工作,不过当时的我也不是什么专家,所以组织安排大家学习的结果差强人意.也许收获最大的反而是我?</p></blockquote><ul><li><p>做计划是必要的</p><ul><li>项目的时间期限和开始预算</li><li>优先开发那些最优价值的功能特性</li><li>确保产品能够随时发布,并在时间结束时立刻停止</li></ul></li><li><p>详细的计划是无用的</p></li><li><p>持续计划:分解功能特性</p><ul><li>团队应该以固定的节奏工作 <ol><li>这样的工作周期通常称为&quot;迭代&quot;或&quot;冲刺&quot;,一般为几周</li><li>每个功能特性最好在两-三天完成</li></ol></li><li>承担多少工作? <ol><li>每个迭代周期的工作量根据上个周期来划分</li><li><strong>重要的不是准确地估计工作量,而是能够以一贯的节奏来完成工作</strong></li></ol></li><li>根据&quot;挑战性的目标&quot;制定计划,危害性很大 <ol><li>赶工会客整个项目带来更多的缺陷</li><li>压力具有破坏性,避免向团队施压</li></ol></li></ul></li></ul><p>五卡法</p><blockquote><p>这一点暑假就做得很不好,或者说,这是我和涛哥双核驱动模式下的一个必然的恶果.</p></blockquote><h3 id="根据功能特性构建产品" tabindex="-1">根据功能特性构建产品 <a class="header-anchor" href="#根据功能特性构建产品" aria-label="Permalink to &quot;根据功能特性构建产品&quot;">​</a></h3><ul><li>在每一个短周期内,完整地构建一个小的产品</li><li>细化产品愿景</li><li>总是将价值可能最大的任务列位下一个目标</li><li>确定真实的进展</li><li>淘汰测试再修复式的收尾方式</li><li>随着项目进行,进一步扩展和优化设计 <ol><li>设计得太多或者太少都会导致开发缓慢</li></ol></li></ul><p><strong>为了加快开发速度,我们能做的最有价值的事情就是提高团队成员的技能.这一投入很快就能带来以下回报:浪费在修复缺陷上的时间会更少,开发过程会更加流畅.不要将迅猛当作高效.速度最快的团队总是平稳\优雅地前进.</strong></p><h4 id="重构" tabindex="-1">重构 <a class="header-anchor" href="#重构" aria-label="Permalink to &quot;重构&quot;">​</a></h4><p>我们需要稳步前进.为此,需要时刻爆出设计的清晰和整洁.为了做到这一点,必须进行重构.</p><p>构建一个功能特性所需的时间大致来自以下两个主要方面:</p><ul><li>它本身固有的难度</li><li>将它加入现有代码时可能的难度</li></ul><p><strong>露营地规则:在离开露营地时,要让它比你来的时候更好.</strong></p><h2 id="价值的完整循环" tabindex="-1">价值的完整循环 <a class="header-anchor" href="#价值的完整循环" aria-label="Permalink to &quot;价值的完整循环&quot;">​</a></h2><ul><li>我们最终想要的是价值,提供价值的则是功能特性.功能特性发布得越早,我们就能越早提供价值.</li><li>基于价值的管理比基于时间或工件等不提供价值的事物更胜一筹.</li><li>根据功能特性做计划很简单,只有正在必要时才进行估算.根据以往完成的工作量来安排下一阶段的工作,效果会更好.</li><li>采用逐渐增加功能特性的增量式开发方法,要求我们每隔几周就能够开发出小而完整的产品.所开发的产品必须总是能够正常运行,而且其设计也是良好的.</li><li>开发工作必须要交付真正可用的功能特性.产品必须经过严格的测试,业务人员和开发人员都需要参与其中.同时,产品还必须拥有良好的设计,而且开发人员需要保持产品的设计一直处于良好状态.</li></ul><h2 id="后记" tabindex="-1">后记 <a class="header-anchor" href="#后记" aria-label="Permalink to &quot;后记&quot;">​</a></h2><p>梦里不知天在水，满船清梦压星河。</p><!--]--><!--[--><!--]--><!--]--><!----><!----></article></div><!--[--><!--]--><!--]--></div><!--[--><!--]--><!--[--><!--]--><!--[--><!--]--><!----><!--[--><!--]--><!--]--></div><!--[--><!--]--></main><!--]--><div class="field-post__markdown-action"><a class="field-markdown-link" href="/posts/2019-12-14-The-Nature-of-Software-Development-note.md"> view as markdown </a></div></div><footer class="field-post__pager"><div class="field-post__pager-item"><h2> 上一篇 </h2><div><a href="/posts/2019-12-24-some-discussion-of-Linux" class="">浅谈Linux的使用与应用</a></div></div><div class="field-post__pager-item"><h2> 下一篇 </h2><div><a href="/posts/2019-12-14-principles-of-computer-composition-review" class="">计算机组成原理复习</a></div></div><div class="field-post__pager-item"><a href="/" class=""> ← 返回手记 </a></div></footer></div></article><!--]--></main><div class="field-helper"><!----></div><footer class="field-footer"><!----><div class="field-footer__copyright"><span> © <!--[-->2018 - <!--]--> 2026</span><a class="field-footer__icon" href="/" target="_blank" title="Zaxon"><div class="i-ri-cloud-line"></div></a><span>harumonia</span></div><div class="field-footer__powered"><span>由 <a href="[object Object]" target="_blank" rel="noopener">Valaxy</a> v0.28.11 驱动</span> | <span>主题 - <a href="https://blog.harumonia.moe" title="valaxy-theme-zaxon" target="_blank">Zaxon</a> v0.1.17</span></div><!--[--><!--]--></footer></div><!--]--></div><script>window.__INITIAL_STATE__='{"pinia":{"app":{"showLoading":true},"routerStore":{}}}'</script><script type="application/ld+json" data-hid="schema-org-graph">{"@context":"https://schema.org","@graph":[{"@id":"https://blog.harumonia.moe/#identity","@type":"Person","name":"harumonia","url":"https://blog.harumonia.moe/","image":{"@id":"https://blog.harumonia.moe/#/schema/image/1"},"sameAs":["/atom.xml","https://github.com/zxjlm","https://space.bilibili.com/1801214","mailto:zxjlm233@gmail.com"]},{"@id":"https://blog.harumonia.moe/#website","@type":"WebSite","dateModified":"2019-12-14T15:55:24.000Z","datePublished":"2019-12-14T15:53:00.000Z","inLanguage":"zh-CN","name":"软件开发本质论 笔记","url":"https://blog.harumonia.moe/","publisher":{"@id":"https://blog.harumonia.moe/#identity"}},{"@id":"https://blog.harumonia.moe/#webpage","@type":"WebPage","description":"lazy","name":"软件开发本质论 笔记","url":"https://blog.harumonia.moe/","about":{"@id":"https://blog.harumonia.moe/#identity"},"isPartOf":{"@id":"https://blog.harumonia.moe/#website"},"potentialAction":[{"@type":"ReadAction","target":["https://blog.harumonia.moe/"]}]},{"@id":"https://blog.harumonia.moe/#/schema/image/1","@type":"ImageObject","contentUrl":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp","inLanguage":"zh-CN","url":"https://harumona-blog.oss-cn-beijing.aliyuncs.com/blog/Ocabe.webp"}]}</script>
+  
+</body>
+</html>
