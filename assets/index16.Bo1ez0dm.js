@@ -1,0 +1,1 @@
+import{H as e,M as t,V as n}from"./theme.DF-cH8q8.js";var r=t({cast(e){return typeof e==`string`&&(e={name:e}),e},defaults:{"@type":`ListItem`},resolve(t,r){return typeof t.item==`string`?t.item=e(r.meta.host,t.item):typeof t.item==`object`&&(t.item=n(t.item,r)),t}});export{r as listItemResolver};
