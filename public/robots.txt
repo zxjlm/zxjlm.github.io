@@ -11,5 +11,4 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/
 
-Sitemap: https://blog.harumonia.top/sitemap.xml
-Sitemap: https://blog.harumonia.top/baidusitemap.xml
+Sitemap: https://blog.harumonia.moe/sitemap.xml
