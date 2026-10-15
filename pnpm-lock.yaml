@@ -12,9 +12,12 @@ importers:
         specifier: 0.28.11
         version: 0.28.11(@babel/parser@7.29.7)(@nuxt/kit@3.21.8(magicast@0.5.3))(@types/markdown-it@14.1.2)(@types/node@26.0.0)(@vue/compiler-dom@3.5.38)(axios@1.18.0)(eslint@10.5.0(jiti@2.7.0))(typescript@5.9.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.38)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.38(typescript@5.9.3)))(vite@8.0.16(@types/node@26.0.0)(jiti@2.7.0)(sass@1.101.0)(yaml@2.9.0))(vue@3.5.38(typescript@5.9.3)))(vue@3.5.38(typescript@5.9.3))(yaml@2.9.0)
       valaxy-theme-zaxon:
-        specifier: 0.1.21
-        version: 0.1.21
+        specifier: 0.1.23
+        version: 0.1.23
     devDependencies:
+      playwright:
+        specifier: ^1.64.0
+        version: 1.64.0
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -2880,6 +2883,16 @@ packages:
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
 
+  playwright-core@1.64.0:
+    resolution: {integrity: sha512-T9r+MZkTECl2+oUcZ26YgZzTrYidTsIhYYkJix+6iDOymOb1FB2RLLSOxRGnZGv5DStt+aduIVbt+E8WygXYpg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
+  playwright@1.64.0:
+    resolution: {integrity: sha512-kVzTnYFYEyQ9RGzBjNCd2+yEqWmVbxl3AHPynv3qQ6JTjv4a+kwRcnqQwIpuP3NnrnIrE/Q6wWAIAvMfIE2/Yg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   pngjs@5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
@@ -3336,8 +3349,17 @@ packages:
     resolution: {integrity: sha512-6ZxzVpzDXDa3bJWaHilVayA+BH/1zmxCJoVgvmqJnid/gPoKHxUrS/aC/T6LGQtNHT+XHG9fXPJB4d+IrU30Ew==}
     hasBin: true
 
-  valaxy-theme-zaxon@0.1.21:
-    resolution: {integrity: sha512-WMt7dyItkDF2XxWZJK53lHZqjP1InzgJ06sfWUS2b5QxurPVu4VEn7vN/qlK4O5VtfdRwn6T7KBVAAs3+i3JjA==}
+  valaxy-theme-zaxon@0.1.23:
+    resolution: {integrity: sha512-fBYboBrY/luKabjIEJoUnL3JcukJedbP2lOLQwKee5eSqb2kk0U2IwmKHtH1BcwcPUJayRCpos0/Z+MryXE/aw==}
+    hasBin: true
+    peerDependencies:
+      '@maplibre/maplibre-gl-native': '>=6.4.1'
+      sharp: '>=0.35.5'
+    peerDependenciesMeta:
+      '@maplibre/maplibre-gl-native':
+        optional: true
+      sharp:
+        optional: true
 
   valaxy@0.28.11:
     resolution: {integrity: sha512-opghpJAV/f8xb3SVjiblTq8VRR4xhb8VdBn5X/LxACrxmzvEDY1xC9sMPoETsh7QU2V2w6rBWBRYMcvglz48mA==}
@@ -6526,6 +6548,12 @@ snapshots:
       exsolve: 1.0.8
       pathe: 2.0.3
 
+  playwright-core@1.64.0: {}
+
+  playwright@1.64.0:
+    dependencies:
+      playwright-core: 1.64.0
+
   pngjs@5.0.0: {}
 
   points-on-curve@0.2.0: {}
@@ -7024,11 +7052,14 @@ snapshots:
 
   uuid@14.0.1: {}
 
-  valaxy-theme-zaxon@0.1.21:
+  valaxy-theme-zaxon@0.1.23:
     dependencies:
       '@iconify-json/ant-design': 1.2.5
       '@iconify-json/simple-icons': 1.2.87
+      gray-matter: 4.0.3
+      jiti: 2.7.0
       maplibre-gl: 6.13.0
+      markdown-it: 14.2.0
 
   valaxy@0.28.11(@babel/parser@7.29.7)(@nuxt/kit@3.21.8(magicast@0.5.3))(@types/markdown-it@14.1.2)(@types/node@26.0.0)(@vue/compiler-dom@3.5.38)(axios@1.18.0)(eslint@10.5.0(jiti@2.7.0))(typescript@5.9.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.38)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.38(typescript@5.9.3)))(vite@8.0.16(@types/node@26.0.0)(jiti@2.7.0)(sass@1.101.0)(yaml@2.9.0))(vue@3.5.38(typescript@5.9.3)))(vue@3.5.38(typescript@5.9.3))(yaml@2.9.0):
     dependencies:

@@ -16,9 +16,10 @@
   },
   "dependencies": {
     "valaxy": "0.28.11",
-    "valaxy-theme-zaxon": "0.1.21"
+    "valaxy-theme-zaxon": "0.1.23"
   },
   "devDependencies": {
+    "playwright": "^1.64.0",
     "typescript": "^5.9.3"
   }
 }
