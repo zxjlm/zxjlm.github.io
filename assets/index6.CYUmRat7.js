@@ -1,0 +1,1 @@
+import{A as e,H as t,N as n,P as r,W as i}from"./theme.BV_QOonB.js";import{o as a}from"./index3.kgu91ho3.js";var o=n({defaults:{"@type":`Course`},resolve(e,n){return e.provider=t(e.provider,n,a,{root:!0}),e},resolveRootNode(t,{find:n}){let a=n(e);return a&&i(t,`provider`,r(a)),t}});export{o as courseResolver};

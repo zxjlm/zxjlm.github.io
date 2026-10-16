@@ -1,0 +1,1 @@
+import{H as e,N as t}from"./theme.BV_QOonB.js";var n=t({cast(e){return typeof e==`number`?{value:e}:e},defaults:{"@type":`QuantitativeValue`}}),r=t({defaults:{"@type":`MonetaryAmount`},resolve(t,r){return typeof t.value!=`number`&&(t.value=e(t.value,r,n)),t}});export{n,r as t};

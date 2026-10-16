@@ -1,0 +1,1 @@
+import{N as e}from"./theme.BV_QOonB.js";var t=e({cast(e){return typeof e==`string`?{url:e}:e},defaults:{"@type":`VirtualLocation`}});export{t as virtualLocationResolver};
