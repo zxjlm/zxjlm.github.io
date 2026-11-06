@@ -1,54 +1,25 @@
 {
-  "name": "zaxon-astro-blog",
-  "private": true,
+  "name": "zxjlm.github.io",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
   "packageManager": "pnpm@10.17.1",
   "scripts": {
-    "dev": "astro dev --host 127.0.0.1 --port 4860",
-    "build": "pnpm travel:maps:check && astro build",
-    "preview": "node scripts/serve.mjs dist 4860",
-    "check": "astro check",
-    "verify": "node scripts/verify.mjs",
-    "benchmark": "node scripts/benchmark.mjs",
-    "sync": "node scripts/sync-source.mjs",
-    "validate": "pnpm test && pnpm check && pnpm build && pnpm verify && pnpm verify:links && pnpm verify:metadata",
-    "test": "node --test scripts/*.test.mjs",
-    "travel:maps": "node scripts/travel-maps.mjs",
-    "travel:maps:check": "node scripts/travel-maps.mjs --check",
-    "verify:paths": "node scripts/verify-paths.mjs",
-    "verify:browser": "node scripts/verify-browser.mjs && node scripts/verify-search.mjs && node scripts/verify-travel-browser.mjs",
+    "build": "valaxy build --ssg",
+    "build:spa": "valaxy build",
+    "build:ssg": "valaxy build --ssg",
+    "dev": "valaxy",
     "new": "node scripts/new-post.mjs",
-    "verify:links": "node scripts/verify-links.mjs",
-    "verify:metadata": "node scripts/verify-metadata.mjs",
-    "verify:hosting": "node scripts/verify-hosting.mjs"
+    "rss": "valaxy rss",
+    "serve": "vite preview",
+    "test": "node --test scripts/*.test.mjs"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^7.3.5",
-    "@astrojs/vue": "^7.1.2",
-    "astro": "^7.4.4",
-    "feed": "5.2.1",
-    "gray-matter": "4.0.3",
-    "katex": "^0.19.1",
-    "maplibre-gl": "6.13.0",
-    "markdown-it": "14.2.0",
-    "mermaid": "11.15.0",
-    "parse5": "7.3.0",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0",
-    "vue": "^3.5.44",
-    "yaml": "2.9.1"
+    "valaxy": "0.28.11",
+    "valaxy-theme-zaxon": "0.1.23"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.12",
-    "@types/markdown-it": "14.1.2",
-    "@types/node": "^26.6.6",
-    "es-module-lexer": "^3.0.4",
-    "playwright": "1.64.0",
-    "sass": "^1.107.1",
+    "playwright": "^1.64.0",
     "typescript": "^5.9.3"
-  },
-  "engines": {
-    "node": "^24.13.1"
   }
 }

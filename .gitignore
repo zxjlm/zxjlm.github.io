@@ -1,13 +1,43 @@
-node_modules/
-dist/
-.astro/
-.validation/
+# valaxy
+
+valaxy-fuse-list.json
+.valaxy/
+
+# vite-ssg
+
+.vite-ssg-dist
+.vite-ssg-temp
+
+temp/
+
 .DS_Store
-
-.baseline/
-
-.argus-albums-import/
-.cache/
-
+*.local
+dist
+dist-ssr
+node_modules
 .pnpm-store/
-.release-worktree/
+legacy-hexo/
+.idea/
+*.log
+
+components.d.ts
+
+# env (may contain secrets like VALAXY_ENCRYPT_PASSWORD)
+.env
+.env.*
+
+# valaxy fuse
+public/valaxy-fuse-list.json
+
+# valaxy rss
+public/feed.xml
+
+# valaxy rss
+public/atom.xml
+
+# valaxy rss
+public/feed.json
+
+docs/
+
+superpowers/
