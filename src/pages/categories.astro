@@ -1,0 +1,11 @@
+---
+import Catalog from '../components/Catalog.astro';
+import CategoryTree from '../components/CategoryTree.astro';
+import { buildCollections } from '../lib/collections';
+import { posts } from '../lib/posts';
+
+const { tree } = buildCollections(await posts());
+---
+<Catalog title="分类" kicker="Field Catalog" count={`共计 ${tree.size} 个分类`}>
+  <CategoryTree tree={tree} />
+</Catalog>

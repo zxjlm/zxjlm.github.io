@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import AlbumGallery from '../../components/AlbumGallery.vue';
+import { albumDateSummary, albumDetail, albumPhotos, albums } from '../../lib/albums';
+import type { ArgusAlbumManifest, ArgusAlbumSummaryManifest } from '../../types/albums';
+
+export function getStaticPaths() {
+  return albums().entries.map(summary => ({
+    params: { slug: summary.slug },
+    props: { summary, album: albumDetail(summary) },
+  }));
+}
+
+interface Props { summary: ArgusAlbumSummaryManifest; album: ArgusAlbumManifest | null }
+const { summary, album } = Astro.props;
+const title = album?.title ?? summary.title;
+const photos = album ? albumPhotos(album) : [];
+const dates = albumDateSummary(photos, album?.updated_at);
+const places = [...new Set(photos.map(photo => photo.city).filter(Boolean))].join(' / ');
+---
+<Base title={title}>
+  <article class="field-catalog argus-album-detail">
+    <a class="argus-album-detail__back" href="/albums/">← 返回相册</a>
+    <header class="field-catalog__header">
+      <p class="field-kicker">Album</p>
+      <h1 class="field-catalog__title">{title}</h1>
+      {typeof album?.description === 'string' && album.description && <p class="argus-album-detail__description">{album.description}</p>}
+      {album && <p class="field-catalog__count argus-album-detail__facts">
+        <span>{photos.length} photos</span>
+        {dates && <span>{dates}</span>}
+        {places && <span>{places}</span>}
+      </p>}
+    </header>
+    {!album && <p class="argus-album-empty">这本相册暂时无法显示。</p>}
+    {album && !photos.length && <p class="argus-album-empty">这本相册还没有可展示的照片。</p>}
+    {photos.length > 0 && <AlbumGallery photos={photos} client:load />}
+  </article>
+</Base>

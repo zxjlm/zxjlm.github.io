@@ -1,35 +1,70 @@
-name: Pages
+name: Astro checks
 
 on:
   push:
-    branches:
-      - source
+    branches: [source, codex/astro-migration]
+  pull_request:
+    branches: [source]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  pages:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Use Node.js 22
-        uses: actions/setup-node@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version-file: .node-version
           cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Build and verify draft isolation
+        run: |
+          fixture=src/content/posts/migration-ci-private-draft.md
+          trap 'rm -f "$fixture"' EXIT
+          cat > "$fixture" <<'MARKDOWN'
+          ---
+          title: Migration CI private draft
+          date: 2024/2/9 4:08:04
+          updated: ""
+          draft: true
+          categories: [Migration CI private draft]
+          tags: [Migration CI private draft]
+          ---
 
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+          This fixture must stay private.
+          MARKDOWN
+          pnpm validate
+          test ! -e dist/posts/migration-ci-private-draft.html
+          test ! -e dist/posts/migration-ci-private-draft.md
+      - name: Static HTTP and Chromium checks
+        run: |
+          pnpm preview &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4860/ >/dev/null; then break; fi
+            sleep 1
+          done
+          pnpm benchmark
+          pnpm verify:paths
+          pnpm verify:browser
 
-      - name: Build
-        run: pnpm build
+      - name: Verify production crawl settings
+        env:
+          SITE_ENV: production
+        run: pnpm build && pnpm verify:metadata
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+  static-maps:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: master
-          force_orphan: true
+          node-version-file: .node-version
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --dir scripts/travel-map-tooling install --frozen-lockfile
+      - run: node scripts/verify-travel-maps.mjs

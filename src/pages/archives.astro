@@ -1,0 +1,31 @@
+---
+import Catalog from '../components/Catalog.astro';
+import { siteConfig } from '../site.config';
+import { formatDate, posts, postUrl, type Post } from '../lib/posts';
+
+const all = await posts();
+const byYear = new Map<string, Post[]>();
+for (const post of all) {
+  const year = formatDate(post.data.date).slice(0, 4);
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(post);
+}
+const years = [...byYear.keys()].sort((a, b) => Number(b) - Number(a));
+---
+<Catalog title={siteConfig.sections.archives.title} kicker="Field Archive" count={`共计 ${all.length} 篇文章`}>
+  <div class="field-timeline">
+    {years.map(year => (
+      <section class="field-timeline__year-group">
+        <h2 class="field-timeline__year">{year} <span>— {byYear.get(year)!.length} 篇</span></h2>
+        <ul class="field-timeline__posts">
+          {byYear.get(year)!.map(post => (
+            <li class="field-timeline__post">
+              <time class="field-timeline__date" datetime={post.data.date.toISOString()}>{formatDate(post.data.date).slice(5)}</time>
+              <div class="field-timeline__title"><a href={postUrl(post)}>{post.data.title}</a></div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Catalog>

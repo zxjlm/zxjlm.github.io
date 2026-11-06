@@ -1,0 +1,48 @@
+---
+import AlbumImage from './AlbumImage.astro';
+import { albums, homeAlbumPhotos } from '../lib/albums';
+
+const { photos, random } = homeAlbumPhotos(albums().entries);
+const randomPool = random ? JSON.stringify(photos) : undefined;
+---
+<section class="field-section" aria-labelledby="field-finds-title">
+  <div class="field-section__head">
+    <div>
+      <p class="field-kicker">Album finds</p>
+      <h2 id="field-finds-title" class="field-section__title">Epiphany</h2>
+      <p class="field-section__summary">相册拾光</p>
+    </div>
+    <a class="field-section__more" href="/albums/">查看全部 →</a>
+  </div>
+  {!photos.length && <p class="field-epiphany__status">相册暂时还没有可展示的照片。</p>}
+  {photos.length > 0 && <div class="field-epiphany-grid" data-photo-pool={randomPool}>
+    {photos.slice(0, 2).map((photo, index) => (
+      <a class="field-epiphany-card" data-featured={index === 0} href={photo.href}>
+        <AlbumImage src={photo.src} fallback={photo.fallback} alt={`${photo.title} 相册照片`} />
+        <span class="field-epiphany-card__shade" aria-hidden="true"></span>
+        <span class="field-epiphany-card__body">
+          <span class="field-chip" data-kind="life">Photo</span><strong>{photo.title}</strong><span>打开相册 →</span>
+        </span>
+      </a>
+    ))}
+  </div>}
+</section>
+<script>
+  const grid = document.querySelector<HTMLElement>('[data-photo-pool]');
+  if (grid?.dataset.photoPool) {
+    const pool = JSON.parse(grid.dataset.photoPool) as Array<{ href: string; title: string; src: string; fallback?: string }>;
+    for (const card of grid.querySelectorAll<HTMLAnchorElement>('.field-epiphany-card')) {
+      const [photo] = pool.splice(Math.floor(Math.random() * pool.length), 1);
+      const image = card.querySelector('img');
+      const title = card.querySelector('strong');
+      if (!photo || !image || !title) continue;
+      card.href = photo.href;
+      image.classList.remove('argus-image--fallback');
+      image.alt = `${photo.title} 相册照片`;
+      if (photo.fallback) image.dataset.fallback = photo.fallback;
+      else delete image.dataset.fallback;
+      image.src = photo.src;
+      title.textContent = photo.title;
+    }
+  }
+</script>

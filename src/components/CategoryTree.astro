@@ -1,0 +1,18 @@
+---
+import { collectionUrl, type CategoryNode } from '../lib/collections';
+
+interface Props { tree: Map<string, CategoryNode>; nested?: boolean }
+
+const { tree, nested = false } = Astro.props;
+---
+<ul class:list={['field-category-list', { 'field-category-list--nested': nested }]}>
+  {[...tree.values()].map(({ detail, posts, children }) => (
+    <li class:list={['field-category-item', { 'field-category-item--sub': nested }]}>
+      <a href={collectionUrl('categories', detail.path)} class="field-category-item__link">
+        <span class="field-category-item__name">{detail.name}</span>
+        <span class="field-category-item__count">{posts.length}</span>
+      </a>
+      {children.size > 0 && <Astro.self tree={children} nested />}
+    </li>
+  ))}
+</ul>

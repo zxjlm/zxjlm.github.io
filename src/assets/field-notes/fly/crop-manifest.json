@@ -1,0 +1,146 @@
+{
+  "idle-hover": {
+    "x": 32,
+    "y": 58,
+    "width": 189,
+    "height": 198
+  },
+  "idle-blink": {
+    "x": 41,
+    "y": 57,
+    "width": 185,
+    "height": 199
+  },
+  "idle-up": {
+    "x": 32,
+    "y": 28,
+    "width": 190,
+    "height": 196
+  },
+  "idle-down": {
+    "x": 33,
+    "y": 76,
+    "width": 176,
+    "height": 180
+  },
+  "idle-happy": {
+    "x": 10,
+    "y": 56,
+    "width": 210,
+    "height": 200
+  },
+  "idle-paper-plane": {
+    "x": 5,
+    "y": 76,
+    "width": 235,
+    "height": 180
+  },
+  "peek-left-1": {
+    "x": 42,
+    "y": 49,
+    "width": 89,
+    "height": 207
+  },
+  "peek-left-2": {
+    "x": 38,
+    "y": 77,
+    "width": 122,
+    "height": 179
+  },
+  "peek-left-3": {
+    "x": 20,
+    "y": 61,
+    "width": 160,
+    "height": 186
+  },
+  "fly-right-1": {
+    "x": 62,
+    "y": 0,
+    "width": 165,
+    "height": 243
+  },
+  "fly-right-2": {
+    "x": 25,
+    "y": 0,
+    "width": 181,
+    "height": 242
+  },
+  "fly-right-3": {
+    "x": 34,
+    "y": 0,
+    "width": 166,
+    "height": 244
+  },
+  "teleport-out-1": {
+    "x": 25,
+    "y": 44,
+    "width": 205,
+    "height": 182
+  },
+  "teleport-out-2": {
+    "x": 34,
+    "y": 48,
+    "width": 208,
+    "height": 169
+  },
+  "teleport-out-3": {
+    "x": 35,
+    "y": 86,
+    "width": 77,
+    "height": 93
+  },
+  "teleport-in-1": {
+    "x": 11,
+    "y": 38,
+    "width": 195,
+    "height": 165
+  },
+  "teleport-in-2": {
+    "x": 51,
+    "y": 43,
+    "width": 145,
+    "height": 167
+  },
+  "teleport-in-3": {
+    "x": 34,
+    "y": 38,
+    "width": 165,
+    "height": 185
+  },
+  "peek-right": {
+    "x": 95,
+    "y": 1,
+    "width": 102,
+    "height": 208
+  },
+  "peek-top": {
+    "x": 31,
+    "y": 5,
+    "width": 208,
+    "height": 168
+  },
+  "peek-bottom": {
+    "x": 15,
+    "y": 62,
+    "width": 222,
+    "height": 146
+  },
+  "wave-paper-plane": {
+    "x": 3,
+    "y": 6,
+    "width": 224,
+    "height": 192
+  },
+  "sunglasses-easter-egg": {
+    "x": 11,
+    "y": 0,
+    "width": 188,
+    "height": 199
+  },
+  "sleep-on-paper-plane": {
+    "x": 3,
+    "y": 21,
+    "width": 204,
+    "height": 189
+  }
+}

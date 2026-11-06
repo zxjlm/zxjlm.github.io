@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import signpost from '../assets/field-notes/signpost-two.png';
+import traveler from '../assets/field-notes/traveler-camera.png';
+import { siteConfig } from '../site.config';
+---
+<Base title="未找到页面">
+  <section class="field-lost" aria-labelledby="field-lost-title">
+    <img class="field-lost__sign" src={signpost.src} alt="" />
+    <img class="field-lost__traveler" src={traveler.src} alt="" />
+    <div>
+      <p class="field-kicker">Lost in the field</p>
+      <h1 id="field-lost-title">这里已经超出地图范围。</h1>
+      <div class="field-lost__actions">
+        <a class="field-button field-button--dev" href="/">返回首页</a>
+        <a class="field-button" href={siteConfig.sections.archives.href}>查看归档</a>
+        <button class="field-button" type="button" id="go-back" hidden>后退一步</button>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  #go-back[hidden] { display: none; }
+</style>
+<script>
+  const back = document.querySelector<HTMLButtonElement>('#go-back');
+  if (back && history.length > 1) {
+    back.hidden = false;
+    back.addEventListener('click', () => history.back());
+  }
+</script>

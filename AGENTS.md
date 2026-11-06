@@ -1,101 +1,22 @@
-# AGENTS.md
+# Astro 博客
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+## 命令
 
-## Commands
+- `pnpm dev` 启动 Astro 开发服务。
+- `pnpm validate` 执行单元、类型、静态构建、内容和链接验证。
+- `pnpm preview` 在 4860 端口提供构建产物和真实 404。
+- 在预览运行时执行 `pnpm verify:paths` 和 `pnpm verify:browser`。浏览器检查依赖 Playwright Chromium。
+- `pnpm new <slug> [title]` 创建草稿。
+- `pnpm travel:maps` 生成静态地图，`pnpm travel:maps:check` 检查静态模式缓存。
 
-```bash
-pnpm dev          # dev server (default http://localhost:4859/)
-pnpm build        # SSG build → dist/
-pnpm build:spa    # SPA build (no pre-render)
-pnpm rss          # regenerate RSS/Atom feeds
-pnpm serve        # preview the built dist/
-```
+使用 `.node-version` 和 `package.json` 指定的 Node/pnpm 版本，冻结锁文件安装。
 
-No lint or test commands are configured.
+## 内容与路由
 
-## Architecture
+文章在 `src/content/posts/`，ID 取自文件相对路径，保留大小写。公开正文地址为 `/posts/<id>`，Markdown 为 `/posts/<id>.md`。日期按 Asia/Shanghai 展示，`draft: true` 从全部公开出口排除。关于页在 `src/content/about.md`。页面由 Astro 静态生成，按需交互使用 Vue。
 
-This is a **Valaxy** static blog (Vue 3, Vite, UnoCSS). The framework generates pages from Markdown files and composes layouts from the active theme.
+公开相册从 `public/albums/index.json` 及其 Argus manifests 生成。通过 `node scripts/import-argus-albums.mjs <staging-site>` 导入，操作步骤见 [Argus](docs/migration/argus-albums.md)。地图配置见 `src/site.config.ts` 和 [地图说明](docs/migration/travel-maps.md)。没有地图的页面不得启动 MapLibre 或加载其 Worker。
 
-### Config split
+## 发布
 
-| File | Purpose |
-|------|---------|
-| `site.config.ts` | Site-wide metadata: title, author, social links, search, sponsor |
-| `valaxy.config.ts` | Theme selection and theme-specific options (`themeConfig`) |
-
-Both files are typed — `site.config.ts` uses `defineSiteConfig`, `valaxy.config.ts` uses `defineValaxyConfig<ThemeConfig>`.
-
-### Theme
-
-The active theme is **`valaxy-theme-zaxon`**, installed from npm via `package.json`:
-
-```json
-"valaxy-theme-zaxon": "0.1.2"
-```
-
-The theme exposes `ThemeConfig` with these top-level fields:
-- `colors.primary` — accent color
-- `nav` — top navigation items `{ text, link, icon? }[]`
-- `footer` — `since`, `icon`, `beian`, `powered`
-
-Features from the previous `valaxy-theme-yun` (banner, bg_image, fireworks, say, notice, google_analytics, creative_commons) are **not available** in zaxon — do not add them to `themeConfig`.
-
-### Overriding theme layouts and components
-
-- `layouts/` — place a `.vue` file here with the same name as a theme layout to override it (e.g. `layouts/post.vue`)
-- `components/` — Vue components here are auto-registered globally and override theme components of the same name
-
-Both directories are currently empty (placeholder READMEs only).
-
-### Pages and routing
-
-All content lives under `pages/`. Valaxy generates routes from the file tree:
-
-- `pages/posts/*.md` — blog posts
-- `pages/about/`, `pages/links/`, `pages/schedule/` — standalone pages
-- `pages/archives/`, `pages/categories/`, `pages/tags/` — collection index pages
-
-**Critical:** Collection index pages (archives, categories, tags) must declare their layout with `layout:` in frontmatter, not `type:`. Using the Hexo-style `type:` field will produce an empty page because Valaxy does not map it to a layout.
-
-```md
----
-layout: archives   # correct
-# type: archives   # wrong — Hexo legacy, ignored by Valaxy
----
-```
-
-### Post frontmatter
-
-Migrated posts carry Hexo-era fields (`cid`, `slug`, `status`) that Valaxy ignores. The fields Valaxy reads are: `title`, `date`, `updated`, `categories`, `tags`, `excerpt`, `draft`, `layout`.
-
-### Styles
-
-`styles/index.scss` is the project-level stylesheet, applied on top of the theme. Use it for blog-specific overrides only — theme-wide style changes belong in `../haru-theme/theme/styles/layout.scss`.
-
-### Locales
-
-`locales/zh-CN.yml` and `locales/en.yml` can add or override i18n keys for this blog instance without touching the theme.
-
-### Static assets
-
-`public/` is copied verbatim to `dist/`. It contains `_headers` for Cloudflare Pages cache rules, `robots.txt`, favicons, and local images. Do not add `CNAME`; the custom domain is managed in Cloudflare Pages.
-
-## Deployment
-
-- **Cloudflare Pages** is the primary deployment target via Git integration:
-  - Production branch: `source`
-  - Build command: `pnpm run build`
-  - Build output directory: `dist`
-  - Root directory: `/`
-  - Environment variables: `NODE_VERSION=22.16.0`, `PNPM_VERSION=10.17.1`
-  - Custom domain: `blog.harumonia.moe`
-- Enable Brotli and respect origin cache headers. If the Cloudflare plan supports it, enable Polish lossless/WebP for image optimization.
-- `netlify.toml` and `vercel.json` are retained as fallback deployment configs, not the primary path.
-- A `Dockerfile` and `nginx.conf` exist for self-hosted container deployment.
-- See `docs/cloudflare-pages.md` and `docs/external-image-inventory.md` before changing deployment or image hosting.
-
-## Migration context
-
-The blog was migrated from Hexo + hexo-theme-yun → Valaxy + valaxy-theme-yun → (current) valaxy-theme-zaxon. Old Hexo files are archived in `legacy-hexo/` (git-ignored). The `MIGRATION.md` documents what was and wasn't ported.
+Cloudflare Pages 通过 Git 构建 `source` 的 `dist`。`codex/astro-migration` 用于迁移预览。环境、域名、部署状态和回滚步骤见 [切换清单](docs/migration/cutover-checklist.md) 和 [回滚手册](docs/migration/rollback-runbook.md)。

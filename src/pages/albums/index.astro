@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import AlbumImage from '../../components/AlbumImage.astro';
+import { siteConfig } from '../../site.config';
+import { albumCoverSources, albumDate, albums, albumUrl } from '../../lib/albums';
+
+const { available, entries } = albums();
+---
+<Base title={siteConfig.albums.title}>
+  <div class="field-catalog argus-albums">
+    <header class="field-catalog__header">
+      <p class="field-kicker">Albums</p>
+      <h1 class="field-catalog__title">{siteConfig.albums.title}</h1>
+      <p class="field-catalog__count">{siteConfig.albums.description}</p>
+    </header>
+    {!available && <p class="argus-album-empty">相册列表暂时无法加载。</p>}
+    {available && !entries.length && <p class="argus-album-empty">这里还没有公开相册。</p>}
+    {entries.length > 0 && <div class="argus-albums__list" data-count={entries.length}>
+      {entries.map((album, index) => {
+        const [cover = '', fallback] = albumCoverSources(album);
+        const date = album.published_at || album.updated_at;
+        const dateLabel = albumDate(date);
+        return (
+          <article class="argus-album-card">
+            <a class="argus-album-card__link" href={albumUrl(album.slug)} aria-label={`打开相册 ${album.title}`}></a>
+            <div class="argus-album-card__sheet">
+              <AlbumImage class="argus-album-card__cover" src={cover} fallback={fallback} alt={album.title} loading={index < 2 ? 'eager' : 'lazy'} />
+            </div>
+            <div class="argus-album-card__body">
+              <div class="argus-album-card__meta">
+                <span class="field-chip" data-kind="life">Album</span><span>{album.photo_count} photos</span>
+              </div>
+              <h2>{album.title}</h2>
+              {typeof album.description === 'string' && album.description && <p>{album.description}</p>}
+              {dateLabel && <time datetime={date}>{dateLabel}</time>}
+            </div>
+          </article>
+        );
+      })}
+    </div>}
+  </div>
+</Base>
