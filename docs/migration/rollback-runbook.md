@@ -3,12 +3,12 @@
 | 项目 | 值 |
 | --- | --- |
 | 旧站本地重建基线 | `4bf6b5fad30e78f1530cfecd7f25b62a6ff936f5` |
-| 旧站实际生产部署 ID / 独立地址 / SHA | 待从控制台核实 |
+| 旧站实际生产部署 ID / 独立地址 / SHA | `4ab61b7b-6dbd-4f33-ac9d-f4614bdcd5b0` / [旧生产](https://4ab61b7b.zxjlm-github-io.pages.dev/) / `4bf6b5fad30e78f1530cfecd7f25b62a6ff936f5` |
 | Astro 预览部署 ID / 独立地址 / SHA | 待预览构建 |
 | Astro 生产部署 ID / 独立地址 / SHA | 待生产发布 |
 | 仓库 / 分支 / 自定义域名 | `zxjlm/zxjlm.github.io` / `source` / `blog.harumonia.moe` |
 | 构建根目录、命令及产物 | `/`、`pnpm run build`、`dist` |
-| Valaxy 构建运行时记录 | Node `22.16.0`、pnpm `10.17.1`，上线前核对控制台 |
+| Valaxy 构建运行时记录 | Node `22.16.0`、pnpm `10.17.1`，Pages API 已核实 |
 | Astro 构建运行时 | Node `24.13.1`、pnpm `10.17.1` |
 | 旧产物重建 | 从 Git SHA 归档安装冻结锁，再构建，细节见 [基线记录](baseline.md) |
 

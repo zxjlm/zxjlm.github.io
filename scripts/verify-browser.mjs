@@ -34,6 +34,15 @@ try {
   await page.goto(at('/posts/2019-08-02-learning-sklearn-via-theory-1'));
   assert.ok(await page.locator('#article-content .katex').count());
   assert.ok(await page.getByRole('navigation', { name: '文章目录' }).getByRole('link').count());
+  await page.goto(at('/posts/2026-07-14-vps-proxy'));
+  await page.getByRole('link', { name: '标题直链：问题背景' }).waitFor();
+  const copy = page.getByRole('button', { name: '复制代码' }).first();
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: base.origin });
+  const sample = await page.locator('.field-code-block code').first().textContent();
+  await copy.click();
+  await page.getByRole('status').filter({ hasText: '已复制' }).waitFor();
+  assert.equal(await page.evaluate(() => navigator.clipboard.readText()), sample);
+  await context.clearPermissions();
   await page.goto(at('/posts/2026-07-10-nl-to-sql'));
   await page.locator('.field-mermaid svg').nth(1).waitFor();
 

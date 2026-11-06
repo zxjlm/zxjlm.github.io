@@ -75,13 +75,13 @@
     {
       "system": "astro",
       "case": "article",
-      "autoJsGzipBytes": 39404
+      "autoJsGzipBytes": 39982
     },
     {
       "system": "astro",
       "case": "travel",
-      "autoJsGzipBytes": 43089,
-      "mapScenarioJsGzipBytes": 479361
+      "autoJsGzipBytes": 43667,
+      "mapScenarioJsGzipBytes": 479939
     },
     {
       "system": "astro",
@@ -99,14 +99,16 @@
       "run": 1,
       "system": "valaxy",
       "label": "home",
-      "fcp": 7176,
-      "lcp": 7176,
-      "load": 7330,
+      "fcp": 4560,
+      "lcp": 4560,
+      "load": 4808.800000011921,
       "longTasks": [
-        131
+        150,
+        124,
+        172
       ],
-      "interaction": 37,
-      "scriptMs": 44.127,
+      "interaction": 36,
+      "scriptMs": 71.963,
       "mapReady": null,
       "workers": [],
       "responses": 99,
@@ -123,12 +125,12 @@
       "run": 1,
       "system": "astro",
       "label": "home",
-      "fcp": 1080,
-      "lcp": 1080,
-      "load": 1538.3999999761581,
+      "fcp": 564,
+      "lcp": 664,
+      "load": 511.0999999642372,
       "longTasks": [],
-      "interaction": 34.30000001192093,
-      "scriptMs": 17.65,
+      "interaction": 55.40000003576279,
+      "scriptMs": 18.779,
       "mapReady": null,
       "workers": [],
       "responses": 25,
@@ -144,206 +146,15 @@
       "run": 1,
       "system": "valaxy",
       "label": "article",
-      "fcp": 1348,
-      "lcp": 1348,
-      "load": 3639.699999988079,
+      "fcp": 1204,
+      "lcp": 1204,
+      "load": 3675.800000011921,
       "longTasks": [
-        67,
-        327
-      ],
-      "interaction": 99.09999996423721,
-      "scriptMs": 43.524,
-      "mapReady": null,
-      "workers": [],
-      "responses": 99,
-      "bytes": {
-        "Document": 16283,
-        "Script": 255405,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316
-      }
-    },
-    {
-      "run": 1,
-      "system": "astro",
-      "label": "article",
-      "fcp": 400,
-      "lcp": 772,
-      "load": 1536.3999999761581,
-      "longTasks": [],
-      "interaction": 460.19999998807907,
-      "scriptMs": 18.664,
-      "mapReady": null,
-      "workers": [],
-      "responses": 26,
-      "bytes": {
-        "Document": 19825,
-        "Stylesheet": 17216,
-        "Image": 110112,
-        "Script": 39321,
-        "Font": 579473
-      }
-    },
-    {
-      "run": 1,
-      "system": "valaxy",
-      "label": "album",
-      "fcp": 912,
-      "lcp": 2812,
-      "load": 3634.400000035763,
-      "longTasks": [
-        83
-      ],
-      "interaction": 29.400000035762787,
-      "scriptMs": 46.303,
-      "mapReady": null,
-      "workers": [],
-      "responses": 100,
-      "bytes": {
-        "Document": 4152,
-        "Script": 243647,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 2260
-      }
-    },
-    {
-      "run": 1,
-      "system": "astro",
-      "label": "album",
-      "fcp": 368,
-      "lcp": 368,
-      "load": 1127.5999999642372,
-      "longTasks": [],
-      "interaction": 24.19999998807907,
-      "scriptMs": 15.494000000000002,
-      "mapReady": null,
-      "workers": [],
-      "responses": 18,
-      "bytes": {
-        "Document": 7938,
-        "Stylesheet": 12500,
-        "Script": 42757,
-        "Image": 45903,
-        "Font": 474134
-      }
-    },
-    {
-      "run": 1,
-      "system": "valaxy",
-      "label": "travel",
-      "fcp": 1264,
-      "lcp": 1264,
-      "load": 4031.400000035763,
-      "longTasks": [
-        167,
-        65,
-        188
-      ],
-      "interaction": 57.30000001192093,
-      "scriptMs": 292.555,
-      "mapReady": true,
-      "workers": [
-        "http://127.0.0.1:4861/assets/maplibre-gl-worker.VaXr2Fck.mjs"
-      ],
-      "responses": 125,
-      "bytes": {
-        "Document": 21796,
-        "Script": 547470,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 4521
-      }
-    },
-    {
-      "run": 1,
-      "system": "astro",
-      "label": "travel",
-      "fcp": 768,
-      "lcp": 768,
-      "load": 1768.3999999761581,
-      "longTasks": [
-        157
-      ],
-      "interaction": 79.70000004768372,
-      "scriptMs": 154.683,
-      "mapReady": true,
-      "workers": [
-        "http://127.0.0.1:4862/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
-      ],
-      "responses": 54,
-      "bytes": {
-        "Document": 25358,
-        "Stylesheet": 23677,
-        "Image": 110112,
-        "Script": 336104,
-        "Font": 525845,
-        "Fetch": 4521
-      }
-    },
-    {
-      "run": 2,
-      "system": "valaxy",
-      "label": "home",
-      "fcp": 1100,
-      "lcp": 1100,
-      "load": 3624.699999988079,
-      "longTasks": [
-        134
-      ],
-      "interaction": 39.09999996423721,
-      "scriptMs": 46.874,
-      "mapReady": null,
-      "workers": [],
-      "responses": 98,
-      "bytes": {
-        "Document": 5450,
-        "Script": 242650,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 1000
-      }
-    },
-    {
-      "run": 2,
-      "system": "astro",
-      "label": "home",
-      "fcp": 616,
-      "lcp": 616,
-      "load": 1230.8999999761581,
-      "longTasks": [],
-      "interaction": 20.80000001192093,
-      "scriptMs": 15.346,
-      "mapReady": null,
-      "workers": [],
-      "responses": 25,
-      "bytes": {
-        "Document": 8734,
-        "Stylesheet": 12918,
-        "Script": 41203,
-        "Image": 84149,
-        "Font": 474134
-      }
-    },
-    {
-      "run": 2,
-      "system": "valaxy",
-      "label": "article",
-      "fcp": 1348,
-      "lcp": 1348,
-      "load": 3640.900000035763,
-      "longTasks": [
-        142,
-        312,
-        61,
+        62,
         275
       ],
-      "interaction": 106.90000003576279,
-      "scriptMs": 52.36,
+      "interaction": 86.60000002384186,
+      "scriptMs": 45.077,
       "mapReady": null,
       "workers": [],
       "responses": 99,
@@ -356,212 +167,400 @@
       }
     },
     {
-      "run": 2,
-      "system": "astro",
-      "label": "article",
-      "fcp": 796,
-      "lcp": 796,
-      "load": 1494.4000000357628,
-      "longTasks": [],
-      "interaction": 478.89999997615814,
-      "scriptMs": 20.149,
-      "mapReady": null,
-      "workers": [],
-      "responses": 26,
-      "bytes": {
-        "Document": 19825,
-        "Stylesheet": 17216,
-        "Image": 110112,
-        "Script": 39321,
-        "Font": 579473
-      }
-    },
-    {
-      "run": 2,
-      "system": "valaxy",
-      "label": "album",
-      "fcp": 1016,
-      "lcp": 2472,
-      "load": 3661.5,
-      "longTasks": [
-        82
-      ],
-      "interaction": 27.80000001192093,
-      "scriptMs": 42.179,
-      "mapReady": null,
-      "workers": [],
-      "responses": 100,
-      "bytes": {
-        "Document": 4152,
-        "Script": 243647,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 2260
-      }
-    },
-    {
-      "run": 2,
-      "system": "astro",
-      "label": "album",
-      "fcp": 516,
-      "lcp": 516,
-      "load": 498.19999998807907,
-      "longTasks": [],
-      "interaction": 23.299999952316284,
-      "scriptMs": 13.718,
-      "mapReady": null,
-      "workers": [],
-      "responses": 18,
-      "bytes": {
-        "Document": 7938,
-        "Stylesheet": 12500,
-        "Script": 42757,
-        "Image": 45903,
-        "Font": 474134
-      }
-    },
-    {
-      "run": 2,
-      "system": "valaxy",
-      "label": "travel",
-      "fcp": 1288,
-      "lcp": 1288,
-      "load": 4067.7999999523163,
-      "longTasks": [
-        173,
-        69,
-        166
-      ],
-      "interaction": 56.60000002384186,
-      "scriptMs": 293.562,
-      "mapReady": true,
-      "workers": [
-        "http://127.0.0.1:4861/assets/maplibre-gl-worker.VaXr2Fck.mjs"
-      ],
-      "responses": 125,
-      "bytes": {
-        "Document": 21796,
-        "Script": 547470,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 4521
-      }
-    },
-    {
-      "run": 2,
-      "system": "astro",
-      "label": "travel",
-      "fcp": 864,
-      "lcp": 864,
-      "load": 1738.5,
-      "longTasks": [
-        85
-      ],
-      "interaction": 75.5,
-      "scriptMs": 154.54899999999998,
-      "mapReady": true,
-      "workers": [
-        "http://127.0.0.1:4862/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
-      ],
-      "responses": 54,
-      "bytes": {
-        "Document": 25358,
-        "Stylesheet": 23677,
-        "Image": 110112,
-        "Script": 336104,
-        "Font": 525845,
-        "Fetch": 4521
-      }
-    },
-    {
-      "run": 3,
-      "system": "valaxy",
-      "label": "home",
-      "fcp": 1060,
-      "lcp": 1060,
-      "load": 3626.5,
-      "longTasks": [
-        127
-      ],
-      "interaction": 44.69999998807907,
-      "scriptMs": 45.244,
-      "mapReady": null,
-      "workers": [],
-      "responses": 98,
-      "bytes": {
-        "Document": 5450,
-        "Script": 242650,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316,
-        "Fetch": 1000
-      }
-    },
-    {
-      "run": 3,
-      "system": "astro",
-      "label": "home",
-      "fcp": 548,
-      "lcp": 548,
-      "load": 1206.800000011921,
-      "longTasks": [],
-      "interaction": 37.5,
-      "scriptMs": 16.782999999999998,
-      "mapReady": null,
-      "workers": [],
-      "responses": 25,
-      "bytes": {
-        "Document": 8734,
-        "Image": 84149,
-        "Stylesheet": 12918,
-        "Script": 41203,
-        "Font": 474134
-      }
-    },
-    {
-      "run": 3,
-      "system": "valaxy",
-      "label": "article",
-      "fcp": 1228,
-      "lcp": 1228,
-      "load": 3626.699999988079,
-      "longTasks": [
-        70,
-        255
-      ],
-      "interaction": 93.79999995231628,
-      "scriptMs": 52.585,
-      "mapReady": null,
-      "workers": [],
-      "responses": 99,
-      "bytes": {
-        "Document": 16283,
-        "Script": 255405,
-        "Stylesheet": 47734,
-        "Font": 1093014,
-        "Image": 989316
-      }
-    },
-    {
-      "run": 3,
+      "run": 1,
       "system": "astro",
       "label": "article",
       "fcp": 488,
       "lcp": 488,
-      "load": 1520.8999999761581,
+      "load": 1374.199999988079,
       "longTasks": [],
-      "interaction": 414.69999998807907,
-      "scriptMs": 18.393,
+      "interaction": 405.69999998807907,
+      "scriptMs": 23.578000000000003,
       "mapReady": null,
       "workers": [],
-      "responses": 26,
+      "responses": 27,
       "bytes": {
-        "Document": 19825,
-        "Stylesheet": 17216,
+        "Document": 19852,
+        "Stylesheet": 17524,
         "Image": 110112,
-        "Script": 39321,
+        "Script": 40145,
+        "Font": 579473
+      }
+    },
+    {
+      "run": 1,
+      "system": "valaxy",
+      "label": "album",
+      "fcp": 872,
+      "lcp": 2532,
+      "load": 3652.600000023842,
+      "longTasks": [
+        67
+      ],
+      "interaction": 26.900000035762787,
+      "scriptMs": 42.336999999999996,
+      "mapReady": null,
+      "workers": [],
+      "responses": 100,
+      "bytes": {
+        "Document": 4152,
+        "Script": 243647,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 2260
+      }
+    },
+    {
+      "run": 1,
+      "system": "astro",
+      "label": "album",
+      "fcp": 404,
+      "lcp": 404,
+      "load": 1115.800000011921,
+      "longTasks": [],
+      "interaction": 20,
+      "scriptMs": 11.283,
+      "mapReady": null,
+      "workers": [],
+      "responses": 18,
+      "bytes": {
+        "Document": 7938,
+        "Stylesheet": 12500,
+        "Image": 45903,
+        "Script": 42757,
+        "Font": 474134
+      }
+    },
+    {
+      "run": 1,
+      "system": "valaxy",
+      "label": "travel",
+      "fcp": 1140,
+      "lcp": 1140,
+      "load": 4050.399999976158,
+      "longTasks": [
+        155,
+        93,
+        168
+      ],
+      "interaction": 43.89999997615814,
+      "scriptMs": 270.906,
+      "mapReady": true,
+      "workers": [
+        "http://127.0.0.1:4861/assets/maplibre-gl-worker.VaXr2Fck.mjs"
+      ],
+      "responses": 125,
+      "bytes": {
+        "Document": 21796,
+        "Script": 547470,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 4521
+      }
+    },
+    {
+      "run": 1,
+      "system": "astro",
+      "label": "travel",
+      "fcp": 448,
+      "lcp": 448,
+      "load": 1721.8999999761581,
+      "longTasks": [
+        59
+      ],
+      "interaction": 68,
+      "scriptMs": 126.29199999999999,
+      "mapReady": true,
+      "workers": [
+        "http://127.0.0.1:4863/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
+      ],
+      "responses": 55,
+      "bytes": {
+        "Document": 25387,
+        "Stylesheet": 23985,
+        "Image": 110112,
+        "Script": 336928,
+        "Font": 525845,
+        "Fetch": 4521
+      }
+    },
+    {
+      "run": 2,
+      "system": "valaxy",
+      "label": "home",
+      "fcp": 960,
+      "lcp": 960,
+      "load": 3649.100000023842,
+      "longTasks": [
+        139
+      ],
+      "interaction": 31.19999998807907,
+      "scriptMs": 39.426,
+      "mapReady": null,
+      "workers": [],
+      "responses": 98,
+      "bytes": {
+        "Document": 5450,
+        "Script": 242650,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 1000
+      }
+    },
+    {
+      "run": 2,
+      "system": "astro",
+      "label": "home",
+      "fcp": 456,
+      "lcp": 456,
+      "load": 1190.800000011921,
+      "longTasks": [],
+      "interaction": 40.5,
+      "scriptMs": 14.652999999999999,
+      "mapReady": null,
+      "workers": [],
+      "responses": 25,
+      "bytes": {
+        "Document": 8734,
+        "Stylesheet": 12918,
+        "Image": 84149,
+        "Script": 41203,
+        "Font": 474134
+      }
+    },
+    {
+      "run": 2,
+      "system": "valaxy",
+      "label": "article",
+      "fcp": 1196,
+      "lcp": 1196,
+      "load": 3629.800000011921,
+      "longTasks": [
+        60,
+        243
+      ],
+      "interaction": 84.59999996423721,
+      "scriptMs": 45.705000000000005,
+      "mapReady": null,
+      "workers": [],
+      "responses": 99,
+      "bytes": {
+        "Document": 16283,
+        "Script": 255405,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316
+      }
+    },
+    {
+      "run": 2,
+      "system": "astro",
+      "label": "article",
+      "fcp": 492,
+      "lcp": 492,
+      "load": 1386.699999988079,
+      "longTasks": [],
+      "interaction": 400,
+      "scriptMs": 15.585999999999999,
+      "mapReady": null,
+      "workers": [],
+      "responses": 27,
+      "bytes": {
+        "Document": 19852,
+        "Stylesheet": 17524,
+        "Image": 110112,
+        "Script": 40145,
+        "Font": 579473
+      }
+    },
+    {
+      "run": 2,
+      "system": "valaxy",
+      "label": "album",
+      "fcp": 848,
+      "lcp": 2408,
+      "load": 3631.400000035763,
+      "longTasks": [
+        68
+      ],
+      "interaction": 27.30000001192093,
+      "scriptMs": 40.032,
+      "mapReady": null,
+      "workers": [],
+      "responses": 100,
+      "bytes": {
+        "Document": 4152,
+        "Script": 243647,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 2260
+      }
+    },
+    {
+      "run": 2,
+      "system": "astro",
+      "label": "album",
+      "fcp": 420,
+      "lcp": 420,
+      "load": 1121.6000000238419,
+      "longTasks": [],
+      "interaction": 18.600000023841858,
+      "scriptMs": 10.723999999999998,
+      "mapReady": null,
+      "workers": [],
+      "responses": 18,
+      "bytes": {
+        "Document": 7938,
+        "Stylesheet": 12500,
+        "Image": 45903,
+        "Script": 42757,
+        "Font": 474134
+      }
+    },
+    {
+      "run": 2,
+      "system": "valaxy",
+      "label": "travel",
+      "fcp": 1144,
+      "lcp": 1144,
+      "load": 4058.199999988079,
+      "longTasks": [
+        143,
+        62
+      ],
+      "interaction": 44.89999997615814,
+      "scriptMs": 150.921,
+      "mapReady": true,
+      "workers": [
+        "http://127.0.0.1:4861/assets/maplibre-gl-worker.VaXr2Fck.mjs"
+      ],
+      "responses": 125,
+      "bytes": {
+        "Document": 21796,
+        "Script": 547470,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 4521
+      }
+    },
+    {
+      "run": 2,
+      "system": "astro",
+      "label": "travel",
+      "fcp": 528,
+      "lcp": 528,
+      "load": 1641.300000011921,
+      "longTasks": [
+        59
+      ],
+      "interaction": 68.69999998807907,
+      "scriptMs": 144.068,
+      "mapReady": true,
+      "workers": [
+        "http://127.0.0.1:4863/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
+      ],
+      "responses": 55,
+      "bytes": {
+        "Document": 25387,
+        "Stylesheet": 23985,
+        "Image": 110112,
+        "Script": 336928,
+        "Font": 525845,
+        "Fetch": 4521
+      }
+    },
+    {
+      "run": 3,
+      "system": "valaxy",
+      "label": "home",
+      "fcp": 1096,
+      "lcp": 1096,
+      "load": 3628.099999964237,
+      "longTasks": [
+        118
+      ],
+      "interaction": 32.10000002384186,
+      "scriptMs": 44.641,
+      "mapReady": null,
+      "workers": [],
+      "responses": 98,
+      "bytes": {
+        "Document": 5450,
+        "Script": 242650,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316,
+        "Fetch": 1000
+      }
+    },
+    {
+      "run": 3,
+      "system": "astro",
+      "label": "home",
+      "fcp": 464,
+      "lcp": 464,
+      "load": 1210.699999988079,
+      "longTasks": [],
+      "interaction": 41.5,
+      "scriptMs": 16.559,
+      "mapReady": null,
+      "workers": [],
+      "responses": 25,
+      "bytes": {
+        "Document": 8734,
+        "Stylesheet": 12918,
+        "Image": 84149,
+        "Script": 41203,
+        "Font": 474134
+      }
+    },
+    {
+      "run": 3,
+      "system": "valaxy",
+      "label": "article",
+      "fcp": 1168,
+      "lcp": 1168,
+      "load": 3673.600000023842,
+      "longTasks": [
+        67,
+        264
+      ],
+      "interaction": 80.40000003576279,
+      "scriptMs": 41.461,
+      "mapReady": null,
+      "workers": [],
+      "responses": 99,
+      "bytes": {
+        "Document": 16283,
+        "Script": 255405,
+        "Stylesheet": 47734,
+        "Font": 1093014,
+        "Image": 989316
+      }
+    },
+    {
+      "run": 3,
+      "system": "astro",
+      "label": "article",
+      "fcp": 376,
+      "lcp": 692,
+      "load": 1487.6000000238419,
+      "longTasks": [],
+      "interaction": 396.39999997615814,
+      "scriptMs": 20.29,
+      "mapReady": null,
+      "workers": [],
+      "responses": 27,
+      "bytes": {
+        "Document": 19852,
+        "Stylesheet": 17524,
+        "Image": 110112,
+        "Script": 40145,
         "Font": 579473
       }
     },
@@ -569,14 +568,14 @@
       "run": 3,
       "system": "valaxy",
       "label": "album",
-      "fcp": 884,
-      "lcp": 2520,
-      "load": 3619.300000011921,
+      "fcp": 852,
+      "lcp": 2348,
+      "load": 3634.899999976158,
       "longTasks": [
-        76
+        67
       ],
-      "interaction": 33.10000002384186,
-      "scriptMs": 47.096,
+      "interaction": 35,
+      "scriptMs": 39.379,
       "mapReady": null,
       "workers": [],
       "responses": 100,
@@ -593,12 +592,12 @@
       "run": 3,
       "system": "astro",
       "label": "album",
-      "fcp": 408,
-      "lcp": 408,
-      "load": 1116.4000000357628,
+      "fcp": 416,
+      "lcp": 416,
+      "load": 1119.0999999642372,
       "longTasks": [],
-      "interaction": 32.90000003576279,
-      "scriptMs": 12.786999999999999,
+      "interaction": 32,
+      "scriptMs": 13.082999999999998,
       "mapReady": null,
       "workers": [],
       "responses": 18,
@@ -614,16 +613,16 @@
       "run": 3,
       "system": "valaxy",
       "label": "travel",
-      "fcp": 1152,
-      "lcp": 1152,
-      "load": 4061.899999976158,
+      "fcp": 1136,
+      "lcp": 1136,
+      "load": 4060.2000000476837,
       "longTasks": [
-        173,
-        61,
-        74
+        152,
+        62,
+        61
       ],
-      "interaction": 53.19999998807907,
-      "scriptMs": 184.921,
+      "interaction": 41,
+      "scriptMs": 164.83900000000003,
       "mapReady": true,
       "workers": [
         "http://127.0.0.1:4861/assets/maplibre-gl-worker.VaXr2Fck.mjs"
@@ -642,24 +641,24 @@
       "run": 3,
       "system": "astro",
       "label": "travel",
-      "fcp": 428,
-      "lcp": 428,
-      "load": 1710.699999988079,
+      "fcp": 424,
+      "lcp": 424,
+      "load": 1730.699999988079,
       "longTasks": [
-        80
+        72
       ],
-      "interaction": 88.90000003576279,
-      "scriptMs": 138.816,
+      "interaction": 78.80000001192093,
+      "scriptMs": 145.731,
       "mapReady": true,
       "workers": [
-        "http://127.0.0.1:4862/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
+        "http://127.0.0.1:4863/_astro/maplibre-gl-worker.VaXr2Fck.mjs"
       ],
-      "responses": 54,
+      "responses": 55,
       "bytes": {
-        "Document": 25358,
-        "Stylesheet": 23677,
+        "Document": 25387,
+        "Stylesheet": 23985,
         "Image": 110112,
-        "Script": 336104,
+        "Script": 336928,
         "Font": 525845,
         "Fetch": 4521
       }

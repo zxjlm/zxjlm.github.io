@@ -1,6 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import ArticleControls from '../../components/ArticleControls.astro';
 import MarkdownDiagrams from '../../components/MarkdownDiagrams.astro';
 import TravelExperience from '../../components/TravelExperience.astro';
 import { postCategories } from '../../lib/collections';
@@ -95,6 +96,7 @@ const categories = postCategories(post);
     </div>
   </article>
 </Base>
+<ArticleControls />
 <style>
   .field-post__toc-card .field-markdown-link span { margin: 0; }
   @media (max-width: 860px) {

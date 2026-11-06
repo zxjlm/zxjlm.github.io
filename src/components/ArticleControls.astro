@@ -1,0 +1,67 @@
+<script>
+  const article = document.querySelector('#article-content');
+  for (const heading of article?.querySelectorAll<HTMLElement>('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]') ?? []) {
+    if (!heading.id) continue;
+    const anchor = document.createElement('a');
+    anchor.className = 'field-heading-permalink';
+    anchor.href = `#${encodeURIComponent(heading.id)}`;
+    anchor.setAttribute('aria-label', `标题直链：${heading.textContent?.trim() || heading.id}`);
+    heading.append(anchor);
+  }
+  for (const pre of article?.querySelectorAll<HTMLPreElement>('pre[data-language]') ?? []) {
+    const code = pre.querySelector('code');
+    if (!code) continue;
+    const block = document.createElement('div');
+    block.className = 'field-code-block';
+    const toolbar = document.createElement('div');
+    toolbar.className = 'field-code-toolbar';
+    const language = document.createElement('span');
+    language.textContent = pre.dataset.language || 'text';
+    const copy = document.createElement('button');
+    copy.type = 'button';
+    copy.textContent = '复制代码';
+    const feedback = document.createElement('span');
+    feedback.className = 'field-code-feedback';
+    feedback.setAttribute('role', 'status');
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.textContent ?? '');
+        feedback.textContent = '已复制';
+      } catch {
+        feedback.textContent = '复制失败，请手动选择代码。';
+      }
+    });
+    toolbar.append(language, copy, feedback);
+    pre.before(block);
+    block.append(toolbar, pre);
+  }
+</script>
+
+<style is:global>
+  .field-code-block { margin-block: 1.2rem; }
+  .markdown-body .field-code-block > pre { margin: 0; }
+  .field-code-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .65rem;
+    margin-bottom: .25rem;
+    color: var(--st-text-secondary);
+    font-size: .8rem;
+  }
+  .field-code-toolbar button {
+    padding: .15rem .45rem;
+    border: 1px solid currentColor;
+    border-radius: .3rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+  .field-code-feedback:empty { display: none; }
+  .field-heading-permalink { margin-inline-start: .4em; opacity: 0; }
+  .field-heading-permalink::after { content: '#'; }
+  .markdown-body :is(h1, h2, h3, h4, h5, h6):hover > .field-heading-permalink,
+  .field-heading-permalink:focus-visible { opacity: 1; }
+  @media (hover: none) { .field-heading-permalink { opacity: .75; } }
+</style>
