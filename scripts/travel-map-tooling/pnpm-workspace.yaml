@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@maplibre/maplibre-gl-native'
+  - sharp
+overrides:
+  # Native's install and runtime do not use this legacy development utility.
+  '@maplibre/maplibre-gl-native>npm-run-all': '-'

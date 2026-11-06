@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props {
+  title: string;
+  kicker?: string;
+  count?: string;
+}
+
+const { title, kicker, count } = Astro.props;
+---
+<Base title={title}>
+  <section class="field-catalog">
+    <header class="field-catalog__header">
+      {kicker && <p class="field-kicker">{kicker}</p>}
+      <h1 class="field-catalog__title">{title}</h1>
+      {count && <p class="field-catalog__count">{count}</p>}
+      <slot name="intro" />
+    </header>
+    <slot />
+  </section>
+</Base>

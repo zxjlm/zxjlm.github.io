@@ -1,0 +1,107 @@
+@use 'sass:map';
+
+// common
+$common: (
+  'font-sans': (
+    'Chinese Quotes',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif,
+  ),
+  'font-serif': (
+    'Chinese Quotes',
+    'Source Serif 4',
+    'Source Han Serif SC',
+    'Noto Serif CJK SC',
+    'Noto Serif SC',
+    'Songti SC',
+    'STSong',
+    SimSun,
+    serif,
+  ),
+  'font-pixel': (
+    'Departure Mono',
+    'Cubic 11',
+    ui-monospace,
+    monospace,
+  ),
+  'font-mono': (
+    'Departure Mono',
+    'Cubic 11',
+    'SFMono-Regular',
+    Consolas,
+    ui-monospace,
+    monospace,
+  ),
+  'radius-sm': 4px,
+  'radius-md': 6px,
+  'radius-lg': 8px,
+  'radius-scene': 12px,
+  'duration-fast': 120ms,
+  'duration-normal': 220ms,
+  'duration-slow': 420ms,
+  'ease-standard': cubic-bezier(0.2, 0.8, 0.2, 1),
+  'ease-enter': cubic-bezier(0.16, 1, 0.3, 1),
+) !default;
+$common: map.merge((), $common);
+
+// palette
+$light: (
+  'bg-canvas': #f4f1e8,
+  'bg-surface': #fffdf7,
+  'bg-elevated': #eae6da,
+  'bg-soft': #ddd8ca,
+  'text-primary': #243039,
+  'text-secondary': #59666d,
+  'text-muted': #879096,
+  'border-default': rgb(36 48 57 / 14%),
+  'border-strong': rgb(36 48 57 / 26%),
+  'dev-primary': #4f7e7a,
+  'dev-soft': #d9e7e3,
+  'life-primary': #a66f38,
+  'life-soft': #efe0cd,
+  'accent-lantern': #d98732,
+  'accent-sky': #657e9b,
+  'accent-quote': #766a89,
+  'danger': #b85d55,
+
+  'c-brand': #4f7e7a,
+  'c-link': 'var(--st-c-brand)',
+
+  'c-text': #243039,
+) !default;
+$light: map.merge((), $light);
+
+$dark: (
+  'bg-canvas': #081320,
+  'bg-surface': #0f1b2e,
+  'bg-elevated': #182a44,
+  'bg-soft': #21364d,
+  'text-primary': #e9e3d3,
+  'text-secondary': #a9b3ba,
+  'text-muted': #71808a,
+  'border-default': rgb(230 220 194 / 16%),
+  'border-strong': rgb(230 220 194 / 28%),
+  'dev-primary': #5e918d,
+  'dev-soft': #294e55,
+  'life-primary': #d09b5b,
+  'life-soft': #59432e,
+  'accent-lantern': #ffb84d,
+  'accent-sky': #8ca2c7,
+  'accent-quote': #9b8bb7,
+  'danger': #d67b72,
+
+  'c-brand': #5e918d,
+  'c-link': 'var(--st-c-brand)',
+  'c-text': #e9e3d3,
+) !default;
+$dark: map.merge((), $dark);
+
+$z-index: () !default;
+$z-index: map.merge((), $z-index);

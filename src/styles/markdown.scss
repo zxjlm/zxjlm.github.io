@@ -1,0 +1,108 @@
+
+// use common code styles, you also can override them or copy/modify them
+
+
+.markdown-body {
+  --c-toc-link: var(--st-text-secondary);
+}
+
+.markdown-body {
+  padding-top: 0;
+  word-wrap: break-word;
+  color: var(--st-text-primary);
+  font-family: var(--st-font-serif);
+  font-size: 17px;
+  line-height: 1.82;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--st-text-primary);
+    font-family: var(--st-font-serif);
+    font-weight: 750;
+    letter-spacing: -0.012em;
+    text-wrap: balance;
+  }
+
+  h2 {
+    margin-top: 2.15em;
+    border-bottom: 1px solid var(--st-border-default);
+    padding-bottom: 0.35em;
+  }
+
+  p {
+    margin: 0.85em 0;
+    color: var(--st-text-primary);
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--st-c-link);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color var(--st-duration-fast) var(--st-ease-standard);
+  }
+
+  a:hover {
+    color: var(--st-accent-lantern);
+  }
+
+  ul {
+    li > p {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    margin: 28px 0;
+    border-left: 2px solid var(--st-accent-quote);
+    border-radius: var(--st-radius-md);
+    padding: 16px 18px;
+    background: color-mix(in srgb, var(--st-accent-quote) 10%, transparent);
+    color: var(--st-text-secondary);
+
+    p {
+      margin: 0;
+      color: var(--st-text-secondary);
+    }
+  }
+
+  code:not(pre > code) {
+    color: var(--st-accent-lantern);
+    background-color: var(--st-bg-elevated);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.85em;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  pre,
+  div[class*='language-'] {
+    border: 1px solid var(--st-border-default);
+    border-radius: var(--st-radius-lg);
+    background: var(--st-bg-surface);
+  }
+
+  img {
+    border-radius: var(--st-radius-lg);
+    outline: 1px solid rgb(0 0 0 / 10%);
+    outline-offset: -1px;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "count": 34,
+  "assets": [
+    {
+      "name": "badge-article",
+      "file": "badge-article.png",
+      "source": "素材组2.png",
+      "source_box": [
+        790,
+        370,
+        942,
+        427
+      ],
+      "width": 148,
+      "height": 49,
+      "transparent_background": true
+    },
+    {
+      "name": "decor-stars",
+      "file": "decor-stars.png",
+      "source": "素材组2.png",
+      "source_box": [
+        48,
+        997,
+        120,
+        1044
+      ],
+      "width": 66,
+      "height": 33,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-compass",
+      "file": "icon-compass.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1315,
+        196,
+        1392,
+        278
+      ],
+      "width": 68,
+      "height": 79,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-search",
+      "file": "icon-search.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1086,
+        76,
+        1165,
+        153
+      ],
+      "width": 61,
+      "height": 62,
+      "transparent_background": true
+    },
+    {
+      "name": "thumb-lake",
+      "file": "thumb-lake.png",
+      "source": "素材组1.png",
+      "source_box": [
+        17,
+        956,
+        84,
+        1041
+      ],
+      "width": 67,
+      "height": 85,
+      "transparent_background": false
+    },
+    {
+      "name": "badge-note",
+      "file": "badge-note.png",
+      "source": "素材组2.png",
+      "source_box": [
+        956,
+        370,
+        1087,
+        427
+      ],
+      "width": 127,
+      "height": 53,
+      "transparent_background": true
+    },
+    {
+      "name": "decor-stones",
+      "file": "decor-stones.png",
+      "source": "素材组2.png",
+      "source_box": [
+        552,
+        1004,
+        692,
+        1044
+      ],
+      "width": 124,
+      "height": 27,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-dev",
+      "file": "icon-dev.png",
+      "source": "素材组2.png",
+      "source_box": [
+        718,
+        80,
+        820,
+        149
+      ],
+      "width": 91,
+      "height": 63,
+      "transparent_background": true
+    },
+    {
+      "name": "preview-day",
+      "file": "preview-day.png",
+      "source": "素材组1.png",
+      "source_box": [
+        156,
+        1116,
+        292,
+        1183
+      ],
+      "width": 136,
+      "height": 67,
+      "transparent_background": false
+    },
+    {
+      "name": "traveler-camera",
+      "file": "traveler-camera.png",
+      "source": "素材组2.png",
+      "source_box": [
+        528,
+        68,
+        676,
+        252
+      ],
+      "width": 144,
+      "height": 177,
+      "transparent_background": true
+    },
+    {
+      "name": "badge-photo",
+      "file": "badge-photo.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1098,
+        370,
+        1245,
+        427
+      ],
+      "width": 135,
+      "height": 50,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-home",
+      "file": "icon-home.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1201,
+        76,
+        1270,
+        151
+      ],
+      "width": 58,
+      "height": 67,
+      "transparent_background": true
+    },
+    {
+      "name": "preview-night",
+      "file": "preview-night.png",
+      "source": "素材组1.png",
+      "source_box": [
+        20,
+        1116,
+        151,
+        1183
+      ],
+      "width": 131,
+      "height": 67,
+      "transparent_background": false
+    },
+    {
+      "name": "traveler-standing",
+      "file": "traveler-standing.png",
+      "source": "素材组2.png",
+      "source_box": [
+        35,
+        65,
+        155,
+        250
+      ],
+      "width": 117,
+      "height": 176,
+      "transparent_background": true
+    },
+    {
+      "name": "badge-quote",
+      "file": "badge-quote.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1254,
+        370,
+        1404,
+        427
+      ],
+      "width": 134,
+      "height": 49,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-lantern",
+      "file": "icon-lantern.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1204,
+        194,
+        1276,
+        277
+      ],
+      "width": 72,
+      "height": 80,
+      "transparent_background": true
+    },
+    {
+      "name": "signpost-full",
+      "file": "signpost-full.png",
+      "source": "素材组2.png",
+      "source_box": [
+        38,
+        360,
+        168,
+        550
+      ],
+      "width": 130,
+      "height": 190,
+      "transparent_background": true
+    },
+    {
+      "name": "traveler-walking",
+      "file": "traveler-walking.png",
+      "source": "素材组2.png",
+      "source_box": [
+        388,
+        65,
+        512,
+        252
+      ],
+      "width": 116,
+      "height": 185,
+      "transparent_background": true
+    },
+    {
+      "name": "decor-flower-a",
+      "file": "decor-flower-a.png",
+      "source": "素材组2.png",
+      "source_box": [
+        138,
+        997,
+        202,
+        1045
+      ],
+      "width": 55,
+      "height": 44,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-laptop",
+      "file": "icon-laptop.png",
+      "source": "素材组2.png",
+      "source_box": [
+        835,
+        198,
+        931,
+        277
+      ],
+      "width": 96,
+      "height": 75,
+      "transparent_background": true
+    },
+    {
+      "name": "signpost-two",
+      "file": "signpost-two.png",
+      "source": "素材组2.png",
+      "source_box": [
+        184,
+        360,
+        312,
+        550
+      ],
+      "width": 125,
+      "height": 190,
+      "transparent_background": true
+    },
+    {
+      "name": "traveler-writing",
+      "file": "traveler-writing.png",
+      "source": "素材组2.png",
+      "source_box": [
+        170,
+        88,
+        370,
+        258
+      ],
+      "width": 200,
+      "height": 164,
+      "transparent_background": true
+    },
+    {
+      "name": "decor-flower-b",
+      "file": "decor-flower-b.png",
+      "source": "素材组2.png",
+      "source_box": [
+        212,
+        997,
+        298,
+        1045
+      ],
+      "width": 75,
+      "height": 43,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-archive",
+      "file": "icon-archive.png",
+      "source": "素材组2.png",
+      "source_box": [
+        960,
+        78,
+        1043,
+        150
+      ],
+      "width": 69,
+      "height": 63,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-life",
+      "file": "icon-life.png",
+      "source": "素材组2.png",
+      "source_box": [
+        848,
+        78,
+        912,
+        149
+      ],
+      "width": 56,
+      "height": 61,
+      "transparent_background": true
+    },
+    {
+      "name": "thumb-camera",
+      "file": "thumb-camera.png",
+      "source": "素材组1.png",
+      "source_box": [
+        161,
+        956,
+        229,
+        1041
+      ],
+      "width": 68,
+      "height": 85,
+      "transparent_background": false
+    },
+    {
+      "name": "decor-lantern",
+      "file": "decor-lantern.png",
+      "source": "素材组2.png",
+      "source_box": [
+        482,
+        980,
+        532,
+        1048
+      ],
+      "width": 50,
+      "height": 61,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-camera",
+      "file": "icon-camera.png",
+      "source": "素材组2.png",
+      "source_box": [
+        728,
+        202,
+        812,
+        276
+      ],
+      "width": 77,
+      "height": 66,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-moon",
+      "file": "icon-moon.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1304,
+        64,
+        1422,
+        153
+      ],
+      "width": 83,
+      "height": 72,
+      "transparent_background": true
+    },
+    {
+      "name": "thumb-camp",
+      "file": "thumb-camp.png",
+      "source": "素材组1.png",
+      "source_box": [
+        234,
+        956,
+        300,
+        1041
+      ],
+      "width": 66,
+      "height": 85,
+      "transparent_background": false
+    },
+    {
+      "name": "decor-rocks",
+      "file": "decor-rocks.png",
+      "source": "素材组2.png",
+      "source_box": [
+        382,
+        994,
+        468,
+        1045
+      ],
+      "width": 79,
+      "height": 44,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-coffee",
+      "file": "icon-coffee.png",
+      "source": "素材组2.png",
+      "source_box": [
+        1087,
+        194,
+        1168,
+        277
+      ],
+      "width": 72,
+      "height": 80,
+      "transparent_background": true
+    },
+    {
+      "name": "icon-notebook",
+      "file": "icon-notebook.png",
+      "source": "素材组2.png",
+      "source_box": [
+        960,
+        198,
+        1038,
+        276
+      ],
+      "width": 72,
+      "height": 74,
+      "transparent_background": true
+    },
+    {
+      "name": "thumb-coffee",
+      "file": "thumb-coffee.png",
+      "source": "素材组1.png",
+      "source_box": [
+        89,
+        956,
+        156,
+        1041
+      ],
+      "width": 67,
+      "height": 85,
+      "transparent_background": false
+    }
+  ]
+}

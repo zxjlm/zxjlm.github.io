@@ -1,0 +1,208 @@
+.travel-map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  // The map fades out behind the text column; not rendering that part saves the tiles it would need.
+  width: 66vw;
+  height: 100lvh;
+  pointer-events: none;
+  opacity: 0;
+  mask-image: linear-gradient(90deg, #000 0 27%, rgb(0 0 0 / 38%) 48%, rgb(0 0 0 / 12%) 76%, transparent 100%);
+  transition: opacity var(--st-duration-slow) var(--st-ease-standard);
+}
+
+.travel-map--ready {
+  opacity: var(--travel-map-opacity);
+}
+
+// Dark tiles are low-contrast against the dark canvas.
+html.dark .travel-map--ready {
+  opacity: min(1, calc(var(--travel-map-opacity) * 1.6));
+}
+
+.travel-map__canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.travel-map__raster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// Keep the shell's canvas-coloured fade underneath the map instead of over it.
+.field-shell:has(> .travel-map)::after {
+  z-index: -3;
+}
+
+.travel-map__attribution {
+  position: fixed;
+  right: 92px;
+  bottom: 10px;
+  z-index: 6;
+  margin: 0;
+  border-radius: var(--st-radius-sm);
+  padding: 1px 6px;
+  background: color-mix(in srgb, var(--st-bg-canvas) 72%, transparent);
+  color: var(--st-text-muted);
+  font-family: var(--st-font-mono);
+  font-size: 10px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.markdown-body .travel-stop {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  margin: 14px 0 30px;
+  border-left: 2px dashed color-mix(in srgb, var(--st-accent-lantern) 46%, var(--st-border-default));
+  padding: 4px 0 4px 16px;
+  color: var(--st-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  transition: border-color var(--st-duration-normal) var(--st-ease-standard);
+}
+
+.markdown-body .travel-stop::before {
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--st-accent-lantern);
+  border-radius: 50%;
+  background: var(--st-bg-canvas);
+  content: '';
+  transition:
+    background-color var(--st-duration-normal) var(--st-ease-standard),
+    box-shadow var(--st-duration-normal) var(--st-ease-standard);
+}
+
+.travel-stop__place {
+  display: block;
+}
+
+.travel-stop__coords {
+  display: block;
+  color: var(--st-text-muted);
+  font-family: var(--st-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.markdown-body .travel-stop--active {
+  border-left-color: var(--st-accent-lantern);
+}
+
+.markdown-body .travel-stop--active::before {
+  background: var(--st-accent-lantern);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--st-accent-lantern) 22%, transparent);
+}
+
+.travel-itinerary {
+  border: 1px solid var(--st-border-default);
+  border-radius: var(--st-radius-lg);
+  padding: 14px;
+  background: color-mix(in srgb, var(--st-bg-surface) 90%, transparent);
+}
+
+.travel-itinerary__title {
+  margin: 0;
+  color: var(--st-accent-lantern);
+  font-family: var(--st-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.travel-itinerary__list {
+  display: grid;
+  gap: 2px;
+  margin: 12px 0 0;
+  border-top: 1px dashed var(--st-border-default);
+  padding: 10px 0 0;
+  list-style: none;
+}
+
+.travel-itinerary__stop {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  border: 0;
+  border-radius: var(--st-radius-sm);
+  padding: 5px 4px;
+  background: transparent;
+  color: var(--st-text-secondary);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--st-duration-fast) var(--st-ease-standard),
+    background-color var(--st-duration-fast) var(--st-ease-standard);
+}
+
+.travel-itinerary__index {
+  flex: none;
+  color: var(--st-text-muted);
+  font-family: var(--st-font-mono);
+  font-size: 10px;
+}
+
+.travel-itinerary__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.travel-itinerary__stop--active {
+  background: color-mix(in srgb, var(--st-accent-lantern) 14%, transparent);
+  color: var(--st-text-primary);
+}
+
+.travel-itinerary__stop--active .travel-itinerary__index {
+  color: var(--st-accent-lantern);
+}
+
+@media (hover: hover) {
+  .travel-itinerary__stop:hover {
+    color: var(--st-c-link);
+  }
+}
+
+@media (max-width: 859px) {
+  .travel-map {
+    width: 100%;
+    height: 72lvh;
+    mask-image: linear-gradient(180deg, rgb(0 0 0 / 72%) 0 53%, rgb(0 0 0 / 30%) 85%, transparent 100%);
+  }
+
+  .travel-itinerary {
+    max-width: 680px;
+    margin-top: 18px;
+  }
+
+  .travel-map__attribution {
+    right: 12px;
+  }
+}
+
+.markdown-body .travel-stop {
+  scroll-margin-top: max(6rem, 40vh);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .travel-map,
+  .markdown-body .travel-stop,
+  .markdown-body .travel-stop::before,
+  .travel-itinerary__stop {
+    transition: none;
+  }
+}

@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import { Content, frontmatter } from '../content/about.md';
+---
+<Base title={frontmatter.title}><article class="field-catalog markdown-body"><Content /></article></Base>

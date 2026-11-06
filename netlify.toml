@@ -3,12 +3,10 @@ publish = "dist"
 command = "pnpm run build"
 
 [build.environment]
-NODE_VERSION = "22.16.0"
+NODE_VERSION = "24.13.1"
 
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+[context.production.environment]
+SITE_ENV = "production"
 
 [[headers]]
 for = "/manifest.webmanifest"

@@ -1,0 +1,105 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleControls from '../../components/ArticleControls.astro';
+import MarkdownDiagrams from '../../components/MarkdownDiagrams.astro';
+import TravelExperience from '../../components/TravelExperience.astro';
+import { postCategories } from '../../lib/collections';
+import { posts, formatDate, postUrl, type Post } from '../../lib/posts';
+import notebookIcon from '../../assets/field-notes/icon-notebook.png';
+import travelerWriting from '../../assets/field-notes/traveler-writing.png';
+
+export async function getStaticPaths() {
+  const all = await posts();
+  return all.map((post, index) => ({
+    params: { id: post.id },
+    props: { post, previous: all[index - 1], next: all[index + 1] },
+  }));
+}
+
+interface Props { post: Post; previous?: Post; next?: Post }
+
+const { post, previous, next } = Astro.props;
+const { author, date, updated, gravatar, twitter, title, layout, excerpt, tags } = post.data;
+const { Content, headings } = await render(post);
+const toc = headings.filter(({ depth, text }) => depth >= 2 && depth <= 4 && text.trim());
+const url = new URL(postUrl(post), Astro.site).href;
+const html = post.rendered?.html ?? '';
+const math = html.includes('class="katex');
+const hasDiagrams = html.includes('data-mermaid');
+const hasAiDisclosure = tags.some(tag => ['ai-assisted', 'ai-use'].includes(tag.toLowerCase()));
+const categories = postCategories(post);
+---
+<Base title={title} description={post.data.description || excerpt || title} image={post.data.cover ?? undefined} math={math}>
+  <article class="field-post" data-layout={layout}>
+    <header class="field-post__header">
+      <div class="field-post__sprite" aria-hidden="true"><img src={travelerWriting.src} alt="" /></div>
+      <p class="field-kicker">Field entry</p>
+      <h1 class="field-post__title">{title}</h1>
+      <div class="field-post__meta">
+        <span>发布于 <time datetime={date.toISOString()}>{formatDate(date)}</time></span>
+        {updated && <span>更新于 <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>}
+        <span>{categories.join(' / ')}</span>
+      </div>
+    </header>
+    <div class="field-post__layout">
+      <aside class="field-post__aside" aria-label="阅读辅助">
+        {author && (
+          <div class="field-author">
+            <ul><li>
+              {gravatar && <img class="field-author__avatar" src={`https://gravatar.com/avatar/${encodeURIComponent(gravatar)}`} alt="" loading="lazy" />}
+              <div>
+                <span class="field-author__name">作者 {author}</span>
+                {twitter && <div><a href={`https://twitter.com/${encodeURIComponent(twitter)}`} target="_blank" rel="noopener noreferrer">{twitter}</a></div>}
+              </div>
+            </li></ul>
+          </div>
+        )}
+        <div class="field-post__toc-card">
+          <img src={notebookIcon.src} alt="" loading="lazy" />
+          <span>阅读札记</span>
+          {toc.length > 0 && (
+            <nav class="field-post__toc" aria-label="文章目录" data-field-guide="table-of-contents">
+              {toc.map(({ depth, slug, text }) => (
+                <a class={`field-post__toc-link field-post__toc-link--level-${depth}`} href={`#${encodeURIComponent(slug)}`}>{text}</a>
+              ))}
+            </nav>
+          )}
+          <a class="field-markdown-link" href={`${postUrl(post)}.md`} data-field-guide="view-as-markdown">
+            view as markdown <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        {layout === 'travel' && <TravelExperience post={post} />}
+      </aside>
+      <div class="field-post__content">
+        {hasAiDisclosure && (
+          <blockquote class="field-ai-disclosure">
+            <p>这个文章的内容主要由 AI 生成，人工进行校对认证。这类文章一般有两个产出的原因：</p>
+            <ol>
+              <li>AI 强化类文章。笔者在实践某类功能时，发现 AI 踩了很多坑，所以提供一篇精准的文章，类似于 skill，旨在帮助其他 AI 在实现相同目标时有更好的效果。</li>
+              <li>翻译类文章。笔者平时研究工作较多，在发现外网有比较好的文章时，会翻译为中文进行分享。过去是人工翻译，现在当然也是 AI 为主、人工校对。当然，这类文章占比会很少，因为本身在互联网大环境下属于重复类型的内容。</li>
+            </ol>
+          </blockquote>
+        )}
+        <div id="article-content" class="markdown-body"><Content /></div>
+        {hasDiagrams && <MarkdownDiagrams />}
+        <section class="field-article-notice" aria-label="文章声明">
+          <h2>文章声明</h2>
+          <p>除特别注明外，本博客文章均为个人原创。转载、摘录、总结、改编或引用相关内容时，请注明作者及来源，并附原文链接：<a href={url}>{url}</a>。未经许可，不得用于商业用途或歪曲原意。</p>
+        </section>
+      </div>
+      <nav class="field-post__pager" aria-label="相邻文章">
+        {previous && <div class="field-post__pager-item"><h2>上一篇</h2><a href={postUrl(previous)}>{previous.data.title}</a></div>}
+        {next && <div class="field-post__pager-item"><h2>下一篇</h2><a href={postUrl(next)}>{next.data.title}</a></div>}
+        <div class="field-post__pager-item"><a href="/">← 返回手记</a></div>
+      </nav>
+    </div>
+  </article>
+</Base>
+<ArticleControls />
+<style>
+  .field-post__toc-card .field-markdown-link span { margin: 0; }
+  @media (max-width: 860px) {
+    .field-post__aside .field-author { display: block; margin-bottom: 12px; }
+  }
+</style>

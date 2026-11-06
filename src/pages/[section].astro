@@ -1,0 +1,33 @@
+---
+import ArticleList from '../components/ArticleList.astro';
+import Catalog from '../components/Catalog.astro';
+import { siteConfig } from '../site.config';
+import { isLife } from '../lib/entries';
+import { posts } from '../lib/posts';
+
+export function getStaticPaths() {
+  const { tech, notes } = siteConfig.sections;
+  return [
+    {
+      params: { section: 'tech' },
+      props: { ...tech, kicker: 'Tech Log', intro: '记录技术探索、开发心得与工具实践。', empty: '这里还没有技术记录，下一次实践会从这里开始。' },
+    },
+    {
+      params: { section: 'notes' },
+      props: {
+        ...notes,
+        kicker: 'Life Log',
+        intro: '照片、阅读、旅途与日常的碎片都收在这里。它们和技术文章并非两个世界，只是换一种更轻的节奏，留住生活里微小而确定的光。',
+        empty: '这里还没有生活记录，先去四处走走吧。',
+      },
+    },
+  ];
+}
+
+const { title, kind, kicker, intro, empty } = Astro.props;
+const all = (await posts()).filter(post => isLife(post) === (kind === 'life'));
+---
+<Catalog title={title} kicker={kicker} count={`共计 ${all.length} 篇`}>
+  <div slot="intro" class="field-notes__intro"><p>{intro}</p></div>
+  {all.length ? <ArticleList posts={all} /> : <p class="field-notes__empty">{empty}</p>}
+</Catalog>

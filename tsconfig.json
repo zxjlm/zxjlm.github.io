@@ -1,27 +1,6 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "lib": ["DOM", "ESNext"],
-    "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "paths": {
-      "~/*": ["./*"]
-    },
-    "resolveJsonModule": true,
-    "types": [
-      "vite/client",
-      "valaxy/client",
-      "vite-plugin-vue-layouts-next/client"
-    ],
-    "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true
-  },
-  "exclude": ["dist", "node_modules"]
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules", "scripts/travel-map-tooling"],
+  "compilerOptions": { "types": ["node"] }
 }

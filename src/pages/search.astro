@@ -1,0 +1,132 @@
+---
+import Catalog from '../components/Catalog.astro';
+---
+<Catalog title="搜索" kicker="Field Search">
+  <p slot="intro">搜索已发布文章的标题、正文、分类和标签。</p>
+  <form id="article-search" role="search" action="/search/" method="get">
+    <label for="article-query">文章关键词</label>
+    <div class="field-search__controls">
+      <input id="article-query" name="q" type="search" maxlength="150" placeholder="例如 京都 或 Cloudflare" required />
+      <button class="field-button" type="submit">搜索</button>
+    </div>
+  </form>
+  <noscript><p>文章搜索需要 JavaScript。也可以浏览<a href="/archives/">文章归档</a>。</p></noscript>
+  <p id="article-search-status" role="status"></p>
+  <ol id="article-search-results" class="field-post-list" aria-label="搜索结果"></ol>
+</Catalog>
+<style>
+  #article-search { max-width: 38rem; }
+  #article-search label { display: block; margin-bottom: .5rem; }
+  .field-search__controls { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .field-search__controls input {
+    flex: 1 1 12rem;
+    min-height: 2.75rem;
+    border: 1px solid var(--st-border-strong);
+    border-radius: var(--st-radius-sm);
+    padding: .5rem .75rem;
+    font: inherit;
+    color: var(--st-text-primary);
+    background: var(--st-bg-surface);
+  }
+  #article-search-results { margin-top: 1.5rem; }
+</style>
+<script>
+  import { findArticles, prepareSearch, type SearchEntry } from '../lib/search';
+
+  const form = document.querySelector<HTMLFormElement>('#article-search')!;
+  const input = document.querySelector<HTMLInputElement>('#article-query')!;
+  const status = document.querySelector<HTMLElement>('#article-search-status')!;
+  const results = document.querySelector<HTMLOListElement>('#article-search-results')!;
+  const maxResults = 30;
+  let index: Promise<ReturnType<typeof prepareSearch>> | undefined;
+  let currentRequest = 0;
+
+  function loadIndex() {
+    index ??= fetch('/search-index.json')
+      .then(async response => {
+        if (!response.ok) throw new Error(`Search index returned HTTP ${response.status}`);
+        return prepareSearch(await response.json() as SearchEntry[]);
+      })
+      .catch(error => {
+        index = undefined;
+        throw error;
+      });
+    return index;
+  }
+
+  async function search() {
+    const request = ++currentRequest;
+    const query = input.value.trim().slice(0, input.maxLength);
+    results.replaceChildren();
+    if (!query) {
+      status.textContent = '请输入关键词。';
+      return;
+    }
+    status.textContent = '正在搜索…';
+    try {
+      const matches = findArticles(await loadIndex(), query);
+      if (request !== currentRequest) return;
+      status.textContent = matches.length > maxResults
+        ? `找到 ${matches.length} 篇文章，显示前 ${maxResults} 篇。`
+        : matches.length ? `找到 ${matches.length} 篇文章。` : '没有找到相关文章。';
+      const entries = matches.slice(0, maxResults).map(({ entry, snippet }) => {
+        const item = document.createElement('li');
+        item.className = 'field-article-card';
+        const date = document.createElement('time');
+        date.dateTime = entry.date;
+        date.className = 'field-date';
+        date.textContent = entry.date;
+        const title = document.createElement('h2');
+        title.className = 'field-article-card__title';
+        const link = document.createElement('a');
+        link.href = entry.href;
+        link.textContent = entry.title;
+        title.append(link);
+        const summary = document.createElement('p');
+        summary.className = 'field-article-card__excerpt';
+        summary.textContent = snippet;
+        item.append(date, title, summary);
+        return item;
+      });
+      results.append(...entries);
+    } catch {
+      if (request === currentRequest) status.textContent = '暂时无法加载搜索索引，请重试。';
+    }
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const url = new URL(window.location.href);
+    if (input.value.trim()) url.searchParams.set('q', input.value.trim());
+    else url.searchParams.delete('q');
+    history.replaceState(history.state, '', url);
+    void search();
+  });
+
+  input.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowDown') return;
+    const first = results.querySelector('a');
+    if (first) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  results.addEventListener('keydown', event => {
+    const links = [...results.querySelectorAll('a')];
+    const selected = links.indexOf(event.target as HTMLAnchorElement);
+    if (selected < 0) return;
+    if (event.key === 'Escape' || (event.key === 'ArrowUp' && selected === 0)) {
+      event.preventDefault();
+      input.focus();
+    } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      const next = links[selected + (event.key === 'ArrowDown' ? 1 : -1)];
+      if (next) {
+        event.preventDefault();
+        next.focus();
+      }
+    }
+  });
+
+  input.value = new URLSearchParams(location.search).get('q')?.slice(0, input.maxLength) ?? '';
+  if (input.value.trim()) void search();
+</script>

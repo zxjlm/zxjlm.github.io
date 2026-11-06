@@ -1,0 +1,10 @@
+{
+  "name": "zaxon-static-travel-map-tooling",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@maplibre/maplibre-gl-native": "6.4.1",
+    "sharp": "0.35.5"
+  }
+}
