@@ -1,6 +1,6 @@
 # Argus 相册发布与本地验收
 
-Astro 根据 `public/albums/index.json` 与每项的 `manifest_path` 静态生成相册目录、详情和网格。Argus 的 `pages/albums/*.md` 是 Valaxy 的路由占位文件。Astro 直接从索引生成路由，只导入 Argus 已清洗的 v1 JSON。相册图片与视频继续使用导出的公开 URL。过渡期以 Valaxy 已提交的内容快照为准，切换后在 Astro 仓库维护发布产物。
+Astro 根据 `public/albums/index.json` 与每项的 `manifest_path` 静态生成相册目录、详情和网格。Argus 的 `pages/albums/*.md` 是 Valaxy 的路由占位文件。Astro 直接从索引生成路由，只导入 Argus 已清洗的 v1 JSON。相册图片与视频继续使用导出的公开 URL。Astro 是正式发布来源。迁移基线来自 Valaxy 的已提交快照。
 
 ## 发布相册
 

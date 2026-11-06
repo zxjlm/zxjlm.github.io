@@ -4,8 +4,8 @@
 | --- | --- |
 | 旧站本地重建基线 | `4bf6b5fad30e78f1530cfecd7f25b62a6ff936f5` |
 | 旧站实际生产部署 ID / 独立地址 / SHA | `4ab61b7b-6dbd-4f33-ac9d-f4614bdcd5b0` / [旧生产](https://4ab61b7b.zxjlm-github-io.pages.dev/) / `4bf6b5fad30e78f1530cfecd7f25b62a6ff936f5` |
-| Astro 预览部署 ID / 独立地址 / SHA | 待预览构建 |
-| Astro 生产部署 ID / 独立地址 / SHA | 待生产发布 |
+| Astro 预览部署 ID / 独立地址 / SHA | `cbbaa746-398b-45b4-af4d-77ceb04441e8` / [预览](https://cbbaa746.zxjlm-github-io.pages.dev/) / `320d576aa204cdf4fe690b471242b3833c706ddf` |
+| Astro 生产部署 ID / 独立地址 / SHA | `75207c3a-9645-4df9-98ab-ac819062c913` / [生产](https://75207c3a.zxjlm-github-io.pages.dev/) / `320d576aa204cdf4fe690b471242b3833c706ddf` |
 | 仓库 / 分支 / 自定义域名 | `zxjlm/zxjlm.github.io` / `source` / `blog.harumonia.moe` |
 | 构建根目录、命令及产物 | `/`、`pnpm run build`、`dist` |
 | Valaxy 构建运行时记录 | Node `22.16.0`、pnpm `10.17.1`，Pages API 已核实 |
@@ -23,3 +23,5 @@
 ## 回到 Astro
 
 重新核对故障修复、内容增量、生产环境变量和缓存策略。对新的候选部署重跑预览验收，再按切换清单发布。保留旧生产部署至观察期结束。
+
+已验证三段恢复及重发，见 [Cloudflare 线上验收](cloudflare-acceptance.md)。

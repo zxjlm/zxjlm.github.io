@@ -16,6 +16,10 @@ if (isolated) {
 }
 const page = await context.newPage();
 const ordinaryMapRequests = [];
+const hydrationErrors = [];
+page.on('console', message => {
+  if (/hydration .*mismatch/i.test(message.text())) hydrationErrors.push(message.text());
+});
 const mapResources = /maplibre|\/styles\/(positron|fiord)/i;
 const trackOrdinary = request => { if (mapResources.test(request.url())) ordinaryMapRequests.push(request.url()); };
 page.on('request', trackOrdinary);
@@ -67,6 +71,7 @@ try {
   await dialog.waitFor({ state: 'hidden' });
   assert.equal(await photo.evaluate(el => document.activeElement === el), true);
   assert.deepEqual(ordinaryMapRequests, [], 'Ordinary pages requested map resources');
+  assert.deepEqual(hydrationErrors, [], 'Vue hydration must match the static HTML');
   page.off('request', trackOrdinary);
 
   assert.equal((await page.goto(at('/does-not-exist-for-migration'))).status(), 404);

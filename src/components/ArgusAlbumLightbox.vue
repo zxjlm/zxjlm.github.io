@@ -15,6 +15,7 @@ const emit = defineEmits<{
 const isOpen = computed(() => props.activeIndex >= 0 && props.activeIndex < props.photos.length)
 const photo = computed(() => isOpen.value ? props.photos[props.activeIndex] : null)
 const dialog = ref<HTMLElement | null>(null)
+const mounted = ref(false)
 const videoLoadFailed = ref(false)
 const imageAttempt = ref(0)
 const imageSource = computed(() => imageAttempt.value === 0 ? photo.value?.previewPath : photo.value?.thumbnailPath)
@@ -193,7 +194,10 @@ watch(photo, () => {
   imageAttempt.value = 0
 })
 
-onMounted(() => window.addEventListener('keydown', onKeydown))
+onMounted(() => {
+  mounted.value = true
+  window.addEventListener('keydown', onKeydown)
+})
 
 onBeforeUnmount(() => {
   if (isOpen.value)
@@ -206,7 +210,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Teleport to="body">
+  <Teleport v-if="mounted" to="body">
     <div
       v-if="photo"
       ref="dialog"
